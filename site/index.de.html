@@ -746,7 +746,7 @@ setTimeout(function(){
     <div class="row-meta rv">
       <span class="pill">Für <b>Einsteiger:innen</b></span>
       <span class="pill">Stand <b>August 2026</b></span>
-      <span class="pill"><b>111</b> Steckbriefe</span>
+      <span class="pill"><b>112</b> Steckbriefe</span>
     </div>
   </div>
   <div id="nlabels" aria-hidden="true"></div>
@@ -1620,6 +1620,11 @@ const MODULES = [
       "k": "Gemini Notebook"
      },
      {
+      "n": "Perplexity",
+      "v": "Recherche",
+      "k": "Perplexity"
+     },
+     {
       "n": "Obsidian",
       "v": "Notizen",
       "k": "Obsidian"
@@ -1923,6 +1928,23 @@ const STECKBRIEF = {
   "icon": "google",
   "links": {
    "home": "https://notebooklm.google/"
+  }
+ },
+ "Perplexity": {
+  "name": "Perplexity",
+  "vendor": "Perplexity AI",
+  "cat": "Recherche-Umgebung · Baustein 07",
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": "Eine Suche, die antwortet, statt Links aufzuzählen: Perplexity durchforstet zu jeder Frage das aktuelle Netz und schreibt daraus einen Text, an dem die Fundstellen als Fußnoten hängen. Der Unterschied zu Gemini Notebook — dort legst du die Quellen selbst hin, hier sucht das Werkzeug sie sich. Das nimmt dir Arbeit ab und die Entscheidung, worauf die Antwort beruht.",
+  "tip": "Die Fußnoten machen eine Antwort nachprüfbar, nicht richtig: Wo es darauf ankommt, musst du die Quelle selbst öffnen. Alles läuft auf fremden Servern — für Vertrauliches ist das der falsche Ort. Wer es an einen Agenten hängen will, findet einen offiziellen MCP-Server.",
+  "free": true,
+  "plans": "Kostenlos · Pro 20 $/Mo.",
+  "icon": "perplexity",
+  "links": {
+   "home": "https://www.perplexity.ai/",
+   "docs": "https://docs.perplexity.ai/",
+   "code": "https://github.com/perplexityai/modelcontextprotocol"
   }
  },
  "Obsidian": {
@@ -4577,6 +4599,7 @@ const ARBEITSARTEN = {
      "frage": "Wo soll das Ergebnis entstehen?",
      "kandidaten": [
       "Gemini Notebook",
+      "Perplexity",
       "Obsidian"
      ],
      "empfehlung": [

@@ -878,6 +878,14 @@
       "k": "Gemini Notebook"
      },
      {
+      "n": "Perplexity",
+      "v": {
+       "de": "Recherche",
+       "en": "research"
+      },
+      "k": "Perplexity"
+     },
+     {
       "n": "Obsidian",
       "v": {
        "de": "Notizen",

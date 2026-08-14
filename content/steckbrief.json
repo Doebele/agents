@@ -809,7 +809,7 @@
    "en": "The most widely used open family, so a great many guides and tools are tuned for it."
   },
   "links": {
-   "home": "https://www.llama.com",
+   "home": "https://developer.meta.com/ai/models/llama-4/",
    "docs": null,
    "code": "https://github.com/meta-llama/llama-models"
   },
@@ -985,8 +985,8 @@
    "en": "The alternative to vLLM. If you have to choose, only measuring helps — both are mature."
   },
   "links": {
-   "home": "https://sglang.ai",
-   "docs": "https://docs.sglang.ai",
+   "home": "https://www.sglang.io",
+   "docs": "https://docs.sglang.io",
    "code": "https://github.com/sgl-project/sglang"
   },
   "free": true,
@@ -1290,7 +1290,7 @@
    "en": "The entry point when you want more than a clip: several shots that add up to a film."
   },
   "links": {
-   "home": "https://runwayml.com/",
+   "home": "https://runway.com/",
    "docs": "https://docs.dev.runwayml.com/",
    "code": null
   }
@@ -2154,8 +2154,8 @@
    "en": "It commits to a particular stack. A good fit if your project already uses React, less so otherwise."
   },
   "links": {
-   "home": "https://v0.dev/",
-   "docs": "https://v0.dev/docs",
+   "home": "https://v0.app/",
+   "docs": "https://v0.app/docs/",
    "code": null
   },
   "icon": "v0"
@@ -2482,7 +2482,7 @@
    "en": "The fastest way to turn generated clips into a coherent film. Not enough for finer work like colour grading."
   },
   "links": {
-   "home": "https://www.apple.com/imovie/"
+   "home": "https://support.apple.com/imovie"
   }
  },
  "Final Cut Pro": {

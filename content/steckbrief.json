@@ -404,6 +404,34 @@
    "en": "Editor free · Pro $10/mo"
   }
  },
+ "Cursor": {
+  "name": "Cursor",
+  "vendor": "Anysphere",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": false,
+  "blurb": {
+   "de": "Ein Code-Editor, der von Anfang an um den Agenten gebaut ist: Chat neben dem Code, Tab-Vervollständigung, die deine Gewohnheiten lernt, und ein Agent-Modus, der eigenständig Dateien liest und ändert. Die Basis ist VS Code — der Editor selbst ist aber nicht offen. Modelle bringt er mit, eigene Schlüssel lassen sich hinterlegen.",
+   "en": "A code editor built around the agent from the start: chat beside the code, tab completion that learns your habits, and an agent mode that reads and edits files on its own. The base is VS Code — but the editor itself is not open. It ships with models; your own keys can be plugged in."
+  },
+  "tip": {
+   "de": "Der Einstieg, wenn du Editor und Agenten in einem Fenster willst, ohne Terminal. Schalt den Datenschutz-Modus ein, wenn dein Code nicht ins Training soll.",
+   "en": "The entry point if you want editor and agent in one window, no terminal. Turn on privacy mode if your code must stay out of training."
+  },
+  "links": {
+   "home": "https://cursor.com",
+   "docs": "https://docs.cursor.com"
+  },
+  "icon": "cursor",
+  "free": true,
+  "plans": {
+   "de": "Hobby kostenlos · Pro 20 $/Mo.",
+   "en": "Hobby free · Pro $20/mo"
+  }
+ },
  "Hermes Agent": {
   "name": "Hermes Agent",
   "vendor": "Nous Research",
@@ -1034,6 +1062,28 @@
    "home": "https://bfl.ai/models/flux-2",
    "docs": "https://bfl.ai/models/flux-2",
    "code": "https://github.com/black-forest-labs/flux2"
+  }
+ },
+ "Qwen-Image": {
+  "name": "Qwen-Image",
+  "vendor": "Alibaba",
+  "cat": {
+   "de": "Bild-Modell · Baustein 06",
+   "en": "Image model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "blurb": {
+   "de": "Alibabas offenes Bildmodell. Setzt Texte zuverlässig ins Bild — Beschriftungen, Schilder, kurze Slogans — und kann neben dem Erzeugen auch vorhandene Bilder umbauen. Offene Gewichte: herunterladen, auf eigener Hardware betreiben, nichts verlässt den Rechner.",
+   "en": "Alibaba's open image model. It puts text into images reliably — labels, signs, short slogans — and besides generating can rework existing images. Open weights: download them, run them on your own hardware, nothing leaves the machine."
+  },
+  "tip": {
+   "de": "Läuft lokal über die üblichen Werkzeuge für offene Modelle, braucht dafür eine kräftige Grafikkarte. Für Gelegenheitsbilder ist ein Dienst mit Gratisstufe bequemer als eigene Hardware.",
+   "en": "Runs locally through the usual open-model tooling, but needs a powerful graphics card. For the occasional image, a service with a free tier is more comfortable than your own hardware."
+  },
+  "links": {
+   "home": "https://qwen.ai",
+   "code": "https://github.com/QwenLM/Qwen-Image"
   }
  },
  "Imagen 4": {

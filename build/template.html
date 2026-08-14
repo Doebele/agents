@@ -380,7 +380,7 @@ section{ position:relative; }
 .wz-luecke b{ display:block; font-family:var(--mono); font-size:10px; letter-spacing:.12em;
   color:var(--amber); margin-bottom:8px; }
 .wz-luecke p{ margin:0; color:var(--ink-dim); font-size:14px; font-weight:300; }
-.wz-nav{ display:flex; gap:10px; align-items:center; border-top:1px solid var(--line); padding-top:18px; }
+.wz-nav{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; border-top:1px solid var(--line); padding-top:18px; }
 .wz-nav button{ font-family:var(--mono); font-size:12px; letter-spacing:.06em; border-radius:999px;
   padding:10px 20px; cursor:none; border:1px solid var(--line-2); background:transparent; color:var(--ink); }
 .wz-nav .prim{ background:var(--cyan); border-color:var(--cyan); color:#06070B; font-weight:700; }
@@ -1815,7 +1815,8 @@ addEventListener('keydown', e=>{
       ${w.i > 0 ? `<button type="button" id="wzback">${T.zurueck}</button>` : ''}
       ${s.id === 'blatt'
         ? `<button type="button" id="wzneu">${T.neu}</button>
-           <button type="button" class="prim weit" id="wzcopy">${T.kopieren}</button>`
+           <button type="button" id="wzcopy">${T.kopieren}</button>
+           <button type="button" class="prim weit" id="wzdown">${T.herunterladen}</button>`
         : `<button type="button" class="prim weit" id="wznext" ${weiter ? '' : 'disabled'}>${ueberspringbar ? T.ueberspringen : T.weiter}</button>`}
     </div>`;
     drawer.classList.remove('detail');
@@ -1942,6 +1943,13 @@ addEventListener('keydown', e=>{
       navigator.clipboard.writeText(markdown()).then(() => {
         b.textContent = T.kopiert; setTimeout(() => { b.textContent = T.kopieren; }, 1600);
       }).catch(() => {});
+    }
+    else if(b.id === 'wzdown'){
+      const blob = new Blob([markdown()], {type:'text/markdown;charset=utf-8'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = TUT.datei;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
     }
   });
 

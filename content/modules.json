@@ -211,6 +211,11 @@
       "k": "Zed"
      },
      {
+      "n": "Cursor",
+      "v": "Anysphere",
+      "k": "Cursor"
+     },
+     {
       "n": "Hermes Agent",
       "v": "Nous Research",
       "k": "Hermes Agent"
@@ -286,7 +291,7 @@
    "en": "The knowledge"
   },
   "color": "var(--lime)",
-  "glyph": "M5 21V5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21L13.0815 17.1953C12.4227 16.7717 11.5773 16.7717 10.9185 17.1953L5 21Z",
+  "glyph": "M22 14V6C22 4.34315 20.6569 3 19 3H9C7.34315 3 6 4.34315 6 6V13 M12 21H6C3.79086 21 2 19.2091 2 17C2 14.7909 3.79086 13 6 13H17H18C15.7909 13 14 14.7909 14 17C14 19.2091 15.7909 21 18 21C20.2091 21 22 19.2091 22 17V14",
   "lede": {
    "de": "So bringst du deinem Agenten etwas einmal bei, statt es bei jeder Anfrage neu zu erklären: Ein Skill ist eine Textdatei mit Fachwissen, Abläufen und Stilregeln. Der Agent lädt sie nur, wenn die Aufgabe dazu passt — das hält seinen Kopf frei und spart Kosten.",
    "en": "This is how you teach your agent something once instead of explaining it with every request: a skill is a text file holding know-how, procedures and style rules. The agent loads it only when the task calls for it — which keeps its head clear and saves cost."
@@ -366,7 +371,7 @@
    "en": "The connector"
   },
   "color": "var(--violet)",
-  "glyph": "M14 11.9976C14 9.5059 11.683 7 8.85714 7C8.52241 7 7.41904 7.00001 7.14286 7.00001C4.30254 7.00001 2 9.23752 2 11.9976C2 14.376 3.70973 16.3664 6 16.8714C6.36756 16.9525 6.75006 16.9952 7.14286 16.9952 M10 11.9976C10 14.4893 12.317 16.9952 15.1429 16.9952C15.4776 16.9952 16.581 16.9952 16.8571 16.9952C19.6975 16.9952 22 14.7577 22 11.9976C22 9.6192 20.2903 7.62884 18 7.12383C17.6324 7.04278 17.2499 6.99999 16.8571 6.99999",
+  "glyph": "M12 13.1538V21 M17 8.38452V11.1538C17 12.2583 16.1046 13.1538 15 13.1538H9C7.89543 13.1538 7 12.2583 7 11.1538V8.38452C7 7.27995 7.89543 6.38452 9 6.38452H15C16.1046 6.38452 17 7.27995 17 8.38452Z M15.3334 6.38462V3 M8.66663 6.38462V3",
   "lede": {
    "de": "Das Model Context Protocol ist das USB-C der KI: ein offener Standard der Linux Foundation. Darüber erreicht jeder Agent jedes Werkzeug auf dieselbe Weise. Über 9.800 Server im Index.",
    "en": "The Model Context Protocol is the USB-C of AI: an open standard from the Linux Foundation. Through it, every agent reaches every tool the same way. Over 9,800 servers in the index."
@@ -623,6 +628,11 @@
       "n": "FLUX.2",
       "v": "Black Forest Labs",
       "k": "FLUX.2"
+     },
+     {
+      "n": "Qwen-Image",
+      "v": "Alibaba",
+      "k": "Qwen-Image"
      },
      {
       "n": "Imagen 4",

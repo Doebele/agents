@@ -380,7 +380,7 @@ section{ position:relative; }
 .wz-luecke b{ display:block; font-family:var(--mono); font-size:10px; letter-spacing:.12em;
   color:var(--amber); margin-bottom:8px; }
 .wz-luecke p{ margin:0; color:var(--ink-dim); font-size:14px; font-weight:300; }
-.wz-nav{ display:flex; gap:10px; align-items:center; border-top:1px solid var(--line); padding-top:18px; }
+.wz-nav{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; border-top:1px solid var(--line); padding-top:18px; }
 .wz-nav button{ font-family:var(--mono); font-size:12px; letter-spacing:.06em; border-radius:999px;
   padding:10px 20px; cursor:none; border:1px solid var(--line-2); background:transparent; color:var(--ink); }
 .wz-nav .prim{ background:var(--cyan); border-color:var(--cyan); color:#06070B; font-weight:700; }
@@ -746,7 +746,7 @@ setTimeout(function(){
     <div class="row-meta rv">
       <span class="pill">For <b>beginners</b></span>
       <span class="pill">As of <b>August 2026</b></span>
-      <span class="pill"><b>109</b> fact-sheets</span>
+      <span class="pill"><b>111</b> fact-sheets</span>
     </div>
   </div>
   <div id="nlabels" aria-hidden="true"></div>
@@ -833,7 +833,7 @@ setTimeout(function(){
   <path class="b-flow" id="flowUpR" d="M500 326 L500 143 L514 143" pathLength="100" stroke-dasharray="20 80"/>
   <path class="b-flow" id="flowDownL" d="M500 509 L500 692 L180 692" pathLength="100" stroke-dasharray="20 80"/>
   <path class="b-flow" id="flowDownR" d="M500 509 L500 692 L820 692" pathLength="100" stroke-dasharray="20 80"/>
-  <g class="blk" data-mi="0" tabindex="0" role="button" aria-label="Language models"><rect class="b-box" x="305" y="54" width="181" height="183"/><g class="b-ic" transform="translate(371 84) scale(2)"><path d="M8 10L12 10L16 10 M8 14L10 14L12 14 M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2.5 21.5L7 20.6622C8.47087 21.513 10.1786 22 12 22Z"/></g><text class="b-l" x="395" y="182" text-anchor="middle">Language</text><text class="b-l" x="395" y="212" text-anchor="middle">models</text></g><g class="blk" data-mi="5" tabindex="0" role="button" aria-label="Media models"><rect class="b-box" x="514" y="54" width="181" height="183"/><g class="b-ic" transform="translate(580 84) scale(2)"><path d="M2 19V9C2 7.89543 2.89543 7 4 7H4.5C5.12951 7 5.72229 6.70361 6.1 6.2L8.32 3.24C8.43331 3.08892 8.61115 3 8.8 3H15.2C15.3889 3 15.5667 3.08892 15.68 3.24L17.9 6.2C18.2777 6.70361 18.8705 7 19.5 7H20C21.1046 7 22 7.89543 22 9V19C22 20.1046 21.1046 21 20 21H4C2.89543 21 2 20.1046 2 19Z M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z"/></g><text class="b-l" x="604" y="182" text-anchor="middle">Media</text><text class="b-l" x="604" y="212" text-anchor="middle">models</text></g><g class="blk" data-mi="1" tabindex="0" role="button" aria-label="Harness"><rect class="b-box" x="409" y="326" width="181" height="183"/><g class="b-ic" transform="translate(475 356) scale(2)"><path d="M8 15.4V8.6C8 8.26863 8.26863 8 8.6 8H15.4C15.7314 8 16 8.26863 16 8.6V15.4C16 15.7314 15.7314 16 15.4 16H8.6C8.26863 16 8 15.7314 8 15.4Z M20 4.6V19.4C20 19.7314 19.7314 20 19.4 20H4.6C4.26863 20 4 19.7314 4 19.4V4.6C4 4.26863 4.26863 4 4.6 4H19.4C19.7314 4 20 4.26863 20 4.6Z M17 4V2 M12 4V2 M7 4V2 M7 20V22 M12 20V22 M17 20V22 M20 17H22 M20 12H22 M20 7H22 M4 17H2 M4 12H2 M4 7H2"/></g><text class="b-l" x="499" y="466" text-anchor="middle">Harness</text></g><g class="blk" data-mi="4" tabindex="0" role="button" aria-label="Tools"><rect class="b-box" x="118" y="595" width="181" height="183"/><g class="b-ic" transform="translate(184 625) scale(2)"><path d="M10.0503 10.6066L2.97923 17.6777C2.19818 18.4587 2.19818 19.725 2.97923 20.5061V20.5061C3.76027 21.2871 5.0266 21.2871 5.80765 20.5061L12.8787 13.435 M10.0502 10.6066C9.20638 8.45358 9.37134 5.6286 11.1109 3.88909C12.8504 2.14957 16.0606 1.76777 17.8284 2.82843L14.7877 5.8691L14.5051 8.98014L17.6161 8.69753L20.6568 5.65685C21.7175 7.42462 21.3357 10.6349 19.5961 12.3744C17.8566 14.1139 15.0316 14.2789 12.8786 13.435"/></g><text class="b-l" x="208" y="735" text-anchor="middle">Tools</text></g><g class="blk" data-mi="3" tabindex="0" role="button" aria-label="MCPs"><rect class="b-box" x="312" y="595" width="181" height="183"/><g class="b-ic" transform="translate(378 625) scale(2)"><path d="M14 11.9976C14 9.5059 11.683 7 8.85714 7C8.52241 7 7.41904 7.00001 7.14286 7.00001C4.30254 7.00001 2 9.23752 2 11.9976C2 14.376 3.70973 16.3664 6 16.8714C6.36756 16.9525 6.75006 16.9952 7.14286 16.9952 M10 11.9976C10 14.4893 12.317 16.9952 15.1429 16.9952C15.4776 16.9952 16.581 16.9952 16.8571 16.9952C19.6975 16.9952 22 14.7577 22 11.9976C22 9.6192 20.2903 7.62884 18 7.12383C17.6324 7.04278 17.2499 6.99999 16.8571 6.99999"/></g><text class="b-l" x="402" y="735" text-anchor="middle">MCPs</text></g><g class="blk" data-mi="2" tabindex="0" role="button" aria-label="Skills"><rect class="b-box" x="505" y="595" width="181" height="183"/><g class="b-ic" transform="translate(571 625) scale(2)"><path d="M5 21V5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21L13.0815 17.1953C12.4227 16.7717 11.5773 16.7717 10.9185 17.1953L5 21Z"/></g><text class="b-l" x="595" y="735" text-anchor="middle">Skills</text></g><g class="blk" data-mi="6" tabindex="0" role="button" aria-label="Work- space"><rect class="b-box" x="700" y="595" width="181" height="183"/><g class="b-ic" transform="translate(766 625) scale(2)"><path d="M4 7L4 17 M1 7L23 7 M4 10L20 10 M14 14H20 M20 7L20 17 M14 7L14 17 M17 10L17 11 M17 14L17 15"/></g><text class="b-l" x="790" y="723" text-anchor="middle">Work-</text><text class="b-l" x="790" y="753" text-anchor="middle">space</text></g>
+  <g class="blk" data-mi="0" tabindex="0" role="button" aria-label="Language models"><rect class="b-box" x="305" y="54" width="181" height="183"/><g class="b-ic" transform="translate(371 84) scale(2)"><path d="M8 10L12 10L16 10 M8 14L10 14L12 14 M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2.5 21.5L7 20.6622C8.47087 21.513 10.1786 22 12 22Z"/></g><text class="b-l" x="395" y="182" text-anchor="middle">Language</text><text class="b-l" x="395" y="212" text-anchor="middle">models</text></g><g class="blk" data-mi="5" tabindex="0" role="button" aria-label="Media models"><rect class="b-box" x="514" y="54" width="181" height="183"/><g class="b-ic" transform="translate(580 84) scale(2)"><path d="M2 19V9C2 7.89543 2.89543 7 4 7H4.5C5.12951 7 5.72229 6.70361 6.1 6.2L8.32 3.24C8.43331 3.08892 8.61115 3 8.8 3H15.2C15.3889 3 15.5667 3.08892 15.68 3.24L17.9 6.2C18.2777 6.70361 18.8705 7 19.5 7H20C21.1046 7 22 7.89543 22 9V19C22 20.1046 21.1046 21 20 21H4C2.89543 21 2 20.1046 2 19Z M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z"/></g><text class="b-l" x="604" y="182" text-anchor="middle">Media</text><text class="b-l" x="604" y="212" text-anchor="middle">models</text></g><g class="blk" data-mi="1" tabindex="0" role="button" aria-label="Harness"><rect class="b-box" x="409" y="326" width="181" height="183"/><g class="b-ic" transform="translate(475 356) scale(2)"><path d="M8 15.4V8.6C8 8.26863 8.26863 8 8.6 8H15.4C15.7314 8 16 8.26863 16 8.6V15.4C16 15.7314 15.7314 16 15.4 16H8.6C8.26863 16 8 15.7314 8 15.4Z M20 4.6V19.4C20 19.7314 19.7314 20 19.4 20H4.6C4.26863 20 4 19.7314 4 19.4V4.6C4 4.26863 4.26863 4 4.6 4H19.4C19.7314 4 20 4.26863 20 4.6Z M17 4V2 M12 4V2 M7 4V2 M7 20V22 M12 20V22 M17 20V22 M20 17H22 M20 12H22 M20 7H22 M4 17H2 M4 12H2 M4 7H2"/></g><text class="b-l" x="499" y="466" text-anchor="middle">Harness</text></g><g class="blk" data-mi="4" tabindex="0" role="button" aria-label="Tools"><rect class="b-box" x="118" y="595" width="181" height="183"/><g class="b-ic" transform="translate(184 625) scale(2)"><path d="M10.0503 10.6066L2.97923 17.6777C2.19818 18.4587 2.19818 19.725 2.97923 20.5061V20.5061C3.76027 21.2871 5.0266 21.2871 5.80765 20.5061L12.8787 13.435 M10.0502 10.6066C9.20638 8.45358 9.37134 5.6286 11.1109 3.88909C12.8504 2.14957 16.0606 1.76777 17.8284 2.82843L14.7877 5.8691L14.5051 8.98014L17.6161 8.69753L20.6568 5.65685C21.7175 7.42462 21.3357 10.6349 19.5961 12.3744C17.8566 14.1139 15.0316 14.2789 12.8786 13.435"/></g><text class="b-l" x="208" y="735" text-anchor="middle">Tools</text></g><g class="blk" data-mi="3" tabindex="0" role="button" aria-label="MCPs"><rect class="b-box" x="312" y="595" width="181" height="183"/><g class="b-ic" transform="translate(378 625) scale(2)"><path d="M12 13.1538V21 M17 8.38452V11.1538C17 12.2583 16.1046 13.1538 15 13.1538H9C7.89543 13.1538 7 12.2583 7 11.1538V8.38452C7 7.27995 7.89543 6.38452 9 6.38452H15C16.1046 6.38452 17 7.27995 17 8.38452Z M15.3334 6.38462V3 M8.66663 6.38462V3"/></g><text class="b-l" x="402" y="735" text-anchor="middle">MCPs</text></g><g class="blk" data-mi="2" tabindex="0" role="button" aria-label="Skills"><rect class="b-box" x="505" y="595" width="181" height="183"/><g class="b-ic" transform="translate(571 625) scale(2)"><path d="M22 14V6C22 4.34315 20.6569 3 19 3H9C7.34315 3 6 4.34315 6 6V13 M12 21H6C3.79086 21 2 19.2091 2 17C2 14.7909 3.79086 13 6 13H17H18C15.7909 13 14 14.7909 14 17C14 19.2091 15.7909 21 18 21C20.2091 21 22 19.2091 22 17V14"/></g><text class="b-l" x="595" y="735" text-anchor="middle">Skills</text></g><g class="blk" data-mi="6" tabindex="0" role="button" aria-label="Work- space"><rect class="b-box" x="700" y="595" width="181" height="183"/><g class="b-ic" transform="translate(766 625) scale(2)"><path d="M4 7L4 17 M1 7L23 7 M4 10L20 10 M14 14H20 M20 7L20 17 M14 7L14 17 M17 10L17 11 M17 14L17 15"/></g><text class="b-l" x="790" y="723" text-anchor="middle">Work-</text><text class="b-l" x="790" y="753" text-anchor="middle">space</text></g>
 </svg>
 </div>
       <div class="split-overlay" id="splitOverlay" aria-hidden="true">
@@ -1160,6 +1160,11 @@ const MODULES = [
       "k": "Zed"
      },
      {
+      "n": "Cursor",
+      "v": "Anysphere",
+      "k": "Cursor"
+     },
+     {
       "n": "Hermes Agent",
       "v": "Nous Research",
       "k": "Hermes Agent"
@@ -1223,7 +1228,7 @@ const MODULES = [
   "name": "Skills",
   "tag": "The knowledge",
   "color": "var(--lime)",
-  "glyph": "M5 21V5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21L13.0815 17.1953C12.4227 16.7717 11.5773 16.7717 10.9185 17.1953L5 21Z",
+  "glyph": "M22 14V6C22 4.34315 20.6569 3 19 3H9C7.34315 3 6 4.34315 6 6V13 M12 21H6C3.79086 21 2 19.2091 2 17C2 14.7909 3.79086 13 6 13H17H18C15.7909 13 14 14.7909 14 17C14 19.2091 15.7909 21 18 21C20.2091 21 22 19.2091 22 17V14",
   "lede": "This is how you teach your agent something once instead of explaining it with every request: a skill is a text file holding know-how, procedures and style rules. The agent loads it only when the task calls for it — which keeps its head clear and saves cost.",
   "groups": [
    {
@@ -1273,7 +1278,7 @@ const MODULES = [
   "name": "MCP",
   "tag": "The connector",
   "color": "var(--violet)",
-  "glyph": "M14 11.9976C14 9.5059 11.683 7 8.85714 7C8.52241 7 7.41904 7.00001 7.14286 7.00001C4.30254 7.00001 2 9.23752 2 11.9976C2 14.376 3.70973 16.3664 6 16.8714C6.36756 16.9525 6.75006 16.9952 7.14286 16.9952 M10 11.9976C10 14.4893 12.317 16.9952 15.1429 16.9952C15.4776 16.9952 16.581 16.9952 16.8571 16.9952C19.6975 16.9952 22 14.7577 22 11.9976C22 9.6192 20.2903 7.62884 18 7.12383C17.6324 7.04278 17.2499 6.99999 16.8571 6.99999",
+  "glyph": "M12 13.1538V21 M17 8.38452V11.1538C17 12.2583 16.1046 13.1538 15 13.1538H9C7.89543 13.1538 7 12.2583 7 11.1538V8.38452C7 7.27995 7.89543 6.38452 9 6.38452H15C16.1046 6.38452 17 7.27995 17 8.38452Z M15.3334 6.38462V3 M8.66663 6.38462V3",
   "lede": "The Model Context Protocol is the USB-C of AI: an open standard from the Linux Foundation. Through it, every agent reaches every tool the same way. Over 9,800 servers in the index.",
   "groups": [
    {
@@ -1428,6 +1433,11 @@ const MODULES = [
       "n": "FLUX.2",
       "v": "Black Forest Labs",
       "k": "FLUX.2"
+     },
+     {
+      "n": "Qwen-Image",
+      "v": "Alibaba",
+      "k": "Qwen-Image"
      },
      {
       "n": "Imagen 4",
@@ -2046,6 +2056,22 @@ const STECKBRIEF = {
   "free": true,
   "plans": "Editor free · Pro $10/mo"
  },
+ "Cursor": {
+  "name": "Cursor",
+  "vendor": "Anysphere",
+  "cat": "Agent harness · Block 02",
+  "accent": "var(--ember)",
+  "open": false,
+  "blurb": "A code editor built around the agent from the start: chat beside the code, tab completion that learns your habits, and an agent mode that reads and edits files on its own. The base is VS Code — but the editor itself is not open. It ships with models; your own keys can be plugged in.",
+  "tip": "The entry point if you want editor and agent in one window, no terminal. Turn on privacy mode if your code must stay out of training.",
+  "links": {
+   "home": "https://cursor.com",
+   "docs": "https://docs.cursor.com"
+  },
+  "icon": "cursor",
+  "free": true,
+  "plans": "Hobby free · Pro $20/mo"
+ },
  "Hermes Agent": {
   "name": "Hermes Agent",
   "vendor": "Nous Research",
@@ -2421,6 +2447,19 @@ const STECKBRIEF = {
    "home": "https://bfl.ai/models/flux-2",
    "docs": "https://bfl.ai/models/flux-2",
    "code": "https://github.com/black-forest-labs/flux2"
+  }
+ },
+ "Qwen-Image": {
+  "name": "Qwen-Image",
+  "vendor": "Alibaba",
+  "cat": "Image model · Block 06",
+  "accent": "var(--sky)",
+  "open": true,
+  "blurb": "Alibaba's open image model. It puts text into images reliably — labels, signs, short slogans — and besides generating can rework existing images. Open weights: download them, run them on your own hardware, nothing leaves the machine.",
+  "tip": "Runs locally through the usual open-model tooling, but needs a powerful graphics card. For the occasional image, a service with a free tier is more comfortable than your own hardware.",
+  "links": {
+   "home": "https://qwen.ai",
+   "code": "https://github.com/QwenLM/Qwen-Image"
   }
  },
  "Imagen 4": {
@@ -4338,6 +4377,7 @@ const ARBEITSARTEN = {
   "blatt_titel": "Your setup",
   "kopieren": "Copy as Markdown",
   "kopiert": "Copied",
+  "herunterladen": "Download setup.md",
   "neu": "Start over",
   "blatt_fuss": "As of August 2026. Check the details before relying on them.",
   "info": "Fact sheet for",
@@ -4360,7 +4400,7 @@ const ARBEITSARTEN = {
  "tutorial": {
   "titel": "And now?",
   "datei": "setup.md",
-  "s1": "Save the sheet as <code>setup.md<\/code>.",
+  "s1": "Download the sheet as <code>setup.md<\/code>.",
   "s3": "Put this instruction alongside it:",
   "prompt_kopieren": "Copy the instruction",
   "prompt": "Read setup.md. Set up the building blocks listed there — start at \"Before you start\" and work the list from top to bottom.\n\nBefore each step, check whether the prerequisite is already met. Do not invent anything: if a tool is unavailable or a link is dead, say so instead of guessing a replacement. Ask before installing anything that costs money or requires an account. At the end, tell me what is set up and what is still open.",
@@ -4376,7 +4416,8 @@ const ARBEITSARTEN = {
    },
    {
     "keys": [
-     "Zed"
+     "Zed",
+     "Cursor"
     ],
     "text": "Open the folder in {h} and put <code>setup.md<\/code> into it. Mention the file in the agent panel and it gets read along."
    },
@@ -4435,6 +4476,7 @@ const ARBEITSARTEN = {
     "Kimi Code",
     "ZCode",
     "Zed",
+    "Cursor",
     "Agent SDK",
     "DeepSeek Harness",
     "Agents SDK",
@@ -4679,7 +4721,10 @@ const ARBEITSARTEN = {
       "Ideogram",
       "Recraft",
       "FLUX.2",
-      "Imagen 4"
+      "Qwen-Image",
+      "Imagen 4",
+      "Midjourney V8.2",
+      "Higgsfield"
      ],
      "empfehlung": [
       "Ideogram"
@@ -4765,7 +4810,11 @@ const ARBEITSARTEN = {
      "frage": "Which media should it be able to create?",
      "kandidaten": [
       "GPT Image 2",
-      "Recraft"
+      "Recraft",
+      "Midjourney V8.2",
+      "Higgsfield",
+      "FLUX.2",
+      "Qwen-Image"
      ],
      "empfehlung": []
     },
@@ -4782,6 +4831,7 @@ const ARBEITSARTEN = {
       "Uizard",
       "Antigravity 2.0",
       "Zed",
+      "Cursor",
       "Penpot",
       "pencil.dev"
      ],
@@ -4855,6 +4905,7 @@ const ARBEITSARTEN = {
          "Bolt.new",
          "Onlook",
          "Zed",
+         "Cursor",
          "Antigravity 2.0"
         ],
         "empfehlung": [
@@ -4898,6 +4949,7 @@ const ARBEITSARTEN = {
        "07_umgebung": {
         "kandidaten": [
          "Zed",
+         "Cursor",
          "Antigravity 2.0",
          "Figma",
          "pencil.dev"
@@ -4994,6 +5046,7 @@ const ARBEITSARTEN = {
       "Kokoro",
       "Midjourney V8.2",
       "FLUX.2",
+      "Qwen-Image",
       "Seedream"
      ],
      "empfehlung": [
@@ -5020,9 +5073,11 @@ const ARBEITSARTEN = {
          "GPT Image 2",
          "Midjourney V8.2",
          "FLUX.2",
+         "Qwen-Image",
          "Imagen 4",
          "Ideogram",
          "Recraft",
+         "Higgsfield",
          "Seedream"
         ],
         "empfehlung": [
@@ -5033,7 +5088,7 @@ const ARBEITSARTEN = {
       "voraussetzungen": [
        {
         "titel": "An account at the provider",
-        "text": "Except for FLUX.2, which you can run yourself, all of them go through a service with a key and billing."
+        "text": "Except for FLUX.2 and Qwen-Image, which you can run yourself, all of them go through a service with a key and billing."
        }
       ]
      },
@@ -5311,7 +5366,8 @@ const ARBEITSARTEN = {
       ${w.i > 0 ? `<button type="button" id="wzback">${T.zurueck}</button>` : ''}
       ${s.id === 'blatt'
         ? `<button type="button" id="wzneu">${T.neu}</button>
-           <button type="button" class="prim weit" id="wzcopy">${T.kopieren}</button>`
+           <button type="button" id="wzcopy">${T.kopieren}</button>
+           <button type="button" class="prim weit" id="wzdown">${T.herunterladen}</button>`
         : `<button type="button" class="prim weit" id="wznext" ${weiter ? '' : 'disabled'}>${ueberspringbar ? T.ueberspringen : T.weiter}</button>`}
     </div>`;
     drawer.classList.remove('detail');
@@ -5438,6 +5494,13 @@ const ARBEITSARTEN = {
       navigator.clipboard.writeText(markdown()).then(() => {
         b.textContent = T.kopiert; setTimeout(() => { b.textContent = T.kopieren; }, 1600);
       }).catch(() => {});
+    }
+    else if(b.id === 'wzdown'){
+      const blob = new Blob([markdown()], {type:'text/markdown;charset=utf-8'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = TUT.datei;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 5000);
     }
   });
 

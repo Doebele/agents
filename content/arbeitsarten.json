@@ -53,6 +53,7 @@
      "Kimi Code",
      "ZCode",
      "Zed",
+     "Cursor",
      "Agent SDK",
      "DeepSeek Harness",
      "Agents SDK",
@@ -428,7 +429,10 @@
       "Ideogram",
       "Recraft",
       "FLUX.2",
-      "Imagen 4"
+      "Qwen-Image",
+      "Imagen 4",
+      "Midjourney V8.2",
+      "Higgsfield"
      ],
      "empfehlung": [
       "Ideogram"
@@ -571,7 +575,11 @@
     "06_medien": {
      "kandidaten": [
       "GPT Image 2",
-      "Recraft"
+      "Recraft",
+      "Midjourney V8.2",
+      "Higgsfield",
+      "FLUX.2",
+      "Qwen-Image"
      ],
      "hinweis": "Nur für Bildmaterial in der Oberfläche.",
      "frage": {
@@ -591,6 +599,7 @@
       "Uizard",
       "Antigravity 2.0",
       "Zed",
+      "Cursor",
       "Penpot",
       "pencil.dev"
      ],
@@ -705,6 +714,7 @@
          "Bolt.new",
          "Onlook",
          "Zed",
+         "Cursor",
          "Antigravity 2.0"
         ],
         "empfehlung": [
@@ -778,6 +788,7 @@
        "07_umgebung": {
         "kandidaten": [
          "Zed",
+         "Cursor",
          "Antigravity 2.0",
          "Figma",
          "pencil.dev"
@@ -939,6 +950,7 @@
       "Kokoro",
       "Midjourney V8.2",
       "FLUX.2",
+      "Qwen-Image",
       "Seedream"
      ],
      "empfehlung": [
@@ -981,9 +993,11 @@
          "GPT Image 2",
          "Midjourney V8.2",
          "FLUX.2",
+         "Qwen-Image",
          "Imagen 4",
          "Ideogram",
          "Recraft",
+         "Higgsfield",
          "Seedream"
         ],
         "empfehlung": [
@@ -998,8 +1012,8 @@
          "en": "An account at the provider"
         },
         "text": {
-         "de": "Bis auf FLUX.2, das du selbst betreiben kannst, laufen alle über einen Dienst mit Schlüssel und Abrechnung.",
-         "en": "Except for FLUX.2, which you can run yourself, all of them go through a service with a key and billing."
+         "de": "Bis auf FLUX.2 und Qwen-Image, die du selbst betreiben kannst, laufen alle über einen Dienst mit Schlüssel und Abrechnung.",
+         "en": "Except for FLUX.2 and Qwen-Image, which you can run yourself, all of them go through a service with a key and billing."
         }
        }
       ]
@@ -1268,6 +1282,10 @@
    "de": "Kopiert",
    "en": "Copied"
   },
+  "herunterladen": {
+   "de": "setup.md herunterladen",
+   "en": "Download setup.md"
+  },
   "neu": {
    "de": "Von vorn",
    "en": "Start over"
@@ -1348,8 +1366,8 @@
   },
   "datei": "setup.md",
   "s1": {
-   "de": "Speichere das Blatt als <code>setup.md</code>.",
-   "en": "Save the sheet as <code>setup.md</code>."
+   "de": "Lad das Blatt als <code>setup.md</code> herunter.",
+   "en": "Download the sheet as <code>setup.md</code>."
   },
   "s3": {
    "de": "Leg diesen Auftrag daneben:",
@@ -1378,7 +1396,8 @@
    },
    {
     "keys": [
-     "Zed"
+     "Zed",
+     "Cursor"
     ],
     "text": {
      "de": "Öffne den Ordner in {h} und leg <code>setup.md</code> hinein. Im Agent-Panel erwähnst du die Datei, dann wird sie mitgelesen.",

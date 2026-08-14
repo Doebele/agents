@@ -1,0 +1,101 @@
+# Weekly upkeep.
+#
+# A reference work that promises "as of August 2026" needs someone to keep
+# that promise. This is that someone. It runs Monday morning, picks ONE thing
+# from the catalogue that has gone stale or is missing, researches it with
+# sources, and opens a pull request.
+#
+# One thing per run is deliberate. A pull request touching forty fact sheets
+# gets waved through rather than read, and then the review step is theatre.
+#
+# It never pushes to main. The maintainer merges from a phone, and merging
+# deploys.
+name: Weekly upkeep
+
+on:
+  schedule:
+    # Mondays 06:20 UTC. Off the hour, because everyone schedules on the hour
+    # and the runner queue is shorter a few minutes later.
+    - cron: "20 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      focus:
+        description: "Optional: what to look at this run (leave empty to let it choose)"
+        required: false
+        type: string
+
+jobs:
+  upkeep:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Research and propose
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --max-turns 60
+            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*)"
+          prompt: |
+            You are the upkeep agent for this catalogue. Read CLAUDE.md first —
+            its rules bind you, especially: never invent a fact or a link,
+            never edit site/ by hand, never push to main, one topic per PR.
+
+            ${{ github.event.inputs.focus && format('The maintainer asked you to look at this specifically: {0}', github.event.inputs.focus) || '' }}
+
+            ## Pick exactly one thing
+
+            ${{ github.event.inputs.focus && 'The instruction above overrides the priority list below.' || 'Work down this list and stop at the first item that yields real work:' }}
+
+            1. **A dead or moved link.** Fetch the `links.home` of fact sheets
+               in content/steckbrief.json. If one no longer resolves or now
+               redirects elsewhere, that is the run's topic.
+
+            2. **A stale price.** 42 entries carry a `plans` field, and those
+               go out of date fastest. Check a handful against the vendor's
+               current pricing page — start with the ones a beginner is most
+               likely to reach for.
+
+            3. **A declared gap.** content/arbeitsarten.json marks 14 stations
+               with a `luecke` field, each describing in one sentence what is
+               missing. If a tool now exists that fills one, add its fact
+               sheet and assign it.
+
+            4. **Something genuinely new.** A model, harness or MCP server
+               that has appeared since the catalogue was last touched and that
+               a beginner would plausibly meet.
+
+            If none of the four yields anything, that is a good outcome. Open
+            no pull request. Say what you checked and stop.
+
+            ## How to work
+
+            Research with WebSearch and WebFetch. Prefer the vendor's own
+            pages and repositories over write-ups about them.
+
+            Change content/*.json only. Then:
+
+                python3 build/build.py
+                python3 build/build.py --check
+
+            The second command must exit 0. If it does not, you have broken
+            something — fix it before going further.
+
+            ## How to hand it over
+
+            Create a branch named `upkeep/<short-topic>`, commit the source
+            change together with the rebuilt site/ files, and open a pull
+            request against main with `gh pr create`.
+
+            The PR body must contain, for every claim you changed or added,
+            the source URL it rests on. Also say plainly what you did NOT
+            verify. A reviewer who has to guess what you checked cannot
+            review.
+
+            Title the PR in plain language: what changed, not "chore: update".

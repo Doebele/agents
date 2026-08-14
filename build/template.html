@@ -506,6 +506,32 @@ section{ position:relative; }
 .rule-card h3{ font-size:18px; font-weight:600; margin-top:18px; }
 .rule-card p{ color:var(--ink-dim); font-size:13.5px; font-weight:300; margin-top:8px; }
 
+{{T:t094}}
+.start{ border-top:1px solid var(--line); }
+.start .wrap{ padding:104px 28px 110px; }
+.start-box{ max-width:720px; margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center; }
+{{T:t095}}
+.start-spec{ display:flex; gap:6px; margin-bottom:36px; }
+.start-spec i{ width:24px; height:3px; border-radius:2px; }
+.start-spec i:nth-child(1){ background:var(--cyan); }
+.start-spec i:nth-child(2){ background:var(--ember); }
+.start-spec i:nth-child(3){ background:var(--lime); }
+.start-spec i:nth-child(4){ background:var(--violet); }
+.start-spec i:nth-child(5){ background:var(--pink); }
+.start-spec i:nth-child(6){ background:var(--sky); }
+.start-spec i:nth-child(7){ background:var(--amber); }
+.start-h{ font-family:var(--display); font-size:clamp(30px,4.6vw,54px); line-height:1.1; font-weight:100; letter-spacing:-.02em; }
+.start-h em{ font-style:normal; font-weight:500; color:var(--cyan); }
+.start-p{ margin-top:22px; color:var(--ink-dim); font-size:clamp(15px,1.5vw,18px); font-weight:300; line-height:1.6; }
+.start-btn{ margin-top:42px; display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--mono); font-size:13px; letter-spacing:.08em; color:var(--ink);
+  background:transparent; border:1px solid var(--line-2); border-radius:999px;
+  padding:15px 30px; cursor:none; transition:border-color .3s, color .3s; }
+.start-btn:hover, .start-btn:focus-visible{ border-color:var(--cyan); color:var(--cyan); }
+.start-btn svg{ width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; transition:transform .3s; }
+.start-btn:hover svg, .start-btn:focus-visible svg{ transform:translateX(3px); }
+@media (pointer:coarse){ .start-btn{ cursor:pointer; } }
+
 /* ----- FOOTER ---------------------------------------------------------- */
 .foot{ border-top:1px solid var(--line); }
 .foot .wrap{ padding:110px 28px 60px; }
@@ -886,6 +912,18 @@ setTimeout(function(){
 {{T:t057}}
     </div>
     <div class="rules" id="rulesgrid"></div>
+  </div>
+</section>
+
+{{T:t090}}
+<section class="start" id="sec-start">
+  <div class="wrap">
+    <div class="start-box rv">
+      <div class="start-spec" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+{{T:t091}}
+{{T:t092}}
+{{T:t093}}
+    </div>
   </div>
 </section>
 
@@ -1908,6 +1946,7 @@ addEventListener('keydown', e=>{
   });
 
   navwiz.addEventListener('click', () => { los(); });
+  const ctawiz = $('#ctawiz'); if(ctawiz) ctawiz.addEventListener('click', () => { los(); });
   wizZurueck = () => { if(!w) return false; zeichne(); return true; };
   /* Tastatur: der Info-Knopf ist kein <button>, damit er nicht im Formularfluss
      der Option landet — Enter und Leertaste muss er selbst behandeln. */

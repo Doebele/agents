@@ -131,6 +131,7 @@ if fehler:
     sys.exit(1)
 
 pruefmodus = "--check" in sys.argv
+abweichung = False
 for lang, name in SPRACHEN.items():
     neu = baue(lang)
     ziel = SITE/name
@@ -139,6 +140,7 @@ for lang, name in SPRACHEN.items():
         if alt == neu:
             print(f"  {name}: deckungsgleich")
         else:
+            abweichung = True
             d = list(difflib.unified_diff(alt.split("\n"), neu.split("\n"),
                                           "alt", "neu", lineterm="", n=0))
             print(f"  {name}: {len([x for x in d if x[:1] in '+-' and x[:3] not in ('+++','---')])} abweichende Zeilen")
@@ -146,3 +148,9 @@ for lang, name in SPRACHEN.items():
     else:
         ziel.write_text(neu, encoding="utf-8")
         print(f"  {name}: geschrieben ({len(neu):,} Zeichen)")
+
+# Der Pruefmodus muss scheitern, nicht nur reden: sonst laeuft die Auslieferung
+# ueber einen veralteten Stand hinweg, obwohl sie ihn gemeldet hat.
+if abweichung:
+    print("\nsite/ weicht von content/ ab — erst bauen, dann ausliefern.")
+    sys.exit(1)

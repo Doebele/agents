@@ -338,5 +338,29 @@
  "t089": {
   "de": "  <button class=\"nav-wiz\" id=\"navwiz\">Setup zusammenstellen</button>",
   "en": "  <button class=\"nav-wiz\" id=\"navwiz\">Assemble a setup</button>"
+ },
+ "t090": {
+  "de": "<!-- START: Aufruf zum Wizard -->",
+  "en": "<!-- START: wizard CTA -->"
+ },
+ "t091": {
+  "de": "      <h2 class=\"start-h\">Neugierig — <em>jetzt loslegen.</em></h2>",
+  "en": "      <h2 class=\"start-h\">Curious? <em>Start now.</em></h2>"
+ },
+ "t092": {
+  "de": "      <p class=\"start-p\">Mit dem folgenden Wizard kannst du dir das für deinen Bedarf notwendige Setup zusammenstellen und mit einem KI-Agenten deiner Wahl einrichten.</p>",
+  "en": "      <p class=\"start-p\">With the wizard below you can assemble the setup your use case needs — and set it up with an AI agent of your choice.</p>"
+ },
+ "t093": {
+  "de": "      <button class=\"start-btn\" id=\"ctawiz\" type=\"button\">Setup zusammenstellen <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>",
+  "en": "      <button class=\"start-btn\" id=\"ctawiz\" type=\"button\">Assemble a setup <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></button>"
+ },
+ "t094": {
+  "de": "/* ----- START / WIZARD-CTA ---------------------------------------------- */",
+  "en": "/* ----- START / WIZARD CTA ---------------------------------------------- */"
+ },
+ "t095": {
+  "de": "/* Sieben Streifen in den Baustein-Farben: das Versprechen des Wizards in einer Zeile */",
+  "en": "/* Seven bars in the module colors: the wizard's promise in one line */"
  }
 }

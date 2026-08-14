@@ -31,25 +31,31 @@ jobs:
       - name: Verify build is current
         run: python3 build/build.py --check
 
-      # Strato serves SFTP on port 22, not FTP on 21 — the host behind the
-      # secret reverse-resolves to sshio.rzone.de. A plain FTP client is
-      # refused there, so this uploads over SSH.
+      # Strato speaks SFTP on port 22, not FTP on 21 — the host behind the
+      # secret reverse-resolves to sshio.rzone.de.
+      #
+      # And its SSH account has no shell: it is SFTP only. Actions built on
+      # scp fail here, because they run mkdir and tar on the far side. lftp
+      # speaks the SFTP protocol itself and needs no remote commands.
       #
       # The secret names still say FTP; they carry the SFTP credentials.
+      # The password travels through the environment, never on a command line.
       - name: Upload to Strato
         if: github.ref == 'refs/heads/main' && env.FTP_SERVER != ''
-        uses: appleboy/scp-action@v1.0.0
-        with:
-          host: ${{ secrets.STRATO_FTP_SERVER }}
-          username: ${{ secrets.STRATO_FTP_USER }}
-          password: ${{ secrets.STRATO_FTP_PASSWORD }}
-          port: 22
-          # strip_components drops the leading site/ so the files land
-          # directly in the subdomain's document root.
-          #
-          # The target is relative: the SSH login lands in the webspace, and
-          # an absolute /agents would mean the server root, where the user
-          # may not create anything.
-          source: "site/index.html,site/index.de.html,site/.htaccess"
-          target: "agents"
-          strip_components: 1
+        env:
+          FTP_HOST: ${{ secrets.STRATO_FTP_SERVER }}
+          FTP_USER: ${{ secrets.STRATO_FTP_USER }}
+          LFTP_PASSWORD: ${{ secrets.STRATO_FTP_PASSWORD }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -u "$FTP_USER" --env-password "sftp://$FTP_HOST" <<'EOF'
+            set sftp:auto-confirm yes
+            set net:max-retries 2
+            mkdir -f agents
+            cd agents
+            put -O . site/index.html
+            put -O . site/index.de.html
+            put -O . site/.htaccess
+            cls -l
+            bye
+          EOF

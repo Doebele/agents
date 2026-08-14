@@ -5,7 +5,6 @@
    "de": "VPS / Bare Metal",
    "en": "VPS / bare metal"
   },
-  "tc": "var(--violet)",
   "gf": {
    "de": "Günstige CPU-VPS zum Selbsthosten",
    "en": "Cheap CPU VPS to self-host"
@@ -20,7 +19,6 @@
  {
   "n": "Together AI",
   "type": "Managed API",
-  "tc": "var(--cyan)",
   "gf": {
    "de": "Breite Open-Weight-Auswahl",
    "en": "Broad open-weight choice"
@@ -35,7 +33,6 @@
  {
   "n": "Fireworks AI",
   "type": "Managed API",
-  "tc": "var(--cyan)",
   "gf": {
    "de": "Schnelle Inferenz + Feintuning",
    "en": "Fast inference + fine-tuning"
@@ -50,7 +47,6 @@
  {
   "n": "Groq",
   "type": "Managed API",
-  "tc": "var(--cyan)",
   "gf": {
    "de": "Schnellste Inferenz",
    "en": "Fastest inference"
@@ -65,7 +61,6 @@
  {
   "n": "RunPod",
   "type": "GPU rental",
-  "tc": "var(--lime)",
   "gf": {
    "de": "Günstige GPU-Stunden, serverlos",
    "en": "Cheap GPU hours, serverless"
@@ -80,7 +75,6 @@
  {
   "n": "Lambda",
   "type": "GPU rental",
-  "tc": "var(--lime)",
   "gf": {
    "de": "Dedizierte GPU-Stunden",
    "en": "Dedicated GPU hours"
@@ -95,7 +89,6 @@
  {
   "n": "Vast.ai",
   "type": "GPU rental",
-  "tc": "var(--lime)",
   "gf": {
    "de": "Günstigste GPU-Stunden",
    "en": "Cheapest GPU hours"
@@ -113,7 +106,6 @@
    "de": "VPS / Bare Metal",
    "en": "VPS / bare metal"
   },
-  "tc": "var(--violet)",
   "gf": {
    "de": "Günstige dedizierte Server",
    "en": "Cheap dedicated servers"
@@ -128,7 +120,6 @@
  {
   "n": "Modal",
   "type": "Serverless GPU",
-  "tc": "var(--ember)",
   "gf": {
    "de": "Eigenen Code serverlos deployen",
    "en": "Run your own code serverless"
@@ -143,7 +134,6 @@
  {
   "n": "Replicate",
   "type": "Serverless GPU",
-  "tc": "var(--ember)",
   "gf": {
    "de": "Modelle per API ausführen",
    "en": "Run models via API"
@@ -158,7 +148,6 @@
  {
   "n": "OpenRouter",
   "type": "Aggregator",
-  "tc": "var(--sky)",
   "gf": {
    "de": "Ein API für alle Modelle",
    "en": "One API for all models"

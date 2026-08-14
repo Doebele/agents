@@ -283,12 +283,27 @@ section{ position:relative; }
 .axis-line{ position:absolute; left:50%; top:6%; bottom:6%; width:1px; background:var(--line-2); opacity:0; }
 .blk-svg{ position:absolute; inset:0; width:100%; height:100%; opacity:0; overflow:visible; }
 .blk-svg .b-link{ fill:none; stroke:var(--line-2); stroke-width:1.6; }
-.blk-svg .b-flow{ fill:none; stroke:var(--cyan); stroke-width:4; stroke-linecap:round; opacity:0; }
+.blk-svg .b-flow{ fill:none; stroke:var(--ember); stroke-width:4; stroke-linecap:round; opacity:0; }
 .blk .b-box{ fill:var(--bg); stroke:var(--line-2); stroke-width:1.6; transition:stroke .3s; }
 .blk .b-ic path{ fill:none; stroke:var(--ink); stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
 .blk .b-l{ font-family:var(--body); font-weight:700; font-size:23px; fill:var(--ink); }
 .blk{ cursor:none; }
-.blk:hover .b-box, .blk:focus-visible .b-box{ stroke:var(--cyan); }
+/* Per-module icon + box colours – maps data-mi to the module accent */
+.blk[data-mi="0"] .b-ic path{ stroke:var(--cyan); }
+.blk[data-mi="1"] .b-ic path{ stroke:var(--ember); }
+.blk[data-mi="2"] .b-ic path{ stroke:var(--lime); }
+.blk[data-mi="3"] .b-ic path{ stroke:var(--violet); }
+.blk[data-mi="4"] .b-ic path{ stroke:var(--pink); }
+.blk[data-mi="5"] .b-ic path{ stroke:var(--sky); }
+.blk[data-mi="6"] .b-ic path{ stroke:var(--amber); }
+.blk[data-mi="0"] .b-box{ stroke:var(--cyan); }
+.blk[data-mi="1"] .b-box{ stroke:var(--ember); }
+.blk[data-mi="2"] .b-box{ stroke:var(--lime); }
+.blk[data-mi="3"] .b-box{ stroke:var(--violet); }
+.blk[data-mi="4"] .b-box{ stroke:var(--pink); }
+.blk[data-mi="5"] .b-box{ stroke:var(--sky); }
+.blk[data-mi="6"] .b-box{ stroke:var(--amber); }
+.blk:hover .b-box, .blk:focus-visible .b-box{ stroke:var(--ink); }
 @media (pointer:coarse){ .blk{ cursor:pointer; } }
 
 
@@ -505,11 +520,6 @@ section{ position:relative; }
 /* reveal helper */
 .rv{ opacity:0; transform:translateY(26px); }
 
-/* number stat */
-.stat-row{ display:flex; gap:50px; flex-wrap:wrap; margin-top:40px; }
-.stat .v{ font-size:42px; font-weight:600; letter-spacing:-.02em; }
-.stat .v em{ font-style:normal; font-weight:900; }
-.stat .l{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; color:var(--muted); text-transform:uppercase; margin-top:4px; }
 .hero h1,.s-head h2,.thesis .big,.foot .quote{ font-family:var(--display); }
 /* ----- fact-sheet (master/detail inside drawer) ----- */
 .steck-cat{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--cyan); }
@@ -612,14 +622,14 @@ button.it{ width:100%; font-family:var(--body); text-align:left; background:none
 .host-head::after{ content:""; flex:1; height:1px; background:var(--line); }
 .host-grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:14px; }
 .prov{ grid-column:span 4; border:1px solid var(--line); border-radius:14px; padding:20px; background:linear-gradient(180deg,rgba(255,255,255,.02),transparent); transition:border-color .3s, transform .3s; display:flex; flex-direction:column; gap:9px; }
-.prov:hover{ transform:translateY(-3px); border-color:color-mix(in srgb,var(--tc) 50%,transparent); }
-.prov .ptype{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--tc); }
+.prov:hover{ transform:translateY(-3px); border-color:var(--line-2); }
+.prov .ptype{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-dim); }
 .prov .pn{ font-size:18px; font-weight:700; letter-spacing:-.01em; }
 .prov .pgf{ color:var(--ink-dim); font-size:13.5px; font-weight:300; }
 .prov .pmeta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; align-items:center; }
 .prov .tag{ font-family:var(--mono); font-size:11px; padding:4px 8px; border:1px solid var(--line-2); border-radius:6px; color:var(--muted); }
 .prov .tag.free{ color:var(--lime); border-color:color-mix(in srgb,var(--lime) 45%,transparent); }
-.prov a.plink{ font-family:var(--mono); font-size:11px; color:var(--tc); display:inline-flex; align-items:center; gap:5px; }
+.prov a.plink{ font-family:var(--mono); font-size:11px; color:var(--ink-dim); display:inline-flex; align-items:center; gap:5px; }
 .prov a.plink svg{ width:12px; height:12px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 @media (max-width:860px){ .prov{ grid-column:span 6; } }
 @media (max-width:560px){ .prov{ grid-column:span 12; } }
@@ -819,12 +829,6 @@ setTimeout(function(){
          traegt die eingeblendete Ueberschrift auch ueber sie hinweg. -->
     <div id="sec-modules" aria-labelledby="modstitel">
     <div class="modules-grid" id="modsgrid"></div>
-    <div class="stat-row rv">
-{{T:t042}}
-{{T:t043}}
-{{T:t044}}
-{{T:t045}}
-    </div>
     </div>
   </div>
 </section>
@@ -1003,7 +1007,7 @@ const _EXT='<svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 
 function renderHosting(){
   const g=$('#prov-grid');
   if(g) g.innerHTML = (typeof PROVIDERS!=='undefined'&&PROVIDERS.length) ? PROVIDERS.map(p=>`
-    <article class="prov" style="--tc:${p.tc}">
+    <article class="prov">
       <div class="ptype">${p.type}</div>
       <div class="pn">${p.n}</div>
       <div class="pgf">${p.gf}</div>

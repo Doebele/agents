@@ -1,0 +1,42 @@
+# Laedt die beiden Sprachdateien nach agents.medvesek.com.
+#
+# Laeuft erst, wenn die drei Zugangsdaten als Repository-Secrets hinterlegt
+# sind — ohne sie wird der Auftrag stillschweigend uebersprungen statt bei
+# jedem Push rot zu werden.
+name: Zu Strato ausliefern
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'content/**'
+      - 'build/**'
+  workflow_dispatch:
+
+jobs:
+  ausliefern:
+    if: ${{ secrets.STRATO_FTP_SERVER != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Faengt den haeufigsten Fehler ab: Inhalt geaendert, aber vergessen
+      # neu zu bauen. Dann weicht site/ von content/ ab und nichts wird
+      # hochgeladen.
+      - name: Bauweg pruefen
+        run: python3 build/build.py --pruefen
+
+      - name: Hochladen
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.STRATO_FTP_SERVER }}
+          username: ${{ secrets.STRATO_FTP_USER }}
+          password: ${{ secrets.STRATO_FTP_PASSWORD }}
+          local-dir: ./site/
+          server-dir: /agents/
+          exclude: |
+            **/node_modules/**
+            **/package*.json
+            **/README.md
+            **/test_*.js

@@ -1,0 +1,16 @@
+# Apache vererbt die Regeln des uebergeordneten Verzeichnisses. Die Wurzel von
+# medvesek.com leitet alles Unbekannte auf die React-Anwendung um — das gilt
+# sonst auch hier. Diese Seite besteht aus zwei fertigen Dateien und braucht
+# keine Umschreibung.
+<IfModule mod_rewrite.c>
+  RewriteEngine Off
+</IfModule>
+
+DirectoryIndex index.html
+
+<IfModule mod_headers.c>
+  # Der Feldfuehrer wird gepflegt — der Browser soll jedes Mal nachfragen.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>

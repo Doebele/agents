@@ -1,75 +1,79 @@
 # AGENT // SYSTEM
 
-Ein interaktiver Feldführer durch die KI-Agenten-Landschaft — für Einsteiger,
-zweisprachig, Stand August 2026.
+An interactive field guide to the AI agent landscape — written for beginners,
+bilingual, as of August 2026.
 
-Zwei Ergebnisse aus einer Quelle:
+Two deliverables from one source:
 
 | | |
 |---|---|
-| **Website** | `site/index.html` (DE) · `site/index.en.html` (EN) — je eine einzige Datei, per Doppelklick zu öffnen |
-| **Präsentation** | `KI-Agenten-Landschaft.pptx` — 22 Folien, 16:9 |
+| **Website** | `site/index.html` (English, default) · `site/index.de.html` (German) — a single file each, openable by double-click |
+| **Deck** | `KI-Agenten-Landschaft.pptx` — 22 slides, 16:9 |
 
-## Was drinsteht
+## What is in it
 
-Sieben Bausteine, aus denen jeder KI-Agent besteht, mit **109 Steckbriefen**
-zu den Modellen, Werkzeugen und Diensten dahinter. Dazu ein Wizard, der aus
-der eigenen Arbeitsart ein Setup zusammenstellt — samt der Voraussetzungen,
-die dasein müssen, und einem Markdown-Blatt, das man dem eigenen Agenten
-zum Einrichten gibt.
+Seven building blocks that make up every AI agent, with **109 fact sheets** on
+the models, tools and services behind them. Plus a wizard that assembles a
+setup from the kind of work you do — including the prerequisites that have to
+exist first, and a Markdown sheet you hand to your own agent to do the setup.
 
-## Bauen
+## Build
 
-Die beiden HTML-Dateien sind **Erzeugnisse**. Wer sie direkt bearbeitet,
-verliert die Änderung beim nächsten Bauen.
-
-```bash
-python3 build/build.py            # baut beide Sprachdateien
-python3 build/build.py --pruefen  # baut nur und meldet Abweichungen
-```
-
-Ohne Abhängigkeiten ausser Python 3. Node wird nur für `build/extract.py`
-gebraucht, und das lief einmalig.
-
-## Aufbau
-
-```
-content/     die Inhalte — Steckbriefe, Bausteine, Glossar, Arbeitsarten
-build/       Vorlage und Bauskript
-site/        die gebauten Seiten
-media/       Bilder für die Präsentation
-DESIGN.md    das Designsystem, mit benannten Regeln
-PRODUCT.md   Zweck, Zielgruppe, Grundsätze
-```
-
-## Zweisprachigkeit
-
-Übersetzte Werte stehen in `content/` **nebeneinander** als
-`{"de": …, "en": …}`. Was in beiden Sprachen gleich ist — Namen, Links,
-Farben —, steht nur einmal da. Eine fehlende Übersetzung fällt dadurch im
-Nachbarschlüssel auf und wird zusätzlich von der Prüfung abgefangen.
-
-## Was die Prüfung abfängt
-
-Sie läuft vor jedem Schreiben und bricht ab, bevor etwas kaputtgeht:
-
-- eine fehlende oder leere Übersetzung
-- ein Chip, hinter dem kein Steckbrief liegt
-- ein Steckbrief, den keine Kachel erreicht
-- eine Marke in der Vorlage ohne Inhalt und umgekehrt
-
-## Grundsätze
-
-Keine erfundenen Angaben. Fehlt ein Link, wird er weggelassen statt geraten —
-deshalb tragen Begriffe und Fähigkeiten keine Herstellerverweise. Was als
-Vorschlag markiert ist, ist eine Meinung und kein Befund, und die Oberfläche
-sagt das auch.
-
-„Stand August 2026" ist ein Pflegeversprechen, kein Zeitstempel.
-
-## Präsentation bauen
+The two HTML files are **build outputs**. Editing them directly loses the
+change on the next build.
 
 ```bash
-python3 build_pptx.py      # erzeugt die PPTX aus media/
-python3 verify_pptx.py     # prüft sie gegen die Akzeptanzkriterien
+python3 build/build.py            # builds both language files
+python3 build/build.py --check    # builds only, reports differences
 ```
+
+No dependencies beyond Python 3. Node was needed once, for `build/extract.py`.
+
+## Layout
+
+```
+content/     the content — fact sheets, blocks, glossary, kinds of work
+build/       template and build script
+site/        the built pages
+media/       images for the deck
+DESIGN.md    the design system, with named rules
+PRODUCT.md   purpose, audience, principles
+```
+
+## Bilingual by construction
+
+Translated values sit **side by side** in `content/` as `{"de": …, "en": …}`.
+Anything identical in both languages — names, links, colours — appears once.
+A missing translation is therefore visible in its neighbouring key, and the
+build check catches it as well.
+
+## What the check catches
+
+It runs before anything is written and stops the build rather than shipping:
+
+- a missing or empty translation
+- a chip with no fact sheet behind it
+- a fact sheet no chip reaches
+- a template marker with no content, and the reverse
+
+## Principles
+
+No invented facts. When a link is unknown it is omitted rather than guessed —
+which is why concepts and capabilities carry no vendor links. Anything marked
+as a suggestion is an opinion, not a finding, and the interface says so.
+
+"As of August 2026" is a maintenance promise, not a timestamp.
+
+## Building the deck
+
+```bash
+python3 build_pptx.py      # renders the PPTX from media/
+python3 verify_pptx.py     # checks it against the acceptance criteria
+```
+
+## Deployment
+
+`site/` is uploaded to shared hosting by the GitHub Action in
+`.github/workflows/strato.yml`. It first verifies that `site/` still matches
+`content/`, then uploads. Without FTP credentials in the repository secrets
+the upload step is skipped and only the check runs.

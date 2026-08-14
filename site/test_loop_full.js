@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 
-const FILE_URL = 'file:///Users/clausmedvesek/Developer/projects/kimi/ai-agents-overview/output/site/index.en.html';
+const FILE_URL = 'file:///Users/clausmedvesek/Developer/projects/kimi/ai-agents-overview/output/site/index.de.html';
 
 (async () => {
   const consoleMessages = [];

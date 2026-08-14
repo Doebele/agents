@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Baut site/index.html und site/index.en.html aus build/template.html und
+"""Baut site/index.html (EN) und site/index.de.html (DE) aus build/template.html und
 content/*.json. Ab jetzt der einzige Weg, die Seiten zu aendern: Inhalte
 gehoeren in content/, Geruest in die Vorlage.
 
@@ -7,15 +7,17 @@ Vor dem Schreiben laeuft die Pruefung. Sie faengt genau die Fehler ab, die
 beim Bearbeiten von Hand entstehen: eine fehlende Uebersetzung, ein Chip ohne
 Steckbrief, ein Steckbrief, den keine Kachel erreicht.
 
-Aufruf:  python3 build/build.py [--pruefen]
-         --pruefen baut nur und vergleicht mit dem, was in site/ liegt.
+Aufruf:  python3 build/build.py [--check]
+         --check baut nur und vergleicht mit dem, was in site/ liegt.
 """
 import json, pathlib, sys, difflib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE, CONTENT = ROOT/"site", ROOT/"content"
 VORLAGE = (ROOT/"build"/"template.html").read_text(encoding="utf-8")
-SPRACHEN = {"de": "index.html", "en": "index.en.html"}
+# Englisch ist die Standardfassung — wer die Adresse ohne Dateinamen
+# aufruft, landet dort. Deutsch haengt am DE-Schalter.
+SPRACHEN = {"en": "index.html", "de": "index.de.html"}
 BLOECKE = ["MODULES", "RULES", "OC", "STECKBRIEF", "HARDWARE", "PROVIDERS", "LOOP", "GLOSSARY"]
 
 daten = {b: json.loads((CONTENT/f"{b.lower()}.json").read_text(encoding="utf-8")) for b in BLOECKE}
@@ -128,7 +130,7 @@ if fehler:
     for f in fehler[:20]: print("  ·", f)
     sys.exit(1)
 
-pruefmodus = "--pruefen" in sys.argv
+pruefmodus = "--check" in sys.argv
 for lang, name in SPRACHEN.items():
     neu = baue(lang)
     ziel = SITE/name

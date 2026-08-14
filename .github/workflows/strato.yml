@@ -1,15 +1,14 @@
-# Zwei Dinge in einem Ablauf:
+# Two things in one workflow:
 #
-# 1. Bei jedem Push wird geprueft, ob site/ noch zu content/ passt. Das faengt
-#    den haeufigsten Fehler ab — Inhalt geaendert, neu bauen vergessen.
-# 2. Sind die FTP-Zugangsdaten hinterlegt, werden die Seiten danach nach
-#    agents.medvesek.com geladen. Fehlen sie, wird nur dieser Schritt
-#    uebersprungen; die Pruefung laeuft trotzdem.
+# 1. On every push it verifies that site/ still matches content/. That catches
+#    the most common mistake — content edited, rebuild forgotten.
+# 2. If the FTP credentials are present, the pages are then uploaded to
+#    agents.medvesek.com. Without them only that step is skipped; the check
+#    still runs.
 #
-# Der secrets-Kontext ist in keiner if-Bedingung verfuegbar — weder am Job
-# noch am Schritt. Deshalb wandert der Wert zuerst nach env, und die
-# Bedingung fragt env ab.
-name: Pruefen und ausliefern
+# The secrets context is available in no if-condition — neither on the job nor
+# on the step. So the value moves into env first and the condition reads env.
+name: Check and deploy
 
 on:
   push:
@@ -22,17 +21,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  ausliefern:
+  deploy:
     runs-on: ubuntu-latest
     env:
       FTP_SERVER: ${{ secrets.STRATO_FTP_SERVER }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Bauweg pruefen
-        run: python3 build/build.py --pruefen
+      - name: Verify build is current
+        run: python3 build/build.py --check
 
-      - name: Hochladen
+      - name: Upload to Strato
         if: github.ref == 'refs/heads/main' && env.FTP_SERVER != ''
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:

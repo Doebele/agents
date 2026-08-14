@@ -1,59 +1,62 @@
-# Bauweg
+# Build
 
-Die beiden Seiten in `site/` sind ab jetzt **Erzeugnisse**. Wer sie direkt
-bearbeitet, verliert die Änderung beim nächsten Bauen.
+The two pages in `site/` are **build outputs**. Editing them directly loses
+the change on the next build.
 
 ```bash
-python3 build/build.py            # baut site/index.html und site/index.en.html
-python3 build/build.py --pruefen  # baut nur und meldet Abweichungen
+python3 build/build.py            # builds site/index.html and site/index.de.html
+python3 build/build.py --check    # builds only, reports differences
 ```
 
-## Wo was liegt
+## Where things live
 
-| Datei | Inhalt |
+| File | Content |
 |---|---|
-| `content/steckbrief.json` | die 86 Steckbriefe |
-| `content/modules.json` | die sieben Bausteine mit Chips und Gruppen |
-| `content/glossary.json` | Glossarbegriffe |
-| `content/rules.json`, `oc.json`, `hardware.json`, `providers.json`, `loop.json` | die übrigen Datenblöcke |
-| `content/ui.json` | die 88 übersetzten Zeilen der Seite |
-| `build/template.html` | Gerüst, CSS und Logik — alles, was in beiden Sprachen gleich ist |
+| `content/steckbrief.json` | the 109 fact sheets |
+| `content/modules.json` | the seven building blocks, with their chips and groups |
+| `content/glossary.json` | glossary terms |
+| `content/arbeitsarten.json` | kinds of work, wizard steps, prerequisites, tutorial |
+| `content/rules.json`, `oc.json`, `hardware.json`, `providers.json`, `loop.json` | the remaining data blocks |
+| `content/ui.json` | the translated lines of the page |
+| `build/template.html` | scaffold, CSS and logic — everything both languages share |
 
-## Zweisprachigkeit
+## Two languages
 
-Übersetzte Werte stehen als `{"de": …, "en": …}` **direkt nebeneinander**.
-Eine fehlende Übersetzung ist dadurch im Nachbarschlüssel sichtbar und wird
-zusätzlich von der Prüfung abgefangen. Alles, was in beiden Sprachen gleich
-ist — Namen, Links, Farben, Symbole —, steht nur einmal da.
+Translated values sit **side by side** as `{"de": …, "en": …}`. A missing
+translation is therefore visible in its neighbouring key, and the check
+catches it as well. Anything identical in both languages — names, links,
+colours, icons — appears once.
 
-## Was die Prüfung abfängt
+English is the default file (`index.html`); German hangs off the DE switch
+(`index.de.html`).
 
-Sie läuft vor jedem Schreiben und bricht ab, bevor etwas kaputtgeht:
+## What the check catches
 
-- eine fehlende oder leere Übersetzung in einem beliebigen Feld
-- ein Chip, hinter dem kein Steckbrief liegt
-- ein Steckbrief, den keine Kachel erreicht
-- eine Marke in der Vorlage ohne Inhalt und umgekehrt
+It runs before anything is written and stops the build rather than shipping:
 
-Gegenprobe: Eine geleerte englische Blurb-Zeile und ein gelöschter Steckbrief
-werden beide gemeldet, statt in die Seite zu laufen.
+- a missing or empty translation in any field
+- a chip with no fact sheet behind it
+- a fact sheet no chip reaches
+- a template marker with no content, and the reverse
 
-## Bekannte Vereinfachungen
+Counter-tested: an emptied English blurb and a deleted fact sheet are both
+reported instead of reaching the page.
 
-`content/ui.json` arbeitet **zeilenweise**, nicht satzweise. Ein Eintrag kann
-deshalb auch Markup enthalten. Das ist gewollt: Die zeilenweise Zuordnung ist
-verlustfrei belegbar — beide Sprachdateien hatten dieselbe Zeilenzahl und
-unterschieden sich ausschließlich durch Austausch, nie durch Einfügung.
-Feiner zerlegen lohnt erst, wenn eine dritte Sprache dazukommt.
+## Deliberate simplifications
 
-Die Schlüssel `t001…t088` sind fortlaufend, nicht sprechend. Neue übersetzte
-Zeilen bekommen die nächste freie Nummer.
+`content/ui.json` works **line by line**, not sentence by sentence, so an
+entry may contain markup. That is intended: the line-wise mapping is provably
+lossless — both language files had the same line count and differed only by
+substitution, never by insertion. Splitting finer is worth it once a third
+language arrives.
 
-## Herkunft
+The keys `t001…t090` are sequential, not descriptive. New translated lines
+take the next free number.
 
-`build/extract.py` hat Vorlage und Inhalte einmalig aus den fertigen Seiten
-gewonnen. Es wird nicht mehr gebraucht — außer die Zerlegung soll neu
-aufgesetzt werden. `build/verify.py` vergleicht ein Erzeugnis gegen eine
-Referenzfassung: Datenblöcke auf Gleichheit der Struktur, der Rest auf jedes
-Byte. Damit wurde belegt, dass der Bauweg die handgepflegten Seiten
-originalgetreu reproduziert.
+## Where this came from
+
+`build/extract.py` derived the template and the content from the finished
+pages once. It is no longer needed unless the split has to be redone.
+`build/verify.py` compares a build output against a reference: data blocks for
+structural equality, everything else byte for byte. That is how the build was
+shown to reproduce the hand-maintained pages faithfully.

@@ -11,7 +11,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from extract import spanne, als_daten, BLOECKE  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PAARE = [(ROOT/"site"/"index.html", sys.argv[1]), (ROOT/"site"/"index.en.html", sys.argv[2])]
+PAARE = [(ROOT/"site"/"index.html", sys.argv[1]), (ROOT/"site"/"index.de.html", sys.argv[2])]
 
 fehler = 0
 for neu_pfad, ref_pfad in PAARE:

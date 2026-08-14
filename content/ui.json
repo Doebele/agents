@@ -36,8 +36,8 @@
   "en": "  <button class=\"nav-search\" id=\"navsearch\" aria-label=\"Search (Cmd+K)\"><svg viewBox=\"0 0 24 24\"><path d=\"M21 21l-4.3-4.3M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z\"/></svg></button>"
  },
  "t010": {
-  "de": "  <a class=\"lang\" href=\"index.en.html\" hreflang=\"en\" lang=\"en\" aria-label=\"Switch to English\">EN</a>",
-  "en": "  <a class=\"lang\" href=\"index.html\" hreflang=\"de\" lang=\"de\" aria-label=\"Auf Deutsch wechseln\">DE</a>"
+  "de": "  <a class=\"lang\" href=\"index.html\" hreflang=\"en\" lang=\"en\" aria-label=\"Switch to English\">EN</a>",
+  "en": "  <a class=\"lang\" href=\"index.de.html\" hreflang=\"de\" lang=\"de\" aria-label=\"Auf Deutsch wechseln\">DE</a>"
  },
  "t011": {
   "de": "  <canvas id=\"hero-canvas\" role=\"img\" aria-label=\"Animiertes Diagramm der sieben Bausteine des KI-Agenten-Systems\"></canvas>",

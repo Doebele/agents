@@ -2,7 +2,7 @@ node_modules/
 test-results/
 playwright-report/
 
-# Werkzeugzustand, nicht Projektinhalt
+# tool state, not project content
 .mimosa/
 .claude/
 .zcode/

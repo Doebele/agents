@@ -72,8 +72,10 @@ def zusammenfuehren(d, e, pfad="") -> object:
 
 
 def main():
-    de = (SITE/"index.html").read_text(encoding="utf-8")
-    en = (SITE/"index.en.html").read_text(encoding="utf-8")
+    # Seit der Umstellung ist Englisch die Standarddatei — die Zuordnung muss
+    # mitwandern, sonst vertauscht ein erneuter Ausbau die Sprachen.
+    de = (SITE/"index.de.html").read_text(encoding="utf-8")
+    en = (SITE/"index.html").read_text(encoding="utf-8")
 
     # 1) Datenbloecke herausloesen und durch eine Marke ersetzen
     for name in BLOECKE:

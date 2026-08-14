@@ -60,8 +60,8 @@ aber nicht). Dazu: eine einzelne Datei, die man weitergeben und offline öffnen 
 
 - **Single-File, offline öffnbar.** Eine Datei pro Sprache, per Doppelklick lauffähig.
   Schließt Bundler, Build-Schritt und das Auslagern in geteilte `app.js`/`app.css` aus.
-- **Zweisprachig DE + EN, gleichwertig gepflegt.** `site/index.html` (DE) und
-  `site/index.en.html` (EN).
+- **Zweisprachig DE + EN, gleichwertig gepflegt.** `site/index.html` (EN) und
+  `site/index.de.html` (DE).
 - **Stand August 2026 wird gepflegt.** Das Datum ist ein Versprechen, kein Zeitstempel:
   Steckbriefe, Preise und Modellversionen sollen aktuell gehalten werden.
 - **Erweiterbar und aktualisierbar.** Neue Werkzeuge, Modelle und Anbieter kommen dazu;

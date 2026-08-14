@@ -46,6 +46,10 @@ jobs:
           port: 22
           # strip_components drops the leading site/ so the files land
           # directly in the subdomain's document root.
+          #
+          # The target is relative: the SSH login lands in the webspace, and
+          # an absolute /agents would mean the server root, where the user
+          # may not create anything.
           source: "site/index.html,site/index.de.html,site/.htaccess"
-          target: "/agents"
+          target: "agents"
           strip_components: 1

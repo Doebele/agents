@@ -6,8 +6,9 @@
 #    agents.medvesek.com geladen. Fehlen sie, wird nur dieser Schritt
 #    uebersprungen; die Pruefung laeuft trotzdem.
 #
-# Die Bedingung steht am Schritt, nicht am Job: In der Job-Bedingung ist der
-# secrets-Kontext nicht verfuegbar, dort scheitert der Ablauf sofort.
+# Der secrets-Kontext ist in keiner if-Bedingung verfuegbar — weder am Job
+# noch am Schritt. Deshalb wandert der Wert zuerst nach env, und die
+# Bedingung fragt env ab.
 name: Pruefen und ausliefern
 
 on:
@@ -23,6 +24,8 @@ on:
 jobs:
   ausliefern:
     runs-on: ubuntu-latest
+    env:
+      FTP_SERVER: ${{ secrets.STRATO_FTP_SERVER }}
     steps:
       - uses: actions/checkout@v4
 
@@ -30,7 +33,7 @@ jobs:
         run: python3 build/build.py --pruefen
 
       - name: Hochladen
-        if: ${{ github.ref == 'refs/heads/main' && secrets.STRATO_FTP_SERVER != '' }}
+        if: github.ref == 'refs/heads/main' && env.FTP_SERVER != ''
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.STRATO_FTP_SERVER }}

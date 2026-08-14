@@ -1,0 +1,173 @@
+[
+ {
+  "n": "Hostinger",
+  "type": {
+   "de": "VPS / Bare Metal",
+   "en": "VPS / bare metal"
+  },
+  "tc": "var(--violet)",
+  "gf": {
+   "de": "Günstige CPU-VPS zum Selbsthosten",
+   "en": "Cheap CPU VPS to self-host"
+  },
+  "price": {
+   "de": "monatliches Abo",
+   "en": "monthly plan"
+  },
+  "free": false,
+  "url": "https://www.hostinger.com"
+ },
+ {
+  "n": "Together AI",
+  "type": "Managed API",
+  "tc": "var(--cyan)",
+  "gf": {
+   "de": "Breite Open-Weight-Auswahl",
+   "en": "Broad open-weight choice"
+  },
+  "price": {
+   "de": "pro 1M Token",
+   "en": "per 1M tokens"
+  },
+  "free": true,
+  "url": "https://www.together.ai"
+ },
+ {
+  "n": "Fireworks AI",
+  "type": "Managed API",
+  "tc": "var(--cyan)",
+  "gf": {
+   "de": "Schnelle Inferenz + Feintuning",
+   "en": "Fast inference + fine-tuning"
+  },
+  "price": {
+   "de": "pro 1M Token",
+   "en": "per 1M tokens"
+  },
+  "free": true,
+  "url": "https://fireworks.ai"
+ },
+ {
+  "n": "Groq",
+  "type": "Managed API",
+  "tc": "var(--cyan)",
+  "gf": {
+   "de": "Schnellste Inferenz",
+   "en": "Fastest inference"
+  },
+  "price": {
+   "de": "pro 1M Token",
+   "en": "per 1M tokens"
+  },
+  "free": true,
+  "url": "https://groq.com"
+ },
+ {
+  "n": "RunPod",
+  "type": "GPU rental",
+  "tc": "var(--lime)",
+  "gf": {
+   "de": "Günstige GPU-Stunden, serverlos",
+   "en": "Cheap GPU hours, serverless"
+  },
+  "price": {
+   "de": "pro GPU-Stunde / Sekunde",
+   "en": "per GPU hour / second"
+  },
+  "free": false,
+  "url": "https://www.runpod.io"
+ },
+ {
+  "n": "Lambda",
+  "type": "GPU rental",
+  "tc": "var(--lime)",
+  "gf": {
+   "de": "Dedizierte GPU-Stunden",
+   "en": "Dedicated GPU hours"
+  },
+  "price": {
+   "de": "pro GPU-Stunde",
+   "en": "per GPU hour"
+  },
+  "free": false,
+  "url": "https://lambda.ai"
+ },
+ {
+  "n": "Vast.ai",
+  "type": "GPU rental",
+  "tc": "var(--lime)",
+  "gf": {
+   "de": "Günstigste GPU-Stunden",
+   "en": "Cheapest GPU hours"
+  },
+  "price": {
+   "de": "Marktplatz-Stundenpreis",
+   "en": "marketplace hourly"
+  },
+  "free": false,
+  "url": "https://vast.ai"
+ },
+ {
+  "n": "Hetzner",
+  "type": {
+   "de": "VPS / Bare Metal",
+   "en": "VPS / bare metal"
+  },
+  "tc": "var(--violet)",
+  "gf": {
+   "de": "Günstige dedizierte Server",
+   "en": "Cheap dedicated servers"
+  },
+  "price": {
+   "de": "monatlich / pro Stunde",
+   "en": "monthly / per hour"
+  },
+  "free": false,
+  "url": "https://www.hetzner.com"
+ },
+ {
+  "n": "Modal",
+  "type": "Serverless GPU",
+  "tc": "var(--ember)",
+  "gf": {
+   "de": "Eigenen Code serverlos deployen",
+   "en": "Run your own code serverless"
+  },
+  "price": {
+   "de": "pro Sekunde",
+   "en": "per second"
+  },
+  "free": true,
+  "url": "https://modal.com"
+ },
+ {
+  "n": "Replicate",
+  "type": "Serverless GPU",
+  "tc": "var(--ember)",
+  "gf": {
+   "de": "Modelle per API ausführen",
+   "en": "Run models via API"
+  },
+  "price": {
+   "de": "pro Sekunde / Ausgabe",
+   "en": "per second / output"
+  },
+  "free": false,
+  "url": "https://replicate.com"
+ },
+ {
+  "n": "OpenRouter",
+  "type": "Aggregator",
+  "tc": "var(--sky)",
+  "gf": {
+   "de": "Ein API für alle Modelle",
+   "en": "One API for all models"
+  },
+  "price": {
+   "de": "pro 1M Token + Gebühr",
+   "en": "per 1M tokens + fee"
+  },
+  "free": true,
+  "url": "https://openrouter.ai"
+ }
+]

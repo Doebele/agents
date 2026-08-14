@@ -1,0 +1,44 @@
+[
+ {
+  "lab": {
+   "de": "Schritt 1",
+   "en": "Step 1"
+  },
+  "t": {
+   "de": "Denken",
+   "en": "Think"
+  },
+  "d": {
+   "de": "Das Sprachmodell versteht die Anfrage und plant den nächsten Schritt. Noch ist nichts passiert, nur ein Gedanke.",
+   "en": "The language model understands the request and plans the next step. Nothing has happened yet, only a thought."
+  }
+ },
+ {
+  "lab": {
+   "de": "Schritt 2",
+   "en": "Step 2"
+  },
+  "t": {
+   "de": "Handeln",
+   "en": "Act"
+  },
+  "d": {
+   "de": "Der Harness ruft ein Werkzeug auf: eine Suche, ein Datenbank-Ergebnis, eine gesendete Nachricht. Jetzt verändert sich die Welt.",
+   "en": "The harness calls a tool: a search, a database result, a sent message. Now the world changes."
+  }
+ },
+ {
+  "lab": {
+   "de": "Schritt 3",
+   "en": "Step 3"
+  },
+  "t": {
+   "de": "Beobachten",
+   "en": "Observe"
+  },
+  "d": {
+   "de": "Das Ergebnis fließt zurück ins Modell. Damit beginnt die nächste Runde: Denken, Handeln, Beobachten, bis die Aufgabe erledigt ist.",
+   "en": "The result flows back into the model. That starts the next round, think, act, observe, until the task is done."
+  }
+ }
+]

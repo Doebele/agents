@@ -1,0 +1,57 @@
+[
+ {
+  "n": "01",
+  "t": {
+   "de": "Beginne klein.",
+   "en": "Start small."
+  },
+  "d": {
+   "de": "Ein Modell, ein Werkzeug, eine echte Aufgabe. Mehr brauchst du nicht.",
+   "en": "One model, one tool, one real task. You do not need more."
+  }
+ },
+ {
+  "n": "02",
+  "t": {
+   "de": "Prüfe jede wichtige Ausgabe.",
+   "en": "Check every important output."
+  },
+  "d": {
+   "de": "Modelle erfinden Fakten und APIs, selbst die besten.",
+   "en": "Models invent facts and APIs, even the best ones."
+  }
+ },
+ {
+  "n": "03",
+  "t": {
+   "de": "Gib minimale Rechte.",
+   "en": "Grant minimal permissions."
+  },
+  "d": {
+   "de": "Destruktive Schritte nur mit Freigabe. Nur vertrauenswürdige MCP-Server.",
+   "en": "Destructive steps only with approval. Only trusted MCP servers."
+  }
+ },
+ {
+  "n": "04",
+  "t": {
+   "de": "Setze auf offene Standards.",
+   "en": "Bet on open standards."
+  },
+  "d": {
+   "de": "MCP und Skills halten dich portabel und unabhängig.",
+   "en": "MCP and skills keep you portable and independent."
+  }
+ },
+ {
+  "n": "05",
+  "t": {
+   "de": "Behalte die Kosten im Blick.",
+   "en": "Keep an eye on cost."
+  },
+  "d": {
+   "de": "Jede Runde kostet Tokens. Budgets setzen, kleine Modelle für kleine Aufgaben.",
+   "en": "Every round costs tokens. Set budgets; small models for small jobs."
+  }
+ }
+]

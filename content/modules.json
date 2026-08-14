@@ -1,0 +1,1051 @@
+[
+ {
+  "id": "llm",
+  "n": "01",
+  "name": {
+   "de": "Sprachmodell",
+   "en": "Language model"
+  },
+  "tag": {
+   "de": "Der Denker",
+   "en": "The thinker"
+  },
+  "color": "var(--cyan)",
+  "glyph": "M9 3a6 6 0 0 0-4 10.5L3 21l4.2-2.2A6 6 0 1 0 9 3z",
+  "lede": {
+   "de": "Das LLM versteht die Anfrage, plant die Schritte und formuliert Antworten. Ohne Werkzeuge verändert es nichts. Es denkt nur.",
+   "en": "The LLM understands the request, plans the steps, and formulates answers. Without tools it changes nothing. It only thinks."
+  },
+  "groups": [
+   {
+    "label": {
+     "de": "Frontier · nur API (closed)",
+     "en": "Frontier · API only (closed)"
+    },
+    "items": [
+     {
+      "n": "GPT-5.6",
+      "v": "OpenAI",
+      "k": "GPT-5.6"
+     },
+     {
+      "n": "Claude Opus 5 / Sonnet 5",
+      "v": "Anthropic",
+      "k": "Claude Opus 5 / Sonnet 5"
+     },
+     {
+      "n": "Gemini 3.1 Pro",
+      "v": "Google",
+      "k": "Gemini 3.1 Pro"
+     },
+     {
+      "n": "Grok 4.5",
+      "v": "xAI",
+      "k": "Grok 4.5"
+     },
+     {
+      "n": "Qwen3.8-Max",
+      "v": "Alibaba",
+      "k": "Qwen3.8-Max"
+     }
+    ]
+   },
+   {
+    "label": {
+     "de": "Offene Gewichte (open-weight)",
+     "en": "Open weights (open-weight)"
+    },
+    "items": [
+     {
+      "n": "Kimi K3",
+      "v": "Moonshot AI",
+      "k": "Kimi K3"
+     },
+     {
+      "n": "DeepSeek V4",
+      "v": "DeepSeek",
+      "k": "DeepSeek V4"
+     },
+     {
+      "n": "GLM-5.2",
+      "v": "Z.AI",
+      "k": "GLM-5.2"
+     },
+     {
+      "n": "Qwen 3.6 / 3.8",
+      "v": "Alibaba",
+      "k": "Qwen 3.6 / 3.8"
+     },
+     {
+      "n": "gpt-oss",
+      "v": "OpenAI",
+      "k": "gpt-oss"
+     },
+     {
+      "n": "Mistral Large 3",
+      "v": "Mistral AI",
+      "k": "Mistral Large 3"
+     },
+     {
+      "n": "Llama 4",
+      "v": "Meta",
+      "k": "Llama 4"
+     },
+     {
+      "n": "Ornith 1.0",
+      "v": "Open",
+      "k": "Ornith 1.0"
+     }
+    ]
+   },
+   {
+    "label": {
+     "de": "Lokal betreiben",
+     "en": "Run locally"
+    },
+    "items": [
+     {
+      "n": "LM Studio",
+      "v": "GUI",
+      "k": "LM Studio"
+     },
+     {
+      "n": "Ollama",
+      "v": {
+       "de": "CLI/Server",
+       "en": "CLI/server"
+      },
+      "k": "Ollama"
+     },
+     {
+      "n": "llama.cpp",
+      "v": {
+       "de": "Basis",
+       "en": "Core"
+      },
+      "k": "llama.cpp"
+     },
+     {
+      "n": "vLLM",
+      "v": "Serving",
+      "k": "vLLM"
+     },
+     {
+      "n": "SGLang",
+      "v": "Serving",
+      "k": "SGLang"
+     }
+    ]
+   }
+  ],
+  "insight": {
+   "text": {
+    "de": "<b>2026</b> laufen offene Modelle erstmals fast auf Frontier-Niveau. Die Wahl: <b>Kontrolle</b> oder <b>Bequemlichkeit</b>.",
+    "en": "In <b>2026</b>, open models reach near-frontier quality for the first time. The choice: <b>control</b> or <b>convenience</b>."
+   },
+   "warn": false
+  }
+ },
+ {
+  "id": "harness",
+  "n": "02",
+  "name": "Harness",
+  "tag": {
+   "de": "Der Motor",
+   "en": "The engine"
+  },
+  "color": "var(--ember)",
+  "glyph": "M3 12a9 9 0 1 1 3.5 7.1",
+  "lede": {
+   "de": "Der Harness ist die Schleife: Er ruft das Modell auf, merkt sich den Kontext, entscheidet den nächsten Schritt und führt Werkzeugaufrufe aus. Erst er macht aus einem Modell einen Agenten. Es gibt ihn in zwei Sorten: fertige Programme, die du installierst und benutzt — und Baukästen, mit denen Programmierer:innen eigene bauen.",
+   "en": "The harness is the loop: it calls the model, keeps the context, decides the next step, and runs tool calls. It is what turns a model into an agent. It comes in two kinds: finished programs you install and use — and toolkits developers build their own with."
+  },
+  "groups": [
+   {
+    "label": {
+     "de": "Agenten-Umgebungen",
+     "en": "Agent environments"
+    },
+    "items": [
+     {
+      "n": "Claude Code",
+      "v": "Anthropic",
+      "k": "Claude Code"
+     },
+     {
+      "n": "Agent SDK",
+      "v": "Anthropic",
+      "k": "Agent SDK"
+     },
+     {
+      "n": "OpenAI Codex",
+      "v": "OpenAI",
+      "k": "OpenAI Codex"
+     },
+     {
+      "n": "Agents SDK",
+      "v": "OpenAI",
+      "k": "Agents SDK"
+     },
+     {
+      "n": "Kimi Code",
+      "v": "Moonshot AI",
+      "k": "Kimi Code"
+     },
+     {
+      "n": "ZCode",
+      "v": "Z.AI",
+      "k": "ZCode"
+     },
+     {
+      "n": "DeepSeek Harness",
+      "v": {
+       "de": "offen · Vorschau",
+       "en": "open · preview"
+      },
+      "k": "DeepSeek Harness"
+     },
+     {
+      "n": "Zed",
+      "v": "Editor",
+      "k": "Zed"
+     },
+     {
+      "n": "Hermes Agent",
+      "v": "Nous Research",
+      "k": "Hermes Agent"
+     },
+     {
+      "n": "Odysseus",
+      "v": "self-hosted",
+      "k": "Odysseus"
+     },
+     {
+      "n": "Bionic",
+      "v": "LM Studio",
+      "k": "Bionic"
+     }
+    ]
+   },
+   {
+    "label": "Frameworks",
+    "items": [
+     {
+      "n": "LangGraph",
+      "v": "LangChain",
+      "k": "LangGraph"
+     },
+     {
+      "n": "LangChain",
+      "v": "Framework",
+      "k": "LangChain"
+     },
+     {
+      "n": "CrewAI",
+      "v": {
+       "de": "Multi-Agent",
+       "en": "Multi-agent"
+      },
+      "k": "CrewAI"
+     },
+     {
+      "n": "Paperclip",
+      "v": {
+       "de": "Plattform",
+       "en": "Platform"
+      },
+      "k": "Paperclip"
+     },
+     {
+      "n": "MS Agent Framework",
+      "v": "Microsoft",
+      "k": "MS Agent Framework"
+     },
+     {
+      "n": "Google ADK",
+      "v": "Google",
+      "k": "Google ADK"
+     }
+    ]
+   }
+  ],
+  "insight": {
+   "text": {
+    "de": "Ohne Harness ist ein LLM nur ein <b>sehr schneller Plauderer</b>. Die Schleife macht den Unterschied.",
+    "en": "Without a harness, an LLM is just a <b>very fast talker</b>. The loop makes the difference."
+   },
+   "warn": false
+  }
+ },
+ {
+  "id": "skills",
+  "n": "03",
+  "name": "Skills",
+  "tag": {
+   "de": "Das Wissen",
+   "en": "The knowledge"
+  },
+  "color": "var(--lime)",
+  "glyph": "M6 3h9a2 2 0 0 1 2 2v16l-6.5-3L4.5 21V5a2 2 0 0 1 1.5-2z",
+  "lede": {
+   "de": "So bringst du deinem Agenten etwas einmal bei, statt es bei jeder Anfrage neu zu erklären: Ein Skill ist eine Textdatei mit Fachwissen, Abläufen und Stilregeln. Der Agent lädt sie nur, wenn die Aufgabe dazu passt — das hält seinen Kopf frei und spart Kosten.",
+   "en": "This is how you teach your agent something once instead of explaining it with every request: a skill is a text file holding know-how, procedures and style rules. The agent loads it only when the task calls for it — which keeps its head clear and saves cost."
+  },
+  "groups": [
+   {
+    "label": {
+     "de": "Wo es Skills gibt",
+     "en": "Where to find skills"
+    },
+    "items": [
+     {
+      "n": "Anthropic Agent Skills",
+      "v": "Office & PDF",
+      "k": "Anthropic Agent Skills"
+     },
+     {
+      "n": "agentskills.io",
+      "v": {
+       "de": "offener Standard",
+       "en": "open standard"
+      },
+      "k": "agentskills.io"
+     },
+     {
+      "n": "skills.sh",
+      "v": {
+       "de": "Marktplatz",
+       "en": "Marketplace"
+      },
+      "k": "skills.sh"
+     },
+     {
+      "n": "Impeccable",
+      "v": {
+       "de": "Design",
+       "en": "design"
+      },
+      "k": "Impeccable"
+     },
+     {
+      "n": "skill-creator",
+      "v": {
+       "de": "eigene bauen",
+       "en": "build your own"
+      },
+      "k": "skill-creator"
+     },
+     {
+      "n": {
+       "de": "Unternehmens-Skills",
+       "en": "Team skills"
+      },
+      "v": {
+       "de": "eigenes Know-how",
+       "en": "your own know-how"
+      },
+      "k": "eigene-skills"
+     }
+    ]
+   }
+  ],
+  "insight": {
+   "text": {
+    "de": "<b>Faustregel:</b> Skills liefern Wissen, MCP liefert Zugriff.",
+    "en": "<b>Rule of thumb:</b> skills deliver knowledge, MCP delivers access."
+   },
+   "warn": false
+  }
+ },
+ {
+  "id": "mcp",
+  "n": "04",
+  "name": "MCP",
+  "tag": {
+   "de": "Der Anschluss",
+   "en": "The connector"
+  },
+  "color": "var(--violet)",
+  "glyph": "M7 4h10v5a5 5 0 0 1-10 0V4z M9 14v4a3 3 0 0 0 6 0v-4",
+  "lede": {
+   "de": "Das Model Context Protocol ist das USB-C der KI: ein offener Standard der Linux Foundation. Darüber erreicht jeder Agent jedes Werkzeug auf dieselbe Weise. Über 9.800 Server im Index.",
+   "en": "The Model Context Protocol is the USB-C of AI: an open standard from the Linux Foundation. Through it, every agent reaches every tool the same way. Over 9,800 servers in the index."
+  },
+  "groups": [
+   {
+    "label": {
+     "de": "Standard & bekannte Server",
+     "en": "Standard & well-known servers"
+    },
+    "items": [
+     {
+      "n": "Model Context Protocol",
+      "v": "Standard",
+      "k": "Model Context Protocol"
+     },
+     {
+      "n": "Playwright",
+      "v": "Browser",
+      "k": "Playwright-mcp"
+     },
+     {
+      "n": "GitHub",
+      "v": "Repos/PRs",
+      "k": "github-mcp"
+     },
+     {
+      "n": "Filesystem",
+      "v": {
+       "de": "Dateien",
+       "en": "Files"
+      },
+      "k": "filesystem-mcp"
+     },
+     {
+      "n": "Slack",
+      "v": {
+       "de": "Nachrichten",
+       "en": "Messages"
+      },
+      "k": "slack-mcp"
+     },
+     {
+      "n": "Postgres",
+      "v": {
+       "de": "Datenbank",
+       "en": "Database"
+      },
+      "k": "postgres-mcp"
+     },
+     {
+      "n": "Supabase",
+      "v": {
+       "de": "Datenbank",
+       "en": "Database"
+      },
+      "k": "supabase-mcp"
+     },
+     {
+      "n": "Google Drive",
+      "v": {
+       "de": "Docs & Kalender",
+       "en": "Docs & calendar"
+      },
+      "k": "gdrive-mcp"
+     },
+     {
+      "n": {
+       "de": "Websuche",
+       "en": "Web search"
+      },
+      "v": "Tavily",
+      "k": "tavily-mcp"
+     },
+     {
+      "n": "PDF",
+      "v": "PyMuPDF",
+      "k": "pdf-mcp"
+     },
+     {
+      "n": "Excel",
+      "v": {
+       "de": "Tabellen",
+       "en": "spreadsheets"
+      },
+      "k": "excel-mcp"
+     },
+     {
+      "n": {
+       "de": "Gedächtnis",
+       "en": "Memory"
+      },
+      "v": {
+       "de": "Wissensgraph",
+       "en": "knowledge graph"
+      },
+      "k": "memory-mcp"
+     }
+    ]
+   }
+  ],
+  "insight": {
+   "text": {
+    "de": "<b>Achtung:</b> Nur vertrauenswürdige Server installieren. Ein bösartiger Server kann den Agenten manipulieren.",
+    "en": "<b>Caution:</b> install only trusted servers. A malicious server can manipulate the agent."
+   },
+   "warn": true
+  }
+ },
+ {
+  "id": "tools",
+  "n": "05",
+  "name": "Tools",
+  "tag": {
+   "de": "Die Ausführung",
+   "en": "The hands"
+  },
+  "color": "var(--pink)",
+  "glyph": "M14 3l7 7-9 9-5 1 1-5 8-8 3 3-4 4",
+  "lede": {
+   "de": "Werkzeuge führen aus, was das Modell beschließt: suchen, rechnen, lesen, schreiben, Nachrichten verschicken. Alles, was eine API hat, kann ein Werkzeug sein.",
+   "en": "Tools carry out what the model decides: search, calculate, read, write, send messages. Anything with an API can be a tool."
+  },
+  "groups": [
+   {
+    "label": {
+     "de": "Was der Agent darf",
+     "en": "What the agent may do"
+    },
+    "items": [
+     {
+      "n": {
+       "de": "Websuche",
+       "en": "Web search"
+      },
+      "v": {
+       "de": "nachschlagen",
+       "en": "look things up"
+      },
+      "k": "tool-suche"
+     },
+     {
+      "n": {
+       "de": "Code-Ausführung",
+       "en": "Code execution"
+      },
+      "v": {
+       "de": "rechnen lassen",
+       "en": "let it compute"
+      },
+      "k": "tool-code"
+     },
+     {
+      "n": {
+       "de": "Dateisystem",
+       "en": "File system"
+      },
+      "v": {
+       "de": "lesen und schreiben",
+       "en": "read and write"
+      },
+      "k": "tool-dateien"
+     },
+     {
+      "n": {
+       "de": "Browser",
+       "en": "Browser"
+      },
+      "v": {
+       "de": "Seiten bedienen",
+       "en": "operate pages"
+      },
+      "k": "tool-browser"
+     },
+     {
+      "n": {
+       "de": "Datenbanken",
+       "en": "Databases"
+      },
+      "v": {
+       "de": "abfragen",
+       "en": "query"
+      },
+      "k": "tool-datenbank"
+     },
+     {
+      "n": {
+       "de": "Kommunikation",
+       "en": "Communication"
+      },
+      "v": {
+       "de": "Mail, Kalender, Chat",
+       "en": "mail, calendar, chat"
+      },
+      "k": "tool-kommunikation"
+     },
+     {
+      "n": {
+       "de": "Medien-Generierung",
+       "en": "Media generation"
+      },
+      "v": {
+       "de": "Bild, Video, Ton",
+       "en": "image, video, sound"
+      },
+      "k": "tool-medien"
+     }
+    ]
+   }
+  ],
+  "insight": {
+   "text": {
+    "de": "<b>Grundsatz minimaler Rechte:</b> Gib dem Agenten nur die Werkzeuge, die die Aufgabe wirklich braucht.",
+    "en": "<b>Least privilege:</b> give the agent only the tools the task actually needs."
+   },
+   "warn": false
+  }
+ },
+ {
+  "id": "media",
+  "n": "06",
+  "name": {
+   "de": "Medien-Modelle",
+   "en": "Media models"
+  },
+  "tag": {
+   "de": "Die Sinne",
+   "en": "The senses"
+  },
+  "color": "var(--sky)",
+  "glyph": "M3 8h3l2-2h8l2 2h3v11H3z M12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",
+  "lede": {
+   "de": "Für Bild, Video und Stimme gibt es Spezialisten. Der Agent schreibt das Skript. Diese Modelle setzen es in Pixel und Schall um.",
+   "en": "For image, video, and voice there are specialists. The agent writes the script. These models turn it into pixels and sound."
+  },
+  "groups": [
+   {
+    "label": {
+     "de": "Bild",
+     "en": "Image"
+    },
+    "items": [
+     {
+      "n": "GPT Image 2",
+      "v": "OpenAI",
+      "k": "GPT Image 2"
+     },
+     {
+      "n": "Midjourney V8.2",
+      "v": "Midjourney",
+      "k": "Midjourney V8.2"
+     },
+     {
+      "n": "FLUX.2",
+      "v": "Black Forest Labs",
+      "k": "FLUX.2"
+     },
+     {
+      "n": "Imagen 4",
+      "v": "Google",
+      "k": "Imagen 4"
+     },
+     {
+      "n": "Ideogram",
+      "v": {
+       "de": "Bild+Text",
+       "en": "Image+text"
+      },
+      "k": "Ideogram"
+     },
+     {
+      "n": "Recraft",
+      "v": {
+       "de": "Vektor+Foto",
+       "en": "Vector+photo"
+      },
+      "k": "Recraft"
+     },
+     {
+      "n": "Seedream",
+      "v": "ByteDance",
+      "k": "Seedream"
+     }
+    ]
+   },
+   {
+    "label": "Video",
+    "items": [
+     {
+      "n": "Veo 3.1",
+      "v": "Google",
+      "k": "Veo 3.1"
+     },
+     {
+      "n": "Kling 3.0",
+      "v": "Kuaishou",
+      "k": "Kling 3.0"
+     },
+     {
+      "n": "Seedance 2.5",
+      "v": "ByteDance",
+      "k": "Seedance 2.5"
+     },
+     {
+      "n": "Wan 3.0",
+      "v": {
+       "de": "Alibaba · offen",
+       "en": "Alibaba · open"
+      },
+      "k": "Wan 3.0"
+     },
+     {
+      "n": "Runway",
+      "v": "Gen-4",
+      "k": "Runway"
+     },
+     {
+      "n": "Luma",
+      "v": "Dream Machine",
+      "k": "Luma"
+     },
+     {
+      "n": "Higgsfield",
+      "v": {
+       "de": "Kamera",
+       "en": "Camera"
+      },
+      "k": "Higgsfield"
+     }
+    ]
+   },
+   {
+    "label": "Audio",
+    "items": [
+     {
+      "n": "ElevenLabs Eleven v3",
+      "v": {
+       "de": "Stimme (TTS)",
+       "en": "Voice (TTS)"
+      },
+      "k": "ElevenLabs Eleven v3"
+     },
+     {
+      "n": "Suno v5.5",
+      "v": {
+       "de": "Musik",
+       "en": "Music"
+      },
+      "k": "Suno v5.5"
+     },
+     {
+      "n": "Stable Audio 3",
+      "v": {
+       "de": "Sound · offen",
+       "en": "Sound · open"
+      },
+      "k": "Stable Audio 3"
+     },
+     {
+      "n": "Whisper",
+      "v": {
+       "de": "STT · offen",
+       "en": "STT · open"
+      },
+      "k": "Whisper"
+     },
+     {
+      "n": "Kokoro",
+      "v": {
+       "de": "TTS · offen",
+       "en": "TTS · open"
+      },
+      "k": "Kokoro"
+     },
+     {
+      "n": "Voxtral",
+      "v": {
+       "de": "Audio-LLM",
+       "en": "Audio LLM"
+      },
+      "k": "Voxtral"
+     }
+    ]
+   }
+  ],
+  "insight": {
+   "text": {
+    "de": "Der Agent <b>schreibt das Drehbuch</b>. Diese Modelle sind Bühne und Orchester zugleich.",
+    "en": "The agent <b>writes the screenplay</b>. These models are stage and orchestra at once."
+   },
+   "warn": false
+  }
+ },
+ {
+  "id": "design",
+  "n": "07",
+  "name": {
+   "de": "Arbeitsumgebung",
+   "en": "Workspace"
+  },
+  "tag": {
+   "de": "Der Ort",
+   "en": "The place"
+  },
+  "color": "var(--amber)",
+  "glyph": "M4 20l4-1 9-9-3-3-9 9-1 4z M14 7l3 3",
+  "lede": {
+   "de": "Die Anwendung, in der dein Ergebnis Gestalt annimmt: ein Entwurfswerkzeug, ein Notizsystem, ein Editor. Agenten lesen und verändern sie per MCP. Damit steht das Werkzeug nicht mehr am Ende der Kette, sondern an ihrem Anfang.",
+   "en": "The application where your result takes shape: a design tool, a notes system, an editor. Agents read and modify them via MCP. That puts the tool at the start of the chain, not the end."
+  },
+  "groups": [
+   {
+    "label": {
+     "de": "Entwerfen und bauen",
+     "en": "Design and build"
+    },
+    "items": [
+     {
+      "n": "Figma",
+      "v": "Standard + MCP",
+      "k": "Figma"
+     },
+     {
+      "n": "pencil.dev",
+      "v": {
+       "de": "KI-nativ",
+       "en": "AI-native"
+      },
+      "k": "pencil.dev"
+     },
+     {
+      "n": "Penpot",
+      "v": {
+       "de": "offen",
+       "en": "open"
+      },
+      "k": "Penpot"
+     },
+     {
+      "n": "Antigravity 2.0",
+      "v": "Google",
+      "k": "Antigravity 2.0"
+     },
+     {
+      "n": "Google Stitch",
+      "v": {
+       "de": "Skizze→UI",
+       "en": "Sketch to UI"
+      },
+      "k": "Google Stitch"
+     },
+     {
+      "n": "v0",
+      "v": "Vercel",
+      "k": "v0"
+     },
+     {
+      "n": "Lovable",
+      "v": {
+       "de": "App-Gen",
+       "en": "App gen"
+      },
+      "k": "Lovable"
+     },
+     {
+      "n": "Bolt.new",
+      "v": "StackBlitz",
+      "k": "Bolt.new"
+     },
+     {
+      "n": "Onlook",
+      "v": {
+       "de": "auf echtem Code",
+       "en": "on real code"
+      },
+      "k": "Onlook"
+     },
+     {
+      "n": "Claude Design",
+      "v": "Anthropic",
+      "k": "Claude Design"
+     },
+     {
+      "n": "Uizard",
+      "v": {
+       "de": "UI-Gen",
+       "en": "UI gen"
+      },
+      "k": "Uizard"
+     },
+     {
+      "n": "Relume",
+      "v": "Sitemap",
+      "k": "Relume"
+     },
+     {
+      "n": "Gemini Notebook",
+      "v": "Google",
+      "k": "Gemini Notebook"
+     },
+     {
+      "n": "Obsidian",
+      "v": {
+       "de": "Notizen",
+       "en": "notes"
+      },
+      "k": "Obsidian"
+     }
+    ]
+   },
+   {
+    "id": "schnitt",
+    "label": {
+     "de": "Schneiden und montieren",
+     "en": "Edit and assemble"
+    },
+    "items": [
+     {
+      "n": {
+       "de": "iMovie",
+       "en": "iMovie"
+      },
+      "v": {
+       "de": "Apple · gratis",
+       "en": "Apple · free"
+      },
+      "k": "iMovie"
+     },
+     {
+      "n": {
+       "de": "Final Cut Pro",
+       "en": "Final Cut Pro"
+      },
+      "v": {
+       "de": "Apple · Kauf",
+       "en": "Apple · one-time purchase"
+      },
+      "k": "Final Cut Pro"
+     },
+     {
+      "n": {
+       "de": "Premiere Pro",
+       "en": "Premiere Pro"
+      },
+      "v": {
+       "de": "Adobe · Abo",
+       "en": "Adobe · subscription"
+      },
+      "k": "Premiere Pro"
+     },
+     {
+      "n": {
+       "de": "DaVinci Resolve",
+       "en": "DaVinci Resolve"
+      },
+      "v": {
+       "de": "Blackmagic · Gratisfassung",
+       "en": "Blackmagic · free edition"
+      },
+      "k": "DaVinci Resolve"
+     },
+     {
+      "n": {
+       "de": "Avid Media Composer",
+       "en": "Avid Media Composer"
+      },
+      "v": {
+       "de": "Avid · Abo",
+       "en": "Avid · subscription"
+      },
+      "k": "Avid Media Composer"
+     },
+     {
+      "n": {
+       "de": "CapCut",
+       "en": "CapCut"
+      },
+      "v": {
+       "de": "ByteDance · gratis",
+       "en": "ByteDance · free"
+      },
+      "k": "CapCut"
+     },
+     {
+      "n": {
+       "de": "Shotcut",
+       "en": "Shotcut"
+      },
+      "v": {
+       "de": "quelloffen · gratis",
+       "en": "open source · free"
+      },
+      "k": "Shotcut"
+     },
+     {
+      "n": {
+       "de": "OpenShot",
+       "en": "OpenShot"
+      },
+      "v": {
+       "de": "quelloffen · gratis",
+       "en": "open source · free"
+      },
+      "k": "OpenShot"
+     }
+    ]
+   },
+   {
+    "id": "hosting",
+    "label": {
+     "de": "Veröffentlichen",
+     "en": "Publish"
+    },
+    "items": [
+     {
+      "n": "Hostinger",
+      "v": {
+       "de": "Paket · günstig",
+       "en": "Package · cheap"
+      },
+      "k": "Hostinger"
+     },
+     {
+      "n": "Strato",
+      "v": {
+       "de": "Paket · Server in DE",
+       "en": "Package · servers in DE"
+      },
+      "k": "Strato"
+     },
+     {
+      "n": "IONOS",
+      "v": {
+       "de": "Paket bis Server",
+       "en": "Package to server"
+      },
+      "k": "IONOS"
+     },
+     {
+      "n": "Netlify",
+      "v": {
+       "de": "aus Git · Gratisstufe",
+       "en": "from Git · free tier"
+      },
+      "k": "Netlify"
+     },
+     {
+      "n": "Vercel",
+      "v": {
+       "de": "aus Git · Next.js",
+       "en": "from Git · Next.js"
+      },
+      "k": "Vercel"
+     },
+     {
+      "n": "Cloudflare Pages",
+      "v": {
+       "de": "weltweit · Gratisstufe",
+       "en": "worldwide · free tier"
+      },
+      "k": "Cloudflare Pages"
+     },
+     {
+      "n": "Render",
+      "v": {
+       "de": "Anwendungen · Datenbank",
+       "en": "applications · database"
+      },
+      "k": "Render"
+     }
+    ]
+   }
+  ],
+  "insight": {
+   "text": {
+    "de": "<b>Design</b> ist kein Endprodukt mehr. Es ist der <b>Anfang des Codes</b>.",
+    "en": "<b>Design</b> is no longer a final product. It is the <b>start of the code</b>."
+   },
+   "warn": false
+  }
+ }
+]

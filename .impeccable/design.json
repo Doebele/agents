@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-13T00:00:00Z",
+  "title": "Design System: AGENT // SYSTEM",
+  "extensions": {
+    "colorMeta": {
+      "void": {
+        "role": "neutral",
+        "displayName": "Void",
+        "canonical": "#06070B",
+        "tonalRamp": [
+          "oklch(10% 0.012 265)",
+          "oklch(16% 0.014 265)",
+          "oklch(24% 0.016 265)",
+          "oklch(34% 0.016 265)",
+          "oklch(46% 0.014 265)",
+          "oklch(60% 0.012 265)",
+          "oklch(76% 0.008 265)",
+          "oklch(94% 0.004 265)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#0A0C13",
+        "tonalRamp": [
+          "oklch(12% 0.014 265)",
+          "oklch(18% 0.016 265)",
+          "oklch(26% 0.018 265)",
+          "oklch(36% 0.018 265)",
+          "oklch(48% 0.016 265)",
+          "oklch(62% 0.012 265)",
+          "oklch(78% 0.008 265)",
+          "oklch(95% 0.004 265)"
+        ]
+      },
+      "surface-raised": {
+        "role": "neutral",
+        "displayName": "Surface Raised",
+        "canonical": "#10131D",
+        "tonalRamp": [
+          "oklch(14% 0.018 265)",
+          "oklch(20% 0.020 265)",
+          "oklch(28% 0.022 265)",
+          "oklch(38% 0.022 265)",
+          "oklch(50% 0.018 265)",
+          "oklch(64% 0.014 265)",
+          "oklch(79% 0.008 265)",
+          "oklch(95% 0.004 265)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#F1F3F8",
+        "tonalRamp": [
+          "oklch(20% 0.006 265)",
+          "oklch(32% 0.006 265)",
+          "oklch(44% 0.006 265)",
+          "oklch(56% 0.006 265)",
+          "oklch(68% 0.006 265)",
+          "oklch(80% 0.005 265)",
+          "oklch(90% 0.005 265)",
+          "oklch(97% 0.004 265)"
+        ]
+      },
+      "ink-dim": {
+        "role": "neutral",
+        "displayName": "Ink Dim",
+        "canonical": "#B6BCCE",
+        "tonalRamp": [
+          "oklch(18% 0.014 268)",
+          "oklch(28% 0.016 268)",
+          "oklch(40% 0.018 268)",
+          "oklch(52% 0.020 268)",
+          "oklch(64% 0.020 268)",
+          "oklch(78% 0.018 268)",
+          "oklch(88% 0.012 268)",
+          "oklch(96% 0.006 268)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#9aa1b4",
+        "tonalRamp": [
+          "oklch(17% 0.016 268)",
+          "oklch(27% 0.018 268)",
+          "oklch(38% 0.022 268)",
+          "oklch(50% 0.024 268)",
+          "oklch(68% 0.022 268)",
+          "oklch(80% 0.016 268)",
+          "oklch(89% 0.010 268)",
+          "oklch(96% 0.005 268)"
+        ]
+      },
+      "signal-cyan": {
+        "role": "primary",
+        "displayName": "Signalcyan",
+        "canonical": "#34E7E4",
+        "tonalRamp": [
+          "oklch(20% 0.05 190)",
+          "oklch(32% 0.08 190)",
+          "oklch(44% 0.10 190)",
+          "oklch(56% 0.12 190)",
+          "oklch(68% 0.13 190)",
+          "oklch(83% 0.13 190)",
+          "oklch(90% 0.09 190)",
+          "oklch(96% 0.04 190)"
+        ]
+      },
+      "ember": {
+        "role": "secondary",
+        "displayName": "Ember",
+        "canonical": "#FF7A33",
+        "tonalRamp": [
+          "oklch(20% 0.06 45)",
+          "oklch(32% 0.10 45)",
+          "oklch(44% 0.14 45)",
+          "oklch(56% 0.17 45)",
+          "oklch(72% 0.18 45)",
+          "oklch(82% 0.14 45)",
+          "oklch(90% 0.09 45)",
+          "oklch(96% 0.04 45)"
+        ]
+      },
+      "lime": {
+        "role": "tertiary",
+        "displayName": "Lime",
+        "canonical": "#B6FF3D",
+        "tonalRamp": [
+          "oklch(22% 0.07 128)",
+          "oklch(34% 0.11 128)",
+          "oklch(46% 0.15 128)",
+          "oklch(58% 0.18 128)",
+          "oklch(72% 0.20 128)",
+          "oklch(90% 0.21 128)",
+          "oklch(94% 0.12 128)",
+          "oklch(97% 0.05 128)"
+        ]
+      },
+      "violet": {
+        "role": "tertiary",
+        "displayName": "Violett",
+        "canonical": "#9B7BF7",
+        "tonalRamp": [
+          "oklch(20% 0.07 292)",
+          "oklch(30% 0.11 292)",
+          "oklch(41% 0.15 292)",
+          "oklch(53% 0.18 292)",
+          "oklch(65% 0.19 292)",
+          "oklch(78% 0.15 292)",
+          "oklch(88% 0.09 292)",
+          "oklch(96% 0.04 292)"
+        ]
+      },
+      "pink": {
+        "role": "tertiary",
+        "displayName": "Pink",
+        "canonical": "#FF4D8D",
+        "tonalRamp": [
+          "oklch(20% 0.08 5)",
+          "oklch(31% 0.12 5)",
+          "oklch(42% 0.17 5)",
+          "oklch(54% 0.20 5)",
+          "oklch(66% 0.22 5)",
+          "oklch(79% 0.16 5)",
+          "oklch(89% 0.10 5)",
+          "oklch(96% 0.04 5)"
+        ]
+      },
+      "sky": {
+        "role": "tertiary",
+        "displayName": "Sky",
+        "canonical": "#4DA8FF",
+        "tonalRamp": [
+          "oklch(20% 0.06 250)",
+          "oklch(31% 0.09 250)",
+          "oklch(42% 0.12 250)",
+          "oklch(54% 0.14 250)",
+          "oklch(70% 0.16 250)",
+          "oklch(82% 0.11 250)",
+          "oklch(90% 0.07 250)",
+          "oklch(96% 0.03 250)"
+        ]
+      },
+      "amber": {
+        "role": "tertiary",
+        "displayName": "Amber",
+        "canonical": "#FFC24D",
+        "tonalRamp": [
+          "oklch(22% 0.05 78)",
+          "oklch(34% 0.08 78)",
+          "oklch(46% 0.11 78)",
+          "oklch(58% 0.13 78)",
+          "oklch(72% 0.14 78)",
+          "oklch(83% 0.14 78)",
+          "oklch(91% 0.09 78)",
+          "oklch(97% 0.04 78)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Light",
+        "purpose": "Erste Hero-Zeile im Light-Schnitt (300). Bildet mit display-strong das Schnittpaar."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Sektionsüberschriften (600). Das betonte <em> darin springt auf 900, die Farbe bleibt gleich."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Karten- und Drawer-Titel."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Fließtext in Ink Dim, Gewicht 300."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Mono-Belege: Kicker, Ziffern, Gruppentitel, Messwerte. Nie Fließtext."
+      },
+      "display-strong": {
+        "displayName": "Display Black",
+        "purpose": "Zweite Hero-Zeile im Black-Schnitt (900). Der Kontrast der Hero-Zeile ist die Schriftstärke, nicht die Farbe."
+      }
+    },
+    "shadows": [
+      {
+        "name": "floating-layer",
+        "value": "0 12px 28px rgba(0,0,0,.55)",
+        "purpose": "Alles, was wirklich über der Seite schwebt: Glossar-Popover, überlagernde Flächen. Neutral, versetzt, weich."
+      },
+      {
+        "name": "state-halo",
+        "value": "0 0 34px color-mix(in srgb, var(--mc) 55%, transparent)",
+        "purpose": "Nur auf :hover eines Registerobjekts, in dessen eigener Registerfarbe. Nie im Ruhezustand."
+      },
+      {
+        "name": "signal-trace",
+        "value": "drop-shadow(0 0 6px var(--cyan))",
+        "purpose": "Nur der animierte Puls im Kreislaufdiagramm, weil er die laufende Schleife ist."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-drawer",
+        "value": "cubic-bezier(.7,0,.2,1)",
+        "purpose": "Ein- und Ausfahren des Drawers über 0.5s."
+      },
+      {
+        "name": "ease-reveal",
+        "value": "power3.out (GSAP)",
+        "purpose": "Scroll-Reveals und Hero-Auftritt, 0.85–0.9s, gestaffelt."
+      },
+      {
+        "name": "ease-pop",
+        "value": "back.out(1.3) (GSAP)",
+        "purpose": "Auftritt der sieben Bausteinknoten im Loop-Übergang."
+      },
+      {
+        "name": "duration-state",
+        "value": "0.2s–0.35s",
+        "purpose": "Alle Hover- und Zustandswechsel an Karten, Chips, Begriffen."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "560px"
+      },
+      {
+        "name": "sm",
+        "value": "680px"
+      },
+      {
+        "name": "md",
+        "value": "760px"
+      },
+      {
+        "name": "lg",
+        "value": "860px"
+      },
+      {
+        "name": "xl",
+        "value": "1000px"
+      },
+      {
+        "name": "container",
+        "value": "1240px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Hero-Schnittpaar",
+      "kind": "custom",
+      "refersTo": "display-strong",
+      "description": "Die Hero-Zeile: zwei Extreme derselben Schrift, gleiche Farbe. Der einzige Farbakzent ist der Signalpunkt.",
+      "html": "<h1 class=\"ds-hero\"><span class=\"ds-hero-a\">Agenten</span><br><span class=\"ds-hero-b\">verstehen<span class=\"ds-hero-dot\">.</span></span></h1>",
+      "css": ".ds-hero { font-family: 'Fira Sans', system-ui, sans-serif; font-size: clamp(40px, 9vw, 110px); line-height: .92; color: #F1F3F8; margin: 0; } .ds-hero-a { font-weight: 300; letter-spacing: -.02em; } .ds-hero-b { font-weight: 900; letter-spacing: -.03em; } .ds-hero-dot { color: #34E7E4; }"
+    },
+    {
+      "name": "Glossarbegriff",
+      "kind": "custom",
+      "refersTo": "glossary-term",
+      "description": "Signaturkomponente: ein Wort im Fließtext, das seine eigene Definition trägt. Gestrichelt im Ruhezustand, cyan beim Öffnen.",
+      "html": "<p class=\"ds-prose\">Jede Runde kostet <span class=\"ds-gt-wrap\"><button type=\"button\" class=\"ds-gterm\" aria-expanded=\"false\">Tokens</button></span>. Budgets setzen, kleine Modelle für kleine Aufgaben.</p>",
+      "css": ".ds-prose { font-family: 'Fira Sans', system-ui, sans-serif; font-size: 16px; font-weight: 300; line-height: 1.6; color: #B6BCCE; } .ds-gt-wrap { display: inline; } .ds-gterm { font: inherit; color: inherit; background: none; border: 0; padding: 0; border-bottom: 1px dashed rgba(255,255,255,.14); transition: color .2s, border-color .2s; cursor: pointer; } .ds-gterm:hover, .ds-gterm:focus-visible, .ds-gterm[aria-expanded=\"true\"] { color: #34E7E4; border-bottom-color: #34E7E4; } .ds-gterm:focus-visible { outline: 2px solid #34E7E4; outline-offset: 3px; }"
+    },
+    {
+      "name": "Glossar-Popover",
+      "kind": "custom",
+      "refersTo": "glossary-popover",
+      "description": "Die schwebende Erklärung. Einziges Exemplar, an <body> gehängt, neutraler Versatzschatten.",
+      "html": "<div class=\"ds-gpop\"><b>TOKEN</b>Ein Text-Bruchstück (Wort oder Silbe); Abrechnungs- und Längeneinheit für Modelle.</div>",
+      "css": ".ds-gpop { display: inline-block; max-width: 320px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.14); border-radius: 10px; background: #10131D; color: #B6BCCE; font-family: 'Fira Sans', system-ui, sans-serif; font-size: 13px; font-weight: 300; line-height: 1.5; box-shadow: 0 12px 28px rgba(0,0,0,.55); } .ds-gpop b { display: block; font-family: 'Fira Code', ui-monospace, monospace; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #34E7E4; margin-bottom: 5px; font-weight: 400; }"
+    },
+    {
+      "name": "Baustein-Karte",
+      "kind": "card",
+      "refersTo": "module-card",
+      "description": "Eine der sieben Modulkarten. Trägt die Registerfarbe als Ziffer, Icon-Kachel und Hover-Kontur.",
+      "html": "<article class=\"ds-mod\" style=\"--mc:#B6FF3D\"><div class=\"ds-mod-top\"><span class=\"ds-mod-idx\">03 / 07</span><span class=\"ds-mod-glow\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M6 3h9a2 2 0 0 1 2 2v16l-6.5-3L4.5 21V5a2 2 0 0 1 1.5-2z\"/></svg></span></div><div><div class=\"ds-mod-tag\">DAS WISSEN</div><h3>Skills</h3><p class=\"ds-mod-lede\">Ein Skill ist ein Paket: eine SKILL.md plus Fachwissen, Abläufe und Stilregeln.</p></div><div class=\"ds-mod-open\">Details ansehen →</div></article>",
+      "css": ".ds-mod { position: relative; box-sizing: border-box; width: 320px; min-height: 230px; padding: 26px 24px 24px; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,0)); color: #F1F3F8; font-family: 'Fira Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; transition: border-color .35s, transform .35s; cursor: pointer; } .ds-mod:hover { transform: translateY(-4px); border-color: var(--mc); } .ds-mod-top { display: flex; align-items: flex-start; justify-content: space-between; } .ds-mod-idx { font-family: 'Fira Code', ui-monospace, monospace; font-size: 12px; letter-spacing: .1em; color: var(--mc); } .ds-mod-glow { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--mc) 30%, transparent), transparent 70%); border: 1px solid color-mix(in srgb, var(--mc) 35%, transparent); color: var(--mc); } .ds-mod-tag { font-family: 'Fira Code', ui-monospace, monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #9aa1b4; } .ds-mod h3 { font-size: 23px; font-weight: 600; letter-spacing: -.01em; margin: 18px 0 2px; } .ds-mod-lede { color: #B6BCCE; font-size: 14px; font-weight: 300; margin-top: 12px; line-height: 1.6; } .ds-mod-open { font-family: 'Fira Code', ui-monospace, monospace; font-size: 11px; letter-spacing: .15em; color: var(--mc); margin-top: 16px; }"
+    },
+    {
+      "name": "Steckbrief-Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Öffnet den Steckbrief eines Produkts. Hover färbt die Kontur in der Registerfarbe des Bausteins.",
+      "html": "<button class=\"ds-chip\" style=\"--mc:#34E7E4\"><b>Claude Opus 5</b> <i>Anthropic</i></button>",
+      "css": ".ds-chip { font-family: 'Fira Sans', system-ui, sans-serif; font-size: 13px; padding: 7px 12px; border: 1px solid rgba(255,255,255,.14); border-radius: 8px; color: #B6BCCE; background: rgba(255,255,255,.02); transition: border-color .2s, color .2s; cursor: pointer; } .ds-chip b { color: #F1F3F8; font-weight: 500; } .ds-chip i { font-style: normal; color: #9aa1b4; } .ds-chip:hover { border-color: var(--mc); color: #F1F3F8; } .ds-chip:focus-visible { outline: 2px solid #34E7E4; outline-offset: 3px; }"
+    },
+    {
+      "name": "Regel-Karte",
+      "kind": "card",
+      "refersTo": "rule-card",
+      "description": "Eine der fünf Regeln. Große Konturziffer als Marke, sonst reine Typografie.",
+      "html": "<div class=\"ds-rule\"><div class=\"ds-rule-n\">01</div><div><h3>Beginne klein.</h3><p>Ein Modell, ein Werkzeug, eine echte Aufgabe. Mehr brauchst du nicht.</p></div></div>",
+      "css": ".ds-rule { box-sizing: border-box; width: 260px; min-height: 210px; padding: 24px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; font-family: 'Fira Sans', system-ui, sans-serif; display: flex; flex-direction: column; justify-content: space-between; transition: border-color .3s, background .3s; } .ds-rule:hover { border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.02); } .ds-rule-n { font-family: 'Fira Code', ui-monospace, monospace; font-size: 42px; font-weight: 700; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.14); } .ds-rule h3 { font-size: 18px; font-weight: 600; color: #F1F3F8; margin: 0 0 8px; } .ds-rule p { font-size: 14px; font-weight: 300; line-height: 1.6; color: #B6BCCE; margin: 0; }"
+    },
+    {
+      "name": "Navigationspunkt",
+      "kind": "nav",
+      "refersTo": "nav-dot",
+      "description": "Einer von sieben Bausteinpunkten in der Kopfzeile. 10px sichtbar, 24px Trefferfläche, Label erst beim Hover.",
+      "html": "<nav class=\"ds-navdots\"><button type=\"button\" data-l=\"01 Sprachmodell\"></button><button type=\"button\" data-l=\"02 Harness\"></button><button type=\"button\" data-l=\"03 Skills\"></button></nav>",
+      "css": ".ds-navdots { display: flex; gap: 14px; padding: 12px 0; } .ds-navdots button { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); background: none; padding: 0; position: relative; transition: border-color .25s, transform .25s; cursor: pointer; } .ds-navdots button::before { content: \"\"; position: absolute; inset: -7px; border-radius: 50%; } .ds-navdots button::after { content: attr(data-l); position: absolute; top: 18px; left: 50%; transform: translateX(-50%); font-family: 'Fira Code', ui-monospace, monospace; font-size: 9px; letter-spacing: .1em; color: #9aa1b4; white-space: nowrap; opacity: 0; transition: opacity .2s; } .ds-navdots button:hover { transform: scale(1.4); border-color: #34E7E4; } .ds-navdots button:hover::after { opacity: 1; }"
+    },
+    {
+      "name": "Suchfeld",
+      "kind": "input",
+      "refersTo": "drawer",
+      "description": "Das einzige Eingabefeld der Seite, im Cmd+K-Dialog. Randlos auf der schwebenden Fläche.",
+      "html": "<div class=\"ds-spot\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M21 21l-4.3-4.3M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z\"/></svg><input class=\"ds-spot-input\" type=\"text\" placeholder=\"Modell, Tool, MCP, Firma …\"><button class=\"ds-spot-esc\">ESC</button></div>",
+      "css": ".ds-spot { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: #10131D; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; color: #9aa1b4; box-shadow: 0 12px 28px rgba(0,0,0,.55); } .ds-spot-input { flex: 1; min-width: 0; background: none; border: 0; outline: none; color: #F1F3F8; font-family: 'Fira Sans', system-ui, sans-serif; font-size: 16px; font-weight: 300; } .ds-spot-input::placeholder { color: #9aa1b4; } .ds-spot-esc { font-family: 'Fira Code', ui-monospace, monospace; font-size: 10px; letter-spacing: .12em; color: #9aa1b4; background: none; border: 1px solid rgba(255,255,255,.14); border-radius: 6px; padding: 4px 7px; cursor: pointer; } .ds-spot-esc:hover { color: #F1F3F8; border-color: #34E7E4; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Das nächtliche Feldbuch",
+    "overview": "Ein Nachschlagewerk, das nachts gelesen wird. Die Seite ist kein Dashboard und kein Messgerät — sie ist eine Publikation: große, eng gesetzte Display-Typografie trägt die Argumentation, Mono-Marginalien führen am Rand Buch, und ein 77 Einträge starker Katalog liegt darunter. Das Beinahe-Schwarz ist kein Stilzitat, sondern die Lesesituation: jemand sitzt abends davor und will etwas nachschlagen.\n\nDie sieben Neonfarben sind Registerfarben, keine Dekoration. Jede gehört genau einem Baustein und begleitet ihn durch die ganze Publikation — vom 3D-Kern im Hero über die Modulkarte und den Drawer bis zum Chip-Hover. Wer die Farbe kennt, weiß, wo er ist.\n\nDer Ton ist sachlich und direkt, nie feierlich. Hierarchie entsteht aus Schriftgröße, Gewicht und Weißraum; Haarlinien trennen, wo Weißraum nicht reicht. Flächen sind ruhig und beinahe unbegrenzt — Karten sind Rahmen, keine Kästen.",
+    "keyCharacteristics": [
+      "Beinahe-Schwarz (#06070B) als Papier, nicht als Effekt",
+      "Sieben Registerfarben, 1:1 an die sieben Bausteine gebunden",
+      "Ein Schriftpaar: Fira Sans für Argument, Fira Code für Beleg",
+      "Betonung ist Schriftstärke (300 bis 900), nie Farbe und nie kursiv",
+      "Haarlinien statt Rahmen, Weißraum statt Trennern",
+      "Leuchten ausschließlich als Zustand, nie im Ruhezustand",
+      "Atmosphärenebenen (Korn, Scanline, Vignette) bleiben unter 5 % Deckkraft"
+    ],
+    "rules": [
+      {
+        "name": "Die Registerregel",
+        "body": "Eine Registerfarbe gehört genau einem Baustein und wechselt nie. Sie wird nicht für Zustände, Diagrammserien oder Kategorien recycelt. Prüfung: eine Farbe aus dem Screenshot isolieren — sie muss eindeutig auf genau einen der sieben Bausteine zeigen.",
+        "section": "colors"
+      },
+      {
+        "name": "Die Zwei-Stimmen-Regel",
+        "body": "Auf einer Bildschirmhöhe stehen höchstens zwei Registerfarben gleichzeitig, außer in den beiden Übersichten, die absichtlich alle sieben zeigen (3D-Kern im Hero, Modulraster). Sonst wird das Register zum Konfetti.",
+        "section": "colors"
+      },
+      {
+        "name": "Die Alpha-Linien-Regel",
+        "body": "Konturen sind immer weißes Alpha auf dem Grund, nie ein eigener Grauwert. Dadurch bleibt jede Kante unabhängig davon stimmig, welcher der drei Hintergrundwerte darunterliegt.",
+        "section": "colors"
+      },
+      {
+        "name": "Die Beleg-Regel",
+        "body": "Mono ist für Belege reserviert: Ziffern, Kennungen, Labels, Messwerte, Code. Nie für Fließtext und nie, um etwas „technisch\" aussehen zu lassen.",
+        "section": "typography"
+      },
+      {
+        "name": "Die Enge-Regel",
+        "body": "Je größer der Grad, desto enger die Laufweite (-0.03em im Display, normal im Fließtext). Unter 34px wird nie negativ gesperrt. Der Light-Schnitt bekommt eine Stufe weniger Enge als der Black-Schnitt (-0.02em gegen -0.03em), weil dünne Formen mehr Luft brauchen.",
+        "section": "typography"
+      },
+      {
+        "name": "Die Schnitt-statt-Farbe-Regel",
+        "body": "Betonung im Text ist eine Schriftstärke, nie eine Farbe und nie kursiv. Im Display- und Headline-Grad springt das betonte Wort auf 900, im Fließtext auf 700; die Farbe bleibt unverändert. Farbe ist im System für Identität reserviert — würde sie zusätzlich betonen, hieße dasselbe Signal zweierlei. Kursive Schnitte kommen nicht vor und werden auch nicht geladen. Prüfung: ein farbiges Wort im Fließtext ist immer ein Fehler.",
+        "section": "typography"
+      },
+      {
+        "name": "Die Kickerlos-Regel",
+        "body": "Über einer Überschrift steht kein Eyebrow. Die Mono-Labels der Seite stehen neben, unter oder in Karten — nie als Vorspann über einer Headline.",
+        "section": "typography"
+      },
+      {
+        "name": "Die Ruhe-ist-flach-Regel",
+        "body": "Kein Element trägt im Ruhezustand einen Schatten oder Halo. Prüfung: Screenshot ohne Mauszeiger — es darf nichts leuchten außer dem laufenden Puls und der 3D-Szene.",
+        "section": "elevation"
+      },
+      {
+        "name": "Die Farbe-schwebt-nicht-Regel",
+        "body": "Schwebende Ebenen bekommen neutrale Schatten. Ein farbiger Schatten sagt „Zustand\", nie „Ebene\". Ein mechanischer Slop-Detektor wird den Hover-Halo als dark-glow melden — das ist eine bewusste, hier dokumentierte Entscheidung und kein Befund.",
+        "section": "elevation"
+      },
+      {
+        "name": "Die Rund-ist-System-Regel",
+        "body": "Kreisformen sind für Bestandteile des Agentenmodells und für Steuerpunkte reserviert. Inhalt bekommt nie einen Kreis.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do jede Registerfarbe genau bei ihrem Baustein halten (01 Cyan, 02 Ember, 03 Lime, 04 Violett, 05 Pink, 06 Sky, 07 Amber).",
+      "Do Konturen als weißes Alpha setzen (rgba(255,255,255,.08) und .14), damit sie auf allen drei Hintergrundwerten stimmen.",
+      "Do Mono für Ziffern, Labels und Belege einsetzen — und nur dafür.",
+      "Do betonen, indem du die Schriftstärke erhöhst: 900 im Display- und Headline-Grad, 700 im Fließtext.",
+      "Do neue schwebende Ebenen an <body> hängen und mit dem neutralen Versatzschatten versehen.",
+      "Do Atmosphärenebenen unter 5 % Deckkraft halten (Korn 5 %, Scanline 1,2 %).",
+      "Do Trefferflächen auf mindestens 24px bringen, auch wenn die Optik 10px bleibt."
+    ],
+    "donts": [
+      "Don't im Ruhezustand leuchten lassen. Halos sind Hover, Auswahl oder laufendes Signal.",
+      "Don't farbige Schatten für Ebenen benutzen. Farbe heißt Zustand.",
+      "Don't ein Wort im Fließtext einfärben, um es zu betonen. Dafür ist die Schriftstärke da.",
+      "Don't kursive Schnitte einsetzen; sie sind nicht Teil des Systems und werden nicht geladen.",
+      "Don't einen Kicker über eine Überschrift setzen.",
+      "Don't eine achte Akzentfarbe einführen. Reicht das Register nicht, ist die Informationsarchitektur falsch, nicht die Palette.",
+      "Don't Kreisformen für Inhalt verwenden; sie gehören dem Agentenmodell.",
+      "Don't eine zweite gestrichelte Linie einführen — die Strichelung ist als eindeutiges Zeichen für „Erklärung dahinter\" vergeben.",
+      "Don't eine Displayschrift des Systems (Impact, Arial Black, Platform-Sans) einsetzen; das Paar ist Fira Sans und Fira Code, mit system-ui nur als Notfall-Fallback."
+    ]
+  }
+}

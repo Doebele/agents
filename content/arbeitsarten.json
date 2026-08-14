@@ -1,0 +1,1422 @@
+{
+ "$schema": "arbeitsarten/v2",
+ "zweck": "Datengrundlage für das geführte Setup (Phase 2). Der Nutzer wählt an jeder Station aus einer Kandidatenmenge; die Auswahl landet im Setup-Blatt.",
+ "stand": "2026-08-13",
+ "aenderung_v2": "v1 hat gemessen, ob sich die Empfehlung zwischen Arbeitsarten unterscheidet, und Stationen mit stabiler Menge als 'konstant' abgewertet. Das war der falsche Maßstab. Entscheidend ist, ob es an einer Station eine sinnvolle Auswahlmenge gibt. Stationen mit arbeitsartunabhängiger Menge sind jetzt 'global' und werden einmal gefragt statt fünfmal.",
+ "lesehinweis": {
+  "kandidaten": "Die Menge, aus der der Nutzer wählt. Alle Einträge zeigen auf vorhandene Steckbriefe.",
+  "empfehlung": "Meine Vorauswahl innerhalb der Kandidaten. Meinung, kein Fakt — in der Oberfläche sichtbar anders darzustellen.",
+  "filter": "Belegbar aus geprüften Steckbrief-Feldern ableitbar, keine Meinung.",
+  "luecke": "Kategorie, die es real gibt, für die der Katalog aber keinen Eintrag hat. Nicht raten, sondern recherchieren."
+ },
+ "globale_wahl": {
+  "these": "Diese Stationen haben über alle Arbeitsarten dieselbe Kandidatenmenge. Sie werden einmal am Anfang gefragt, nicht pro Arbeitsart wiederholt.",
+  "stationen": {
+   "01_modell": {
+    "frage": {
+     "de": "Welches Sprachmodell soll denken?",
+     "en": "Which language model should do the thinking?"
+    },
+    "kandidaten": [
+     "Claude Opus 5 / Sonnet 5",
+     "GPT-5.6",
+     "Gemini 3.1 Pro",
+     "Grok 4.5",
+     "Qwen3.8-Max",
+     "Kimi K3",
+     "DeepSeek V4",
+     "GLM-5.2",
+     "Qwen 3.6 / 3.8",
+     "Mistral Large 3",
+     "Llama 4",
+     "gpt-oss",
+     "Ornith 1.0"
+    ],
+    "empfehlung": [
+     "Claude Opus 5 / Sonnet 5"
+    ],
+    "filter": [
+     "open",
+     "plans",
+     "aa"
+    ],
+    "hinweis": "Die Arbeitsart verschiebt allenfalls die Reihenfolge, nicht die Menge. Was die Menge wirklich teilt, ist offen gegen geschlossen."
+   },
+   "02_harness": {
+    "frage": {
+     "de": "Womit läuft die Schleife?",
+     "en": "What runs the loop?"
+    },
+    "kandidaten": [
+     "Claude Code",
+     "OpenAI Codex",
+     "Kimi Code",
+     "ZCode",
+     "Zed",
+     "Agent SDK",
+     "DeepSeek Harness",
+     "Agents SDK",
+     "Odysseus",
+     "Bionic",
+     "Hermes Agent",
+     "LangGraph",
+     "CrewAI",
+     "Google ADK",
+     "MS Agent Framework",
+     "Paperclip",
+     "LangChain"
+    ],
+    "empfehlung": [
+     "Claude Code",
+     "OpenAI Codex",
+     "Kimi Code",
+     "ZCode"
+    ],
+    "filter": [
+     "open"
+    ],
+    "hinweis": "Gleichwertig für alle fünf Arbeitsarten. Genau hier greift dein Ziel, dass niemand zwangsläufig bei Claude Code landet — durch echte Alternativen, nicht durch erfundene Differenzierung."
+   },
+   "00_betrieb": {
+    "frage": {
+     "de": "Läuft das Modell bei einem Anbieter oder auf deiner Maschine?",
+     "en": "Does the model run at a provider or on your machine?"
+    },
+    "kandidaten": [
+     "LM Studio",
+     "Ollama",
+     "llama.cpp",
+     "vLLM",
+     "SGLang"
+    ],
+    "empfehlung": [],
+    "filter": [
+     "open"
+    ],
+    "hinweis": "Nur relevant, wenn 'lokal' gewählt wurde. Setzt dann die Modellmenge auf die 43 open-weight Einträge und zieht die Hardware-Tabelle heran."
+   }
+  }
+ },
+ "arbeitsarten": [
+  {
+   "id": "recherchieren",
+   "name": {
+    "de": "Recherchieren und verdichten",
+    "en": "Research and condense"
+   },
+   "these": "Der Agent sammelt aus vielen Quellen und macht daraus eine belastbare Zusammenfassung. Es entsteht kein Produkt, sondern Wissen.",
+   "beispiele": [
+    {
+     "de": "Markt und Wettbewerb sichten",
+     "en": "Survey a market and its competitors"
+    },
+    {
+     "de": "Quellen zusammenfassen",
+     "en": "Summarise sources"
+    }
+   ],
+   "hinweis": "Nicht aus deiner Neunerliste, war aber dein erstes Beispiel. Einzige Arbeitsart ohne Artefakt.",
+   "synonyme": [
+    "recherche",
+    "research",
+    "quellen",
+    "marktanalyse",
+    "wettbewerb",
+    "zusammenfassen",
+    "literatur",
+    "due diligence"
+   ],
+   "stationen": {
+    "03_skills": {
+     "kandidaten": [
+      "Anthropic Agent Skills",
+      "skills.sh",
+      "skill-creator",
+      "eigene-skills"
+     ],
+     "luecke": {
+      "de": "Für Zitierweise und Rechercheprotokoll führt der Katalog noch keinen Skill.",
+      "en": "For citation style and a research log the catalogue has no skill yet."
+     },
+     "frage": {
+      "de": "Welches Wissen soll der Agent mitbringen?",
+      "en": "What knowledge should the agent bring along?"
+     },
+     "empfehlung": [
+      "Anthropic Agent Skills"
+     ]
+    },
+    "04_mcp": {
+     "kandidaten": [
+      "Playwright-mcp",
+      "filesystem-mcp"
+     ],
+     "empfehlung": [
+      "Playwright-mcp"
+     ],
+     "luecke": {
+      "de": "Ein Websuche-Server fehlt — für diese Arbeitsart das wichtigste fehlende Stück.",
+      "en": "A web-search server is missing — for this kind of work the most important gap."
+     },
+     "frage": {
+      "de": "Woran soll er angeschlossen sein?",
+      "en": "What should it be connected to?"
+     }
+    },
+    "05_tools": {
+     "kandidaten": [],
+     "luecke": "Websuche, Dokumentenextraktion, Zitationsverwaltung.",
+     "im_wizard": false
+    },
+    "06_medien": {
+     "kandidaten": [
+      "Whisper",
+      "Voxtral"
+     ],
+     "empfehlung": [
+      "Whisper"
+     ],
+     "hinweis": "Nur wenn Quellen als Audio oder Video vorliegen.",
+     "frage": {
+      "de": "Welche Medien soll er erzeugen können?",
+      "en": "Which media should it be able to create?"
+     },
+     "notiz": {
+      "de": "Nur nötig, wenn deine Quellen Aufnahmen sind — Interviews, Mitschnitte, Videos.",
+      "en": "Only needed when your sources are recordings — interviews, calls, videos."
+     }
+    },
+    "07_umgebung": {
+     "kandidaten": [
+      "Gemini Notebook",
+      "Obsidian"
+     ],
+     "frage": {
+      "de": "Wo soll das Ergebnis entstehen?",
+      "en": "Where should the result take shape?"
+     },
+     "empfehlung": [
+      "Gemini Notebook"
+     ]
+    }
+   },
+   "voraussetzungen": [
+    {
+     "titel": {
+      "de": "Ein Schlüssel für die Suche",
+      "en": "A key for search"
+     },
+     "text": {
+      "de": "Ohne Websuche kennt der Agent nur seinen Trainingsstand. Die meisten Suchdienste verlangen ein Konto und einen Schlüssel.",
+      "en": "Without web search the agent knows only its training cut-off. Most search services want an account and a key."
+     }
+    },
+    {
+     "titel": {
+      "de": "Ein Ort für die Funde",
+      "en": "Somewhere to put the findings"
+     },
+     "text": {
+      "de": "Ein Ordner oder eine Ablage, in die der Agent schreiben darf. Sonst steht das Ergebnis nur im Gesprächsverlauf.",
+      "en": "A folder or store the agent may write into. Otherwise the result lives only in the chat log."
+     }
+    }
+   ]
+  },
+  {
+   "id": "daten-auswerten",
+   "name": {
+    "de": "Daten auswerten",
+    "en": "Analyse data"
+   },
+   "these": "Der Agent liest strukturierte oder halbstrukturierte Dateien, rechnet und erklärt das Ergebnis.",
+   "beispiele": [
+    {
+     "de": "Daten aus PDF analysieren",
+     "en": "Analyse data from PDFs"
+    },
+    {
+     "de": "Daten aus Excel analysieren",
+     "en": "Analyse data from Excel"
+    }
+   ],
+   "synonyme": [
+    "pdf",
+    "excel",
+    "tabelle",
+    "csv",
+    "auswerten",
+    "analyse",
+    "zahlen",
+    "report",
+    "kennzahlen",
+    "datenbank"
+   ],
+   "stationen": {
+    "03_skills": {
+     "kandidaten": [
+      "Anthropic Agent Skills",
+      "skills.sh",
+      "skill-creator",
+      "eigene-skills"
+     ],
+     "luecke": {
+      "de": "Ein Tabellen- und ein Dokument-Skill fehlen — genau daran hängt der Unterschied zwischen Excel und PDF.",
+      "en": "A spreadsheet skill and a document skill are missing — the difference between Excel and PDF hangs on exactly that."
+     },
+     "frage": {
+      "de": "Welches Wissen soll der Agent mitbringen?",
+      "en": "What knowledge should the agent bring along?"
+     },
+     "empfehlung": [
+      "Anthropic Agent Skills"
+     ]
+    },
+    "04_mcp": {
+     "kandidaten": [
+      "filesystem-mcp",
+      "postgres-mcp",
+      "supabase-mcp"
+     ],
+     "empfehlung": [
+      "filesystem-mcp"
+     ],
+     "luecke": {
+      "de": "Server für PDF und Tabellen fehlen im Katalog.",
+      "en": "Servers for PDFs and spreadsheets are missing from the catalogue."
+     },
+     "frage": {
+      "de": "Woran soll er angeschlossen sein?",
+      "en": "What should it be connected to?"
+     }
+    },
+    "05_tools": {
+     "kandidaten": [],
+     "luecke": "Code-Ausführung für Auswertung und Diagramme.",
+     "im_wizard": false
+    },
+    "06_medien": {
+     "kandidaten": [],
+     "hinweis": "Nicht relevant.",
+     "frage": {
+      "de": "Welche Medien soll er erzeugen können?",
+      "en": "Which media should it be able to create?"
+     },
+     "im_wizard": false
+    },
+    "07_umgebung": {
+     "kandidaten": [
+      "Gemini Notebook"
+     ],
+     "luecke": {
+      "de": "Eine Tabellenumgebung, in der das Ergebnis weiterverarbeitet wird, fehlt noch.",
+      "en": "A spreadsheet environment for working on the result further is still missing."
+     },
+     "frage": {
+      "de": "Wo soll das Ergebnis entstehen?",
+      "en": "Where should the result take shape?"
+     },
+     "empfehlung": [
+      "Gemini Notebook"
+     ]
+    }
+   },
+   "voraussetzungen": [
+    {
+     "titel": {
+      "de": "Python auf dem Rechner",
+      "en": "Python on the machine"
+     },
+     "text": {
+      "de": "Der Agent rechnet nicht im Kopf, er schreibt Skripte. Dafür braucht er Python und die üblichen Bibliotheken.",
+      "en": "The agent does not calculate in its head, it writes scripts. For that it needs Python and the usual libraries."
+     }
+    },
+    {
+     "titel": {
+      "de": "Die Daten in lesbarer Form",
+      "en": "The data in readable form"
+     },
+     "text": {
+      "de": "Ein gescanntes PDF ist ein Bild, keine Tabelle. Prüf vorher, ob sich der Text überhaupt herauslösen lässt.",
+      "en": "A scanned PDF is an image, not a table. Check first whether the text can be extracted at all."
+     }
+    },
+    {
+     "titel": {
+      "de": "Eine Kopie, keine Urschrift",
+      "en": "A copy, not the original"
+     },
+     "text": {
+      "de": "Lass den Agenten auf einer Kopie arbeiten. Bei Datenbanken einen schreibgeschützten Zugang.",
+      "en": "Let the agent work on a copy. For databases, use read-only access."
+     }
+    }
+   ]
+  },
+  {
+   "id": "dokument-herstellen",
+   "name": {
+    "de": "Dokument herstellen",
+    "en": "Produce a document"
+   },
+   "these": "Der Agent formuliert und setzt ein Dokument, das ein Mensch danach vorzeigt.",
+   "beispiele": [
+    {
+     "de": "eine Präsentation erstellen",
+     "en": "create a presentation"
+    },
+    {
+     "de": "einen Businessplan formulieren",
+     "en": "write a business plan"
+    }
+   ],
+   "synonyme": [
+    "präsentation",
+    "slides",
+    "pitch",
+    "deck",
+    "business plan",
+    "konzept",
+    "bericht",
+    "dokument",
+    "angebot",
+    "text"
+   ],
+   "stationen": {
+    "03_skills": {
+     "kandidaten": [
+      "Anthropic Agent Skills",
+      "skills.sh",
+      "skill-creator",
+      "eigene-skills",
+      "Impeccable"
+     ],
+     "luecke": {
+      "de": "Der Präsentations- und Dokument-Skill fehlt, obwohl genau er hier die Arbeit macht.",
+      "en": "The presentation and document skill is missing, though it is what does the work here."
+     },
+     "frage": {
+      "de": "Welches Wissen soll der Agent mitbringen?",
+      "en": "What knowledge should the agent bring along?"
+     },
+     "empfehlung": [
+      "Anthropic Agent Skills"
+     ]
+    },
+    "04_mcp": {
+     "kandidaten": [
+      "filesystem-mcp",
+      "gdrive-mcp"
+     ],
+     "empfehlung": [
+      "filesystem-mcp"
+     ],
+     "frage": {
+      "de": "Woran soll er angeschlossen sein?",
+      "en": "What should it be connected to?"
+     }
+    },
+    "05_tools": {
+     "kandidaten": [],
+     "luecke": "Vorlagen- und Ausgabewerkzeug für Office-Formate.",
+     "im_wizard": false
+    },
+    "06_medien": {
+     "kandidaten": [
+      "GPT Image 2",
+      "Ideogram",
+      "Recraft",
+      "FLUX.2",
+      "Imagen 4"
+     ],
+     "empfehlung": [
+      "Ideogram"
+     ],
+     "hinweis": "Abbildungen im Dokument. Ideogram, weil Text im Bild hier oft gebraucht wird.",
+     "frage": {
+      "de": "Welche Medien soll er erzeugen können?",
+      "en": "Which media should it be able to create?"
+     }
+    },
+    "07_umgebung": {
+     "kandidaten": [
+      "Claude Design",
+      "Figma",
+      "Penpot",
+      "pencil.dev"
+     ],
+     "empfehlung": [
+      "Claude Design"
+     ],
+     "frage": {
+      "de": "Wo soll das Ergebnis entstehen?",
+      "en": "Where should the result take shape?"
+     }
+    }
+   },
+   "voraussetzungen": [
+    {
+     "titel": {
+      "de": "Eine Vorlage",
+      "en": "A template"
+     },
+     "text": {
+      "de": "Ohne Vorgabe erfindet der Agent ein Layout. Mit einer Vorlage — Schriften, Farben, Aufbau — entsteht etwas, das zu euch passt.",
+      "en": "Without a guide the agent invents a layout. With a template — fonts, colours, structure — you get something that fits you."
+     }
+    },
+    {
+     "titel": {
+      "de": "Das Zielformat klären",
+      "en": "Settle the output format"
+     },
+     "text": {
+      "de": "Eine .pptx oder .docx schreibt der Agent über einen Skill direkt als Datei. Das ist ein anderer Weg, als eine Anwendung fernzusteuern.",
+      "en": "The agent writes a .pptx or .docx directly as a file, through a skill. That is a different route from remote-controlling an application."
+     }
+    },
+    {
+     "titel": {
+      "de": "Jemand, der gegenliest",
+      "en": "Someone who reads it over"
+     },
+     "text": {
+      "de": "Ein Dokument, das nach außen geht, trägt deinen Namen. Zahlen und Aussagen prüfen, bevor es rausgeht.",
+      "en": "A document that goes outside carries your name. Check figures and claims before it leaves."
+     }
+    }
+   ]
+  },
+  {
+   "id": "bauen",
+   "name": {
+    "de": "Bauen",
+    "en": "Build"
+   },
+   "these": "Der Agent schreibt Code, der danach läuft.",
+   "beispiele": [
+    {
+     "de": "Webseite entwickeln",
+     "en": "develop a website"
+    },
+    {
+     "de": "Web-Applikation programmieren",
+     "en": "program a web application"
+    },
+    {
+     "de": "mobile App programmieren",
+     "en": "program a mobile app"
+    }
+   ],
+   "synonyme": [
+    "webseite",
+    "website",
+    "app",
+    "applikation",
+    "programmieren",
+    "code",
+    "frontend",
+    "backend",
+    "mobile",
+    "ios",
+    "android",
+    "api"
+   ],
+   "stationen": {
+    "03_skills": {
+     "kandidaten": [
+      "Anthropic Agent Skills",
+      "skills.sh",
+      "skill-creator",
+      "eigene-skills",
+      "Impeccable"
+     ],
+     "luecke": {
+      "de": "Skills für Hausregeln, Framework-Konventionen und Review-Vorgaben fehlen.",
+      "en": "Skills for house rules, framework conventions and review standards are missing."
+     },
+     "frage": {
+      "de": "Welches Wissen soll der Agent mitbringen?",
+      "en": "What knowledge should the agent bring along?"
+     },
+     "empfehlung": [
+      "Anthropic Agent Skills"
+     ]
+    },
+    "04_mcp": {
+     "kandidaten": [
+      "github-mcp",
+      "filesystem-mcp",
+      "Playwright-mcp",
+      "supabase-mcp",
+      "postgres-mcp"
+     ],
+     "empfehlung": [
+      "github-mcp",
+      "filesystem-mcp",
+      "Playwright-mcp"
+     ],
+     "hinweis": "Dichteste Station der Matrix.",
+     "frage": {
+      "de": "Woran soll er angeschlossen sein?",
+      "en": "What should it be connected to?"
+     }
+    },
+    "05_tools": {
+     "kandidaten": [],
+     "luecke": "Code-Ausführung, Testlauf, Deploy-Ziel.",
+     "im_wizard": false
+    },
+    "06_medien": {
+     "kandidaten": [
+      "GPT Image 2",
+      "Recraft"
+     ],
+     "hinweis": "Nur für Bildmaterial in der Oberfläche.",
+     "frage": {
+      "de": "Welche Medien soll er erzeugen können?",
+      "en": "Which media should it be able to create?"
+     }
+    },
+    "07_umgebung": {
+     "kandidaten": [
+      "v0",
+      "Lovable",
+      "Bolt.new",
+      "Onlook",
+      "Figma",
+      "Google Stitch",
+      "Relume",
+      "Uizard",
+      "Antigravity 2.0",
+      "Zed",
+      "Penpot",
+      "pencil.dev"
+     ],
+     "empfehlung": [
+      "v0",
+      "Onlook"
+     ],
+     "hinweis": "Hier liegt fast der gesamte Unterschied zwischen Webseite, Web-App und mobiler App.",
+     "frage": {
+      "de": "Wo soll das Ergebnis entstehen?",
+      "en": "Where should the result take shape?"
+     }
+    },
+    "08_hosting": {
+     "frage": {
+      "de": "Wo soll es später laufen?",
+      "en": "Where should it run later?"
+     },
+     "kandidaten": [],
+     "empfehlung": []
+    }
+   },
+   "varianten": {
+    "frage": {
+     "de": "Was genau baust du?",
+     "en": "What exactly are you building?"
+    },
+    "optionen": [
+     {
+      "id": "web",
+      "name": {
+       "de": "Eine Webseite",
+       "en": "A website"
+      },
+      "sub": {
+       "de": "Inhalt, der gelesen wird",
+       "en": "Content that gets read"
+      },
+      "stationen": {
+       "07_umgebung": {
+        "kandidaten": [
+         "v0",
+         "Relume",
+         "Lovable",
+         "Bolt.new",
+         "Onlook"
+        ],
+        "empfehlung": [
+         "v0"
+        ]
+       },
+       "08_hosting": {
+        "frage": {
+         "de": "Wo soll es später laufen?",
+         "en": "Where should it run later?"
+        },
+        "kandidaten": [
+         "Netlify",
+         "Cloudflare Pages",
+         "Vercel",
+         "Hostinger",
+         "Strato",
+         "IONOS"
+        ],
+        "empfehlung": [
+         "Netlify"
+        ],
+        "notiz": {
+         "de": "Zwei Sorten: Git-Plattformen bauen aus deinem Codestand selbst, klassische Pakete bringen Domain und Postfach mit.",
+         "en": "Two kinds: Git platforms build from your code themselves, classic packages come with a domain and mailbox."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Node-Laufzeit",
+         "en": "Node runtime"
+        },
+        "text": {
+         "de": "Fast alle Baukästen dieser Art setzen Node voraus. Einmal installieren, dann läuft es.",
+         "en": "Almost every toolkit of this kind needs Node. Install it once and it runs."
+        }
+       },
+       {
+        "titel": {
+         "de": "Ein Ort zum Veröffentlichen",
+         "en": "Somewhere to publish"
+        },
+        "text": {
+         "de": "Ein Konto beim gewählten Anbieter, und für eine eigene Adresse eine Domain. Beides vor dem ersten Ausliefern anlegen.",
+         "en": "An account at the host you picked, and a domain if you want your own address. Set both up before the first deploy."
+        }
+       }
+      ]
+     },
+     {
+      "id": "webapp",
+      "name": {
+       "de": "Eine Web-Applikation",
+       "en": "A web application"
+      },
+      "sub": {
+       "de": "Anmeldung, Daten, Zustand",
+       "en": "Sign-in, data, state"
+      },
+      "stationen": {
+       "07_umgebung": {
+        "kandidaten": [
+         "Lovable",
+         "v0",
+         "Bolt.new",
+         "Onlook",
+         "Zed",
+         "Antigravity 2.0"
+        ],
+        "empfehlung": [
+         "Lovable"
+        ]
+       },
+       "08_hosting": {
+        "frage": {
+         "de": "Wo soll es später laufen?",
+         "en": "Where should it run later?"
+        },
+        "kandidaten": [
+         "Render",
+         "Vercel",
+         "IONOS",
+         "Hostinger"
+        ],
+        "empfehlung": [
+         "Render"
+        ],
+        "notiz": {
+         "de": "Eine Anwendung braucht mehr als Dateiablage — Hintergrunddienste und eine Datenbank müssen mitlaufen.",
+         "en": "An application needs more than file storage — background services and a database have to run alongside."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Node-Laufzeit",
+         "en": "Node runtime"
+        },
+        "text": {
+         "de": "Grundlage für praktisch jeden Baukasten in diesem Feld.",
+         "en": "The basis for practically every toolkit in this field."
+        }
+       },
+       {
+        "titel": {
+         "de": "Eine Datenbank",
+         "en": "A database"
+        },
+        "text": {
+         "de": "Sobald sich Nutzer anmelden, brauchst du einen Ort für ihre Daten. Supabase erledigt Datenbank und Anmeldung in einem.",
+         "en": "As soon as users sign in you need somewhere for their data. Supabase covers database and sign-in in one."
+        }
+       },
+       {
+        "titel": {
+         "de": "Versionsverwaltung",
+         "en": "Version control"
+        },
+        "text": {
+         "de": "Ein Agent ändert viele Dateien auf einmal. Ohne Git kannst du nicht zurück.",
+         "en": "An agent changes many files at once. Without Git you cannot go back."
+        }
+       }
+      ]
+     },
+     {
+      "id": "mobile",
+      "name": {
+       "de": "Eine mobile App",
+       "en": "A mobile app"
+      },
+      "sub": {
+       "de": "iOS oder Android",
+       "en": "iOS or Android"
+      },
+      "stationen": {
+       "07_umgebung": {
+        "kandidaten": [
+         "Zed",
+         "Antigravity 2.0",
+         "Figma",
+         "pencil.dev"
+        ],
+        "empfehlung": [
+         "Zed"
+        ]
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Xcode auf einem Mac — für iOS",
+         "en": "Xcode on a Mac — for iOS"
+        },
+        "text": {
+         "de": "Ohne geht es nicht: Apple lässt iOS-Apps nur auf macOS bauen. Xcode bringt den Simulator gleich mit, du brauchst also kein Gerät zum Ausprobieren.",
+         "en": "There is no way around it: Apple only lets iOS apps be built on macOS. Xcode brings the simulator with it, so you need no device to try things out."
+        }
+       },
+       {
+        "titel": {
+         "de": "Android Studio — für Android",
+         "en": "Android Studio — for Android"
+        },
+        "text": {
+         "de": "Läuft auf jedem Betriebssystem und bringt SDK und Emulator mit. Braucht viel Platz auf der Festplatte.",
+         "en": "Runs on any operating system and brings the SDK and emulator along. Needs a lot of disk space."
+        }
+       },
+       {
+        "titel": {
+         "de": "Ein Entwicklerkonto — erst zum Schluss",
+         "en": "A developer account — only at the end"
+        },
+        "text": {
+         "de": "Zum Bauen und Ausprobieren im Simulator brauchst du keins. Erst wer auf ein echtes Gerät oder in den Store will, zahlt: bei Apple jährlich, bei Google einmalig.",
+         "en": "You need none to build and try things in the simulator. Only publishing to a real device or a store costs money: yearly at Apple, once at Google."
+        }
+       },
+       {
+        "titel": {
+         "de": "Der Agent sieht deinen Bildschirm nicht",
+         "en": "The agent does not see your screen"
+        },
+        "text": {
+         "de": "Er schreibt Code und ruft den Übersetzer auf, aber ob die App richtig aussieht, musst du selbst prüfen — oder ihm ein Werkzeug geben, das den Simulator bedient.",
+         "en": "It writes code and calls the compiler, but whether the app looks right is yours to check — or give it a tool that drives the simulator."
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "voraussetzungen": [
+    {
+     "titel": {
+      "de": "Versionsverwaltung",
+      "en": "Version control"
+     },
+     "text": {
+      "de": "Ein Agent ändert viele Dateien auf einmal. Ohne Git gibt es keinen Weg zurück.",
+      "en": "An agent changes many files at once. Without Git there is no way back."
+     }
+    },
+    {
+     "titel": {
+      "de": "Ein eigener Zweig",
+      "en": "A branch of your own"
+     },
+     "text": {
+      "de": "Lass ihn nie direkt auf dem Hauptzweig arbeiten. Ein eigener Zweig kostet nichts und rettet den Abend.",
+      "en": "Never let it work directly on the main branch. A branch of its own costs nothing and saves your evening."
+     }
+    }
+   ]
+  },
+  {
+   "id": "medien-produzieren",
+   "name": {
+    "de": "Medien produzieren",
+    "en": "Produce media"
+   },
+   "these": "Der Agent schreibt das Drehbuch und orchestriert Spezialmodelle, die Bild, Bewegung und Ton erzeugen.",
+   "beispiele": [
+    {
+     "de": "ein Video erstellen",
+     "en": "create a video"
+    },
+    {
+     "de": "einen Produkt-Clip erstellen",
+     "en": "create a product clip"
+    }
+   ],
+   "synonyme": [
+    "video",
+    "clip",
+    "film",
+    "kurzfilm",
+    "werbung",
+    "produktvideo",
+    "animation",
+    "stimme",
+    "sprecher",
+    "musik",
+    "vertonung",
+    "bild"
+   ],
+   "stationen": {
+    "03_skills": {
+     "kandidaten": [
+      "Anthropic Agent Skills",
+      "skills.sh",
+      "skill-creator",
+      "eigene-skills"
+     ],
+     "luecke": {
+      "de": "Skills für Shotliste, Schnittregeln und Markenvorgaben fehlen.",
+      "en": "Skills for shot lists, editing rules and brand guidelines are missing."
+     },
+     "frage": {
+      "de": "Welches Wissen soll der Agent mitbringen?",
+      "en": "What knowledge should the agent bring along?"
+     },
+     "empfehlung": [
+      "Anthropic Agent Skills"
+     ]
+    },
+    "04_mcp": {
+     "kandidaten": [
+      "filesystem-mcp"
+     ],
+     "luecke": {
+      "de": "Ein Medien-Server fehlt, obwohl Higgsfield genau darüber erreichbar wäre.",
+      "en": "A media server is missing, although Higgsfield would be reachable exactly that way."
+     },
+     "frage": {
+      "de": "Woran soll er angeschlossen sein?",
+      "en": "What should it be connected to?"
+     }
+    },
+    "05_tools": {
+     "kandidaten": [],
+     "luecke": "Schnitt, Rendering, Formatanpassung.",
+     "im_wizard": false
+    },
+    "06_medien": {
+     "kandidaten": [
+      "Veo 3.1",
+      "Kling 3.0",
+      "Seedance 2.5",
+      "Runway",
+      "Luma",
+      "Higgsfield",
+      "Wan 3.0",
+      "ElevenLabs Eleven v3",
+      "Suno v5.5",
+      "Stable Audio 3",
+      "Kokoro",
+      "Midjourney V8.2",
+      "FLUX.2",
+      "Seedream"
+     ],
+     "empfehlung": [
+      "Veo 3.1",
+      "ElevenLabs Eleven v3"
+     ],
+     "hinweis": "Produkt-Clip gegen freies Video unterscheidet sich hier: Kamerasteuerung gegen freie Erzählung.",
+     "frage": {
+      "de": "Welche Medien soll er erzeugen können?",
+      "en": "Which media should it be able to create?"
+     }
+    },
+    "07_umgebung": {
+     "kandidaten": [],
+     "frage": {
+      "de": "Wo soll das Ergebnis entstehen?",
+      "en": "Where should the result take shape?"
+     }
+    }
+   },
+   "varianten": {
+    "frage": {
+     "de": "Was soll entstehen?",
+     "en": "What should be created?"
+    },
+    "optionen": [
+     {
+      "id": "bild",
+      "name": {
+       "de": "Ein Bild",
+       "en": "An image"
+      },
+      "sub": {
+       "de": "Grafik, Illustration, Foto",
+       "en": "Graphic, illustration, photo"
+      },
+      "stationen": {
+       "06_medien": {
+        "kandidaten": [
+         "GPT Image 2",
+         "Midjourney V8.2",
+         "FLUX.2",
+         "Imagen 4",
+         "Ideogram",
+         "Recraft",
+         "Seedream"
+        ],
+        "empfehlung": [
+         "GPT Image 2"
+        ]
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Ein Konto beim Anbieter",
+         "en": "An account at the provider"
+        },
+        "text": {
+         "de": "Bis auf FLUX.2, das du selbst betreiben kannst, laufen alle über einen Dienst mit Schlüssel und Abrechnung.",
+         "en": "Except for FLUX.2, which you can run yourself, all of them go through a service with a key and billing."
+        }
+       }
+      ]
+     },
+     {
+      "id": "video",
+      "name": {
+       "de": "Ein Video",
+       "en": "A video"
+      },
+      "sub": {
+       "de": "Clip, Werbefilm, Animation",
+       "en": "Clip, ad film, animation"
+      },
+      "stationen": {
+       "06_medien": {
+        "kandidaten": [
+         "Veo 3.1",
+         "Kling 3.0",
+         "Seedance 2.5",
+         "Wan 3.0",
+         "Runway",
+         "Luma",
+         "Higgsfield"
+        ],
+        "empfehlung": [
+         "Veo 3.1"
+        ]
+       },
+       "07_umgebung": {
+        "kandidaten": [
+         "iMovie",
+         "Final Cut Pro",
+         "Premiere Pro",
+         "DaVinci Resolve",
+         "Avid Media Composer",
+         "CapCut",
+         "Shotcut",
+         "OpenShot"
+        ],
+        "empfehlung": [
+         "DaVinci Resolve",
+         "CapCut"
+        ],
+        "notiz": {
+         "de": "Nur nötig, wenn du vorhandenes Material zusammensetzt. Der Agent liefert die Teile, geschnitten wird von Hand.",
+         "en": "Only needed when you assemble existing footage. The agent delivers the pieces, the cutting is done by hand."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Ein bezahlter Tarif",
+         "en": "A paid plan"
+        },
+        "text": {
+         "de": "Bewegtbild kostet je Sekunde, und die kostenlosen Stufen reichen kaum über einen Testclip hinaus.",
+         "en": "Moving images cost by the second, and free tiers barely stretch past one test clip."
+        }
+       },
+       {
+        "titel": {
+         "de": "Eine Obergrenze",
+         "en": "An upper limit"
+        },
+        "text": {
+         "de": "Ein Agent, der unbeaufsichtigt Varianten erzeugt, kann teuer werden. Leg vorher fest, wie viele Clips er machen darf.",
+         "en": "An agent generating variants unattended gets expensive. Decide up front how many clips it may make."
+        }
+       },
+       {
+        "titel": {
+         "de": "Platz und Geduld",
+         "en": "Space and patience"
+        },
+        "text": {
+         "de": "Fertige Clips sind groß, und die Erzeugung dauert Minuten statt Sekunden.",
+         "en": "Finished clips are large, and generating them takes minutes rather than seconds."
+        }
+       },
+       {
+        "titel": {
+         "de": "Platz und Rechenzeit fürs Ausspielen",
+         "en": "Space and compute for the export"
+        },
+        "text": {
+         "de": "Ein Schnittprogramm rechnet den fertigen Film am Ende neu durch. Das dauert und braucht nochmal so viel Platz wie das Rohmaterial.",
+         "en": "An editing program re-renders the finished film at the end. That takes time and needs as much space again as the raw footage."
+        }
+       }
+      ]
+     },
+     {
+      "id": "ton",
+      "name": {
+       "de": "Ton",
+       "en": "Sound"
+      },
+      "sub": {
+       "de": "Stimme, Musik, Geräusche",
+       "en": "Voice, music, sound effects"
+      },
+      "stationen": {
+       "06_medien": {
+        "kandidaten": [
+         "ElevenLabs Eleven v3",
+         "Suno v5.5",
+         "Stable Audio 3",
+         "Kokoro"
+        ],
+        "empfehlung": [
+         "ElevenLabs Eleven v3"
+        ]
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Rechte an der Stimme",
+         "en": "Rights to the voice"
+        },
+        "text": {
+         "de": "Eine fremde Stimme darfst du nur mit ausdrücklicher Erlaubnis der Person klonen.",
+         "en": "You may only clone someone else's voice with that person's explicit permission."
+        }
+       },
+       {
+        "titel": {
+         "de": "Klarheit über die Nutzung",
+         "en": "Clarity about usage"
+        },
+        "text": {
+         "de": "Bevor erzeugte Musik veröffentlicht wird, lohnt ein Blick in die Nutzungsbedingungen des Anbieters.",
+         "en": "Before publishing generated music, it pays to read the provider's terms."
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "voraussetzungen": [
+    {
+     "titel": {
+      "de": "Platz auf der Festplatte",
+      "en": "Disk space"
+     },
+     "text": {
+      "de": "Erzeugte Medien sind groß. Ein paar Dutzend Versuche füllen schnell mehrere Gigabyte.",
+      "en": "Generated media is large. A few dozen attempts fill several gigabytes quickly."
+     }
+    }
+   ]
+  }
+ ],
+ "freitext": {
+  "prinzip": "Der Nutzer tippt sein Vorhaben. Der Text wird über die Synonymlisten auf eine Arbeitsart abgebildet. Kein Modellaufruf, damit die Seite offline und ohne Schlüssel funktioniert.",
+  "kein_treffer": "Wenn nichts greift, sagt die Seite das offen und zeigt die fünf Arbeitsarten zur Auswahl. Nicht raten.",
+  "offen": "Synonymlisten sind ein erster Wurf und müssen an echten Eingaben nachgeschärft werden."
+ },
+ "offene_entscheidung": {
+  "baustein_07": "Umbenennung von 'Design-Tools' zu einer Kategorie, die die Anwendung meint, in der das Ergebnis entsteht. Damit passen Obsidian und NotebookLM bei Recherche dorthin, wo bei Bauen v0 und bei Gestalten Figma steht. Betrifft die ausgelieferte Seite, deshalb nicht einseitig entschieden.",
+  "baustein_05": "Bleibt 'Tools' ein eigener Baustein, wenn seine Einträge zum Teil MCP-Server sind? Oder wird er die Kategorie für alles, was der Agent ausführt, ohne dass ein Produktname dranhängt?"
+ },
+ "stationen_ausserhalb": {
+  "05_tools": "Nicht im Wizard. Baustein 05 beschreibt Rechte, keine Produkte — welche Faehigkeiten ein Agent bekommt, haengt an der Aufgabe, nicht an der Arbeitsart. Bleibt als Nachschlageteil auf der Seite."
+ },
+ "ui": {
+  "titel": {
+   "de": "Setup zusammenstellen",
+   "en": "Assemble a setup"
+  },
+  "start": {
+   "de": "Setup zusammenstellen",
+   "en": "Assemble a setup"
+  },
+  "phase_rahmen": {
+   "de": "Rahmen",
+   "en": "Frame"
+  },
+  "phase_arbeit": {
+   "de": "Arbeitsart",
+   "en": "Kind of work"
+  },
+  "phase_bausteine": {
+   "de": "Bausteine",
+   "en": "Building blocks"
+  },
+  "phase_blatt": {
+   "de": "Dein Blatt",
+   "en": "Your sheet"
+  },
+  "betrieb_frage": {
+   "de": "Läuft das Modell bei einem Anbieter oder auf deiner Maschine?",
+   "en": "Does the model run at a provider or on your machine?"
+  },
+  "betrieb_gehostet": {
+   "de": "Bei einem Anbieter",
+   "en": "At a provider"
+  },
+  "betrieb_gehostet_sub": {
+   "de": "Nichts einzurichten, Abrechnung nach Nutzung",
+   "en": "Nothing to set up, billed by usage"
+  },
+  "betrieb_lokal": {
+   "de": "Auf meiner Maschine",
+   "en": "On my machine"
+  },
+  "betrieb_lokal_sub": {
+   "de": "Nichts verlässt den Rechner, braucht Hardware",
+   "en": "Nothing leaves the machine, needs hardware"
+  },
+  "laufzeit_frage": {
+   "de": "Womit startest du die Modelle lokal?",
+   "en": "What starts the models locally?"
+  },
+  "arbeit_frage": {
+   "de": "Was willst du tun?",
+   "en": "What do you want to do?"
+  },
+  "arbeit_platzhalter": {
+   "de": "In eigenen Worten — oder unten auswählen",
+   "en": "In your own words — or pick one below"
+  },
+  "arbeit_kein_treffer": {
+   "de": "Dazu finde ich keine Arbeitsart. Wähl bitte selbst aus:",
+   "en": "I find no matching kind of work for that. Please choose:"
+  },
+  "weiter": {
+   "de": "Weiter",
+   "en": "Next"
+  },
+  "zurueck": {
+   "de": "Zurück",
+   "en": "Back"
+  },
+  "ueberspringen": {
+   "de": "Überspringen",
+   "en": "Skip"
+  },
+  "empfohlen": {
+   "de": "Vorschlag",
+   "en": "Suggested"
+  },
+  "empfehlung_hinweis": {
+   "de": "Als Vorschlag markiert heißt: meine Meinung, kein Befund.",
+   "en": "Marked as a suggestion means: my opinion, not a finding."
+  },
+  "nur_offen": {
+   "de": "Nur offene Gewichte — weil du lokal betreiben willst.",
+   "en": "Open weights only — because you want to run locally."
+  },
+  "luecke_titel": {
+   "de": "Hier fehlt noch etwas",
+   "en": "Something is missing here"
+  },
+  "blatt_titel": {
+   "de": "Dein Setup",
+   "en": "Your setup"
+  },
+  "kopieren": {
+   "de": "Als Markdown kopieren",
+   "en": "Copy as Markdown"
+  },
+  "kopiert": {
+   "de": "Kopiert",
+   "en": "Copied"
+  },
+  "neu": {
+   "de": "Von vorn",
+   "en": "Start over"
+  },
+  "blatt_fuss": {
+   "de": "Stand August 2026. Prüf die Angaben, bevor du dich darauf verlässt.",
+   "en": "As of August 2026. Check the details before relying on them."
+  },
+  "info": {
+   "de": "Steckbrief zu",
+   "en": "Fact sheet for"
+  },
+  "kosten_frage": {
+   "de": "Was darf es kosten?",
+   "en": "What may it cost?"
+  },
+  "kosten_gratis": {
+   "de": "Kostenloses",
+   "en": "Free options"
+  },
+  "kosten_gratis_sub": {
+   "de": "Gratisstufen, offene Modelle, selbst betrieben",
+   "en": "Free tiers, open models, self-hosted"
+  },
+  "kosten_egal": {
+   "de": "Kostenpflichtiges",
+   "en": "Paid options"
+  },
+  "kosten_egal_sub": {
+   "de": "Abos, Schlüssel, Abrechnung nach Nutzung",
+   "en": "Subscriptions, keys, usage-based billing"
+  },
+  "kosten_gefiltert": {
+   "de": "Nach deiner Kostenwahl gefiltert. Einträge ohne Kostenangabe bleiben stehen.",
+   "en": "Filtered by your cost choice. Entries without a cost note stay visible."
+  },
+  "vor_titel": {
+   "de": "Bevor du anfängst",
+   "en": "Before you start"
+  },
+  "vor_sub": {
+   "de": "Das muss dasein, sonst scheitert schon der erste Schritt.",
+   "en": "This has to exist, otherwise the very first step fails."
+  },
+  "vor_lokal_titel": {
+   "de": "Genug Speicher auf der Grafikkarte",
+   "en": "Enough memory on the graphics card"
+  },
+  "vor_lokal_text": {
+   "de": "Lokale Modelle brauchen VRAM: etwa 0,7 GB je Milliarde Parameter. Ein 7B-Modell passt auf viele Rechner, ein 70B auf sehr wenige.",
+   "en": "Local models need VRAM: roughly 0.7 GB per billion parameters. A 7B model fits many machines, a 70B very few."
+  },
+  "vor_konten_titel": {
+   "de": "Konten und Schlüssel",
+   "en": "Accounts and keys"
+  },
+  "vor_konten_text": {
+   "de": "Für jeden kostenpflichtigen Dienst in deiner Liste brauchst du ein Konto, einen Schlüssel und eine hinterlegte Zahlungsart.",
+   "en": "For every paid service on your list you need an account, a key and a payment method on file."
+  },
+  "mehrfach": {
+   "de": "Mehreres auswählbar.",
+   "en": "Several can be selected."
+  },
+  "beides_betrieb": {
+   "de": "Du willst beides — die Liste bleibt deshalb vollständig.",
+   "en": "You want both — so the list stays complete."
+  },
+  "einzeln": {
+   "de": "Eines auswählen.",
+   "en": "Choose one."
+  }
+ },
+ "tutorial": {
+  "titel": {
+   "de": "Und jetzt?",
+   "en": "And now?"
+  },
+  "datei": "setup.md",
+  "s1": {
+   "de": "Speichere das Blatt als <code>setup.md</code>.",
+   "en": "Save the sheet as <code>setup.md</code>."
+  },
+  "s3": {
+   "de": "Leg diesen Auftrag daneben:",
+   "en": "Put this instruction alongside it:"
+  },
+  "prompt_kopieren": {
+   "de": "Auftrag kopieren",
+   "en": "Copy the instruction"
+  },
+  "prompt": {
+   "de": "Lies setup.md. Richte die dort aufgeführten Bausteine ein — fang bei „Bevor du anfängst\" an und arbeite die Liste von oben nach unten ab.\n\nPrüfe vor jedem Schritt, ob die Voraussetzung schon erfüllt ist. Erfinde nichts dazu: Wenn ein Werkzeug nicht verfügbar oder ein Link tot ist, sag es, statt einen Ersatz zu raten. Frag nach, bevor du etwas installierst, das Geld kostet oder ein Konto verlangt. Sag mir am Ende, was eingerichtet ist und was offen blieb.",
+   "en": "Read setup.md. Set up the building blocks listed there — start at \"Before you start\" and work the list from top to bottom.\n\nBefore each step, check whether the prerequisite is already met. Do not invent anything: if a tool is unavailable or a link is dead, say so instead of guessing a replacement. Ask before installing anything that costs money or requires an account. At the end, tell me what is set up and what is still open."
+  },
+  "wege": [
+   {
+    "keys": [
+     "Claude Code",
+     "OpenAI Codex",
+     "Kimi Code",
+     "ZCode"
+    ],
+    "text": {
+     "de": "Leg die Datei in den Ordner, in dem du arbeiten willst, und starte {h} dort. Terminal-Agenten sehen den aktuellen Ordner von selbst — du kannst sie also direkt auf <code>setup.md</code> ansprechen.",
+     "en": "Put the file in the folder you want to work in and start {h} there. Terminal agents see the current folder by themselves, so you can point them straight at <code>setup.md</code>."
+    }
+   },
+   {
+    "keys": [
+     "Zed"
+    ],
+    "text": {
+     "de": "Öffne den Ordner in {h} und leg <code>setup.md</code> hinein. Im Agent-Panel erwähnst du die Datei, dann wird sie mitgelesen.",
+     "en": "Open the folder in {h} and put <code>setup.md</code> into it. Mention the file in the agent panel and it gets read along."
+    }
+   },
+   {
+    "keys": [
+     "Odysseus",
+     "Bionic",
+     "Hermes Agent",
+     "Paperclip",
+     "DeepSeek Harness"
+    ],
+    "text": {
+     "de": "{h} bringt ein eigenes Fenster mit Dateiablage mit. Lade <code>setup.md</code> dort hoch und schreib den Auftrag daneben ins Eingabefeld.",
+     "en": "{h} comes with its own window and file area. Upload <code>setup.md</code> there and write the instruction next to it in the input field."
+    }
+   },
+   {
+    "keys": [
+     "Agent SDK",
+     "Agents SDK",
+     "LangGraph",
+     "LangChain",
+     "CrewAI",
+     "MS Agent Framework",
+     "Google ADK"
+    ],
+    "text": {
+     "de": "{h} ist ein Baukasten, kein fertiges Fenster — du schreibst das Programm selbst. Lies <code>setup.md</code> ein und gib den Inhalt zusammen mit dem Auftrag als erste Nachricht mit. Ab hier ist es eine Programmieraufgabe.",
+     "en": "{h} is a toolkit, not a finished window — you write the program yourself. Read <code>setup.md</code> and pass its content together with the instruction as the first message. From here on it is a programming task."
+    }
+   }
+  ],
+  "fallback": {
+   "de": "Öffne dein Agenten-Programm, gib ihm Zugriff auf <code>setup.md</code> und schreib den Auftrag daneben.",
+   "en": "Open your agent program, give it access to <code>setup.md</code> and write the instruction alongside."
+  }
+ }
+}

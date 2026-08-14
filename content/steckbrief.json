@@ -1,0 +1,2822 @@
+{
+ "eigene-skills": {
+  "name": {
+   "de": "Unternehmens-Skills",
+   "en": "Team skills"
+  },
+  "vendor": {
+   "de": "Konzept",
+   "en": "Concept"
+  },
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "blurb": {
+   "de": "Kein Produkt, sondern die eigentliche Idee hinter Skills: Wissen aufschreiben, das nur bei euch existiert — wie ihr ein Angebot formuliert, welche Farben und Schriften eure Marke benutzt, was in ein Übergabeprotokoll gehört. Technisch ist das eine Textdatei mit einem Kopf aus Name und Beschreibung; der Agent liest sie nur, wenn die Aufgabe dazu passt. Der Gewinn: Du erklärst es einmal statt bei jeder Anfrage neu, alle im Team bekommen dasselbe Ergebnis, und das Wissen bleibt im Unternehmen, statt im Chatverlauf zu versickern.",
+   "en": "Not a product but the actual idea behind skills: writing down knowledge that exists only inside your company — how you word an offer, which colours and typefaces your brand uses, what belongs in a handover note. Technically it is a text file with a header of name and description; the agent reads it only when the task calls for it. The gain: you explain it once instead of with every request, everyone on the team gets the same result, and the knowledge stays in the company instead of evaporating into chat history."
+  },
+  "tip": {
+   "de": "Fang mit der einen Sache an, die du am häufigsten erklärst. Ein Skill ist eine Anleitung in normaler Sprache, kein Programm — wenn du es einem neuen Kollegen erklären kannst, kannst du es aufschreiben.",
+   "en": "Start with the one thing you explain most often. A skill is an instruction in plain language, not a program — if you can explain it to a new colleague, you can write it down."
+  }
+ },
+ "Impeccable": {
+  "name": "Impeccable",
+  "vendor": "Paul Bakaus",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "blurb": {
+   "de": "Ein Sprachmodell hat kein Auge. Es baut Oberflächen, die technisch stimmen und trotzdem aussehen wie jede zweite — dieselben Karten, dieselben Verläufe, dieselbe Schrift. Impeccable gibt dem Agenten ein Design-Vokabular und dir 23 Befehle, mit denen du steuerst statt zu hoffen: prüfen, aufräumen, Typografie schärfen, Farbe setzen. Dazu 59 Regeln, die typische KI-Design-Marotten selbsttätig erkennen.",
+   "en": "A language model has no eye. It builds interfaces that are technically fine and still look like every other one — same cards, same gradients, same typeface. Impeccable gives the agent a design vocabulary and you 23 commands to direct with instead of hope: audit, tidy, sharpen typography, set colour. Plus 59 rules that catch the usual AI design tells on their own."
+  },
+  "tip": {
+   "de": "Einrichtung mit npx impeccable install, danach /impeccable init. Der erste Schritt ist ein Interview über Zielgruppe und Produkt — ohne diesen Kontext bleibt auch dieser Skill generisch.",
+   "en": "Set up with npx impeccable install, then /impeccable init. The first step is an interview about audience and product — without that context this skill stays generic too."
+  },
+  "links": {
+   "home": "https://impeccable.style",
+   "docs": "https://impeccable.style/tutorials/getting-started/",
+   "code": "https://github.com/pbakaus/impeccable"
+  }
+ },
+ "skill-creator": {
+  "name": "skill-creator",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "blurb": {
+   "de": "Der Skill, der Skills baut. Statt Ordnerstruktur und Dateiformat selbst zu lernen, beschreibst du dem Agenten, was dein Skill können soll, und er legt ihn an. Aus Anthropics offizieller Sammlung, in der auch die Vorlage und die Spezifikation liegen.",
+   "en": "The skill that builds skills. Instead of learning the folder layout and file format yourself, you describe what your skill should do and the agent creates it. From Anthropic's official collection, which also holds the template and the specification."
+  },
+  "tip": {
+   "de": "Der kürzeste Weg von „ich erkläre meinem Agenten jedes Mal dasselbe\" zu „ich habe es einmal aufgeschrieben\".",
+   "en": "The shortest path from \"I explain the same thing to my agent every time\" to \"I wrote it down once\"."
+  },
+  "links": {
+   "home": "https://github.com/anthropics/skills",
+   "docs": "https://agentskills.io",
+   "code": "https://github.com/anthropics/skills/tree/main/skills"
+  }
+ },
+ "tavily-mcp": {
+  "name": "Tavily MCP Server",
+  "vendor": "Tavily",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": false,
+  "blurb": {
+   "de": "Ein Agent kann von sich aus nicht im Netz suchen — er kennt nur, was im Training steckte. Tavily ist eine Suchschnittstelle, die genau diese Lücke schließt: Der Agent stellt eine Frage, bekommt aktuelle Treffer mit Quellenangabe zurück und kann darauf aufbauen. Es gibt einen offiziellen MCP-Server dazu, lokal oder als fertigen Fernzugang.",
+   "en": "An agent cannot search the web on its own — it only knows what was in its training. Tavily is a search interface that closes exactly that gap: the agent asks, gets current results with sources, and builds on them. There is an official MCP server for it, local or as a hosted remote endpoint."
+  },
+  "tip": {
+   "de": "Der Einstieg braucht einen kostenlosen API-Schlüssel. Für Recherche ist das der wichtigste einzelne Baustein — ohne ihn bleibt der Agent auf seinem Trainingsstand stehen.",
+   "en": "Getting started needs a free API key. For research this is the single most important piece — without it the agent is stuck at its training cutoff."
+  },
+  "free": true,
+  "links": {
+   "home": "https://www.tavily.com",
+   "docs": "https://docs.tavily.com/documentation/mcp",
+   "code": "https://github.com/tavily-ai/tavily-mcp"
+  }
+ },
+ "pdf-mcp": {
+  "name": "PyMuPDF4LLM MCP Server",
+  "vendor": "PyMuPDF",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "PDFs sind für ein Sprachmodell schwer zu lesen: Spalten, Tabellen und Bildunterschriften geraten durcheinander. Dieser Server wandelt ein PDF vorher in sauberes Markdown um, damit Struktur und Reihenfolge erhalten bleiben. Er kommt von den Machern von PyMuPDF, also von der Bibliothek, die den PDF-Teil ohnehin erledigt.",
+   "en": "PDFs are hard for a language model to read: columns, tables and captions get jumbled. This server converts a PDF into clean Markdown first, so structure and reading order survive. It comes from the makers of PyMuPDF, the library doing the PDF work anyway."
+  },
+  "tip": {
+   "de": "Achtung bei der Lizenz: AGPL-3.0. Für private Nutzung unproblematisch, für ein kommerzielles Produkt vorher prüfen.",
+   "en": "Mind the licence: AGPL-3.0. Fine for personal use, check it before shipping a commercial product."
+  },
+  "links": {
+   "home": "https://github.com/pymupdf/pymupdf4llm-mcp",
+   "code": "https://github.com/pymupdf/pymupdf4llm-mcp"
+  }
+ },
+ "excel-mcp": {
+  "name": "Excel MCP Server",
+  "vendor": "negokaz",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Gibt dem Agenten Lese- und Schreibzugriff auf Excel-Dateien — Werte, Formeln und neue Tabellenblätter. Damit wird aus „schick mir die Zahlen\" ein Arbeitsschritt, den der Agent selbst ausführt, statt dass du exportierst und wieder einfügst. Unterstützt xlsx, xlsm, xltx und xltm.",
+   "en": "Gives the agent read and write access to Excel files — values, formulas and new sheets. That turns \"send me the numbers\" into a step the agent performs itself, instead of you exporting and pasting back. Supports xlsx, xlsm, xltx and xltm."
+  },
+  "tip": {
+   "de": "Von der Gemeinschaft gepflegt, nicht von Microsoft. Es gibt mehrere Alternativen mit ähnlichem Funktionsumfang — vor dem Produktiveinsatz kurz vergleichen.",
+   "en": "Community-maintained, not by Microsoft. Several alternatives offer a similar scope — compare briefly before relying on it."
+  },
+  "links": {
+   "home": "https://github.com/negokaz/excel-mcp-server",
+   "code": "https://github.com/negokaz/excel-mcp-server"
+  }
+ },
+ "memory-mcp": {
+  "name": "Memory MCP Server",
+  "vendor": "Model Context Protocol",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Ein Agent vergisst nach jedem Gespräch alles. Dieser Referenz-Server gibt ihm ein Gedächtnis über Sitzungen hinweg: Er legt Personen, Dinge und deren Beziehungen als kleinen Wissensgraphen ab und liest ihn beim nächsten Mal wieder ein. Gespeichert wird in einer einfachen Textdatei auf deinem Rechner.",
+   "en": "An agent forgets everything after each conversation. This reference server gives it memory across sessions: it stores people, things and their relations as a small knowledge graph and reads it back next time. Everything lives in a plain text file on your machine."
+  },
+  "tip": {
+   "de": "Der schnellste Weg zu verstehen, warum Kontext und Gedächtnis nicht dasselbe sind. Läuft lokal, ohne Konto und ohne Schlüssel.",
+   "en": "The fastest way to understand why context and memory are not the same thing. Runs locally, no account, no key."
+  },
+  "links": {
+   "home": "https://github.com/modelcontextprotocol/servers",
+   "code": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
+  }
+ },
+ "Gemini Notebook": {
+  "name": "Gemini Notebook",
+  "vendor": "Google",
+  "cat": {
+   "de": "Recherche-Umgebung · Baustein 07",
+   "en": "Research workspace · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Eine Arbeitsfläche, der du eigene Quellen gibst — PDFs, Notizen, Links — und die dann ausschließlich daraus antwortet. Der Unterschied zu einem Chatbot: Es erfindet nichts dazu, weil es nur deine Ablage kennt, und es zeigt zu jeder Aussage die Fundstelle. Bekannt für Audio-Zusammenfassungen im Podcast-Format.",
+   "en": "A workspace you feed your own sources — PDFs, notes, links — which then answers strictly from them. The difference to a chatbot: it adds nothing of its own, because it only knows your material, and it shows the passage behind every claim. Known for its podcast-style audio summaries."
+  },
+  "tip": {
+   "de": "Hieß bis Juli 2026 NotebookLM. Der gute Einstieg, wenn du zwanzig PDFs hast und nicht weißt, wo du anfangen sollst.",
+   "en": "Was called NotebookLM until July 2026. A good entry point when you have twenty PDFs and no idea where to start."
+  },
+  "icon": "google",
+  "links": {
+   "home": "https://notebooklm.google/"
+  }
+ },
+ "Obsidian": {
+  "name": "Obsidian",
+  "vendor": "Obsidian",
+  "cat": {
+   "de": "Notizsystem · Baustein 07",
+   "en": "Notes system · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Ein Notizprogramm, das deine Texte als gewöhnliche Markdown-Dateien in einem Ordner auf deiner Festplatte ablegt — kein Konto, keine Cloud, offline nutzbar. Genau das macht es für Agenten interessant: Was als Datei auf der Platte liegt, erreicht ein Agent über den Dateisystem-Server, ohne dass eine Schnittstelle nötig wäre.",
+   "en": "A notes app that keeps your writing as ordinary Markdown files in a folder on your disk — no account, no cloud, works offline. That is exactly what makes it interesting for agents: whatever sits on disk as a file is reachable through the filesystem server, no integration needed."
+  },
+  "tip": {
+   "de": "Für die persönliche Nutzung kostenlos. Wenn du eine Wissensablage suchst, auf die dein Agent zugreifen soll, ist der schlichte Ordner mit Textdateien der einfachste Weg.",
+   "en": "Free for personal use. If you want a knowledge base your agent can reach, a plain folder of text files is the simplest route."
+  },
+  "free": true,
+  "icon": "obsidian",
+  "links": {
+   "home": "https://obsidian.md/",
+   "docs": "https://obsidian.md/help/"
+  }
+ },
+ "Claude Code": {
+  "name": "Claude Code",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": false,
+  "blurb": {
+   "de": "Ein fertiges Programm, das du im Terminal startest und dem du in normaler Sprache aufträgst, was zu tun ist: Dateien lesen, Code ändern, Befehle ausführen. Wenn du später etwas Eigenes bauen willst, gibt es dieselbe Schleife als Baukasten im Agent SDK.",
+   "en": "A finished program you start in the terminal and instruct in plain language: read files, change code, run commands. If you later want to build your own, the same loop is available as a toolkit in the Agent SDK."
+  },
+  "tip": {
+   "de": "Im Projektordner starten und mit /init einen Projektkontext anlegen. Danach kennt der Agent deine Codebasis, ohne dass du sie jedes Mal erklärst.",
+   "en": "Start it in your project folder and run /init to create a project context. After that the agent knows your codebase without you explaining it every time."
+  },
+  "links": {
+   "home": "https://claude.com/product/claude-code",
+   "docs": "https://code.claude.com/docs/en/whats-new",
+   "code": "https://github.com/anthropics/claude-code"
+  },
+  "icon": "anthropic",
+  "free": false,
+  "plans": {
+   "de": "Pro 20 $/Mo. · Max 5× 100 $ · Max 20× 200 $ · API nutzungsabhängig",
+   "en": "Pro $20/mo · Max 5x $100 · Max 20x $200 · usage-based API"
+  }
+ },
+ "Agent SDK": {
+  "name": "Claude Agent SDK",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Kein fertiges Programm, sondern ein Baukasten: Er stellt genau die Schleife, die in Claude Code steckt, für eigene Programme bereit, in Python und TypeScript. Du entscheidest selbst, welche Werkzeuge der Agent bekommt und wann er aufhört.",
+   "en": "Not a finished program but a toolkit: it exposes the very loop inside Claude Code to your own programs, in Python and TypeScript. You decide which tools the agent gets and when it stops."
+  },
+  "tip": {
+   "de": "Der Schritt danach, wenn dir Claude Code gefällt, du aber etwas Eigenes bauen willst. Setzt Programmierkenntnisse voraus.",
+   "en": "The step after Claude Code, once you like it but want to build something of your own. Requires programming."
+  },
+  "links": {
+   "home": "https://code.claude.com/docs/en/agent-sdk/overview",
+   "docs": "https://code.claude.com/docs/en/agent-sdk/overview",
+   "code": "https://github.com/anthropics/claude-agent-sdk-python"
+  },
+  "icon": "anthropic",
+  "free": true,
+  "plans": {
+   "de": "Kostenlos, Open Source (MIT)",
+   "en": "Free, open source (MIT)"
+  }
+ },
+ "OpenAI Codex": {
+  "name": "Codex",
+  "vendor": "OpenAI",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "OpenAIs Coding-Agent, den es doppelt gibt: in ChatGPT für Pull Requests, Refactorings und Code-Reviews, und als Programm für dein Terminal. Fertig nutzbar, ohne eine Zeile eigenen Code.",
+   "en": "OpenAI's coding agent, available twice over: inside ChatGPT for pull requests, refactorings and code reviews, and as a program for your terminal. Ready to use, without a line of your own code."
+  },
+  "tip": {
+   "de": "Als Reviewer in GitHub-Pull-Requests eingerichtet, kommentiert er Änderungen von selbst — der bequemste Einstieg, weil du nichts installieren musst.",
+   "en": "Set up as a reviewer on GitHub pull requests it comments on changes by itself — the most comfortable entry point, because there is nothing to install."
+  },
+  "links": {
+   "home": "https://chatgpt.com/codex/",
+   "docs": "https://learn.chatgpt.com/docs",
+   "code": "https://github.com/openai/codex"
+  },
+  "free": true,
+  "plans": {
+   "de": "In ChatGPT-Plänen (Free–Pro 200 $) · API nutzungsabhängig",
+   "en": "Included in ChatGPT plans (Free–Pro $200) · usage-based API"
+  }
+ },
+ "Agents SDK": {
+  "name": "OpenAI Agents SDK",
+  "vendor": "OpenAI",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "OpenAIs schlanker Baukasten für Fälle, in denen mehrere Agenten zusammenarbeiten: einer recherchiert, einer schreibt, einer prüft. Die Übergaben zwischen ihnen programmierst du. Python und TypeScript.",
+   "en": "OpenAI's lean toolkit for cases where several agents work together: one researches, one writes, one checks. You program the handoffs between them. Python and TypeScript."
+  },
+  "tip": {
+   "de": "Bewusst klein gehalten — wenig zu lernen, dafür wenig Vorgaben. Programmierkenntnisse nötig.",
+   "en": "Deliberately small — little to learn, and correspondingly little guidance. Programming required."
+  },
+  "links": {
+   "home": "https://openai.github.io/openai-agents-python/",
+   "docs": "https://openai.github.io/openai-agents-python/",
+   "code": "https://github.com/openai/openai-agents-python"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos, Open Source (MIT)",
+   "en": "Free, open source (MIT)"
+  }
+ },
+ "Kimi Code": {
+  "name": "Kimi Code",
+  "vendor": "Moonshot AI",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Moonshots Agent fürs Terminal: liest Code, führt Shell-Befehle aus und ruft Webseiten ab. Fertig nutzbar wie Claude Code, aber mit offenen Modellen im Rücken.",
+   "en": "Moonshot's terminal agent: reads code, runs shell commands and fetches web pages. Ready to use like Claude Code, but backed by open models."
+  },
+  "tip": {
+   "de": "Kommt mit sehr großem Kontext zurecht — du kannst lange Dateien komplett mitgeben, statt sie zu zerstückeln.",
+   "en": "It handles a very large context — you can hand over long files whole instead of cutting them into pieces."
+  },
+  "links": {
+   "home": "https://www.kimi.com/code",
+   "docs": "https://www.kimi.com/code/docs/en/",
+   "code": "https://github.com/MoonshotAI/kimi-code"
+  },
+  "icon": "kimi",
+  "free": true,
+  "plans": {
+   "de": "Abo Free–199 $/Mo. · API 0,60 $/2,50 $ pro 1M Token",
+   "en": "Plans Free–$199/mo · API $0.60/$2.50 per 1M tokens"
+  }
+ },
+ "ZCode": {
+  "name": "ZCode",
+  "vendor": "Z.AI",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": false,
+  "blurb": {
+   "de": "Z.AIs offizieller Agent für ihr GLM-Modell: planen, codieren, prüfen, ausliefern. Fertig nutzbar, aber an das hauseigene Modell gebunden.",
+   "en": "Z.AI's official agent for their GLM model: plan, code, review, ship. Ready to use, but tied to the in-house model."
+  },
+  "tip": {
+   "de": "Der Agent-Modus lohnt sich bei Aufgaben, die über mehrere Runden gehen, nicht bei einzelnen Fragen.",
+   "en": "The agent mode pays off on tasks that run over several rounds, not on single questions."
+  },
+  "links": {
+   "home": "https://zcode.z.ai/en",
+   "docs": "https://zcode.z.ai/en/docs",
+   "code": null
+  },
+  "free": false,
+  "plans": {
+   "de": "GLM-Coding-Abo: Lite 18 $ · Pro 80 $ · Max 168 $/Mo.",
+   "en": "GLM Coding plan: Lite $18 · Pro $80 · Max $168/mo"
+  }
+ },
+ "Zed": {
+  "name": "Zed",
+  "vendor": "Zed Industries",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Ein Code-Editor mit eingebautem Agenten. Anders als bei den Terminal-Werkzeugen siehst du Code und Agent nebeneinander im Fenster. Sehr schnell, weil nativ gebaut, und quelloffen.",
+   "en": "A code editor with a built-in agent. Unlike the terminal tools you see code and agent side by side in one window. Very fast because it is built natively, and open source."
+  },
+  "tip": {
+   "de": "Das Agent-Panel lässt mehrere Aufgaben parallel laufen. Der richtige Einstieg, wenn dir eine Kommandozeile zu nackt ist.",
+   "en": "The agent panel runs several tasks in parallel. The right entry point if a command line feels too bare."
+  },
+  "links": {
+   "home": "https://zed.dev/",
+   "docs": "https://zed.dev/docs/ai/overview",
+   "code": "https://github.com/zed-industries/zed"
+  },
+  "icon": "zedindustries",
+  "free": true,
+  "plans": {
+   "de": "Editor kostenlos · Pro 10 $/Mo.",
+   "en": "Editor free · Pro $10/mo"
+  }
+ },
+ "Hermes Agent": {
+  "name": "Hermes Agent",
+  "vendor": "Nous Research",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Ein quelloffener Agent, der aus seinen eigenen Durchläufen lernt und mit der Zeit mehr kann. Fertig nutzbar, aber erkennbar ein Forschungsprojekt und kein poliertes Produkt.",
+   "en": "An open-source agent that learns from its own runs and grows more capable over time. Ready to use, but visibly a research project rather than a polished product."
+  },
+  "tip": {
+   "de": "Interessant, wenn du sehen willst, wie ein Agent sich selbst Fähigkeiten beibringt. Für verlässliche Arbeit sind die etablierten Werkzeuge die ruhigere Wahl.",
+   "en": "Interesting if you want to watch an agent teach itself. For dependable work the established tools are the calmer choice."
+  },
+  "links": {
+   "home": "https://hermes-agent.nousresearch.com/",
+   "docs": "https://hermes-agent.nousresearch.com/docs/",
+   "code": "https://github.com/nousresearch/hermes-agent"
+  },
+  "free": true,
+  "plans": {
+   "de": "Open Source (MIT), kostenlos · optionale kostenpflichtige Stufen mit Credits",
+   "en": "Open source (MIT), free · optional paid tiers with credits"
+  }
+ },
+ "Odysseus": {
+  "name": "Odysseus",
+  "vendor": "odysseus-dev",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Ein kompletter Arbeitsplatz zum Selbsthosten: Chat, Agenten, Recherche und Dokumente in einer Oberfläche, auf deinem eigenen Server. Quelloffen.",
+   "en": "A complete self-hosted workspace: chat, agents, research and documents in one interface, on your own server. Open source."
+  },
+  "tip": {
+   "de": "Selbst hosten heißt volle Kontrolle über die Daten — und dass Betrieb und Aktualisierung an dir hängen.",
+   "en": "Self-hosting means full control over your data — and that running and updating it is on you."
+  },
+  "links": {
+   "home": "https://odysseusai.dev/",
+   "docs": null,
+   "code": "https://github.com/odysseus-dev/odysseus"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
+   "en": "Free (open source, AGPL-3.0), self-hosted"
+  }
+ },
+ "Bionic": {
+  "name": "Bionic",
+  "vendor": "LM Studio",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": false,
+  "blurb": {
+   "de": "Der Agent von LM Studio für Dokumente und Code. Sein Kunststück: Er arbeitet wahlweise mit einem Modell aus der Cloud oder mit einem, das auf deinem Rechner läuft — dann bleibt alles auf der Maschine.",
+   "en": "LM Studio's agent for documents and code. Its trick: it works either with a model from the cloud or with one running on your own machine — in which case nothing leaves it."
+  },
+  "tip": {
+   "de": "Zusammen mit LM Studio der kürzeste Weg zu einem Agenten, der ohne Internet und ohne Konto arbeitet.",
+   "en": "Together with LM Studio, the shortest path to an agent that works without internet and without an account."
+  },
+  "links": {
+   "home": "https://lmstudio.ai/",
+   "docs": null,
+   "code": null
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos (LM-Studio-Agent-App)",
+   "en": "Free (LM Studio agent app)"
+  }
+ },
+ "LangGraph": {
+  "name": "LangGraph",
+  "vendor": "LangChain",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Ein Baukasten für Agenten, die lange laufen und dabei nicht den Faden verlieren. Du beschreibst den Ablauf als Graph aus Schritten und Verzweigungen, statt zu hoffen, dass das Modell sich jedes Mal richtig entscheidet. Spürbar mehr Aufwand, dafür vorhersagbar.",
+   "en": "A toolkit for agents that run long without losing the thread. You describe the flow as a graph of steps and branches instead of hoping the model decides right every time. Noticeably more effort, and predictable in return."
+  },
+  "tip": {
+   "de": "Die Wahl, wenn ein Agent verlässlich immer denselben Weg gehen soll. Zum ersten Ausprobieren ist es zu viel Maschinerie.",
+   "en": "The choice when an agent must reliably take the same path every time. For a first experiment it is too much machinery."
+  },
+  "links": {
+   "home": "https://www.langchain.com/langgraph",
+   "docs": "https://docs.langchain.com/oss/python/langgraph/overview",
+   "code": "https://github.com/langchain-ai/langgraph"
+  },
+  "icon": "langchain",
+  "free": true,
+  "plans": {
+   "de": "Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
+   "en": "Open source free · LangSmith Plus $39/seat/mo"
+  }
+ },
+ "LangChain": {
+  "name": "LangChain",
+  "vendor": "LangChain",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Der bekannteste Baukasten für Programme rund um Sprachmodelle, mit fertigen Anbindungen an Hunderte Dienste. Du schreibst Code — dafür musst du die Anbindungen nicht selbst bauen.",
+   "en": "The best-known toolkit for programs around language models, with ready-made connections to hundreds of services. You write code — in exchange you don't build the connections yourself."
+  },
+  "tip": {
+   "de": "Schneller Einstieg für eigene Anwendungen. Wer nur einen Agenten benutzen will, ist mit einem fertigen Werkzeug besser bedient.",
+   "en": "A quick start for your own applications. Anyone who only wants to use an agent is better served by a finished tool."
+  },
+  "links": {
+   "home": "https://www.langchain.com/",
+   "docs": "https://docs.langchain.com/",
+   "code": "https://github.com/langchain-ai/langchain"
+  },
+  "icon": "langchain",
+  "free": true,
+  "plans": {
+   "de": "Framework Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
+   "en": "Framework open source free · LangSmith Plus $39/seat/mo"
+  }
+ },
+ "CrewAI": {
+  "name": "CrewAI",
+  "vendor": "CrewAI",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Ein Baukasten, der Agenten wie ein Team behandelt: Jeder bekommt eine Rolle, ein Ziel und Aufgaben, und sie arbeiten sich zu. Die Besetzung legst du im Code fest.",
+   "en": "A toolkit that treats agents like a team: each gets a role, a goal and tasks, and they pass work to each other. You define the cast in code."
+  },
+  "tip": {
+   "de": "Das Rollenbild macht Aufbauten mit mehreren Agenten anschaulich. Ob mehrere wirklich besser sind als einer, bleibt die eigentliche Frage.",
+   "en": "The role metaphor makes multi-agent setups easy to picture. Whether several really beat one remains the real question."
+  },
+  "links": {
+   "home": "https://crewai.com/",
+   "docs": "https://docs.crewai.com/",
+   "code": "https://github.com/crewAIInc/crewAI"
+  },
+  "free": true,
+  "plans": {
+   "de": "Basis kostenlos · Enterprise individuell · Open Source",
+   "en": "Basic free · Enterprise custom · open source"
+  }
+ },
+ "Paperclip": {
+  "name": "Paperclip",
+  "vendor": "Paperclip AI",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Eine quelloffene Plattform, auf der Agenten-Teams Aufgaben übernehmen und sich Skills teilen. Angesiedelt zwischen Baukasten und Betriebsumgebung.",
+   "en": "An open-source platform where agent teams take on tasks and share skills. Positioned between a toolkit and an operating environment."
+  },
+  "tip": {
+   "de": "Interessant, wenn mehrere Agenten dauerhaft nebeneinander laufen sollen statt nur für eine Sitzung.",
+   "en": "Interesting when several agents should run alongside each other permanently rather than for a single session."
+  },
+  "links": {
+   "home": "https://github.com/paperclipai/paperclip",
+   "docs": null,
+   "code": "https://github.com/paperclipai/paperclip"
+  },
+  "free": true,
+  "plans": {
+   "de": "Open Source (MIT) kostenlos · Managed Cloud ab 10 €/Mo.",
+   "en": "Open source (MIT) free · managed cloud from €10/mo"
+  }
+ },
+ "MS Agent Framework": {
+  "name": "Microsoft Agent Framework",
+  "vendor": "Microsoft",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Microsofts Baukasten für Agenten, die in einem Unternehmen im Dauerbetrieb laufen sollen, mit .NET, Python und Go. Der Schwerpunkt liegt auf Betrieb und Ausrollen, nicht auf schnellem Ausprobieren.",
+   "en": "Microsoft's toolkit for agents meant to run continuously inside a company, with .NET, Python and Go. The focus is on operation and deployment, not on quick experiments."
+  },
+  "tip": {
+   "de": "Naheliegend, wenn eure Infrastruktur ohnehin auf Azure läuft.",
+   "en": "An obvious fit if your infrastructure already runs on Azure."
+  },
+  "links": {
+   "home": "https://learn.microsoft.com/en-us/agent-framework/",
+   "docs": "https://learn.microsoft.com/en-us/agent-framework/",
+   "code": "https://github.com/microsoft/agent-framework"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos, Open Source (MIT)",
+   "en": "Free, open source (MIT)"
+  }
+ },
+ "Google ADK": {
+  "name": "Agent Development Kit",
+  "vendor": "Google",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "Googles quelloffener Baukasten zum Bauen, Prüfen und Ausrollen von Agenten im Unternehmensmaßstab. Wie bei Microsoft liegt der Schwerpunkt auf verlässlichem Betrieb.",
+   "en": "Google's open-source toolkit for building, debugging and deploying agents at enterprise scale. As with Microsoft, the focus is dependable operation."
+  },
+  "tip": {
+   "de": "Ausrollen auf Cloud Run ist der vorgesehene Weg. Für einen ersten Agenten ist das deutlich zu viel.",
+   "en": "Deploying to Cloud Run is the intended route. For a first agent this is far too much."
+  },
+  "links": {
+   "home": "https://adk.dev/",
+   "docs": "https://adk.dev/",
+   "code": "https://github.com/google/adk-python"
+  },
+  "icon": "google",
+  "free": true,
+  "plans": {
+   "de": "Kostenlos, Open Source (Apache 2.0)",
+   "en": "Free, open source (Apache 2.0)"
+  }
+ },
+ "Qwen 3.6 / 3.8": {
+  "name": "Qwen3",
+  "vendor": "Alibaba Cloud",
+  "cat": {
+   "de": "Sprachmodell · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Alibabas offene Modellfamilie, die es in vielen Größen gibt — vom kleinen Modell für den Laptop bis zur großen Variante für den Server. Stark beim Programmieren und beim schrittweisen Durchdenken von Problemen.",
+   "en": "Alibaba's open model family, available in many sizes — from a small model for a laptop to a large one for a server. Strong at programming and at reasoning through problems step by step."
+  },
+  "tip": {
+   "de": "Wegen der vielen Größen der beste Ausgangspunkt zum Ausprobieren: klein anfangen, bei Bedarf hochgehen. Fertig gehostet auch über die Alibaba Cloud.",
+   "en": "Thanks to the range of sizes, the best starting point for experimenting: start small, scale up when needed. Also available hosted through Alibaba Cloud."
+  },
+  "links": {
+   "home": "https://qwen.ai",
+   "docs": null,
+   "code": "https://github.com/QwenLM/Qwen3"
+  },
+  "icon": "alibabacloud",
+  "free": true,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/qwen3-max",
+   "score": "24 Intelligence Index",
+   "priceIn": "$1.20",
+   "priceOut": "$6.00"
+  },
+  "plans": {
+   "de": "Open-Weight (Apache 2.0), kostenlos selbst hostbar · API via Model Studio",
+   "en": "Open-weight (Apache 2.0), free to self-host · API via Model Studio"
+  }
+ },
+ "gpt-oss": {
+  "name": "gpt-oss",
+  "vendor": "OpenAI",
+  "cat": {
+   "de": "Sprachmodell · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "OpenAIs offene Modelle — ungewöhnlich, weil das Unternehmen sonst nur geschlossene anbietet. Es gibt sie in zwei Größen: 20 Milliarden Parameter für den eigenen Rechner, 120 Milliarden für starke Grafikkarten. Ausgelegt auf schrittweises Denken und Agentenaufgaben.",
+   "en": "OpenAI's open models — unusual, since the company otherwise ships only closed ones. They come in two sizes: 20 billion parameters for your own machine, 120 billion for strong graphics cards. Built for step-by-step reasoning and agent tasks."
+  },
+  "tip": {
+   "de": "Die 20B-Variante ist der bequemste Weg, ein ernstzunehmendes Modell auf dem eigenen Laptop laufen zu lassen.",
+   "en": "The 20B version is the most comfortable way to run a serious model on your own laptop."
+  },
+  "links": {
+   "home": "https://github.com/openai/gpt-oss",
+   "docs": "https://help.openai.com/en/articles/11870455-openai-open-weight-models-gpt-oss",
+   "code": "https://github.com/openai/gpt-oss"
+  },
+  "free": true,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/gpt-oss-120b",
+   "score": "24 Intelligence Index",
+   "priceIn": "$0.15",
+   "priceOut": "$0.60"
+  },
+  "plans": {
+   "de": "Kostenlos (Open-Weight, Apache 2.0), selbst gehostet",
+   "en": "Free (open-weight, Apache 2.0), self-hosted"
+  }
+ },
+ "Mistral Large 3": {
+  "name": "Mistral Large 3",
+  "vendor": "Mistral AI",
+  "cat": {
+   "de": "Sprachmodell · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Das stärkste offene Modell des französischen Anbieters Mistral, unter Apache-2.0-Lizenz und damit auch kommerziell frei nutzbar. Es versteht neben Text auch Bilder.",
+   "en": "The strongest open model from the French vendor Mistral, under the Apache 2.0 licence and therefore free to use commercially as well. Alongside text it also understands images."
+  },
+  "tip": {
+   "de": "Für Projekte mit europäischen Datenschutzanforderungen der naheliegende Kandidat, weil Anbieter und Hosting in der EU sitzen.",
+   "en": "The obvious candidate for projects with European data protection requirements, since vendor and hosting sit in the EU."
+  },
+  "links": {
+   "home": "https://mistral.ai/news/mistral-3/",
+   "docs": "https://docs.mistral.ai",
+   "code": "https://huggingface.co/mistralai"
+  },
+  "icon": "mistralai",
+  "free": true,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/mistral-large-3",
+   "score": "16 Intelligence Index",
+   "priceIn": "$0.50",
+   "priceOut": "$1.50"
+  },
+  "plans": {
+   "de": "Open-Weight (Apache 2.0) · API 0,50 $/1,50 $ pro 1M Token",
+   "en": "Open-weight (Apache 2.0) · API $0.50/$1.50 per 1M tokens"
+  }
+ },
+ "Llama 4": {
+  "name": "Llama 4",
+  "vendor": "Meta",
+  "cat": {
+   "de": "Sprachmodell · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Metas offene Modellfamilie, die Text und Bild von Grund auf gemeinsam verarbeitet. Zwei Varianten: Scout ist auf sehr lange Eingaben ausgelegt, Maverick ist der Allrounder. Technisch ein Mixture-of-Experts — pro Anfrage arbeitet nur ein Teil des Modells, was Rechenzeit spart.",
+   "en": "Meta's open model family, processing text and image together from the ground up. Two variants: Scout is built for very long inputs, Maverick is the all-rounder. Technically a mixture-of-experts — only part of the model works per request, which saves compute."
+  },
+  "tip": {
+   "de": "Die am weitesten verbreitete offene Familie; entsprechend viele Anleitungen und Werkzeuge sind darauf abgestimmt.",
+   "en": "The most widely used open family, so a great many guides and tools are tuned for it."
+  },
+  "links": {
+   "home": "https://www.llama.com",
+   "docs": null,
+   "code": "https://github.com/meta-llama/llama-models"
+  },
+  "icon": "meta",
+  "free": true,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/llama-4-maverick",
+   "score": "14 Intelligence Index",
+   "priceIn": "$0.27",
+   "priceOut": "$0.85"
+  },
+  "plans": {
+   "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet",
+   "en": "Free (open-weight, Llama 4 Community License), self-hosted"
+  }
+ },
+ "Ornith 1.0": {
+  "name": "Ornith 1.0",
+  "vendor": "DeepReinforce",
+  "cat": {
+   "de": "Sprachmodell · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Offene Modelle unter MIT-Lizenz, die sich beim agentischen Programmieren selbst verbessern — sie lernen aus ihren eigenen Durchläufen, statt unverändert zu bleiben.",
+   "en": "Open models under the MIT licence that improve themselves at agentic coding — they learn from their own runs instead of staying fixed."
+  },
+  "tip": {
+   "de": "Ein junger Ansatz. Interessant zum Beobachten; für den Produktivbetrieb würde ich zuerst zu den etablierten Familien greifen.",
+   "en": "A young approach. Worth watching; for production work I would reach for the established families first."
+  },
+  "links": {
+   "home": "https://github.com/deepreinforce-ai/Ornith-1",
+   "docs": null,
+   "code": "https://github.com/deepreinforce-ai/Ornith-1"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
+   "en": "Free (open-weight, MIT), self-hosted"
+  }
+ },
+ "LM Studio": {
+  "name": "LM Studio",
+  "vendor": "LM Studio",
+  "cat": {
+   "de": "Lokale Laufzeit · Baustein 01",
+   "en": "Local runtime · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "Ein Programm mit Fenster und Klickfläche, das lokale Modelle für dich sucht, herunterlädt und startet. Es nimmt dir den gesamten technischen Teil ab: Du wählst ein Modell aus einer Liste und schreibst los, ohne je eine Kommandozeile zu sehen.",
+   "en": "A program with a window and buttons that finds, downloads and starts local models for you. It takes over the whole technical part: pick a model from a list and start typing, without ever seeing a command line."
+  },
+  "tip": {
+   "de": "Der einfachste Einstieg überhaupt, wenn du wissen willst, wie sich ein lokales Modell anfühlt. Für den ersten Versuch ein kleines Modell nehmen.",
+   "en": "The easiest entry point of all if you want to feel what a local model is like. Pick a small model for the first try."
+  },
+  "links": {
+   "home": "https://lmstudio.ai",
+   "docs": "https://lmstudio.ai/docs/app",
+   "code": "https://lmstudio.ai/download"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos (Desktop-App, Closed Source)",
+   "en": "Free (desktop app, closed source)"
+  }
+ },
+ "Ollama": {
+  "name": "Ollama",
+  "vendor": "Ollama",
+  "cat": {
+   "de": "Lokale Laufzeit · Baustein 01",
+   "en": "Local runtime · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Dasselbe Ziel wie LM Studio, aber über die Kommandozeile: Ein Befehl lädt das Modell und startet es. Zusätzlich läuft es als kleiner Server im Hintergrund, sodass eigene Programme und Agenten das lokale Modell genauso ansprechen können wie eines aus der Cloud.",
+   "en": "The same goal as LM Studio, but through the command line: one command downloads a model and starts it. It also runs as a small background server, so your own programs and agents can address the local model exactly like a cloud one."
+  },
+  "tip": {
+   "de": "Der übliche Weg, wenn ein Agent lokal arbeiten soll: einmal starten, danach greift alles darauf zu.",
+   "en": "The usual route when an agent should work locally: start it once, then everything can reach it."
+  },
+  "links": {
+   "home": "https://ollama.com",
+   "docs": null,
+   "code": "https://github.com/ollama/ollama"
+  },
+  "icon": "ollama",
+  "free": true,
+  "plans": {
+   "de": "Kostenlos, Open Source (MIT)",
+   "en": "Free, open source (MIT)"
+  }
+ },
+ "llama.cpp": {
+  "name": "llama.cpp",
+  "vendor": "ggml.org",
+  "cat": {
+   "de": "Lokale Laufzeit · Baustein 01",
+   "en": "Local runtime · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Der Motor, der unter vielen dieser Programme steckt — eine schlanke Umsetzung in C und C++, die Modelle mit minimalem Aufwand ausführt. Sie kommt notfalls ganz ohne Grafikkarte aus und rechnet dann eben langsamer auf dem Hauptprozessor.",
+   "en": "The engine underneath many of these programs — a lean implementation in C and C++ that runs models with minimal setup. If need be it works without a graphics card at all, simply computing more slowly on the main processor."
+  },
+  "tip": {
+   "de": "Du benutzt es wahrscheinlich längst, ohne es zu merken. Direkt anfassen musst du es nur, wenn du an Details drehen willst.",
+   "en": "You are probably already using it without noticing. You only touch it directly when you want to tune details."
+  },
+  "links": {
+   "home": "https://github.com/ggml-org/llama.cpp",
+   "docs": null,
+   "code": "https://github.com/ggml-org/llama.cpp"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos, Open Source (MIT)",
+   "en": "Free, open source (MIT)"
+  }
+ },
+ "vLLM": {
+  "name": "vLLM",
+  "vendor": "vLLM Project",
+  "cat": {
+   "de": "Lokale Laufzeit · Baustein 01",
+   "en": "Local runtime · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Kein Werkzeug für den eigenen Rechner, sondern für den Server: Es bedient viele Anfragen gleichzeitig, ohne dass die Antwortzeiten einbrechen. Möglich macht das PagedAttention — ein Verfahren, das den knappen Grafikspeicher ähnlich klug verwaltet wie ein Betriebssystem den Arbeitsspeicher.",
+   "en": "Not a tool for your own machine but for a server: it serves many requests at once without response times collapsing. PagedAttention makes that possible — a technique that manages scarce graphics memory about as cleverly as an operating system manages RAM."
+  },
+  "tip": {
+   "de": "Relevant ab dem Moment, in dem nicht mehr nur du selbst das Modell benutzt.",
+   "en": "Relevant from the moment you are no longer the only one using the model."
+  },
+  "links": {
+   "home": "https://vllm.ai",
+   "docs": "https://docs.vllm.ai",
+   "code": "https://github.com/vllm-project/vllm"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos, Open Source (Apache 2.0)",
+   "en": "Free, open source (Apache 2.0)"
+  }
+ },
+ "SGLang": {
+  "name": "SGLang",
+  "vendor": "SGLang Project",
+  "cat": {
+   "de": "Lokale Laufzeit · Baustein 01",
+   "en": "Local runtime · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Wie vLLM ein System für den Serverbetrieb vieler gleichzeitiger Anfragen, mit Schwerpunkt auf kurzen Antwortzeiten und hohem Durchsatz. Es bedient auch Modelle, die Bilder verarbeiten.",
+   "en": "Like vLLM, a system for serving many simultaneous requests, focused on short response times and high throughput. It also serves models that process images."
+  },
+  "tip": {
+   "de": "Die Alternative zu vLLM. Wenn du dich entscheiden musst, hilft nur messen — beide sind ausgereift.",
+   "en": "The alternative to vLLM. If you have to choose, only measuring helps — both are mature."
+  },
+  "links": {
+   "home": "https://sglang.ai",
+   "docs": "https://docs.sglang.ai",
+   "code": "https://github.com/sgl-project/sglang"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos, Open Source (Apache 2.0)",
+   "en": "Free, open source (Apache 2.0)"
+  }
+ },
+ "GPT Image 2": {
+  "name": "GPT Image 2",
+  "vendor": "OpenAI",
+  "cat": {
+   "de": "Bild-Modell · Baustein 06",
+   "en": "Image model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "OpenAIs Bildmodell. Es kann etwas, woran die meisten Bildmodelle scheitern: lesbaren Text im Bild — Beschriftungen, Schilder, Etiketten. Du gibst nicht nur Worte vor, sondern auch Bilder als Vorlage. Erreichbar über die OpenAI-Schnittstelle, also nicht selbst zu betreiben.",
+   "en": "OpenAI's image model. It does the thing most image models fail at: legible text inside the picture — captions, signs, labels. You supply not only words but images as a template. Reachable through the OpenAI interface, so not something you run yourself."
+  },
+  "tip": {
+   "de": "Wenn im Bild etwas stehen soll, schreibe den genauen Wortlaut in Anführungszeichen in die Anweisung.",
+   "en": "If words should appear in the image, put the exact wording in quotation marks in your prompt."
+  },
+  "links": {
+   "home": "https://openai.com",
+   "docs": "https://developers.openai.com/api/docs/guides/image-generation",
+   "code": null
+  }
+ },
+ "Midjourney V8.2": {
+  "name": "Midjourney V8.2",
+  "vendor": "Midjourney",
+  "cat": {
+   "de": "Bild-Modell · Baustein 06",
+   "en": "Image model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Das Modell mit der eigenwilligsten Handschrift: Die Bilder wirken gestalteter als bei den anderen, auch wenn du wenig vorgibst. Der Preis dafür ist weniger Gehorsam — es deutet deine Vorgabe eher, als sie wörtlich zu nehmen.",
+   "en": "The model with the strongest handwriting: its images look more designed than the others' even when you give little direction. The price is less obedience — it interprets your prompt rather than taking it literally."
+  },
+  "tip": {
+   "de": "Für einen durchgehenden Look Referenzbilder mitgeben, statt den Stil in Worten zu umschreiben.",
+   "en": "For a consistent look, hand over reference images instead of describing the style in words."
+  },
+  "links": {
+   "home": "https://www.midjourney.com/",
+   "docs": "https://docs.midjourney.com/hc/en-us",
+   "code": null
+  }
+ },
+ "FLUX.2": {
+  "name": "FLUX.2",
+  "vendor": "Black Forest Labs",
+  "cat": {
+   "de": "Bild-Modell · Baustein 06",
+   "en": "Image model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "blurb": {
+   "de": "Ein offenes Bildmodell, das mit den geschlossenen mithält. Offen heisst hier: Du kannst die Gewichte herunterladen und das Modell auf eigener Hardware betreiben — nichts verlässt deinen Rechner, und je Bild fallen keine Gebühren an.",
+   "en": "An open image model that keeps up with the closed ones. Open here means you can download the weights and run it on your own hardware — nothing leaves your machine and there is no per-image fee."
+  },
+  "tip": {
+   "de": "Braucht eine kräftige Grafikkarte. Wer nur gelegentlich ein Bild will, fährt über einen Dienst günstiger als über eigene Hardware.",
+   "en": "Needs a powerful graphics card. If you only want the occasional image, a service is cheaper than your own hardware."
+  },
+  "links": {
+   "home": "https://bfl.ai/models/flux-2",
+   "docs": "https://bfl.ai/models/flux-2",
+   "code": "https://github.com/black-forest-labs/flux2"
+  }
+ },
+ "Imagen 4": {
+  "name": "Imagen 4",
+  "vendor": "Google",
+  "cat": {
+   "de": "Bild-Modell · Baustein 06",
+   "en": "Image model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Googles Bildmodell, auf Fotorealismus und Tempo getrimmt — Ergebnisse kommen fast ohne Wartezeit. Läuft über dieselbe Schnittstelle wie Gemini, was es naheliegend macht, wenn du ohnehin dort arbeitest.",
+   "en": "Google's image model, tuned for photorealism and speed — results arrive with almost no wait. It runs through the same interface as Gemini, which makes it an obvious pick if you already work there."
+  },
+  "tip": {
+   "de": "Die schnelle Wahl, wenn du viele Varianten hintereinander sehen willst, etwa auf der Suche nach einer Bildidee.",
+   "en": "The fast choice when you want to see many variants in a row, for instance while hunting for an idea."
+  },
+  "links": {
+   "home": "https://deepmind.google/models/imagen/",
+   "docs": "https://ai.google.dev/gemini-api/docs/imagen",
+   "code": null
+  },
+  "icon": "google"
+ },
+ "Ideogram": {
+  "name": "Ideogram",
+  "vendor": "Ideogram",
+  "cat": {
+   "de": "Bild-Modell · Baustein 06",
+   "en": "Image model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Auf eine Sache spezialisiert: Schrift im Bild. Wo andere Modelle bei Beschriftungen Buchstabensalat produzieren, kommen hier lesbare Wörter heraus — nützlich für Plakate, Verpackungen, erste Logo-Entwürfe.",
+   "en": "Specialised in one thing: type inside the image. Where other models turn captions into letter soup, this one produces readable words — useful for posters, packaging, first logo sketches."
+  },
+  "tip": {
+   "de": "Erste Wahl, wenn Text im Bild lesbar sein muss. Für reine Bildstimmung ohne Schrift sind andere Modelle stärker.",
+   "en": "First choice when text in the image must be legible. For pure mood without lettering, other models are stronger."
+  },
+  "links": {
+   "home": "https://ideogram.ai/",
+   "docs": "https://developer.ideogram.ai/ideogram-api/api-overview",
+   "code": null
+  }
+ },
+ "Recraft": {
+  "name": "Recraft",
+  "vendor": "Recraft",
+  "cat": {
+   "de": "Bild-Modell · Baustein 06",
+   "en": "Image model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Fällt aus der Reihe, weil es nicht nur Pixelbilder erzeugt, sondern auch Vektorgrafiken — Formen, die sich beliebig vergrössern lassen, ohne unscharf zu werden. Das ist das Format, in dem Logos und Symbole gebaut werden.",
+   "en": "It stands apart because it produces vector graphics as well as pixel images — shapes you can scale up freely without them going soft. That is the format logos and icons are built in."
+  },
+  "tip": {
+   "de": "Der Weg zu Icons und Logos, die sich danach in einem Grafikprogramm weiterbearbeiten lassen.",
+   "en": "The route to icons and logos you can keep editing afterwards in a graphics program."
+  },
+  "links": {
+   "home": "https://www.recraft.ai/",
+   "docs": "https://www.recraft.ai/docs",
+   "code": null
+  }
+ },
+ "Seedream": {
+  "name": "Seedream",
+  "vendor": "ByteDance",
+  "cat": {
+   "de": "Bild-Modell · Baustein 06",
+   "en": "Image model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Erzeugen und Bearbeiten in einem Modell: Du lässt ein Bild machen und änderst danach im selben Zug einzelne Teile, statt neu anzufangen. Das erspart die Runden, in denen sonst mit jedem Versuch auch alles Gelungene wieder kippt.",
+   "en": "Generating and editing in one model: you have an image made, then change individual parts in the same breath instead of starting over. That spares you the rounds where every retry also ruins what already worked."
+  },
+  "tip": {
+   "de": "Gut, wenn ein Bild fast stimmt und nur ein Detail stört.",
+   "en": "Good when an image is nearly right and only one detail bothers you."
+  },
+  "links": {
+   "home": "https://seed.bytedance.com/",
+   "docs": "https://docs.byteplus.com/en/docs/ModelArk/1541523",
+   "code": null
+  }
+ },
+ "Veo 3.1": {
+  "name": "Veo 3.1",
+  "vendor": "Google",
+  "cat": {
+   "de": "Video-Modell · Baustein 06",
+   "en": "Video model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Googles Videomodell. Bemerkenswert ist der Ton: Er entsteht zusammen mit dem Bild, statt später daruntergelegt zu werden — Schritte, Stimmen und Umgebungsgeräusche passen dadurch zur Bewegung. Auflösung bis 4K, mit glaubhafter Physik.",
+   "en": "Google's video model. The sound is what stands out: it is created together with the picture rather than laid underneath afterwards — footsteps, voices and room tone therefore match the movement. Up to 4K, with believable physics."
+  },
+  "tip": {
+   "de": "Bewegte Bilder kosten je Sekunde. Erst kurze Testclips, dann die lange Fassung.",
+   "en": "Moving images cost by the second. Short test clips first, the long version after."
+  },
+  "links": {
+   "home": "https://deepmind.google/models/veo/",
+   "docs": "https://ai.google.dev/gemini-api/docs/video",
+   "code": null
+  },
+  "icon": "google"
+ },
+ "Kling 3.0": {
+  "name": "Kling 3.0",
+  "vendor": "Kuaishou",
+  "cat": {
+   "de": "Video-Modell · Baustein 06",
+   "en": "Video model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Macht aus einem einzelnen Bild eine Bewegung: Du gibst ein Standbild vor und beschreibst, was darin passieren soll. Der Ton entsteht synchron mit. Stark bei längeren Clips, an denen andere Modelle abreissen.",
+   "en": "Turns a single image into movement: you supply a still and describe what should happen in it. Sound is created in sync. Strong on longer clips, where other models break down."
+  },
+  "tip": {
+   "de": "Der übliche Weg: erst ein Bild in einem Bildmodell festzurren, dann hier in Bewegung setzen.",
+   "en": "The usual route: pin down a picture in an image model first, then set it in motion here."
+  },
+  "links": {
+   "home": "https://kling.ai/",
+   "docs": "https://kling.ai/document-api/quickStart/productIntroduction/overview",
+   "code": null
+  }
+ },
+ "Seedance 2.5": {
+  "name": "Seedance 2.5",
+  "vendor": "ByteDance",
+  "cat": {
+   "de": "Video-Modell · Baustein 06",
+   "en": "Video model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Bis zu 30 Sekunden am Stück, mit Ton in mehreren Sprachen. Dreissig Sekunden klingen wenig, sind in diesem Feld aber lang — viele Modelle geben fünf bis zehn.",
+   "en": "Up to 30 seconds in one piece, with audio in several languages. Thirty seconds sounds short but is long for this field — many models give you five to ten."
+  },
+  "tip": {
+   "de": "Für einen Werbeclip reicht das meist. Längeres entsteht, indem man mehrere Clips aneinanderreiht.",
+   "en": "Usually enough for an ad clip. Anything longer is made by stringing several clips together."
+  },
+  "links": {
+   "home": "https://seed.bytedance.com/",
+   "docs": "https://docs.byteplus.com/en/docs/ModelArk/1520757",
+   "code": null
+  }
+ },
+ "Wan 3.0": {
+  "name": "Wan 3.0",
+  "vendor": "Alibaba",
+  "cat": {
+   "de": "Video-Modell · Baustein 06",
+   "en": "Video model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "blurb": {
+   "de": "Alibabas offenes Videomodell: Gewichte frei verfügbar, bis 30 Sekunden, 4K, Ton inklusive. Damit wird Videoerzeugung ohne fremden Dienst machbar — auf eigener Hardware und ohne Abrechnung je Clip.",
+   "en": "Alibaba's open video model: weights freely available, up to 30 seconds, 4K, audio included. That makes video generation possible without anyone else's service — on your own hardware and with no per-clip billing."
+  },
+  "tip": {
+   "de": "Selbst betreiben lohnt sich ab vielen Clips. Für einzelne Versuche ist ein Dienst der kürzere Weg.",
+   "en": "Self-hosting pays off from many clips onward. For single experiments a service is the shorter route."
+  },
+  "links": {
+   "home": "https://github.com/Wan-Video",
+   "docs": "https://help.aliyun.com/en/model-studio/wan3-video-generation-api-reference",
+   "code": "https://github.com/Wan-Video"
+  }
+ },
+ "Runway": {
+  "name": "Runway",
+  "vendor": "Runway",
+  "cat": {
+   "de": "Video-Modell · Baustein 06",
+   "en": "Video model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Weniger ein einzelnes Modell als eine Werkstatt: Erzeugen, Schneiden, Stile übertragen und Bewegung steuern in einer Oberfläche. Für Leute gebaut, die Video als Handwerk betreiben und nicht als Knopfdruck.",
+   "en": "Less a single model than a workshop: generate, cut, transfer styles and steer motion in one interface. Built for people who treat video as a craft rather than a button press."
+  },
+  "tip": {
+   "de": "Der Einstieg, wenn du mehr willst als einen Clip: mehrere Einstellungen, die zusammen einen Film ergeben.",
+   "en": "The entry point when you want more than a clip: several shots that add up to a film."
+  },
+  "links": {
+   "home": "https://runwayml.com/",
+   "docs": "https://docs.dev.runwayml.com/",
+   "code": null
+  }
+ },
+ "Luma": {
+  "name": "Luma",
+  "vendor": "Luma Labs",
+  "cat": {
+   "de": "Video-Modell · Baustein 06",
+   "en": "Video model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Dream Machine ist auf ruhige, weiche Bewegung getrimmt — Kamerafahrten und Schwenks wirken weniger zappelig als bei manchen Konkurrenten. Ein Standbild kann als Ausgangspunkt dienen.",
+   "en": "Dream Machine is tuned for calm, soft movement — dollies and pans come out less jittery than with some competitors. A still can serve as the starting point."
+  },
+  "tip": {
+   "de": "Gut für ruhige Stimmungsbilder; bei schneller Action sind andere Modelle treffsicherer.",
+   "en": "Good for quiet mood pieces; for fast action other models hit the mark more often."
+  },
+  "links": {
+   "home": "https://lumalabs.ai/",
+   "docs": "https://docs.lumalabs.ai/docs/api",
+   "code": null
+  }
+ },
+ "Higgsfield": {
+  "name": "Higgsfield",
+  "vendor": "Higgsfield",
+  "cat": {
+   "de": "Video-Modell · Baustein 06",
+   "en": "Video model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Keine reine Modellschmiede, sondern eine Suite: Bild, Video und Stimme unter einer Oberfläche — mit ausdrücklicher Kontrolle über die Kamera. Fahrt, Schwenk und Zoom lassen sich vorgeben, statt sie zu erhoffen.",
+   "en": "Not a pure model shop but a suite: image, video and voice under one interface — with explicit control over the camera. Dolly, pan and zoom can be specified rather than hoped for."
+  },
+  "tip": {
+   "de": "Wenn dir die Kameraführung bei anderen Modellen zufällig vorkommt, liegt hier der Unterschied.",
+   "en": "If camera work feels accidental to you in other models, this is where the difference lies."
+  },
+  "links": {
+   "home": "https://higgsfield.ai/",
+   "docs": null,
+   "code": null
+  }
+ },
+ "ElevenLabs Eleven v3": {
+  "name": "ElevenLabs Eleven v3",
+  "vendor": "ElevenLabs",
+  "cat": {
+   "de": "Audio-Modell · Baustein 06",
+   "en": "Audio model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Verwandelt Text in gesprochene Sprache, und zwar mit Betonung: Pausen, Nachdruck und Stimmung lassen sich steuern, statt dass alles gleichmässig heruntergelesen wird. Über 70 Sprachen.",
+   "en": "Turns text into spoken language, and with emphasis: pauses, stress and mood can be steered instead of everything being read out evenly. Over 70 languages."
+  },
+  "tip": {
+   "de": "Stimmen lassen sich klonen — fremde nur mit ausdrücklicher Erlaubnis der Person.",
+   "en": "Voices can be cloned — someone else's only with that person's explicit permission."
+  },
+  "links": {
+   "home": "https://elevenlabs.io/",
+   "docs": "https://elevenlabs.io/docs/overview/intro",
+   "code": null
+  },
+  "icon": "elevenlabs"
+ },
+ "Suno v5.5": {
+  "name": "Suno v5.5",
+  "vendor": "Suno",
+  "cat": {
+   "de": "Audio-Modell · Baustein 06",
+   "en": "Audio model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Erzeugt ganze Lieder aus einer Beschreibung: Gesang, Text, Instrumente, Arrangement. Für die Hintergrundmusik eines Videos ist das oft in Minuten erledigt.",
+   "en": "Generates whole songs from a description: vocals, lyrics, instruments, arrangement. Background music for a video is often done in minutes."
+  },
+  "tip": {
+   "de": "Vor einer Veröffentlichung die Nutzungsbedingungen zur kommerziellen Verwendung nachlesen.",
+   "en": "Read the terms on commercial use before you publish anything made with it."
+  },
+  "links": {
+   "home": "https://suno.com/",
+   "docs": null,
+   "code": null
+  },
+  "icon": "suno"
+ },
+ "Stable Audio 3": {
+  "name": "Stable Audio 3",
+  "vendor": "Stability AI",
+  "cat": {
+   "de": "Audio-Modell · Baustein 06",
+   "en": "Audio model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "blurb": {
+   "de": "Offene Modelle für Musik ohne Gesang und für einzelne Geräusche — Schritte, Türen, Wind. Genau das, was ein Video braucht, damit es nicht stumm wirkt.",
+   "en": "Open models for instrumental music and for single sounds — footsteps, doors, wind. Exactly what a video needs so it does not feel mute."
+  },
+  "tip": {
+   "de": "Offen heisst selbst betreibbar. Für Geräusche, die man immer wieder braucht, der günstigere Weg.",
+   "en": "Open means self-hostable. For sounds you need again and again, that is the cheaper route."
+  },
+  "links": {
+   "home": "https://stability.ai/stable-audio",
+   "docs": "https://github.com/Stability-AI/stable-audio-3",
+   "code": "https://github.com/Stability-AI/stable-audio-3"
+  }
+ },
+ "Whisper": {
+  "name": "Whisper",
+  "vendor": "OpenAI",
+  "cat": {
+   "de": "Audio-Modell · Baustein 06",
+   "en": "Audio model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "blurb": {
+   "de": "Der umgekehrte Weg: aus Sprache wird Text. Läuft offen und lokal, ohne dass eine Aufnahme das Gerät verlässt — der entscheidende Punkt bei Interviews, Besprechungen und allem Vertraulichen.",
+   "en": "The reverse route: speech becomes text. It runs open and locally, so a recording never leaves the device — the decisive point for interviews, meetings and anything confidential."
+  },
+  "tip": {
+   "de": "Der Standardweg, um Videos und Besprechungen für einen Agenten überhaupt lesbar zu machen.",
+   "en": "The standard way to make videos and meetings readable for an agent in the first place."
+  },
+  "links": {
+   "home": "https://openai.com/index/whisper/",
+   "docs": "https://github.com/openai/whisper",
+   "code": "https://github.com/openai/whisper"
+  }
+ },
+ "Kokoro": {
+  "name": "Kokoro",
+  "vendor": "hexgrad",
+  "cat": {
+   "de": "Audio-Modell · Baustein 06",
+   "en": "Audio model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "blurb": {
+   "de": "Ein Sprachausgabemodell, das mit 82 Millionen Parametern winzig ist — es läuft auf einem gewöhnlichen Laptop, ohne Grafikkarte und ohne Internet. Die Qualität ist dafür erstaunlich.",
+   "en": "A voice model that is tiny at 82 million parameters — it runs on an ordinary laptop, without a graphics card and without internet. The quality for that size is remarkable."
+  },
+  "tip": {
+   "de": "Die Wahl, wenn Sprachausgabe offline funktionieren muss.",
+   "en": "The pick when speech output has to work offline."
+  },
+  "links": {
+   "home": "https://huggingface.co/hexgrad/Kokoro-82M",
+   "docs": "https://github.com/hexgrad/kokoro",
+   "code": "https://github.com/hexgrad/kokoro"
+  }
+ },
+ "Voxtral": {
+  "name": "Voxtral",
+  "vendor": "Mistral AI",
+  "cat": {
+   "de": "Audio-Modell · Baustein 06",
+   "en": "Audio model · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "blurb": {
+   "de": "Versteht Audio direkt, statt es erst in Text zu verwandeln: Du kannst einer Aufnahme Fragen stellen — wer sagt was, worum ging es. Transkribieren und Übersetzen kann es ebenfalls.",
+   "en": "Understands audio directly instead of converting it to text first: you can ask a recording questions — who says what, what it was about. It transcribes and translates as well."
+  },
+  "tip": {
+   "de": "Nützlich, wenn du eine lange Aufnahme nicht lesen, sondern befragen willst.",
+   "en": "Useful when you would rather question a long recording than read it."
+  },
+  "links": {
+   "home": "https://mistral.ai/news/voxtral/",
+   "docs": "https://huggingface.co/docs/transformers/en/model_doc/voxtral",
+   "code": null
+  },
+  "icon": "mistralai"
+ },
+ "GPT-5.6": {
+  "name": "GPT-5.6",
+  "vendor": "OpenAI",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "OpenAIs aktuelles Spitzenmodell und der bekannteste Allrounder — dasselbe Modell, das hinter ChatGPT steckt. Es ist auffällig sparsam: Es braucht weniger Text, um zum selben Ergebnis zu kommen, und das spart bei langen Agentenläufen unmittelbar Geld. Seine Stärken liegen bei Programmierung, wissenschaftlichen Fragen und Sicherheitsthemen.",
+   "en": "OpenAI's current flagship and the best-known all-rounder — the same model behind ChatGPT. It is notably frugal: it needs less text to reach the same result, which directly saves money across long agent runs. Its strengths are programming, scientific questions and security topics."
+  },
+  "tip": {
+   "de": "Wenn du nicht weißt, womit du anfangen sollst, ist das eine sichere Wahl. Nutzbar über ChatGPT oder über die Schnittstelle für eigene Programme.",
+   "en": "If you don't know where to start, this is a safe choice. Use it through ChatGPT or through the interface for your own programs."
+  },
+  "links": {
+   "home": "https://openai.com/index/gpt-5-6/",
+   "docs": "https://platform.openai.com/docs/models",
+   "code": null
+  },
+  "free": false,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/gpt-5-6-sol",
+   "score": "61 Intelligence Index",
+   "priceIn": "$5.00",
+   "priceOut": "$30.00"
+  },
+  "plans": {
+   "de": "API Terra 2 $/12 $ · Sol 5 $/30 $ · Luna 0,20 $/1,20 $ pro 1M Tok.",
+   "en": "API Terra $2/$12 · Sol $5/$30 · Luna $0.20/$1.20 per 1M tok."
+  }
+ },
+ "Claude Opus 5 / Sonnet 5": {
+  "name": "Claude Opus 5 / Sonnet 5",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "Anthropics Modellfamilie, die bei Agentenarbeit besonders stark ist: also dann, wenn das Modell nicht nur antwortet, sondern über viele Schritte Werkzeuge benutzt und ein Ziel verfolgt. Zwei Größen auf derselben Grundlage — Opus für die harten Fälle, Sonnet für alles, was schnell gehen soll.",
+   "en": "Anthropic's model family, particularly strong at agent work: when the model doesn't just answer but uses tools across many steps toward a goal. Two sizes on the same foundation — Opus for the hard cases, Sonnet for anything that should be quick."
+  },
+  "tip": {
+   "de": "Nimm Sonnet als Standard und schalte auf Opus, wenn eine Aufgabe hakt. Bei einfachen Dingen ist der Unterschied kaum spürbar, bei kniffligen deutlich.",
+   "en": "Use Sonnet as your default and switch to Opus when a task stalls. On easy work the difference is barely noticeable, on tricky work it is clear."
+  },
+  "links": {
+   "home": "https://www.anthropic.com/news/claude-opus-5",
+   "docs": "https://docs.claude.com/en/docs/about-claude/models/overview",
+   "code": null
+  },
+  "icon": "anthropic",
+  "free": false,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/claude-opus-5",
+   "score": "63 Intelligence Index",
+   "priceIn": "$5.00",
+   "priceOut": "$25.00"
+  },
+  "plans": {
+   "de": "API Opus 5 5 $/25 $ · Sonnet 5 2 $/10 $ pro 1M Token",
+   "en": "API Opus 5 $5/$25 · Sonnet 5 $2/$10 per 1M tokens"
+  }
+ },
+ "Gemini 3.1 Pro": {
+  "name": "Gemini 3.1 Pro",
+  "vendor": "Google",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "Googles Spitzenmodell, das Text, Bild, Ton und Video gleichermaßen versteht. Sein auffälligstes Merkmal ist der riesige Arbeitsspeicher für Text: eine Million Token, grob gerechnet mehrere tausend Seiten. Damit passt eine ganze Codebasis oder ein Aktenordner auf einmal hinein, ohne dass du sie zerlegen musst.",
+   "en": "Google's flagship, understanding text, image, audio and video alike. Its most striking feature is the sheer working memory for text: one million tokens, roughly several thousand pages. A whole codebase or a full case file fits in at once, with no need to cut it up."
+  },
+  "tip": {
+   "de": "Die erste Wahl, wenn dein Problem „zu viel Material\" heißt und nicht „zu schwierig\".",
+   "en": "The first choice when your problem is \"too much material\" rather than \"too difficult\"."
+  },
+  "links": {
+   "home": "https://deepmind.google/models/gemini/pro/",
+   "docs": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview",
+   "code": null
+  },
+  "icon": "googlegemini",
+  "free": false,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
+   "score": "48 Intelligence Index",
+   "priceIn": "$2.00",
+   "priceOut": "$12.00"
+  },
+  "plans": {
+   "de": "API 2 $/12 $ pro 1M Token · Google AI Pro 19,99 $/Mo.",
+   "en": "API $2/$12 per 1M tokens · Google AI Pro $19.99/mo"
+  }
+ },
+ "Grok 4.5": {
+  "name": "Grok 4.5",
+  "vendor": "xAI",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "xAIs Spitzenmodell mit Schwerpunkt auf Programmierung und mehrstufigen Agentenaufgaben. Es ist direkt in X eingebunden, was es für alles interessant macht, was mit dem Geschehen auf dieser Plattform zu tun hat.",
+   "en": "xAI's flagship, focused on programming and multi-step agent tasks. It is wired directly into X, which makes it interesting for anything tied to what happens on that platform."
+  },
+  "tip": {
+   "de": "Am ehesten relevant, wenn du ohnehin auf X arbeitest oder von dort Daten brauchst.",
+   "en": "Most relevant if you already work on X or need data from there."
+  },
+  "links": {
+   "home": "https://x.ai/news/grok-4-5",
+   "docs": "https://docs.x.ai/developers/models/grok-4.5",
+   "code": null
+  },
+  "icon": "x",
+  "free": false,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/grok-4-5",
+   "score": "56 Intelligence Index",
+   "priceIn": "$2.00",
+   "priceOut": "$6.00"
+  },
+  "plans": {
+   "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · Agent 0,05 $/Min.",
+   "en": "API $2/$6 per 1M tokens (cache $0.50) · agent $0.05/min"
+  }
+ },
+ "Qwen3.8-Max": {
+  "name": "Qwen3.8-Max",
+  "vendor": "Alibaba",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "Alibabas kommerzielles Flaggschiff — die geschlossene Spitze über der offenen Qwen-Familie. Ausgelegt auf lange, zusammenhängende Programmierarbeit und komplexe Agentenläufe, also auf Aufgaben, die über viele Runden gehen statt über eine Antwort.",
+   "en": "Alibaba's commercial flagship — the closed peak above the open Qwen family. Built for long, coherent programming work and complex agent runs: tasks that span many rounds rather than one answer."
+  },
+  "tip": {
+   "de": "Erreichbar über die Alibaba Cloud. Vor allem dann interessant, wenn du ohnehin im asiatischen Raum hostest.",
+   "en": "Available through Alibaba Cloud. Mainly of interest if you already host in Asia."
+  },
+  "links": {
+   "home": "https://qwen.ai/blog?id=qwen3.8",
+   "docs": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max",
+   "code": "https://huggingface.co/Qwen"
+  },
+  "icon": "alibabacloud",
+  "free": true,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/qwen3-8-max",
+   "score": "58 Intelligence Index",
+   "priceIn": "$2.00",
+   "priceOut": "$6.00"
+  },
+  "plans": {
+   "de": "Kostenlose Stufe · Open-Weight · API Max-Tarif ca. 2,5/10 ¥/1M Tok.",
+   "en": "Free tier · open weights · API Max tier ~¥2.5/¥10 per 1M tok."
+  }
+ },
+ "Kimi K3": {
+  "name": "Kimi K3",
+  "vendor": "Moonshot AI",
+  "cat": {
+   "de": "Open-Weight · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Ein offenes Modell in Spitzengröße: 2,8 Billionen Parameter, dazu von Grund auf für Bild und Text gemeinsam gebaut. Offene Gewichte heißt, du darfst es selbst betreiben — bei dieser Größe brauchst du dafür allerdings einen Hoster und keinen Laptop.",
+   "en": "An open model at frontier scale: 2.8 trillion parameters, built from the ground up for image and text together. Open weights means you may run it yourself — though at this size that means a hosting provider, not a laptop."
+  },
+  "tip": {
+   "de": "Das Modell für alle, die Offenheit wollen, ohne bei der Leistung nachzugeben. Es bei einem Anbieter zu mieten ist hier der normale Weg.",
+   "en": "The model for anyone who wants openness without giving up capability. Renting it from a provider is the normal route here."
+  },
+  "links": {
+   "home": "https://www.moonshot.ai/",
+   "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart",
+   "code": "https://huggingface.co/moonshotai/Kimi-K3"
+  },
+  "icon": "kimi",
+  "free": true,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/kimi-k3",
+   "score": "60 Intelligence Index",
+   "priceIn": "$3.00",
+   "priceOut": "$15.00"
+  },
+  "plans": {
+   "de": "API 3 $/15 $ pro 1M Token (Open-Weight, selbst hostbar)",
+   "en": "API $3/$15 per 1M tokens (open-weight, self-hostable)"
+  }
+ },
+ "DeepSeek V4": {
+  "name": "DeepSeek V4",
+  "vendor": "DeepSeek",
+  "cat": {
+   "de": "Open-Weight · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Offene Modellfamilie unter MIT-Lizenz — der freizügigsten der gängigen Lizenzen, du darfst sie praktisch uneingeschränkt einsetzen, auch kommerziell. Technisch ein Mixture-of-Experts: Von den vielen Parametern ist pro Anfrage nur ein Teil aktiv, dadurch ist das Modell groß und trotzdem sparsam. Dazu eine Million Token Kontext und starke Programmierfähigkeiten.",
+   "en": "An open model family under the MIT licence — the most permissive of the common ones, usable almost without restriction, commercially too. Technically a mixture-of-experts: only part of the many parameters is active per request, which makes it large and frugal at once. Plus a one-million-token context and strong coding ability."
+  },
+  "tip": {
+   "de": "Wenn Lizenz und Kosten die Entscheidung treiben, ist das der erste Kandidat.",
+   "en": "When licence and cost drive the decision, this is the first candidate."
+  },
+  "links": {
+   "home": "https://deepseek.ai/deepseek-v4",
+   "docs": "https://api-docs.deepseek.com/updates",
+   "code": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+  },
+  "icon": "deepseek",
+  "free": false,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/deepseek-v4-flash",
+   "score": "52 Intelligence Index",
+   "priceIn": "$0.14",
+   "priceOut": "$0.28"
+  },
+  "plans": {
+   "de": "API V4-Pro 0,435 $/0,87 $ · Flash 0,14 $/0,28 $ pro 1M Tok.",
+   "en": "API V4-Pro $0.435/$0.87 · Flash $0.14/$0.28 per 1M tok."
+  }
+ },
+ "GLM-5.2": {
+  "name": "GLM-5.2",
+  "vendor": "Z.AI",
+  "cat": {
+   "de": "Open-Weight · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Offenes Modell mit 753 Milliarden Parametern und einer Million Token Kontext, gebaut für Ingenieursarbeit. Ebenfalls MIT-Lizenz, also frei verwendbar.",
+   "en": "An open model with 753 billion parameters and a one-million-token context, built for engineering work. MIT licensed as well, so free to use."
+  },
+  "tip": {
+   "de": "Läuft mit genug Grafikspeicher auch auf eigener Hardware — anders als die ganz großen offenen Modelle noch im Bereich des Machbaren.",
+   "en": "With enough graphics memory it runs on your own hardware — unlike the very largest open models, this one is still within reach."
+  },
+  "links": {
+   "home": "https://z.ai/blog/glm-5.2",
+   "docs": "https://docs.z.ai/guides/llm/glm-5.2",
+   "code": "https://huggingface.co/zai-org/GLM-5.2"
+  },
+  "free": true,
+  "aa": {
+   "aaUrl": "https://artificialanalysis.ai/models/glm-5-2",
+   "score": "53 Intelligence Index",
+   "priceIn": "$1.40",
+   "priceOut": "$4.40"
+  },
+  "plans": {
+   "de": "API 1,40 $/4,40 $ pro 1M Token · zeitlich begrenzt kostenlos",
+   "en": "API $1.40/$4.40 per 1M tokens · limited-time free tier"
+  }
+ },
+ "Anthropic Agent Skills": {
+  "name": "Anthropic Agent Skills",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "blurb": {
+   "de": "Anthropics eigene Skill-Sammlung: fertige Pakete, die einem Agenten beibringen, saubere Word-Dokumente, Präsentationen, Tabellen und PDFs zu erzeugen. Genau diese Skills stecken hinter Claudes Dokumentfunktionen. Dazu kommen offene Beispiel-Skills und eine Vorlage für eigene.",
+   "en": "Anthropic's own skill collection: ready-made packages that teach an agent to produce clean Word documents, presentations, spreadsheets and PDFs. These are the very skills behind Claude's document features. Alongside them sit open example skills and a template for your own."
+  },
+  "tip": {
+   "de": "Die vier Dokument-Skills sind einsehbar, aber nicht quelloffen — benutzen ja, weiterverwerten nein. Die übrigen Skills im Verzeichnis stehen unter Apache 2.0.",
+   "en": "The four document skills are readable but not open source — use them, don't repackage them. The remaining skills in the directory are Apache 2.0."
+  },
+  "links": {
+   "home": "https://github.com/anthropics/skills",
+   "docs": "https://docs.anthropic.com/en/docs/claude-code/skills",
+   "code": "https://github.com/anthropics/skills"
+  },
+  "icon": "anthropic"
+ },
+ "agentskills.io": {
+  "name": "Agent Skills (Open Standard)",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Standard · Baustein 03",
+   "en": "Standard · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "blurb": {
+   "de": "Ein Skill ist im Kern eine Textdatei mit einer Anleitung. Dieser Standard legt fest, wie sie aufgebaut sein muss, damit jeder Agent sie versteht — ein Kopf mit Namen und Beschreibung, darunter die Anweisungen. Das ist der Grund, warum derselbe Skill in Claude Code, Cursor oder Codex funktioniert, statt an ein Werkzeug gebunden zu sein.",
+   "en": "A skill is at heart a text file with instructions. This standard fixes how it must be built so any agent understands it — a header with name and description, the instructions below. That is why the same skill works in Claude Code, Cursor or Codex instead of being tied to one tool."
+  },
+  "tip": {
+   "de": "Wenn du wissen willst, wie wenig hinter einem Skill steckt: die Spezifikation ist in zehn Minuten gelesen.",
+   "en": "If you want to see how little there is to a skill: the specification reads in ten minutes."
+  },
+  "links": {
+   "home": "https://agentskills.io",
+   "docs": "https://agentskills.io/specification",
+   "code": "https://github.com/agentskills/agentskills"
+  }
+ },
+ "skills.sh": {
+  "name": "skills.sh",
+  "vendor": "Vercel",
+  "cat": {
+   "de": "Marktplatz · Baustein 03",
+   "en": "Marketplace · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "blurb": {
+   "de": "Ein Marktplatz, auf dem du fertige Skills durchsuchst und mit einem Befehl installierst, statt sie selbst zu schreiben. Betrieben von Vercel Labs, die Inhalte kommen aus der Gemeinschaft.",
+   "en": "A marketplace where you browse ready-made skills and install them with one command instead of writing your own. Run by Vercel Labs, the content comes from the community."
+  },
+  "tip": {
+   "de": "Wie bei jedem Marktplatz gilt: Ein Skill ist eine Anleitung, die dein Agent anschließend befolgt. Vor dem Installieren hineinschauen.",
+   "en": "As with any marketplace: a skill is an instruction your agent will then follow. Read it before installing."
+  },
+  "links": {
+   "home": "https://skills.sh",
+   "docs": null,
+   "code": "https://github.com/vercel-labs/skills"
+  }
+ },
+ "Model Context Protocol": {
+  "name": "Model Context Protocol",
+  "vendor": "Linux Foundation",
+  "cat": {
+   "de": "Offener Standard · Baustein 04",
+   "en": "Open standard · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Ein offener Standard dafür, wie ein Agent an Daten und Werkzeuge kommt. Ohne ihn bräuchte jedes Programm für jede Datenquelle eine eigene Anbindung; mit ihm spricht jeder Agent dieselbe Sprache mit jedem Server. Ein MCP-Server ist dabei ein kleines Zusatzprogramm, das genau eine Sache anbietet — deine Dateien, ein Repository, einen Chat.",
+   "en": "An open standard for how an agent reaches data and tools. Without it every program would need its own connection to every data source; with it any agent speaks the same language to any server. An MCP server is a small add-on program that offers exactly one thing — your files, a repository, a chat."
+  },
+  "tip": {
+   "de": "Ein Server bekommt echten Zugriff auf das, was er anbietet. Installiere nur, was du kennst und brauchst, und sieh nach, wer ihn veröffentlicht.",
+   "en": "A server gets real access to whatever it offers. Install only what you know and need, and check who published it."
+  },
+  "links": {
+   "home": "https://modelcontextprotocol.io",
+   "docs": "https://modelcontextprotocol.io/docs",
+   "code": "https://github.com/modelcontextprotocol/modelcontextprotocol"
+  }
+ },
+ "Playwright-mcp": {
+  "name": "Playwright MCP",
+  "vendor": "Microsoft",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Gibt dem Agenten einen echten Browser in die Hand: Seiten öffnen, Formulare ausfüllen, Knöpfe drücken, Ergebnisse zurücklesen. Anders als beim blossen Abrufen einer Adresse sieht er die Seite so, wie sie nach dem Laden aussieht — auch das, was erst durch Klicken erscheint.",
+   "en": "Puts a real browser in the agent's hands: open pages, fill forms, press buttons, read results back. Unlike simply fetching an address, it sees the page as it looks after loading — including whatever only appears once you click."
+  },
+  "tip": {
+   "de": "Der richtige Weg, wenn eine Website keine Schnittstelle anbietet. Langsamer als eine echte Schnittstelle und empfindlich gegen Layoutänderungen — für wiederkehrende Abläufe lohnt die Suche nach einer API.",
+   "en": "The right route when a site offers no interface. Slower than a real API and sensitive to layout changes — for recurring work it pays to look for an interface."
+  },
+  "links": {
+   "home": "https://github.com/microsoft/playwright-mcp",
+   "docs": "https://playwright.dev/docs/getting-started-mcp",
+   "code": "https://github.com/microsoft/playwright-mcp"
+  }
+ },
+ "github-mcp": {
+  "name": "GitHub MCP Server",
+  "vendor": "GitHub",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Verbindet den Agenten mit GitHub: Code durchsuchen, Pull Requests lesen und kommentieren, Issues anlegen und schliessen. Weil GitHub den Server selbst betreibt, installierst du nichts — du meldest dich an und erlaubst den Zugriff.",
+   "en": "Connects the agent to GitHub: search code, read and comment on pull requests, open and close issues. Because GitHub runs the server itself, you install nothing — you sign in and grant access."
+  },
+  "tip": {
+   "de": "Für den Anfang nur Leserechte vergeben. Der Agent kann dann Code und Verlauf durchsuchen, aber nichts verändern.",
+   "en": "Start with read rights only. The agent can then search code and history but change nothing."
+  },
+  "links": {
+   "home": "https://github.com/github/github-mcp-server",
+   "docs": "https://github.blog/ai-and-ml/generative-ai/a-practical-guide-on-how-to-use-the-github-mcp-server/",
+   "code": "https://github.com/github/github-mcp-server"
+  },
+  "icon": "github"
+ },
+ "filesystem-mcp": {
+  "name": "Filesystem MCP Server",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Öffnet dem Agenten einen genau festgelegten Teil deiner Festplatte: Dateien lesen, schreiben, verschieben, durchsuchen. Der Zuschnitt ist der Punkt — du gibst beim Start an, welche Ordner er sehen darf, und alles andere bleibt ihm verborgen.",
+   "en": "Opens a precisely defined slice of your disk to the agent: read, write, move and search files. The slicing is the point — at startup you say which folders it may see, and everything else stays invisible to it."
+  },
+  "tip": {
+   "de": "Nie den ganzen Benutzerordner freigeben. Ein Projektordner reicht fast immer, und ein Fehlgriff bleibt dann auf diesen Ordner beschränkt.",
+   "en": "Never expose your whole home folder. A project folder is almost always enough, and a mistake then stays inside that folder."
+  },
+  "links": {
+   "home": "https://github.com/modelcontextprotocol/servers",
+   "docs": null,
+   "code": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
+  }
+ },
+ "slack-mcp": {
+  "name": "Slack MCP Server",
+  "vendor": "Slack",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": false,
+  "blurb": {
+   "de": "Hängt den Agenten an euren Slack: Nachrichten und Threads durchsuchen, Kanäle mitlesen, selbst schreiben. Nützlich, wenn das Wissen einer Firma in Gesprächen steckt statt in Dokumenten — der Agent findet dann die Antwort, die vor einem halben Jahr nebenbei gefallen ist.",
+   "en": "Hooks the agent into your Slack: search messages and threads, follow channels, post itself. Useful when a company's knowledge lives in conversations rather than documents — the agent then finds the answer someone dropped in passing six months ago."
+  },
+  "tip": {
+   "de": "Der Agent sieht, was dein Konto sieht — also womöglich sehr viel. Einzelne Kanäle gezielt freigeben statt pauschal alles.",
+   "en": "The agent sees what your account sees, which may be a great deal. Grant individual channels rather than blanket access."
+  },
+  "links": {
+   "home": "https://slack.com/help/articles/48855576908307-Guide-to-Model-Context-Protocol-in-Slack",
+   "docs": "https://docs.slack.dev/ai/slack-mcp-server",
+   "code": null
+  }
+ },
+ "postgres-mcp": {
+  "name": "Postgres MCP Server",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Lässt den Agenten eine Postgres-Datenbank lesen: Er sieht das Schema, also welche Tabellen und Spalten es überhaupt gibt, und kann Abfragen stellen — aber nichts ändern. So lassen sich Fragen an echte Daten stellen, ohne dass ein falscher Befehl Schaden anrichtet. Wichtig zu wissen: Dieser Referenz-Server ist archiviert und wird nicht mehr weiterentwickelt — für neue Projekte lohnt der Blick auf einen aktiv gepflegten Datenbank-Server.",
+   "en": "Lets the agent read a Postgres database: it sees the schema — which tables and columns exist at all — and can run queries, but change nothing. That makes it possible to ask questions of real data without a wrong command doing damage. Worth knowing: this reference server is archived and no longer developed — for new projects look at an actively maintained database server."
+  },
+  "tip": {
+   "de": "Schreibgeschützt heisst: gut zum Auswerten, ungeeignet zum Pflegen von Daten.",
+   "en": "Read-only means good for analysis, unsuitable for maintaining data."
+  },
+  "links": {
+   "home": "https://github.com/modelcontextprotocol/servers-archived",
+   "docs": null,
+   "code": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres"
+  },
+  "icon": "postgresql"
+ },
+ "supabase-mcp": {
+  "name": "Supabase MCP Server",
+  "vendor": "Supabase",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Supabase ist ein fertiges Rückgrat für Anwendungen — Datenbank, Anmeldung und Dateiablage in einem. Dieser Server gibt dem Agenten Zugriff darauf: Tabellen anlegen und abfragen, die Projekteinstellungen lesen. Praktisch, wenn du eine Anwendung baust und der Agent die Datenbank gleich mitversorgen soll.",
+   "en": "Supabase is a ready-made backbone for applications — database, sign-in and file storage in one. This server gives the agent access to it: create and query tables, read the project settings. Handy when you are building an application and want the agent to look after the database too."
+  },
+  "tip": {
+   "de": "Auf einem Testprojekt anfangen, nicht auf dem, an dem echte Nutzer:innen hängen.",
+   "en": "Start on a test project, not the one real users depend on."
+  },
+  "links": {
+   "home": "https://supabase.com/features/mcp-server",
+   "docs": "https://supabase.com/docs/guides/ai-tools/mcp",
+   "code": "https://github.com/supabase/mcp"
+  },
+  "icon": "supabase"
+ },
+ "gdrive-mcp": {
+  "name": "Google Drive MCP Server",
+  "vendor": "Google",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Öffnet dem Agenten deine Ablage bei Google: Dokumente und Tabellen suchen, öffnen, auswerten. Der Server läuft bei Google selbst, du installierst nichts — die Anmeldung läuft über dein Google-Konto.",
+   "en": "Opens your Google storage to the agent: search, open and analyse documents and spreadsheets. The server runs at Google itself, so you install nothing — sign-in goes through your Google account."
+  },
+  "tip": {
+   "de": "Bei der Freigabe genau hinsehen: Der Agent bekommt Zugriff auf das, was dein Konto sieht. Ein eigenes Konto nur für diesen Zweck hält den Ausschnitt klein.",
+   "en": "Look closely when granting access: the agent gets whatever your account can see. A separate account just for this keeps the slice small."
+  },
+  "links": {
+   "home": "https://github.com/google/mcp",
+   "docs": "https://developers.google.com/workspace/drive/api/guides/configure-mcp-server",
+   "code": "https://github.com/google/mcp"
+  },
+  "icon": "google"
+ },
+ "Figma": {
+  "name": "Figma",
+  "vendor": "Figma",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Das Standardwerkzeug, in dem Oberflächen entworfen werden, bevor sie jemand baut — im Browser, mit mehreren Leuten gleichzeitig. Für Agenten zählen zwei Zugänge: Figma Make baut aus einer Beschreibung eine lauffähige Oberfläche, und der Dev-Mode-Server lässt einen Agenten den fertigen Entwurf auslesen und in Code übersetzen.",
+   "en": "The standard tool where interfaces are designed before anyone builds them — in the browser, with several people at once. Two doors matter for agents: Figma Make turns a description into a working interface, and the dev-mode server lets an agent read a finished design and translate it into code."
+  },
+  "tip": {
+   "de": "Wenn in deinem Umfeld Entwürfe entstehen, liegen sie vermutlich hier. Der MCP-Server ist dann der kürzeste Weg vom Entwurf zum Code.",
+   "en": "If designs get made around you, they probably live here. The MCP server is then the shortest path from design to code."
+  },
+  "links": {
+   "home": "https://www.figma.com/",
+   "docs": "https://developers.figma.com/docs/figma-mcp-server/",
+   "code": null
+  },
+  "icon": "figma"
+ },
+ "pencil.dev": {
+  "name": "pencil.dev",
+  "vendor": "Pencil",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Ein Entwurfswerkzeug, das von Anfang an für die Zusammenarbeit mit KI gebaut wurde. Die Entwürfe liegen als .pen-Dateien vor, die ein Agent über MCP nicht nur ansehen, sondern verändern kann — er zeichnet also mit, statt nur zu beschreiben.",
+   "en": "A design tool built from the start for working with AI. Designs live as .pen files that an agent can not only read but change through MCP — so it draws alongside you rather than only describing."
+  },
+  "tip": {
+   "de": "Interessant, wenn der Agent selbst gestalten soll und nicht bloss einen fertigen Entwurf abliest.",
+   "en": "Interesting when the agent should design itself, not merely read off a finished layout."
+  },
+  "links": {
+   "home": "https://pen.dev/",
+   "docs": "https://docs.pencil.dev/",
+   "code": null
+  }
+ },
+ "Penpot": {
+  "name": "Penpot",
+  "vendor": "Penpot",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": true,
+  "blurb": {
+   "de": "Die offene Antwort auf Figma: quelloffen, selbst zu betreiben, und intern auf denselben Web-Standards gebaut, die auch der Browser versteht — SVG, CSS, HTML. Dadurch ist der Abstand zwischen Entwurf und fertiger Seite kleiner.",
+   "en": "The open answer to Figma: open source, self-hostable, and built internally on the same web standards the browser understands — SVG, CSS, HTML. That shortens the distance between a design and a finished page."
+  },
+  "tip": {
+   "de": "Die Wahl, wenn Entwürfe das Haus nicht verlassen dürfen oder kein Abo laufen soll.",
+   "en": "The pick when designs must not leave the building, or when no subscription should be running."
+  },
+  "links": {
+   "home": "https://penpot.app/",
+   "docs": "https://help.penpot.app/",
+   "code": "https://github.com/penpot/penpot"
+  },
+  "icon": "penpot"
+ },
+ "Antigravity 2.0": {
+  "name": "Google Antigravity",
+  "vendor": "Google",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Googles Entwicklungsumgebung für den Fall, dass nicht ein Agent arbeitet, sondern mehrere gleichzeitig — jeder an seiner Aufgabe, nebeneinander in einem Fenster. Ein Programm für den Schreibtisch, kein Dienst im Browser.",
+   "en": "Google's development environment for the case where not one agent works but several at once — each on its own task, side by side in one window. A program for the desktop, not a service in the browser."
+  },
+  "tip": {
+   "de": "Erst sinnvoll, wenn eine Aufgabe sich wirklich in unabhängige Teile zerlegen lässt. Sonst warten mehrere Agenten nur aufeinander.",
+   "en": "Only worthwhile once a task genuinely splits into independent parts. Otherwise several agents just wait for each other."
+  },
+  "links": {
+   "home": "https://antigravity.google/",
+   "docs": "https://antigravity.google/docs/getting-started",
+   "code": "https://antigravity.google/download"
+  }
+ },
+ "Google Stitch": {
+  "name": "Stitch",
+  "vendor": "Google",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Nimmt eine Beschreibung oder eine abfotografierte Skizze und macht daraus eine Bildschirmoberfläche samt Code — der schnellste Weg von einer Idee auf Papier zu etwas, das man anschauen kann. Ein Versuchsprojekt aus Googles Labor, Umfang und Angebot können sich also ändern.",
+   "en": "Takes a description or a photographed sketch and makes a screen out of it, code included — the fastest route from an idea on paper to something you can look at. An experiment from Google's labs, so scope and availability may change."
+  },
+  "tip": {
+   "de": "Gut für den ersten Wurf. Was bleiben soll, zieht danach in ein festes Werkzeug um.",
+   "en": "Good for a first pass. Anything meant to last moves into a settled tool afterwards."
+  },
+  "links": {
+   "home": "https://stitch.withgoogle.com/",
+   "docs": null,
+   "code": null
+  },
+  "icon": "google"
+ },
+ "v0": {
+  "name": "v0",
+  "vendor": "Vercel",
+  "cat": {
+   "de": "App-Generator · Baustein 07",
+   "en": "App generator · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Erzeugt aus einer Beschreibung fertige Oberflächen in React und Next.js — samt Code, den du herunterladen und weiterverwenden kannst. Von Vercel, wo sich das Ergebnis auch gleich veröffentlichen lässt.",
+   "en": "Turns a description into finished interfaces in React and Next.js — including code you can download and keep using. From Vercel, where the result can also be published straight away."
+  },
+  "tip": {
+   "de": "Setzt auf einen bestimmten Technikstapel. Passt gut, wenn dein Projekt ohnehin React nutzt, sonst weniger.",
+   "en": "It commits to a particular stack. A good fit if your project already uses React, less so otherwise."
+  },
+  "links": {
+   "home": "https://v0.dev/",
+   "docs": "https://v0.dev/docs",
+   "code": null
+  },
+  "icon": "v0"
+ },
+ "Lovable": {
+  "name": "Lovable",
+  "vendor": "Lovable",
+  "cat": {
+   "de": "App-Generator · Baustein 07",
+   "en": "App generator · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Baut aus einer Beschreibung eine ganze Webanwendung — Oberfläche, Datenbank, Anmeldung — und nicht nur einen einzelnen Bildschirm. Der Code bleibt zugänglich, du sitzt also nicht fest.",
+   "en": "Turns a description into a whole web application — interface, database, sign-in — not just a single screen. The code stays accessible, so you are not locked in."
+  },
+  "tip": {
+   "de": "Der kürzeste Weg zu etwas Benutzbarem ohne Programmierkenntnisse. Was danach kommt — Pflege, Sicherheit, Kosten — bleibt Arbeit.",
+   "en": "The shortest route to something usable without programming. What comes after — upkeep, security, cost — is still work."
+  },
+  "links": {
+   "home": "https://lovable.dev/",
+   "docs": null,
+   "code": null
+  }
+ },
+ "Bolt.new": {
+  "name": "Bolt",
+  "vendor": "StackBlitz",
+  "cat": {
+   "de": "App-Generator · Baustein 07",
+   "en": "App generator · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Baut komplette Anwendungen und führt sie gleich aus: Der ganze Bauprozess läuft in deinem Browserfenster, ohne dass etwas installiert wird. Es gibt eine quelloffene Fassung namens bolt.diy zum Selbstbetreiben.",
+   "en": "Builds complete applications and runs them right there: the entire build happens inside your browser window, with nothing installed. An open-source edition called bolt.diy exists for self-hosting."
+  },
+  "tip": {
+   "de": "Ideal zum Ausprobieren, weil nichts auf deinem Rechner landet.",
+   "en": "Ideal for trying things out, because nothing lands on your machine."
+  },
+  "links": {
+   "home": "https://bolt.new/",
+   "docs": "https://support.bolt.new/home",
+   "code": "https://github.com/stackblitz-labs/bolt.diy"
+  }
+ },
+ "Onlook": {
+  "name": "Onlook",
+  "vendor": "Onlook",
+  "cat": {
+   "de": "Editor · Baustein 07",
+   "en": "Editor · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": true,
+  "blurb": {
+   "de": "Der Umkehrschluss zum Entwurfswerkzeug: Du schiebst Dinge visuell zurecht, gearbeitet wird aber an echtem React-Code — deine Änderung landet direkt im Quelltext. Damit entfällt der Übersetzungsschritt vom Entwurf zur Umsetzung.",
+   "en": "The inverse of a design tool: you nudge things visually, but the work happens on real React code — your change lands directly in the source. That removes the translation step from design to implementation."
+  },
+  "tip": {
+   "de": "Die Brücke für Gestaltende, die am laufenden Projekt arbeiten wollen, ohne Code zu schreiben.",
+   "en": "The bridge for designers who want to work on the live project without writing code."
+  },
+  "links": {
+   "home": "https://onlook.com/",
+   "docs": null,
+   "code": "https://github.com/onlook-dev/onlook"
+  }
+ },
+ "Claude Design": {
+  "name": "Claude Design",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Aus einem Gespräch entstehen Entwürfe, Klickmodelle, Präsentationen und Pitch-Decks — du beschreibst, was du brauchst, statt es zu zeichnen. Der Unterschied zu einem Bildmodell: Hier kommt etwas heraus, das sich bedienen und weiterbearbeiten lässt.",
+   "en": "Designs, click-through prototypes, presentations and pitch decks come out of a conversation — you describe what you need instead of drawing it. The difference to an image model: what comes out can be used and edited further."
+  },
+  "tip": {
+   "de": "Der schnelle Weg zu einer vorzeigbaren Fassung, wenn du kein Entwurfswerkzeug beherrschst.",
+   "en": "The fast route to something presentable when you don't know a design tool."
+  },
+  "links": {
+   "home": "https://claude.com/product/design",
+   "docs": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
+   "code": null
+  },
+  "icon": "anthropic"
+ },
+ "Uizard": {
+  "name": "Uizard",
+  "vendor": "Uizard",
+  "cat": {
+   "de": "App-Generator · Baustein 07",
+   "en": "App generator · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Macht aus dem, was du schon hast, einen bearbeitbaren Entwurf: aus einem Text, einem Bildschirmfoto einer fremden Anwendung oder einer Handskizze. Praktisch, um eine vorhandene Oberfläche als Ausgangspunkt zu übernehmen.",
+   "en": "Turns what you already have into an editable design: a piece of text, a screenshot of somebody else's app, or a hand sketch. Handy for taking an existing interface as your starting point."
+  },
+  "tip": {
+   "de": "Der Weg vom Bildschirmfoto zu einem Entwurf, den man tatsächlich verändern kann.",
+   "en": "The route from a screenshot to a design you can actually change."
+  },
+  "links": {
+   "home": "https://uizard.io/",
+   "docs": null,
+   "code": null
+  }
+ },
+ "Relume": {
+  "name": "Relume",
+  "vendor": "Relume",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Setzt einen Schritt vor dem Entwurf an: Es baut zuerst die Struktur einer Website — welche Seiten es gibt und was auf ihnen steht — und daraus grobe Seitengerüste. Die lassen sich nach Figma übergeben und dort ausgestalten.",
+   "en": "It starts one step before the design: first the structure of a site — which pages exist and what goes on them — and rough page skeletons from that. Those can be handed to Figma and detailed there."
+  },
+  "tip": {
+   "de": "Nützlich gegen das leere Blatt: erst die Gliederung klären, dann gestalten.",
+   "en": "Useful against the blank page: settle the outline first, then design."
+  },
+  "links": {
+   "home": "https://www.relume.ai/",
+   "docs": "https://www.relume.ai/resources/docs/building-a-sitemap-with-ai",
+   "code": null
+  }
+ },
+ "tool-suche": {
+  "name": {
+   "de": "Websuche",
+   "en": "Web search"
+  },
+  "vendor": {
+   "de": "vom Harness oder per MCP",
+   "en": "from the harness or via MCP"
+  },
+  "cat": {
+   "de": "Werkzeug-Art · Baustein 05",
+   "en": "Tool type · Block 05"
+  },
+  "accent": "var(--pink)",
+  "blurb": {
+   "de": "Der Agent stellt eine Suchanfrage und bekommt Treffer samt Textauszügen zurück. Ohne dieses Werkzeug kennt das Modell nur, was bis zum Ende seines Trainings bekannt war — mit ihm kann es nachschlagen, was gestern passiert ist.",
+   "en": "The agent runs a search and gets results with text excerpts back. Without this tool the model knows only what was known when its training ended — with it, it can look up what happened yesterday."
+  },
+  "tip": {
+   "de": "Das erste Werkzeug, das fast jede Aufgabe braucht. Achte darauf, ob die Antwort eine Fundstelle nennt: Ohne Quelle ist auch ein gesuchtes Ergebnis nur eine Behauptung.",
+   "en": "The first tool almost every task needs. Check whether the answer names a source: without one, even a searched result is just an assertion."
+  }
+ },
+ "tool-code": {
+  "name": {
+   "de": "Code-Ausführung",
+   "en": "Code execution"
+  },
+  "vendor": {
+   "de": "vom Harness oder per MCP",
+   "en": "from the harness or via MCP"
+  },
+  "cat": {
+   "de": "Werkzeug-Art · Baustein 05",
+   "en": "Tool type · Block 05"
+  },
+  "accent": "var(--pink)",
+  "blurb": {
+   "de": "Der Agent schreibt ein kleines Programm und lässt es laufen, statt im Kopf zu rechnen. Genau daran hängt die Verlässlichkeit von Zahlen: Ein Sprachmodell schätzt beim Rechnen, ein ausgeführtes Skript rechnet wirklich.",
+   "en": "The agent writes a small program and runs it instead of doing sums in its head. Reliable numbers hang on exactly this: a language model estimates when it calculates, an executed script actually computes."
+  },
+  "tip": {
+   "de": "Unverzichtbar für alles mit Zahlen, Tabellen und Umrechnungen. Frag nach, wo der Code läuft — auf deinem Rechner oder in einer abgeschotteten Kapsel.",
+   "en": "Indispensable for anything with numbers, tables and conversions. Ask where the code runs — on your machine or inside a sealed sandbox."
+  }
+ },
+ "tool-dateien": {
+  "name": {
+   "de": "Dateisystem",
+   "en": "File system"
+  },
+  "vendor": {
+   "de": "vom Harness oder per MCP",
+   "en": "from the harness or via MCP"
+  },
+  "cat": {
+   "de": "Werkzeug-Art · Baustein 05",
+   "en": "Tool type · Block 05"
+  },
+  "accent": "var(--pink)",
+  "blurb": {
+   "de": "Lesen, schreiben, umbenennen, durchsuchen — das Werkzeug, mit dem aus einem Gespräch ein Ergebnis auf der Festplatte wird. Der Zuschnitt entscheidet alles: Ein Agent, der nur einen Projektordner sieht, kann auch nur dort etwas anrichten.",
+   "en": "Read, write, rename, search — the tool that turns a conversation into a result on disk. The slicing decides everything: an agent that sees only one project folder can only make a mess inside it."
+  },
+  "tip": {
+   "de": "Immer den engsten Ordner freigeben, mit dem die Aufgabe noch geht. Und vorher eine Sicherung: Ein Agent löscht schneller, als du zurücknehmen kannst.",
+   "en": "Always expose the narrowest folder the task still works in. And make a backup first: an agent deletes faster than you can undo."
+  }
+ },
+ "tool-browser": {
+  "name": {
+   "de": "Browser",
+   "en": "Browser"
+  },
+  "vendor": {
+   "de": "vom Harness oder per MCP",
+   "en": "from the harness or via MCP"
+  },
+  "cat": {
+   "de": "Werkzeug-Art · Baustein 05",
+   "en": "Tool type · Block 05"
+  },
+  "accent": "var(--pink)",
+  "blurb": {
+   "de": "Der Agent bedient eine Website wie ein Mensch: klicken, tippen, scrollen, ablesen. Nötig überall dort, wo es keine Schnittstelle gibt — bei Anmeldungen, Portalen, Formularen. Langsamer und störanfälliger als eine API, aber oft der einzige Weg.",
+   "en": "The agent operates a website like a person: click, type, scroll, read. Needed wherever there is no interface — logins, portals, forms. Slower and more brittle than an API, but often the only route."
+  },
+  "tip": {
+   "de": "Im Browser handelt der Agent unter deinem Namen und mit deinen Rechten. Bei allem, was abschickt, bezahlt oder verschickt, den letzten Klick selbst machen.",
+   "en": "In the browser the agent acts under your name and with your rights. For anything that submits, pays or sends, make the final click yourself."
+  }
+ },
+ "tool-datenbank": {
+  "name": {
+   "de": "Datenbanken",
+   "en": "Databases"
+  },
+  "vendor": {
+   "de": "vom Harness oder per MCP",
+   "en": "from the harness or via MCP"
+  },
+  "cat": {
+   "de": "Werkzeug-Art · Baustein 05",
+   "en": "Tool type · Block 05"
+  },
+  "accent": "var(--pink)",
+  "blurb": {
+   "de": "Abfragen an eine Datenbank stellen, statt Zahlen aus Berichten abzuschreiben. Der Agent sieht zuerst das Schema — welche Tabellen und Spalten es überhaupt gibt — und baut daraus seine Abfrage.",
+   "en": "Put questions to a database instead of copying numbers out of reports. The agent first sees the schema — which tables and columns exist at all — and builds its query from that."
+  },
+  "tip": {
+   "de": "Für Auswertungen einen schreibgeschützten Zugang einrichten. Dann richtet auch eine falsch verstandene Frage keinen Schaden an.",
+   "en": "Set up read-only access for analysis. Then even a misunderstood question does no damage."
+  }
+ },
+ "tool-kommunikation": {
+  "name": {
+   "de": "Kommunikation",
+   "en": "Communication"
+  },
+  "vendor": {
+   "de": "vom Harness oder per MCP",
+   "en": "from the harness or via MCP"
+  },
+  "cat": {
+   "de": "Werkzeug-Art · Baustein 05",
+   "en": "Tool type · Block 05"
+  },
+  "accent": "var(--pink)",
+  "blurb": {
+   "de": "E-Mail, Kalender, Chat. Damit liest der Agent nicht nur mit, was besprochen wurde, sondern schreibt selbst und setzt Termine. Der Punkt, an dem seine Arbeit dein Haus verlässt und andere Menschen erreicht.",
+   "en": "Email, calendar, chat. With this the agent not only follows what was discussed but writes itself and sets appointments. The point where its work leaves your house and reaches other people."
+  },
+  "tip": {
+   "de": "Das Werkzeug mit den grössten Folgen bei Fehlern. Erst nur Lesen erlauben — Senden später, und mit einer Rückfrage vor jedem Versand.",
+   "en": "The tool with the biggest consequences when it goes wrong. Allow reading only at first — sending later, and with a confirmation before every send."
+  }
+ },
+ "tool-medien": {
+  "name": {
+   "de": "Medien-Generierung",
+   "en": "Media generation"
+  },
+  "vendor": {
+   "de": "vom Harness oder per MCP",
+   "en": "from the harness or via MCP"
+  },
+  "cat": {
+   "de": "Werkzeug-Art · Baustein 05",
+   "en": "Tool type · Block 05"
+  },
+  "accent": "var(--pink)",
+  "blurb": {
+   "de": "Bild, Video und Ton auf Zuruf. Der Agent beschreibt, was er braucht, und ein Medien-Modell liefert es — er muss die Modelle aus Baustein 06 also nicht selbst bedienen, sondern ruft sie als Werkzeug auf.",
+   "en": "Image, video and sound on request. The agent describes what it needs and a media model delivers — so it never operates the models from block 06 itself, it calls them as a tool."
+  },
+  "tip": {
+   "de": "Erzeugte Medien kosten je Stück. Bei Video kann eine unbeaufsichtigte Schleife schnell teuer werden — setz eine Obergrenze.",
+   "en": "Generated media costs per piece. With video an unattended loop gets expensive fast — set an upper limit."
+  }
+ },
+ "iMovie": {
+  "name": {
+   "de": "iMovie",
+   "en": "iMovie"
+  },
+  "vendor": "Apple",
+  "cat": {
+   "de": "Schnittprogramm · Baustein 07",
+   "en": "Editing program · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Der Schnittplatz, der auf jedem Mac und iPhone schon liegt. Clips aneinanderreihen, Musik darunter, Titel drauf — mehr nicht, und genau das macht ihn zum richtigen Anfang. Wer später mehr braucht, kann ein iMovie-Projekt in Final Cut weiterführen.",
+   "en": "The editing bench already sitting on every Mac and iPhone. Line up clips, put music underneath, add titles — no more, and that is exactly what makes it the right start. If you need more later, an iMovie project can be carried on in Final Cut."
+  },
+  "tip": {
+   "de": "Der schnellste Weg, aus erzeugten Clips einen zusammenhängenden Film zu machen. Für Feinheiten wie Farbkorrektur reicht er nicht.",
+   "en": "The fastest way to turn generated clips into a coherent film. Not enough for finer work like colour grading."
+  },
+  "links": {
+   "home": "https://www.apple.com/imovie/"
+  }
+ },
+ "Final Cut Pro": {
+  "name": {
+   "de": "Final Cut Pro",
+   "en": "Final Cut Pro"
+  },
+  "vendor": "Apple",
+  "cat": {
+   "de": "Schnittprogramm · Baustein 07",
+   "en": "Editing program · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Läuft nur auf dem Mac und wird einmal gekauft statt monatlich gemietet — über die Jahre der günstigere Weg.",
+   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. Mac only, and bought once rather than rented monthly — over the years the cheaper route."
+  },
+  "tip": {
+   "de": "Sinnvoll, sobald ein Projekt mehr als ein paar Clips hat. Vor dem Kauf die kostenlose Testphase nutzen.",
+   "en": "Worth it as soon as a project has more than a handful of clips. Use the free trial before buying."
+  },
+  "links": {
+   "home": "https://www.apple.com/final-cut-pro/"
+  }
+ },
+ "Premiere Pro": {
+  "name": {
+   "de": "Premiere Pro",
+   "en": "Premiere Pro"
+  },
+  "vendor": "Adobe",
+  "cat": {
+   "de": "Schnittprogramm · Baustein 07",
+   "en": "Editing program · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Adobes Schnittprogramm, verbreitet in Agenturen und Redaktionen. Der eigentliche Vorteil ist die Nachbarschaft: After Effects für Bewegtgrafik und Photoshop liegen daneben und tauschen Dateien ohne Umweg.",
+   "en": "Adobe's editing program, common in agencies and newsrooms. Its real advantage is the neighbourhood: After Effects for motion graphics and Photoshop sit next door and exchange files without detours."
+  },
+  "tip": {
+   "de": "Läuft auf Mac und Windows. Das Abo läuft weiter, auch wenn das Projekt längst fertig ist — daran denken.",
+   "en": "Runs on Mac and Windows. The subscription keeps running long after the project is done — worth remembering."
+  },
+  "links": {
+   "home": "https://www.adobe.com/products/premiere.html"
+  }
+ },
+ "DaVinci Resolve": {
+  "name": {
+   "de": "DaVinci Resolve",
+   "en": "DaVinci Resolve"
+  },
+  "vendor": "Blackmagic Design",
+  "cat": {
+   "de": "Schnittprogramm · Baustein 07",
+   "en": "Editing program · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Kommt aus der Farbkorrektur fürs Kino und ist inzwischen ein kompletter Schnittplatz — mit einer kostenlosen Fassung, die für fast alles reicht. Als einziges Programm hier lässt es sich per Skript steuern, ein Agent kann also Schnittlisten und Abläufe erzeugen.",
+   "en": "It comes from cinema colour grading and is now a complete editing suite — with a free edition that covers almost everything. Alone among these, it can be driven by scripts, so an agent can generate edit lists and routines."
+  },
+  "tip": {
+   "de": "Die stärkste Gratisfassung im Feld. Verlangt eine ordentliche Grafikkarte und etwas Einarbeitung.",
+   "en": "The strongest free edition in the field. Wants a decent graphics card and some learning time."
+  },
+  "links": {
+   "home": "https://www.blackmagicdesign.com/products/davinciresolve"
+  }
+ },
+ "Avid Media Composer": {
+  "name": {
+   "de": "Avid Media Composer",
+   "en": "Avid Media Composer"
+  },
+  "vendor": "Avid",
+  "cat": {
+   "de": "Schnittprogramm · Baustein 07",
+   "en": "Editing program · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Der Standard in Film und Fernsehen, gebaut für lange Projekte mit vielen Beteiligten und riesigen Materialmengen. Für einen Produktclip ist das deutlich zu viel Maschine.",
+   "en": "The standard in film and television, built for long projects with many people and enormous amounts of footage. For a product clip this is far too much machine."
+  },
+  "tip": {
+   "de": "Relevant, wenn du in eine bestehende Produktion hineinlieferst. Sonst führt jedes andere Programm hier schneller zum Ziel.",
+   "en": "Relevant when you are delivering into an existing production. Otherwise every other program here gets you there faster."
+  },
+  "links": {
+   "home": "https://www.avid.com/media-composer"
+  }
+ },
+ "CapCut": {
+  "name": {
+   "de": "CapCut",
+   "en": "CapCut"
+  },
+  "vendor": "ByteDance",
+  "cat": {
+   "de": "Schnittprogramm · Baustein 07",
+   "en": "Editing program · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Auf kurze Formate für soziale Netze zugeschnitten: Hochformat, automatische Untertitel, Vorlagen. Läuft auf dem Handy und am Rechner. Was hier in Minuten fertig wird, dauert in einem klassischen Schnittprogramm eine Stunde.",
+   "en": "Cut for short social formats: vertical framing, automatic captions, templates. Runs on the phone and on the desktop. What is finished here in minutes takes an hour in a classic editing program."
+  },
+  "tip": {
+   "de": "Die naheliegende Wahl für Produktclips und Kurzvideos. Vor kommerzieller Nutzung die Bedingungen zu Vorlagen und Musik prüfen.",
+   "en": "The obvious pick for product clips and short videos. Check the terms on templates and music before commercial use."
+  },
+  "links": {
+   "home": "https://www.capcut.com"
+  }
+ },
+ "Shotcut": {
+  "name": {
+   "de": "Shotcut",
+   "en": "Shotcut"
+  },
+  "vendor": "Meltytech",
+  "cat": {
+   "de": "Schnittprogramm · Baustein 07",
+   "en": "Editing program · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Quelloffener Schnittplatz für Mac, Windows und Linux. Kein Konto, kein Abo, keine Wasserzeichen — und mit Filtern und Mehrspur-Schnitt deutlich mehr als ein Spielzeug.",
+   "en": "An open-source editing bench for Mac, Windows and Linux. No account, no subscription, no watermarks — and with filters and multitrack editing, considerably more than a toy."
+  },
+  "tip": {
+   "de": "Die Wahl, wenn nichts das Haus verlassen und nichts kosten soll. Die Oberfläche wirkt sperriger als bei den Kaufprogrammen.",
+   "en": "The pick when nothing should leave the building and nothing should cost money. The interface feels clunkier than the paid programs."
+  },
+  "links": {
+   "home": "https://shotcut.org"
+  }
+ },
+ "OpenShot": {
+  "name": {
+   "de": "OpenShot",
+   "en": "OpenShot"
+  },
+  "vendor": "OpenShot Studios",
+  "cat": {
+   "de": "Schnittprogramm · Baustein 07",
+   "en": "Editing program · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Quelloffen und bewusst einfach gehalten: Clips ziehen, Übergänge setzen, Titel schreiben. Weniger Funktionen als Shotcut, dafür in einer halben Stunde verstanden.",
+   "en": "Open source and deliberately kept simple: drag clips, set transitions, write titles. Fewer features than Shotcut, but understood within half an hour."
+  },
+  "tip": {
+   "de": "Gut für den ersten Zusammenschnitt. Bei langen Projekten stösst es schneller an Grenzen.",
+   "en": "Good for a first assembly. On long projects it hits its limits sooner."
+  },
+  "links": {
+   "home": "https://www.openshot.org"
+  }
+ },
+ "DeepSeek Harness": {
+  "name": "DeepSeek Harness",
+  "vendor": "DeepSeek",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "DeepSeeks eigener Agent, seit August 2026 als Entwicklervorschau. Ein Befehl startet ihn samt Weboberfläche im Browser — du musst also nichts selbst bauen. Das Besondere ist der Aufbau: Modelle, Werkzeuge, Skills, Sitzungen, Sandkästen und selbst die Oberfläche sind austauschbare Erweiterungen. Der Baukasten steckt hier also im fertigen Programm.",
+   "en": "DeepSeek's own agent, in developer preview since August 2026. One command starts it together with a web interface in the browser — so you build nothing yourself. The architecture is what stands out: models, tools, skills, sessions, sandboxes and even the interface are swappable plugins. Here the toolkit sits inside the finished program."
+  },
+  "tip": {
+   "de": "Ausdrücklich Vorschau: Die Entwickler kündigen Änderungen an, die Bestehendes brechen. Zum Ausprobieren gut, für Arbeit, auf die du dich verlässt, noch zu früh. Start mit npx @deepseek-ai/dsh web.",
+   "en": "Explicitly a preview: the developers announce compatibility-breaking changes. Fine for trying out, too early for work you depend on. Start it with npx @deepseek-ai/dsh web."
+  },
+  "plans": {
+   "de": "Quelloffen unter MIT. Kosten entstehen durch die Modelle dahinter.",
+   "en": "Open source under MIT. Cost comes from the models behind it."
+  },
+  "links": {
+   "home": "https://deepseek.com/harness/en/",
+   "code": "https://github.com/deepseek-ai/deepseek-harness"
+  }
+ },
+ "Hostinger": {
+  "name": "Hostinger",
+  "vendor": "Hostinger",
+  "cat": {
+   "de": "Webhosting · Baustein 07",
+   "en": "Web hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Günstiges Paket-Hosting mit Domain, Postfach und Verwaltungsoberfläche — der klassische Weg, eine Seite ins Netz zu bringen. Es gibt auch Server zur alleinigen Nutzung; unter diesem Namen taucht Hostinger deshalb auch in der Übersicht zum Modell-Hosting auf.",
+   "en": "Cheap package hosting with a domain, mailbox and control panel — the classic way to put a site online. Dedicated servers are available too, which is why Hostinger also appears in the model-hosting overview."
+  },
+  "tip": {
+   "de": "Sinnvoll, wenn du Domain, E-Mail und Speicherplatz aus einer Hand willst. Für eine Seite, die ein Agent baut, ist ein Git-Anbieter meist bequemer.",
+   "en": "Sensible when you want domain, email and storage from one place. For a site an agent builds, a Git-based host is usually more convenient."
+  },
+  "plans": {
+   "de": "Monatlich, meist mit langer Mindestlaufzeit für den Werbepreis.",
+   "en": "Monthly, usually with a long minimum term for the advertised price."
+  },
+  "links": {
+   "home": "https://www.hostinger.com"
+  }
+ },
+ "Strato": {
+  "name": "Strato",
+  "vendor": "Strato",
+  "cat": {
+   "de": "Webhosting · Baustein 07",
+   "en": "Web hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Deutscher Anbieter mit Rechenzentren in Deutschland. Paket-Hosting mit Domain und Postfach, deutschsprachiger Support, Abrechnung in Euro. Für Vereine und kleine Firmen oft die naheliegende Wahl.",
+   "en": "A German provider with data centres in Germany. Package hosting with domain and mailbox, German-language support, billing in euros. Often the obvious choice for clubs and small companies."
+  },
+  "tip": {
+   "de": "Die Wahl, wenn Datenverarbeitung in Deutschland eine Vorgabe ist. Modernes Ausliefern aus einem Git-Stand ist hier weniger vorgesehen.",
+   "en": "The pick when processing data in Germany is a requirement. Modern Git-based deployment is less at home here."
+  },
+  "plans": {
+   "de": "Monatliche Pakete, Domain meist enthalten.",
+   "en": "Monthly packages, domain usually included."
+  },
+  "links": {
+   "home": "https://www.strato.de"
+  }
+ },
+ "IONOS": {
+  "name": "IONOS",
+  "vendor": "IONOS",
+  "cat": {
+   "de": "Webhosting · Baustein 07",
+   "en": "Web hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Ebenfalls deutscher Anbieter, mit der breitesten Spanne: vom einfachen Paket über Server zur alleinigen Nutzung bis zu Cloud-Diensten. Damit wächst er mit, wenn aus der Seite eine Anwendung wird.",
+   "en": "Another German provider, with the widest range: from a simple package through dedicated servers to cloud services. It grows with you when the site turns into an application."
+  },
+  "tip": {
+   "de": "Gut, wenn du klein anfängst und nicht ausschliessen willst, später mehr zu brauchen.",
+   "en": "Good when you start small and do not want to rule out needing more later."
+  },
+  "plans": {
+   "de": "Monatlich, gestaffelt vom Paket bis zum eigenen Server.",
+   "en": "Monthly, tiered from package to your own server."
+  },
+  "links": {
+   "home": "https://www.ionos.de"
+  }
+ },
+ "Netlify": {
+  "name": "Netlify",
+  "vendor": "Netlify",
+  "cat": {
+   "de": "Webhosting · Baustein 07",
+   "en": "Web hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Arbeitet aus deinem Codestand heraus: Du schiebst die Änderung, Netlify baut die Seite und stellt sie online — ohne dass du Dateien hochlädst. Jede Änderung bekommt eine eigene Vorschauadresse, du kannst also nachsehen, bevor es echt wird.",
+   "en": "It works from your code: you push a change, Netlify builds the site and puts it online — no uploading files. Every change gets its own preview address, so you can look before it goes live."
+  },
+  "tip": {
+   "de": "Der bequemste Weg für eine Seite, die ein Agent baut: Er schreibt Code, der Rest passiert von selbst. Die Gratisstufe reicht für kleine Seiten.",
+   "en": "The most comfortable route for a site an agent builds: it writes code, the rest happens by itself. The free tier is enough for small sites."
+  },
+  "plans": {
+   "de": "Gratisstufe für kleine Seiten, danach nach Verbrauch.",
+   "en": "Free tier for small sites, then usage-based."
+  },
+  "links": {
+   "home": "https://www.netlify.com"
+  }
+ },
+ "Vercel": {
+  "name": "Vercel",
+  "vendor": "Vercel",
+  "cat": {
+   "de": "Webhosting · Baustein 07",
+   "en": "Web hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Dieselbe Idee wie Netlify, besonders auf Next.js zugeschnitten — das Framework stammt aus demselben Haus. Wenn dein Agent mit v0 gebaut hat, liegt die Veröffentlichung hier ohnehin einen Klick entfernt.",
+   "en": "The same idea as Netlify, tuned for Next.js — the framework comes from the same house. If your agent built with v0, publishing here is one click away anyway."
+  },
+  "tip": {
+   "de": "Erste Wahl, wenn das Projekt React oder Next.js nutzt. Bei anderenTechniken weniger zwingend.",
+   "en": "First choice when the project uses React or Next.js. Less compelling with other stacks."
+  },
+  "plans": {
+   "de": "Gratisstufe für private Projekte, danach je Mitglied und Verbrauch.",
+   "en": "Free tier for personal projects, then per seat and usage."
+  },
+  "links": {
+   "home": "https://vercel.com"
+  }
+ },
+ "Cloudflare Pages": {
+  "name": "Cloudflare Pages",
+  "vendor": "Cloudflare",
+  "cat": {
+   "de": "Webhosting · Baustein 07",
+   "en": "Web hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Veröffentlicht deine Seite im weltweiten Netz von Cloudflare, sie wird also überall aus der Nähe ausgeliefert. Ebenfalls aus Git heraus, mit einer ungewöhnlich grosszügigen Gratisstufe.",
+   "en": "Publishes your site across Cloudflare's worldwide network, so it is served from nearby everywhere. Also Git-based, with an unusually generous free tier."
+  },
+  "tip": {
+   "de": "Interessant, wenn Besucher aus vielen Ländern kommen. Für Hintergrunddienste braucht es die zugehörigen Worker.",
+   "en": "Interesting when visitors come from many countries. Background services need the accompanying Workers."
+  },
+  "plans": {
+   "de": "Grosszügige Gratisstufe, danach nach Verbrauch.",
+   "en": "Generous free tier, then usage-based."
+  },
+  "links": {
+   "home": "https://pages.cloudflare.com"
+  }
+ },
+ "Render": {
+  "name": "Render",
+  "vendor": "Render",
+  "cat": {
+   "de": "Webhosting · Baustein 07",
+   "en": "Web hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Geht über reine Seiten hinaus: Hier laufen auch Hintergrunddienste, geplante Aufgaben und Datenbanken. Damit ist es einer der wenigen Orte, an dem eine ganze Web-Applikation samt ihrer Daten leben kann, ohne dass du einen Server verwaltest.",
+   "en": "Goes beyond plain sites: background services, scheduled jobs and databases run here too. That makes it one of the few places a whole web application can live with its data without you administering a server."
+  },
+  "tip": {
+   "de": "Die Wahl, wenn deine Anwendung eine Datenbank braucht. Kostenlose Dienste schlafen bei Untätigkeit ein und brauchen beim ersten Aufruf einen Moment.",
+   "en": "The pick when your application needs a database. Free services go to sleep when idle and take a moment on the first request."
+  },
+  "plans": {
+   "de": "Gratisstufe mit Einschränkungen, danach je Dienst.",
+   "en": "Free tier with limits, then per service."
+  },
+  "links": {
+   "home": "https://render.com"
+  }
+ }
+}

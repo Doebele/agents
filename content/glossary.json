@@ -1,0 +1,120 @@
+[
+ {
+  "t": {
+   "de": "KI-Agent",
+   "en": "AI agent"
+  },
+  "d": {
+   "de": "Ein Sprachmodell in einer Schleife, das über Werkzeuge in der Welt handelt.",
+   "en": "A language model in a loop that acts in the world through tools."
+  }
+ },
+ {
+  "t": "LLM",
+  "d": {
+   "de": "Large Language Model – ein Sprachmodell, das Text versteht und erzeugt.",
+   "en": "Large Language Model — a model that understands and generates text."
+  }
+ },
+ {
+  "t": "Token",
+  "d": {
+   "de": "Ein Text-Bruchstück (Wort oder Silbe); Abrechnungs- und Längeneinheit für Modelle.",
+   "en": "A piece of text (word or syllable); the billing and length unit for models."
+  }
+ },
+ {
+  "t": "Harness",
+  "d": {
+   "de": "Die Steuerungs-Schleife, die ein Modell wiederholt aufruft und Werkzeuge ausführt.",
+   "en": "The control loop that calls a model repeatedly and runs tools."
+  }
+ },
+ {
+  "t": "MCP",
+  "d": {
+   "de": "Model Context Protocol – offener Standard, damit Agenten Werkzeuge einheitlich erreichen.",
+   "en": "Model Context Protocol — an open standard so agents reach tools uniformly."
+  }
+ },
+ {
+  "t": "Skill",
+  "d": {
+   "de": "Ein Paket aus SKILL.md plus Fachwissen, das der Agent nur bei Bedarf lädt.",
+   "en": "A package of SKILL.md plus know-how that the agent loads only when needed."
+  }
+ },
+ {
+  "t": {
+   "de": "Inferenz",
+   "en": "Inference"
+  },
+  "d": {
+   "de": "Das Ausführen eines fertigen Modells, also der Vorgang, bei dem es antwortet. Wer Inferenz mietet, zahlt fürs Antworten, nicht fürs Training.",
+   "en": "Running a finished model, the act of it answering. Renting inference means paying for answers, not for training."
+  }
+ },
+ {
+  "t": "Parameter",
+  "d": {
+   "de": "Die gelernten Stellschrauben im Inneren eines Modells. Mehr Parameter heißt meist mehr Können und mehr Speicherbedarf.",
+   "en": "The learned settings inside a model. More parameters usually means more capability and more memory needed."
+  }
+ },
+ {
+  "t": "MoE",
+  "d": {
+   "de": "Mixture-of-Experts – nur ein Teil der Parameter pro Aufruf aktiv: groß, aber sparsam.",
+   "en": "Mixture-of-Experts — only part of the parameters active per call: large but frugal."
+  }
+ },
+ {
+  "t": "PagedAttention",
+  "d": {
+   "de": "Technik (vLLM), die den GPU-Speicher für viele Anfragen effizient verwaltet.",
+   "en": "A technique (vLLM) that manages GPU memory efficiently for many requests."
+  }
+ },
+ {
+  "t": "CUDA",
+  "d": {
+   "de": "NVIDIAs Schnittstelle, damit Modelle auf der GPU laufen.",
+   "en": "NVIDIA's interface for running models on the GPU."
+  }
+ },
+ {
+  "t": "ROCm",
+  "d": {
+   "de": "AMDs Gegenstück zu CUDA (Radeon-GPUs); weniger optimiert.",
+   "en": "AMD's counterpart to CUDA (Radeon GPUs); less optimized."
+  }
+ },
+ {
+  "t": "Q4",
+  "d": {
+   "de": "4-Bit-Quantisierung – Gewichte auf ein Viertel komprimiert; kleiner, minimaler Verlust.",
+   "en": "4-bit quantization — weights compressed to a quarter; smaller, minimal loss."
+  }
+ },
+ {
+  "t": "VRAM",
+  "d": {
+   "de": "Grafikspeicher; hier läuft das Modell. Apple Silicon nutzt den gemeinsamen RAM.",
+   "en": "Graphics memory; this is where the model runs. Apple Silicon uses shared RAM."
+  }
+ },
+ {
+  "t": "Open-Weight",
+  "d": {
+   "de": "Modellgewichte frei verfügbar – selbst hostbar, volle Kontrolle.",
+   "en": "Model weights freely available — self-hostable, full control."
+  }
+ },
+ {
+  "t": "Frontier",
+  "d": {
+   "de": "Die jeweils stärksten, neuesten Modelle – meist nur per API des Anbieters.",
+   "en": "The strongest, newest models at any time — usually via the vendor's API only."
+  }
+ }
+]

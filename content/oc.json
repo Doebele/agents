@@ -1,0 +1,71 @@
+{
+ "open": [
+  {
+   "v": "Moonshot AI",
+   "m": "Kimi K3",
+   "key": "Kimi K3"
+  },
+  {
+   "v": "DeepSeek",
+   "m": "DeepSeek V4",
+   "key": "DeepSeek V4"
+  },
+  {
+   "v": "Z.AI",
+   "m": "GLM-5.2",
+   "key": "GLM-5.2"
+  },
+  {
+   "v": "Alibaba",
+   "m": "Qwen 3.6 / 3.8",
+   "key": "Qwen 3.6 / 3.8"
+  },
+  {
+   "v": "OpenAI",
+   "m": "gpt-oss",
+   "key": "gpt-oss"
+  },
+  {
+   "v": "Mistral AI",
+   "m": "Mistral Large 3",
+   "key": "Mistral Large 3"
+  },
+  {
+   "v": "Meta",
+   "m": "Llama 4",
+   "key": "Llama 4"
+  },
+  {
+   "v": "Open",
+   "m": "Ornith 1.0",
+   "key": "Ornith 1.0"
+  }
+ ],
+ "closed": [
+  {
+   "v": "OpenAI",
+   "m": "GPT-5.6",
+   "key": "GPT-5.6"
+  },
+  {
+   "v": "Anthropic",
+   "m": "Claude Opus 5",
+   "key": "Claude Opus 5 / Sonnet 5"
+  },
+  {
+   "v": "Google",
+   "m": "Gemini 3.1 Pro",
+   "key": "Gemini 3.1 Pro"
+  },
+  {
+   "v": "xAI",
+   "m": "Grok 4.5",
+   "key": "Grok 4.5"
+  },
+  {
+   "v": "Alibaba",
+   "m": "Qwen3.8-Max",
+   "key": "Qwen3.8-Max"
+  }
+ ]
+}

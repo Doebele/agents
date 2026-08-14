@@ -1,0 +1,91 @@
+{
+ "mac": {
+  "title": "macOS · Apple Silicon",
+  "note": {
+   "de": "Unified Memory: CPU und GPU teilen sich den RAM. Was vom RAM übrig bleibt, dient der GPU als VRAM. Ausführung via Metal (llama.cpp, MLX).",
+   "en": "Unified memory: CPU and GPU share the RAM. Whatever RAM is left over serves as the GPU's VRAM. Runs via Metal (llama.cpp, MLX)."
+  },
+  "tiers": [
+   {
+    "k": "entry",
+    "t": {
+     "de": "Einstieg",
+     "en": "Entry"
+    },
+    "spec": {
+     "de": "MacBook Air · MacBook Pro 14-Zoll · Mac mini, M4, 16–32 GB",
+     "en": "MacBook Air · MacBook Pro 14-inch · Mac mini, M4, 16–32 GB"
+    },
+    "runs": "7B–13B"
+   },
+   {
+    "k": "mid",
+    "t": {
+     "de": "Mittel",
+     "en": "Mid"
+    },
+    "spec": "MacBook Pro M4 Pro (48 GB) · Mac mini M4 Pro (64 GB)",
+    "runs": {
+     "de": "bis 34B, 70B (Q4)",
+     "en": "up to 34B, 70B (Q4)"
+    }
+   },
+   {
+    "k": "pro",
+    "t": "Pro",
+    "spec": {
+     "de": "MacBook Pro 16-Zoll M4/M5 Max (128 GB) · Mac Studio M4 Max / M3 Ultra (512 GB)",
+     "en": "MacBook Pro 16-inch M4/M5 Max (128 GB) · Mac Studio M4 Max / M3 Ultra (512 GB)"
+    },
+    "runs": "70B–120B+"
+   }
+  ]
+ },
+ "gpu": {
+  "title": {
+   "de": "Windows & Linux · diskrete GPU",
+   "en": "Windows & Linux · discrete GPU"
+  },
+  "note": {
+   "de": "NVIDIA mit CUDA ist am besten unterstützt; AMD (ROCm) läuft, ist aber weniger optimiert. CPU-only (llama.cpp) überall, aber langsam.",
+   "en": "NVIDIA with CUDA is best supported; AMD (ROCm) runs but is less optimized. CPU-only (llama.cpp) works anywhere, but slowly."
+  },
+  "tiers": [
+   {
+    "k": "entry",
+    "t": {
+     "de": "Einstieg",
+     "en": "Entry"
+    },
+    "spec": "RTX 4060 Ti 16 GB / RTX 3060 12 GB",
+    "runs": "7B–13B"
+   },
+   {
+    "k": "mid",
+    "t": {
+     "de": "Mittel",
+     "en": "Mid"
+    },
+    "spec": "RTX 5070 Ti / RTX 4080 SUPER, 16 GB",
+    "runs": {
+     "de": "bis 34B",
+     "en": "up to 34B"
+    }
+   },
+   {
+    "k": "pro",
+    "t": "Pro",
+    "spec": "RTX 5090 32 GB / 2× RTX 4090 24 GB",
+    "runs": "70B (Q4)"
+   }
+  ]
+ },
+ "mine": {
+  "de": "<b>Dein Setup:</b> Mac mini M4 Pro, 64 GB. Damit läufst du 34B mühelos, 70B (Q4) ist stark quantisiert möglich. Ein Preis-Leistungs-Sweet-Spot für lokale LLMs.",
+  "en": "<b>Your setup:</b> Mac mini M4 Pro, 64 GB. That runs 34B comfortably; 70B (Q4) is possible heavily quantized. A price/performance sweet spot for local LLMs."
+ },
+ "rule": {
+  "de": "<b>VRAM-Bedarf (Q4):</b> 7B ≈ 5–6 GB · 13B ≈ 8–10 GB · 34B ≈ 20–22 GB · 70B ≈ 40–48 GB · 120B ≈ 70–80 GB — etwa 0,7 GB pro Milliarde Parameter.",
+  "en": "<b>VRAM needed (Q4):</b> 7B ≈ 5–6 GB · 13B ≈ 8–10 GB · 34B ≈ 20–22 GB · 70B ≈ 40–48 GB · 120B ≈ 70–80 GB — about 0.7 GB per billion parameters."
+ }
+}

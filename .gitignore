@@ -1,0 +1,13 @@
+node_modules/
+test-results/
+playwright-report/
+
+# Werkzeugzustand, nicht Projektinhalt
+.mimosa/
+.claude/
+.zcode/
+
+.DS_Store
+*.log
+__pycache__/
+*.pyc

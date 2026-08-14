@@ -51,11 +51,13 @@ jobs:
           lftp -u "$FTP_USER" --env-password "sftp://$FTP_HOST" <<'EOF'
             set sftp:auto-confirm yes
             set net:max-retries 2
-            # Leftovers from the two failed scp attempts — our own mess.
-            rm -f PBQssETbfN.tar.gz
-            rm -f YYFuKPaDjE.tar.gz
-            mkdir -f agents
-            cd agents
+            # The SFTP login already lands in the subdomain's document root.
+            # An extra mkdir/cd would nest a second agents/ inside it — which
+            # is exactly what happened once, hence the cleanup below.
+            rm -f agents/index.html
+            rm -f agents/index.de.html
+            rm -f agents/.htaccess
+            rmdir agents
             put -O . site/index.html
             put -O . site/index.de.html
             put -O . site/.htaccess

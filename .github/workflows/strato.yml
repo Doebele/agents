@@ -1,9 +1,14 @@
-# Laedt die beiden Sprachdateien nach agents.medvesek.com.
+# Zwei Dinge in einem Ablauf:
 #
-# Laeuft erst, wenn die drei Zugangsdaten als Repository-Secrets hinterlegt
-# sind — ohne sie wird der Auftrag stillschweigend uebersprungen statt bei
-# jedem Push rot zu werden.
-name: Zu Strato ausliefern
+# 1. Bei jedem Push wird geprueft, ob site/ noch zu content/ passt. Das faengt
+#    den haeufigsten Fehler ab — Inhalt geaendert, neu bauen vergessen.
+# 2. Sind die FTP-Zugangsdaten hinterlegt, werden die Seiten danach nach
+#    agents.medvesek.com geladen. Fehlen sie, wird nur dieser Schritt
+#    uebersprungen; die Pruefung laeuft trotzdem.
+#
+# Die Bedingung steht am Schritt, nicht am Job: In der Job-Bedingung ist der
+# secrets-Kontext nicht verfuegbar, dort scheitert der Ablauf sofort.
+name: Pruefen und ausliefern
 
 on:
   push:
@@ -12,22 +17,20 @@ on:
       - 'site/**'
       - 'content/**'
       - 'build/**'
+  pull_request:
   workflow_dispatch:
 
 jobs:
   ausliefern:
-    if: ${{ secrets.STRATO_FTP_SERVER != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      # Faengt den haeufigsten Fehler ab: Inhalt geaendert, aber vergessen
-      # neu zu bauen. Dann weicht site/ von content/ ab und nichts wird
-      # hochgeladen.
       - name: Bauweg pruefen
         run: python3 build/build.py --pruefen
 
       - name: Hochladen
+        if: ${{ github.ref == 'refs/heads/main' && secrets.STRATO_FTP_SERVER != '' }}
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.STRATO_FTP_SERVER }}

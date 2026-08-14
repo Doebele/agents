@@ -51,8 +51,9 @@ jobs:
           lftp -u "$FTP_USER" --env-password "sftp://$FTP_HOST" <<'EOF'
             set sftp:auto-confirm yes
             set net:max-retries 2
-            echo "--- login directory ---"
-            cls -l
+            # Leftovers from the two failed scp attempts — our own mess.
+            rm -f PBQssETbfN.tar.gz
+            rm -f YYFuKPaDjE.tar.gz
             mkdir -f agents
             cd agents
             put -O . site/index.html

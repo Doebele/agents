@@ -34,7 +34,7 @@ jobs:
 
       - name: Hochladen
         if: github.ref == 'refs/heads/main' && env.FTP_SERVER != ''
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.STRATO_FTP_SERVER }}
           username: ${{ secrets.STRATO_FTP_USER }}

@@ -173,19 +173,21 @@
     "06_medien": {
      "kandidaten": [
       "Whisper",
-      "Voxtral"
+      "Voxtral",
+      "Wispr Flow",
+      "OpenWhispr"
      ],
      "empfehlung": [
       "Whisper"
      ],
-     "hinweis": "Nur wenn Quellen als Audio oder Video vorliegen.",
+     "hinweis": "Zwei Richtungen: Aufnahmen erschliessen (Whisper, Voxtral) und selbst diktieren statt tippen (Wispr Flow, OpenWhispr). Der Hinweis war vorher auf die erste Richtung verengt.",
      "frage": {
       "de": "Welche Medien soll er erzeugen können?",
       "en": "Which media should it be able to create?"
      },
      "notiz": {
-      "de": "Nur nötig, wenn deine Quellen Aufnahmen sind — Interviews, Mitschnitte, Videos.",
-      "en": "Only needed when your sources are recordings — interviews, calls, videos."
+      "de": "Zwei Fälle: Deine Quellen sind Aufnahmen — Interviews, Mitschnitte, Videos —, oder du sprichst deine Notizen und Aufträge lieber, statt sie zu tippen.",
+      "en": "Two cases: your sources are recordings — interviews, calls, videos — or you would rather speak your notes and instructions than type them."
      }
     },
     "07_umgebung": {

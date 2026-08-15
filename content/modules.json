@@ -763,6 +763,22 @@
        "en": "Audio LLM"
       },
       "k": "Voxtral"
+     },
+     {
+      "n": "Wispr Flow",
+      "v": {
+       "de": "Diktieren",
+       "en": "Dictation"
+      },
+      "k": "Wispr Flow"
+     },
+     {
+      "n": "OpenWhispr",
+      "v": {
+       "de": "Diktieren · offen",
+       "en": "Dictation · open"
+      },
+      "k": "OpenWhispr"
      }
     ]
    }

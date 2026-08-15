@@ -52,6 +52,7 @@
      "OpenAI Codex",
      "Kimi Code",
      "ZCode",
+     "Grok Build",
      "Zed",
      "Cursor",
      "Agent SDK",
@@ -1387,7 +1388,8 @@
      "Claude Code",
      "OpenAI Codex",
      "Kimi Code",
-     "ZCode"
+     "ZCode",
+     "Grok Build"
     ],
     "text": {
      "de": "Leg die Datei in den Ordner, in dem du arbeiten willst, und starte {h} dort. Terminal-Agenten sehen den aktuellen Ordner von selbst — du kannst sie also direkt auf <code>setup.md</code> ansprechen.",

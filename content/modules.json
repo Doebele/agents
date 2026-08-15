@@ -198,6 +198,11 @@
       "k": "ZCode"
      },
      {
+      "n": "Grok Build",
+      "v": "xAI",
+      "k": "Grok Build"
+     },
+     {
       "n": "DeepSeek Harness",
       "v": {
        "de": "offen · Vorschau",

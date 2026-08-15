@@ -404,6 +404,35 @@
    "en": "GLM Coding plan: Lite $18 · Pro $80 · Max $168/mo"
   }
  },
+ "Grok Build": {
+  "name": "Grok Build",
+  "vendor": "xAI",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": {
+   "de": "xAIs Coding-Agent für das Terminal: Er liest dein Projekt, ändert Dateien und führt Befehle aus. Bei größeren Aufgaben legt er zuerst einen Plan vor, den du Schritt für Schritt kommentieren, umschreiben oder ganz verwerfen kannst — erst danach fasst er etwas an. Der Agent selbst ist seit Juli 2026 quelloffen (Apache 2.0); das Modell dahinter ist es nicht.",
+   "en": "xAI's coding agent for the terminal: it reads your project, edits files and runs commands. On bigger jobs it puts a plan in front of you first — you can comment on single steps, rewrite it, or throw it out — and only then does it touch anything. The agent itself has been open source since July 2026 (Apache 2.0); the model behind it has not."
+  },
+  "tip": {
+   "de": "Der Zugang hängt an einem SuperGrok- oder X-Premium+-Abo; ohne das führt der Weg nur über einen API-Schlüssel und nutzungsabhängige Abrechnung. Wer schon mit Claude Code oder Codex arbeitet, kann AGENTS.md, MCP-Server, Hooks und Skills mitnehmen — die versteht er.",
+   "en": "Access hangs on a SuperGrok or X Premium+ subscription; without one the only route in is an API key and usage-based billing. If you already work with Claude Code or Codex you can bring your AGENTS.md, MCP servers, hooks and skills along — it reads them."
+  },
+  "links": {
+   "home": "https://x.ai/news/grok-build-cli",
+   "docs": "https://docs.x.ai/build/overview",
+   "code": "https://github.com/xai-org/grok-build"
+  },
+  "icon": "x",
+  "free": false,
+  "plans": {
+   "de": "SuperGrok- oder X-Premium+-Abo · API (Grok 4.6) 2 $/6 $ pro 1M Token",
+   "en": "SuperGrok or X Premium+ subscription · API (Grok 4.6) $2/$6 per 1M tokens"
+  }
+ },
  "Zed": {
   "name": "Zed",
   "vendor": "Zed Industries",

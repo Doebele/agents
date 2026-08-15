@@ -1150,6 +1150,11 @@ const MODULES = [
       "k": "ZCode"
      },
      {
+      "n": "Grok Build",
+      "v": "xAI",
+      "k": "Grok Build"
+     },
+     {
       "n": "DeepSeek Harness",
       "v": "offen · Vorschau",
       "k": "DeepSeek Harness"
@@ -2060,6 +2065,23 @@ const STECKBRIEF = {
   },
   "free": false,
   "plans": "GLM-Coding-Abo: Lite 18 $ · Pro 80 $ · Max 168 $/Mo."
+ },
+ "Grok Build": {
+  "name": "Grok Build",
+  "vendor": "xAI",
+  "cat": "Agent Harness · Baustein 02",
+  "accent": "var(--ember)",
+  "open": true,
+  "blurb": "xAIs Coding-Agent für das Terminal: Er liest dein Projekt, ändert Dateien und führt Befehle aus. Bei größeren Aufgaben legt er zuerst einen Plan vor, den du Schritt für Schritt kommentieren, umschreiben oder ganz verwerfen kannst — erst danach fasst er etwas an. Der Agent selbst ist seit Juli 2026 quelloffen (Apache 2.0); das Modell dahinter ist es nicht.",
+  "tip": "Der Zugang hängt an einem SuperGrok- oder X-Premium+-Abo; ohne das führt der Weg nur über einen API-Schlüssel und nutzungsabhängige Abrechnung. Wer schon mit Claude Code oder Codex arbeitet, kann AGENTS.md, MCP-Server, Hooks und Skills mitnehmen — die versteht er.",
+  "links": {
+   "home": "https://x.ai/news/grok-build-cli",
+   "docs": "https://docs.x.ai/build/overview",
+   "code": "https://github.com/xai-org/grok-build"
+  },
+  "icon": "x",
+  "free": false,
+  "plans": "SuperGrok- oder X-Premium+-Abo · API (Grok 4.6) 2 $/6 $ pro 1M Token"
  },
  "Zed": {
   "name": "Zed",
@@ -4432,7 +4454,8 @@ const ARBEITSARTEN = {
      "Claude Code",
      "OpenAI Codex",
      "Kimi Code",
-     "ZCode"
+     "ZCode",
+     "Grok Build"
     ],
     "text": "Leg die Datei in den Ordner, in dem du arbeiten willst, und starte {h} dort. Terminal-Agenten sehen den aktuellen Ordner von selbst — du kannst sie also direkt auf <code>setup.md<\/code> ansprechen."
    },
@@ -4497,6 +4520,7 @@ const ARBEITSARTEN = {
     "OpenAI Codex",
     "Kimi Code",
     "ZCode",
+    "Grok Build",
     "Zed",
     "Cursor",
     "Agent SDK",

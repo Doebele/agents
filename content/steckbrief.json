@@ -180,6 +180,35 @@
    "home": "https://notebooklm.google/"
   }
  },
+ "Perplexity": {
+  "name": "Perplexity",
+  "vendor": "Perplexity AI",
+  "cat": {
+   "de": "Recherche-Umgebung · Baustein 07",
+   "en": "Research workspace · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Eine Suche, die antwortet, statt Links aufzuzählen: Perplexity durchforstet zu jeder Frage das aktuelle Netz und schreibt daraus einen Text, an dem die Fundstellen als Fußnoten hängen. Der Unterschied zu Gemini Notebook — dort legst du die Quellen selbst hin, hier sucht das Werkzeug sie sich. Das nimmt dir Arbeit ab und die Entscheidung, worauf die Antwort beruht.",
+   "en": "A search that answers instead of listing links: for every question Perplexity works through the current web and writes a text with the sources hanging off it as footnotes. The difference to Gemini Notebook — there you put the sources in yourself, here the tool goes and finds them. That saves you the work, and takes away the decision about what the answer rests on."
+  },
+  "tip": {
+   "de": "Die Fußnoten machen eine Antwort nachprüfbar, nicht richtig: Wo es darauf ankommt, musst du die Quelle selbst öffnen. Alles läuft auf fremden Servern — für Vertrauliches ist das der falsche Ort. Wer es an einen Agenten hängen will, findet einen offiziellen MCP-Server.",
+   "en": "The footnotes make an answer checkable, not correct: where it matters you still have to open the source yourself. Everything runs on someone else's servers — the wrong place for anything confidential. If you want to hook it up to an agent, there is an official MCP server."
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos · Pro 20 $/Mo.",
+   "en": "Free · Pro $20/mo"
+  },
+  "icon": "perplexity",
+  "links": {
+   "home": "https://www.perplexity.ai/",
+   "docs": "https://docs.perplexity.ai/",
+   "code": "https://github.com/perplexityai/modelcontextprotocol"
+  }
+ },
  "Obsidian": {
   "name": "Obsidian",
   "vendor": "Obsidian",

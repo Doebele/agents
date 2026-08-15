@@ -746,7 +746,7 @@ setTimeout(function(){
     <div class="row-meta rv">
       <span class="pill">For <b>beginners</b></span>
       <span class="pill">As of <b>August 2026</b></span>
-      <span class="pill"><b>111</b> fact-sheets</span>
+      <span class="pill"><b>112</b> fact-sheets</span>
     </div>
   </div>
   <div id="nlabels" aria-hidden="true"></div>
@@ -1620,6 +1620,11 @@ const MODULES = [
       "k": "Gemini Notebook"
      },
      {
+      "n": "Perplexity",
+      "v": "research",
+      "k": "Perplexity"
+     },
+     {
       "n": "Obsidian",
       "v": "notes",
       "k": "Obsidian"
@@ -1923,6 +1928,23 @@ const STECKBRIEF = {
   "icon": "google",
   "links": {
    "home": "https://notebooklm.google/"
+  }
+ },
+ "Perplexity": {
+  "name": "Perplexity",
+  "vendor": "Perplexity AI",
+  "cat": "Research workspace · Block 07",
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": "A search that answers instead of listing links: for every question Perplexity works through the current web and writes a text with the sources hanging off it as footnotes. The difference to Gemini Notebook — there you put the sources in yourself, here the tool goes and finds them. That saves you the work, and takes away the decision about what the answer rests on.",
+  "tip": "The footnotes make an answer checkable, not correct: where it matters you still have to open the source yourself. Everything runs on someone else's servers — the wrong place for anything confidential. If you want to hook it up to an agent, there is an official MCP server.",
+  "free": true,
+  "plans": "Free · Pro $20/mo",
+  "icon": "perplexity",
+  "links": {
+   "home": "https://www.perplexity.ai/",
+   "docs": "https://docs.perplexity.ai/",
+   "code": "https://github.com/perplexityai/modelcontextprotocol"
   }
  },
  "Obsidian": {
@@ -4577,6 +4599,7 @@ const ARBEITSARTEN = {
      "frage": "Where should the result take shape?",
      "kandidaten": [
       "Gemini Notebook",
+      "Perplexity",
       "Obsidian"
      ],
      "empfehlung": [

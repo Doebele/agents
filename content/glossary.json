@@ -156,5 +156,53 @@
    "de": "Wie viele Tokens ein Modell ausgibt, bis eine Aufgabe fertig ist — Artificial Analysis misst das am Intelligence Index. Viel Ausgabe heißt längeres Warten und höhere Kosten, nicht mehr Inhalt.",
    "en": "How many tokens a model emits before a task is done — Artificial Analysis measures this on the Intelligence Index. More output means longer waits and higher cost, not more content."
   }
+ },
+ {
+  "t": "API",
+  "d": {
+   "de": "Die Schnittstelle, über die Programme miteinander reden: eines schickt eine Anfrage, das andere antwortet. Bei KI-Modellen läuft fast alles über APIs — meist gegen Geld, je nach Menge.",
+   "en": "The interface programs use to talk to each other: one sends a request, the other answers. With AI models almost everything goes through APIs — usually for money, by volume."
+  }
+ },
+ {
+  "t": "GPU",
+  "d": {
+   "de": "Die Grafikkarte: ein Rechenchip, der auf sehr viele gleichartige Rechenschritte gleichzeitig ausgelegt ist — ursprünglich für Bilder, deshalb der Name. Modelle laufen darauf um ein Vielfaches schneller als auf der CPU.",
+   "en": "The chip built for very many identical calculations at once — originally for images, hence the name. Models run on it many times faster than on the main processor."
+  }
+ },
+ {
+  "t": "CPU",
+  "d": {
+   "de": "Der Hauptprozessor eines Rechners: zuständig für alles, was nicht die Grafikkarte übernimmt. Modelle laufen auch hier — ohne Spezialhardware, nur deutlich langsamer.",
+   "en": "A computer's general-purpose processor: everything the graphics card does not take over. Models run here too — no special hardware needed, just much slower."
+  }
+ },
+ {
+  "t": "RAM",
+  "d": {
+   "de": "Der Arbeitsspeicher eines Rechners: was gerade benutzt wird, liegt darin. Ein Modell muss vollständig hineinpassen — auf dem Mac teilen sich Hauptprozessor und Grafikkarte denselben (»Unified Memory«).",
+   "en": "A computer's working memory: whatever is in use right now lives there. A model must fit entirely — on a Mac the processor and graphics card share the same memory (»unified memory«)."
+  }
+ },
+ {
+  "t": {
+   "de": "Quantisierung",
+   "en": "Quantization"
+  },
+  "d": {
+   "de": "Ein fertiges Modell platzsparend verkleinern: die Zahlen darin werden von hoher auf geringe Genauigkeit gestutzt. Braucht weniger Speicher und läuft schneller, kostet ein wenig Qualität. Q4 ist die verbreitete Stufe.",
+   "en": "Shrinking a finished model to save space: the numbers inside are trimmed from high to lower precision. Needs less memory, runs faster, costs a little quality. Q4 is the common level."
+  }
+ },
+ {
+  "t": {
+   "de": "quantisiert",
+   "en": "quantized"
+  },
+  "d": {
+   "de": "Gegenstück zu Quantisierung: besagt, dass ein Modell in dieser Weise komprimiert wurde. Stärker quantisiert heißt kleiner und schneller — bei etwas mehr Qualitätsverlust.",
+   "en": "The counterpart to quantization: says a model was compressed this way. More quantized means smaller and faster — at some further loss of quality."
+  }
  }
 ]

@@ -279,13 +279,9 @@
   "de": "  const ol=d.open===true?' · offen':(d.open===false?' · closed':'');",
   "en": "  const ol=d.open===true?' · open':(d.open===false?' · closed':'');"
  },
- "t075": {
-  "de": "    if(A.priceIn||A.priceOut){h+=`<span><b>${A.priceIn||'–'} / ${A.priceOut||'–'}</b> <i>$ / 1M Tok.</i></span>`;}",
-  "en": "    if(A.priceIn||A.priceOut){h+=`<span><b>${A.priceIn||'–'} / ${A.priceOut||'–'}</b> <i>$ / 1M tok.</i></span>`;}"
- },
  "t076": {
-  "de": "    h+=`</div>${A.aaUrl?`<a class=\"st-aa-src\" href=\"${A.aaUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">Quelle ${EXT}</a>`:''}</div>`; }",
-  "en": "    h+=`</div>${A.aaUrl?`<a class=\"st-aa-src\" href=\"${A.aaUrl}\" target=\"_blank\" rel=\"noopener noreferrer\">Source ${EXT}</a>`:''}</div>`; }"
+  "de": "    h+=`</div>${A.aaUrl?`<a class=\"st-aa-src\" href=\"${A.url}\" target=\"_blank\" rel=\"noopener noreferrer\">Quelle ${EXT}</a>`:''}</div>`; }",
+  "en": "    h+=`</div>${A.aaUrl?`<a class=\"st-aa-src\" href=\"${A.url}\" target=\"_blank\" rel=\"noopener noreferrer\">Source ${EXT}</a>`:''}</div>`; }"
  },
  "t077": {
   "de": "    h+='<div class=\"st-plans\"><span class=\"st-plans-l\">Preise &amp; Abo</span>'+(d.free===true?'<span class=\"tag free\">Free-Tier</span>':'')+'<div class=\"price-bars\">';",
@@ -366,5 +362,9 @@
  "t096": {
   "de": "        ${p.k ? `<button type=\"button\" class=\"prov-info\" data-key=\"${p.k}\" aria-label=\"Steckbrief zu ${p.n}\">i</button>` : ''}",
   "en": "        ${p.k ? `<button type=\"button\" class=\"prov-info\" data-key=\"${p.k}\" aria-label=\"Fact sheet for ${p.n}\">i</button>` : ''}"
+ },
+ "t097": {
+  "de": "    const _aaT=(ic,lb,v,rk,un,cls)=>`<div class=\"st-aa-tile\"><span class=\"t-k\">${ic}${lb}</span><b class=\"t-v ${cls}\">${v}</b><span class=\"t-f\"><span class=\"t-r\">${rk}</span><span class=\"t-u\">${[1,2,3,4].map(n=>`<i class=\"${n<=un?cls:''}\"></i>`).join('')}</span></span></div>`;\n    if(A.intel){const u=+A.intel.u||0;h+=_aaT(_IC.brain,'Intelligenz',A.intel.v,A.intel.rank||'',u,u>=3?'gut':u==2?'mid':'wenig');}\n    if(A.speed){const u=+A.speed.u||0;h+=_aaT(_IC.fast,'Tempo',A.speed.v,A.speed.rank||'',u,u>=3?'gut':u==2?'mid':'wenig');}\n    if(A.cost){const u=+A.cost.u||0;h+=_aaT(_IC.coins,'Kosten',A.cost.v,A.cost.rank||'',u,u>=4?'wenig':u==3?'mid':'gut');}\n    if(A.verb){const u=+A.verb.u||0;h+=_aaT(_IC.chat,'Ausführlichkeit',A.verb.v,A.verb.rank||'',u,u>=4?'wenig':u==3?'mid':'gut');}",
+  "en": "    const _aaT=(ic,lb,v,rk,un,cls)=>`<div class=\"st-aa-tile\"><span class=\"t-k\">${ic}${lb}</span><b class=\"t-v ${cls}\">${v}</b><span class=\"t-f\"><span class=\"t-r\">${rk}</span><span class=\"t-u\">${[1,2,3,4].map(n=>`<i class=\"${n<=un?cls:''}\"></i>`).join('')}</span></span></div>`;\n    if(A.intel){const u=+A.intel.u||0;h+=_aaT(_IC.brain,'Intelligence',A.intel.v,A.intel.rank||'',u,u>=3?'gut':u==2?'mid':'wenig');}\n    if(A.speed){const u=+A.speed.u||0;h+=_aaT(_IC.fast,'Speed',A.speed.v,A.speed.rank||'',u,u>=3?'gut':u==2?'mid':'wenig');}\n    if(A.cost){const u=+A.cost.u||0;h+=_aaT(_IC.coins,'Cost',A.cost.v,A.cost.rank||'',u,u>=4?'wenig':u==3?'mid':'gut');}\n    if(A.verb){const u=+A.verb.u||0;h+=_aaT(_IC.chat,'Verbosity',A.verb.v,A.verb.rank||'',u,u>=4?'wenig':u==3?'mid':'gut');}"
  }
 }

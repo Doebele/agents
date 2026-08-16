@@ -798,10 +798,20 @@
   "icon": "alibabacloud",
   "free": true,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/qwen3-max",
-   "score": "24 Intelligence Index",
-   "priceIn": "$1.20",
-   "priceOut": "$6.00"
+   "url": "https://artificialanalysis.ai/models/qwen3-max",
+   "intel": {
+    "v": "24",
+    "rank": "#28/67",
+    "u": 3
+   },
+   "speed": {
+    "v": "61.4",
+    "rank": "#29/67",
+    "u": 2
+   },
+   "cost": {
+    "v": "$1.20/$6.00"
+   }
   },
   "plans": {
    "de": "Open-Weight (Apache 2.0), kostenlos selbst hostbar · API via Model Studio",
@@ -832,10 +842,27 @@
   },
   "free": true,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/gpt-oss-120b",
-   "score": "24 Intelligence Index",
-   "priceIn": "$0.15",
-   "priceOut": "$0.60"
+   "url": "https://artificialanalysis.ai/models/gpt-oss-120b",
+   "intel": {
+    "v": "24",
+    "rank": "#6/63",
+    "u": 4
+   },
+   "speed": {
+    "v": "180.0",
+    "rank": "#4/63",
+    "u": 4
+   },
+   "cost": {
+    "v": "$0.15/$0.60",
+    "rank": "#5/63",
+    "u": 2
+   },
+   "verb": {
+    "v": "88M",
+    "rank": "#9/63",
+    "u": 3
+   }
   },
   "plans": {
    "de": "Kostenlos (Open-Weight, Apache 2.0), selbst gehostet",
@@ -867,10 +894,27 @@
   "icon": "mistralai",
   "free": true,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/mistral-large-3",
-   "score": "16 Intelligence Index",
-   "priceIn": "$0.50",
-   "priceOut": "$1.50"
+   "url": "https://artificialanalysis.ai/models/mistral-large-3",
+   "intel": {
+    "v": "16",
+    "rank": "#24/44",
+    "u": 2
+   },
+   "speed": {
+    "v": "52.9",
+    "rank": "#12/44",
+    "u": 2
+   },
+   "cost": {
+    "v": "$0.50/$1.50",
+    "rank": "#4/44",
+    "u": 4
+   },
+   "verb": {
+    "v": "5.6M",
+    "rank": "#4/44",
+    "u": 4
+   }
   },
   "plans": {
    "de": "Open-Weight (Apache 2.0) · API 0,50 $/1,50 $ pro 1M Token",
@@ -902,10 +946,27 @@
   "icon": "meta",
   "free": true,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/llama-4-maverick",
-   "score": "14 Intelligence Index",
-   "priceIn": "$0.27",
-   "priceOut": "$0.85"
+   "url": "https://artificialanalysis.ai/models/llama-4-maverick",
+   "intel": {
+    "v": "14",
+    "rank": "#26/44",
+    "u": 2
+   },
+   "speed": {
+    "v": "117.6",
+    "rank": "#2/44",
+    "u": 4
+   },
+   "cost": {
+    "v": "$0.27/$0.85",
+    "rank": "#2/44",
+    "u": 2
+   },
+   "verb": {
+    "v": "4.7M",
+    "rank": "#3/44",
+    "u": 3
+   }
   },
   "plans": {
    "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet",
@@ -1647,10 +1708,27 @@
   },
   "free": false,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/gpt-5-6-sol",
-   "score": "61 Intelligence Index",
-   "priceIn": "$5.00",
-   "priceOut": "$30.00"
+   "url": "https://artificialanalysis.ai/models/gpt-5-6-sol",
+   "intel": {
+    "v": "61",
+    "rank": "#5/188",
+    "u": 4
+   },
+   "speed": {
+    "v": "73.7",
+    "rank": "#77/188",
+    "u": 2
+   },
+   "cost": {
+    "v": "$5/$30",
+    "rank": "#68/188",
+    "u": 4
+   },
+   "verb": {
+    "v": "70M",
+    "rank": "#38/188",
+    "u": 2
+   }
   },
   "plans": {
    "de": "API Terra 2 $/12 $ · Sol 5 $/30 $ · Luna 0,20 $/1,20 $ pro 1M Tok.",
@@ -1682,10 +1760,27 @@
   "icon": "anthropic",
   "free": false,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/claude-opus-5",
-   "score": "63 Intelligence Index",
-   "priceIn": "$5.00",
-   "priceOut": "$25.00"
+   "url": "https://artificialanalysis.ai/models/claude-opus-5",
+   "intel": {
+    "v": "63",
+    "rank": "#1/188",
+    "u": 4
+   },
+   "speed": {
+    "v": "56.7",
+    "rank": "#112/188",
+    "u": 1
+   },
+   "cost": {
+    "v": "$5/$25",
+    "rank": "#73/188",
+    "u": 4
+   },
+   "verb": {
+    "v": "100M",
+    "rank": "#56/188",
+    "u": 3
+   }
   },
   "plans": {
    "de": "API Opus 5 5 $/25 $ · Sonnet 5 2 $/10 $ pro 1M Token",
@@ -1717,10 +1812,27 @@
   "icon": "googlegemini",
   "free": false,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
-   "score": "48 Intelligence Index",
-   "priceIn": "$2.00",
-   "priceOut": "$12.00"
+   "url": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
+   "intel": {
+    "v": "48",
+    "rank": "#38/188",
+    "u": 4
+   },
+   "speed": {
+    "v": "115.8",
+    "rank": "#42/188",
+    "u": 3
+   },
+   "cost": {
+    "v": "$2/$12",
+    "rank": "#33/188",
+    "u": 2
+   },
+   "verb": {
+    "v": "56M",
+    "rank": "#30/188",
+    "u": 2
+   }
   },
   "plans": {
    "de": "API 2 $/12 $ pro 1M Token · Google AI Pro 19,99 $/Mo.",
@@ -1752,10 +1864,27 @@
   "icon": "x",
   "free": false,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/grok-4-5",
-   "score": "56 Intelligence Index",
-   "priceIn": "$2.00",
-   "priceOut": "$6.00"
+   "url": "https://artificialanalysis.ai/models/grok-4-5",
+   "intel": {
+    "v": "56",
+    "rank": "#18/188",
+    "u": 4
+   },
+   "speed": {
+    "v": "65.9",
+    "rank": "#90/188",
+    "u": 2
+   },
+   "cost": {
+    "v": "$2/$6",
+    "rank": "#37/188",
+    "u": 2
+   },
+   "verb": {
+    "v": "60M",
+    "rank": "#34/188",
+    "u": 2
+   }
   },
   "plans": {
    "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · Agent 0,05 $/Min.",
@@ -1787,10 +1916,27 @@
   "icon": "alibabacloud",
   "free": true,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/qwen3-8-max",
-   "score": "58 Intelligence Index",
-   "priceIn": "$2.00",
-   "priceOut": "$6.00"
+   "url": "https://artificialanalysis.ai/models/qwen3-8-max",
+   "intel": {
+    "v": "58",
+    "rank": "#10/188",
+    "u": 4
+   },
+   "speed": {
+    "v": "46.9",
+    "rank": "#125/188",
+    "u": 1
+   },
+   "cost": {
+    "v": "$2/$6",
+    "rank": "#64/188",
+    "u": 4
+   },
+   "verb": {
+    "v": "150M",
+    "rank": "#72/188",
+    "u": 4
+   }
   },
   "plans": {
    "de": "Kostenlose Stufe · Open-Weight · API Max-Tarif ca. 2,5/10 ¥/1M Tok.",
@@ -1822,10 +1968,27 @@
   "icon": "kimi",
   "free": true,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/kimi-k3",
-   "score": "60 Intelligence Index",
-   "priceIn": "$3.00",
-   "priceOut": "$15.00"
+   "url": "https://artificialanalysis.ai/models/kimi-k3",
+   "intel": {
+    "v": "60",
+    "rank": "#1/106",
+    "u": 4
+   },
+   "speed": {
+    "v": "39.4",
+    "rank": "#54/106",
+    "u": 1
+   },
+   "cost": {
+    "v": "$3/$15",
+    "rank": "#35/106",
+    "u": 4
+   },
+   "verb": {
+    "v": "130M",
+    "rank": "#28/106",
+    "u": 3
+   }
   },
   "plans": {
    "de": "API 3 $/15 $ pro 1M Token (Open-Weight, selbst hostbar)",
@@ -1857,10 +2020,27 @@
   "icon": "deepseek",
   "free": false,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/deepseek-v4-flash",
-   "score": "52 Intelligence Index",
-   "priceIn": "$0.14",
-   "priceOut": "$0.28"
+   "url": "https://artificialanalysis.ai/models/deepseek-v4-flash",
+   "intel": {
+    "v": "52",
+    "rank": "#5/106",
+    "u": 4
+   },
+   "speed": {
+    "v": "117.1",
+    "rank": "#11/106",
+    "u": 4
+   },
+   "cost": {
+    "v": "$0.44/$1.32",
+    "rank": "#17/106",
+    "u": 2
+   },
+   "verb": {
+    "v": "210M",
+    "rank": "#37/106",
+    "u": 4
+   }
   },
   "plans": {
    "de": "API V4-Pro 0,435 $/0,87 $ · Flash 0,14 $/0,28 $ pro 1M Tok.",
@@ -1891,10 +2071,27 @@
   },
   "free": true,
   "aa": {
-   "aaUrl": "https://artificialanalysis.ai/models/glm-5-2",
-   "score": "53 Intelligence Index",
-   "priceIn": "$1.40",
-   "priceOut": "$4.40"
+   "url": "https://artificialanalysis.ai/models/glm-5-2",
+   "intel": {
+    "v": "53",
+    "rank": "#4/106",
+    "u": 4
+   },
+   "speed": {
+    "v": "136.5",
+    "rank": "#7/106",
+    "u": 4
+   },
+   "cost": {
+    "v": "$1.40/$4.40",
+    "rank": "#28/106",
+    "u": 4
+   },
+   "verb": {
+    "v": "140M",
+    "rank": "#30/106",
+    "u": 3
+   }
   },
   "plans": {
    "de": "API 1,40 $/4,40 $ pro 1M Token · zeitlich begrenzt kostenlos",

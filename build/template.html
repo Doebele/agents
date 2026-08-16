@@ -689,9 +689,21 @@ button.it{ width:100%; font-family:var(--body); text-align:left; background:none
 .st-ic{ position:absolute; inset:0; width:100%; height:100%; padding:14px; object-fit:contain; }
 .st-aa{ margin-top:16px; padding:14px 16px; border:1px solid var(--line); border-radius:12px; }
 .st-aa-l{ display:block; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--cyan); margin-bottom:10px; }
-.st-aa-row{ display:flex; gap:24px; flex-wrap:wrap; align-items:baseline; }
-.st-aa-row span b{ font-size:22px; font-weight:700; color:var(--ink); }
-.st-aa-row span i{ font-style:normal; color:var(--muted); font-family:var(--mono); font-size:11px; letter-spacing:.04em; }
+.st-aa-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+@media (max-width:560px){ .st-aa-grid{ grid-template-columns:1fr; } }
+/* Die vier Kennzahlen im Stil der Quelle: Icon, Wert, Rang und 1–4 Einheiten.
+   Mehr Einheiten bedeuten mehr von der Eigenschaft — die Farbe sagt, ob das
+   erfreulich ist: bei Tempo und Intelligenz ja, bei Kosten und Redseligkeit nein. */
+.st-aa-tile{ border:1px solid var(--line); border-radius:10px; padding:12px 14px; display:flex; flex-direction:column; gap:7px; background:rgba(255,255,255,.015); }
+.st-aa-tile .t-k{ display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.st-aa-tile .t-k svg{ width:15px; height:15px; stroke:currentColor; fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; flex:0 0 auto; }
+.st-aa-tile .t-v{ font-size:23px; font-weight:700; color:var(--ink); line-height:1; letter-spacing:-.01em; }
+.st-aa-tile .t-v.gut{ color:var(--lime); } .st-aa-tile .t-v.mid{ color:var(--amber); } .st-aa-tile .t-v.wenig{ color:var(--ember); }
+.st-aa-tile .t-f{ display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:2px; }
+.st-aa-tile .t-r{ font-family:var(--mono); font-size:11px; color:var(--muted); }
+.st-aa-tile .t-u{ display:flex; gap:4px; }
+.st-aa-tile .t-u i{ width:8px; height:8px; border-radius:50%; background:var(--line); }
+.st-aa-tile .t-u i.gut{ background:var(--lime); } .st-aa-tile .t-u i.mid{ background:var(--amber); } .st-aa-tile .t-u i.wenig{ background:var(--ember); }
 .st-aa-src{ font-family:var(--mono); font-size:11px; color:var(--cyan); display:inline-flex; align-items:center; gap:5px; margin-top:10px; }
 .st-aa-src svg{ width:12px; height:12px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 .st-plans{ margin-top:14px; }
@@ -1129,12 +1141,18 @@ function renderDetail(key){
   const logo=d.icon?`<span class="st-mono">${mg}</span><img class="st-ic" src="https://cdn.simpleicons.org/${d.icon}/ffffff" alt="" loading="lazy" onerror="this.remove()" onload="this.previousElementSibling.style.visibility='hidden'">`:`<span class="st-mono">${mg}</span>`;
   const q=encodeURIComponent(d.name||key); const L=d.links||{};
   const EXT='<svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
+  /* Iconoir: brain · fast-arrow-right · coins · chat-bubble-empty */
+  const _IC={
+   brain:'<svg viewBox="0 0 24 24"><path d="M7 14C5.34315 14 4 15.3431 4 17C4 18.6569 5.34315 20 7 20C7.35064 20 7.68722 19.9398 8 19.8293 M4.26392 15.6046C2.9243 14.9582 2.00004 13.587 2.00004 12C2.00004 10.7883 2.53877 9.70251 3.38978 8.96898 M3.42053 8.8882C3.1549 8.49109 3 8.01363 3 7.5C3 6.11929 4.11929 5 5.5 5C6.06291 5 6.58237 5.18604 7.00024 5.5 M7.23769 5.56533C7.08524 5.24215 7 4.88103 7 4.5C7 3.11929 8.11929 2 9.5 2C10.8807 2 12 3.11929 12 4.5V20 M8 20C8 21.1046 8.89543 22 10 22C11.1046 22 12 21.1046 12 20 M12 7C12 8.65685 13.3431 10 15 10 M17 14C18.6569 14 20 15.3431 20 17C20 18.6569 18.6569 20 17 20C16.6494 20 16.3128 19.9398 16 19.8293 M19.7361 15.6046C21.0757 14.9582 22 13.587 22 12C22 10.7883 21.4612 9.70251 20.6102 8.96898 M20.5795 8.8882C20.8451 8.49109 21 8.01363 21 7.5C21 6.11929 19.8807 5 18.5 5C17.9371 5 17.4176 5.18604 16.9998 5.5 M12 4.5C12 3.11929 13.1193 2 14.5 2C15.8807 2 17 3.11929 17 4.5C17 4.88103 16.9148 5.24215 16.7623 5.56533 M16 20C16 21.1046 15.1046 22 14 22C12.8954 22 12 21.1046 12 20"/></svg>',
+   fast:'<svg viewBox="0 0 24 24"><path d="M13 6L19 12L13 18 M5 6L11 12L5 18"/></svg>',
+   coins:'<svg viewBox="0 0 24 24"><path d="M16 13C13.2386 13 11 11.8807 11 10.5C11 9.11929 13.2386 8 16 8C18.7614 8 21 9.11929 21 10.5C21 11.8807 18.7614 13 16 13Z M11 14.5C11 15.8807 13.2386 17 16 17C18.7614 17 21 15.8807 21 14.5 M3 9.5C3 10.8807 5.23858 12 8 12C9.12583 12 10.1647 11.814 11.0005 11.5 M3 13C3 14.3807 5.23858 15.5 8 15.5C9.12561 15.5 10.1643 15.314 11 15.0002 M3 5.5V16.5C3 17.8807 5.23858 19 8 19C9.12563 19 10.1643 18.8139 11 18.5 M13 8.5V5.5 M11 10.5V18.5C11 19.8807 13.2386 21 16 21C18.7614 21 21 19.8807 21 18.5V10.5 M8 8C5.23858 8 3 6.88071 3 5.5C3 4.11929 5.23858 3 8 3C10.7614 3 13 4.11929 13 5.5C13 6.88071 10.7614 8 8 8Z"/></svg>',
+   chat:'<svg viewBox="0 0 24 24"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2.5 21.5L7 20.6622C8.47087 21.513 10.1786 22 12 22Z"/></svg>'
+  };
   let h=`<div class="steck-head"><div class="st-logo">${logo}</div><div><div class="steck-cat" style="color:${accent}">${d.vendor||''}${ol}</div></div></div>`;
   h+=`<p class="st-blurb">${d.blurb||''}</p>`;
   const A=d.aa;
-  if(A&&(A.score||A.priceIn||A.priceOut)){ h+=`<div class="st-aa"><span class="st-aa-l">Artificial Analysis</span><div class="st-aa-row">`;
-    if(A.score){const p=A.score.split(' ');h+=`<span><b>${p[0]}</b> <i>${p.slice(1).join(' ')||'Score'}</i></span>`;}
-{{T:t075}}
+  if(A&&(A.intel||A.speed||A.cost||A.verb)){ h+=`<div class="st-aa"><span class="st-aa-l">Artificial Analysis</span><div class="st-aa-grid">`;
+{{T:t097}}
 {{T:t076}}
   if(d.plans){
     const _segs=d.plans.split(' \u00b7 ');

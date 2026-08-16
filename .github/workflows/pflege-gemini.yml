@@ -1,0 +1,118 @@
+# Weekly upkeep, second opinion.
+#
+# The same job as pflege.yml, run by a different harness. Thursdays, so the
+# two do not collide and you get one proposal from each per week.
+#
+# For a catalogue *about* AI agents this is not a gimmick. Over a few weeks
+# you can read side by side which one researches more carefully and which one
+# writes better German. That is data you cannot get from a comparison table.
+#
+# Both run against the same guard rails: build check, chips against fact
+# sheets, pull requests only. Neither can publish.
+name: Weekly upkeep (Gemini)
+
+on:
+  schedule:
+    # Thursdays 06:20 UTC. Claude runs Mondays.
+    - cron: "20 6 * * 4"
+  workflow_dispatch:
+    inputs:
+      focus:
+        description: "Optional: what to look at this run (leave empty to let it choose)"
+        required: false
+        type: string
+
+jobs:
+  upkeep:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # gh and git need an identity before they will commit or open a PR.
+      - name: Identity for the bot
+        run: |
+          git config user.name  "Gemini Upkeep"
+          git config user.email "gemini-upkeep@users.noreply.github.com"
+
+      - name: Research and propose
+        uses: google-github-actions/run-gemini-cli@v0.1.22
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          workflow_name: weekly-upkeep
+          # No tools.core restriction on purpose. Restricting means naming
+          # every tool exactly right, and a typo removes a capability
+          # silently. The safety here comes from the pull-request-only model
+          # and the build check, not from a shortened tool list.
+          settings: |-
+            {
+              "model": { "maxSessionTurns": 60 }
+            }
+          prompt: |
+            You are the upkeep agent for this catalogue, running as a second
+            opinion alongside a Claude-driven one. Read GEMINI.md first — it
+            is the same file as CLAUDE.md and its rules bind you. Especially:
+            never invent a fact or a link, never edit site/ by hand, never
+            push to main, one topic per pull request.
+
+            ${{ github.event.inputs.focus && format('The maintainer asked you to look at this specifically: {0}', github.event.inputs.focus) || '' }}
+
+            ## Pick exactly one thing
+
+            ${{ github.event.inputs.focus && 'The instruction above overrides the priority list below.' || 'Work down this list and stop at the first item that yields real work:' }}
+
+            1. **A dead or moved link.** Fetch the `links.home` of fact sheets
+               in content/steckbrief.json. If one no longer resolves or now
+               redirects elsewhere, that is the run's topic.
+
+            2. **A stale price.** 42 entries carry a `plans` field, and those
+               go out of date fastest. Check a handful against the vendor's
+               current pricing page.
+
+            3. **A declared gap.** content/arbeitsarten.json marks stations
+               with a `luecke` field, each describing in one sentence what is
+               missing. If a tool now exists that fills one, add its fact
+               sheet and assign it.
+
+            4. **Something genuinely new.** A model, harness or MCP server
+               that has appeared since the catalogue was last touched.
+
+            Before you start, look at the open pull requests with
+            `gh pr list`. If the other agent already proposed the same thing
+            this week, pick the next item instead. Two agents fixing the same
+            link is wasted review time.
+
+            If none of the four yields anything, that is a good outcome. Open
+            no pull request. Say what you checked and stop.
+
+            ## How to work
+
+            Research with google_web_search and web_fetch. Prefer the
+            vendor's own pages and repositories over write-ups about them.
+
+            Change content/*.json only. Then:
+
+                python3 build/build.py
+                python3 build/build.py --check
+
+            The second command must exit 0. If it does not, you have broken
+            something — fix it before going further.
+
+            ## How to hand it over
+
+            Create a branch named `upkeep-gemini/<short-topic>`, commit the
+            source change together with the rebuilt site/ files, and open a
+            pull request against main with `gh pr create`.
+
+            Prefix the pull request title with `[Gemini]` so the maintainer
+            can tell the two agents apart at a glance.
+
+            The body must contain, for every claim you changed or added, the
+            source URL it rests on. Also say plainly what you did NOT verify.
+            A reviewer who has to guess what you checked cannot review.

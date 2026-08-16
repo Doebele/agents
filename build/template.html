@@ -1130,6 +1130,7 @@ function renderOverview(m){
     h+=`</div></div>`; });
   if(m.insight) h+=`<div class="insight${m.insight.warn?' warn':''}">${m.insight.text}</div>`;
   body.innerHTML=h;
+  if(_gtReady) linkGlossary();
 }
 function renderDetail(key){
   const d=STECKBRIEF[key]; if(!d) return;
@@ -1206,6 +1207,8 @@ function renderDetail(key){
   h+=`</div>`; }
 {{T:t082}}
   body.innerHTML=h;
+  /* Der Steckbrief-Text ist frisch im DOM — Glossarbegriffe darin verknuepfen. */
+  if(_gtReady) linkGlossary();
 }
 function openDrawer(m){
   currentModule=m; renderOverview(m); detailActive=false;
@@ -1442,52 +1445,66 @@ if(G && ST){
 {{DATA:GLOSSARY}}
 (function renderGlossary(){ const g=$('#gloss'); if(g) g.innerHTML=GLOSSARY.map(x=>`<div class="g"><div class="gt"><code>${x.t}</code></div><div class="gd">${x.d}</div></div>`).join(''); })();
 /* ---- Glossar im Fliesstext ---------------------------------------------
-   Die erste Nennung jedes Glossarbegriffs wird antippbar. Quelle ist das
-   GLOSSARY-Array: ein neuer Eintrag verlinkt sich dadurch von selbst.
-   Die Definition steht als unsichtbarer Text direkt am Begriff (fuer
-   Screenreader via aria-describedby); sichtbar wird sie in einem einzigen
-   Popover an <body>. */
+   Jede Nennung eines Glossarbegriffs wird antippbar — nicht nur die erste.
+   Quelle ist das GLOSSARY-Array: ein neuer Eintrag verlinkt sich dadurch
+   von selbst. Die Definition steht als unsichtbarer Text direkt am Begriff
+   (fuer Screenreader via aria-describedby); sichtbar wird sie in einem
+   einzigen Popover an <body>.
+   Der Drawer rendert seinen Inhalt erst beim Oeffnen — darum laeuft die
+   Verknuepfung nach jedem Drawer-Render erneut. Bereits verpackte Stellen
+   werden am .gt-wrap erkannt und uebersprungen. */
 var _gtReady = false;
 const GTERM_SCOPE = '#sec-thesis .big, #sec-thesis .body, #sec-loop .s-head p, .loop-detail p,'
   + ' #sec-oc .s-head p, #sec-oc .lead, #sec-oc .oc-verdict,'
   + ' #sec-hosting .s-head p, #sec-hosting .pgf, #sec-hosting .osn, #sec-hosting .hw-rule, #sec-hosting .hw-mine,'
-  + ' #sec-rules .rule-card p';
-const _gtDone = new Set();
+  + ' #sec-rules .rule-card p,'
+  + ' .mod .lede, #sec-start .start-p,'
+  + ' #drawer .d-lede, #drawer .st-blurb, #drawer .st-plans, .st-aa-tile .t-k';
 let _gtPop = null;
+let _gtSeq = 0;
 function _gtSlug(s){ return 'gp-' + s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
-function _gtWrapFirst(root, g){
+function _gtWrapAll(root, g){
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-    acceptNode: n => n.parentElement && n.parentElement.closest('.gterm,.gt-desc,a,code,h1,h2,h3')
+    /* Button-in-Button ist ungültiges HTML: alles Interaktive und alles schon
+       Verpackte bleibt unberührt. */
+    acceptNode: n => n.parentElement && n.parentElement.closest('.gterm,.gt-wrap,.gt-desc,a,code,h1,h2,h3,button,.wz-opt,.wz-info')
       ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
   });
+  const nodes = [];
+  while(walker.nextNode()) nodes.push(walker.currentNode);
   const esc = g.t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   // Bindestrich danach erlaubt: deutsche Komposita wie "MCP-Server", "Frontier-Niveau"
   const re = new RegExp('(^|[^\\p{L}\\p{N}\\-])(' + esc + ')(s|n|e|en)?(?![\\p{L}\\p{N}])', 'iu');
-  let node;
-  while((node = walker.nextNode())){
-    const m = re.exec(node.nodeValue);
-    if(!m) continue;
-    const at = m.index + m[1].length, hit = m[2] + (m[3] || '');
-    const after = node.splitText(at); after.nodeValue = after.nodeValue.slice(hit.length);
-    const wrap = document.createElement('span'); wrap.className = 'gt-wrap';
-    const btn = document.createElement('button');
-    btn.type = 'button'; btn.className = 'gterm'; btn.textContent = hit;
-    btn.setAttribute('aria-expanded', 'false');
-    btn.dataset.gt = g.t;
-    const desc = document.createElement('span');
-    desc.className = 'gt-desc'; desc.id = _gtSlug(g.t); desc.textContent = g.t + ': ' + g.d;
-    btn.setAttribute('aria-describedby', desc.id);
-    wrap.append(btn, desc);
-    after.parentNode.insertBefore(wrap, after);
-    return true;
+  let wraps = 0;
+  for(const start of nodes){
+    let node = start;
+    let m;
+    while(node && (m = re.exec(node.nodeValue))){
+      const at = m.index + m[1].length, hit = m[2] + (m[3] || '');
+      if(!hit){ break; }
+      const after = node.splitText(at); after.nodeValue = after.nodeValue.slice(hit.length);
+      const wrap = document.createElement('span'); wrap.className = 'gt-wrap';
+      const btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'gterm'; btn.textContent = hit;
+      btn.setAttribute('aria-expanded', 'false');
+      btn.dataset.gt = g.t;
+      const desc = document.createElement('span');
+      /* Jede Verpackung braucht eine eigene id — der Begriff kommt ja mehrfach vor. */
+      desc.className = 'gt-desc'; desc.id = _gtSlug(g.t) + '-' + (++_gtSeq);
+      desc.textContent = g.t + ': ' + g.d;
+      btn.setAttribute('aria-describedby', desc.id);
+      wrap.append(btn, desc);
+      after.parentNode.insertBefore(wrap, after);
+      wraps++;
+      node = after;
+    }
   }
-  return false;
+  return wraps;
 }
 function linkGlossary(){
   const scope = $$(GTERM_SCOPE);
-  GLOSSARY.slice().sort((a,b)=>b.t.length-a.t.length).forEach(g=>{
-    if(_gtDone.has(g.t)) return;
-    for(const root of scope){ if(_gtWrapFirst(root, g)){ _gtDone.add(g.t); break; } }
+  GLOSSARY.slice().sort((a,b)=>(b.t.length||0)-(a.t.length||0)).forEach(g=>{
+    for(const root of scope){ _gtWrapAll(root, g); }
   });
 }
 function _gtOpen(btn){

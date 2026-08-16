@@ -116,5 +116,45 @@
    "de": "Die jeweils stärksten, neuesten Modelle – meist nur per API des Anbieters.",
    "en": "The strongest, newest models at any time — usually via the vendor's API only."
   }
+ },
+ {
+  "t": {
+   "de": "Intelligenz",
+   "en": "Intelligence"
+  },
+  "d": {
+   "de": "Die Punktzahl im Artificial-Analysis-Block: mehrere Denkprüfungen, zusammengefasst auf einer Skala. Rang und Punkte gelten immer relativ zur Vergleichsklasse des Modells.",
+   "en": "The score in the Artificial Analysis block: several reasoning tests collapsed onto one scale. Rank and points are always relative to the model's comparison class."
+  }
+ },
+ {
+  "t": {
+   "de": "Tempo",
+   "en": "Speed"
+  },
+  "d": {
+   "de": "Wie schnell ein Modell antwortet, gemessen in Tokens pro Sekunde. Von Artificial Analysis erhoben und gegen die Vergleichsklasse eingeordnet.",
+   "en": "How fast a model answers, measured in tokens per second. Collected by Artificial Analysis and ranked against the comparison class."
+  }
+ },
+ {
+  "t": {
+   "de": "Kosten",
+   "en": "Cost"
+  },
+  "d": {
+   "de": "Was ein Modell kostet: je nach Anbieter als Monatsabo oder je 1M Tokens, getrennt für Eingabe und Ausgabe. Die Balken im Steckbrief vergleichen immer innerhalb derselben Einheit.",
+   "en": "What a model costs: a monthly subscription or per 1M tokens depending on the vendor, split into input and output. The bars in a fact sheet only compare within the same unit."
+  }
+ },
+ {
+  "t": {
+   "de": "Ausführlichkeit",
+   "en": "Verbosity"
+  },
+  "d": {
+   "de": "Wie viele Tokens ein Modell ausgibt, bis eine Aufgabe fertig ist — Artificial Analysis misst das am Intelligence Index. Viel Ausgabe heißt längeres Warten und höhere Kosten, nicht mehr Inhalt.",
+   "en": "How many tokens a model emits before a task is done — Artificial Analysis measures this on the Intelligence Index. More output means longer waits and higher cost, not more content."
+  }
  }
 ]

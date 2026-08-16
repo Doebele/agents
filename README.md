@@ -81,3 +81,17 @@ was derived on two branches at the same time.
 
 Without FTP credentials in the repository secrets the upload step is skipped
 and only the build runs, which still validates the content.
+
+## Upkeep
+
+Three agents keep the catalogue current, each with its own weekly run:
+Claude on Mondays, Gemini on Thursdays, Kimi on Saturdays (`pflege*.yml`).
+Each proposes at most one topic as a pull request — the merge button is the
+human gate, and merging deploys. `build/linkcheck.py` writes a link report
+before the Kimi run, so the model judges links instead of fetching them.
+
+Orders go in through an issue or comment containing `@claude` (`zuruf.yml`),
+the focus field of a manual run, or a Telegram message to the bot — the
+worker in `telegram/` forwards it as a dispatch into the Kimi run. Setup for
+the Telegram side, including the merge/approve buttons it puts under every
+agent pull request: `telegram/README.md`.

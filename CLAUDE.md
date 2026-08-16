@@ -16,19 +16,21 @@ Not "according to the docs" — the address.
 
 ## Never edit `site/`
 
-`site/index.html` and `site/index.de.html` are **build outputs**. Editing them
-is silently undone by the next build.
+`site/index.html` and `site/index.de.html` are **build outputs**. They are
+not in git, and the deploy workflow builds them. Editing them is silently
+undone by the next build, and committing them is impossible.
 
 Content lives in `content/*.json`, structure and logic in
-`build/template.html`. After any change:
+`build/template.html`. After any change, build once to see the result and to
+let the validation run:
 
 ```bash
-python3 build/build.py          # regenerate both language files
-python3 build/build.py --check  # must exit 0
+python3 build/build.py
 ```
 
-Commit the rebuilt `site/` files together with the source change. The deploy
-workflow refuses to publish when they disagree.
+It refuses to write when something is inconsistent. Commit only the source
+change. The pages get built again on merge, which is why two pull requests
+can no longer merge into a page that matches neither.
 
 ## Both languages or neither
 

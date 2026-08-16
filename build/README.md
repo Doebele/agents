@@ -1,18 +1,22 @@
 # Build
 
-The two pages in `site/` are **build outputs**. Editing them directly loses
-the change on the next build.
+The two pages in `site/` are **build outputs** and are not in git. The deploy
+workflow builds them; locally you build them yourself.
 
 ```bash
 python3 build/build.py            # builds site/index.html and site/index.de.html
 python3 build/build.py --check    # builds only, reports differences
 ```
 
+`--check` is for comparing an existing pair against the source. Since the
+pages left git it matters mainly locally, after pulling changes someone else
+made.
+
 ## Where things live
 
 | File | Content |
 |---|---|
-| `content/steckbrief.json` | the 109 fact sheets |
+| `content/steckbrief.json` | the 113 fact sheets |
 | `content/modules.json` | the seven building blocks, with their chips and groups |
 | `content/glossary.json` | glossary terms |
 | `content/arbeitsarten.json` | kinds of work, wizard steps, prerequisites, tutorial |

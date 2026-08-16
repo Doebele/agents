@@ -96,19 +96,19 @@ jobs:
             Research with google_web_search and web_fetch. Prefer the
             vendor's own pages and repositories over write-ups about them.
 
-            Change content/*.json only. Then:
+            Change content/*.json only. Then run:
 
                 python3 build/build.py
-                python3 build/build.py --check
 
-            The second command must exit 0. If it does not, you have broken
-            something — fix it before going further.
+            It must exit 0. It validates before it writes, so a failure means
+            you broke something — fix it before going further.
+
+            Do NOT commit site/. Those files are not in git; the deploy
+            workflow builds them.
 
             ## How to hand it over
 
-            Create a branch named `upkeep-gemini/<short-topic>`, commit the
-            source change together with the rebuilt site/ files, and open a
-            pull request against main with `gh pr create`.
+            Create a branch named `upkeep-gemini/<short-topic>`, commit the source change, and open a pull request against main with `gh pr create`.
 
             Prefix the pull request title with `[Gemini]` so the maintainer
             can tell the two agents apart at a glance.

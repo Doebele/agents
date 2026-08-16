@@ -1,22 +1,26 @@
-# Two things in one workflow:
+# Build and deploy.
 #
-# 1. On every push it verifies that site/ still matches content/. That catches
-#    the most common mistake — content edited, rebuild forgotten.
-# 2. If the FTP credentials are present, the pages are then uploaded to
-#    agents.medvesek.com. Without them only that step is skipped; the check
-#    still runs.
+# The pages are built here, not committed. That was a deliberate change after
+# two pull requests, each correct on its own branch, merged into a site/ that
+# matched neither: the fact-sheet count is derived at build time, and git
+# merges text, not derivations. Building after the merge makes that class of
+# mistake impossible rather than merely detectable.
+#
+# build.py validates before it writes — a missing translation, a chip without
+# a fact sheet, a fact sheet no chip reaches all stop it. So the build step is
+# also the check, and it runs on pull requests too.
 #
 # The secrets context is available in no if-condition — neither on the job nor
 # on the step. So the value moves into env first and the condition reads env.
-name: Check and deploy
+name: Build and deploy
 
 on:
   push:
     branches: [main]
     paths:
-      - 'site/**'
       - 'content/**'
       - 'build/**'
+      - 'site/.htaccess'
   pull_request:
   workflow_dispatch:
 
@@ -28,8 +32,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verify build is current
-        run: python3 build/build.py --check
+      - name: Build both language files
+        run: python3 build/build.py
 
       # Strato speaks SFTP on port 22, not FTP on 21 — the host behind the
       # secret reverse-resolves to sshio.rzone.de.
@@ -52,12 +56,6 @@ jobs:
             set sftp:auto-confirm yes
             set net:max-retries 2
             # The SFTP login already lands in the subdomain's document root.
-            # An extra mkdir/cd would nest a second agents/ inside it — which
-            # is exactly what happened once, hence the cleanup below.
-            rm -f agents/index.html
-            rm -f agents/index.de.html
-            rm -f agents/.htaccess
-            rmdir agents
             put -O . site/index.html
             put -O . site/index.de.html
             put -O . site/.htaccess

@@ -12,15 +12,15 @@ Two deliverables from one source:
 
 ## What is in it
 
-Seven building blocks that make up every AI agent, with **109 fact sheets** on
+Seven building blocks that make up every AI agent, with **113 fact sheets** on
 the models, tools and services behind them. Plus a wizard that assembles a
 setup from the kind of work you do — including the prerequisites that have to
 exist first, and a Markdown sheet you hand to your own agent to do the setup.
 
 ## Build
 
-The two HTML files are **build outputs**. Editing them directly loses the
-change on the next build.
+The two HTML files are **build outputs** and are not in git. Clone the
+repository and build once before you open anything.
 
 ```bash
 python3 build/build.py            # builds both language files
@@ -73,7 +73,11 @@ python3 verify_pptx.py     # checks it against the acceptance criteria
 
 ## Deployment
 
-`site/` is uploaded to shared hosting by the GitHub Action in
-`.github/workflows/strato.yml`. It first verifies that `site/` still matches
-`content/`, then uploads. Without FTP credentials in the repository secrets
-the upload step is skipped and only the check runs.
+The GitHub Action in `.github/workflows/strato.yml` builds the pages and
+uploads them to shared hosting. Building after the merge rather than
+committing the result means two pull requests can never merge into a page
+that matches neither, which is what happened once when the fact-sheet count
+was derived on two branches at the same time.
+
+Without FTP credentials in the repository secrets the upload step is skipped
+and only the build runs, which still validates the content.

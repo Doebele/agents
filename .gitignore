@@ -11,3 +11,8 @@ playwright-report/
 *.log
 __pycache__/
 *.pyc
+
+# built by build/build.py, and by the deploy workflow. Not committed:
+# two branches that each build correctly merge into a file matching neither.
+site/index.html
+site/index.de.html

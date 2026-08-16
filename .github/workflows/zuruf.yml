@@ -53,10 +53,9 @@ jobs:
             triggered you.
 
             If it involves changing the catalogue: edit content/*.json, then
-            run `python3 build/build.py` followed by
-            `python3 build/build.py --check`, which must exit 0. Commit the
-            rebuilt site/ files with the source change, and open a pull
-            request with the source URL for every claim.
+            run `python3 build/build.py`, which must exit 0. Commit only the
+            source change — site/ is not in git, the deploy workflow builds
+            it. Open a pull request with the source URL for every claim.
 
             If the request is unclear, or if doing it would mean guessing at a
             fact, do not guess. Reply in the thread and ask.

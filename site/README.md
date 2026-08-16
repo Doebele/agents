@@ -1,13 +1,12 @@
 # Build outputs
 
-The files in this folder are **generated**. Do not edit them — the next build
-overwrites the change.
+`index.html` and `index.de.html` are **generated and not in git**. Run
+`python3 build/build.py` from the repository root and they appear here:
+English as `index.html`, German as `index.de.html`. Editing them is undone by
+the next build.
 
-| File | Language |
-|---|---|
-| `index.html` | English (default) |
-| `index.de.html` | German |
-| `.htaccess` | disables the inherited rewrite rules of the parent domain |
+`.htaccess` is committed. It disables the inherited rewrite rules of the
+parent domain and is uploaded along with the pages.
 
 Both pages are self-contained and open by double-click. An internet
 connection is needed for the CDN libraries (GSAP) and the vendor logos;

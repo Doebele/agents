@@ -90,7 +90,8 @@ Each proposes at most one topic as a pull request — the merge button is the
 human gate, and merging deploys. `build/linkcheck.py` writes a link report
 before the Kimi run, so the model judges links instead of fetching them.
 
-Orders go in through an issue or comment containing `@claude` (`zuruf.yml`),
+Orders go in through an issue or comment containing `@claude` (answered by
+the installed Claude GitHub app, not by a workflow in this repository),
 the focus field of a manual run, or a Telegram message to the bot — the
 worker in `telegram/` forwards it as a dispatch into the Kimi run. Setup for
 the Telegram side, including the merge/approve buttons it puts under every

@@ -92,7 +92,8 @@ Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 ## On demand
 
 Beyond the schedule, the agents take orders three ways: an issue or comment
-containing @claude (zuruf.yml), the focus field of a manual run
+containing @claude (answered by the installed Claude GitHub app, not by a
+workflow here), the focus field of a manual run
 (workflow_dispatch), and a Telegram message routed through telegram/ into
 the Kimi run (repository_dispatch). An ordered task overrides the topic
 list — but stays one topic per pull request.

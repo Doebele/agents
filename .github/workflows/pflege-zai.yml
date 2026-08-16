@@ -1,0 +1,166 @@
+# Weekly upkeep, fourth opinion — GLM by way of Z.AI.
+#
+# ZCode itself cannot do this: its own install docs say it is a desktop
+# application, no command line, no headless mode. So the model comes in
+# through a harness that does have one.
+#
+# Kimi Code CLI takes any OpenAI-shaped provider with a custom base_url, and
+# Z.AI serves chat completions under /api/paas/v4. Same harness as the Kimi
+# run, different model behind it.
+#
+# Tuesdays. Claude Monday, Gemini Thursday, Kimi Saturday.
+name: Weekly upkeep (Z.AI)
+
+on:
+  schedule:
+    # Saturdays 06:20 UTC.
+    - cron: "20 6 * * 2"
+  workflow_dispatch:
+    inputs:
+      focus:
+        description: "Optional: what to look at this run (leave empty to let it choose)"
+        required: false
+        type: string
+  repository_dispatch:
+    types: [telegram]
+
+jobs:
+  upkeep:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+
+      # The deterministic half of the link check, so the model spends its
+      # attention on judging, not on fetching: this writes
+      # linkcheck-report.md, and the prompt below points at it. A 403 from a
+      # bot-walled site is not a dead link — the report is input, not verdict.
+      - name: Link report
+        run: python3 build/linkcheck.py
+
+      - name: Identity for the bot
+        run: |
+          git config user.name  "Z.AI Upkeep"
+          git config user.email "zai-upkeep@users.noreply.github.com"
+
+      # The vendor installs by piping a remote script into bash. That is one
+      # more thing to trust on every run than a pinned action would be, and
+      # it is worth being aware of rather than not noticing.
+      - name: Install Kimi Code CLI
+        run: |
+          curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
+          # The installer reports "Installed to ~/.kimi-code/bin/kimi" and
+          # appends that to .bashrc, which a non-login step never reads.
+          echo "$HOME/.kimi-code/bin" >> "$GITHUB_PATH"
+          # Fail here, not three steps later with "command not found", if the
+          # installer ever moves.
+          test -x "$HOME/.kimi-code/bin/kimi" || {
+            echo "kimi binary not where expected; installer output above"; exit 1; }
+
+      # Same shape as the Kimi run: probe first, write config after. Z.AI does
+      # not advertise OpenAI compatibility in so many words, but it serves
+      # chat completions under /api/paas/v4, which is the shape the CLI's
+      # `openai` provider type speaks. If that turns out wrong, the probe says
+      # so in the log rather than failing three steps later.
+      - name: Credentials and model into config.toml
+        env:
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          ZAI_MODEL: ${{ vars.ZAI_MODEL }}
+        run: |
+          set -euo pipefail
+          test -n "$ZAI_API_KEY" || { echo "ZAI_API_KEY is not set"; exit 1; }
+
+          BASE="https://api.z.ai/api/paas/v4"
+          echo "--- probing $BASE/models"
+          code=$(curl -sS -o /tmp/models.json -w '%{http_code}' \
+                 -H "Authorization: Bearer $ZAI_API_KEY" "$BASE/models" || echo 000)
+          echo "    HTTP $code"
+          head -c 300 /tmp/models.json; echo
+
+          if [ "$code" = "200" ]; then
+            MODEL=$(python3 -c '
+          import json, os, sys
+          ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
+          print("Available:", ", ".join(ids), file=sys.stderr)
+          want = os.environ.get("ZAI_MODEL") or ""
+          if want:
+              if want not in ids: sys.exit(f"ZAI_MODEL={want} is not in the list")
+              print(want)
+          else:
+              print(sorted([i for i in ids if i.lower().startswith("glm")] or ids)[-1])
+          ')
+          else
+            # Some vendors do not expose /models. Fall back to the id their own
+            # documentation uses in its examples, and let the run say so.
+            echo "    no model list; falling back to the documented example id"
+            MODEL="${ZAI_MODEL:-glm-5.2}"
+          fi
+          test -n "$MODEL" || { echo "No model could be chosen."; exit 1; }
+          echo "Using model: $MODEL"
+
+          mkdir -p "$HOME/.kimi-code"
+          cat > "$HOME/.kimi-code/config.toml" <<TOML
+          default_model = "upkeep"
+          default_permission_mode = "auto"
+          telemetry = false
+
+          [providers.zai]
+          type = "openai"
+          base_url = "$BASE"
+          api_key = "$ZAI_API_KEY"
+
+          [models.upkeep]
+          provider = "zai"
+          model = "$MODEL"
+          max_context_size = 131072
+          TOML
+          chmod 600 "$HOME/.kimi-code/config.toml"
+          kimi --version
+
+      - name: Research and propose
+        run: |
+          kimi -p "$(cat <<'PROMPT'
+          You are the upkeep agent for this catalogue, running as a fourth
+          opinion alongside a Claude-, a Gemini- and a Kimi-driven one. Read
+          AGENTS.md first — it is the same file as CLAUDE.md and its rules
+          bind you. Especially: never invent a fact or a link, never edit
+          site/ by hand, never push to main, one topic per pull request.
+
+          Pick exactly one thing. Work down this list and stop at the first
+          item that yields real work:
+
+          1. A dead or moved link. linkcheck-report.md in the repo root was
+             just written by build/linkcheck.py — work through what it lists,
+             and re-check by hand before changing anything: a 403 from a
+             bot-walled site is not a dead link.
+          2. A stale price. Entries carrying a `plans` field go out of date
+             fastest. Check a handful against the vendor's pricing page.
+          3. A declared gap. content/arbeitsarten.json marks stations with a
+             `luecke` field describing what is missing.
+          4. Something genuinely new that a beginner would plausibly meet.
+
+          Before you start, run `gh pr list`. If another agent already
+          proposed the same thing this week, pick the next item instead.
+
+          If none of the four yields anything, that is a good outcome. Open
+          no pull request. Say what you checked and stop.
+
+          Change content/*.json only, then run `python3 build/build.py`. It
+          must exit 0; it validates before it writes. Do NOT commit site/ —
+          those files are not in git, the deploy workflow builds them.
+
+          Create a branch named `upkeep-zai/<short-topic>`, commit the
+          source change, and open a pull request against main with
+          `gh pr create`. Prefix the title with [Z.AI].
+
+          The body must contain, for every claim you changed or added, the
+          source URL it rests on. Also say plainly what you did NOT verify.
+          PROMPT
+          )${{ (github.event.inputs.focus || github.event.client_payload.task) && format('
+
+          The maintainer asked you to look at this specifically, which overrides the list above: {0}', (github.event.inputs.focus || github.event.client_payload.task)) || '' }}"

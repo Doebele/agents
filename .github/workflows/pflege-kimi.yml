@@ -57,17 +57,57 @@ jobs:
           test -x "$HOME/.kimi-code/bin/kimi" || {
             echo "kimi binary not where expected; installer output above"; exit 1; }
 
-      - name: Credentials into config.toml
+      # A first attempt wrote only the api_key and failed with "No model
+      # configured". The CLI wants a provider, a model alias and a
+      # default_model pointing at it.
+      #
+      # Rather than guess the model id, ask the vendor which ones the key can
+      # reach. An override lives in the repository variable KIMI_MODEL.
+      - name: Credentials and model into config.toml
         env:
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          KIMI_MODEL: ${{ vars.KIMI_MODEL }}
         run: |
           test -n "$KIMI_API_KEY" || { echo "KIMI_API_KEY is not set"; exit 1; }
-          # The documented default location. No KIMI_CODE_HOME override, so
-          # there is one assumption less to get wrong.
+
+          echo "Models this key can reach:"
+          curl -sS -H "Authorization: Bearer $KIMI_API_KEY" \
+               https://api.moonshot.ai/v1/models > /tmp/models.json || true
+          python3 - <<'PY' | tee /tmp/model.txt
+          import json, os, sys
+          try:
+              ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
+          except Exception as e:
+              print("could not list models:", e, file=sys.stderr); raise SystemExit(1)
+          for i in ids: print("  -", i, file=sys.stderr)
+          gewuenscht = os.environ.get("KIMI_MODEL") or ""
+          if gewuenscht:
+              if gewuenscht not in ids:
+                  print(f"KIMI_MODEL={gewuenscht} is not in the list", file=sys.stderr)
+                  raise SystemExit(1)
+              print(gewuenscht)
+          else:
+              # Newest generation first, otherwise whatever the key offers.
+              bevorzugt = [i for i in ids if "k3" in i.lower()] or ids
+              print(sorted(bevorzugt)[0])
+          PY
+          MODEL="$(tail -1 /tmp/model.txt)"
+          echo "Using model: $MODEL"
+
           mkdir -p "$HOME/.kimi-code"
           cat > "$HOME/.kimi-code/config.toml" <<TOML
+          default_model = "upkeep"
+          default_permission_mode = "auto"
+          telemetry = false
+
           [providers.kimi]
+          type = "kimi"
+          base_url = "https://api.moonshot.ai/v1"
           api_key = "$KIMI_API_KEY"
+
+          [models.upkeep]
+          provider = "kimi"
+          model = "$MODEL"
           TOML
           chmod 600 "$HOME/.kimi-code/config.toml"
           kimi --version

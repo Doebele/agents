@@ -708,12 +708,15 @@ button.it{ width:100%; font-family:var(--body); text-align:left; background:none
 .st-aa-src svg{ width:12px; height:12px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 .st-plans{ margin-top:14px; }
 .st-plans-l{ display:block; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ember); margin-bottom:8px; }
-.price-bars{ display:flex; flex-direction:column; gap:7px; }
-.price-bar{ display:flex; align-items:center; gap:10px; }
-.pb-label{ font-size:12px; color:var(--ink-dim); flex:0 0 110px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.pb-track{ flex:1; height:7px; background:rgba(255,255,255,.05); border-radius:4px; overflow:hidden; }
+.price-bars{ display:flex; flex-direction:column; gap:11px; }
+/* Name oben, Preis direkt darunter, Balken in voller Breite darunter —
+   nicht mehr Name links und Preis rechts. */
+.price-bar{ display:flex; flex-direction:column; gap:5px; }
+.pb-head{ display:flex; flex-direction:column; gap:1px; }
+.pb-name{ font-size:13px; color:var(--ink); font-weight:500; line-height:1.3; }
+.pb-cost{ font-family:var(--mono); font-size:11px; color:var(--muted); line-height:1.3; }
+.pb-track{ height:6px; background:rgba(255,255,255,.05); border-radius:4px; overflow:hidden; }
 .pb-fill{ height:100%; border-radius:4px; background:var(--mc); opacity:.6; }
-.pb-val{ font-family:var(--mono); font-size:11px; color:var(--muted); text-align:right; white-space:nowrap; }
 .price-bar.no-price .pb-track{ background:none; border-top:1px dashed var(--line-2); height:0; }
 </style>
 </head>
@@ -1155,16 +1158,41 @@ function renderDetail(key){
 {{T:t097}}
 {{T:t076}}
   if(d.plans){
+    /* Ein Plan-Segment zerlegen in Name, Preistext, Zahl und Einheitenklasse.
+       Ein Preis-Atom ist "$3" oder "3 $" — Deutsch und Englisch mischen beide
+       Formen, auch innerhalb eines Ausdrucks ("3 $/15 $", "$3/$15"). Die Klasse
+       entscheidet ueber den Massstab: Token gegen Token, Monat gegen Monat,
+       Minute gegen Minute — nie Monatsabo gegen Token-Preis. */
+    const _pPlan=function(seg){
+      const _atom='(?:\\$\\s?\\d+(?:[.,]\\d+)?|\\d+(?:[.,]\\d+)?\\s*\\$)';
+      const m=seg.match(new RegExp(_atom+'(?:\\s*\\/\\s*'+_atom+')*'));
+      if(!m) return {noPrice:true,name:seg};
+      const zahlen=m[0].match(/\d+(?:[.,]\d+)?/g).map(function(x){return parseFloat(x.replace(',','.'));});
+      let name=seg.slice(0,m.index).replace(/[\s:··–—(-]+$/,'').replace(/\([^)]*$/,'').trim();
+      const cost=seg.slice(m.index);
+      /* Ein Preispaar mit Schraegstrich ist ein In/Out-Token-Preis, auch wenn
+         das Einheitenwort fehlt oder nur als "Tok." abgekuerzt ist. */
+      let cls='mon';                                    // nacktes einzelnes $ ist hier stets ein Monats-Abo
+      if(/tok/i.test(cost)||m[0].indexOf('/')>=0) cls='tok';
+      else if(/min\.|minute/i.test(cost)) cls='min';
+      return {name:name||seg,cost:cost,val:Math.max.apply(null,zahlen),cls:cls};
+    };
     const _segs=d.plans.split(' \u00b7 ');
-    const _parsed=_segs.map(function(seg){ const m=seg.match(/^(.*?)\s+(\d+(?:[.,]\d+)?)\s*\$/);
-      if(!m) return {seg:seg,noPrice:true};
-      return {name:m[1].trim(),val:seg.slice(m[1].length).trim(),price:parseFloat(m[2].replace(',','.'))}; });
-    _parsed.sort(function(a,b){ if(a.noPrice&&b.noPrice) return 0; if(a.noPrice) return 1; if(b.noPrice) return -1; return a.price-b.price; });
-    const _maxP=Math.max.apply(null,_parsed.filter(function(p){return !p.noPrice;}).map(function(p){return p.price;}).concat([0.01]));
+    const _parsed=_segs.map(_pPlan);
+    _parsed.sort(function(a,b){ if(a.noPrice&&b.noPrice) return 0; if(a.noPrice) return 1; if(b.noPrice) return -1; return a.val-b.val; });
+    /* Der Massstab ist global ueber alle Steckbriefe, je Einheitenklasse — so
+       sind Balken verschiedener Modelle direkt vergleichbar. Einmal gereicht. */
+    if(!window._pScale){ window._pScale={tok:0,mon:0,min:0};
+      for(const _k in STECKBRIEF){ const _pl=STECKBRIEF[_k].plans;
+        if(!_pl||typeof _pl.split!=='function') continue;
+        _pl.split(' \u00b7 ').forEach(function(s){ const p=_pPlan(s);
+          if(!p.noPrice&&p.cls&&p.val>window._pScale[p.cls]) window._pScale[p.cls]=p.val; }); } }
 {{T:t077}}
     _parsed.forEach(function(p){
-      if(p.noPrice){ h+='<div class="price-bar no-price"><span class="pb-label">'+p.seg+'</span><div class="pb-track"></div><span class="pb-val">\u2014</span></div>'; }
-      else { var w=Math.max(p.price/_maxP*100,5); h+='<div class="price-bar"><span class="pb-label">'+p.name+'</span><div class="pb-track"><div class="pb-fill" style="width:'+w+'%"></div></div><span class="pb-val">'+p.val+'</span></div>'; }
+      if(p.noPrice){ h+='<div class="price-bar no-price"><div class="pb-head"><span class="pb-name">'+p.name+'</span></div><div class="pb-track"></div></div>'; }
+      else { var _s=p.cls?window._pScale[p.cls]:0;
+        var w=_s>0?Math.max(p.val/_s*100,2):0;
+        h+='<div class="price-bar"><div class="pb-head"><span class="pb-name">'+p.name+'</span><span class="pb-cost">'+p.cost+'</span></div><div class="pb-track"><div class="pb-fill" style="width:'+w+'%"></div></div></div>'; }
     });
     h+='</div></div>';
   }

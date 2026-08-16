@@ -1540,6 +1540,61 @@
   },
   "icon": "mistralai"
  },
+ "Wispr Flow": {
+  "name": "Wispr Flow",
+  "vendor": "Wispr",
+  "cat": {
+   "de": "Diktier-Werkzeug · Baustein 06",
+   "en": "Dictation tool · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": false,
+  "blurb": {
+   "de": "Diktieren statt tippen: Das Programm läuft im Hintergrund, hört auf einen Tastendruck zu und setzt den gesprochenen Satz dort ein, wo der Cursor steht — im Mailfeld, im Chat, im Editor. Anders als bei Whisper geht es nicht um vorhandene Aufnahmen, sondern um Text, der gerade entsteht; Füllwörter und Versprecher räumt es dabei weg. Über 100 Sprachen, Mac, Windows, iPhone und Android. Die Aufnahme verlässt allerdings das Gerät, der Quelltext ist geschlossen, und die Gratisstufe endet nach 2.000 Wörtern pro Woche.",
+   "en": "Dictation instead of typing: the program sits in the background, listens on a keypress and drops the spoken sentence wherever the cursor is — a mail field, a chat, an editor. Unlike Whisper it is not about recordings you already have but about text as it comes into being, and it clears out filler words and false starts on the way. Over 100 languages, on Mac, Windows, iPhone and Android. The recording does leave the device, the source is closed, and the free tier ends after 2,000 words a week."
+  },
+  "tip": {
+   "de": "Der bequemste Weg, einem Agenten einen langen Auftrag zu geben, ohne ihn zu tippen. Wer Vertrauliches spricht, sollte wissen, dass die Aufnahme zur Verarbeitung zum Anbieter geht — dafür ist OpenWhispr die lokale Alternative.",
+   "en": "The most comfortable way to give an agent a long instruction without typing it. Anyone speaking confidential material should know the recording travels to the vendor for processing — OpenWhispr is the local alternative for that."
+  },
+  "links": {
+   "home": "https://wisprflow.ai/",
+   "docs": "https://docs.wisprflow.ai/"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos bis 2.000 Wörter/Woche · Pro 15 $/Mo., jährlich 12 $/Mo. · Enterprise auf Anfrage",
+   "en": "Free up to 2,000 words/week · Pro $15/mo, $12/mo billed annually · Enterprise on request"
+  }
+ },
+ "OpenWhispr": {
+  "name": "OpenWhispr",
+  "vendor": "Gizmo Labs",
+  "cat": {
+   "de": "Diktier-Werkzeug · Baustein 06",
+   "en": "Dictation tool · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "blurb": {
+   "de": "Dasselbe Diktieren wie bei Wispr Flow, nur auf dem eigenen Rechner: Whisper oder NVIDIAs Parakeet rechnen lokal, das Gesprochene bleibt dort, wo es entsteht. Der Quelltext ist offen (MIT), Mac, Windows und Linux werden bedient, und lokales Diktieren kostet nichts. Dafür lädst du die Modelle selbst herunter, und wie flüssig es sich anfühlt, hängt an deiner Hardware.",
+   "en": "The same dictation as Wispr Flow, but on your own machine: Whisper or NVIDIA's Parakeet compute locally, and what you say stays where it is spoken. The source is open (MIT), Mac, Windows and Linux are covered, and local dictation costs nothing. In exchange you download the models yourself, and how fluid it feels depends on your hardware."
+  },
+  "tip": {
+   "de": "Die Wahl, wenn Gesprochenes das Gerät nicht verlassen darf. Wer über mehrere Geräte hinweg synchronisieren oder Besprechungen mitschneiden will, zahlt auch hier — gratis bleibt das Diktieren selbst.",
+   "en": "The pick when what you say must not leave the device. Syncing across several devices or recording meetings costs money here too — what stays free is the dictation itself."
+  },
+  "links": {
+   "home": "https://openwhispr.com/",
+   "docs": "https://github.com/OpenWhispr/openwhispr",
+   "code": "https://github.com/OpenWhispr/openwhispr"
+  },
+  "free": true,
+  "plans": {
+   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Pro 6,67 $/Mo. (80 $/Jahr) · Business 13,33 $/Mo. (160 $/Jahr) · Enterprise auf Anfrage",
+   "en": "Local dictation free, open source (MIT) · Pro $6.67/mo ($80/year) · Business $13.33/mo ($160/year) · Enterprise on request"
+  }
+ },
  "GPT-5.6": {
   "name": "GPT-5.6",
   "vendor": "OpenAI",

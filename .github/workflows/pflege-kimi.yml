@@ -34,7 +34,6 @@ jobs:
       pull-requests: write
       issues: write
     env:
-      KIMI_CODE_HOME: ${{ github.workspace }}/.kimi-home
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
@@ -50,19 +49,28 @@ jobs:
       - name: Install Kimi Code CLI
         run: |
           curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          # The installer reports "Installed to ~/.kimi-code/bin/kimi" and
+          # appends that to .bashrc, which a non-login step never reads.
+          echo "$HOME/.kimi-code/bin" >> "$GITHUB_PATH"
+          # Fail here, not three steps later with "command not found", if the
+          # installer ever moves.
+          test -x "$HOME/.kimi-code/bin/kimi" || {
+            echo "kimi binary not where expected; installer output above"; exit 1; }
 
       - name: Credentials into config.toml
         env:
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
         run: |
           test -n "$KIMI_API_KEY" || { echo "KIMI_API_KEY is not set"; exit 1; }
-          mkdir -p "$KIMI_CODE_HOME"
-          cat > "$KIMI_CODE_HOME/config.toml" <<TOML
+          # The documented default location. No KIMI_CODE_HOME override, so
+          # there is one assumption less to get wrong.
+          mkdir -p "$HOME/.kimi-code"
+          cat > "$HOME/.kimi-code/config.toml" <<TOML
           [providers.kimi]
           api_key = "$KIMI_API_KEY"
           TOML
-          chmod 600 "$KIMI_CODE_HOME/config.toml"
+          chmod 600 "$HOME/.kimi-code/config.toml"
+          kimi --version
 
       - name: Research and propose
         run: |

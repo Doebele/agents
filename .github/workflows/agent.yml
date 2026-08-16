@@ -1,0 +1,115 @@
+# Der Pflege-Agent. Drei Wege, ihn zu starten:
+#
+#   schedule            — montags 07:00 Berlin (05:00 UTC im Sommer)
+#   workflow_dispatch   — von Hand, mit optionalem Auftrag als Eingabefeld
+#   repository_dispatch — von außen, z.B. vom Telegram-Worker (telegram/)
+#   issues              — jedes neue Issue ist ein Auftrag
+#
+# Der Agent läuft als Kimi Code CLI headless. Auth läuft über die
+# KIMI_MODEL_*-Familie, die Schlüssel bewusst nur aus der Umgebung liest:
+# KIMI_API_KEY (Secret) + KIMI_MODEL_NAME (Env unten) reichen.
+# Er arbeitet nach CLAUDE.md (aka AGENTS.md) und übergibt per Pull Request —
+# Merge und damit Deploy bleiben beim Menschen.
+
+name: Agent
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'Auftrag an den Agenten (leer = normale Wochenprüfung)'
+        required: false
+        default: ''
+  repository_dispatch:
+    types: [telegram]
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: agent-run
+  cancel-in-progress: false
+
+env:
+  KIMI_MODEL_NAME: kimi-k3
+  KIMI_DISABLE_TELEMETRY: '1'
+  KIMI_CODE_NO_AUTO_UPDATE: '1'
+  KIMI_LOOP_MAX_STEPS_PER_TURN: '120'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Kimi Code
+        run: |
+          curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
+          for d in "$HOME/.local/bin" "$HOME/.kimi-code/bin" "$HOME/bin" /usr/local/bin; do
+            if [ -x "$d/kimi" ]; then echo "$d" >> "$GITHUB_PATH"; break; fi
+          done
+          command -v kimi
+
+      - name: Check links
+        run: python3 build/linkcheck.py
+
+      - name: Compose task
+        env:
+          EVENT: ${{ github.event_name }}
+          DISPATCH_TASK: ${{ github.event.client_payload.task }}
+          MANUAL_TASK: ${{ inputs.task }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          python3 - <<'PY'
+          import os
+          event = os.environ["EVENT"]
+          task = os.environ.get("DISPATCH_TASK") or os.environ.get("MANUAL_TASK") or ""
+          issue_no = os.environ.get("ISSUE_NUMBER") or ""
+          issue = ""
+          if event == "issues":
+              issue = ("GitHub-Issue #%s: %s\n\n%s" % (
+                  issue_no,
+                  os.environ.get("ISSUE_TITLE") or "",
+                  os.environ.get("ISSUE_BODY") or "")).strip()
+          if task:
+              block = "Expliziter Auftrag für diesen Lauf:\n\n" + task
+          elif issue:
+              block = issue
+          else:
+              block = "Reguläre Wochenprüfung (Link-Report + Rotationsscheibe, siehe CLAUDE.md)."
+          if issue:
+              closing = ("Schreibe stattdessen eine kurze Zusammenfassung als "
+                         "Kommentar in Issue #%s." % issue_no)
+          else:
+              closing = "Beende den Lauf dann mit einer kurzen Zusammenfassung."
+          prompt = (
+              "Du bist der Pflege-Agent dieses Repos. Lies zuerst CLAUDE.md ganz — "
+              "seine Regeln gelten ausnahmslos. Lies dann linkcheck-report.md im "
+              "Wurzelverzeichnis.\n\n"
+              + block +
+              "\n\nArbeitsweise: Änderungen nur in content/*.json. Danach "
+              "python3 build/build.py laufen lassen — der Check muss grün sein, "
+              "sonst Ursache beheben statt Ausgabe verbiegen. Erstelle einen Branch "
+              "agent/<yyyy-mm-dd>-<kurz-thema>, commite und öffne mit gh einen Pull "
+              "Request: Titel und Beschreibung auf Deutsch, jede Änderung mit "
+              "Quell-URL, offene Fragen separat.\n\n"
+              "Wenn es nichts zu ändern gibt: kein Branch, kein PR. " + closing + "\n")
+          with open("build/agent-task.md", "w") as f:
+              f.write(prompt)
+          PY
+          cat build/agent-task.md
+
+      - name: Run agent
+        env:
+          KIMI_MODEL_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: kimi -p "$(cat build/agent-task.md)"

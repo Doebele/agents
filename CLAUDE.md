@@ -16,9 +16,9 @@ Not "according to the docs" — the address.
 
 ## Never edit `site/`
 
-`site/index.html` and `site/index.de.html` are **build outputs**. They are
-not in git, and the deploy workflow builds them. Editing them is silently
-undone by the next build, and committing them is impossible.
+`site/index.html` and `site/index.de.html` are **build outputs**. The deploy
+workflow verifies them against a fresh build before uploading. Editing them by
+hand is silently undone by the next build.
 
 Content lives in `content/*.json`, structure and logic in
 `build/template.html`. After any change, build once to see the result and to
@@ -76,6 +76,24 @@ first time.
 
 Anything you mark as a recommendation is an opinion. The interface says so
 out loud; your text should not pretend otherwise.
+
+## The weekly run
+
+A scheduled agent works through this file top to bottom. Its input, in order:
+
+1. `linkcheck-report.md`, written by `build/linkcheck.py` just before the run —
+   every link marked broken there gets re-checked by hand before anything
+   changes; a 403 from a bot-walled site is not a dead link.
+2. A rotation slice: at most 15 fact sheets per run, chosen deterministically —
+   keys of `content/steckbrief.json` sorted alphabetically, slice of 15
+   starting at `(ISO week × 15) mod total`. Over the year, every sheet comes
+   up several times.
+3. Anything explicitly ordered — an issue, a manual dispatch task, a Telegram
+   message routed through `telegram/`.
+
+Branch naming: `agent/<yyyy-mm-dd>-<short-topic>`. An ordered task is not
+bound to the 15-sheet limit, but stays one topic per pull request. When the
+run was triggered by an issue, comment the pull request link back on it.
 
 ## "As of August 2026"
 

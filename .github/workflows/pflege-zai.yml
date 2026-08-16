@@ -82,23 +82,37 @@ jobs:
           echo "    HTTP $code"
           head -c 300 /tmp/models.json; echo
 
+          # /models lists what the API knows, not what this key may use.
+          # A first run picked the newest and got "403 You do not have
+          # permission to access glm-5.3". So each candidate gets a one-token
+          # completion, newest first, and the first that answers 200 wins.
           if [ "$code" = "200" ]; then
-            MODEL=$(python3 -c '
+            KANDIDATEN=$(python3 -c '
           import json, os, sys
           ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
-          print("Available:", ", ".join(ids), file=sys.stderr)
+          print("Listed:", ", ".join(ids), file=sys.stderr)
           want = os.environ.get("ZAI_MODEL") or ""
           if want:
-              if want not in ids: sys.exit(f"ZAI_MODEL={want} is not in the list")
               print(want)
           else:
-              print(sorted([i for i in ids if i.lower().startswith("glm")] or ids)[-1])
+              glm = sorted([i for i in ids if i.lower().startswith("glm")], reverse=True)
+              print("\n".join(glm or ids))
           ')
+            MODEL=""
+            for m in $KANDIDATEN; do
+              rc=$(curl -sS -o /tmp/probe.json -w '%{http_code}' \
+                   -H "Authorization: Bearer $ZAI_API_KEY" \
+                   -H "Content-Type: application/json" \
+                   -d "{\"model\":\"$m\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1}" \
+                   "$BASE/chat/completions" || echo 000)
+              echo "    $m → HTTP $rc"
+              if [ "$rc" = "200" ]; then MODEL="$m"; break; fi
+            done
+            test -n "$MODEL" || { echo "None of the listed models is usable with this key."; \
+                                  head -c 300 /tmp/probe.json; exit 1; }
           else
-            # Some vendors do not expose /models. Fall back to the id their own
-            # documentation uses in its examples, and let the run say so.
             echo "    no model list; falling back to the documented example id"
-            MODEL="${ZAI_MODEL:-glm-5.2}"
+            MODEL="${ZAI_MODEL:-glm-4.6}"
           fi
           test -n "$MODEL" || { echo "No model could be chosen."; exit 1; }
           echo "Using model: $MODEL"

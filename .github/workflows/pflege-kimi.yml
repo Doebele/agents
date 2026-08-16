@@ -92,7 +92,9 @@ jobs:
           test -n "$KIMI_API_KEY" || { echo "KIMI_API_KEY is not set"; exit 1; }
 
           BASE=""
-          for url in https://api.moonshot.ai/v1 https://api.kimi.com/coding/v1; do
+          # .cn is the third documented home: a key from the Chinese account
+          # is rejected by the international endpoint and the other way round.
+          for url in https://api.moonshot.ai/v1 https://api.kimi.com/coding/v1 https://api.moonshot.cn/v1; do
             echo "--- probing $url/models"
             code=$(curl -sS -o /tmp/models.json -w '%{http_code}' \
                    -H "Authorization: Bearer $KIMI_API_KEY" "$url/models" || echo 000)

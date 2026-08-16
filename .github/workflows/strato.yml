@@ -30,7 +30,7 @@ jobs:
     env:
       FTP_SERVER: ${{ secrets.STRATO_FTP_SERVER }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Build both language files
         run: python3 build/build.py

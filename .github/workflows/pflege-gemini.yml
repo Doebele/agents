@@ -31,7 +31,7 @@ jobs:
       issues: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # gh and git need an identity before they will commit or open a PR.
       - name: Identity for the bot

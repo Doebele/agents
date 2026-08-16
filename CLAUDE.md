@@ -77,23 +77,25 @@ first time.
 Anything you mark as a recommendation is an opinion. The interface says so
 out loud; your text should not pretend otherwise.
 
-## The weekly run
+## The weekly runs
 
-A scheduled agent works through this file top to bottom. Its input, in order:
+Three upkeep agents share the week — Claude on Mondays (pflege.yml), Gemini
+on Thursdays (pflege-gemini.yml), Kimi on Saturdays (pflege-kimi.yml). Each
+picks exactly one topic per run, working down the same short list: dead links
+first, then stale prices, then declared gaps, then what is genuinely new.
+`build/linkcheck.py` writes linkcheck-report.md before the Kimi run — a 403
+from a bot-walled site is not a dead link.
 
-1. `linkcheck-report.md`, written by `build/linkcheck.py` just before the run —
-   every link marked broken there gets re-checked by hand before anything
-   changes; a 403 from a bot-walled site is not a dead link.
-2. A rotation slice: at most 15 fact sheets per run, chosen deterministically —
-   keys of `content/steckbrief.json` sorted alphabetically, slice of 15
-   starting at `(ISO week × 15) mod total`. Over the year, every sheet comes
-   up several times.
-3. Anything explicitly ordered — an issue, a manual dispatch task, a Telegram
-   message routed through `telegram/`.
+Branch prefixes tell the proposals apart: `upkeep/<topic>`,
+`upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`.
 
-Branch naming: `agent/<yyyy-mm-dd>-<short-topic>`. An ordered task is not
-bound to the 15-sheet limit, but stays one topic per pull request. When the
-run was triggered by an issue, comment the pull request link back on it.
+## On demand
+
+Beyond the schedule, the agents take orders three ways: an issue or comment
+containing @claude (zuruf.yml), the focus field of a manual run
+(workflow_dispatch), and a Telegram message routed through telegram/ into
+the Kimi run (repository_dispatch). An ordered task overrides the topic
+list — but stays one topic per pull request.
 
 ## "As of August 2026"
 

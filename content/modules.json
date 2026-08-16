@@ -1085,6 +1085,73 @@
       "k": "Render"
      }
     ]
+   },
+   {
+    "label": {
+     "de": "Modelle betreiben",
+     "en": "Run models"
+    },
+    "items": [
+     {
+      "n": "OpenRouter",
+      "v": "Aggregator",
+      "k": "OpenRouter"
+     },
+     {
+      "n": "Together AI",
+      "v": "Managed API",
+      "k": "Together AI"
+     },
+     {
+      "n": "Fireworks AI",
+      "v": "Managed API",
+      "k": "Fireworks AI"
+     },
+     {
+      "n": "Groq",
+      "v": "Managed API",
+      "k": "Groq"
+     },
+     {
+      "n": "Replicate",
+      "v": {
+       "de": "Modelle via API",
+       "en": "models via API"
+      },
+      "k": "Replicate"
+     },
+     {
+      "n": "Modal",
+      "v": "Serverless",
+      "k": "Modal"
+     },
+     {
+      "n": "RunPod",
+      "v": "GPU-Stunden",
+      "k": "RunPod"
+     },
+     {
+      "n": "Lambda",
+      "v": "GPU-Stunden",
+      "k": "Lambda"
+     },
+     {
+      "n": "Vast.ai",
+      "v": {
+       "de": "GPU-Marktplatz",
+       "en": "GPU marketplace"
+      },
+      "k": "Vast.ai"
+     },
+     {
+      "n": "Hetzner",
+      "v": {
+       "de": "Server",
+       "en": "servers"
+      },
+      "k": "Hetzner"
+     }
+    ]
    }
   ],
   "insight": {

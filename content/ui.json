@@ -362,5 +362,9 @@
  "t095": {
   "de": "/* Sieben Streifen in den Baustein-Farben: das Versprechen des Wizards in einer Zeile */",
   "en": "/* Seven bars in the module colors: the wizard's promise in one line */"
+ },
+ "t096": {
+  "de": "        ${p.k ? `<button type=\"button\" class=\"prov-info\" data-key=\"${p.k}\" aria-label=\"Steckbrief zu ${p.n}\">i</button>` : ''}",
+  "en": "        ${p.k ? `<button type=\"button\" class=\"prov-info\" data-key=\"${p.k}\" aria-label=\"Fact sheet for ${p.n}\">i</button>` : ''}"
  }
 }

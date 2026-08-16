@@ -14,7 +14,8 @@
    "en": "monthly plan"
   },
   "free": false,
-  "url": "https://www.hostinger.com"
+  "url": "https://www.hostinger.com",
+  "k": "Hostinger"
  },
  {
   "n": "Together AI",
@@ -28,7 +29,8 @@
    "en": "per 1M tokens"
   },
   "free": true,
-  "url": "https://www.together.ai"
+  "url": "https://www.together.ai",
+  "k": "Together AI"
  },
  {
   "n": "Fireworks AI",
@@ -42,7 +44,8 @@
    "en": "per 1M tokens"
   },
   "free": true,
-  "url": "https://fireworks.ai"
+  "url": "https://fireworks.ai",
+  "k": "Fireworks AI"
  },
  {
   "n": "Groq",
@@ -56,7 +59,8 @@
    "en": "per 1M tokens"
   },
   "free": true,
-  "url": "https://groq.com"
+  "url": "https://groq.com",
+  "k": "Groq"
  },
  {
   "n": "RunPod",
@@ -70,7 +74,8 @@
    "en": "per GPU hour / second"
   },
   "free": false,
-  "url": "https://www.runpod.io"
+  "url": "https://www.runpod.io",
+  "k": "RunPod"
  },
  {
   "n": "Lambda",
@@ -84,7 +89,8 @@
    "en": "per GPU hour"
   },
   "free": false,
-  "url": "https://lambda.ai"
+  "url": "https://lambda.ai",
+  "k": "Lambda"
  },
  {
   "n": "Vast.ai",
@@ -98,7 +104,8 @@
    "en": "marketplace hourly"
   },
   "free": false,
-  "url": "https://vast.ai"
+  "url": "https://vast.ai",
+  "k": "Vast.ai"
  },
  {
   "n": "Hetzner",
@@ -115,7 +122,8 @@
    "en": "monthly / per hour"
   },
   "free": false,
-  "url": "https://www.hetzner.com"
+  "url": "https://www.hetzner.com",
+  "k": "Hetzner"
  },
  {
   "n": "Modal",
@@ -129,7 +137,8 @@
    "en": "per second"
   },
   "free": true,
-  "url": "https://modal.com"
+  "url": "https://modal.com",
+  "k": "Modal"
  },
  {
   "n": "Replicate",
@@ -143,7 +152,8 @@
    "en": "per second / output"
   },
   "free": false,
-  "url": "https://replicate.com"
+  "url": "https://replicate.com",
+  "k": "Replicate"
  },
  {
   "n": "OpenRouter",
@@ -157,6 +167,7 @@
    "en": "per 1M tokens + fee"
   },
   "free": true,
-  "url": "https://openrouter.ai"
+  "url": "https://openrouter.ai",
+  "k": "OpenRouter"
  }
 ]

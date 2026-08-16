@@ -657,6 +657,14 @@ button.it{ width:100%; font-family:var(--body); text-align:left; background:none
 .prov .tag.free{ color:var(--lime); border-color:color-mix(in srgb,var(--lime) 45%,transparent); }
 .prov a.plink{ font-family:var(--mono); font-size:11px; color:var(--ink-dim); display:inline-flex; align-items:center; gap:5px; }
 .prov a.plink svg{ width:12px; height:12px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+/* Der runde i-Knopf oeffnet den Steckbrief des Anbieters — derselbe data-key-Weg
+   wie die Chips. Als echter Button, damit die Quelle daneben ein Link bleiben darf. */
+.prov .prov-info{ font-family:var(--mono); font-size:11px; width:26px; height:26px; flex:0 0 auto;
+  display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid var(--line-2); border-radius:50%; background:transparent; color:var(--ink-dim);
+  cursor:none; transition:border-color .25s, color .25s; }
+.prov .prov-info:hover, .prov .prov-info:focus-visible{ border-color:var(--cyan); color:var(--cyan); }
+@media (pointer:coarse){ .prov .prov-info{ cursor:pointer; } }
 @media (max-width:860px){ .prov{ grid-column:span 6; } }
 @media (max-width:560px){ .prov{ grid-column:span 12; } }
 .hw-host{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
@@ -1053,6 +1061,7 @@ function renderHosting(){
         <span class="tag">${p.price}</span>
 {{T:t071}}
 {{T:t072}}
+{{T:t096}}
       </div>
     </article>`).join('') : '';
   const h=$('#hw-host');

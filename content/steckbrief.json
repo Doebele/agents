@@ -3009,5 +3009,266 @@
   "links": {
    "home": "https://render.com"
   }
+ },
+ "Together AI": {
+  "name": "Together AI",
+  "vendor": "Together AI",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Fertig gehostete offene Modelle hinter einer API: Du rufst sie auf, Together AI betreibt die Hardware. Große Auswahl an Open-Weight-Modellen, dazu Feintuning für eigene Varianten — ohne dass du je eine Grafikkarte anfassen musst.",
+   "en": "Open models hosted and served behind an API: you call them, Together AI runs the hardware. A wide choice of open-weight models, plus fine-tuning for your own variants — without ever touching a graphics card."
+  },
+  "tip": {
+   "de": "Der bequeme Mittelweg, wenn offene Modelle laufen sollen, aber keine eigene Hardware da ist. Rechnung je Million Tokens.",
+   "en": "The convenient middle way when open models should run but no hardware is around. Billed per million tokens."
+  },
+  "plans": {
+   "de": "Abrechnung je 1M Tokens · Gratisstufe",
+   "en": "Billed per 1M tokens · free tier"
+  },
+  "links": {
+   "home": "https://www.together.ai"
+  }
+ },
+ "Fireworks AI": {
+  "name": "Fireworks AI",
+  "vendor": "Fireworks AI",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Auf Geschwindigkeit optimiertes Hosting offener Modelle: schnelle Antworten über eine API, ebenfalls mit Feintuning. Wie bei allen verwalteten Diensten bestimmt der Anbieter, welche Modelle im Angebot stehen.",
+   "en": "Hosting of open models optimised for speed: fast answers through an API, fine-tuning included. As with every managed service, the provider decides which models are on offer."
+  },
+  "tip": {
+   "de": "Wenn Antwortzeit zählt — Chats, Automatisierung — lohnt sich der Vergleich mit Together AI. Rechnung je Million Tokens.",
+   "en": "When response time matters — chats, automation — worth comparing against Together AI. Billed per million tokens."
+  },
+  "plans": {
+   "de": "Abrechnung je 1M Tokens · Gratisstufe",
+   "en": "Billed per 1M tokens · free tier"
+  },
+  "links": {
+   "home": "https://fireworks.ai"
+  }
+ },
+ "Groq": {
+  "name": "Groq",
+  "vendor": "Groq",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Der Tempowechsel: Groq baut eigene Chips (LPU) statt handelsübliche Grafikkarten zu mieten und erzielt damit Antwortgeschwindigkeiten, die andere nicht erreichen. Dafür ist die Modellauswahl kleiner — es läuft nur, was Groq selbst übersetzt hat.",
+   "en": "The speed outlier: Groq builds its own chips (LPUs) instead of renting standard graphics cards, reaching answer speeds others do not. The model selection is smaller for it — only what Groq itself has ported runs there."
+  },
+  "tip": {
+   "de": "Für Demo und Chat-Erlebnis beeindruckend; wer Modellwahl braucht, wird bei Together oder Fireworks fündig. Rechnung je Million Tokens.",
+   "en": "Impressive for demos and the chat feel; for model choice, look at Together or Fireworks. Billed per million tokens."
+  },
+  "plans": {
+   "de": "Abrechnung je 1M Tokens · Gratisstufe",
+   "en": "Billed per 1M tokens · free tier"
+  },
+  "links": {
+   "home": "https://groq.com"
+  }
+ },
+ "RunPod": {
+  "name": "RunPod",
+  "vendor": "RunPod",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Grafikkarten auf Zeit: Du mietest GPUs stunden- oder sekundenweise und bringst dein eigenes Modell darauf — als dauernde Instanz oder serverlos, nur wenn eine Anfrage kommt. Mehr Kontrolle als eine fertige API, mehr Arbeit als eine fertige API.",
+   "en": "Graphics cards on demand: you rent GPUs by the hour or second and put your own model on them — as a standing instance or serverless, only when a request arrives. More control than a finished API, more work than a finished API."
+  },
+  "tip": {
+   "de": "Der Schritt zwischen „fertige API“ und „eigener Server“: eigenes Modell, aber gemietete Hardware. Rechnung je GPU-Stunde oder -Sekunde.",
+   "en": "The step between “finished API” and “own server”: your own model, but rented hardware. Billed per GPU hour or second."
+  },
+  "plans": {
+   "de": "Abrechnung je GPU-Stunde/-Sekunde",
+   "en": "Billed per GPU hour/second"
+  },
+  "links": {
+   "home": "https://www.runpod.io"
+  }
+ },
+ "Lambda": {
+  "name": "Lambda",
+  "vendor": "Lambda",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "GPU-Wolke aus dem Haus eines langjährigen Server-Händlers: dedizierte Karten auf Stundenbasis, eher für längere Läufe als für kurze Spitzen. Das eigene Modell drauf, die Hardware gemietet.",
+   "en": "A GPU cloud from a long-standing server vendor: dedicated cards by the hour, aimed more at long runs than short spikes. Your own model on top, the hardware rented."
+  },
+  "tip": {
+   "de": "Wenn ein Modell länger laufen soll — Feintuning, Dauerbetrieb — sind dedizierte Karten ruhiger als ein Marktplatz. Rechnung je GPU-Stunde.",
+   "en": "When a model should run for a while — fine-tuning, continuous duty — dedicated cards are calmer than a marketplace. Billed per GPU hour."
+  },
+  "plans": {
+   "de": "Abrechnung je GPU-Stunde",
+   "en": "Billed per GPU hour"
+  },
+  "links": {
+   "home": "https://lambda.ai"
+  }
+ },
+ "Vast.ai": {
+  "name": "Vast.ai",
+  "vendor": "Vast.ai",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Der Marktplatz unter den GPU-Vermietern: Privatleute und Rechenzentren bieten Karten an, du mietest am Marktprice. Am günstigsten von allen — und am wenigsten planbar, denn Leistung und Erreichbarkeit streuen mit dem Anbieter.",
+   "en": "The marketplace among GPU renters: individuals and data centres offer cards and you rent at market price. The cheapest of them all — and the least predictable, since performance and availability vary with the seller."
+  },
+  "tip": {
+   "de": "Für Experimente und Rechenzeit ohne Budget ideal. Für alles, was zuverlässig erreichbar sein muss, lieber einen gewerblichen Anbieter nehmen. Abrechnung stündlich.",
+   "en": "Great for experiments and compute without a budget. For anything that must reliably stay reachable, take a commercial provider instead. Billed hourly."
+  },
+  "plans": {
+   "de": "Stündliche Marktpreise",
+   "en": "Hourly market prices"
+  },
+  "links": {
+   "home": "https://vast.ai"
+  }
+ },
+ "Hetzner": {
+  "name": "Hetzner",
+  "vendor": "Hetzner",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Deutscher Hoster mit sehr günstigen dedizierten Servern und Cloud-Instanzen, Rechenzentren in Deutschland und Finnland. Für Modell-Hosting vor allem mit CPU-Seite gemeint: eigene Dienste und kleine Modelle selbst betreiben, GPU-Maschinen sind nicht das Angebot.",
+   "en": "German hoster with very cheap dedicated servers and cloud instances, data centres in Germany and Finland. For model hosting this is the CPU side of things: self-hosting your own services and small models; GPU machines are not what they sell."
+  },
+  "tip": {
+   "de": "Der Preisbrecher für alles um das Modell herum — Schnittstellen, Datenbanken, Web-Dienste. Monats- oder Stundenpreis, ohne Token-Abrechnung.",
+   "en": "The price breaker for everything around the model — interfaces, databases, web services. Monthly or hourly price, no token billing."
+  },
+  "plans": {
+   "de": "Monatlich oder stundenweise, je Instanz",
+   "en": "Monthly or hourly, per instance"
+  },
+  "icon": "hetzner",
+  "links": {
+   "home": "https://www.hetzner.com"
+  }
+ },
+ "Modal": {
+  "name": "Modal",
+  "vendor": "Modal Labs",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Serverless mit eigener Logik: Du schreibst eine Funktion, Modal bringt sie bei Bedarf mit Grafikkarte zum Laufen und stellt sie danach wieder ab. Dein eigener Code um ein Modell — nicht nur der Aufruf eines fertigen.",
+   "en": "Serverless with your own logic: you write a function, Modal runs it with a graphics card on demand and puts it away afterwards. Your own code around a model — not just calling a finished one."
+  },
+  "tip": {
+   "de": "Für Werkzeuge mit Eigenanteil — Vorverarbeitung, Pipeline, eigenes Prompting — der saubere Weg. Abgerechnet wird je Sekunde Laufzeit.",
+   "en": "For tools with a part of your own — preprocessing, pipelines, custom prompting — the clean path. Billed per second of runtime."
+  },
+  "plans": {
+   "de": "Abrechnung je Sekunde · Gratisstufe",
+   "en": "Billed per second · free tier"
+  },
+  "icon": "modal",
+  "links": {
+   "home": "https://modal.com"
+  }
+ },
+ "Replicate": {
+  "name": "Replicate",
+  "vendor": "Replicate",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Modelle wie Bausteine aufrufen: eine riesige Sammlung — Sprach-, Bild-, Audio-Modelle aus der Community — hinter einer einheitlichen API. Du suchst eines aus, rufst es auf, zahlst die Laufzeit. Eigene Modelle lassen sich ebenfalls hochladen.",
+   "en": "Calling models like building blocks: a huge collection — language, image and audio models from the community — behind one uniform API. You pick one, call it, pay the runtime. Your own models can be uploaded too."
+  },
+  "tip": {
+   "de": "Der schnellste Weg, ein bestimmtes offenes Modell auszuprobieren, ohne es selbst zu betreiben. Abrechnung je Sekunde oder je Ergebnis.",
+   "en": "The quickest way to try a specific open model without hosting it yourself. Billed per second or per output."
+  },
+  "plans": {
+   "de": "Abrechnung je Sekunde oder Ergebnis",
+   "en": "Billed per second or per output"
+  },
+  "icon": "replicate",
+  "links": {
+   "home": "https://replicate.com"
+  }
+ },
+ "OpenRouter": {
+  "name": "OpenRouter",
+  "vendor": "OpenRouter",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Die Drehscheibe: ein Schlüssel und eine Abrechnung für die Modelle vieler Anbieter — offene wie geschlossene. Der Aufruf geht an OpenRouter, der leitet ihn an den Hersteller weiter und setzt eine kleine Gebühr obendrauf.",
+   "en": "The junction box: one key and one bill for the models of many providers — open and closed alike. The call goes to OpenRouter, which forwards it to the vendor and adds a small fee on top."
+  },
+  "tip": {
+   "de": "Praktisch zum Vergleichen und Ausweichen: Modell gewechselt, ohne Schlüssel und Rechnung zu wechseln. Wem es auf letzte Geschwindigkeit ankommt, ruft den Anbieter direkt.",
+   "en": "Handy for comparing and switching: change the model without changing key or billing. Speed and data privacy matter less in return."
+  },
+  "plans": {
+   "de": "Je 1M Tokens, plus Gebühr · Gratisstufe",
+   "en": "Per 1M tokens, plus fee · free tier"
+  },
+  "icon": "openrouter",
+  "links": {
+   "home": "https://openrouter.ai"
+  }
  }
 }

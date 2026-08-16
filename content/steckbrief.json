@@ -209,6 +209,34 @@
    "code": "https://github.com/perplexityai/modelcontextprotocol"
   }
  },
+ "Internxt": {
+  "name": "Internxt",
+  "vendor": "Internxt",
+  "cat": {
+   "de": "Cloud-Speicher · Baustein 07",
+   "en": "Cloud storage · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Verschlüsselter Cloud-Speicher nach dem Ende-zu-Ende-Prinzip: Dateien werden auf deinem Gerät verschlüsselt, Internxt kann den Inhalt selbst nicht lesen. Fotos, Übertragen und Postfach kommen daneben in dieselben Hände. Der Quellcode der Apps liegt offen — der Dienst selbst läuft aber bei Internxt, selbst betreiben ist nicht vorgesehen.",
+   "en": "Encrypted cloud storage on the end-to-end principle: files are encrypted on your device, and Internxt cannot read the content itself. Photos, transfers and a mailbox come alongside under the same roof. The apps' source code is public — but the service itself runs at Internxt; self-hosting is not on offer."
+  },
+  "tip": {
+   "de": "Der Preis der Verschlüsselung: Wer das Passwort verliert, verliert die Dateien — ein Zurücksetzen durch den Anbieter gibt es nicht. Die freie Stufe mit 1 GB reicht zum Ausprobieren.",
+   "en": "The price of encryption: lose the password and the files are gone — there is no reset by the provider. The free tier with 1 GB is enough for trying it out."
+  },
+  "free": true,
+  "plans": {
+   "de": "1 GB kostenlos · 1–5 TB, auch als Lebenszeit-Zahlung",
+   "en": "1 GB free · 1–5 TB, lifetime payments available"
+  },
+  "icon": "internxt",
+  "links": {
+   "home": "https://internxt.com",
+   "code": "https://github.com/internxt"
+  }
+ },
  "Obsidian": {
   "name": "Obsidian",
   "vendor": "Obsidian",
@@ -759,8 +787,8 @@
    "en": "Alibaba's open model family, available in many sizes — from a small model for a laptop to a large one for a server. Strong at programming and at reasoning through problems step by step."
   },
   "tip": {
-   "de": "Wegen der vielen Größen der beste Ausgangspunkt zum Ausprobieren: klein anfangen, bei Bedarf hochgehen. Fertig gehostet auch über die Alibaba Cloud.",
-   "en": "Thanks to the range of sizes, the best starting point for experimenting: start small, scale up when needed. Also available hosted through Alibaba Cloud."
+   "de": "Wegen der vielen Größen der beste Ausgangspunkt zum Ausprobieren: klein anfangen, bei Bedarf hochgehen. Fertig gehostet auch über die Alibaba Cloud — oder direkt in LM Studio, wo die Familie in der Modellliste steht.",
+   "en": "Thanks to the range of sizes, the best starting point for experimenting: start small, scale up when needed. Also available hosted through Alibaba Cloud — or straight in LM Studio, where the family sits in the model list."
   },
   "links": {
    "home": "https://qwen.ai",

@@ -386,12 +386,12 @@
   "accent": "var(--ember)",
   "open": false,
   "blurb": {
-   "de": "Z.AIs offizieller Agent für ihr GLM-Modell: planen, codieren, prüfen, ausliefern. Fertig nutzbar, aber an das hauseigene Modell gebunden.",
-   "en": "Z.AI's official agent for their GLM model: plan, code, review, ship. Ready to use, but tied to the in-house model."
+   "de": "Z.AIs offizieller Agent für ihr GLM-Modell: planen, codieren, prüfen, ausliefern. Anders als die Terminal-Werkzeuge daneben ist es eine Desktop-Anwendung mit eigenem Fenster, die du installierst und anklickst. Fertig nutzbar, aber an das hauseigene Modell gebunden.",
+   "en": "Z.AI's official agent for their GLM model: plan, code, review, ship. Unlike the terminal tools beside it, this is a desktop application with its own window that you install and click. Ready to use, but tied to the in-house model."
   },
   "tip": {
-   "de": "Der Agent-Modus lohnt sich bei Aufgaben, die über mehrere Runden gehen, nicht bei einzelnen Fragen.",
-   "en": "The agent mode pays off on tasks that run over several rounds, not on single questions."
+   "de": "Der Agent-Modus lohnt sich bei Aufgaben über mehrere Runden, nicht bei einzelnen Fragen. Für unbeaufsichtigte Abläufe ungeeignet: Es gibt keine Kommandozeile.",
+   "en": "The agent mode pays off on tasks that run over several rounds, not on single questions. Not suited to unattended runs: there is no command line."
   },
   "links": {
    "home": "https://zcode.z.ai/en",

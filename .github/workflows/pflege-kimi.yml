@@ -1,0 +1,106 @@
+# Weekly upkeep, third opinion.
+#
+# Same job as pflege.yml and pflege-gemini.yml, run by Kimi Code CLI.
+# Saturdays, so the three spread across the week: Claude Monday, Gemini
+# Thursday, Kimi Saturday.
+#
+# There is no ready-made action for this one, so the CLI is installed and
+# called directly. Two things about it are worth knowing:
+#
+# 1. `kimi -p` runs a single prompt non-interactively and uses auto
+#    permission mode by default. It cannot be combined with --yolo.
+# 2. The CLI does NOT read the API key from the shell environment. It is
+#    documented explicitly: "Running `export KIMI_API_KEY` in the terminal
+#    does not give any provider its key". The key has to be written into
+#    config.toml, which is what the setup step below does.
+name: Weekly upkeep (Kimi)
+
+on:
+  schedule:
+    # Saturdays 06:20 UTC.
+    - cron: "20 6 * * 6"
+  workflow_dispatch:
+    inputs:
+      focus:
+        description: "Optional: what to look at this run (leave empty to let it choose)"
+        required: false
+        type: string
+
+jobs:
+  upkeep:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    env:
+      KIMI_CODE_HOME: ${{ github.workspace }}/.kimi-home
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Identity for the bot
+        run: |
+          git config user.name  "Kimi Upkeep"
+          git config user.email "kimi-upkeep@users.noreply.github.com"
+
+      # The vendor installs by piping a remote script into bash. That is one
+      # more thing to trust on every run than a pinned action would be, and
+      # it is worth being aware of rather than not noticing.
+      - name: Install Kimi Code CLI
+        run: |
+          curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Credentials into config.toml
+        env:
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+        run: |
+          test -n "$KIMI_API_KEY" || { echo "KIMI_API_KEY is not set"; exit 1; }
+          mkdir -p "$KIMI_CODE_HOME"
+          cat > "$KIMI_CODE_HOME/config.toml" <<TOML
+          [providers.kimi]
+          api_key = "$KIMI_API_KEY"
+          TOML
+          chmod 600 "$KIMI_CODE_HOME/config.toml"
+
+      - name: Research and propose
+        run: |
+          kimi -p "$(cat <<'PROMPT'
+          You are the upkeep agent for this catalogue, running as a third
+          opinion alongside a Claude-driven and a Gemini-driven one. Read
+          AGENTS.md first — it is the same file as CLAUDE.md and its rules
+          bind you. Especially: never invent a fact or a link, never edit
+          site/ by hand, never push to main, one topic per pull request.
+
+          Pick exactly one thing. Work down this list and stop at the first
+          item that yields real work:
+
+          1. A dead or moved link. Check the links.home of fact sheets in
+             content/steckbrief.json.
+          2. A stale price. Entries carrying a `plans` field go out of date
+             fastest. Check a handful against the vendor's pricing page.
+          3. A declared gap. content/arbeitsarten.json marks stations with a
+             `luecke` field describing what is missing.
+          4. Something genuinely new that a beginner would plausibly meet.
+
+          Before you start, run `gh pr list`. If another agent already
+          proposed the same thing this week, pick the next item instead.
+
+          If none of the four yields anything, that is a good outcome. Open
+          no pull request. Say what you checked and stop.
+
+          Change content/*.json only, then run `python3 build/build.py`. It
+          must exit 0; it validates before it writes. Do NOT commit site/ —
+          those files are not in git, the deploy workflow builds them.
+
+          Create a branch named `upkeep-kimi/<short-topic>`, commit the
+          source change, and open a pull request against main with
+          `gh pr create`. Prefix the title with [Kimi].
+
+          The body must contain, for every claim you changed or added, the
+          source URL it rests on. Also say plainly what you did NOT verify.
+          PROMPT
+          )${{ github.event.inputs.focus && format('
+
+          The maintainer asked you to look at this specifically, which overrides the list above: {0}', github.event.inputs.focus) || '' }}"

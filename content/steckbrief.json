@@ -1490,6 +1490,34 @@
    "tut": "https://youtu.be/fMU7Ku8ma4A"
   }
  },
+ "HyperFrames": {
+  "name": "HyperFrames",
+  "vendor": "HeyGen",
+  "cat": {
+   "de": "Video-Werkzeug · Baustein 06",
+   "en": "Video tool · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Video aus HTML: Du — oder dein Agent — schreibst HTML und CSS mit Zeitangaben, HyperFrames spult jeden einzelnen Frame in einem Browser und schneidet daraus mit FFmpeg ein MP4. Kein React, kein Bauschritt: ein Remotion-Ersatz, von Haus aus für Agenten gebaut. Zwanzig installierbare Skills decken Abläufe von Produktvideos bis Pull-Request-Erklärfilmern ab, und das Ergebnis ist ein Projektordner zum Weiterbearbeiten, keine flache Videodatei.",
+   "en": "Video from HTML: you — or your agent — write HTML and CSS with timing attributes, HyperFrames seeks every single frame in a browser and cuts an MP4 with FFmpeg. No React, no build step: a Remotion alternative, built for agents from the start. Twenty installable skills cover flows from product videos to pull-request explainers, and the result is a project folder you keep editing, not a flattened video file."
+  },
+  "tip": {
+   "de": "Gleiches Eingang, gleiches Video: Das Rendern ist bestimmt, kein Live-Abspielen — geeignet für CI und Regressionstests. Apache 2.0 ohne Render-Gebühren; verlangt Node und FFmpeg auf dem Rechner.",
+   "en": "Same input, same video: rendering is deterministic, not live playback — suitable for CI and regression tests. Apache 2.0 with no per-render fees; needs Node and FFmpeg on your machine."
+  },
+  "links": {
+   "home": "https://hyperframes.heygen.com/introduction",
+   "docs": "https://hyperframes.heygen.com/introduction",
+   "code": "https://github.com/heygen-com/hyperframes"
+  },
+  "plans": {
+   "de": "Kostenlos (Apache 2.0) · ohne Render-Gebühren",
+   "en": "Free (Apache 2.0) · no per-render fees"
+  }
+ },
  "ElevenLabs Eleven v3": {
   "name": "ElevenLabs Eleven v3",
   "vendor": "ElevenLabs",

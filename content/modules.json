@@ -742,6 +742,14 @@
        "en": "Camera"
       },
       "k": "Higgsfield"
+     },
+     {
+      "n": "HyperFrames",
+      "v": {
+       "de": "HTML → Video",
+       "en": "HTML → video"
+      },
+      "k": "HyperFrames"
      }
     ]
    },

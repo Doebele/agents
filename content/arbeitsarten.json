@@ -136,7 +136,8 @@
       "skills.sh",
       "skill-creator",
       "eigene-skills",
-      "dot-skill"
+      "dot-skill",
+      "customer-research"
      ],
      "luecke": {
       "de": "Für Zitierweise und Rechercheprotokoll führt der Katalog noch keinen Skill.",
@@ -546,6 +547,19 @@
         "notiz": {
          "de": "Recherche-Material zuerst ins Notebook: Quellen, Interviews, Wettbewerber. Der Plan entsteht daraus, das Pitch-Deck in den Design-Werkzeugen danach.",
          "en": "Research material goes into the Notebook first: sources, interviews, competitors. The plan grows from that; the pitch deck follows in the design tools."
+        }
+       },
+       "03_skills": {
+        "kandidaten": [
+         "grill-me",
+         "eigene-skills"
+        ],
+        "empfehlung": [
+         "grill-me"
+        ],
+        "notiz": {
+         "de": "Einmal grillen lassen, bevor der Plan zu Papier geht: Was danach noch steht, trägt.",
+         "en": "Get grilled once before the plan hits paper: what still stands, carries."
         }
        }
       },
@@ -1280,6 +1294,17 @@
          "de": "Planung und automatisches Posten für soziale Netzwerke führt der Katalog noch nicht — Entwürfe bleiben Handarbeit.",
          "en": "Planning and auto-posting for social networks is not in the catalogue yet — drafts stay manual work."
         }
+       },
+       "03_skills": {
+        "kandidaten": [
+         "customer-research",
+         "cro",
+         "eigene-skills"
+        ],
+        "notiz": {
+         "de": "customer-research liefert die Stimme der Kundinnen, cro macht aus dem Entwurf eine Seite, die wirkt.",
+         "en": "customer-research brings the voice of the customers, cro turns the draft into a page that works."
+        }
        }
       },
       "voraussetzungen": [
@@ -1309,181 +1334,250 @@
      }
     }
    ]
- },
- {
-  "id": "gespraeche-begleiten",
-  "name": {
-   "de": "Gespräche begleiten",
-   "en": "Capture conversations"
   },
-  "these": "Der Agent hoert nicht selbst zu: Die Aufnahme kommt vom Diktier- oder Transkriptions-Werkzeug, der Agent bereitet auf, fasst zusammen und verteilt. Dafuer ist der Aufbau anders als bei allen anderen Arbeitsarten — Baustein 06 steht am Anfang, nicht am Ende.",
-  "beispiele": [
-   {
-    "de": "Ein Meeting protokollieren",
-    "en": "Write up a meeting"
+  {
+   "id": "gespraeche-begleiten",
+   "name": {
+    "de": "Gespräche begleiten",
+    "en": "Capture conversations"
    },
-   {
-    "de": "Einen Usability-Test auswerten",
-    "en": "Evaluate a usability test"
-   },
-   {
-    "de": "Interviews auswerten",
-    "en": "Make sense of interviews"
-   },
-   {
-    "de": "Eine Besprechung nachbereiten",
-    "en": "Follow up on a meeting"
-   }
-  ],
-  "synonyme": ["meeting", "protokoll", "gespräch", "interview", "usability", "nutzertest", "besprechung", "transkript", "aufzeichnen", "mitschneiden", "minute"],
-  "stationen": {
-   "03_skills": {
-    "kandidaten": ["Anthropic Agent Skills", "skills.sh", "skill-creator", "eigene-skills"],
-    "empfehlung": ["eigene-skills"],
-    "notiz": {
-     "de": "Ein eigener Skill mit Protokoll-Formular und Anrede-Regeln spart bei jedem Meeting dieselbe Erklärung.",
-     "en": "An own skill with a minutes template and naming rules saves the same explanation in every meeting."
+   "these": "Der Agent hoert nicht selbst zu: Die Aufnahme kommt vom Diktier- oder Transkriptions-Werkzeug, der Agent bereitet auf, fasst zusammen und verteilt. Dafuer ist der Aufbau anders als bei allen anderen Arbeitsarten — Baustein 06 steht am Anfang, nicht am Ende.",
+   "beispiele": [
+    {
+     "de": "Ein Meeting protokollieren",
+     "en": "Write up a meeting"
+    },
+    {
+     "de": "Einen Usability-Test auswerten",
+     "en": "Evaluate a usability test"
+    },
+    {
+     "de": "Interviews auswerten",
+     "en": "Make sense of interviews"
+    },
+    {
+     "de": "Eine Besprechung nachbereiten",
+     "en": "Follow up on a meeting"
+    }
+   ],
+   "synonyme": [
+    "meeting",
+    "protokoll",
+    "gespräch",
+    "interview",
+    "usability",
+    "nutzertest",
+    "besprechung",
+    "transkript",
+    "aufzeichnen",
+    "mitschneiden",
+    "minute"
+   ],
+   "stationen": {
+    "03_skills": {
+     "kandidaten": [
+      "Anthropic Agent Skills",
+      "skills.sh",
+      "skill-creator",
+      "eigene-skills"
+     ],
+     "empfehlung": [
+      "eigene-skills"
+     ],
+     "notiz": {
+      "de": "Ein eigener Skill mit Protokoll-Formular und Anrede-Regeln spart bei jedem Meeting dieselbe Erklärung.",
+      "en": "An own skill with a minutes template and naming rules saves the same explanation in every meeting."
+     }
+    },
+    "04_mcp": {
+     "kandidaten": [
+      "filesystem-mcp",
+      "gdrive-mcp",
+      "slack-mcp"
+     ],
+     "empfehlung": [
+      "slack-mcp"
+     ],
+     "notiz": {
+      "de": "Slack verteilt das Protokoll dorthin, wo das Team ohnehin liest.",
+      "en": "Slack carries the minutes to where the team reads anyway."
+     }
+    },
+    "05_tools": {
+     "kandidaten": [],
+     "im_wizard": false
+    },
+    "06_medien": {
+     "frage": {
+      "de": "Womit wird aufgezeichnet?",
+      "en": "What records the conversation?"
+     },
+     "kandidaten": [
+      "Wispr Flow",
+      "OpenWhispr",
+      "FreeFlow",
+      "Whisper",
+      "Voxtral"
+     ],
+     "empfehlung": [
+      "Whisper"
+     ],
+     "notiz": {
+      "de": "Zwei Sorten: Diktier-Werkzeuge (Wispr Flow, OpenWhispr, FreeFlow) fürs Reden in Echtzeit; Transkriptions-Modelle (Whisper, Voxtral) für fertige Aufnahmen — bei einer vollen Meetings-Länge die ruhigere Wahl.",
+      "en": "Two kinds: dictation tools (Wispr Flow, OpenWhispr, FreeFlow) for speaking in real time; transcription models (Whisper, Voxtral) for finished recordings — the calmer choice for a full meeting's length."
+     }
+    },
+    "07_umgebung": {
+     "frage": {
+      "de": "Wo landet die Auswertung?",
+      "en": "Where does the write-up land?"
+     },
+     "kandidaten": [
+      "Gemini Notebook",
+      "Obsidian",
+      "Internxt"
+     ],
+     "empfehlung": [
+      "Gemini Notebook"
+     ],
+     "notiz": {
+      "de": "Das Notebook nimmt mehrere Protokolle auf einmal auf: Zitate suchen, Muster erkennen, Fragen an das Material.",
+      "en": "The Notebook holds several transcripts at once: search quotes, spot patterns, ask the material questions."
+     }
     }
    },
-   "04_mcp": {
-    "kandidaten": ["filesystem-mcp", "gdrive-mcp", "slack-mcp"],
-    "empfehlung": ["slack-mcp"],
-    "notiz": {
-     "de": "Slack verteilt das Protokoll dorthin, wo das Team ohnehin liest.",
-     "en": "Slack carries the minutes to where the team reads anyway."
+   "voraussetzungen": [
+    {
+     "titel": {
+      "de": "Eine Aufnahme",
+      "en": "A recording"
+     },
+     "text": {
+      "de": "Ohne Ton kein Protokoll: Das Werkzeug muss das Gespräch mitschneiden dürfen — und alle Anwesenden sollen es wissen.",
+      "en": "No audio, no minutes: the tool must be allowed to record — and everyone present should know."
+     }
     }
-   },
-   "05_tools": {
-    "kandidaten": [],
-    "im_wizard": false
-   },
-   "06_medien": {
+   ],
+   "varianten": {
     "frage": {
-     "de": "Womit wird aufgezeichnet?",
-     "en": "What records the conversation?"
+     "de": "Was für ein Gespräch?",
+     "en": "What kind of conversation?"
     },
-    "kandidaten": ["Wispr Flow", "OpenWhispr", "FreeFlow", "Whisper", "Voxtral"],
-    "empfehlung": ["Whisper"],
-    "notiz": {
-     "de": "Zwei Sorten: Diktier-Werkzeuge (Wispr Flow, OpenWhispr, FreeFlow) fürs Reden in Echtzeit; Transkriptions-Modelle (Whisper, Voxtral) für fertige Aufnahmen — bei einer vollen Meetings-Länge die ruhigere Wahl.",
-     "en": "Two kinds: dictation tools (Wispr Flow, OpenWhispr, FreeFlow) for speaking in real time; transcription models (Whisper, Voxtral) for finished recordings — the calmer choice for a full meeting's length."
-    }
-   },
-   "07_umgebung": {
-    "frage": {
-     "de": "Wo landet die Auswertung?",
-     "en": "Where does the write-up land?"
-    },
-    "kandidaten": ["Gemini Notebook", "Obsidian", "Internxt"],
-    "empfehlung": ["Gemini Notebook"],
-    "notiz": {
-     "de": "Das Notebook nimmt mehrere Protokolle auf einmal auf: Zitate suchen, Muster erkennen, Fragen an das Material.",
-     "en": "The Notebook holds several transcripts at once: search quotes, spot patterns, ask the material questions."
-    }
+    "optionen": [
+     {
+      "id": "meeting",
+      "name": {
+       "de": "Ein Meeting",
+       "en": "A meeting"
+      },
+      "sub": {
+       "de": "Besprechung, Jour fixe",
+       "en": "team meeting, stand-up"
+      },
+      "stationen": {},
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Wer macht was",
+         "en": "Who does what"
+        },
+        "text": {
+         "de": "Beschlüsse und Aufgaben am Ende sammeln — genau die fragt man morgen wieder ab.",
+         "en": "Collect decisions and tasks at the end — those are what tomorrow asks about."
+        }
+       }
+      ]
+     },
+     {
+      "id": "usability-test",
+      "name": {
+       "de": "Ein Usability-Test",
+       "en": "A usability test"
+      },
+      "sub": {
+       "de": "Sessions, Aufgaben, Beobachtungen",
+       "en": "sessions, tasks, observations"
+      },
+      "stationen": {
+       "07_umgebung": {
+        "kandidaten": [
+         "Gemini Notebook",
+         "Obsidian"
+        ],
+        "empfehlung": [
+         "Gemini Notebook"
+        ],
+        "notiz": {
+         "de": "Mehrere Sessions im Notebook nebeneinander: Zitate, Auffälligkeiten, Muster — bei Tests ist die Auswertung die eigentliche Arbeit.",
+         "en": "Several sessions side by side in the Notebook: quotes, oddities, patterns — with tests the analysis is the actual work."
+        }
+       },
+       "03_skills": {
+        "kandidaten": [
+         "customer-research",
+         "skill-creator",
+         "eigene-skills"
+        ],
+        "empfehlung": [
+         "customer-research"
+        ],
+        "notiz": {
+         "de": "customer-research wertet die Sessions aus: Transkripte hinein, Muster und Zitate heraus.",
+         "en": "customer-research works through the sessions: transcripts in, patterns and quotes out."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Eine Aufgabenliste für die Testperson",
+         "en": "A task list for the participant"
+        },
+        "text": {
+         "de": "Was die Testperson tun soll, vorher aufschreiben — der Agent wertet Aufgaben, Wege und Zitate danach genau dagegen.",
+         "en": "Write down what the participant should do beforehand — the agent then scores tasks, paths and quotes against exactly that."
+        }
+       }
+      ]
+     },
+     {
+      "id": "interview",
+      "name": {
+       "de": "Ein Interview",
+       "en": "An interview"
+      },
+      "sub": {
+       "de": "Fachgespräch, Expertenbefragung",
+       "en": "expert conversation"
+      },
+      "stationen": {
+       "03_skills": {
+        "kandidaten": [
+         "grill-me",
+         "eigene-skills"
+        ],
+        "notiz": {
+         "de": "grill-me dreht die Richtung um: Der Agent befragt dich und schärft damit deinen eigenen Plan.",
+         "en": "grill-me flips the direction: the agent questions you and thereby sharpens your own plan."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Ein Frageleitfaden",
+         "en": "A question guide"
+        },
+        "text": {
+         "de": "Fragen vorher festhalten; das Werkzeug zeichnet auf, und der Agent ordnet die Antworten danach dem Leitfaden zu.",
+         "en": "Fix the questions beforehand; the tool records, and the agent maps answers back onto the guide."
+        }
+       }
+      ]
+     }
+    ]
    }
-  },
-  "voraussetzungen": [
-   {
-    "titel": {
-     "de": "Eine Aufnahme",
-     "en": "A recording"
-    },
-    "text": {
-     "de": "Ohne Ton kein Protokoll: Das Werkzeug muss das Gespräch mitschneiden dürfen — und alle Anwesenden sollen es wissen.",
-     "en": "No audio, no minutes: the tool must be allowed to record — and everyone present should know."
-    }
-   }
-  ],
-  "varianten": {
-   "frage": {
-    "de": "Was für ein Gespräch?",
-    "en": "What kind of conversation?"
-   },
-   "optionen": [
-    {
-     "id": "meeting",
-     "name": {
-      "de": "Ein Meeting",
-      "en": "A meeting"
-     },
-     "sub": {
-      "de": "Besprechung, Jour fixe",
-      "en": "team meeting, stand-up"
-     },
-     "stationen": {},
-     "voraussetzungen": [
-      {
-       "titel": {
-        "de": "Wer macht was",
-        "en": "Who does what"
-       },
-       "text": {
-        "de": "Beschlüsse und Aufgaben am Ende sammeln — genau die fragt man morgen wieder ab.",
-        "en": "Collect decisions and tasks at the end — those are what tomorrow asks about."
-       }
-      }
-     ]
-    },
-    {
-     "id": "usability-test",
-     "name": {
-      "de": "Ein Usability-Test",
-      "en": "A usability test"
-     },
-     "sub": {
-      "de": "Sessions, Aufgaben, Beobachtungen",
-      "en": "sessions, tasks, observations"
-     },
-     "stationen": {
-      "07_umgebung": {
-       "kandidaten": ["Gemini Notebook", "Obsidian"],
-       "empfehlung": ["Gemini Notebook"],
-       "notiz": {
-        "de": "Mehrere Sessions im Notebook nebeneinander: Zitate, Auffälligkeiten, Muster — bei Tests ist die Auswertung die eigentliche Arbeit.",
-        "en": "Several sessions side by side in the Notebook: quotes, oddities, patterns — with tests the analysis is the actual work."
-       }
-      }
-     },
-     "voraussetzungen": [
-      {
-       "titel": {
-        "de": "Eine Aufgabenliste für die Testperson",
-        "en": "A task list for the participant"
-       },
-       "text": {
-        "de": "Was die Testperson tun soll, vorher aufschreiben — der Agent wertet Aufgaben, Wege und Zitate danach genau dagegen.",
-        "en": "Write down what the participant should do beforehand — the agent then scores tasks, paths and quotes against exactly that."
-       }
-      }
-     ]
-    },
-    {
-     "id": "interview",
-     "name": {
-      "de": "Ein Interview",
-      "en": "An interview"
-     },
-     "sub": {
-      "de": "Fachgespräch, Expertenbefragung",
-      "en": "expert conversation"
-     },
-     "stationen": {},
-     "voraussetzungen": [
-      {
-       "titel": {
-        "de": "Ein Frageleitfaden",
-        "en": "A question guide"
-       },
-       "text": {
-        "de": "Fragen vorher festhalten; das Werkzeug zeichnet auf, und der Agent ordnet die Antworten danach dem Leitfaden zu.",
-        "en": "Fix the questions beforehand; the tool records, and the agent maps answers back onto the guide."
-       }
-      }
-     ]
-    }
-   ]
   }
- }
  ],
  "freitext": {
   "prinzip": "Der Nutzer tippt sein Vorhaben. Der Text wird über die Synonymlisten auf eine Arbeitsart abgebildet. Kein Modellaufruf, damit die Seite offline und ohne Schlüssel funktioniert.",

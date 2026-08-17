@@ -379,6 +379,30 @@
        "en": "your own know-how"
       },
       "k": "eigene-skills"
+     },
+     {
+      "n": "customer-research",
+      "v": {
+       "de": "Kundenforschung",
+       "en": "customer research"
+      },
+      "k": "customer-research"
+     },
+     {
+      "n": "cro",
+      "v": {
+       "de": "Conversion",
+       "en": "conversion"
+      },
+      "k": "cro"
+     },
+     {
+      "n": "grill-me",
+      "v": {
+       "de": "Interview",
+       "en": "interview"
+      },
+      "k": "grill-me"
      }
     ]
    }

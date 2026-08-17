@@ -3687,5 +3687,83 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   }
+ },
+ "customer-research": {
+  "name": "customer-research",
+  "vendor": {
+   "de": "Marketing-Skill-Sammlung",
+   "en": "marketing skill collection"
+  },
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Kundenforscher als Skill: bringt ans Licht, was Kundinnen und Kunden wirklich denken, fühlen und womit sie kämpfen — damit Positionierung, Produkt und Texte auf Beobachtung ruhen statt auf Annahme. Zwei Arbeitsweisen: vorhandenes Material auswerten (Gesprächsnotizen, Umfragen, Bewertungen, Tickets) oder selbst suchen (Reddit, G2, Foren, Communities). Am Ende stehen Personen, Jobs-to-be-done und Gründe für Kauf und Abgang.",
+   "en": "A customer researcher as a skill: surfaces what customers actually think, feel and struggle with — so positioning, product and copy rest on observation rather than assumption. Two modes: work through existing material (transcripts, surveys, reviews, tickets) or go find it (Reddit, G2, forums, communities). Out come personas, jobs to be done, and reasons people buy or churn."
+  },
+  "tip": {
+   "de": "Der Auswertungs-Teil passt auf fertige Interviews und Usability-Sessions — Transkripte hinein, Muster heraus. Wer daraus Seiten verbessern will, nimmt danach den cro-Skill.",
+   "en": "The analysis half fits finished interviews and usability sessions — transcripts in, patterns out. To improve pages from there, follow up with the cro skill."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  }
+ },
+ "cro": {
+  "name": "cro",
+  "vendor": {
+   "de": "Marketing-Skill-Sammlung",
+   "en": "marketing skill collection"
+  },
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Conversion-Optimierung als Skill: für Seiten mit einem Ziel — Startseite, Landingpage, Preise, Formulare. Er stellt zuerst die drei Fragen, die entscheiden (Seitentyp, Conversion-Ziel, Herkunft der Besucher) und arbeitet die Empfehlungen dann in Reihenfolge der Wirkung ab, Wertversprechen zuerst. Eine URL genügt als Anlass.",
+   "en": "Conversion rate optimization as a skill: for pages with a goal — home, landing, pricing, forms. It first asks the three questions that decide (page type, conversion goal, where visitors come from) and then works recommendations in order of impact, value proposition first. A URL is enough to start."
+  },
+  "tip": {
+   "de": "Nach dem Marketing-Paket der logische zweite Schritt: Die Entwürfe sind da — jetzt soll die Seite auch wirken.",
+   "en": "The logical second step after a marketing pack: the drafts exist, now the page should work."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  }
+ },
+ "grill-me": {
+  "name": "grill-me",
+  "vendor": {
+   "de": "Marketing-Skill-Sammlung",
+   "en": "marketing skill collection"
+  },
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein unerbittliches Interview, das einen Plan oder Entwurf schärft: Der Agent befragt dich so lange, bis die Schwachstellen offen daliegen. Die Richtung ist umgekehrt wie sonst — nicht du beauftragst ihn, sondern er fragt dich aus, zu deinem Vorteil.",
+   "en": "A relentless interview that sharpens a plan or design: the agent questions you until the weak spots lie open. The direction is reversed from usual — not you instructing it, it interrogating you, to your benefit."
+  },
+  "tip": {
+   "de": "Vor dem Businessplan und vor jedem Pitch: einmal durch die Mangel drehen lassen. Was danach noch steht, trägt.",
+   "en": "Before a business plan and any pitch: put it through the wringer once. What still stands afterwards, carries."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  }
  }
 }

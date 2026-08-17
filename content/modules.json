@@ -779,6 +779,14 @@
        "en": "Dictation · open"
       },
       "k": "OpenWhispr"
+     },
+     {
+      "n": "FreeFlow",
+      "v": {
+       "de": "Diktieren · offen",
+       "en": "Dictation · open"
+      },
+      "k": "FreeFlow"
      }
     ]
    }

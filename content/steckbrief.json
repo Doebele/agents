@@ -1686,6 +1686,33 @@
    "en": "Local dictation free, open source (MIT) · Pro $6.67/mo ($80/year) · Business $13.33/mo ($160/year) · Enterprise on request"
   }
  },
+ "FreeFlow": {
+  "name": "FreeFlow",
+  "vendor": "zachlatta",
+  "cat": {
+   "de": "Diktier-Werkzeug · Baustein 06",
+   "en": "Dictation tool · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Diktieren ohne Abo: Fn gedrückt halten, sprechen — und der Text landet im gerade offenen Feld. Anschließend räumt ein Sprachmodell Rechtschreibung, Füllwörter und Zeichensetzung auf, mit Blick auf den Kontext der Anwendung. Der Bearbeiten-Modus stellt Gesprochenem nach: Text markieren und „mach es kürzer“ sagen. Nur für den Mac, und es gibt keinen FreeFlow-Server — das Gerät verlassen allein die Aufrufe an den Anbieter deiner Wahl.",
+   "en": "Dictation without a subscription: hold Fn, speak — and the text lands in whatever field is open. A language model then tidies spelling, filler words and punctuation, aware of the app's context. Edit Mode takes spoken follow-ups: highlight text and say “make this shorter”. Mac only, and there is no FreeFlow server — the only things leaving your machine are calls to the provider you choose."
+  },
+  "tip": {
+   "de": "Zum Loslegen reicht der kostenlose API-Schlüssel von Groq — oder jeder OpenAI-kompatible Anbieter; Ollama und LM Studio laufen auch lokal. Die Rechnung geht dann an dein Konto, nicht an ein Abo.",
+   "en": "To start, the free API key from Groq is enough — or any OpenAI-compatible provider; Ollama and LM Studio run locally too. The bill then goes to your account, not to a subscription."
+  },
+  "links": {
+   "home": "https://github.com/zachlatta/freeflow",
+   "code": "https://github.com/zachlatta/freeflow"
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source (MIT) · Modellkosten nach eigenem Anbieter",
+   "en": "Free, open source (MIT) · model costs per your own provider"
+  }
+ },
  "GPT-5.6": {
   "name": "GPT-5.6",
   "vendor": "OpenAI",
@@ -3303,8 +3330,8 @@
    "en": "The speed outlier: Groq builds its own chips (LPUs) instead of renting standard graphics cards, reaching answer speeds others do not. The model selection is smaller for it — only what Groq itself has ported runs there."
   },
   "tip": {
-   "de": "Für Demo und Chat-Erlebnis beeindruckend; wer Modellwahl braucht, wird bei Together oder Fireworks fündig. Rechnung je Million Tokens.",
-   "en": "Impressive for demos and the chat feel; for model choice, look at Together or Fireworks. Billed per million tokens."
+   "de": "Für Demo und Chat-Erlebnis beeindruckend; wer Modellwahl braucht, wird bei Together oder Fireworks fündig. Rechnung je Million Tokens. Der kostenlose Schlüssel reicht daneben für Werkzeuge, deren Diktieren über Groq läuft — FreeFlow etwa nutzt ihn als Standard-Anbieter.",
+   "en": "Impressive for demos and the chat feel; for model choice, look at Together or Fireworks. Billed per million tokens. The free key also powers tools whose dictation runs on Groq — FreeFlow, for one, uses it as its default provider."
   },
   "plans": {
    "de": "Abrechnung je 1M Tokens · Gratisstufe",

@@ -378,5 +378,13 @@
  "t100": {
   "de": "      <span><button type=\"button\" class=\"lgl\" data-lgl=\"lg-imp\">Impressum</button> · <button type=\"button\" class=\"lgl\" data-lgl=\"lg-dis\">Disclaimer</button></span>",
   "en": "      <span><button type=\"button\" class=\"lgl\" data-lgl=\"lg-imp\">Imprint</button> · <button type=\"button\" class=\"lgl\" data-lgl=\"lg-dis\">Disclaimer</button></span>"
+ },
+ "t101": {
+  "de": "  if(L.guide) h+=`<a class=\"st-link\" href=\"${L.guide}\" target=\"_blank\" rel=\"noopener noreferrer\">Anleitung</a>`;",
+  "en": "  if(L.guide) h+=`<a class=\"st-link\" href=\"${L.guide}\" target=\"_blank\" rel=\"noopener noreferrer\">Guide</a>`;"
+ },
+ "t102": {
+  "de": "  if(L.tut) h+=`<a class=\"st-link\" href=\"${L.tut}\" target=\"_blank\" rel=\"noopener noreferrer\">Video-Tutorial</a>`;",
+  "en": "  if(L.tut) h+=`<a class=\"st-link\" href=\"${L.tut}\" target=\"_blank\" rel=\"noopener noreferrer\">Video tutorial</a>`;"
  }
 }

@@ -1479,13 +1479,15 @@
    "en": "Not a pure model shop but a suite: image, video and voice under one interface — with explicit control over the camera. Dolly, pan and zoom can be specified rather than hoped for."
   },
   "tip": {
-   "de": "Wenn dir die Kameraführung bei anderen Modellen zufällig vorkommt, liegt hier der Unterschied.",
-   "en": "If camera work feels accidental to you in other models, this is where the difference lies."
+   "de": "Wenn dir die Kameraführung bei anderen Modellen zufällig vorkommt, liegt hier der Unterschied. Für ganze Kino-Welten: Joeys Anleitung sammelt alles für den Aufbau einer AI-Cinematic-World samt seiner Einschätzung der aktualisierten Nutzungsbedingungen; sein Video erklärt das Handwerk, die Claude-Skills fürs Prompting liegen in der Videobeschreibung.",
+   "en": "If the camera work of other models feels random to you, this is the difference. For whole cinematic worlds: Joey's guide gathers everything for building an AI cinematic world along with his take on the updated terms; his video walks through the craft, with the Claude skills for prompting linked in the description."
   },
   "links": {
    "home": "https://higgsfield.ai/",
    "docs": null,
-   "code": null
+   "code": null,
+   "guide": "https://pyrite-mallow-3b0.notion.site/Everything-You-Need-to-Start-Building-Your-AI-Cinematic-World-and-my-thoughts-on-HF-s-updated-T-C-3ae49da027d780cea5b2e139b25800ec",
+   "tut": "https://youtu.be/fMU7Ku8ma4A"
   }
  },
  "ElevenLabs Eleven v3": {

@@ -542,6 +542,34 @@ section{ position:relative; }
 /* Betonung im Fliesstext ist ein Schriftschnitt, keine Farbe */
 .hero p.lead i, .oc-pane .lead b, .foot .cta b{ font-style:normal; font-weight:700; color:var(--ink); }
 .foot .meta-row{ display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-top:70px; padding-top:24px; border-top:1px solid var(--line); font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; }
+/* Impressum & Disclaimer: Links in der Meta-Zeile, Dialog wie die Suche,
+   nur ruhiger — zentriert statt seitlich */
+.foot .lgl{ background:none; border:none; padding:0; font:inherit; color:var(--muted);
+  text-decoration:underline; text-underline-offset:3px; cursor:none; transition:color .2s; }
+.foot .lgl:hover, .foot .lgl:focus-visible{ color:var(--cyan); }
+@media (pointer:coarse){ .foot .lgl{ cursor:pointer; } }
+.lg-scrim{ position:fixed; inset:0; z-index:130; background:rgba(3,4,8,.7); backdrop-filter:blur(4px);
+  opacity:0; visibility:hidden; transition:opacity .35s, visibility .35s; }
+.lg-scrim.open{ opacity:1; visibility:visible; }
+.lg-box{ position:fixed; z-index:140; left:50%; top:50%; transform:translate(-50%,-48%) scale(.98);
+  width:min(680px, calc(100vw - 32px)); max-height:min(80vh, 720px); display:flex; flex-direction:column;
+  background:var(--bg-2); border:1px solid var(--line-2); border-radius:16px;
+  opacity:0; visibility:hidden; transition:opacity .3s, transform .3s, visibility .3s; }
+.lg-box.open{ opacity:1; visibility:visible; transform:translate(-50%,-50%) scale(1); }
+.lg-box .lg-close{ position:absolute; top:14px; right:14px; font-family:var(--mono); font-size:10px;
+  letter-spacing:.1em; color:var(--muted); background:none; border:1px solid var(--line-2);
+  border-radius:999px; padding:5px 11px; cursor:none; transition:color .2s, border-color .2s; }
+.lg-box .lg-close:hover, .lg-box .lg-close:focus-visible{ color:var(--cyan); border-color:var(--cyan); }
+@media (pointer:coarse){ .lg-box .lg-close{ cursor:pointer; } }
+.lg-box .lg-body{ padding:30px 32px 34px; overflow-y:auto; }
+.lg-body section{ margin:0; }
+.lg-body section + section{ margin-top:30px; padding-top:26px; border-top:1px solid var(--line); }
+.lg-body h3{ font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--cyan); margin:0 0 14px; }
+.lg-body p{ font-size:14px; font-weight:300; line-height:1.65; color:var(--ink-dim); margin:0 0 12px; }
+.lg-body p:last-child{ margin-bottom:0; }
+.lg-body b{ color:var(--ink); font-weight:500; }
+.lg-body a{ color:var(--cyan); text-decoration:underline; text-underline-offset:3px; }
 
 /* reveal helper */
 .rv{ opacity:0; transform:translateY(26px); }
@@ -967,9 +995,20 @@ setTimeout(function(){
     <div class="meta-row">
 {{T:t063}}
 {{T:t064}}
+{{T:t100}}
     </div>
   </div>
 </footer>
+
+<!-- RECHTLICHES: Impressum + Disclaimer in einem Dialog, ohne eigene Seite -->
+<div class="lg-scrim" id="lg-scrim"></div>
+<div class="lg-box" id="lg-box" role="dialog" aria-modal="true" aria-label="Impressum und Disclaimer" aria-hidden="true">
+  <button type="button" class="lg-close" id="lg-close" aria-label="Schließen">ESC</button>
+  <div class="lg-body" id="lg-body">
+{{T:t098}}
+{{T:t099}}
+  </div>
+</div>
 
 <!-- SEARCH -->
 <div class="spot-scrim" id="spot-scrim"></div>
@@ -1571,6 +1610,34 @@ $('#spot-close').addEventListener('click', closeSpot);
 spotQ.addEventListener('input', e=>renderSpot(e.target.value));
 spotRes.addEventListener('mousemove', e=>{ const it=e.target.closest('.spot-item'); if(it){ spotSel=spotItems.indexOf(it); spotItems.forEach((x,i)=>x.classList.toggle('active',i===spotSel)); } });
 spotRes.addEventListener('click', e=>{ const it=e.target.closest('.spot-item'); if(it){ spotSel=spotItems.indexOf(it); pickSpot(); } });
+
+/* Impressum & Disclaimer: ein Dialog, zwei Anker. Der Link in der Meta-Zeile
+   traegt data-lgl mit der Ziel-Sektion; geoeffnet wird bei deren Ueberschrift. */
+(() => {
+  const box=$('#lg-box'), scrim=$('#lg-scrim');
+  if(!box) return;
+  let lastLg=null;
+  function openLg(anker){
+    box.classList.add('open'); scrim.classList.add('open');
+    box.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+    lastLg=document.activeElement;
+    const ziel=anker && box.querySelector('#'+anker);
+    if(ziel) box.querySelector('.lg-body').scrollTop=Math.max(0, ziel.offsetTop-8);
+    setTimeout(()=>{ try{ $('#lg-close').focus(); }catch(e){} }, 30);
+  }
+  function closeLg(){
+    box.classList.remove('open'); scrim.classList.remove('open');
+    box.setAttribute('aria-hidden','true'); document.body.style.overflow='';
+    if(lastLg && lastLg.focus) lastLg.focus();
+  }
+  document.addEventListener('click', e=>{
+    const b=e.target.closest('.lgl');
+    if(b){ openLg(b.dataset.lgl); return; }
+    if(e.target.closest('#lg-close')){ closeLg(); return; }
+  });
+  scrim.addEventListener('click', closeLg);
+  addEventListener('keydown', e=>{ if(e.key==='Escape' && box.classList.contains('open')) closeLg(); });
+})();
 addEventListener('keydown', e=>{
   if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){ e.preventDefault(); spot.classList.contains('open')?closeSpot():openSpot(); return; }
   if(!spot.classList.contains('open')) return;

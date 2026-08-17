@@ -2593,6 +2593,33 @@
   },
   "icon": "anthropic"
  },
+ "OpenDesign": {
+  "name": "OpenDesign",
+  "vendor": "Powerformer",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Die offene, lokale Alternative zu Claude Design: ein Design-Arbeitsplatz, der Entwürfe, Prototypen, Seiten und Decks erzeugt — und die Agenten dafür einbindet, statt eigene mitzubringen. Claude Code, Cursor, Kimi und über 20 weitere lassen sich andocken; der Wechsel ist eine Konfigurationsänderung, kein Neubau. Alles läuft auf deinem Rechner, die Ergebnisse landen im Projektordner statt in einer Hersteller-Cloud.",
+   "en": "The open, local alternative to Claude Design: a design workspace that produces designs, prototypes, sites and decks — and plugs in the agents for it instead of shipping its own. Claude Code, Cursor, Kimi and 20+ more connect; switching is a config change, not a rebuild. Everything runs on your machine, artifacts land in your project folder instead of a vendor cloud."
+  },
+  "tip": {
+   "de": "Der Einstieg, wenn dir Claude Design gefällt, alles aber offen und lokal bleiben soll. Eigene Schlüssel mitbringen: Das Programm ist gratis (Apache 2.0), die Modell-Rechnung läuft über deine Konten.",
+   "en": "The entry point when you like Claude Design but want everything open and local. Bring your own keys: the program is free (Apache 2.0), the model bills run through your own accounts."
+  },
+  "plans": {
+   "de": "Kostenlos (Apache 2.0) · nur eigene API-Kosten (BYOK)",
+   "en": "Free (Apache 2.0) · only your own API costs (BYOK)"
+  },
+  "links": {
+   "home": "https://open-design.ai/",
+   "code": "https://github.com/nexu-io/open-design"
+  }
+ },
  "Uizard": {
   "name": "Uizard",
   "vendor": "Uizard",

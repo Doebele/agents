@@ -881,6 +881,14 @@
       "k": "Claude Design"
      },
      {
+      "n": "OpenDesign",
+      "v": {
+       "de": "offen · lokal",
+       "en": "open · local"
+      },
+      "k": "OpenDesign"
+     },
+     {
       "n": "Uizard",
       "v": {
        "de": "UI-Gen",

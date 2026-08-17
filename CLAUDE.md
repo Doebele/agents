@@ -89,6 +89,12 @@ from a bot-walled site is not a dead link.
 Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 `upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`.
 
+Whenever a run touches **marketing topics** — a new fact sheet, a wizard
+station, a gap to fill — check Corey Haines' collection first and take
+from there: https://github.com/coreyhaines31/marketingskills (cro and
+customer-research already came from it). For skills in general, beyond
+the catalogue: https://www.skills.sh.
+
 ## On demand
 
 Beyond the schedule, the agents take orders three ways: an issue or comment

@@ -3690,10 +3690,7 @@
  },
  "customer-research": {
   "name": "customer-research",
-  "vendor": {
-   "de": "Marketing-Skill-Sammlung",
-   "en": "marketing skill collection"
-  },
+  "vendor": "Corey Haines",
   "cat": {
    "de": "Skill · Baustein 03",
    "en": "Skill · Block 03"
@@ -3712,14 +3709,15 @@
   "plans": {
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/coreyhaines31/marketingskills",
+   "code": "https://github.com/coreyhaines31/marketingskills"
   }
  },
  "cro": {
   "name": "cro",
-  "vendor": {
-   "de": "Marketing-Skill-Sammlung",
-   "en": "marketing skill collection"
-  },
+  "vendor": "Corey Haines",
   "cat": {
    "de": "Skill · Baustein 03",
    "en": "Skill · Block 03"
@@ -3738,14 +3736,15 @@
   "plans": {
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/coreyhaines31/marketingskills",
+   "code": "https://github.com/coreyhaines31/marketingskills"
   }
  },
  "grill-me": {
   "name": "grill-me",
-  "vendor": {
-   "de": "Marketing-Skill-Sammlung",
-   "en": "marketing skill collection"
-  },
+  "vendor": "Matt Pocock",
   "cat": {
    "de": "Skill · Baustein 03",
    "en": "Skill · Block 03"
@@ -3764,6 +3763,10 @@
   "plans": {
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://www.skills.sh/mattpocock/skills/grill-me",
+   "code": "https://www.skills.sh/mattpocock/skills/grill-me"
   }
  }
 }

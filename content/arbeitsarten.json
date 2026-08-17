@@ -498,7 +498,72 @@
       "en": "A document that goes outside carries your name. Check figures and claims before it leaves."
      }
     }
-   ]
+   ],
+   "varianten": {
+    "frage": {
+     "de": "Was soll entstehen?",
+     "en": "What should be created?"
+    },
+    "optionen": [
+     {
+      "id": "businessplan",
+      "name": {
+       "de": "Ein Businessplan",
+       "en": "A business plan"
+      },
+      "sub": {
+       "de": "Zahlen, Markt, Pitch-Deck",
+       "en": "Numbers, market, pitch deck"
+      },
+      "stationen": {
+       "04_mcp": {
+        "kandidaten": [
+         "tavily-mcp",
+         "excel-mcp",
+         "pdf-mcp",
+         "filesystem-mcp",
+         "gdrive-mcp"
+        ],
+        "empfehlung": [
+         "excel-mcp"
+        ],
+        "notiz": {
+         "de": "Marktzahlen liefert die Websuche, die eigenen Zahlen liest der Excel-Server direkt aus der Tabelle.",
+         "en": "Market numbers come from web search; your own numbers the Excel server reads straight from the spreadsheet."
+        }
+       },
+       "07_umgebung": {
+        "kandidaten": [
+         "Gemini Notebook",
+         "Claude Design",
+         "OpenDesign",
+         "Figma",
+         "Penpot"
+        ],
+        "empfehlung": [
+         "Gemini Notebook"
+        ],
+        "notiz": {
+         "de": "Recherche-Material zuerst ins Notebook: Quellen, Interviews, Wettbewerber. Der Plan entsteht daraus, das Pitch-Deck in den Design-Werkzeugen danach.",
+         "en": "Research material goes into the Notebook first: sources, interviews, competitors. The plan grows from that; the pitch deck follows in the design tools."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Die Zahlen in einer Tabelle",
+         "en": "The numbers in a spreadsheet"
+        },
+        "text": {
+         "de": "Der Excel-Server liest direkt aus der Tabelle — je sauberer sie geführt ist, desto weniger muss der Agent raten.",
+         "en": "The Excel server reads straight from the spreadsheet — the cleaner it is kept, the less the agent has to guess."
+        }
+       }
+      ]
+     }
+    ]
+   }
   },
   {
    "id": "bauen",
@@ -1160,6 +1225,72 @@
         "text": {
          "de": "Bevor erzeugte Musik veröffentlicht wird, lohnt ein Blick in die Nutzungsbedingungen des Anbieters.",
          "en": "Before publishing generated music, it pays to read the provider's terms."
+        }
+       }
+      ]
+     },
+     {
+      "id": "marketing",
+      "name": {
+       "de": "Ein Marketing-Paket",
+       "en": "A marketing pack"
+      },
+      "sub": {
+       "de": "Social-Posts, Anzeigen, Bilder",
+       "en": "Social posts, ads, images"
+      },
+      "stationen": {
+       "06_medien": {
+        "kandidaten": [
+         "GPT Image 2",
+         "Ideogram",
+         "Recraft",
+         "FLUX.2",
+         "Qwen-Image",
+         "Midjourney V8.2",
+         "Seedream"
+        ],
+        "empfehlung": [
+         "Ideogram"
+        ],
+        "notiz": {
+         "de": "Ideogram zuerst: Auf Anzeigen und Posts steht fast immer Text im Bild — genau dort ist es stark.",
+         "en": "Ideogram first: ads and posts almost always carry text in the image — exactly where it is strong."
+        }
+       },
+       "07_umgebung": {
+        "kandidaten": [
+         "Claude Design",
+         "OpenDesign",
+         "OpenPencil",
+         "Figma",
+         "Penpot"
+        ],
+        "empfehlung": [
+         "Claude Design"
+        ]
+       },
+       "04_mcp": {
+        "kandidaten": [
+         "filesystem-mcp",
+         "gdrive-mcp"
+        ],
+        "empfehlung": [],
+        "luecke": {
+         "de": "Planung und automatisches Posten für soziale Netzwerke führt der Katalog noch nicht — Entwürfe bleiben Handarbeit.",
+         "en": "Planning and auto-posting for social networks is not in the catalogue yet — drafts stay manual work."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Eine Stimme für die Marke",
+         "en": "A voice for the brand"
+        },
+        "text": {
+         "de": "Tonalität und Verbote als eigenen Skill hinterlegt, bekommt jeder Entwurf denselben Charakter — einmal schreiben statt immer erklären.",
+         "en": "With tone and no-gos stored as your own skill, every draft gets the same character — written once instead of explained every time."
         }
        }
       ]

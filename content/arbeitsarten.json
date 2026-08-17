@@ -150,16 +150,14 @@
     },
     "04_mcp": {
      "kandidaten": [
+      "tavily-mcp",
       "Playwright-mcp",
       "filesystem-mcp"
      ],
      "empfehlung": [
+      "tavily-mcp",
       "Playwright-mcp"
      ],
-     "luecke": {
-      "de": "Ein Websuche-Server fehlt — für diese Arbeitsart das wichtigste fehlende Stück.",
-      "en": "A web-search server is missing — for this kind of work the most important gap."
-     },
      "frage": {
       "de": "Woran soll er angeschlossen sein?",
       "en": "What should it be connected to?"
@@ -281,16 +279,15 @@
     "04_mcp": {
      "kandidaten": [
       "filesystem-mcp",
+      "excel-mcp",
+      "pdf-mcp",
       "postgres-mcp",
       "supabase-mcp"
      ],
      "empfehlung": [
-      "filesystem-mcp"
+      "filesystem-mcp",
+      "excel-mcp"
      ],
-     "luecke": {
-      "de": "Server für PDF und Tabellen fehlen im Katalog.",
-      "en": "Servers for PDFs and spreadsheets are missing from the catalogue."
-     },
      "frage": {
       "de": "Woran soll er angeschlossen sein?",
       "en": "What should it be connected to?"

@@ -211,6 +211,14 @@
       "k": "DeepSeek Harness"
      },
      {
+      "n": "DeepSeek-Reasonix",
+      "v": {
+       "de": "Terminal · offen",
+       "en": "terminal · open"
+      },
+      "k": "DeepSeek-Reasonix"
+     },
+     {
       "n": "Zed",
       "v": "Editor",
       "k": "Zed"
@@ -346,6 +354,22 @@
       "k": "skill-creator"
      },
      {
+      "n": "archify",
+      "v": {
+       "de": "Diagramme",
+       "en": "diagrams"
+      },
+      "k": "archify"
+     },
+     {
+      "n": "dot-skill",
+      "v": {
+       "de": "Persona",
+       "en": "persona"
+      },
+      "k": "dot-skill"
+     },
+     {
       "n": {
        "de": "Unternehmens-Skills",
        "en": "Team skills"
@@ -474,6 +498,14 @@
        "en": "knowledge graph"
       },
       "k": "memory-mcp"
+     },
+     {
+      "n": "OpenViking",
+      "v": {
+       "de": "Kontext",
+       "en": "context"
+      },
+      "k": "OpenViking"
      }
     ]
    }
@@ -895,6 +927,14 @@
        "en": "open · local"
       },
       "k": "OpenDesign"
+     },
+     {
+      "n": "OpenPencil",
+      "v": {
+       "de": "offen · Vektor",
+       "en": "open · vector"
+      },
+      "k": "OpenPencil"
      },
      {
       "n": "Uizard",

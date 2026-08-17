@@ -3078,7 +3078,8 @@
   },
   "links": {
    "home": "https://deepseek.com/harness/en/",
-   "code": "https://github.com/deepseek-ai/deepseek-harness"
+   "code": "https://github.com/deepseek-ai/deepseek-harness",
+   "docs": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin"
   }
  },
  "Hostinger": {
@@ -3522,6 +3523,141 @@
   "icon": "openrouter",
   "links": {
    "home": "https://openrouter.ai"
+  }
+ },
+ "DeepSeek-Reasonix": {
+  "name": "DeepSeek-Reasonix",
+  "vendor": "esengine",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "„Ein Agent, den man laufen lässt“: gebaut für lange, unbeaufsichtigte Sessions — mit Prefix-Cache-Stabilität als Konstruktionsprinzip, damit auch Runde 200 noch günstig ist. Eine Engine, vier Oberflächen: Terminal, Desktop, Browser, Editor. DeepSeek ist Voreinstellung, jedes OpenAI-kompatible Ziel ein Konfigurationseintrag. Community-Bau, kein offizielles DeepSeek-Produkt.",
+   "en": "“A coding agent you can leave running”: built for long unattended sessions — prefix-cache stability as the construction principle, so round 200 is still cheap. One engine, four surfaces: terminal, desktop, browser, editor. DeepSeek ships as a preset; any OpenAI-compatible endpoint is a config entry. Community build, not an official DeepSeek product."
+  },
+  "tip": {
+   "de": "MIT und kostenlos; die Modellschlüssel bringst du mit. Plan-Modus, Rechte, Sandbox und Prüfpunkte je Runde machen das lange Laufen weniger mutig.",
+   "en": "MIT and free; you bring the model keys. Plan mode, permissions, a sandbox and per-turn checkpoints make the long running less brave."
+  },
+  "links": {
+   "home": "https://github.com/esengine/DeepSeek-Reasonix",
+   "code": "https://github.com/esengine/DeepSeek-Reasonix"
+  },
+  "plans": {
+   "de": "Kostenlos (MIT) · Modellkosten nach eigenem Anbieter",
+   "en": "Free (MIT) · model costs per your own provider"
+  }
+ },
+ "archify": {
+  "name": "archify",
+  "vendor": "tt-a1i",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Skill, der aus einer Codebasis oder Systembeschreibung verständliche Diagramme macht: Architektur, Ablauf, Sequenz, Datenfluss, Lebenszyklus — als eine einzige, eigenständige HTML-Datei mit interaktiver Karte, dazu Export als PNG, SVG oder WebM. Vor der Auslieferung prüft ein typisiertes Zwischenformat; für Pull Requests vergleicht er Vorher/Delta/Nachher. Läuft mit Claude Code, Cursor, Codex und OpenCode.",
+   "en": "A skill that turns a codebase or system description into diagrams people actually read: architecture, workflow, sequence, data-flow, lifecycle — as one self-contained HTML file with an interactive map, plus PNG, SVG or WebM export. A typed intermediate format is checked before delivery; for pull requests it compares before/delta/after. Works with Claude Code, Cursor, Codex and OpenCode."
+  },
+  "tip": {
+   "de": "Bewusst schmal: kein Mermaid-Import, kein Auto-Layout, kein Zeichnen von Hand — und die Karte zeigt nur erfasste Knoten und Beziehungen statt Topologie zu erfinden. Genau das macht die Diagramme glaubwürdig.",
+   "en": "Deliberately narrow: no Mermaid import, no auto-layout, no hand-drawing — and the map shows only authored nodes and relationships instead of inventing topology. That is exactly what makes the diagrams trustworthy."
+  },
+  "links": {
+   "home": "https://github.com/tt-a1i/archify",
+   "code": "https://github.com/tt-a1i/archify"
+  },
+  "plans": {
+   "de": "Kostenlos (MIT)",
+   "en": "Free (MIT)"
+  }
+ },
+ "dot-skill": {
+  "name": "dot-skill",
+  "vendor": "titanwings",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Skill-Generator für Persona-Skills: Er destilliert aus Chats, Dokumenten und Notizen einer Person einen Skill, der nicht nur ihren Ton trifft, sondern Denk- und Entscheidungsstile nachbildet. Drei Szenarien von Haus aus: Wissen ausscheidender Kolleg:innen, das Gefühl von Familie und Freunden, oder Personen des öffentlichen Lebens. Gestartet per /dot-skill, die Ergebnisse rufst du mit /{Figur} auf. Früher unter dem Namen colleague-skill.",
+   "en": "A skill generator for persona skills: from a person's chats, documents and notes it distills a skill that captures not just their tone but their mental models and decision frameworks. Three scenarios by design: knowledge of departing colleagues, the feel of family and friends, or public figures. Started with /dot-skill; results are invoked by /{character}. Formerly known as colleague-skill."
+  },
+  "tip": {
+   "de": "Mit Bedacht einsetzen: Das Ergebnis ahmt eine Person nach, es ist keine. Am stärksten als Wissenssicherung vor einem Abschied — mit Quellen, die die Person auch teilen darf.",
+   "en": "Use with care: the result imitates a person, it is not one. Strongest as knowledge preservation before a departure — with sources the person is fine sharing."
+  },
+  "links": {
+   "home": "https://github.com/titanwings/colleague-skill",
+   "code": "https://github.com/titanwings/colleague-skill"
+  },
+  "plans": {
+   "de": "Kostenlos (MIT) · einzelne Datenquellen kosten Drittanbieter",
+   "en": "Free (MIT) · individual data sources cost third parties"
+  }
+ },
+ "OpenViking": {
+  "name": "OpenViking",
+  "vendor": "Volcengine",
+  "cat": {
+   "de": "Kontext-Dienst · Baustein 04",
+   "en": "Context service · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Eine Kontext-Datenbank für Agenten aus dem Haus Volcengine (ByteDance): Erinnerungen, Wissen und Skills liegen als ein virtuelles Dateisystem unter viking:// — der Agent blättert mit ls, tree und find statt in einer Blackbox zu suchen. Inhalte liegen dreistufig (Kurzfassung, Überblick, vollständig) und werden erst bei Bedarf geladen; jede Anfrage protokolliert ihren Weg. Anbindbar per CLI, eigener Server, direkt für Claude Code, Cursor und weitere — oder über MCP.",
+   "en": "A context database for agents from Volcengine (ByteDance): memories, knowledge and skills live as one virtual filesystem under viking:// — the agent browses with ls, tree and find instead of searching a black box. Content sits in three tiers (abstract, overview, full) loaded only on demand; every query keeps its trace. Connects via CLI, its own server, directly into Claude Code, Cursor and more — or through MCP."
+  },
+  "tip": {
+   "de": "Die offene Ausgabe ist unverstümmelt und ohne Konto nutzbar, Hauptlizenz aber AGPLv3 — wer Kommerzielles plant, liest sie vorher. Verwaltet betreiben geht bei Volcano Engine, mit kleiner Teststufe.",
+   "en": "The open edition is uncrippled and needs no account, but the main licence is AGPLv3 — read it before planning anything commercial. A managed tier runs on Volcano Engine, with a small trial."
+  },
+  "links": {
+   "home": "https://github.com/volcengine/OpenViking",
+   "code": "https://github.com/volcengine/OpenViking"
+  },
+  "plans": {
+   "de": "Selbst betrieben kostenlos (AGPLv3) · verwaltet mit Gratis-Teststufe",
+   "en": "Self-hosted free (AGPLv3) · managed with a free trial"
+  }
+ },
+ "OpenPencil": {
+  "name": "OpenPencil",
+  "vendor": "ZSeven-W",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein AI-natives Vektor-Zeichenwerkzeug, das Agenten im Team beschäftigt: Ein Orchestrierer zerlegt eine Seite in örtliche Teilaufgaben, mehrere Agenten arbeiten Abschnitte gleichzeitig. Dazu unendliche Leinwand, Bezier-Stift, Komponenten, Design-Variablen, Figma-Import und Code-Export für React, HTML/CSS, Vue, Svelte, Flutter, SwiftUI. Läuft lokal als ein einzelnes Rust-Programm — 55 MB, kein Electron — auf Mac, Windows und Linux; Zusammenarbeit direkt zwischen den Geräten.",
+   "en": "An AI-native vector design tool that keeps agents busy as a team: an orchestrator splits a page into spatial sub-tasks and several agents work on sections at once. Alongside: infinite canvas, bezier pen, components, design variables, Figma import and code export to React, HTML/CSS, Vue, Svelte, Flutter, SwiftUI. Runs locally as a single Rust binary — 55 MB, no Electron — on Mac, Windows and Linux; collaboration peer-to-peer."
+  },
+  "tip": {
+   "de": "Die offene Antwort auf die Design-Werkzeuge der Hersteller — Entwurf als Datei (.op auf JSON-Basis) statt als Cloud-Dokument, inklusive eingebautem MCP-Server für Agenten vom Terminal aus.",
+   "en": "The open answer to the vendors' design tools — design as a file (.op, JSON-based) instead of a cloud document, including a built-in MCP server for agents from the terminal."
+  },
+  "links": {
+   "home": "https://github.com/ZSeven-W/openpencil",
+   "code": "https://github.com/ZSeven-W/openpencil"
+  },
+  "plans": {
+   "de": "Kostenlos (MIT)",
+   "en": "Free (MIT)"
   }
  }
 }

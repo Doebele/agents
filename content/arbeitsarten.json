@@ -57,6 +57,7 @@
      "Cursor",
      "Agent SDK",
      "DeepSeek Harness",
+     "DeepSeek-Reasonix",
      "Agents SDK",
      "Odysseus",
      "Bionic",
@@ -134,7 +135,8 @@
       "Anthropic Agent Skills",
       "skills.sh",
       "skill-creator",
-      "eigene-skills"
+      "eigene-skills",
+      "dot-skill"
      ],
      "luecke": {
       "de": "Für Zitierweise und Rechercheprotokoll führt der Katalog noch keinen Skill.",
@@ -394,7 +396,8 @@
       "skills.sh",
       "skill-creator",
       "eigene-skills",
-      "Impeccable"
+      "Impeccable",
+      "archify"
      ],
      "luecke": {
       "de": "Der Präsentations- und Dokument-Skill fehlt, obwohl genau er hier die Arbeit macht.",
@@ -450,6 +453,7 @@
      "kandidaten": [
       "Claude Design",
       "OpenDesign",
+      "OpenPencil",
       "Figma",
       "Penpot",
       "pencil.dev"
@@ -538,7 +542,8 @@
       "skills.sh",
       "skill-creator",
       "eigene-skills",
-      "Impeccable"
+      "Impeccable",
+      "archify"
      ],
      "luecke": {
       "de": "Skills für Hausregeln, Framework-Konventionen und Review-Vorgaben fehlen.",
@@ -598,6 +603,7 @@
       "Bolt.new",
       "Onlook",
       "Figma",
+      "OpenPencil",
       "Google Stitch",
       "Relume",
       "Uizard",

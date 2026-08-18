@@ -1088,11 +1088,16 @@
          "Ideogram",
          "Recraft",
          "Higgsfield",
-         "Seedream"
+         "Seedream",
+         "ComfyUI"
         ],
         "empfehlung": [
          "GPT Image 2"
-        ]
+        ],
+        "notiz": {
+         "de": "ComfyUI ist kein Modell, sondern der Lauf- und Bastelplatz für die offenen darunter: FLUX.2, Qwen-Image — lokal, als wiederholbare Pipeline.",
+         "en": "ComfyUI is not a model but the running and tinkering bench for the open ones among them: FLUX.2, Qwen-Image — locally, as a repeatable pipeline."
+        }
        }
       },
       "voraussetzungen": [
@@ -1127,7 +1132,8 @@
          "Wan 3.0",
          "Runway",
          "Luma",
-         "Higgsfield"
+         "Higgsfield",
+         "ComfyUI"
         ],
         "empfehlung": [
          "Veo 3.1"

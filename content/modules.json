@@ -704,6 +704,14 @@
       "k": "Qwen-Image"
      },
      {
+      "n": "ComfyUI",
+      "v": {
+       "de": "Bild & Video · lokal",
+       "en": "image & video · local"
+      },
+      "k": "ComfyUI"
+     },
+     {
       "n": "Imagen 4",
       "v": "Google",
       "k": "Imagen 4"

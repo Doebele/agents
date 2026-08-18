@@ -3795,5 +3795,33 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   }
+ },
+ "ComfyUI": {
+  "name": "ComfyUI",
+  "vendor": "comfyanonymous",
+  "cat": {
+   "de": "Bild-Werkzeug · Baustein 06",
+   "en": "Image tool · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Der Knoten-Graph für offene Bild- und Video-Modelle: Modelle, Schritte und Nachbearbeitung werden zu Flussdiagrammen verdrahtet, und das Ergebnis bleibt reproduzierbar — Workflows sind Dateien, Samen lassen sich aus fertigen Bildern zurücklesen. FLUX.2, Qwen-Image oder Wan-Video laufen lokal neben SD3.5, offline auf Nvidia, AMD und Apple Silicon. Für Agenten gibt es eine lokale API, über die ganze Workflows ausgelöst werden können.",
+   "en": "The node graph for open image and video models: models, steps and post-processing get wired into flow diagrams, and the result stays reproducible — workflows are files, seeds can be read back out of finished images. FLUX.2, Qwen-Image or Wan video run locally alongside SD3.5, offline, on Nvidia, AMD and Apple Silicon. For agents there is a local API that can trigger whole workflows."
+  },
+  "tip": {
+   "de": "Das Bastel- und Serien-Werkzeug: eine Pipeline einmal bauen, dann in Varianten laufen lassen — nur geänderte Teilgraphen werden neu gerechnet. Für das schnelle Einzelbild bleibt ein Dienst bequemer. Lizenz GPL-3.0, kopierpflichtig: wer einbettet, liest vorher.",
+   "en": "The tinkering and series tool: build a pipeline once, then run it in variants — only changed subgraphs re-execute. For the quick single image a service stays more convenient. Licence GPL-3.0, copyleft: read before embedding."
+  },
+  "links": {
+   "home": "https://www.comfy.org",
+   "docs": "https://docs.comfy.org",
+   "code": "https://github.com/comfyanonymous/ComfyUI"
+  },
+  "plans": {
+   "de": "Kostenlos (GPL-3.0) · eigene Hardware",
+   "en": "Free (GPL-3.0) · your own hardware"
+  }
  }
 }

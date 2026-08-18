@@ -680,6 +680,7 @@
     "07_umgebung": {
      "kandidaten": [
       "v0",
+      "Glaze",
       "Lovable",
       "Bolt.new",
       "Onlook",
@@ -702,6 +703,10 @@
      "frage": {
       "de": "Wo soll das Ergebnis entstehen?",
       "en": "Where should the result take shape?"
+     },
+     "notiz": {
+      "de": "Glaze baut als einzige hier native Mac-Apps statt Web-Seiten — Desktop statt Browser.",
+      "en": "Glaze is the only one here building native Mac apps instead of web pages — desktop rather than browser."
      }
     },
     "08_hosting": {

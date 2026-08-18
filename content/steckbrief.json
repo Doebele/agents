@@ -3851,5 +3851,30 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   }
+ },
+ "Glaze": {
+  "name": "Glaze",
+  "vendor": "Raycast",
+  "cat": {
+   "de": "App-Generator · Baustein 07",
+   "en": "App generator · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Der App-Baukasten für den Mac-Desktop von Raycast: beschreiben statt programmieren — aus dem Chat entstehen native Apps, die lokal laufen und ins System greifen (Dateien, Menüleiste, Shortcuts, Hintergrundprozesse). Gebaute Apps dürfen auf APIs, lokale Dateien und KI-Modelle zugreifen; der Code gehört dir. Fertige Apps lassen sich in einen Store stellen oder unverzeichnet teilen. Braucht macOS Tahoe auf Apple Silicon; Windows und Linux sind angekündigt.",
+   "en": "The desktop app builder for the Mac from Raycast: describe instead of program — native apps come out of the chat, run locally and reach into the system (files, menu bar, shortcuts, background processes). Built apps may access APIs, local files and AI models; the code is yours. Finished apps can go into a store or be shared unlisted. Needs macOS Tahoe on Apple Silicon; Windows and Linux are announced."
+  },
+  "tip": {
+   "de": "Das Gegenstück zu v0 und Lovable — nur für den Desktop statt fürs Web. Wer Mac-Werkzeuge statt Seiten bauen will, landet hier. Die gebaute App ist ein Werkzeug, kein Agent.",
+   "en": "The counterpart to v0 and Lovable — for the desktop instead of the web. Whoever wants to build Mac tools rather than pages lands here. The built app is a tool, not an agent."
+  },
+  "links": {
+   "home": "https://www.glaze.app"
+  },
+  "plans": {
+   "de": "Preise nicht veröffentlicht · Pläne Pro und Team; Ausführen geteilter Apps mit Gratis-Konto",
+   "en": "Pricing not published · Pro and Team plans; running shared apps with a free account"
+  }
  }
 }

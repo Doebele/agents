@@ -552,14 +552,15 @@
        "03_skills": {
         "kandidaten": [
          "grill-me",
+         "premortem",
          "eigene-skills"
         ],
         "empfehlung": [
          "grill-me"
         ],
         "notiz": {
-         "de": "Einmal grillen lassen, bevor der Plan zu Papier geht: Was danach noch steht, trägt.",
-         "en": "Get grilled once before the plan hits paper: what still stands, carries."
+         "de": "grill-me prüft die Logik, premortem prüft das Scheitern — einmal grillen und einmal zu Grabe tragen lassen, bevor der Plan zu Papier geht.",
+         "en": "grill-me tests the logic, premortem tests the failure — get grilled and get buried once each before the plan hits paper."
         }
        }
       },
@@ -1554,6 +1555,7 @@
        "03_skills": {
         "kandidaten": [
          "grill-me",
+         "premortem",
          "eigene-skills"
         ],
         "notiz": {

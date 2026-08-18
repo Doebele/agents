@@ -3768,5 +3768,32 @@
    "home": "https://www.skills.sh/mattpocock/skills/grill-me",
    "code": "https://www.skills.sh/mattpocock/skills/grill-me"
   }
+ },
+ "premortem": {
+  "name": "premortem",
+  "vendor": "vibeeval",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Der Früh-Warntest für Pläne: „Stell dir vor, drei Monate sind vergangen und das Projekt ist spektakulär gescheitert — woran lag es?“ Die Antwort sortiert der Skill in drei Sorten: echte Gefahren (Tiger), harmlose Schreckgespenster (Papptiger) und die Themen, über die niemand reden will (Elefanten) — Gary Kleins Technik, in Stripes Fassung von Shreyas Doshi. Jede Meldung muss verifiziert sein, kein Alarm nach bloßer Mustererkennung; am Ende steht ein Abschnitt mit Abhilfen direkt im Plan.",
+   "en": "The early warning test for plans: “Imagine it's three months from now and this project has failed spectacularly — why did it fail?” The skill sorts the answer into three kinds: clear threats (tigers), scary-looking-but-fine (paper tigers), and the things nobody wants to talk about (elephants) — Gary Klein's technique in the Stripe reading by Shreyas Doshi. Every finding must be verified, no pattern-matching alarms; at the end a section of mitigations sits right in the plan."
+  },
+  "tip": {
+   "de": "Für Produktstrategien und Businesspläne der Gegenpol zu grill-me: grill-me prüft die Logik, premortem prüft das Scheitern. Beide zusammen, bevor der Plan zu Papier geht.",
+   "en": "For product strategies and business plans the counterpart to grill-me: grill-me tests the logic, premortem tests the failure. Both together before the plan hits paper."
+  },
+  "links": {
+   "home": "https://github.com/vibeeval/vibecosystem/blob/main/skills/premortem/SKILL.md",
+   "code": "https://github.com/vibeeval/vibecosystem"
+  },
+  "plans": {
+   "de": "Kostenlos (MIT)",
+   "en": "Free (MIT)"
+  }
  }
 }

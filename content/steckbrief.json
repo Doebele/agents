@@ -3823,5 +3823,33 @@
    "de": "Kostenlos (GPL-3.0) · eigene Hardware",
    "en": "Free (GPL-3.0) · your own hardware"
   }
+ },
+ "Osaurus": {
+  "name": "Osaurus",
+  "vendor": "Osaurus",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Agenten für den Mac, von Haus aus lokal: eine native Swift-App für Apple Silicon, die offene Modelle über Ollama, MLX oder LM Studio mit einem Klick übernimmt — das Gerät verlassen sie nicht, keine Telemetrie, kein Server dazwischen. Agenten laufen eigenständig, lassen sich per Stimme steuern, beobachten Ordner und erledigen Aufgaben nebeneinander; Dateien lesen und schreiben gehört dazu. Cloud-Modelle lassen sich dazu schalten, wenn eine Aufgabe sie braucht — mit einem Gedächtnis für alle.",
+   "en": "Agents for the Mac, local by design: a native Swift app for Apple Silicon that takes over open models from Ollama, MLX or LM Studio with one click — they never leave the machine, no telemetry, no server in between. Agents run autonomously, answer to voice control, watch folders and work on tasks in parallel; reading and writing files included. Cloud models can be switched on when a task needs them — with one memory shared by all."
+  },
+  "tip": {
+   "de": "Der Einstieg, wenn der Agent auf dem Mac und ohne Cloud laufen soll: per Brew installieren, eine der bekannten Laufzeiten dahinter, fertig. Braucht Apple Silicon und macOS 15.5 oder neuer.",
+   "en": "The entry point when the agent should run on a Mac without cloud: install via Brew, one of the usual runtimes behind it, done. Needs Apple Silicon and macOS 15.5 or newer."
+  },
+  "links": {
+   "home": "https://osaurus.ai",
+   "docs": "https://docs.osaurus.ai",
+   "code": "https://github.com/osaurus-ai/osaurus"
+  },
+  "plans": {
+   "de": "Kostenlos (MIT)",
+   "en": "Free (MIT)"
+  }
  }
 }

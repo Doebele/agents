@@ -55,6 +55,7 @@
      "Grok Build",
      "Zed",
      "Cursor",
+     "Osaurus",
      "Agent SDK",
      "DeepSeek Harness",
      "DeepSeek-Reasonix",
@@ -1849,6 +1850,15 @@
     "text": {
      "de": "{h} ist ein Baukasten, kein fertiges Fenster — du schreibst das Programm selbst. Lies <code>setup.md</code> ein und gib den Inhalt zusammen mit dem Auftrag als erste Nachricht mit. Ab hier ist es eine Programmieraufgabe.",
      "en": "{h} is a toolkit, not a finished window — you write the program yourself. Read <code>setup.md</code> and pass its content together with the instruction as the first message. From here on it is a programming task."
+    }
+   },
+   {
+    "keys": [
+     "Osaurus"
+    ],
+    "text": {
+     "de": "Öffne {h} im Arbeitsordner, starte dort einen Agenten und übergib ihm <code>setup.md</code> als Aufgabe. Ordner-Beobachtung und Steuerung per Stimme sind mit an Bord.",
+     "en": "Open {h} in your working folder, start an agent there and hand it <code>setup.md</code> as the task. Folder watching and voice control are on board."
     }
    }
   ],

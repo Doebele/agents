@@ -57,6 +57,7 @@
      "Cursor",
      "Osaurus",
      "Berd",
+     "Goose",
      "Agent SDK",
      "DeepSeek Harness",
      "DeepSeek-Reasonix",
@@ -1874,6 +1875,15 @@
     "text": {
      "de": "Leg in {h} ein Projekt an, nimm <code>setup.md</code> in dessen Dateien auf und schreib den Auftrag daneben in den Chat. Das Projekt bleibt zwischen Sitzungen bestehen — der Kontext muss nicht neu aufgebaut werden.",
      "en": "Create a project in {h}, add <code>setup.md</code> to its files and write the instruction next to it in the chat. The project persists between sessions — context does not have to be rebuilt."
+    }
+   },
+   {
+    "keys": [
+     "Goose"
+    ],
+    "text": {
+     "de": "{h} läuft im Terminal und als Desktop-App. Für den ersten Auftrag genügt das Terminal: <code>setup.md</code> in den Arbeitsordner legen und {h} dort starten — der Ordner wird von selbst gesehen.",
+     "en": "{h} runs in the terminal and as a desktop app. For the first task the terminal is enough: put <code>setup.md</code> in your working folder and start {h} there — the folder is seen by itself."
     }
    }
   ],

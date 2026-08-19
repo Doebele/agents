@@ -242,6 +242,14 @@
       "k": "Berd"
      },
      {
+      "n": "Goose",
+      "v": {
+       "de": "Terminal · App · API",
+       "en": "terminal · app · API"
+      },
+      "k": "Goose"
+     },
+     {
       "n": "Hermes Agent",
       "v": "Nous Research",
       "k": "Hermes Agent"
@@ -1208,6 +1216,22 @@
        "en": "applications · database"
       },
       "k": "Render"
+     }
+    ]
+   },
+   {
+    "label": {
+     "de": "Zusammenarbeiten",
+     "en": "Collaborate"
+    },
+    "items": [
+     {
+      "n": "Buzz",
+      "v": {
+       "de": "Menschen + Agenten",
+       "en": "humans + agents"
+      },
+      "k": "Buzz"
      }
     ]
    },

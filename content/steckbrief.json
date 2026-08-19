@@ -3904,5 +3904,61 @@
    "de": "Kostenlos (Apache-2.0) · Modelle über eigene Zugänge",
    "en": "Free (Apache-2.0) · models via your own access"
   }
+ },
+ "Goose": {
+  "name": "Goose",
+  "vendor": "Agentic AI Foundation",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Der Motor, der auch ohne Berd läuft: bei Block als internes Werkzeug entstanden, Anfang 2025 offen gelegt, heute gepflegt unter dem Dach der Linux Foundation — in der Agentic AI Foundation, neben MCP von Anthropic und AGENTS.md von OpenAI. In Rust gebaut, läuft lokal, gibt es als Zeile im Terminal, als Desktop-App und als einbaubare API. Versteht mehr als Code: installieren, ausführen, bearbeiten, testen — dazu Recherche, Schreiben, Automatisierung und Datenanalyse. Über MCP mehr als 70 Erweiterungen; Rezepte packen Anbieter und Erweiterungen vorkonfiguriert, eigene Distros sind möglich. 15 und mehr Modell-Anbieter, Anmeldung per API-Schlüssel oder mit bestehenden Claude-, ChatGPT- und Gemini-Abos.",
+   "en": "The engine that also runs without Berd: born at Block as an internal tool, opened up in early 2025, now maintained under the roof of the Linux Foundation — in the Agentic AI Foundation, next to MCP from Anthropic and AGENTS.md from OpenAI. Written in Rust, runs locally, available as a line in the terminal, as a desktop app and as an embeddable API. Understands more than code: install, execute, edit, test — plus research, writing, automation and data analysis. More than 70 extensions via MCP; recipes pack providers and extensions preconfigured, and custom distros are possible. 15-plus model providers, signing in with API keys or with existing Claude, ChatGPT and Gemini subscriptions."
+  },
+  "tip": {
+   "de": "Das Gegenstück zu Berd: derselbe Motor, ohne den Schreibtisch — am Terminal mit einer Zeile installiert. Wer das Gesicht dazu will, setzt Berd darauf. Desktop-App für macOS, Linux und Windows.",
+   "en": "The counterpart to Berd: the same engine, without the desk — installed in the terminal with one line. Whoever wants the face on top installs Berd. Desktop app for macOS, Linux and Windows."
+  },
+  "links": {
+   "home": "https://aaif.io/projects/goose",
+   "docs": "https://goose-docs.ai",
+   "code": "https://github.com/aaif-goose/goose"
+  },
+  "plans": {
+   "de": "Kostenlos (Apache-2.0) · Schlüssel oder bestehende Abos",
+   "en": "Free (Apache-2.0) · keys or existing subscriptions"
+  }
+ },
+ "Buzz": {
+  "name": "Buzz",
+  "vendor": "Block",
+  "cat": {
+   "de": "Team-Workspace · Baustein 07",
+   "en": "Team workspace · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Der gemeinsame Raum für Menschen und Agenten, aus dem Haus, das auch Berd gebaut hat: ein selbst hostbarer Workspace auf dem Nostr-Protokoll — jede Nachricht, jede Reaktion, jeder Review und jedes Git-Ereignis ist ein signiertes Ereignis in einem einzigen Protokoll. Agenten treten mit eigenem Schlüsselpaar bei, mit eigener Mitgliedschaft und eigenem Audit-Protokoll; die Identität unterscheidet nicht zwischen Mensch und Agent. Die Schleife läuft weiterhin draussen: Goose, Claude Code und Codex schliessen sich über eine ACP-Brücke an. Kanäle, Threads, Direktnachrichten, Canvases, Medien und Git-Ereignisse funktionieren heute; mobile Apps und Sprach-Huddles sind im Bau.",
+   "en": "The shared room for humans and agents, from the house that also built Berd: a self-hostable workspace on the Nostr protocol — every message, reaction, review and git event is a signed event in one log. Agents join with their own keypair, with their own membership and audit trail; identity does not distinguish between human and agent. The loop keeps running outside: Goose, Claude Code and Codex connect through an ACP bridge. Channels, threads, DMs, canvases, media and git events work today; mobile apps and voice huddles are being built."
+  },
+  "tip": {
+   "de": "Kein Harness, kein Generator: Buzz stellt die Räume, nicht den Motor — der Agent bleibt Goose oder Claude Code und sitzt nur im selben Raum wie das Team. Frühes Stadium („Come test the early stages with us“): Instanz auf buzz.xyz testen oder selbst mit Docker hosten; der Windows-Build ist unsigniert.",
+   "en": "Not a harness, not a generator: Buzz provides the rooms, not the engine — the agent stays Goose or Claude Code and merely sits in the same room as the team. Early stage („Come test the early stages with us“): try the instance at buzz.xyz or host it yourself with Docker; the Windows build is unsigned."
+  },
+  "links": {
+   "home": "https://buzz.xyz",
+   "code": "https://github.com/block/buzz",
+   "guide": "https://block.xyz/inside/introducing-buzz-where-humans-and-agents-work-together"
+  },
+  "plans": {
+   "de": "Kostenlos (Apache-2.0) · selbst hostbar, frühe Instanz auf buzz.xyz",
+   "en": "Free (Apache-2.0) · self-hostable, early instance at buzz.xyz"
+  }
  }
 }

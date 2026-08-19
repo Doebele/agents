@@ -3876,5 +3876,33 @@
    "de": "Preise nicht veröffentlicht · Pläne Pro und Team; Ausführen geteilter Apps mit Gratis-Konto",
    "en": "Pricing not published · Pro and Team plans; running shared apps with a free account"
   }
+ },
+ "Berd": {
+  "name": "Berd",
+  "vendor": "Block",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Der Agenten-Schreibtisch von Block, dem Unternehmen hinter Square: Gespräche, Dateien, Ordner, Anweisungen, Agenten und Skills liegen in dauerhaften Projekten beieinander — der Kontext muss nicht jedes Mal neu aufgebaut werden. Agenten entstehen im Chat, und jeder sieht anders aus: Figuren wie die „Gloopies“ sollen sichtbar machen, was ein Agent kann, statt es zu verstecken. Unter der Haube läuft Goose, Blocks offene Agenten-Engine — mitgeliefert und über das Agent Client Protocol angebunden. Berd ist das Gesicht, Goose die Schleife. Für macOS (Apple Silicon), Linux und Windows; die Modelle bringt man selbst mit.",
+   "en": "The agent desk from Block, the company behind Square: conversations, files, folders, instructions, agents and skills sit together in persistent projects — context does not have to be rebuilt every time. Agents are created in the chat, and each one looks different: characters like the Gloopies are meant to show what an agent can do instead of hiding it. Under the hood runs Goose, Block's open agent engine — bundled and connected through the Agent Client Protocol. Berd is the face, Goose runs the loop. For macOS (Apple Silicon), Linux and Windows; you bring the models yourself."
+  },
+  "tip": {
+   "de": "Die frischeste Karte im Block: erst seit August 2026 offen, die Versionen zählen 0.6.x. Streng genommen führt Berd die Schleife nicht selbst — das macht das gebündelte Goose; wer Goose direkt will, holt es sich am Terminal. Einordnung wie Osaurus: ein Schreibtisch für Agenten, nur mit Goose als Motor. Kein Build für Intel-Macs.",
+   "en": "The newest card in the deck: open only since August 2026, versions count 0.6.x. Strictly speaking Berd does not run the loop itself — the bundled Goose does; whoever wants Goose directly gets it in the terminal. Classified like Osaurus: a desk for agents, with Goose as the engine. No Intel Mac build."
+  },
+  "links": {
+   "home": "https://berd.xyz",
+   "code": "https://github.com/block/berd",
+   "guide": "https://block.xyz/inside/designing-ai-with-character-what-we-learned-building-berd"
+  },
+  "plans": {
+   "de": "Kostenlos (Apache-2.0) · Modelle über eigene Zugänge",
+   "en": "Free (Apache-2.0) · models via your own access"
+  }
  }
 }

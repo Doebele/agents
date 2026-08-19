@@ -56,6 +56,7 @@
      "Zed",
      "Cursor",
      "Osaurus",
+     "Berd",
      "Agent SDK",
      "DeepSeek Harness",
      "DeepSeek-Reasonix",
@@ -1864,6 +1865,15 @@
     "text": {
      "de": "Öffne {h} im Arbeitsordner, starte dort einen Agenten und übergib ihm <code>setup.md</code> als Aufgabe. Ordner-Beobachtung und Steuerung per Stimme sind mit an Bord.",
      "en": "Open {h} in your working folder, start an agent there and hand it <code>setup.md</code> as the task. Folder watching and voice control are on board."
+    }
+   },
+   {
+    "keys": [
+     "Berd"
+    ],
+    "text": {
+     "de": "Leg in {h} ein Projekt an, nimm <code>setup.md</code> in dessen Dateien auf und schreib den Auftrag daneben in den Chat. Das Projekt bleibt zwischen Sitzungen bestehen — der Kontext muss nicht neu aufgebaut werden.",
+     "en": "Create a project in {h}, add <code>setup.md</code> to its files and write the instruction next to it in the chat. The project persists between sessions — context does not have to be rebuilt."
     }
    }
   ],

@@ -55,6 +55,11 @@ jobs:
           lftp -u "$FTP_USER" --env-password "sftp://$FTP_HOST" <<'EOF'
             set sftp:auto-confirm yes
             set net:max-retries 2
+            # Strato's sshio sometimes accepts the connection and then stalls
+            # silently — without timeouts the job hangs until GitHub's 6-hour
+            # limit instead of failing and letting a retry through.
+            set net:timeout 30
+            set net:idle-timeout 120
             # The SFTP login already lands in the subdomain's document root.
             put -O . site/index.html
             put -O . site/index.de.html

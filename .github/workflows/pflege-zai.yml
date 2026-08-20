@@ -23,9 +23,24 @@ on:
         type: string
   repository_dispatch:
     types: [telegram]
+  # The same on-demand channel Claude has, with @zai instead of @claude.
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
 
 jobs:
   upkeep:
+    # Scheduled and dispatched runs pass unconditionally. A mention only
+    # counts from the repository owner — otherwise anyone who can comment
+    # could spend the key.
+    if: |
+      (github.event_name != 'issues' && github.event_name != 'issue_comment') ||
+      (github.event.sender.login == github.repository_owner &&
+       (
+         (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@zai')) ||
+         (github.event_name == 'issues' && (contains(github.event.issue.body, '@zai') || contains(github.event.issue.title, '@zai')))
+       ))
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -137,6 +152,14 @@ jobs:
           kimi --version
 
       - name: Research and propose
+        # The order of an ordered task: dispatch input, Telegram, comment,
+        # issue body. It travels by environment variable, never interpolated
+        # into the command line — a comment carrying a quote or a backtick
+        # would otherwise be a shell injection, and the text comes from a
+        # field anyone with write access can fill.
+        env:
+          AUFTRAG: ${{ github.event.inputs.focus || github.event.client_payload.task || github.event.comment.body || github.event.issue.body }}
+          ISSUE: ${{ github.event.issue.number }}
         run: |
           kimi -p "$(cat <<'PROMPT'
           You are the upkeep agent for this catalogue, running as a fourth
@@ -175,6 +198,14 @@ jobs:
           The body must contain, for every claim you changed or added, the
           source URL it rests on. Also say plainly what you did NOT verify.
           PROMPT
-          )${{ (github.event.inputs.focus || github.event.client_payload.task) && format('
+          )${AUFTRAG:+
 
-          The maintainer asked you to look at this specifically, which overrides the list above: {0}', (github.event.inputs.focus || github.event.client_payload.task)) || '' }}"
+          The maintainer asked you to look at this specifically, which
+          overrides the list above:
+
+          $AUFTRAG}${ISSUE:+
+
+          This reached you through issue #$ISSUE. When you are done, answer in
+          that thread: gh issue comment $ISSUE --body '...'. Say what you did,
+          or why you did not act, and name the pull request if you opened one.
+          An unanswered issue looks exactly like a broken agent.}"

@@ -97,11 +97,26 @@ the catalogue: https://www.skills.sh.
 
 ## On demand
 
-Beyond the schedule, the agents take orders three ways: an issue or comment
-containing @claude (zuruf.yml), the focus field of a manual run
-(workflow_dispatch), and a Telegram message routed through telegram/ into
-the Kimi run (repository_dispatch). An ordered task overrides the topic
-list — but stays one topic per pull request.
+Beyond the schedule, the agents take orders three ways: a mention in an
+issue or comment, the focus field of a manual run (workflow_dispatch), and
+a Telegram message routed through telegram/ into the Kimi run
+(repository_dispatch). An ordered task overrides the topic list — but stays
+one topic per pull request.
+
+Each agent listens for its own name, and only from the repository owner:
+
+| Mention | Reaches | Runs |
+|---|---|---|
+| `@claude` | Claude | zuruf.yml |
+| `@gemini` | Gemini | pflege-gemini.yml |
+| `@zai` | GLM by way of Z.AI | pflege-zai.yml |
+
+Naming two in one issue starts two runs, which is occasionally what you
+want and usually not. Whoever is addressed answers in the thread when it is
+done — an issue left unanswered is indistinguishable from a broken agent,
+and that mistake has already cost four days here.
+
+Kimi has no mention of its own: it takes orders through Telegram.
 
 ## "As of August 2026"
 

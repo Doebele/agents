@@ -21,9 +21,24 @@ on:
         description: "Optional: what to look at this run (leave empty to let it choose)"
         required: false
         type: string
+  # The same on-demand channel Claude has, with @gemini instead of @claude.
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
 
 jobs:
   upkeep:
+    # Scheduled and dispatched runs pass unconditionally. A mention only
+    # counts from the repository owner — otherwise anyone who can comment
+    # could spend the key.
+    if: |
+      (github.event_name != 'issues' && github.event_name != 'issue_comment') ||
+      (github.event.sender.login == github.repository_owner &&
+       (
+         (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@gemini')) ||
+         (github.event_name == 'issues' && (contains(github.event.issue.body, '@gemini') || contains(github.event.issue.title, '@gemini')))
+       ))
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -66,11 +81,13 @@ jobs:
             never invent a fact or a link, never edit site/ by hand, never
             push to main, one topic per pull request.
 
-            ${{ github.event.inputs.focus && format('The maintainer asked you to look at this specifically: {0}', github.event.inputs.focus) || '' }}
+            ${{ (github.event.inputs.focus || github.event.comment.body || github.event.issue.body) && format('The maintainer asked you to look at this specifically: {0}', (github.event.inputs.focus || github.event.comment.body || github.event.issue.body)) || '' }}
+
+            ${{ github.event.issue.number && format('This reached you through issue #{0}. When you are done, answer in that thread with `gh issue comment {0}`: what you did, or why you did not act, and the pull request if you opened one. An unanswered issue looks exactly like a broken agent.', github.event.issue.number) || '' }}
 
             ## Pick exactly one thing
 
-            ${{ github.event.inputs.focus && 'The instruction above overrides the priority list below.' || 'Work down this list and stop at the first item that yields real work:' }}
+            ${{ (github.event.inputs.focus || github.event.comment.body || github.event.issue.body) && 'The instruction above overrides the priority list below.' || 'Work down this list and stop at the first item that yields real work:' }}
 
             1. **A dead or moved link.** Fetch the `links.home` of fact sheets
                in content/steckbrief.json. If one no longer resolves or now

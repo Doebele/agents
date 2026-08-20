@@ -1,0 +1,61 @@
+# Instructing the agent by hand.
+#
+# Open an issue or write a comment containing @claude — "add Cursor to block
+# 02", "the LM Studio price looks wrong", "Whisper does not belong under
+# research". The agent reads it, does the work, and opens a pull request.
+#
+# This is the input channel. It works from the GitHub app on a phone, which
+# is also where the resulting pull request gets reviewed and merged. No bot,
+# no token, no second service that can go down.
+name: Claude on request
+
+on:
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened, assigned]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  claude:
+    # Only on mention, and only from the repository owner — otherwise anyone
+    # who can comment could spend the API key.
+    if: |
+      github.event.sender.login == github.repository_owner &&
+      (
+        (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
+        (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
+        (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+      )
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --max-turns 150
+            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*)"
+          prompt: |
+            Read CLAUDE.md before anything else. Its rules bind you —
+            especially: never invent a fact or a link, never edit site/ by
+            hand, never push to main, one topic per pull request.
+
+            Do what the maintainer asked in the issue or comment that
+            triggered you.
+
+            If it involves changing the catalogue: edit content/*.json, then
+            run `python3 build/build.py`, which must exit 0. Commit only the
+            source change — site/ is not in git, the deploy workflow builds
+            it. Open a pull request with the source URL for every claim.
+
+            If the request is unclear, or if doing it would mean guessing at a
+            fact, do not guess. Reply in the thread and ask.

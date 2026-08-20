@@ -48,8 +48,31 @@ jobs:
       issues: write
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      APP_ID: ${{ secrets.ZAI_APP_ID }}
     steps:
       - uses: actions/checkout@v5
+
+      # An identity of its own, when there is an app to lend one.
+      #
+      # Without this the run speaks as github-actions[bot], the same name
+      # every other workflow in the repository uses — two agents commenting
+      # on one issue are then indistinguishable. An app token also lifts two
+      # limits of the built-in token: it may open pull requests regardless of
+      # the repository setting, and what it opens actually starts the build
+      # check. Events raised by GITHUB_TOKEN start no further workflow, so an
+      # agent's pull request would otherwise arrive unvalidated.
+      #
+      # The secrets context reaches no if-condition, on the job or the step,
+      # so the id moves into env first and the condition reads env. Until the
+      # app exists, this step is skipped and everything below falls back to
+      # the built-in token — the run keeps working, it just stays anonymous.
+      - name: A token of its own
+        id: app
+        if: env.APP_ID != ''
+        uses: actions/create-github-app-token@v3.2.0
+        with:
+          app-id: ${{ env.APP_ID }}
+          private-key: ${{ secrets.ZAI_APP_KEY }}
 
       # The deterministic half of the link check, so the model spends its
       # attention on judging, not on fetching: this writes
@@ -158,6 +181,9 @@ jobs:
         # would otherwise be a shell injection, and the text comes from a
         # field anyone with write access can fill.
         env:
+          # Step-level env wins over the job's, so this is where the app
+          # token takes over from the built-in one when it exists.
+          GH_TOKEN: ${{ steps.app.outputs.token || secrets.GITHUB_TOKEN }}
           AUFTRAG: ${{ github.event.inputs.focus || github.event.client_payload.task || github.event.comment.body || github.event.issue.body }}
           ISSUE: ${{ github.event.issue.number }}
         run: |

@@ -45,8 +45,32 @@ jobs:
       pull-requests: write
       issues: write
       id-token: write
+    env:
+      APP_ID: ${{ secrets.GEMINI_APP_ID }}
     steps:
       - uses: actions/checkout@v5
+
+      # An identity of its own, when there is an app to lend one.
+      #
+      # Without this the run speaks as github-actions[bot], the same name
+      # every other workflow in the repository uses — two agents commenting
+      # on one issue are then indistinguishable. An app token also lifts two
+      # limits of the built-in token: it may open pull requests regardless of
+      # the repository setting, and what it opens actually starts the build
+      # check. Events raised by GITHUB_TOKEN start no further workflow, so an
+      # agent's pull request would otherwise arrive unvalidated.
+      #
+      # The secrets context reaches no if-condition, on the job or the step,
+      # so the id moves into env first and the condition reads env. Until the
+      # app exists, this step is skipped and everything below falls back to
+      # the built-in token — the run keeps working, it just stays anonymous.
+      - name: A token of its own
+        id: app
+        if: env.APP_ID != ''
+        uses: actions/create-github-app-token@v3.2.0
+        with:
+          app-id: ${{ env.APP_ID }}
+          private-key: ${{ secrets.GEMINI_APP_KEY }}
 
       # gh and git need an identity before they will commit or open a PR.
       - name: Identity for the bot
@@ -57,7 +81,7 @@ jobs:
       - name: Research and propose
         uses: google-github-actions/run-gemini-cli@v0.1.22
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app.outputs.token || secrets.GITHUB_TOKEN }}
           # A checkout is not a folder anyone clicked "trust" on, so the CLI
           # drops to its default approval mode and then refuses to run at all.
           # Interactive trust cannot be granted on a runner; the environment

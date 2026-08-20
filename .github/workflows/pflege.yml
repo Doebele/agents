@@ -39,9 +39,15 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Bash was pinned to python3, git and gh, and the run ended with
+          # permission_denials_count 4 after 31 turns and no answer. The
+          # same reasoning already stands in pflege-gemini.yml: restricting
+          # means naming every tool exactly right, and a missing one removes
+          # a capability silently. Safety comes from the pull-request-only
+          # model and the build check, not from a shortened list.
           claude_args: |
             --max-turns 150
-            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*)"
+            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,TodoWrite,Bash"
           prompt: |
             You are the upkeep agent for this catalogue. Read CLAUDE.md first —
             its rules bind you, especially: never invent a fact or a link,

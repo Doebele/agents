@@ -35,6 +35,23 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      # An opaque failure once cost an evening here: is_error true, one turn,
+      # zero cost, and no message anywhere in the log. So the key gets asked
+      # a question before the agent starts, and the answer goes into the log.
+      - name: Can the key reach the API
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -uo pipefail
+          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY is not set"; exit 1; }
+          code=$(curl -sS -o /tmp/anthropic.json -w '%{http_code}' \
+                 -H "x-api-key: $ANTHROPIC_API_KEY" \
+                 -H "anthropic-version: 2023-06-01" \
+                 https://api.anthropic.com/v1/models || echo 000)
+          echo "  GET /v1/models -> HTTP $code"
+          head -c 400 /tmp/anthropic.json; echo
+          test "$code" = "200" || { echo "The key cannot reach the API; see the body above."; exit 1; }
+
       - name: Research and propose
         uses: anthropics/claude-code-action@v1
         with:

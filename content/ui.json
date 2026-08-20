@@ -386,5 +386,9 @@
  "t102": {
   "de": "  if(L.tut) h+=`<a class=\"st-link\" href=\"${L.tut}\" target=\"_blank\" rel=\"noopener noreferrer\">Video-Tutorial</a>`;",
   "en": "  if(L.tut) h+=`<a class=\"st-link\" href=\"${L.tut}\" target=\"_blank\" rel=\"noopener noreferrer\">Video tutorial</a>`;"
+ },
+ "t103": {
+  "de": "  <button class=\"nav-theme\" id=\"navtheme\" aria-label=\"Farbschema wechseln\" title=\"Farbschema wechseln\"><svg viewBox=\"0 0 24 24\"><path id=\"theme-ico\" d=\"M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z\"/></svg></button>",
+  "en": "  <button class=\"nav-theme\" id=\"navtheme\" aria-label=\"Switch colour scheme\" title=\"Switch colour scheme\"><svg viewBox=\"0 0 24 24\"><path id=\"theme-ico\" d=\"M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z\"/></svg></button>"
  }
 }

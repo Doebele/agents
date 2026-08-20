@@ -89,7 +89,9 @@ jobs:
         if: steps.app.outputs.token != ''
         env:
           APP_TOKEN: ${{ steps.app.outputs.token }}
-        run: echo "GH_TOKEN=$APP_TOKEN" >> "$GITHUB_ENV"
+        run: |
+          echo "GH_TOKEN=$APP_TOKEN"     >> "$GITHUB_ENV"
+          echo "GITHUB_TOKEN=$APP_TOKEN" >> "$GITHUB_ENV"
 
       # TEMPORARY probe: does the app token reach GitHub from a plain step?
       # If this comment appears as gemini-upkeep[bot] while the model's own

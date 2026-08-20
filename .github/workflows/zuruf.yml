@@ -70,12 +70,15 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Two failure modes met here. Pinning Bash to python3, git and gh
-          # produced permission_denials_count 4 and no answer. Replacing the
-          # whole list with bare Bash plus TodoWrite was worse: the run died
-          # 300 ms after init, one turn, zero cost, no model call at all.
-          # Bash(cmd:*) is the form that demonstrably works, so the list stays
-          # in that form and simply covers the shell basics as well.
+          # Bash(cmd:*) is the form the action accepts; the earlier narrow
+          # list produced permission_denials_count 4 and no answer, so it
+          # covers the shell basics as well.
+          #
+          # A word of warning to whoever reads the history: the instant
+          # failures of 20 August looked like a configuration fault and were
+          # not one. Two runs on the same commit, one worked and one died in
+          # 300 ms — the account had run out of credit in between. The probe
+          # step above exists so that never costs an evening again.
           claude_args: |
             --max-turns 150
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*)"

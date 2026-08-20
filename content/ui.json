@@ -328,8 +328,8 @@
   "en": "  if(!res.length){ spotRes.innerHTML='<div class=\"spot-empty\">No results. Try a product or vendor name, like “Ollama” or “Anthropic”.</div>'; spotItems=[]; return; }"
  },
  "t088": {
-  "de": "  }catch(e){ console.warn('WebGL nicht verfügbar'); return; }",
-  "en": "  }catch(e){ console.warn('WebGL not available'); return; }"
+  "de": "  if(!ctx){ console.warn('2D-Canvas nicht verfügbar'); return; }",
+  "en": "  if(!ctx){ console.warn('2D canvas not available'); return; }"
  },
  "t089": {
   "de": "  <button class=\"nav-wiz\" id=\"navwiz\">Setup zusammenstellen</button>",

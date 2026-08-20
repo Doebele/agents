@@ -93,15 +93,8 @@ jobs:
           echo "GH_TOKEN=$APP_TOKEN"     >> "$GITHUB_ENV"
           echo "GITHUB_TOKEN=$APP_TOKEN" >> "$GITHUB_ENV"
 
-      # TEMPORARY probe: does the app token reach GitHub from a plain step?
-      # If this comment appears as gemini-upkeep[bot] while the model's own
-      # reply stays github-actions[bot], the plumbing is sound and the CLI is
-      # what ignores it. Remove once answered.
-      - name: Probe the token
-        if: steps.app.outputs.token != '' && github.event.issue.number
-        run: gh issue comment ${{ github.event.issue.number }} --body "Sonde aus einem gewoehnlichen Schritt, mit dem App-Token."
-
       - name: Research and propose
+        id: gemini
         uses: google-github-actions/run-gemini-cli@v0.1.22
         env:
           GITHUB_TOKEN: ${{ steps.app.outputs.token || secrets.GITHUB_TOKEN }}
@@ -130,7 +123,7 @@ jobs:
 
             ${{ (github.event.inputs.focus || github.event.comment.body || github.event.issue.body) && format('The maintainer asked you to look at this specifically: {0}', (github.event.inputs.focus || github.event.comment.body || github.event.issue.body)) || '' }}
 
-            ${{ github.event.issue.number && format('This reached you through issue #{0}. When you are done, answer in that thread with `gh issue comment {0}`: what you did, or why you did not act, and the pull request if you opened one. An unanswered issue looks exactly like a broken agent.', github.event.issue.number) || '' }}
+            ${{ github.event.issue.number && format('This reached you through issue #{0}. Do not comment on it yourself — whatever you answer here is posted to that thread for you, under this agent''s own name. So make your closing words the answer: what you did, or why you did not act, and the pull request if you opened one.', github.event.issue.number) || '' }}
 
             ## Pick exactly one thing
 
@@ -185,3 +178,15 @@ jobs:
             The body must contain, for every claim you changed or added, the
             source URL it rests on. Also say plainly what you did NOT verify.
             A reviewer who has to guess what you checked cannot review.
+
+      # The CLI will not speak under the app's name. A plain run step will —
+      # the probe proved that much: its comment arrived as gemini-upkeep[bot]
+      # while the model's own, in the same run, stayed github-actions[bot].
+      # Setting GH_TOKEN and GITHUB_TOKEN through GITHUB_ENV changed nothing,
+      # so the reply is posted here instead of inside the agent. It also means
+      # the thread gets an answer even when the model forgets to write one.
+      - name: Answer in the thread
+        if: github.event.issue.number && steps.gemini.outputs.summary != ''
+        env:
+          SUMMARY: ${{ steps.gemini.outputs.summary }}
+        run: gh issue comment ${{ github.event.issue.number }} --body "$SUMMARY"

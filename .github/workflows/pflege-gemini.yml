@@ -91,6 +91,14 @@ jobs:
           APP_TOKEN: ${{ steps.app.outputs.token }}
         run: echo "GH_TOKEN=$APP_TOKEN" >> "$GITHUB_ENV"
 
+      # TEMPORARY probe: does the app token reach GitHub from a plain step?
+      # If this comment appears as gemini-upkeep[bot] while the model's own
+      # reply stays github-actions[bot], the plumbing is sound and the CLI is
+      # what ignores it. Remove once answered.
+      - name: Probe the token
+        if: steps.app.outputs.token != '' && github.event.issue.number
+        run: gh issue comment ${{ github.event.issue.number }} --body "Sonde aus einem gewoehnlichen Schritt, mit dem App-Token."
+
       - name: Research and propose
         uses: google-github-actions/run-gemini-cli@v0.1.22
         env:

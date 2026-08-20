@@ -43,6 +43,11 @@ jobs:
         uses: google-github-actions/run-gemini-cli@v0.1.22
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # A checkout is not a folder anyone clicked "trust" on, so the CLI
+          # drops to its default approval mode and then refuses to run at all.
+          # Interactive trust cannot be granted on a runner; the environment
+          # variable is the documented way out for headless use.
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           workflow_name: weekly-upkeep

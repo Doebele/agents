@@ -78,6 +78,19 @@ jobs:
           git config user.name  "Gemini Upkeep"
           git config user.email "gemini-upkeep@users.noreply.github.com"
 
+      # Handing the token down through the step's own env is not enough:
+      # run-gemini-cli is a composite action, and its inner steps carry env
+      # blocks of their own. The first attempt did produce a valid app token
+      # and the CLI still answered as github-actions[bot]. Writing it into
+      # GITHUB_ENV makes it a real environment variable for every step that
+      # follows, whatever they are built from. gh reads GH_TOKEN before
+      # GITHUB_TOKEN, so this one wins.
+      - name: Hand the token down
+        if: steps.app.outputs.token != ''
+        env:
+          APP_TOKEN: ${{ steps.app.outputs.token }}
+        run: echo "GH_TOKEN=$APP_TOKEN" >> "$GITHUB_ENV"
+
       - name: Research and propose
         uses: google-github-actions/run-gemini-cli@v0.1.22
         env:

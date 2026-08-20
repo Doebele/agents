@@ -164,6 +164,12 @@ section{ position:relative; }
 /* ----- HERO ------------------------------------------------------------ */
 .hero{ position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:140px 0 80px; overflow:hidden; }
 #hero-canvas{ position:absolute; inset:0; z-index:0; }
+/* Schleier ueber der Skizze, genau wo der Text steht: die Animation verlaeuft
+   im Hintergrund, die Schlagzeile bleibt lesbar. */
+.hero::before{
+  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:radial-gradient(ellipse 62% 46% at 50% 46%, rgba(6,7,11,.68), rgba(6,7,11,0) 72%);
+}
 .hero .wrap{ position:relative; z-index:2; padding:0 28px; }
 .hero h1{
   font-size:clamp(54px, 12vw, 168px); line-height:.92; font-weight:700; letter-spacing:-.03em;
@@ -190,21 +196,6 @@ section{ position:relative; }
 }
 .scroll-hint .ln{ width:1px; height:46px; background:linear-gradient(var(--cyan),transparent); animation:drop 1.8s infinite; }
 @keyframes drop{ 0%{ transform:scaleY(0); transform-origin:top; } 50%{ transform:scaleY(1); transform-origin:top;} 51%{transform-origin:bottom;} 100%{ transform:scaleY(0); transform-origin:bottom; } }
-
-/* floating node labels (projected from 3D) */
-.nlabel{
-  position:fixed; z-index:3; transform:translate(-50%,-50%); pointer-events:auto; cursor:none;
-  font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--ink-dim);
-  display:flex; flex-direction:column; align-items:center; gap:3px; transition:color .2s;
-  white-space:nowrap;
-}
-.nlabel .idx{ color:var(--cyan); font-size:9px; }
-.nlabel:hover{ color:#fff; }
-.nlabel:hover::before{ box-shadow:0 0 10px currentColor; }   /* Leuchten nur als Zustand */
-.nlabel::before{
-  content:""; width:7px; height:7px; border-radius:50%; background:currentColor;
-}
-@media (pointer:coarse){ .nlabel{ cursor:pointer; } }
 
 /* ----- Section heading ------------------------------------------------- */
 /* Klebt unter der Navigation, bis der naechste Abschnitt sie hinausschiebt.
@@ -800,7 +791,6 @@ setTimeout(function(){
 {{T:t017}}
     </div>
   </div>
-  <div id="nlabels" aria-hidden="true"></div>
 {{T:t018}}
 </header>
 
@@ -1423,7 +1413,7 @@ if(!COARSE && !PRM){
     cur.style.left=cx+'px'; cur.style.top=cy+'px'; requestAnimationFrame(loop); })();
   /* Alles, was der Zeiger als bedienbar melden soll — inklusive der Teile,
      die es erst mit dem Wizard gab. */
-  const hot = 'a,button,.mod,.nlabel,.oc-tab,.rule-card,.node,.chip,.d-close,.split-node,'
+  const hot = 'a,button,.mod,.oc-tab,.rule-card,.node,.chip,.d-close,.split-node,'
             + '.blk,.wz-opt,.wz-info,.gterm,.st-links a,[data-i],[data-key],[data-mi]';
   const setzen = an => { cur.classList.toggle('is-hot', an); dot.classList.toggle('is-hot', an); };
   document.addEventListener('mouseover', e=>{ if(e.target.closest(hot)) setzen(true); });
@@ -1702,13 +1692,13 @@ addEventListener('keydown', e=>{
     });
   });
 
-  // ---- 7 Knoten auf zwei Ringen, Blockfarben wie die Etiketten ----
+  // ---- 7 Knoten auf zwei Ringen, Blockfarben wie im Baustein-Abschnitt ----
   const palette=['#34E7E4','#FF7A33','#B6FF3D','#9B7BF7','#FF4D8D','#4DA8FF','#FFC24D'];
   const RING=3.4;
   const NODES=MODULES.map((m,i)=>{
     const a=(i/7)*Math.PI*2, y=i<4?-0.5:0.9;
     return { x:Math.cos(a)*RING, y, z:Math.sin(a)*RING*0.6,
-             col:palette[i%7], phase:i, m };
+             col:palette[i%7], phase:i };
   });
 
   // ---- Partikelfeld (schlichte Punkte, wie zuvor) ----
@@ -1728,15 +1718,6 @@ addEventListener('keydown', e=>{
     return { sx:cx+x*f*S, sy:cy-y*f*S, z, f };
   }
 
-  // labels (HTML, projiziert)
-  const labelsWrap=$('#nlabels');
-  const labels = MODULES.map(m=>{
-    const d=document.createElement('div'); d.className='nlabel'; d.style.color=m.color;
-    d.innerHTML=`<span class="idx" style="color:${m.color}">${m.n}</span><span>${m.name}</span>`;
-    d.addEventListener('click', ()=>openDrawer(m));
-    labelsWrap.appendChild(d); return d;
-  });
-
   // mouse parallax
   let mx=0,my=0,tmx=0,tmy=0;
   if(!COARSE) addEventListener('mousemove',e=>{ tmx=(e.clientX/innerWidth-.5); tmy=(e.clientY/innerHeight-.5); });
@@ -1747,7 +1728,7 @@ addEventListener('keydown', e=>{
     mx+=(tmx-mx)*.05; my+=(tmy-my)*.05;
     ctx.setTransform(DPR,0,0,DPR,0,0);
     ctx.clearRect(0,0,W.w,W.h);
-    const S=W.h*0.105, cx=W.w/2, cy=W.h*0.5;
+    const S=W.h*0.095, cx=W.w/2, cy=W.h*0.5;
     const gry=t*0.12+mx*0.6, grx=my*0.4+Math.sin(t*0.2)*0.05;
 
     // Partikel — Punkte, kein Skizzenstrich (wäre Rauschen bei 900 Stück)
@@ -1755,8 +1736,8 @@ addEventListener('keydown', e=>{
     for(const p of PARTS){
       const q=proj(p,t*0.02,0,cx,cy,S);
       if(q.z<-5) continue;
-      ctx.globalAlpha=Math.min(.55,.5*q.f);
-      ctx.beginPath(); ctx.arc(q.sx,q.sy,Math.max(.6,1.1*q.f),0,6.2832); ctx.fill();
+      ctx.globalAlpha=Math.min(.38,.34*q.f);
+      ctx.beginPath(); ctx.arc(q.sx,q.sy,Math.max(.5,.9*q.f),0,6.2832); ctx.fill();
     }
     ctx.globalAlpha=1;
 
@@ -1766,47 +1747,33 @@ addEventListener('keydown', e=>{
 
     // Verbindungslinien Kern→Knoten
     nod.forEach((o,i)=>rc.line(cx,cy,o.q.sx,o.q.sy,
-      { stroke:rgba(o.n.col,.22*fade(o.q.z)), seed:3000+i, roughness:1.3, strokeWidth:1.2 }));
+      { stroke:rgba(o.n.col,.15*fade(o.q.z)), seed:3000+i, roughness:1.1, strokeWidth:0.8 }));
 
     // dunkler Kernfleck, dann die Skizzen-Kanten des Ikosaeders
     const cry=gry+t*0.2, crx=grx+t*0.3;
-    rc.circle(cx,cy,1.24*S,{ seed:4000, fill:'rgba(10,20,24,0.55)', fillStyle:'solid', stroke:'none', roughness:1.2 });
+    rc.circle(cx,cy,1.24*S,{ seed:4000, fill:'rgba(10,20,24,0.45)', fillStyle:'solid', stroke:'none', roughness:1.2 });
     for(let i=0;i<EDGES.length;i++){
       const a=proj(V[EDGES[i][0]],cry,crx,cx,cy,S), b=proj(V[EDGES[i][1]],cry,crx,cx,cy,S);
       rc.line(a.sx,a.sy,b.sx,b.sy,
-        { stroke:rgba('#34E7E4',.8*fade((a.z+b.z)/2)), seed:1000+i, roughness:1.1, strokeWidth:1.3 });
+        { stroke:rgba('#34E7E4',.5*fade((a.z+b.z)/2)), seed:1000+i, roughness:1.1, strokeWidth:0.8 });
     }
 
-    // Knoten — ferne zuerst, Schraffur in der Blockfarbe
+    // Knoten — ferne zuerst, Kreuzschraffur in der Blockfarbe
     [...nod].sort((p,q)=>q.q.z-p.q.z).forEach(o=>{
       const r=Math.max(7, 0.16*S*o.pulse*o.q.f);
       rc.circle(o.q.sx,o.q.sy,2*r,
-        { stroke:rgba(o.n.col,.95*fade(o.q.z)), fill:rgba(o.n.col,.4),
-          fillStyle:'hachure', fillWeight:1, hachureGap:3.2, hachureAngle:(o.n.phase*41)%180,
-          seed:2000+o.n.phase, roughness:1.6, strokeWidth:1.6 });
-    });
-
-    // project labels
-    const rect=canvas.getBoundingClientRect();
-    labels.forEach((lb,i)=>{
-      const q=nod[i].q;
-      const on = q.z<PERSP && rect.width>0;
-      const sx=rect.left+q.sx, sy=rect.top+q.sy;
-      if(on && sy>0 && sy<rect.height+rect.top+50){
-        lb.style.opacity=Math.max(0,Math.min(1,1.6-0.6*q.f));
-        lb.style.left=sx+'px'; lb.style.top=(sy+34)+'px';
-      } else { lb.style.opacity=0; }
+        { stroke:rgba(o.n.col,.8*fade(o.q.z)), fill:rgba(o.n.col,.3),
+          fillStyle:'cross-hatch', fillWeight:0.7, hachureGap:3.4, hachureAngle:(o.n.phase*41)%180,
+          seed:2000+o.n.phase, roughness:1.4, strokeWidth:1 });
     });
     raf=requestAnimationFrame(frame);
   }
-  function hideLabels(){ labels.forEach(l=>l.style.opacity=0); }
   if(PRM){
     running=true; frame(0); running=false; cancelAnimationFrame(raf);   // ein statisches Bild
   } else {
     const io=new IntersectionObserver(es=>{ es.forEach(e=>{
       running=e.isIntersecting;
       if(running){ cancelAnimationFrame(raf); raf=requestAnimationFrame(frame); }
-      else { hideLabels(); }
     }); },{threshold:0});
     io.observe($('#hero'));
     raf=requestAnimationFrame(frame);

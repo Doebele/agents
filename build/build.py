@@ -100,6 +100,13 @@ def pruefe():
     for k in sorted(chips - sb): fehler.append(f"Chip ohne Steckbrief: {k!r}")
     for k in sorted(sb - chips): fehler.append(f"Steckbrief ohne Chip: {k!r}")
 
+    # billing: optional, aber wenn gesetzt, nur bekannte Abrechnungsarten.
+    for k, d in daten["STECKBRIEF"].items():
+        b = d.get("billing")
+        if b is None: continue
+        if not isinstance(b, list) or not b or any(x not in ("abo", "api") for x in b):
+            fehler.append(f"Steckbrief {k!r}: billing muss Liste aus 'abo'/'api' sein")
+
     # Marken der Vorlage muessen zu den vorhandenen Inhalten passen.
     for b in BLOECKE:
         if "{{DATA:"+b+"}}" not in VORLAGE: fehler.append(f"Vorlage: Marke fuer {b} fehlt")

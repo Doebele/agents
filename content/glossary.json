@@ -204,5 +204,25 @@
    "de": "Gegenstück zu Quantisierung: besagt, dass ein Modell in dieser Weise komprimiert wurde. Stärker quantisiert heißt kleiner und schneller — bei etwas mehr Qualitätsverlust.",
    "en": "The counterpart to quantization: says a model was compressed this way. More quantized means smaller and faster — at some further loss of quality."
   }
+ },
+ {
+  "t": {
+   "de": "nutzungsbasiert",
+   "en": "usage-based"
+  },
+  "d": {
+   "de": "Abrechnung nach Verbrauch: pro 1M Token oder Sekunde, ueber einen API-Schluessel mit Guthaben. Zaehlt ueberall gleich — auch in fremden Tools wie GitHub oder anderen Harnesses.",
+   "en": "Billed by consumption: per 1M tokens or second, via an API key with credit. Counts the same everywhere — including in third-party tools like GitHub or other harnesses."
+  }
+ },
+ {
+  "t": {
+   "de": "Abo-Kontingent",
+   "en": "subscription quota"
+  },
+  "d": {
+   "de": "Nutzungsfenster im Abo, meist 5-Stunden-Sessions plus Wochenlimit. App-Abos (Claude Pro, ChatGPT Plus) gelten nur im eigenen Programm des Anbieters; Coding-Abos (Kimi For Coding, GLM Coding Plan) reisen im Schluessel mit in fremde Tools.",
+   "en": "Usage windows in a subscription, usually 5-hour sessions plus a weekly limit. App subscriptions (Claude Pro, ChatGPT Plus) only apply inside the vendor's own program; coding subscriptions (Kimi For Coding, GLM Coding Plan) travel with the key into third-party tools."
+  }
  }
 ]

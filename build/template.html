@@ -289,7 +289,7 @@ section{ position:relative; }
 /* ----- THESIS ---------------------------------------------------------- */
 .thesis .grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:70px; align-items:start; }
 @media (max-width:900px){ .thesis .grid{ grid-template-columns:1fr; gap:40px; } }
-.thesis .big{ font-size:clamp(26px,3.4vw,44px); line-height:1.18; font-weight:500; letter-spacing:-.01em; }
+.thesis .big{ font-size:clamp(26px,3.4vw,44px); line-height:1.18; font-weight:300; letter-spacing:-.01em; }
 .thesis .big b{ font-weight:900; }
 .thesis .big i{ font-style:normal; font-weight:900; }
 .thesis .body{ color:var(--ink-dim); font-size:17px; font-weight:300; }
@@ -516,6 +516,9 @@ section{ position:relative; }
 .drawer .insight{ margin-top:28px; padding:16px 18px; border:1px solid color-mix(in srgb,var(--mc) 32%, transparent); background:color-mix(in srgb,var(--mc) 7%, transparent); border-radius:12px; font-size:14px; color:var(--ink-dim); }
 .drawer .insight.warn{ border-color:color-mix(in srgb,var(--ember) 50%, transparent); background:rgba(255,122,51,.08); }
 .drawer .insight b{ color:var(--ink); }
+/* Modul-Merkzettel: sachlich, ohne Modulfarbe — eine Beobachtung, kein Urteil */
+.drawer .mod-note{ margin-top:14px; padding:13px 16px; border:1px dashed var(--line-2); border-radius:12px;
+  font-size:13px; color:var(--muted); }
 
 /* ----- OPEN vs CLOSED -------------------------------------------------- */
 .oc{ border:1px solid var(--line); border-radius:20px; overflow:hidden; padding-top:14px; background:linear-gradient(180deg,var(--surf),transparent); }
@@ -600,6 +603,27 @@ section{ position:relative; }
   text-decoration:underline; text-underline-offset:3px; cursor:none; transition:color .2s; }
 .foot .lgl:hover, .foot .lgl:focus-visible{ color:var(--accent); }
 @media (pointer:coarse){ .foot .lgl{ cursor:pointer; } }
+
+/* Die Zutatenzeile ganz unten: drei winzige Icons vor dem Link. Das Herz
+   schlaegt, der Funke blitzt, und ein Eckstueck Schokolade bricht beim
+   Darueberfahren ab. Bei reduzierter Bewegung ruht alles. */
+.made-with{ display:flex; align-items:center; justify-content:center; gap:9px; flex-wrap:wrap;
+  margin-top:46px; padding-bottom:36px;
+  font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.made-with a{ color:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
+.made-with a:hover, .made-with a:focus-visible{ color:var(--accent); }
+.made-with .mw{ width:14px; height:14px; flex:0 0 auto; fill:none; stroke:currentColor;
+  stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.mw-heart{ color:var(--pink); animation:mw-beat 2.6s ease-in-out infinite; }
+.mw-ai{ color:var(--cyan); animation:mw-twinkle 3.4s ease-in-out infinite; }
+.mw-choc{ color:var(--amber); }
+.mw-choc .sq{ transition:transform .5s cubic-bezier(.5,-.4,.3,1.7), opacity .5s; }
+.made-with:hover .mw-choc .sq{ transform:translate(7px,10px) rotate(42deg); opacity:0; }
+.mw-arrow{ color:currentColor; width:11px; height:11px; }
+@keyframes mw-beat{ 0%,100%{transform:scale(1);} 12%{transform:scale(1.25);} 24%{transform:scale(1);} 36%{transform:scale(1.15);} 48%{transform:scale(1);} }
+@keyframes mw-twinkle{ 0%,100%{opacity:.5; transform:rotate(0deg);} 50%{opacity:1; transform:rotate(28deg);} }
+@media (prefers-reduced-motion: reduce){ .mw-heart,.mw-ai{ animation:none; } .mw-choc .sq{ transition:none; } }
+@media (pointer:coarse){ .made-with a{ cursor:pointer; } }
 .lg-scrim{ position:fixed; inset:0; z-index:130; background:var(--overlay); backdrop-filter:blur(4px);
   opacity:0; visibility:hidden; transition:opacity .35s, visibility .35s; }
 .lg-scrim.open{ opacity:1; visibility:visible; }
@@ -806,6 +830,12 @@ button.it{ width:100%; font-family:var(--body); text-align:left; background:none
 .pb-name{ font-size:13px; color:var(--ink); font-weight:500; line-height:1.3; }
 .pb-cost{ font-family:var(--mono); font-size:11px; color:var(--muted); line-height:1.3; }
 .pb-track{ height:6px; background:var(--surf-2); border-radius:4px; overflow:hidden; }
+/* Abrechnungs-Badges: Abo-Kontingent gegen API-Nutzung */
+.st-bill{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 0; }
+.st-bill-b{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-dim); border:1px solid var(--line-2); border-radius:999px; padding:3px 9px; }
+.pb-grp{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:12px 0 6px; }
+.price-bars .pb-grp:first-child{ margin-top:2px; }
 .pb-fill{ height:100%; border-radius:4px; background:var(--mc); opacity:.6; }
 .price-bar.no-price .pb-track{ background:none; border-top:1px dashed var(--line-2); height:0; }
 </style>
@@ -1059,6 +1089,14 @@ setTimeout(function(){
 {{T:t064}}
 {{T:t100}}
     </div>
+    <!-- Die Zutatenzeile: Herz schlaegt, Funke blitzt, und ein Stueck Schokolade
+         bricht beim Darueberfahren ab — natuerrlich mit Schweizer Kreuz. -->
+    <div class="made-with">
+      <svg class="mw mw-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5S4 15.5 4 9.8C4 7 6.2 5 8.5 5c1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2C17.8 5 20 7 20 9.8c0 5.7-8 10.7-8 10.7z"/></svg>
+      <svg class="mw mw-ai" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg>
+      <svg class="mw mw-choc" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/><path class="sq" d="M14 5h3a2 2 0 0 1 2 2v3h-5z"/><path d="M8.5 10v4M6.5 12h4"/></svg>
+      <a href="https://medvesek.com" target="_blank" rel="noopener noreferrer">Made with love, AI and Swiss chocolate – medvesek.com<svg class="mw mw-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
   </div>
 </footer>
 
@@ -1262,6 +1300,7 @@ function renderOverview(m){
       else { const has=it.k&&STECKBRIEF[it.k]; h+=`<button class="chip${has?'':' static'}"${has?` data-key="${it.k}"`:''}><b>${it.n}</b>${it.v?` <i>${it.v}</i>`:''}</button>`; } });
     h+=`</div></div>`; });
   if(m.insight) h+=`<div class="insight${m.insight.warn?' warn':''}">${m.insight.text}</div>`;
+  if(m.note) h+=`<div class="mod-note">${m.note}</div>`;
   body.innerHTML=h;
   if(_gtReady) linkGlossary();
 }
@@ -1291,6 +1330,7 @@ function renderDetail(key){
   if(A&&(A.intel||A.speed||A.cost||A.verb)){ h+=`<div class="st-aa"><span class="st-aa-l">Artificial Analysis</span><div class="st-aa-grid">`;
 {{T:t097}}
 {{T:t076}}
+{{T:t104}}
   if(d.plans){
     /* Ein Plan-Segment zerlegen in Name, Preistext, Zahl und Einheitenklasse.
        Ein Preis-Atom ist "$3" oder "3 $" — Deutsch und Englisch mischen beide
@@ -1313,7 +1353,14 @@ function renderDetail(key){
     };
     const _segs=d.plans.split(' \u00b7 ');
     const _parsed=_segs.map(_pPlan);
-    _parsed.sort(function(a,b){ if(a.noPrice&&b.noPrice) return 0; if(a.noPrice) return 1; if(b.noPrice) return -1; return a.val-b.val; });
+    /* Nach Abrechnungsklasse gruppieren — die Abo-Treppe (Pro/Max/…) steht
+       zusammen, die Token-Preise danach —, innerhalb der Klasse nach Preis. */
+    const _ord={mon:0,tok:1,min:2};
+    var _pbLast=null;
+    _parsed.sort(function(a,b){
+      if(a.noPrice&&b.noPrice) return 0;
+      if(a.noPrice) return 1; if(b.noPrice) return -1;
+      return (_ord[a.cls]-_ord[b.cls])||(a.val-b.val); });
     /* Der Massstab ist global ueber alle Steckbriefe, je Einheitenklasse — so
        sind Balken verschiedener Modelle direkt vergleichbar. Einmal gereicht. */
     if(!window._pScale){ window._pScale={tok:0,mon:0,min:0};
@@ -1326,6 +1373,9 @@ function renderDetail(key){
       if(p.noPrice){ h+='<div class="price-bar no-price"><div class="pb-head"><span class="pb-name">'+p.name+'</span></div><div class="pb-track"></div></div>'; }
       else { var _s=p.cls?window._pScale[p.cls]:0;
         var w=_s>0?Math.max(p.val/_s*100,2):0;
+        /* Gruppenkopf vor jedem Klassenwechsel: Abo-Treppe, Token-Preise, Minuten */
+        if(p.cls!==_pbLast){ _pbLast=p.cls;
+          h+='<div class="pb-grp">'+_cL[p.cls]+'</div>'; }
         h+='<div class="price-bar"><div class="pb-head"><span class="pb-name">'+p.name+'</span><span class="pb-cost">'+p.cost+'</span></div><div class="pb-track"><div class="pb-fill" style="width:'+w+'%"></div></div></div>'; }
     });
     h+='</div></div>';
@@ -1608,7 +1658,7 @@ function _gtWrapAll(root, g){
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     /* Button-in-Button ist ungültiges HTML: alles Interaktive und alles schon
        Verpackte bleibt unberührt. */
-    acceptNode: n => n.parentElement && n.parentElement.closest('.gterm,.gt-wrap,.gt-desc,a,code,h1,h2,h3,button,.wz-opt,.wz-info')
+    acceptNode: n => n.parentElement && n.parentElement.closest('.gterm,.gt-wrap,.gt-desc,a,code,h1,h2,h3,button,.wz-opt,.wz-info,.st-bill,.pb-cls')
       ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
   });
   const nodes = [];

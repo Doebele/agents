@@ -286,9 +286,13 @@
   "icon": "anthropic",
   "free": false,
   "plans": {
-   "de": "Pro 20 $/Mo. · Max 5× 100 $ · Max 20× 200 $ · API nutzungsabhängig",
-   "en": "Pro $20/mo · Max 5x $100 · Max 20x $200 · usage-based API"
-  }
+   "de": "Pro 20 $/Mo. · Max 5× 100 $ · Max 20× 200 $ (5-/20-faches Pro-Kontingent je 5-h-Fenster) · API nutzungsabhängig",
+   "en": "Pro $20/mo · Max 5x $100 · Max 20x $200 (5x/20x the Pro quota per 5-hour window) · usage-based API"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "Agent SDK": {
   "name": "Claude Agent SDK",
@@ -343,9 +347,13 @@
   },
   "free": true,
   "plans": {
-   "de": "In ChatGPT-Plänen (Free–Pro 200 $) · API nutzungsabhängig",
-   "en": "Included in ChatGPT plans (Free–Pro $200) · usage-based API"
-  }
+   "de": "In ChatGPT-Plänen (Free–Pro 200 $) · Pro bis zu 5×/20× Plus-Kontingent · API nutzungsabhängig",
+   "en": "Included in ChatGPT plans (free–Pro $200) · Pro gets up to 5×/20× the Plus quota · usage-based API"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "Agents SDK": {
   "name": "OpenAI Agents SDK",
@@ -400,9 +408,13 @@
   "icon": "kimi",
   "free": true,
   "plans": {
-   "de": "Abo Free–199 $/Mo. · API 0,60 $/2,50 $ pro 1M Token",
-   "en": "Plans Free–$199/mo · API $0.60/$2.50 per 1M tokens"
-  }
+   "de": "Abo Free–199 $/Mo. (Stufen u. a. Moderato, Allegretto) · K3-1M verzehrt rund 2× so viel Kontingent wie K3-256k · 300–1.200 Requests je 5 h · API 0,60 $/2,50 $ pro 1M Token",
+   "en": "Subscription free–$199/mo (tiers incl. Moderato, Allegretto) · K3-1M burns about 2× the quota of K3-256k · 300–1,200 requests per 5 h · API $0.60/$2.50 per 1M tokens"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "ZCode": {
   "name": "ZCode",
@@ -428,9 +440,13 @@
   },
   "free": false,
   "plans": {
-   "de": "GLM-Coding-Abo: Lite 18 $ · Pro 80 $ · Max 168 $/Mo.",
-   "en": "GLM Coding plan: Lite $18 · Pro $80 · Max $168/mo"
-  }
+   "de": "GLM-Coding-Abo: Lite 18 $ · Pro 80 $ · Max 168 $/Mo. · GLM-5.3 verzehrt in Spitzenlast 3× so viel Kontingent wie GLM-4.7 (Mo–Fr 14–18 Uhr UTC+8)",
+   "en": "GLM Coding Plan: Lite $18 · Pro $80 · Max $168/mo · at peak (Mon–Fri 2–6 pm UTC+8) GLM-5.3 burns 3× the quota of GLM-4.7"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "Grok Build": {
   "name": "Grok Build",
@@ -816,7 +832,10 @@
   "plans": {
    "de": "Open-Weight (Apache 2.0), kostenlos selbst hostbar · API via Model Studio",
    "en": "Open-weight (Apache 2.0), free to self-host · API via Model Studio"
-  }
+  },
+  "billing": [
+   "api"
+  ]
  },
  "gpt-oss": {
   "name": "gpt-oss",
@@ -919,7 +938,10 @@
   "plans": {
    "de": "Open-Weight (Apache 2.0) · API 0,50 $/1,50 $ pro 1M Token",
    "en": "Open-weight (Apache 2.0) · API $0.50/$1.50 per 1M tokens"
-  }
+  },
+  "billing": [
+   "api"
+  ]
  },
  "Llama 4": {
   "name": "Llama 4",
@@ -1794,7 +1816,11 @@
   "plans": {
    "de": "API Terra 2 $/12 $ · Sol 5 $/30 $ · Luna 0,20 $/1,20 $ pro 1M Tok.",
    "en": "API Terra $2/$12 · Sol $5/$30 · Luna $0.20/$1.20 per 1M tok."
-  }
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "Claude Opus 5 / Sonnet 5": {
   "name": "Claude Opus 5 / Sonnet 5",
@@ -1846,7 +1872,11 @@
   "plans": {
    "de": "API Opus 5 5 $/25 $ pro 1M Token · Sonnet 5 2 $/10 $ pro 1M Token",
    "en": "API Opus 5 $5/$25 per 1M tokens · Sonnet 5 $2/$10 per 1M tokens"
-  }
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "Gemini 3.1 Pro": {
   "name": "Gemini 3.1 Pro",
@@ -1898,7 +1928,11 @@
   "plans": {
    "de": "API 2 $/12 $ pro 1M Token · Google AI Pro 19,99 $/Mo.",
    "en": "API $2/$12 per 1M tokens · Google AI Pro $19.99/mo"
-  }
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "Grok 4.6": {
   "name": "Grok 4.6",
@@ -1946,7 +1980,11 @@
   "plans": {
    "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · Agent 0,05 $/Min.",
    "en": "API $2/$6 per 1M tokens (cache $0.50) · agent $0.05/min"
-  }
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "Qwen3.8-Max": {
   "name": "Qwen3.8-Max",
@@ -1998,7 +2036,10 @@
   "plans": {
    "de": "Kostenlose Stufe · Open-Weight · API Max-Tarif ca. 2,5/10 ¥/1M Tok.",
    "en": "Free tier · open weights · API Max tier ~¥2.5/¥10 per 1M tok."
-  }
+  },
+  "billing": [
+   "api"
+  ]
  },
  "Kimi K3": {
   "name": "Kimi K3",
@@ -2050,7 +2091,11 @@
   "plans": {
    "de": "API 3 $/15 $ pro 1M Token (Open-Weight, selbst hostbar)",
    "en": "API $3/$15 per 1M tokens (open-weight, self-hostable)"
-  }
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "DeepSeek V4": {
   "name": "DeepSeek V4",
@@ -2102,7 +2147,10 @@
   "plans": {
    "de": "API V4-Pro 0,435 $/0,87 $ · Flash 0,14 $/0,28 $ pro 1M Tok.",
    "en": "API V4-Pro $0.435/$0.87 · Flash $0.14/$0.28 per 1M tok."
-  }
+  },
+  "billing": [
+   "api"
+  ]
  },
  "GLM-5.2": {
   "name": "GLM-5.2",
@@ -2153,7 +2201,11 @@
   "plans": {
    "de": "API 1,40 $/4,40 $ pro 1M Token · zeitlich begrenzt kostenlos",
    "en": "API $1.40/$4.40 per 1M tokens · limited-time free tier"
-  }
+  },
+  "billing": [
+   "abo",
+   "api"
+  ]
  },
  "Anthropic Agent Skills": {
   "name": "Anthropic Agent Skills",

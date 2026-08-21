@@ -1733,12 +1733,12 @@
    "en": "Paid options"
   },
   "kosten_egal_sub": {
-   "de": "Abos, Schlüssel, Abrechnung nach Nutzung",
-   "en": "Subscriptions, keys, usage-based billing"
+   "de": "Abos mit Kontingenten oder Schlüssel mit Nutzung",
+   "en": "Subscriptions with quotas or keys with usage"
   },
   "kosten_gefiltert": {
-   "de": "Nach deiner Kostenwahl gefiltert. Einträge ohne Kostenangabe bleiben stehen.",
-   "en": "Filtered by your cost choice. Entries without a cost note stay visible."
+   "de": "Nach deiner Kostenwahl gefiltert. Einträge ohne Kostenangabe bleiben stehen. Und im Abo gilt: App-Kontingente enden im eigenen Programm — in fremde Tools führt erst ein API-Schlüssel, und der rechnet nutzungsbasiert.",
+   "en": "Filtered by your cost choice. Entries without a cost note stay visible. And about subscriptions: app quotas end inside the vendor's own program — third-party tools need an API key, and that bills by usage."
   },
   "vor_titel": {
    "de": "Bevor du anfängst",

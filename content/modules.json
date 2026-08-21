@@ -144,6 +144,10 @@
     "en": "In <b>2026</b>, open models reach near-frontier quality for the first time. The choice: <b>control</b> or <b>convenience</b>."
    },
    "warn": false
+  },
+  "note": {
+   "de": "Ein Abo kauft Kontingente, ein API-Schluessel zahlt pro Nutzung. App-Abos gelten meist nur im eigenen Programm des Anbieters; Coding-Abos wie Kimi For Coding und GLM Coding Plan reisen im Schluessel mit in fremde Tools.",
+   "en": "A subscription buys quotas, an API key pays per use. App subscriptions usually apply only inside the vendor's own program; coding subscriptions like Kimi For Coding and GLM Coding Plan travel with the key into third-party tools."
   }
  },
  {

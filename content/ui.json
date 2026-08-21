@@ -284,8 +284,8 @@
   "en": "    h+=`</div>${A.aaUrl?`<a class=\"st-aa-src\" href=\"${A.url}\" target=\"_blank\" rel=\"noopener noreferrer\">Source ${EXT}</a>`:''}</div>`; }"
  },
  "t077": {
-  "de": "    h+='<div class=\"st-plans\"><span class=\"st-plans-l\">Preise &amp; Abo</span>'+(d.free===true?'<span class=\"tag free\">Free-Tier</span>':'')+'<div class=\"price-bars\">';",
-  "en": "    h+='<div class=\"st-plans\"><span class=\"st-plans-l\">Pricing &amp; plans</span>'+(d.free===true?'<span class=\"tag free\">Free tier</span>':'')+'<div class=\"price-bars\">';"
+  "de": "    h+='<div class=\"st-plans\"><span class=\"st-plans-l\">Preise &amp; Abo</span>'+(d.free===true?'<span class=\"tag free\">Free-Tier</span>':'')+(d.billing&&d.billing.length?'<div class=\"st-bill\">'+d.billing.map(b=>'<span class=\"st-bill-b\">'+_bL[b]+'</span>').join('')+'</div>':'')+'<div class=\"price-bars\">';",
+  "en": "    h+='<div class=\"st-plans\"><span class=\"st-plans-l\">Pricing &amp; plans</span>'+(d.free===true?'<span class=\"tag free\">Free tier</span>':'')+(d.billing&&d.billing.length?'<div class=\"st-bill\">'+d.billing.map(b=>'<span class=\"st-bill-b\">'+_bL[b]+'</span>').join('')+'</div>':'')+'<div class=\"price-bars\">';"
  },
  "t078": {
   "de": "  if(L.home) h+=`<a class=\"st-link\" href=\"${L.home}\" target=\"_blank\" rel=\"noopener noreferrer\">Webseite ${EXT}</a>`;",
@@ -390,5 +390,9 @@
  "t103": {
   "de": "  <button class=\"nav-theme\" id=\"navtheme\" aria-label=\"Farbschema wechseln\" title=\"Farbschema wechseln\"><svg viewBox=\"0 0 24 24\"><path id=\"theme-ico\" d=\"M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z\"/></svg></button>",
   "en": "  <button class=\"nav-theme\" id=\"navtheme\" aria-label=\"Switch colour scheme\" title=\"Switch colour scheme\"><svg viewBox=\"0 0 24 24\"><path id=\"theme-ico\" d=\"M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z\"/></svg></button>"
+ },
+ "t104": {
+  "de": "  const _bL={abo:'Abo · Kontingent',api:'API · nutzungsbasiert'}, _cL={mon:'Abo · pro Monat',tok:'API · pro 1M Token',min:'Nutzung · pro Minute'};",
+  "en": "  const _bL={abo:'Subscription · quota',api:'API · usage-based'}, _cL={mon:'Subscription · per month',tok:'API · per 1M tokens',min:'Usage · per minute'};"
  }
 }

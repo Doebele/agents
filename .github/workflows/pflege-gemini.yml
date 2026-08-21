@@ -133,9 +133,12 @@ jobs:
                in content/steckbrief.json. If one no longer resolves or now
                redirects elsewhere, that is the run's topic.
 
-            2. **A stale price.** 42 entries carry a `plans` field, and those
-               go out of date fastest. Check a handful against the vendor's
-               current pricing page.
+            2. **A stale price.** The most perishable thing in the catalogue,
+               and the item most often worth doing. GEMINI.md explains the
+               rotation under "Prices are the first thing to rot": take the
+               entries with the oldest `plansChecked`, or none at all, read
+               the vendor's own pricing page, and set the date even when
+               nothing changed.
 
             3. **A declared gap.** Two places declare them, and GEMINI.md says
                which under "What counts as a declared gap": the `luecke`

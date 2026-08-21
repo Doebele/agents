@@ -89,6 +89,48 @@ from a bot-walled site is not a dead link.
 Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 `upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`.
 
+## Prices are the first thing to rot
+
+Everything else in a fact sheet ages slowly. A price can be wrong a week
+after it was right, and a wrong price is worse than a missing one: the
+reader plans around it.
+
+So prices get checked on a rotation, not by whoever remembers.
+
+A fact sheet whose price you verified carries the date you did it:
+
+```json
+"plans": { "de": "…", "en": "…" },
+"plansChecked": "2026-08-21"
+```
+
+The date is the day you read the vendor's page, not the day the price
+changed. Set it even when nothing changed — that is the point. An entry with
+no `plansChecked` counts as never checked, which puts it first in line.
+`build.py` refuses a date that is malformed, that lies in the future, or that
+sits on an entry with no `plans`.
+
+Which ones to take, oldest first:
+
+```bash
+python3 - <<'EOF'
+import json
+d = json.load(open("content/steckbrief.json"))
+reihe = sorted(((v.get("plansChecked", ""), k) for k, v in d.items() if v.get("plans")))
+for stand, k in reihe[:15]:
+    print(f"{stand or 'nie':>10}  {k}")
+EOF
+```
+
+Ten per pull request at most, and read the vendor's own pricing page for each
+one. A press release or a comparison site is not the source. Where a vendor
+no longer publishes a price, say so in the entry rather than keeping the old
+number alive.
+
+This is item two of the weekly list, and it is the item most likely to be
+worth doing. Do not skip it because nothing looks obviously broken. A stale
+price never looks broken.
+
 ## What counts as a declared gap
 
 Item three of that list means two places, not one.

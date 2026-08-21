@@ -414,8 +414,8 @@
   "accent": "var(--ember)",
   "open": false,
   "blurb": {
-   "de": "Z.AIs offizieller Agent für ihr GLM-Modell: planen, codieren, prüfen, ausliefern. Anders als die Terminal-Werkzeuge daneben ist es eine Desktop-Anwendung mit eigenem Fenster, die du installierst und anklickst. Fertig nutzbar, aber an das hauseigene Modell gebunden.",
-   "en": "Z.AI's official agent for their GLM model: plan, code, review, ship. Unlike the terminal tools beside it, this is a desktop application with its own window that you install and click. Ready to use, but tied to the in-house model."
+   "de": "Z.AIs offizieller Agent für ihr GLM-5.3-Modell: planen, codieren, prüfen, ausliefern. Anders als die Terminal-Werkzeuge daneben ist es eine Desktop-Anwendung mit eigenem Fenster, die du installierst und anklickst. Fertig nutzbar, aber an das hauseigene Modell gebunden.",
+   "en": "Z.AI's official agent for their GLM-5.3 model: plan, code, review, ship. Unlike the terminal tools beside it, this is a desktop application with its own window that you install and click. Ready to use, but tied to the in-house model."
   },
   "tip": {
    "de": "Der Agent-Modus lohnt sich bei Aufgaben über mehrere Runden, nicht bei einzelnen Fragen. Für unbeaufsichtigte Abläufe ungeeignet: Es gibt keine Kommandozeile.",
@@ -2122,8 +2122,8 @@
    "en": "An open model with 753 billion parameters and a one-million-token context, built for engineering work. MIT licensed as well, so free to use."
   },
   "tip": {
-   "de": "Läuft mit genug Grafikspeicher auch auf eigener Hardware — anders als die ganz großen offenen Modelle noch im Bereich des Machbaren.",
-   "en": "With enough graphics memory it runs on your own hardware — unlike the very largest open models, this one is still within reach."
+   "de": "Läuft mit genug Grafikspeicher auch auf eigener Hardware — anders als die ganz großen offenen Modelle noch im Bereich des Machbaren. Z.AIs Nachfolger GLM-5.3 ist inzwischen im GLM-Coding-Abo erhältlich, aber noch nicht als offene Gewichte.",
+   "en": "With enough graphics memory it runs on your own hardware — unlike the very largest open models, this one is still within reach. Z.AI's successor GLM-5.3 is available through the GLM Coding plan, but not yet as open weights."
   },
   "links": {
    "home": "https://z.ai/blog/glm-5.2",

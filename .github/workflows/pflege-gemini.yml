@@ -140,6 +140,12 @@ jobs:
                the vendor's own pricing page, and set the date even when
                nothing changed.
 
+               Not only the numbers. Check whether the billing model moved —
+               a subscription added next to pay-per-use, an API opened, a
+               free tier withdrawn, the product discontinued — and correct
+               `billing` in the same pull request. A model can change without
+               a single digit changing.
+
             3. **A declared gap.** Two places declare them, and GEMINI.md says
                which under "What counts as a declared gap": the `luecke`
                fields in content/arbeitsarten.json, and the data gaps listed

@@ -137,10 +137,10 @@ jobs:
                go out of date fastest. Check a handful against the vendor's
                current pricing page.
 
-            3. **A declared gap.** content/arbeitsarten.json marks stations
-               with a `luecke` field, each describing in one sentence what is
-               missing. If a tool now exists that fills one, add its fact
-               sheet and assign it.
+            3. **A declared gap.** Two places declare them, and GEMINI.md says
+               which under "What counts as a declared gap": the `luecke`
+               fields in content/arbeitsarten.json, and the data gaps listed
+               there. Read that section before you pick this item.
 
             4. **Something genuinely new.** A model, harness or MCP server
                that has appeared since the catalogue was last touched.

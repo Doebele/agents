@@ -203,8 +203,10 @@ jobs:
              bot-walled site is not a dead link.
           2. A stale price. Entries carrying a `plans` field go out of date
              fastest. Check a handful against the vendor's pricing page.
-          3. A declared gap. content/arbeitsarten.json marks stations with a
-             `luecke` field describing what is missing.
+          3. A declared gap. Two places declare them, and AGENTS.md says which
+             under "What counts as a declared gap": the `luecke` fields in
+             content/arbeitsarten.json, and the data gaps listed there. Read
+             that section before you pick this item.
           4. Something genuinely new that a beginner would plausibly meet.
 
           Before you start, run `gh pr list`. If another agent already

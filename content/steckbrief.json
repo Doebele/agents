@@ -1900,8 +1900,8 @@
    "en": "API $2/$12 per 1M tokens · Google AI Pro $19.99/mo"
   }
  },
- "Grok 4.5": {
-  "name": "Grok 4.5",
+ "Grok 4.6": {
+  "name": "Grok 4.6",
   "vendor": "xAI",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
@@ -1910,41 +1910,37 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "xAIs Spitzenmodell mit Schwerpunkt auf Programmierung und mehrstufigen Agentenaufgaben. Es ist direkt in X eingebunden, was es für alles interessant macht, was mit dem Geschehen auf dieser Plattform zu tun hat.",
-   "en": "xAI's flagship, focused on programming and multi-step agent tasks. It is wired directly into X, which makes it interesting for anything tied to what happens on that platform."
+   "de": "xAIs Spitzenmodell mit Schwerpunkt auf langlebigen Agentenaufgaben und anspruchsvoller interaktiver und visueller Arbeit. Es ist direkt in X eingebunden, was es für alles interessant macht, was mit dem Geschehen auf dieser Plattform zu tun hat.",
+   "en": "xAI's flagship, focused on long-running agent tasks and ambitious interactive and visual work. It is wired directly into X, which makes it interesting for anything tied to what happens on that platform."
   },
   "tip": {
    "de": "Am ehesten relevant, wenn du ohnehin auf X arbeitest oder von dort Daten brauchst.",
    "en": "Most relevant if you already work on X or need data from there."
   },
   "links": {
-   "home": "https://x.ai/news/grok-4-5",
-   "docs": "https://docs.x.ai/developers/models/grok-4.5",
+   "home": "https://x.ai/news/grok-4-6",
+   "docs": "https://docs.x.ai/developers/models/grok-4.6",
    "code": null
   },
   "icon": "x",
   "free": false,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/grok-4-5",
+   "url": "https://artificialanalysis.ai/models/grok-4-6",
    "intel": {
-    "v": "56",
-    "rank": "#18/188",
-    "u": 4
+    "v": "61",
+    "rank": "#6/182"
    },
    "speed": {
-    "v": "65.9",
-    "rank": "#90/188",
-    "u": 2
+    "v": "66.1",
+    "rank": "#87/182"
    },
    "cost": {
     "v": "$2/$6",
-    "rank": "#37/188",
-    "u": 2
+    "rank": "#59/182"
    },
    "verb": {
-    "v": "60M",
-    "rank": "#34/188",
-    "u": 2
+    "v": "72M",
+    "rank": "#39/182"
    }
   },
   "plans": {

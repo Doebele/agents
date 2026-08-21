@@ -2785,6 +2785,35 @@
    "code": null
   }
  },
+ "Xcode": {
+  "name": "Xcode",
+  "vendor": "Apple",
+  "cat": {
+   "de": "Entwicklungsumgebung · Baustein 07",
+   "en": "Development environment · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Apples Werkstatt für iPhone-, iPad- und Mac-Apps — nicht freiwillig, sondern Pflicht: iOS-Apps lassen sich nur unter macOS bauen. Neben Editor, Compiler und Debugger bringt Xcode den Simulator mit, der dein Gerät nachbildet, und Previews, die jede Änderung sofort zeigen. Seit Kurzem sitzen auch Agenten darin: Claude, OpenAI Codex und Gemini lassen sich direkt in den Editor einbinden — dein eigener Agent kann aber weiter in Zed oder Cursor schreiben; Xcode übersetzt am Ende, was er geschrieben hat.",
+   "en": "Apple's workshop for iPhone, iPad and Mac apps — not a choice but a duty: iOS apps can only be built on macOS. Besides editor, compiler and debugger, Xcode brings the simulator that mimics your device, and Previews that show every change immediately. Recently agents sit in it too: Claude, OpenAI Codex and Gemini plug straight into the editor — though your own agent can keep writing in Zed or Cursor; Xcode compiles what it wrote at the end."
+  },
+  "tip": {
+   "de": "Für iOS unvermeidbar, für alles andere unnötig: Läuft nur auf dem Mac, braucht mehrere Gigabyte Platz und ist auf Berufsentwickler zugeschnitten — die Oberfläche erklärt sich dir nicht nebenbei. Beim Ausprobieren im Simulator kostet nichts: erst wer ins App Store will, braucht ein Entwicklerkonto (99 $ im Jahr).",
+   "en": "Unavoidable for iOS, unnecessary for everything else: runs on a Mac only, needs several gigabytes of space and is cut for professional developers — the interface does not explain itself in passing. Trying things out in the simulator costs nothing: only going to the App Store needs a developer account ($99 a year)."
+  },
+  "plans": {
+   "de": "Kostenlos · App-Store-Vertrieb nur mit Apple-Developer-Programm (99 $/Jahr)",
+   "en": "Free · App Store distribution only with an Apple Developer Program membership ($99/year)"
+  },
+  "plansChecked": "2026-08-21",
+  "links": {
+   "home": "https://developer.apple.com/xcode/",
+   "docs": "https://developer.apple.com/documentation/xcode/",
+   "code": null
+  }
+ },
  "tool-suche": {
   "name": {
    "de": "Websuche",

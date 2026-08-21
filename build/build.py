@@ -10,7 +10,8 @@ Steckbrief, ein Steckbrief, den keine Kachel erreicht.
 Aufruf:  python3 build/build.py [--check]
          --check baut nur und vergleicht mit dem, was in site/ liegt.
 """
-import json, pathlib, sys, difflib
+import json
+import re, datetime, pathlib, sys, difflib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE, CONTENT = ROOT/"site", ROOT/"content"
@@ -106,6 +107,21 @@ def pruefe():
         if b is None: continue
         if not isinstance(b, list) or not b or any(x not in ("abo", "api") for x in b):
             fehler.append(f"Steckbrief {k!r}: billing muss Liste aus 'abo'/'api' sein")
+
+    # plansChecked: optional, aber wenn gesetzt, ein echtes Datum in der
+    # Vergangenheit. Ein Pruefdatum, das in der Zukunft liegt, ist keine
+    # Schlamperei sondern eine Falschaussage: es behauptet eine Pruefung,
+    # die nicht stattgefunden hat.
+    heute = datetime.date.today().isoformat()
+    for k, d in daten["STECKBRIEF"].items():
+        s = d.get("plansChecked")
+        if s is None: continue
+        if not isinstance(s, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", s):
+            fehler.append(f"Steckbrief {k!r}: plansChecked muss JJJJ-MM-TT sein, nicht {s!r}")
+        elif s > heute:
+            fehler.append(f"Steckbrief {k!r}: plansChecked {s} liegt in der Zukunft")
+        elif not d.get("plans"):
+            fehler.append(f"Steckbrief {k!r}: plansChecked ohne plans")
 
     # Marken der Vorlage muessen zu den vorhandenen Inhalten passen.
     for b in BLOECKE:

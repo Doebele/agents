@@ -201,8 +201,17 @@ jobs:
              just written by build/linkcheck.py — work through what it lists,
              and re-check by hand before changing anything: a 403 from a
              bot-walled site is not a dead link.
-          2. A stale price. Entries carrying a `plans` field go out of date
-             fastest. Check a handful against the vendor's pricing page.
+          2. A stale price. The most perishable thing in the catalogue, and the
+             item most often worth doing. AGENTS.md explains the rotation under
+             "Prices are the first thing to rot": take the entries with the
+             oldest `plansChecked`, or none at all, read the vendor's own
+             pricing page, and set the date even when nothing changed.
+
+             Not only the numbers. Check whether the billing model moved: a
+             subscription added next to pay-per-use, an API opened, a free
+             tier withdrawn, the product discontinued. Correct `billing` in
+             the same pull request. A model can change without a single digit
+             changing.
           3. A declared gap. Two places declare them, and AGENTS.md says which
              under "What counts as a declared gap": the `luecke` fields in
              content/arbeitsarten.json, and the data gaps listed there. Read

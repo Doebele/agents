@@ -89,6 +89,75 @@ from a bot-walled site is not a dead link.
 Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 `upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`.
 
+## Prices are the first thing to rot
+
+Everything else in a fact sheet ages slowly. A price can be wrong a week
+after it was right, and a wrong price is worse than a missing one: the
+reader plans around it.
+
+So prices get checked on a rotation, not by whoever remembers.
+
+### Three things change, not one
+
+A price check that only compares numbers misses two thirds of what moves.
+
+**The numbers.** The obvious part. Also watch for a tier that disappeared:
+a free plan withdrawn is a bigger change for a beginner than a rate going up
+by a dollar.
+
+**The billing model.** A vendor that sold usage by the token adds a monthly
+subscription. A subscription vendor opens an API. A coding subscription
+starts travelling into third-party tools, which makes it worth mentioning
+even though it arrives as a key. None of this changes a single digit, and
+all of it changes which readers the entry suits. When the model moved,
+`billing` moves with it in the same pull request.
+
+**Whether it is still sold at all.** Products get discontinued, merged into
+a bigger suite, or quietly closed to new customers. An entry describing a
+plan nobody can buy any more is worse than one with an old number.
+
+Set `billing` while you are there, even on entries that never had it. You
+are already reading the page that answers it, and the gap under "What counts
+as a declared gap" closes by itself that way.
+
+A fact sheet whose price you verified carries the date you did it:
+
+```json
+"plans": { "de": "…", "en": "…" },
+"plansChecked": "2026-08-21"
+```
+
+The date is the day you read the vendor's page, not the day the price
+changed. Set it even when nothing changed — that is the point. An entry with
+no `plansChecked` counts as never checked, which puts it first in line.
+`build.py` refuses a date that is malformed, that lies in the future, or that
+sits on an entry with no `plans`.
+
+Which ones to take, oldest first:
+
+```bash
+python3 - <<'EOF'
+import json
+d = json.load(open("content/steckbrief.json"))
+reihe = sorted(((v.get("plansChecked", ""), k) for k, v in d.items() if v.get("plans")))
+for stand, k in reihe[:15]:
+    print(f"{stand or 'nie':>10}  {k}")
+EOF
+```
+
+Ten per pull request at most, and read the vendor's own pricing page for each
+one. A press release or a comparison site is not the source. Where a vendor
+no longer publishes a price, say so in the entry rather than keeping the old
+number alive.
+
+Set `plansChecked` on every entry you looked at, including the ones where
+nothing had moved. Those are the majority, and leaving their date old would
+send the next run straight back to the same page.
+
+This is item two of the weekly list, and it is the item most likely to be
+worth doing. Do not skip it because nothing looks obviously broken. A stale
+price never looks broken.
+
 ## What counts as a declared gap
 
 Item three of that list means two places, not one.
@@ -117,6 +186,10 @@ offen = [k for k, v in d.items() if v.get("plans") and "billing" not in v]
 print(len(offen), "ohne billing:", ", ".join(sorted(offen)))
 EOF
 ```
+
+The price rotation above also fills this field whenever it visits an entry,
+so the backlog shrinks on its own. Taking it as a topic of its own only
+makes sense while that backlog is large.
 
 Take at most ten per pull request and keep them in one block, so the review
 stays readable. For every entry name the vendor page you read. Where the

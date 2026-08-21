@@ -758,7 +758,9 @@
   "plans": {
    "de": "Kostenlos, Open Source (MIT)",
    "en": "Free, open source (MIT)"
-  }
+  },
+  "billing": ["api"],
+  "plansChecked": "2026-08-21"
  },
  "Google ADK": {
   "name": "Agent Development Kit",
@@ -787,7 +789,9 @@
   "plans": {
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
-  }
+  },
+  "billing": ["api"],
+  "plansChecked": "2026-08-21"
  },
  "Qwen 3.6 / 3.8": {
   "name": "Qwen3",
@@ -3630,7 +3634,9 @@
   "plans": {
    "de": "Kostenlos (MIT) · Modellkosten nach eigenem Anbieter",
    "en": "Free (MIT) · model costs per your own provider"
-  }
+  },
+  "billing": ["api"],
+  "plansChecked": "2026-08-21"
  },
  "archify": {
   "name": "archify",
@@ -3983,7 +3989,9 @@
   "plans": {
    "de": "Kostenlos (Apache-2.0) · Schlüssel oder bestehende Abos",
    "en": "Free (Apache-2.0) · keys or existing subscriptions"
-  }
+  },
+  "billing": ["abo", "api"],
+  "plansChecked": "2026-08-21"
  },
  "Buzz": {
   "name": "Buzz",

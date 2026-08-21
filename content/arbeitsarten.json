@@ -271,10 +271,6 @@
       "skill-creator",
       "eigene-skills"
      ],
-     "luecke": {
-      "de": "Ein Tabellen- und ein Dokument-Skill fehlen — genau daran hängt der Unterschied zwischen Excel und PDF.",
-      "en": "A spreadsheet skill and a document skill are missing — the difference between Excel and PDF hangs on exactly that."
-     },
      "frage": {
       "de": "Welches Wissen soll der Agent mitbringen?",
       "en": "What knowledge should the agent bring along?"
@@ -403,10 +399,6 @@
       "Impeccable",
       "archify"
      ],
-     "luecke": {
-      "de": "Der Präsentations- und Dokument-Skill fehlt, obwohl genau er hier die Arbeit macht.",
-      "en": "The presentation and document skill is missing, though it is what does the work here."
-     },
      "frage": {
       "de": "Welches Wissen soll der Agent mitbringen?",
       "en": "What knowledge should the agent bring along?"

@@ -89,6 +89,40 @@ from a bot-walled site is not a dead link.
 Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 `upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`.
 
+## What counts as a declared gap
+
+Item three of that list means two places, not one.
+
+`content/arbeitsarten.json` marks wizard stations with a `luecke` field: a
+tool the catalogue does not yet carry. Those are visible to readers. Closing
+one means adding the fact sheet and assigning it, then removing the field.
+
+The section below declares gaps in the data itself. Nobody sees them from
+the outside, and they do not close on their own.
+
+### `billing` is missing on most fact sheets that have prices
+
+The field says how a thing is paid for: `["abo"]`, `["api"]`, or both. A
+subscription buys a quota. An API key pays per use. Some vendors sell both,
+and a coding subscription that travels into third-party tools is an `abo`
+even though it arrives as a key.
+
+Count what is left before you start:
+
+```bash
+python3 - <<'EOF'
+import json
+d = json.load(open("content/steckbrief.json"))
+offen = [k for k, v in d.items() if v.get("plans") and "billing" not in v]
+print(len(offen), "ohne billing:", ", ".join(sorted(offen)))
+EOF
+```
+
+Take at most ten per pull request and keep them in one block, so the review
+stays readable. For every entry name the vendor page you read. Where the
+page does not say, leave the field out and list which ones you skipped. A
+guessed billing type is a guessed fact.
+
 Whenever a run touches **marketing topics** — a new fact sheet, a wizard
 station, a gap to fill — check Corey Haines' collection first and take
 from there: https://github.com/coreyhaines31/marketingskills (cro and

@@ -3093,12 +3093,12 @@
   "open": true,
   "free": true,
   "blurb": {
-   "de": "DeepSeeks eigener Agent, seit August 2026 als Entwicklervorschau. Ein Befehl startet ihn samt Weboberfläche im Browser — du musst also nichts selbst bauen. Das Besondere ist der Aufbau: Modelle, Werkzeuge, Skills, Sitzungen, Sandkästen und selbst die Oberfläche sind austauschbare Erweiterungen. Der Baukasten steckt hier also im fertigen Programm.",
-   "en": "DeepSeek's own agent, in developer preview since August 2026. One command starts it together with a web interface in the browser — so you build nothing yourself. The architecture is what stands out: models, tools, skills, sessions, sandboxes and even the interface are swappable plugins. Here the toolkit sits inside the finished program."
+   "de": "DeepSeeks eigener Agent, seit August 2026 als Entwicklervorschau. Ein Befehl startet ihn samt Weboberfläche im Browser — du musst also nichts selbst bauen. Das Besondere ist der Aufbau: Modelle, Werkzeuge, Skills, Sitzungen, Sandkästen und selbst die Oberfläche sind austauschbare Erweiterungen. Der Baukasten steckt hier also im fertigen Programm. Zuletzt folgte ein Update dem nächsten: Befehle wie /goal und /plan nehmen jetzt auch Bilder entgegen, und Claude Code und Codex sind als Unteraufträge nachrüstbar.",
+   "en": "DeepSeek's own agent, in developer preview since August 2026. One command starts it together with a web interface in the browser — so you build nothing yourself. The architecture is what stands out: models, tools, skills, sessions, sandboxes and even the interface are swappable plugins. Here the toolkit sits inside the finished program. Lately one update has followed the next: commands like /goal and /plan now accept images too, and Claude Code and Codex can be added as subagents."
   },
   "tip": {
-   "de": "Ausdrücklich Vorschau: Die Entwickler kündigen Änderungen an, die Bestehendes brechen. Zum Ausprobieren gut, für Arbeit, auf die du dich verlässt, noch zu früh. Start mit npx @deepseek-ai/dsh web.",
-   "en": "Explicitly a preview: the developers announce compatibility-breaking changes. Fine for trying out, too early for work you depend on. Start it with npx @deepseek-ai/dsh web."
+   "de": "Ausdrücklich Vorschau: Die Entwickler kündigen Änderungen an, die Bestehendes brechen — zuletzt betraf das sogar das Speicherformat der Sitzungen. Zum Ausprobieren gut, für Arbeit, auf die du dich verlässt, noch zu früh. Start mit npx @deepseek-ai/dsh web.",
+   "en": "Explicitly a preview: the developers announce compatibility-breaking changes — most recently even the session storage format was affected. Fine for trying out, too early for work you depend on. Start it with npx @deepseek-ai/dsh web."
   },
   "plans": {
    "de": "Quelloffen unter MIT. Kosten entstehen durch die Modelle dahinter.",

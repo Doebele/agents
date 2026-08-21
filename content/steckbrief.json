@@ -308,8 +308,8 @@
    "en": "Not a finished program but a toolkit: it exposes the very loop inside Claude Code to your own programs, in Python and TypeScript. You decide which tools the agent gets and when it stops."
   },
   "tip": {
-   "de": "Der Schritt danach, wenn dir Claude Code gefällt, du aber etwas Eigenes bauen willst. Setzt Programmierkenntnisse voraus.",
-   "en": "The step after Claude Code, once you like it but want to build something of your own. Requires programming."
+   "de": "Der Schritt danach, wenn dir Claude Code gefällt, du aber etwas Eigenes bauen willst. Setzt Programmierkenntnisse voraus. Ein bestehendes Claude-Abo hilft hier nicht: Für Produkte auf dem SDK erlaubt Anthropic den claude.ai-Login nur nach vorheriger Genehmigung, sonst führt der Weg über einen API-Schlüssel.",
+   "en": "The step after Claude Code, once you like it but want to build something of your own. Requires programming. An existing Claude subscription does not help here: for products built on the SDK, Anthropic allows claude.ai login only with prior approval, so the route is an API key."
   },
   "links": {
    "home": "https://code.claude.com/docs/en/agent-sdk/overview",
@@ -319,9 +319,13 @@
   "icon": "anthropic",
   "free": true,
   "plans": {
-   "de": "Kostenlos, Open Source (MIT)",
-   "en": "Free, open source (MIT)"
-  }
+   "de": "Kostenlos (MIT) · Modelle über eigenen Anthropic-API-Schlüssel",
+   "en": "Free (MIT) · models via your own Anthropic API key"
+  },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-21"
  },
  "OpenAI Codex": {
   "name": "Codex",
@@ -379,9 +383,13 @@
   },
   "free": true,
   "plans": {
-   "de": "Kostenlos, Open Source (MIT)",
-   "en": "Free, open source (MIT)"
-  }
+   "de": "Kostenlos (MIT) · Modelle über eigene API-Schlüssel",
+   "en": "Free (MIT) · models via your own API keys"
+  },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-21"
  },
  "Kimi Code": {
   "name": "Kimi Code",
@@ -3955,7 +3963,11 @@
   "plans": {
    "de": "Kostenlos (Apache-2.0) · Modelle über eigene Zugänge",
    "en": "Free (Apache-2.0) · models via your own access"
-  }
+  },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-21"
  },
  "Goose": {
   "name": "Goose",

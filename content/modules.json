@@ -950,6 +950,14 @@
       "k": "Penpot"
      },
      {
+      "n": "Paper",
+      "v": {
+       "de": "HTML/CSS-Canvas",
+       "en": "HTML/CSS canvas"
+      },
+      "k": "Paper"
+     },
+     {
       "n": "Antigravity 2.0",
       "v": "Google",
       "k": "Antigravity 2.0"

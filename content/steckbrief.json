@@ -286,13 +286,14 @@
   "icon": "anthropic",
   "free": false,
   "plans": {
-   "de": "Pro 20 $/Mo. · Max 5× 100 $ · Max 20× 200 $ (5-/20-faches Pro-Kontingent je 5-h-Fenster) · API nutzungsabhängig",
-   "en": "Pro $20/mo · Max 5x $100 · Max 20x $200 (5x/20x the Pro quota per 5-hour window) · usage-based API"
+   "de": "Pro 20 $/Mo. (17 $ bei Jahreszahlung) · Max 5× 100 $ · Max 20× 200 $ (5-/20-faches Pro-Kontingent je 5-h-Fenster) · Team ab 25 $/Platz/Mo. · API nutzungsabhängig",
+   "en": "Pro $20/mo ($17 paid annually) · Max 5x $100 · Max 20x $200 (5x/20x the Pro quota per 5-hour window) · Team from $25/seat/mo · usage-based API"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-24"
  },
  "Agent SDK": {
   "name": "Claude Agent SDK",
@@ -538,9 +539,11 @@
   "icon": "cursor",
   "free": true,
   "plans": {
-   "de": "Hobby kostenlos · Pro 20 $/Mo.",
-   "en": "Hobby free · Pro $20/mo"
-  }
+   "de": "Hobby kostenlos · Pro 20 $/Mo. · Teams 40 $/Nutzer/Mo.",
+   "en": "Hobby free · Pro $20/mo · Teams $40/user/mo"
+  },
+  "billing": ["abo"],
+  "plansChecked": "2026-08-24"
  },
  "Hermes Agent": {
   "name": "Hermes Agent",
@@ -622,9 +625,11 @@
   },
   "free": true,
   "plans": {
-   "de": "Kostenlos (LM-Studio-Agent-App)",
-   "en": "Free (LM Studio agent app)"
-  }
+   "de": "Gratisstufe 0 $ mit lokalen Modellen · Cloud-Guthaben nach Verbrauch (DeepSeek V4 Flash z. B. 0,13 $/0,26 $ pro 1M Tok.) · ein „Bionic Pass“ ist angekündigt, ein Preis dafür steht noch nicht auf der Seite",
+   "en": "Free tier $0 with local models · pay-as-you-go cloud credits (DeepSeek V4 Flash e.g. $0.13/$0.26 per 1M tok.) · a „Bionic Pass“ is announced, no price on the page yet"
+  },
+  "billing": ["api"],
+  "plansChecked": "2026-08-24"
  },
  "LangGraph": {
   "name": "LangGraph",
@@ -708,9 +713,11 @@
   },
   "free": true,
   "plans": {
-   "de": "Basis kostenlos · Enterprise individuell · Open Source",
-   "en": "Basic free · Enterprise custom · open source"
-  }
+   "de": "Basis kostenlos, aber auf 50 Workflow-Läufe im Monat begrenzt · Enterprise individuell · das Framework selbst bleibt quelloffen",
+   "en": "Basic free, but capped at 50 workflow executions a month · Enterprise custom · the framework itself stays open source"
+  },
+  "billing": ["abo"],
+  "plansChecked": "2026-08-24"
  },
  "Paperclip": {
   "name": "Paperclip",
@@ -1882,13 +1889,14 @@
    }
   },
   "plans": {
-   "de": "API Opus 5 5 $/25 $ pro 1M Token · Sonnet 5 2 $/10 $ pro 1M Token",
-   "en": "API Opus 5 $5/$25 per 1M tokens · Sonnet 5 $2/$10 per 1M tokens"
+   "de": "API Opus 5 5 $/25 $ pro 1M Token · Sonnet 5 2 $/10 $ pro 1M Token — der Einführungspreis für Sonnet ist inzwischen der reguläre, die für den 1.9.2026 angekündigte Erhöhung auf 3 $/15 $ entfällt",
+   "en": "API Opus 5 $5/$25 per 1M tokens · Sonnet 5 $2/$10 per 1M tokens — Sonnet's introductory price is now the standard one, the increase to $3/$15 announced for 1 Sept 2026 will not happen"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-24"
  },
  "Gemini 3.1 Pro": {
   "name": "Gemini 3.1 Pro",
@@ -2157,12 +2165,13 @@
    }
   },
   "plans": {
-   "de": "API V4-Pro 0,435 $/0,87 $ · Flash 0,14 $/0,28 $ pro 1M Tok.",
-   "en": "API V4-Pro $0.435/$0.87 · Flash $0.14/$0.28 per 1M tok."
+   "de": "API pro 1M Tok. zur Hauptzeit: V4-Pro 1,32 $/3,96 $ · Flash 0,44 $/1,32 $. Ausserhalb der Hauptzeit (nachts und am Wochenende, UTC) kostet alles die Hälfte.",
+   "en": "API per 1M tok. at peak: V4-Pro $1.32/$3.96 · Flash $0.44/$1.32. Outside peak hours (nights and weekends, UTC) everything costs half."
   },
   "billing": [
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-24"
  },
  "GLM-5.2": {
   "name": "GLM-5.2",
@@ -3227,6 +3236,8 @@
    "de": "Quelloffen unter MIT. Kosten entstehen durch die Modelle dahinter.",
    "en": "Open source under MIT. Cost comes from the models behind it."
   },
+  "billing": ["api"],
+  "plansChecked": "2026-08-24",
   "links": {
    "home": "https://deepseek.com/harness/en/",
    "code": "https://github.com/deepseek-ai/deepseek-harness",
@@ -3382,9 +3393,11 @@
    "en": "Interesting when visitors come from many countries. Background services need the accompanying Workers."
   },
   "plans": {
-   "de": "Grosszügige Gratisstufe, danach nach Verbrauch.",
-   "en": "Generous free tier, then usage-based."
+   "de": "Gratisstufe: statische Dateien werden unbegrenzt ausgeliefert, dazu 100.000 Funktionsaufrufe am Tag · darüber hinaus Workers Paid ab 5 $/Mo. Mindestbetrag, der Pages Functions mit abdeckt.",
+   "en": "Free tier: static files are served without limit, plus 100,000 function requests a day · beyond that Workers Paid from a $5/mo minimum charge, which covers Pages Functions too."
   },
+  "billing": ["abo"],
+  "plansChecked": "2026-08-24",
   "links": {
    "home": "https://pages.cloudflare.com"
   }
@@ -3945,9 +3958,11 @@
    "code": "https://github.com/comfyanonymous/ComfyUI"
   },
   "plans": {
-   "de": "Kostenlos (GPL-3.0) · eigene Hardware",
-   "en": "Free (GPL-3.0) · your own hardware"
-  }
+   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo.",
+   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $20/mo, Creator $35/mo, Pro $100/mo"
+  },
+  "billing": ["abo"],
+  "plansChecked": "2026-08-24"
  },
  "Osaurus": {
   "name": "Osaurus",
@@ -4090,6 +4105,7 @@
   "plans": {
    "de": "Kostenlos (Apache-2.0) · selbst hostbar, frühe Instanz auf buzz.xyz",
    "en": "Free (Apache-2.0) · self-hostable, early instance at buzz.xyz"
-  }
+  },
+  "plansChecked": "2026-08-24"
  }
 }

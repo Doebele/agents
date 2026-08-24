@@ -224,5 +224,15 @@
    "de": "Nutzungsfenster im Abo, meist 5-Stunden-Sessions plus Wochenlimit. App-Abos (Claude Pro, ChatGPT Plus) gelten nur im eigenen Programm des Anbieters; Coding-Abos (Kimi For Coding, GLM Coding Plan) reisen im Schluessel mit in fremde Tools.",
    "en": "Usage windows in a subscription, usually 5-hour sessions plus a weekly limit. App subscriptions (Claude Pro, ChatGPT Plus) only apply inside the vendor's own program; coding subscriptions (Kimi For Coding, GLM Coding Plan) travel with the key into third-party tools."
   }
+ },
+ {
+  "t": {
+   "de": "Generative KI",
+   "en": "Generative AI"
+  },
+  "d": {
+   "de": "Dachbegriff für Modelle, die etwas erschaffen — Text, Bilder, Video, Ton. Auch die Sprachmodelle gehören dazu. Baustein 06 sortiert stattdessen nach Medium und umfasst zusätzlich die Sinne, die zuhören und verstehen, etwa Whisper.",
+   "en": "The umbrella term for models that create — text, images, video, sound. Language models belong to it too. Block 06 sorts by medium instead, and also includes the senses that listen and understand, Whisper for example."
+  }
  }
 ]

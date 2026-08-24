@@ -2548,6 +2548,36 @@
   },
   "icon": "penpot"
  },
+ "Paper": {
+  "name": "Paper",
+  "vendor": "Paper",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Ein Entwurfswerkzeug auf einer Leinwand aus echtem HTML und CSS — dem Format, das Agenten von Haus aus lesen und schreiben. Über einen MCP-Server, den die Desktop-App startet, kann ein Agent Entwürfe nicht nur ansehen, sondern verändern: Inhalt aus Notion oder der Codebasis hineinziehen, Varianten bauen, aus dem Entwurf Code erzeugen und umgekehrt. Läuft im Browser und als Desktop-App für macOS, Windows und Linux.",
+   "en": "A design tool on a canvas of real HTML and CSS — the format agents already read and write natively. Through an MCP server started by the desktop app, an agent can not only view designs but change them: pull content in from Notion or your codebase, build variants, turn a design into code and back. Runs in the browser and as a desktop app for macOS, Windows and Linux."
+  },
+  "tip": {
+   "de": "Der Gratis-Plan nimmt das ganze Team auf — Zuschauer immer, Bearbeiter ebenfalls —, begrenzt aber Agenten-Zugriffe auf 100 MCP-Aufrufe pro Woche; wer mit Agenten entwirft, braucht Pro (20 $ je Bearbeiter und Monat). Der MCP-Server läuft nur über die Desktop-App, nicht im Browser. Junges, schnell wachsendes Werkzeug — 34 Mio. $ Risikokapital im Juli 2026.",
+   "en": "The free plan takes the whole team — viewers always, editors too — but throttles agent access to 100 MCP calls a week; designing seriously with agents needs Pro ($20 per editor per month). The MCP server runs only through the desktop app, not the browser. A young, fast-moving tool — $34M raised in July 2026."
+  },
+  "links": {
+   "home": "https://paper.design/",
+   "docs": "https://paper.design/docs/mcp",
+   "code": null
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos mit unbegrenzten Zuschauern und Bearbeitern (100 MCP-Aufrufe/Woche) · Pro 20 $ je Bearbeiter/Mo., 16 $ bei Jahreszahlung (1 Mio. MCP-Aufrufe/Woche) · Organisationen auf Anfrage",
+   "en": "Free with unlimited viewers and editors (100 MCP calls/week) · Pro $20 per editor/mo, $16 billed yearly (1M MCP calls/week) · Organizations on request"
+  },
+  "billing": ["abo"],
+  "plansChecked": "2026-08-24"
+ },
  "Antigravity 2.0": {
   "name": "Google Antigravity",
   "vendor": "Google",

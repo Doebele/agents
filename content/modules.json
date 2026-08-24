@@ -422,12 +422,12 @@
       "k": "cro"
      },
      {
-      "n": "grill-me",
+      "n": "grill-with-docs",
       "v": {
        "de": "Interview",
        "en": "interview"
       },
-      "k": "grill-me"
+      "k": "grill-with-docs"
      },
      {
       "n": "premortem",
@@ -436,6 +436,21 @@
        "en": "risk"
       },
       "k": "premortem"
+     },
+     {
+      "n": "research",
+      "v": "Matt Pocock",
+      "k": "research"
+     },
+     {
+      "n": "qa",
+      "v": "Matt Pocock",
+      "k": "qa"
+     },
+     {
+      "n": "to-questionnaire",
+      "v": "Matt Pocock",
+      "k": "to-questionnaire"
      }
     ]
    }

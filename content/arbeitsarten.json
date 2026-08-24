@@ -140,7 +140,8 @@
       "skill-creator",
       "eigene-skills",
       "dot-skill",
-      "customer-research"
+      "customer-research",
+      "research"
      ],
      "luecke": {
       "de": "Für Zitierweise und Rechercheprotokoll führt der Katalog noch keinen Skill.",
@@ -152,7 +153,11 @@
      },
      "empfehlung": [
       "Anthropic Agent Skills"
-     ]
+     ],
+     "notiz": {
+      "de": "Die ersten vier sind Quellen für Skills; research ist der Skill, der die Recherche selbst ausführt — als Hintergrund-Agent gegen Primärquellen, mit Zitier-Datei am Ende.",
+      "en": "The first four are sources for skills; research is the skill that does the research itself — a background agent against primary sources, with a cited file at the end."
+     }
     },
     "04_mcp": {
      "kandidaten": [
@@ -547,16 +552,16 @@
        },
        "03_skills": {
         "kandidaten": [
-         "grill-me",
+         "grill-with-docs",
          "premortem",
          "eigene-skills"
         ],
         "empfehlung": [
-         "grill-me"
+         "grill-with-docs"
         ],
         "notiz": {
-         "de": "grill-me prüft die Logik, premortem prüft das Scheitern — einmal grillen und einmal zu Grabe tragen lassen, bevor der Plan zu Papier geht.",
-         "en": "grill-me tests the logic, premortem tests the failure — get grilled and get buried once each before the plan hits paper."
+         "de": "grill-with-docs prüft die Logik gegen die Aktenlage, premortem prüft das Scheitern — einmal grillen und einmal zu Grabe tragen lassen, bevor der Plan zu Papier geht.",
+         "en": "grill-with-docs tests the logic against the paper trail, premortem tests the failure — get grilled and get buried once each before the plan hits paper."
         }
        }
       },
@@ -619,7 +624,8 @@
       "skill-creator",
       "eigene-skills",
       "Impeccable",
-      "archify"
+      "archify",
+      "qa"
      ],
      "luecke": {
       "de": "Skills für Hausregeln, Framework-Konventionen und Review-Vorgaben fehlen.",
@@ -631,7 +637,11 @@
      },
      "empfehlung": [
       "Anthropic Agent Skills"
-     ]
+     ],
+     "notiz": {
+      "de": "Impeccable und archify helfen beim Bauen, qa danach: Probleme beim eigenen Testdurchlauf schildern, saubere Issues bekommen.",
+      "en": "Impeccable and archify help while building, qa afterwards: describe the problems from your own test run, receive clean issues."
+     }
     },
     "04_mcp": {
      "kandidaten": [
@@ -1567,13 +1577,14 @@
       "stationen": {
        "03_skills": {
         "kandidaten": [
-         "grill-me",
+         "grill-with-docs",
+         "to-questionnaire",
          "premortem",
          "eigene-skills"
         ],
         "notiz": {
-         "de": "grill-me dreht die Richtung um: Der Agent befragt dich und schärft damit deinen eigenen Plan.",
-         "en": "grill-me flips the direction: the agent questions you and thereby sharpens your own plan."
+         "de": "grill-with-docs dreht die Richtung um — der Agent befragt dich und schärft deinen Plan. to-questionnaire dreht sie nochmals: Es baut den Fragebogen für den Experten, der mehr weiss als du.",
+         "en": "grill-with-docs flips the direction — the agent questions you and sharpens your plan. to-questionnaire flips it once more: it builds the questionnaire for the expert who knows more than you."
         }
        }
       },

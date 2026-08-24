@@ -542,7 +542,9 @@
    "de": "Hobby kostenlos · Pro 20 $/Mo. · Teams 40 $/Nutzer/Mo.",
    "en": "Hobby free · Pro $20/mo · Teams $40/user/mo"
   },
-  "billing": ["abo"],
+  "billing": [
+   "abo"
+  ],
   "plansChecked": "2026-08-24"
  },
  "Hermes Agent": {
@@ -628,7 +630,9 @@
    "de": "Gratisstufe 0 $ mit lokalen Modellen · Cloud-Guthaben nach Verbrauch (DeepSeek V4 Flash z. B. 0,13 $/0,26 $ pro 1M Tok.) · ein „Bionic Pass“ ist angekündigt, ein Preis dafür steht noch nicht auf der Seite",
    "en": "Free tier $0 with local models · pay-as-you-go cloud credits (DeepSeek V4 Flash e.g. $0.13/$0.26 per 1M tok.) · a „Bionic Pass“ is announced, no price on the page yet"
   },
-  "billing": ["api"],
+  "billing": [
+   "api"
+  ],
   "plansChecked": "2026-08-24"
  },
  "LangGraph": {
@@ -716,7 +720,9 @@
    "de": "Basis kostenlos, aber auf 50 Workflow-Läufe im Monat begrenzt · Enterprise individuell · das Framework selbst bleibt quelloffen",
    "en": "Basic free, but capped at 50 workflow executions a month · Enterprise custom · the framework itself stays open source"
   },
-  "billing": ["abo"],
+  "billing": [
+   "abo"
+  ],
   "plansChecked": "2026-08-24"
  },
  "Paperclip": {
@@ -774,7 +780,9 @@
    "de": "Kostenlos, Open Source (MIT)",
    "en": "Free, open source (MIT)"
   },
-  "billing": ["api"],
+  "billing": [
+   "api"
+  ],
   "plansChecked": "2026-08-21"
  },
  "Google ADK": {
@@ -805,7 +813,9 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "billing": ["api"],
+  "billing": [
+   "api"
+  ],
   "plansChecked": "2026-08-21"
  },
  "Qwen 3.6 / 3.8": {
@@ -2584,7 +2594,9 @@
    "de": "Kostenlos mit unbegrenzten Zuschauern und Bearbeitern (100 MCP-Aufrufe/Woche) · Pro 20 $ je Bearbeiter/Mo., 16 $ bei Jahreszahlung (1 Mio. MCP-Aufrufe/Woche) · Organisationen auf Anfrage",
    "en": "Free with unlimited viewers and editors (100 MCP calls/week) · Pro $20 per editor/mo, $16 billed yearly (1M MCP calls/week) · Organizations on request"
   },
-  "billing": ["abo"],
+  "billing": [
+   "abo"
+  ],
   "plansChecked": "2026-08-24"
  },
  "Antigravity 2.0": {
@@ -3236,7 +3248,9 @@
    "de": "Quelloffen unter MIT. Kosten entstehen durch die Modelle dahinter.",
    "en": "Open source under MIT. Cost comes from the models behind it."
   },
-  "billing": ["api"],
+  "billing": [
+   "api"
+  ],
   "plansChecked": "2026-08-24",
   "links": {
    "home": "https://deepseek.com/harness/en/",
@@ -3396,7 +3410,9 @@
    "de": "Gratisstufe: statische Dateien werden unbegrenzt ausgeliefert, dazu 100.000 Funktionsaufrufe am Tag · darüber hinaus Workers Paid ab 5 $/Mo. Mindestbetrag, der Pages Functions mit abdeckt.",
    "en": "Free tier: static files are served without limit, plus 100,000 function requests a day · beyond that Workers Paid from a $5/mo minimum charge, which covers Pages Functions too."
   },
-  "billing": ["abo"],
+  "billing": [
+   "abo"
+  ],
   "plansChecked": "2026-08-24",
   "links": {
    "home": "https://pages.cloudflare.com"
@@ -3715,7 +3731,9 @@
    "de": "Kostenlos (MIT) · Modellkosten nach eigenem Anbieter",
    "en": "Free (MIT) · model costs per your own provider"
   },
-  "billing": ["api"],
+  "billing": [
+   "api"
+  ],
   "plansChecked": "2026-08-21"
  },
  "archify": {
@@ -3880,33 +3898,6 @@
    "code": "https://github.com/coreyhaines31/marketingskills"
   }
  },
- "grill-me": {
-  "name": "grill-me",
-  "vendor": "Matt Pocock",
-  "cat": {
-   "de": "Skill · Baustein 03",
-   "en": "Skill · Block 03"
-  },
-  "accent": "var(--lime)",
-  "open": true,
-  "free": true,
-  "blurb": {
-   "de": "Ein unerbittliches Interview, das einen Plan oder Entwurf schärft: Der Agent befragt dich so lange, bis die Schwachstellen offen daliegen. Die Richtung ist umgekehrt wie sonst — nicht du beauftragst ihn, sondern er fragt dich aus, zu deinem Vorteil.",
-   "en": "A relentless interview that sharpens a plan or design: the agent questions you until the weak spots lie open. The direction is reversed from usual — not you instructing it, it interrogating you, to your benefit."
-  },
-  "tip": {
-   "de": "Vor dem Businessplan und vor jedem Pitch: einmal durch die Mangel drehen lassen. Was danach noch steht, trägt.",
-   "en": "Before a business plan and any pitch: put it through the wringer once. What still stands afterwards, carries."
-  },
-  "plans": {
-   "de": "Kostenlos, Textdatei",
-   "en": "Free, a text file"
-  },
-  "links": {
-   "home": "https://www.skills.sh/mattpocock/skills/grill-me",
-   "code": "https://www.skills.sh/mattpocock/skills/grill-me"
-  }
- },
  "premortem": {
   "name": "premortem",
   "vendor": "vibeeval",
@@ -3922,8 +3913,8 @@
    "en": "The early warning test for plans: “Imagine it's three months from now and this project has failed spectacularly — why did it fail?” The skill sorts the answer into three kinds: clear threats (tigers), scary-looking-but-fine (paper tigers), and the things nobody wants to talk about (elephants) — Gary Klein's technique in the Stripe reading by Shreyas Doshi. Every finding must be verified, no pattern-matching alarms; at the end a section of mitigations sits right in the plan."
   },
   "tip": {
-   "de": "Für Produktstrategien und Businesspläne der Gegenpol zu grill-me: grill-me prüft die Logik, premortem prüft das Scheitern. Beide zusammen, bevor der Plan zu Papier geht.",
-   "en": "For product strategies and business plans the counterpart to grill-me: grill-me tests the logic, premortem tests the failure. Both together before the plan hits paper."
+   "de": "Für Produktstrategien und Businesspläne der Gegenpol zu grill-with-docs: grill-with-docs prüft die Logik, premortem prüft das Scheitern. Beide zusammen, bevor der Plan zu Papier geht.",
+   "en": "For product strategies and business plans the counterpart to grill-with-docs: grill-with-docs tests the logic, premortem tests the failure. Both together before the plan hits paper."
   },
   "links": {
    "home": "https://github.com/vibeeval/vibecosystem/blob/main/skills/premortem/SKILL.md",
@@ -3961,7 +3952,9 @@
    "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo.",
    "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $20/mo, Creator $35/mo, Pro $100/mo"
   },
-  "billing": ["abo"],
+  "billing": [
+   "abo"
+  ],
   "plansChecked": "2026-08-24"
  },
  "Osaurus": {
@@ -4076,7 +4069,10 @@
    "de": "Kostenlos (Apache-2.0) · Schlüssel oder bestehende Abos",
    "en": "Free (Apache-2.0) · keys or existing subscriptions"
   },
-  "billing": ["abo", "api"],
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-08-21"
  },
  "Buzz": {
@@ -4107,5 +4103,113 @@
    "en": "Free (Apache-2.0) · self-hostable, early instance at buzz.xyz"
   },
   "plansChecked": "2026-08-24"
+ },
+ "grill-with-docs": {
+  "name": "grill-with-docs",
+  "vendor": "Matt Pocock",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Das Verhör mit Aktenlage: grill-with-docs fragt den Plan nicht im Leeren ab, sondern gegen das, was schon aufgeschrieben ist — Begriffe aus CONTEXT.md, Entscheidungen aus Architektur-Protokollen (ADRs), Code aus dem eigenen Lager. Unter der Haube ruft es zwei Skills auf: grilling (fragt in Runden, jede Frage mit Empfehlung, bis Plan und Wirklichkeit übereinstimmen) und domain-modeling (hält die Sprache dabei scharf). Neue Dokumente schreibt es nur, wenn sich eine Entscheidung gelohnt hat — schlank, nicht schwatzhaft.",
+   "en": "The interrogation with a paper trail: grill-with-docs does not quiz the plan in a vacuum but against what is already written down — terms from CONTEXT.md, decisions from architecture records (ADRs), code from your own repo. Under the hood it calls two skills: grilling (asks in rounds, each question with a recommended answer, until plan and reality agree) and domain-modeling (keeps the language sharp while it does). It writes new documents only when a decision earned it — lean, not chatty."
+  },
+  "tip": {
+   "de": "Die Weiterentwicklung von grill-me: dieselben unbequemen Fragen, aber mit Gedächtnis. Wer Pläne gegen bestehende Begriffe schärfen will, nimmt dieses; premortem bleibt der Partner fürs Scheitern.",
+   "en": "The evolution of grill-me: the same uncomfortable questions, but with a memory. To sharpen plans against existing terms, take this one; premortem remains the partner for failure."
+  },
+  "links": {
+   "home": "https://www.skills.sh/mattpocock/skills/grill-with-docs",
+   "code": "https://www.skills.sh/mattpocock/skills/grill-with-docs"
+  },
+  "plans": {
+   "de": "Kostenlos (Open Source)",
+   "en": "Free (open source)"
+  }
+ },
+ "research": {
+  "name": "research",
+  "vendor": "Matt Pocock",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Recherche als Hintergrund-Agent: research arbeitet nicht nebenbei — es startet einen zweiten Agenten, der die Frage gegen Primärquellen prüft: offizielle Dokumentation, Quellcode, Specs, APIs erster Hand. Jede Behauptung wird zu der Quelle zurückverfolgt, die sie besitzt; das Ergebnis landet als eine Markdown-Datei mit Zitaten dort, wo das Lager seine Notizen schon hält. Du arbeitest weiter, während er liest.",
+   "en": "Research as a background agent: research does not work alongside you — it starts a second agent that investigates the question against primary sources: official docs, source code, specs, first-party APIs. Every claim is traced back to the source that owns it; the result lands as a single Markdown file with citations, wherever your repo already keeps notes. You keep working while it reads."
+  },
+  "tip": {
+   "de": "Für die Arbeitsart Recherchieren der natürliche Begleiter: Frage rein, Quellendokument raus — und die eigene Zeit bleibt bei der Auswertung.",
+   "en": "For the research work type the natural companion: question in, cited document out — and your own time stays on the evaluation."
+  },
+  "links": {
+   "home": "https://www.skills.sh/mattpocock/skills/research",
+   "code": "https://www.skills.sh/mattpocock/skills/research"
+  },
+  "plans": {
+   "de": "Kostenlos (Open Source)",
+   "en": "Free (open source)"
+  }
+ },
+ "qa": {
+  "name": "qa",
+  "vendor": "Matt Pocock",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "QA als Gespräch mit Konsequenz: qa lässt dich Probleme in deinen eigenen Worten schildern, stellt nur wenige kurze Fragen — erwartet gegen passiert, immer oder manchmal, wie nachstellen? — und startet nebenbei einen Erkundungs-Agenten, der den Codekontext sammelt. Ziel ist ausdrücklich nicht der Fix, sondern das saubere, haltbare GitHub-Issue in der Sprache des Projekts.",
+   "en": "QA as a conversation with consequences: qa lets you describe problems in your own words, asks only a few short questions — expected versus happened, always or sometimes, how to reproduce? — and starts an exploration agent in the background that gathers code context. The goal is explicitly not the fix but the clean, durable GitHub issue in the project's own language."
+  },
+  "tip": {
+   "de": "Für den Bauen-Flow der letzte Schritt: mit Menschen testen, qa die Fundstücke als Issues einlagern lassen — der Agent hört zu, statt zu überfragen.",
+   "en": "For the build flow the last step: test with humans, let qa file the findings as issues — the agent listens instead of over-interviewing."
+  },
+  "links": {
+   "home": "https://www.skills.sh/mattpocock/skills/qa",
+   "code": "https://www.skills.sh/mattpocock/skills/qa"
+  },
+  "plans": {
+   "de": "Kostenlos (Open Source)",
+   "en": "Free (open source)"
+  }
+ },
+ "to-questionnaire": {
+  "name": "to-questionnaire",
+  "vendor": "Matt Pocock",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Der umgekehrte Interview-Skill: Nicht du befragst das Modell — to-questionnaire baut einen Fragebogen für jemanden, der mehr weiss als du. Erst Empfänger und Ziel klären (was musst du danach können oder entscheiden?), dann die Fragen, wichtigste zuerst, als Markdown-Dokument. Der Grundsatz: Es grillt den Absender, nicht das Thema — gefragt wird nur, was du selbst beantworten kannst.",
+   "en": "The interview skill turned around: you do not quiz the model — to-questionnaire builds a questionnaire for someone who knows more than you. First it clarifies recipient and goal (what must you be able to do or decide afterwards?), then the questions, most important first, as a Markdown document. The principle: grill the sender, not the subject — it only asks what you yourself can answer."
+  },
+  "tip": {
+   "de": "Für Experteninterviews: das Dokument nimmt die Diskussion vorweg, wenn der Termin zu kurz ist — Async statt Ausfragen.",
+   "en": "For expert interviews: the document takes the discussion off your plate when the appointment is short — async instead of interrogating."
+  },
+  "links": {
+   "home": "https://www.skills.sh/mattpocock/skills/to-questionnaire",
+   "code": "https://www.skills.sh/mattpocock/skills/to-questionnaire"
+  },
+  "plans": {
+   "de": "Kostenlos (Open Source)",
+   "en": "Free (open source)"
+  }
  }
 }

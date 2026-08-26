@@ -93,6 +93,47 @@ Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 `upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`, `upkeep-zai/<topic>`,
 `kreuzpruefung/<topic>`.
 
+## What the runs cost
+
+Six agent runs a week, three harnesses, three providers, and until recently no
+number you could hold against another. Every run now ends with a step that
+writes what it used into a run artifact: `.github/actions/kosten` calls
+`build/kosten.py lauf`, which digs the figures out of whatever the harness left
+behind.
+
+The three harnesses leave behind very different things, and the columns are
+not equally trustworthy:
+
+- **Claude runs** — the action's `execution_file` carries token counts and
+  `total_cost_usd`. That figure is the client's own estimate. Good as a trend,
+  not as a bill.
+- **Gemini runs** — the CLI writes OpenTelemetry to a local file when the
+  `settings` input names one. Token counts, no cost.
+- **Kimi and GLM runs** — the CLI does not hand its usage out. The row carries
+  the wall clock and empty token columns.
+
+An empty column means there is no number, and it stays empty. A guessed one
+would be worse than none, which is the same rule the catalogue runs on.
+
+`kosten.yml` collects those artifacts every Sunday, asks the Anthropic Admin
+API what was actually billed, and commits both to the `metriken` branch — not
+to main, where weekly rows of numbers between the fact-sheet changes would ruin
+the diff that gets reviewed on a phone.
+
+```bash
+python3 build/kosten.py bericht metriken/laeufe.csv
+```
+
+The billing half needs `ANTHROPIC_ADMIN_KEY` in the repository secrets, an
+admin key, not the ordinary one. Without it that step says so and the run
+carries on with the estimates.
+
+Attribution gets sharper the day each workflow has an API key of its own: the
+usage report groups by `api_key_id` and the cost report by workspace, so
+separate keys — and, for amounts, separate workspaces — split the bill by run
+without a line of code. Gemini and Z.AI have no comparable API; for those two
+the console is still the only authoritative source.
+
 ## Prices are the first thing to rot
 
 Everything else in a fact sheet ages slowly. A price can be wrong a week

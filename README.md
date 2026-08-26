@@ -97,6 +97,12 @@ compares their findings on the numbers, and Claude decides what goes into the
 catalogue — fetching the page itself wherever the two disagree. A price is the
 one thing here a reader plans around, so it gets read twice.
 
+Every agent run records what it used — tokens, estimated cost, wall time — and
+`kosten.yml` gathers those records every Sunday onto the `metriken` branch,
+together with what the Anthropic Admin API says was actually billed. Where a
+harness does not hand its usage out, the column stays empty rather than
+guessed. `python3 build/kosten.py bericht metriken/laeufe.csv` counts it up.
+
 Orders go in through an issue or comment containing `@claude` (`zuruf.yml`,
 which runs under the Claude app identity),
 the focus field of a manual run, or a Telegram message to the bot — the

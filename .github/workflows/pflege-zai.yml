@@ -174,6 +174,12 @@ jobs:
           chmod 600 "$HOME/.kimi-code/config.toml"
           kimi --version
 
+      # Die Kimi-CLI gibt ihren Verbrauch nicht heraus, also bleibt die
+      # Laufzeit. Sie steht in einem eigenen Schritt, damit sie auch dann
+      # gemessen ist, wenn der Lauf darunter scheitert.
+      - name: Startzeit merken
+        run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
+
       - name: Research and propose
         # The order of an ordered task: dispatch input, Telegram, comment,
         # issue body. It travels by environment variable, never interpolated
@@ -240,3 +246,10 @@ jobs:
           that thread: gh issue comment $ISSUE --body '...'. Say what you did,
           or why you did not act, and name the pull request if you opened one.
           An unanswered issue looks exactly like a broken agent.}"
+
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: zai
+          start: ${{ env.KOSTEN_START }}

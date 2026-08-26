@@ -3569,6 +3569,38 @@
    "home": "https://render.com"
   }
  },
+ "Coolify": {
+  "name": "Coolify",
+  "vendor": "coolLabs",
+  "cat": {
+   "de": "Webhosting · Baustein 07",
+   "en": "Web hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Übernimmt die Rolle von Netlify oder Render, läuft aber auf einem Server, den du selbst mietest: Du verbindest die Maschine per SSH, danach baut Coolify aus deinem Codestand Seiten, Anwendungen und Datenbanken, besorgt die HTTPS-Zertifikate und legt Sicherungen an. Über 280 fertige Dienste — von WordPress bis Ghost — sind mit einem Klick installiert.",
+   "en": "Takes the role of Netlify or Render, but runs on a server you rent yourself: you connect the machine over SSH, and from then on Coolify builds sites, applications and databases from your code, fetches the HTTPS certificates and takes backups. Over 280 ready-made services — from WordPress to Ghost — install with one click."
+  },
+  "tip": {
+   "de": "Der Baustein für Leser, die selbst betreiben wollen: keine Verbrauchsrechnung, keine Grenze von außen, dafür trägst du den Betrieb. Die Software ist gratis, der Server nicht, und Linux, SSH und Docker musst du dir zutrauen — wer nur eine Seite online bringen will, ist mit Netlify schneller fertig.",
+   "en": "The building block for readers who want to run things themselves: no usage bill, no limit imposed from outside, but the operating is yours. The software is free, the server is not, and you need to be comfortable with Linux, SSH and Docker — anyone who just wants a site online is done faster with Netlify."
+  },
+  "plans": {
+   "de": "Selbst betrieben dauerhaft gratis und ohne gesperrte Funktionen (Apache-2.0) · die gehostete Steuerzentrale Coolify Cloud kostet 5 $/Mo. für bis zu zwei Server, jeder weitere 3 $/Mo., bei Jahreszahlung 20 % günstiger. Den Server bringst du in beiden Fällen selbst mit; vorausgesetzt sind Linux, Root-Zugang per SSH, Docker 24+, 2 Kerne, 2 GB Arbeitsspeicher und 30 GB Platz.",
+   "en": "Self-hosted free forever with no features held back (Apache-2.0) · the hosted control plane, Coolify Cloud, costs $5/mo for up to two servers and $3/mo for each additional one, 20% cheaper paid annually. Either way you bring the server yourself; it needs Linux, root access over SSH, Docker 24+, 2 cores, 2 GB of memory and 30 GB of space."
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-26",
+  "links": {
+   "home": "https://coolify.io",
+   "docs": "https://coolify.io/docs",
+   "code": "https://github.com/coollabsio/coolify"
+  }
+ },
  "Together AI": {
   "name": "Together AI",
   "vendor": "Together AI",

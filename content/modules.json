@@ -1256,6 +1256,14 @@
        "en": "applications · database"
       },
       "k": "Render"
+     },
+     {
+      "n": "Coolify",
+      "v": {
+       "de": "eigener Server · quelloffen",
+       "en": "own server · open source"
+      },
+      "k": "Coolify"
      }
     ]
    },

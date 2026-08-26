@@ -22,6 +22,7 @@ linkcheck-report.md
 
 # written and read inside one cross-check run — per-run artifacts
 auftrag.json
+auftrag-inhalt.json
 befund-*.json
 vergleich.md
 vergleich.json

@@ -123,6 +123,16 @@ def pruefe():
         elif not d.get("plans"):
             fehler.append(f"Steckbrief {k!r}: plansChecked ohne plans")
 
+    # contentChecked: dasselbe fuer den Text. Anders als plansChecked haengt es
+    # an keinem zweiten Feld — geprueft werden kann jeder Eintrag.
+    for k, d in daten["STECKBRIEF"].items():
+        s_ = d.get("contentChecked")
+        if s_ is None: continue
+        if not isinstance(s_, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", s_):
+            fehler.append(f"Steckbrief {k!r}: contentChecked muss JJJJ-MM-TT sein, nicht {s_!r}")
+        elif s_ > heute:
+            fehler.append(f"Steckbrief {k!r}: contentChecked {s_} liegt in der Zukunft")
+
     # Marken der Vorlage muessen zu den vorhandenen Inhalten passen.
     for b in BLOECKE:
         if "{{DATA:"+b+"}}" not in VORLAGE: fehler.append(f"Vorlage: Marke fuer {b} fehlt")

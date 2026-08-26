@@ -1,0 +1,163 @@
+# Inhaltsrotation.
+#
+# Die Preise haben ihren Turnus, der Text bisher nicht. Dabei veraltet auch er:
+# ein Produkt wird eingestellt, in ein groesseres aufgenommen, umbenannt, oder
+# der Steckbrief beschreibt eine Version, die es so nicht mehr gibt. Nichts
+# davon faellt beim Linkcheck auf — die Adresse antwortet ja weiter mit 200.
+#
+# Also dieselbe Mechanik wie bei den Preisen: eine feste Zahl je Lauf, die am
+# laengsten ungesehenen zuerst, und ein Datum, das die Warteschlange
+# weiterdreht. 25 Steckbriefe, zweimal die Woche, bei 152 im Bestand: jeder
+# Eintrag ist nach drei Wochen einmal angesehen worden.
+#
+# Ein Agent, nicht zwei. "Gibt es das noch und heisst es noch so" braucht
+# keine Zweitmeinung — anders als eine Zahl, die der Leser einplant.
+#
+# Dienstags und samstags, eine Stunde vor den Pflegelaeufen dieser Tage.
+name: Inhaltsrotation
+
+on:
+  schedule:
+    # Dienstag und Samstag 05:20 UTC.
+    - cron: "20 5 * * 2"
+    - cron: "20 5 * * 6"
+  workflow_dispatch:
+    inputs:
+      anzahl:
+        description: "Wie viele Steckbriefe ansehen (Standard 25)"
+        required: false
+        default: "25"
+        type: string
+
+jobs:
+  inhalt:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # build/stand.py braucht die volle Historie, sonst faellt die
+          # Reihenfolge auf contentChecked allein zurueck.
+          fetch-depth: 0
+
+      - name: Die am laengsten ungesehenen waehlen
+        env:
+          ANZAHL: ${{ github.event.inputs.anzahl || '25' }}
+        run: |
+          set -euo pipefail
+          case "$ANZAHL" in
+            ''|*[!0-9]*) echo "anzahl muss eine Zahl sein, war: $ANZAHL"; exit 1 ;;
+          esac
+          python3 build/inhalt.py auftrag --anzahl "$ANZAHL" | tee /tmp/auftrag.txt
+          { echo "## Auftrag"; echo; echo '```'; cat /tmp/auftrag.txt; echo '```'; } \
+            >> "$GITHUB_STEP_SUMMARY"
+
+      # Ein undurchsichtiger Fehlschlag hat einmal einen Abend gekostet:
+      # is_error true, ein Turn, null Kosten, keine Meldung im Log. Also wird
+      # der Schluessel vorher gefragt, und die Antwort steht im Log.
+      - name: Erreicht der Schluessel die API
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -uo pipefail
+          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY ist nicht gesetzt"; exit 1; }
+          code=$(curl -sS -o /tmp/ping.json -w '%{http_code}' \
+                 -X POST https://api.anthropic.com/v1/messages \
+                 -H "x-api-key: $ANTHROPIC_API_KEY" \
+                 -H "anthropic-version: 2023-06-01" \
+                 -H "content-type: application/json" \
+                 -d '{"model":"claude-opus-5","max_tokens":1,"messages":[{"role":"user","content":"hi"}]}' || echo 000)
+          echo "  POST /v1/messages -> HTTP $code"
+          head -c 400 /tmp/ping.json; echo
+          test "$code" = "200" || { echo "Der Schlüssel erreicht die API, darf aber nichts ausgeben."; exit 1; }
+
+      - name: Ansehen und nachziehen
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --max-turns 200
+            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*)"
+          prompt: |
+            Du prüfst, ob die Steckbriefe noch stimmen. Lies zuerst CLAUDE.md —
+            seine Regeln binden dich, besonders: nie eine Angabe oder einen Link
+            erfinden, site/ nicht von Hand bearbeiten, nie auf main pushen.
+
+            auftrag-inhalt.json nennt die Steckbriefe dieses Laufs: die am
+            längsten ungesehenen zuerst. Was sie behaupten, steht in
+            content/steckbrief.json — anders als bei der Preisprüfung sollst du
+            den aktuellen Stand ausdrücklich lesen. Deine Aufgabe ist nicht,
+            unabhängig zu recherchieren, sondern zu prüfen, ob das Geschriebene
+            noch zutrifft.
+
+            ## Was geprüft wird
+
+            Für jeden Eintrag, an der Seite des Anbieters:
+
+            1. **Gibt es das Produkt noch?** Eingestellt, in ein größeres
+               aufgegangen, keine Neukunden mehr — das ist die wichtigste Frage
+               und die, die ein Linkcheck nie beantwortet.
+            2. **Heißt es noch so?** Umbenennungen und Übernahmen sind häufig
+               und machen `name` und `vendor` still falsch.
+            3. **Beschreibt der Blurb noch das Produkt?** Eine wesentlich
+               veränderte Funktion, eine überholte Versionsangabe, eine
+               Einschränkung, die weggefallen ist oder dazugekommen.
+            4. **Stimmt der Baustein noch?** `cat` ordnet den Eintrag ein. Ein
+               Werkzeug, das inzwischen etwas anderes tut, steht falsch.
+            5. **Zeigt `links.home` noch auf dieses Produkt?** Erreichbar heißt
+               nicht richtig: eine Adresse kann heute eine Sammelseite oder ein
+               anderes Produkt zeigen und trotzdem 200 antworten.
+
+            ## Was nicht geprüft wird
+
+            **Preise nicht.** `plans`, `billing` und `plansChecked` gehören der
+            Kreuzprüfung, wo zwei Agenten dieselbe Seite lesen. Fass sie nicht
+            an, auch wenn dir etwas auffällt — schreib es stattdessen in den
+            Pull Request, dann sieht es der nächste Preislauf.
+
+            Auch keine Prosa-Politur. Ein Satz, der dir stilistisch nicht
+            gefällt, aber stimmt, bleibt stehen. Ein Tipp ist eine Meinung und
+            deine ist nicht besser als die, die dort steht.
+
+            ## Das Datum, und warum es der eigentliche Punkt ist
+
+            Setze `contentChecked` auf das heutige Datum bei **jedem** Eintrag,
+            den du angesehen hast — gerade auch bei denen, wo nichts zu ändern
+            war. Das werden die meisten sein.
+
+            Wer nichts findet, ändert nichts, und was sich nicht ändert, bewegt
+            die Historie nicht. Ohne das Datum stünde derselbe Eintrag beim
+            nächsten Lauf wieder ganz vorn, und die Rotation drehte sich im
+            Kreis. Ein angesehener Eintrag ohne `contentChecked` ist deshalb
+            verlorene Arbeit.
+
+            Umgekehrt: setz es nirgends, wo du nicht wirklich nachgesehen hast.
+            Wenn dir die Zeit oder die Turns ausgehen, lass den Rest weg und
+            sag im Pull Request, wie weit du gekommen bist.
+
+            ## Wie es weitergeht
+
+            Ändere ausschließlich content/steckbrief.json. Dann:
+
+                python3 build/build.py
+
+            Das muss Exit 0 liefern. auftrag-inhalt.json ist ein Lauf-Artefakt
+            und gehört nicht in den Commit.
+
+            Branch `inhalt/rotation-<JJJJ-MM-TT>`, Pull Request gegen main mit
+            `gh pr create`, Titel mit `[Inhalt]` davor.
+
+            In den Pull Request gehören:
+
+            1. Was sich geändert hat, je Eintrag mit der Quell-URL.
+            2. Was du angesehen und für unverändert befunden hast — als Liste
+               der Namen, nicht als Prosa. Das ist der größere Teil und der
+               Beleg dafür, dass das Datum stimmt.
+            3. Was dir aufgefallen ist, das dir nicht gehört: Preise, die
+               falsch aussehen, fehlende Steckbriefe, ein Werkzeug, das in
+               einen anderen Baustein gehört.

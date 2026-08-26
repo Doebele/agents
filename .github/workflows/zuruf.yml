@@ -34,7 +34,7 @@ jobs:
       pull-requests: write
       issues: write
       id-token: write
-      actions: read
+      actions: write
     steps:
       # An opaque failure once cost an evening here: is_error true, one turn,
       # zero cost, and no message anywhere in the log. So the key gets asked

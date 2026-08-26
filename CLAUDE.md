@@ -255,6 +255,13 @@ stays readable. For every entry name the vendor page you read. Where the
 page does not say, leave the field out and list which ones you skipped. A
 guessed billing type is a guessed fact.
 
+For **new tools** in general — item three of the weekly list — the Agentarius
+catalogue is worth a look before you start searching:
+https://agentarius.ai/ai-guide/catalogue. It carries far more entries than this
+one and tends to notice things earlier. Treat it as a place to spot something,
+not as a source to cite: whatever you find there gets read on the vendor's own
+page before it becomes a fact sheet, and no number travels across.
+
 Whenever a run touches **marketing topics** — a new fact sheet, a wizard
 station, a gap to fill — check Corey Haines' collection first and take
 from there: https://github.com/coreyhaines31/marketingskills (cro and

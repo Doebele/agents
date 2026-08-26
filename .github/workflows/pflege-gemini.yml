@@ -110,9 +110,18 @@ jobs:
           # every tool exactly right, and a typo removes a capability
           # silently. The safety here comes from the pull-request-only model
           # and the build check, not from a shortened tool list.
+          # Die Action reicht keine Verbrauchszahlen nach draussen, ihre
+          # Outputs sind summary und error. Die CLI schreibt sie aber lokal
+          # weg, wenn man ihr ein Ziel nennt — das ist der Weg an die Zahlen.
           settings: |-
             {
-              "model": { "maxSessionTurns": 60 }
+              "model": { "maxSessionTurns": 60 },
+              "telemetry": {
+                "enabled": true,
+                "target": "local",
+                "otlpEndpoint": "",
+                "outfile": "/tmp/gemini-telemetrie.log"
+              }
             }
           prompt: |
             You are the upkeep agent for this catalogue, running as a second
@@ -191,3 +200,10 @@ jobs:
         env:
           SUMMARY: ${{ steps.gemini.outputs.summary }}
         run: gh issue comment ${{ github.event.issue.number }} --body "$SUMMARY"
+
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: gemini
+          telemetrie: /tmp/gemini-telemetrie.log

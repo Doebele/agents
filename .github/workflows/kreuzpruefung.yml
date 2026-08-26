@@ -85,9 +85,17 @@ jobs:
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           workflow_name: kreuzpruefung
+          # Die Action reicht keine Verbrauchszahlen nach draussen. Die CLI
+          # schreibt sie lokal weg, wenn man ihr ein Ziel nennt.
           settings: |-
             {
-              "model": { "maxSessionTurns": 150 }
+              "model": { "maxSessionTurns": 150 },
+              "telemetry": {
+                "enabled": true,
+                "target": "local",
+                "otlpEndpoint": "",
+                "outfile": "/tmp/gemini-telemetrie.log"
+              }
             }
           prompt: |
             Du prüfst Preise für einen Katalog. Du änderst nichts, committest
@@ -165,6 +173,13 @@ jobs:
           name: befund-gemini
           path: befund-gemini.json
           if-no-files-found: warn
+
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: gemini
+          telemetrie: /tmp/gemini-telemetrie.log
 
   # ------------------------------------------------------------------ Z.AI
   # Gleicher Aufbau wie pflege-zai.yml: GLM kommt ueber die Kimi-CLI herein,
@@ -254,6 +269,10 @@ jobs:
           chmod 600 "$HOME/.kimi-code/config.toml"
           kimi --version
 
+      # Die Kimi-CLI gibt ihren Verbrauch nicht heraus, also bleibt die Laufzeit.
+      - name: Startzeit merken
+        run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
+
       - name: Preise lesen
         run: |
           kimi -p "$(cat <<'PROMPT'
@@ -335,6 +354,13 @@ jobs:
           path: befund-zai.json
           if-no-files-found: warn
 
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: zai
+          start: ${{ env.KOSTEN_START }}
+
   # ------------------------------------------------------------------ Urteil
   entscheidung:
     needs: [auftrag, gemini, zai]
@@ -391,6 +417,7 @@ jobs:
           test "$code" = "200" || { echo "Der Schlüssel erreicht die API, darf aber nichts ausgeben."; exit 1; }
 
       - name: Entscheiden und vorschlagen
+        id: claude
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -462,3 +489,10 @@ jobs:
                Agent hat zu diesem Steckbrief nichts geliefert. Bei einem
                einigen Eintrag, den die Quelle bestätigt hat, sind beide
                `richtig`.
+
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: claude
+          execution: ${{ steps.claude.outputs.execution_file }}

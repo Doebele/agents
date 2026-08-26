@@ -79,15 +79,19 @@ out loud; your text should not pretend otherwise.
 
 ## The weekly runs
 
-Three upkeep agents share the week — Claude on Mondays (pflege.yml), Gemini
-on Thursdays (pflege-gemini.yml), Kimi on Saturdays (pflege-kimi.yml). Each
-picks exactly one topic per run, working down the same short list: dead links
-first, then stale prices, then declared gaps, then what is genuinely new.
-`build/linkcheck.py` writes linkcheck-report.md before the Kimi run — a 403
-from a bot-walled site is not a dead link.
+Four upkeep agents share the week — Claude on Mondays (pflege.yml), GLM by way
+of Z.AI on Tuesdays (pflege-zai.yml), Gemini on Thursdays (pflege-gemini.yml),
+Kimi on Saturdays (pflege-kimi.yml). Each picks exactly one topic per run,
+working down the same short list: dead links first, then declared gaps, then
+what is genuinely new. `build/linkcheck.py` writes linkcheck-report.md before
+the Kimi and Z.AI runs — a 403 from a bot-walled site is not a dead link.
+
+Prices are not on that list. They have a run of their own, twice a week, with
+two agents reading every page instead of one; the next section says why.
 
 Branch prefixes tell the proposals apart: `upkeep/<topic>`,
-`upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`.
+`upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`, `upkeep-zai/<topic>`,
+`kreuzpruefung/<topic>`.
 
 ## Prices are the first thing to rot
 
@@ -133,30 +137,64 @@ no `plansChecked` counts as never checked, which puts it first in line.
 `build.py` refuses a date that is malformed, that lies in the future, or that
 sits on an entry with no `plans`.
 
-Which ones to take, oldest first:
+### Two read, one decides
+
+One agent reading a pricing page is the thinnest point in the whole routine:
+nobody checks it, and the mistake it makes is exactly the mistake a reader
+plans around. So prices no longer travel with the weekly list. They have a run
+of their own, `.github/workflows/kreuzpruefung.yml`, Mondays and Thursdays.
+
+Twenty fact sheets per run, oldest `plansChecked` first, picked by a script so
+that both researchers get the same list:
 
 ```bash
-python3 - <<'EOF'
-import json
-d = json.load(open("content/steckbrief.json"))
-reihe = sorted(((v.get("plansChecked", ""), k) for k, v in d.items() if v.get("plans")))
-for stand, k in reihe[:15]:
-    print(f"{stand or 'nie':>10}  {k}")
-EOF
+python3 build/kreuzpruefung.py auftrag --anzahl 20
 ```
 
-Ten per pull request at most, and read the vendor's own pricing page for each
-one. A press release or a comparison site is not the source. Where a vendor
-no longer publishes a price, say so in the entry rather than keeping the old
+Gemini and GLM then read the same vendor pages independently and write what
+they read into a fixed schema: amount, currency, unit, billing, free tier,
+whether it is still on sale, and the URL they read it on. Neither of them sees
+the catalogue's current values first — whoever reads the old price confirms
+it. Neither may commit or open anything; a finding file is all they produce.
+
+`build/kreuzpruefung.py vergleich` holds the two against each other before any
+model sees them and marks every entry einig, uneinig, einseitig or leer. It
+compares the numbers, not the prose: how someone labels a tier is taste,
+what it costs is not.
+
+Claude decides from that table, and the rules are the point of the whole
+arrangement:
+
+- **einig** — take it, but fetch the source once yourself. Two models can read
+  the same outdated page.
+- **uneinig** — read the vendor's page and decide. Why, goes in the pull request.
+- **einseitig** — one finding is not a confirmation. Treat it as unchecked and
+  look it up.
+- **leer** — change nothing, and leave `plansChecked` alone so the entry stays
+  at the front of the queue.
+
+Where nothing can be sourced, the field stays out and `plansChecked` stays
+unset. A press release or a comparison site is not a source. Where a vendor no
+longer publishes a price, say so in the entry rather than keeping the old
 number alive.
 
-Set `plansChecked` on every entry you looked at, including the ones where
-nothing had moved. Those are the majority, and leaving their date old would
-send the next run straight back to the same page.
+Set `plansChecked` on every entry that was actually read, including the many
+where nothing had moved. Leaving their date old sends the next run straight
+back to the same page.
 
-This is item two of the weekly list, and it is the item most likely to be
-worth doing. Do not skip it because nothing looks obviously broken. A stale
-price never looks broken.
+Twenty in one pull request is more than the ten a single agent may take
+elsewhere, and that is deliberate: every value in it was read twice, and the
+comparison table makes the review scannable in a way twenty prose diffs are
+not.
+
+The pull request carries one more line per fact sheet:
+
+```
+BILANZ 2026-08-27 Hetzner gemini=richtig zai=daneben
+```
+
+Nobody needs those today. In two months they answer a question no comparison
+table can: which model actually reads a pricing page carefully.
 
 ## The coding-agent benchmark rots the same way
 

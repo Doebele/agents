@@ -13,7 +13,7 @@ name: Weekly upkeep (Z.AI)
 
 on:
   schedule:
-    # Saturdays 06:20 UTC.
+    # Tuesdays 06:20 UTC.
     - cron: "20 6 * * 2"
   workflow_dispatch:
     inputs:
@@ -201,27 +201,21 @@ jobs:
              just written by build/linkcheck.py — work through what it lists,
              and re-check by hand before changing anything: a 403 from a
              bot-walled site is not a dead link.
-          2. A stale price. The most perishable thing in the catalogue, and the
-             item most often worth doing. AGENTS.md explains the rotation under
-             "Prices are the first thing to rot": take the entries with the
-             oldest `plansChecked`, or none at all, read the vendor's own
-             pricing page, and set the date even when nothing changed.
-
-             Not only the numbers. Check whether the billing model moved: a
-             subscription added next to pay-per-use, an API opened, a free
-             tier withdrawn, the product discontinued. Correct `billing` in
-             the same pull request. A model can change without a single digit
-             changing.
-          3. A declared gap. Two places declare them, and AGENTS.md says which
+          2. A declared gap. Two places declare them, and AGENTS.md says which
              under "What counts as a declared gap": the `luecke` fields in
              content/arbeitsarten.json, and the data gaps listed there. Read
              that section before you pick this item.
-          4. Something genuinely new that a beginner would plausibly meet.
+          3. Something genuinely new that a beginner would plausibly meet.
 
           Before you start, run `gh pr list`. If another agent already
           proposed the same thing this week, pick the next item instead.
 
-          If none of the four yields anything, that is a good outcome. Open
+          Prices are not on this list any more. The cross-check
+          (.github/workflows/kreuzpruefung.yml) has them on Mondays and
+          Thursdays: two agents read the same pages independently, a script
+          compares the findings, a third decides. Leave them to it.
+
+          If none of the three yields anything, that is a good outcome. Open
           no pull request. Say what you checked and stop.
 
           Change content/*.json only, then run `python3 build/build.py`. It

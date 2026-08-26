@@ -84,11 +84,18 @@ and only the build runs, which still validates the content.
 
 ## Upkeep
 
-Three agents keep the catalogue current, each with its own weekly run:
-Claude on Mondays, Gemini on Thursdays, Kimi on Saturdays (`pflege*.yml`).
-Each proposes at most one topic as a pull request — the merge button is the
-human gate, and merging deploys. `build/linkcheck.py` writes a link report
-before the Kimi run, so the model judges links instead of fetching them.
+Four agents keep the catalogue current, each with its own weekly run:
+Claude on Mondays, GLM on Tuesdays, Gemini on Thursdays, Kimi on Saturdays
+(`pflege*.yml`). Each proposes at most one topic as a pull request — the merge
+button is the human gate, and merging deploys. `build/linkcheck.py` writes a
+link report before the Kimi and GLM runs, so the model judges links instead of
+fetching them.
+
+Prices are checked separately, Mondays and Thursdays (`kreuzpruefung.yml`).
+Gemini and GLM read the same twenty vendor pages independently, a script
+compares their findings on the numbers, and Claude decides what goes into the
+catalogue — fetching the page itself wherever the two disagree. A price is the
+one thing here a reader plans around, so it gets read twice.
 
 Orders go in through an issue or comment containing `@claude` (`zuruf.yml`,
 which runs under the Claude app identity),

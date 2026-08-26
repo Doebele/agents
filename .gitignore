@@ -20,5 +20,8 @@ site/index.de.html
 # written by build/linkcheck.py before every agent run — per-run artifact
 linkcheck-report.md
 
-# written by build/linkcheck.py before every agent run — per-run artifact
-linkcheck-report.md
+# written and read inside one cross-check run — per-run artifacts
+auftrag.json
+befund-*.json
+vergleich.md
+vergleich.json

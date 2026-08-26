@@ -133,25 +133,12 @@ jobs:
                in content/steckbrief.json. If one no longer resolves or now
                redirects elsewhere, that is the run's topic.
 
-            2. **A stale price.** The most perishable thing in the catalogue,
-               and the item most often worth doing. GEMINI.md explains the
-               rotation under "Prices are the first thing to rot": take the
-               entries with the oldest `plansChecked`, or none at all, read
-               the vendor's own pricing page, and set the date even when
-               nothing changed.
-
-               Not only the numbers. Check whether the billing model moved —
-               a subscription added next to pay-per-use, an API opened, a
-               free tier withdrawn, the product discontinued — and correct
-               `billing` in the same pull request. A model can change without
-               a single digit changing.
-
-            3. **A declared gap.** Two places declare them, and GEMINI.md says
+            2. **A declared gap.** Two places declare them, and GEMINI.md says
                which under "What counts as a declared gap": the `luecke`
                fields in content/arbeitsarten.json, and the data gaps listed
                there. Read that section before you pick this item.
 
-            4. **Something genuinely new.** A model, harness or MCP server
+            3. **Something genuinely new.** A model, harness or MCP server
                that has appeared since the catalogue was last touched.
 
             Before you start, look at the open pull requests with
@@ -159,7 +146,12 @@ jobs:
             this week, pick the next item instead. Two agents fixing the same
             link is wasted review time.
 
-            If none of the four yields anything, that is a good outcome. Open
+            Prices are not on this list any more. The cross-check
+            (.github/workflows/kreuzpruefung.yml) has them on Mondays and
+            Thursdays: two agents read the same pages independently, a script
+            compares the findings, a third decides. Leave them to it.
+
+            If none of the three yields anything, that is a good outcome. Open
             no pull request. Say what you checked and stop.
 
             ## How to work

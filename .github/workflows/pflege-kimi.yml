@@ -139,6 +139,12 @@ jobs:
           chmod 600 "$HOME/.kimi-code/config.toml"
           kimi --version
 
+      # Die Kimi-CLI gibt ihren Verbrauch nicht heraus, also bleibt die
+      # Laufzeit. Sie steht in einem eigenen Schritt, damit sie auch dann
+      # gemessen ist, wenn der Lauf darunter scheitert.
+      - name: Startzeit merken
+        run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
+
       - name: Research and propose
         run: |
           kimi -p "$(cat <<'PROMPT'
@@ -186,3 +192,10 @@ jobs:
           )${{ (github.event.inputs.focus || github.event.client_payload.task) && format('
 
           The maintainer asked you to look at this specifically, which overrides the list above: {0}', (github.event.inputs.focus || github.event.client_payload.task)) || '' }}"
+
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: kimi
+          start: ${{ env.KOSTEN_START }}

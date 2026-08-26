@@ -22,6 +22,12 @@ linkcheck-report.md
 
 # written and read inside one cross-check run — per-run artifacts
 auftrag.json
+auftrag-inhalt.json
 befund-*.json
 vergleich.md
 vergleich.json
+
+# von .github/actions/kosten geschrieben, lebt als Artefakt weiter
+kosten-*.csv
+# liegt auf dem Zweig metriken, nicht hier
+metriken/

@@ -86,12 +86,54 @@ working down the same short list: dead links first, then declared gaps, then
 what is genuinely new. `build/linkcheck.py` writes linkcheck-report.md before
 the Kimi and Z.AI runs — a 403 from a bot-walled site is not a dead link.
 
-Prices are not on that list. They have a run of their own, twice a week, with
-two agents reading every page instead of one; the next section says why.
+Prices are not on that list, and neither is the text of a fact sheet. Both
+rotate on runs of their own, twice a week each; the two sections below say
+why and at what rate.
 
 Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 `upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`, `upkeep-zai/<topic>`,
-`kreuzpruefung/<topic>`.
+`kreuzpruefung/<topic>`, `inhalt/<topic>`.
+
+## What the runs cost
+
+Six agent runs a week, three harnesses, three providers, and until recently no
+number you could hold against another. Every run now ends with a step that
+writes what it used into a run artifact: `.github/actions/kosten` calls
+`build/kosten.py lauf`, which digs the figures out of whatever the harness left
+behind.
+
+The three harnesses leave behind very different things, and the columns are
+not equally trustworthy:
+
+- **Claude runs** — the action's `execution_file` carries token counts and
+  `total_cost_usd`. That figure is the client's own estimate. Good as a trend,
+  not as a bill.
+- **Gemini runs** — the CLI writes OpenTelemetry to a local file when the
+  `settings` input names one. Token counts, no cost.
+- **Kimi and GLM runs** — the CLI does not hand its usage out. The row carries
+  the wall clock and empty token columns.
+
+An empty column means there is no number, and it stays empty. A guessed one
+would be worse than none, which is the same rule the catalogue runs on.
+
+`kosten.yml` collects those artifacts every Sunday, asks the Anthropic Admin
+API what was actually billed, and commits both to the `metriken` branch — not
+to main, where weekly rows of numbers between the fact-sheet changes would ruin
+the diff that gets reviewed on a phone.
+
+```bash
+python3 build/kosten.py bericht metriken/laeufe.csv
+```
+
+The billing half needs `ANTHROPIC_ADMIN_KEY` in the repository secrets, an
+admin key, not the ordinary one. Without it that step says so and the run
+carries on with the estimates.
+
+Attribution gets sharper the day each workflow has an API key of its own: the
+usage report groups by `api_key_id` and the cost report by workspace, so
+separate keys — and, for amounts, separate workspaces — split the bill by run
+without a line of code. Gemini and Z.AI have no comparable API; for those two
+the console is still the only authoritative source.
 
 ## Prices are the first thing to rot
 
@@ -144,12 +186,17 @@ nobody checks it, and the mistake it makes is exactly the mistake a reader
 plans around. So prices no longer travel with the weekly list. They have a run
 of their own, `.github/workflows/kreuzpruefung.yml`, Mondays and Thursdays.
 
-Twenty fact sheets per run, oldest `plansChecked` first, picked by a script so
-that both researchers get the same list:
+Twenty-five fact sheets per run, oldest `plansChecked` first, picked by a
+script so that both researchers get the same list:
 
 ```bash
-python3 build/kreuzpruefung.py auftrag --anzahl 20
+python3 build/kreuzpruefung.py auftrag --anzahl 25
 ```
+
+Fifty a week against the 85 fact sheets that carry a price: every price is
+read again inside a fortnight. The number is not the interesting part, the
+cycle is — pick it from the size of the stock, not from a feeling, and check
+it again when the catalogue has grown.
 
 Gemini and GLM then read the same vendor pages independently and write what
 they read into a fixed schema: amount, currency, unit, billing, free tier,
@@ -182,10 +229,10 @@ Set `plansChecked` on every entry that was actually read, including the many
 where nothing had moved. Leaving their date old sends the next run straight
 back to the same page.
 
-Twenty in one pull request is more than the ten a single agent may take
+Twenty-five in one pull request is more than the ten a single agent may take
 elsewhere, and that is deliberate: every value in it was read twice, and the
-comparison table makes the review scannable in a way twenty prose diffs are
-not.
+comparison table makes the review scannable in a way twenty-five prose diffs
+are not.
 
 The pull request carries one more line per fact sheet:
 
@@ -229,6 +276,65 @@ what has gone longest without any attention is ordered by this:
 ```bash
 python3 build/stand.py
 ```
+
+## The text rots too, only more quietly
+
+A price announces itself when it is wrong: someone plans around it and gets a
+surprise. A description that has gone stale says nothing. The product was
+discontinued, folded into a bigger suite, renamed after an acquisition, or the
+entry describes a version that no longer exists — and the link still answers
+200, so `linkcheck.py` sees nothing either.
+
+So the text rotates like the prices. `.github/workflows/inhalt.yml`, Tuesdays
+and Saturdays, 25 fact sheets per run, the longest-unseen first:
+
+```bash
+python3 build/inhalt.py auftrag --anzahl 25
+```
+
+Fifty a week against 152 fact sheets: every entry is looked at inside three
+weeks. Same number per run as the price rotation, longer cycle, because
+everything has a text and only 85 entries have a price.
+
+One agent does it, not two. "Does this still exist and is it still called
+that" needs no second opinion — unlike a number the reader plans around.
+
+### What the run asks
+
+Five questions, at the vendor's own page: is the product still sold, is it
+still called this, does the blurb still describe it, is `cat` still the right
+block, and does `links.home` still lead to *this* product rather than to a
+landing page that happens to answer.
+
+Prices are explicitly not its business. `plans`, `billing` and `plansChecked`
+belong to the cross-check, where two agents read the same page. What the run
+notices about a price goes into the pull request, not into the entry.
+
+Neither is prose polish. A sentence that is true but not to someone's taste
+stays. A `tip` is an opinion and the next agent's is not better.
+
+### Why `contentChecked` has to be set
+
+```json
+"contentChecked": "2026-08-27"
+```
+
+Set it on every entry that was looked at, above all on the many where nothing
+had to change. That is not bookkeeping, it is what makes the rotation turn:
+whoever finds nothing changes nothing, and what does not change does not move
+the git history. Without the date the same entries would sit at the front of
+the queue forever and the run would circle.
+
+`build/inhalt.py` orders by the later of two dates — `contentChecked` and the
+`stand` derived from the history. Both are needed. Without `stand`, a fact
+sheet written yesterday would go straight back into review; without
+`contentChecked`, one that was checked and found correct would never leave the
+front. Where `build/stand.py` is unavailable the order falls back to
+`contentChecked` alone and the run says so.
+
+An entry that was looked at and carries no date is wasted work. An entry that
+carries the date without having been looked at is a false statement — the same
+rule `build.py` enforces for `plansChecked`, and it enforces it here too.
 
 ## The coding-agent benchmark rots the same way
 
@@ -288,6 +394,13 @@ Take at most ten per pull request and keep them in one block, so the review
 stays readable. For every entry name the vendor page you read. Where the
 page does not say, leave the field out and list which ones you skipped. A
 guessed billing type is a guessed fact.
+
+For **new tools** in general — item three of the weekly list — the Agentarius
+catalogue is worth a look before you start searching:
+https://agentarius.ai/ai-guide/catalogue. It carries far more entries than this
+one and tends to notice things earlier. Treat it as a place to spot something,
+not as a source to cite: whatever you find there gets read on the vendor's own
+page before it becomes a fact sheet, and no number travels across.
 
 Whenever a run touches **marketing topics** — a new fact sheet, a wizard
 station, a gap to fill — check Corey Haines' collection first and take

@@ -1,0 +1,96 @@
+# Was die Agenten kosten.
+#
+# Sechs Laeufe, drei Harnesses, drei Anbieter, und bis hierher keine Zahl, die
+# man vergleichen koennte. Dieser Lauf sammelt sie einmal die Woche ein.
+#
+# Zwei Ebenen, weil eine nicht reicht. Die Zeilen aus den Laeufen selbst sind
+# sofort da und je Lauf zugeordnet, aber ihre Kostenangabe ist eine Schaetzung
+# des Clients — und fuer die Kimi-CLI gibt es sie gar nicht. Die Admin-API von
+# Anthropic sagt, was tatsaechlich abgerechnet wurde, dafuer nur tageweise.
+# Zusammen ergeben sie ein Bild, einzeln keins.
+#
+# Alles landet auf einem eigenen Zweig `metriken`, nicht auf main: der
+# Maintainer liest Diffs auf dem Telefon, und woechentliche Zahlenzeilen
+# zwischen den Steckbrief-Aenderungen machen genau das kaputt.
+name: Kosten
+
+on:
+  schedule:
+    # Sonntags 07:00 UTC, wenn die Woche vorbei ist.
+    - cron: "0 7 * * 0"
+  workflow_dispatch:
+    inputs:
+      tage:
+        description: "Wie viele Tage einsammeln (Standard 8)"
+        required: false
+        default: "8"
+        type: string
+
+jobs:
+  sammeln:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Auf den Zweig metriken wechseln
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # Das Skript ueberlebt den Zweigwechsel nicht, also vorher zur Seite.
+          cp build/kosten.py /tmp/kosten.py
+
+          git config user.name  "Kostenerfassung"
+          git config user.email "kosten@users.noreply.github.com"
+
+          if git ls-remote --exit-code --heads origin metriken >/dev/null 2>&1; then
+            git fetch origin metriken
+            git checkout -B metriken origin/metriken
+          else
+            # Beim ersten Lauf gibt es den Zweig noch nicht. Ohne Historie
+            # angelegt: hier stehen Zahlen, keine Katalogfassung.
+            echo "Zweig metriken existiert noch nicht — wird angelegt."
+            git checkout --orphan metriken
+            git rm -rf --cached . >/dev/null 2>&1 || true
+          fi
+          mkdir -p metriken
+
+      - name: Zeilen der letzten Laeufe einsammeln
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAGE: ${{ github.event.inputs.tage || '8' }}
+        run: |
+          set -uo pipefail
+          case "$TAGE" in ''|*[!0-9]*) echo "tage muss eine Zahl sein: $TAGE"; exit 1 ;; esac
+          python3 /tmp/kosten.py sammeln --tage "$TAGE" --out metriken/laeufe.csv
+
+      # Ohne Admin-Schluessel bleibt es bei den Schaetzungen aus den Laeufen.
+      # Das Skript sagt das und laeuft weiter — ein fehlendes Secret ist kein
+      # Grund, den Lauf scheitern zu lassen.
+      - name: Was die Abrechnung sagt
+        env:
+          ANTHROPIC_ADMIN_KEY: ${{ secrets.ANTHROPIC_ADMIN_KEY }}
+        run: python3 /tmp/kosten.py anthropic --tage 31
+
+      - name: Auszaehlen und ablegen
+        run: |
+          set -uo pipefail
+          { echo "## Aufwand nach Monat, Lauf und Agent"; echo; \
+            python3 /tmp/kosten.py bericht metriken/laeufe.csv; } \
+            | tee -a "$GITHUB_STEP_SUMMARY"
+
+          git add metriken
+          if git diff --cached --quiet; then
+            echo "Nichts Neues."
+            exit 0
+          fi
+          git commit -m "Kosten: Stand $(date -u +%Y-%m-%d)"
+          for versuch in 1 2 3 4; do
+            git push origin metriken && break
+            echo "Push fehlgeschlagen, Versuch $versuch"
+            sleep $((2 ** versuch))
+            git fetch origin metriken && git rebase origin/metriken || true
+          done

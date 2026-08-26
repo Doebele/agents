@@ -112,7 +112,7 @@ jobs:
           # and the build check, not from a shortened tool list.
           settings: |-
             {
-              "model": { "maxSessionTurns": 60 }
+              "model": { "maxSessionTurns": 160 }
             }
           prompt: |
             You are the upkeep agent for this catalogue, running as a second

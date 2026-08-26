@@ -257,9 +257,15 @@ walk the commits that touched `content/steckbrief.json`, compare each entry's
 differs is that entry's date. Because the comparison runs on the value and not
 on the text, reformatting the file moves no date, and a change to one fact
 sheet moves only its own. `build.py` hangs the result on each entry as `stand`
-and the drawer prints both:
+and the drawer prints at most two dates:
 
-    Eintrag geändert 21.08.2026 · Preis geprüft 14.08.2026
+    Inhalt geprüft 27.08.2026 · Preis geprüft 14.08.2026
+
+Three dates exist — `stand`, `contentChecked`, `plansChecked` — and showing
+all three would be fuller, not clearer. Of the first two the later one is
+printed, under its own label: "Inhalt geprüft" when someone looked and found
+it right, "Eintrag geändert" when the last thing that happened was an edit.
+The two are not the same statement and are not merged into one.
 
 Do not add a `stand` field to the JSON. The point of deriving it is that no
 one has to remember it, no one can forget it, and no agent can set it to

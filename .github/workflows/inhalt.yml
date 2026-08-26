@@ -161,3 +161,10 @@ jobs:
             3. Was dir aufgefallen ist, das dir nicht gehört: Preise, die
                falsch aussehen, fehlende Steckbriefe, ein Werkzeug, das in
                einen anderen Baustein gehört.
+
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: claude
+          execution: ${{ steps.claude.outputs.execution_file }}

@@ -765,14 +765,15 @@
          "Vercel",
          "Hostinger",
          "Strato",
-         "IONOS"
+         "IONOS",
+         "Coolify"
         ],
         "empfehlung": [
          "Netlify"
         ],
         "notiz": {
-         "de": "Zwei Sorten: Git-Plattformen bauen aus deinem Codestand selbst, klassische Pakete bringen Domain und Postfach mit.",
-         "en": "Two kinds: Git platforms build from your code themselves, classic packages come with a domain and mailbox."
+         "de": "Drei Sorten: Git-Plattformen bauen aus deinem Codestand selbst, klassische Pakete bringen Domain und Postfach mit, und Coolify betreibst du auf einem eigenen Server.",
+         "en": "Three kinds: Git platforms build from your code themselves, classic packages come with a domain and mailbox, and Coolify you run on a server of your own."
         }
        }
       },
@@ -833,14 +834,15 @@
          "Render",
          "Vercel",
          "IONOS",
-         "Hostinger"
+         "Hostinger",
+         "Coolify"
         ],
         "empfehlung": [
          "Render"
         ],
         "notiz": {
-         "de": "Eine Anwendung braucht mehr als Dateiablage — Hintergrunddienste und eine Datenbank müssen mitlaufen.",
-         "en": "An application needs more than file storage — background services and a database have to run alongside."
+         "de": "Eine Anwendung braucht mehr als Dateiablage — Hintergrunddienste und eine Datenbank müssen mitlaufen. Coolify richtet beides auf einem eigenen Server ein, verlangt dafür aber, dass du ihn selbst betreust.",
+         "en": "An application needs more than file storage — background services and a database have to run alongside. Coolify sets up both on a server of your own, but expects you to look after it yourself."
         }
        }
       },

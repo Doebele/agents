@@ -86,12 +86,13 @@ working down the same short list: dead links first, then declared gaps, then
 what is genuinely new. `build/linkcheck.py` writes linkcheck-report.md before
 the Kimi and Z.AI runs — a 403 from a bot-walled site is not a dead link.
 
-Prices are not on that list. They have a run of their own, twice a week, with
-two agents reading every page instead of one; the next section says why.
+Prices are not on that list, and neither is the text of a fact sheet. Both
+rotate on runs of their own, twice a week each; the two sections below say
+why and at what rate.
 
 Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 `upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`, `upkeep-zai/<topic>`,
-`kreuzpruefung/<topic>`.
+`kreuzpruefung/<topic>`, `inhalt/<topic>`.
 
 ## Prices are the first thing to rot
 
@@ -195,6 +196,65 @@ BILANZ 2026-08-27 Hetzner gemini=richtig zai=daneben
 
 Nobody needs those today. In two months they answer a question no comparison
 table can: which model actually reads a pricing page carefully.
+
+## The text rots too, only more quietly
+
+A price announces itself when it is wrong: someone plans around it and gets a
+surprise. A description that has gone stale says nothing. The product was
+discontinued, folded into a bigger suite, renamed after an acquisition, or the
+entry describes a version that no longer exists — and the link still answers
+200, so `linkcheck.py` sees nothing either.
+
+So the text rotates like the prices. `.github/workflows/inhalt.yml`, Tuesdays
+and Saturdays, 25 fact sheets per run, the longest-unseen first:
+
+```bash
+python3 build/inhalt.py auftrag --anzahl 25
+```
+
+Fifty a week against 152 fact sheets: every entry is looked at inside three
+weeks. Same number per run as the price rotation, longer cycle, because
+everything has a text and only 85 entries have a price.
+
+One agent does it, not two. "Does this still exist and is it still called
+that" needs no second opinion — unlike a number the reader plans around.
+
+### What the run asks
+
+Five questions, at the vendor's own page: is the product still sold, is it
+still called this, does the blurb still describe it, is `cat` still the right
+block, and does `links.home` still lead to *this* product rather than to a
+landing page that happens to answer.
+
+Prices are explicitly not its business. `plans`, `billing` and `plansChecked`
+belong to the cross-check, where two agents read the same page. What the run
+notices about a price goes into the pull request, not into the entry.
+
+Neither is prose polish. A sentence that is true but not to someone's taste
+stays. A `tip` is an opinion and the next agent's is not better.
+
+### Why `contentChecked` has to be set
+
+```json
+"contentChecked": "2026-08-27"
+```
+
+Set it on every entry that was looked at, above all on the many where nothing
+had to change. That is not bookkeeping, it is what makes the rotation turn:
+whoever finds nothing changes nothing, and what does not change does not move
+the git history. Without the date the same entries would sit at the front of
+the queue forever and the run would circle.
+
+`build/inhalt.py` orders by the later of two dates — `contentChecked` and the
+`stand` derived from the history. Both are needed. Without `stand`, a fact
+sheet written yesterday would go straight back into review; without
+`contentChecked`, one that was checked and found correct would never leave the
+front. Where `build/stand.py` is unavailable the order falls back to
+`contentChecked` alone and the run says so.
+
+An entry that was looked at and carries no date is wasted work. An entry that
+carries the date without having been looked at is a false statement — the same
+rule `build.py` enforces for `plansChecked`, and it enforces it here too.
 
 ## The coding-agent benchmark rots the same way
 

@@ -91,6 +91,11 @@ button is the human gate, and merging deploys. `build/linkcheck.py` writes a
 link report before the Kimi and GLM runs, so the model judges links instead of
 fetching them.
 
+The text of the fact sheets rotates too, Tuesdays and Saturdays
+(`inhalt.yml`): 25 entries per run, longest-unseen first, checked against the
+vendor's own page for the things a link check cannot see — a product that was
+discontinued, renamed, or has quietly become something else.
+
 Prices are checked separately, Mondays and Thursdays (`kreuzpruefung.yml`).
 Gemini and GLM read the same twenty vendor pages independently, a script
 compares their findings on the numbers, and Claude decides what goes into the

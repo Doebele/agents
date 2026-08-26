@@ -25,9 +25,9 @@ on:
   workflow_dispatch:
     inputs:
       anzahl:
-        description: "Wie viele Steckbriefe prüfen (Standard 20)"
+        description: "Wie viele Steckbriefe prüfen (Standard 25)"
         required: false
-        default: "20"
+        default: "25"
         type: string
 
 jobs:
@@ -46,7 +46,7 @@ jobs:
         # wandert per Umgebungsvariable in den Schritt und wird geprueft, statt
         # in die Kommandozeile interpoliert zu werden.
         env:
-          ANZAHL: ${{ github.event.inputs.anzahl || '20' }}
+          ANZAHL: ${{ github.event.inputs.anzahl || '25' }}
         run: |
           set -euo pipefail
           case "$ANZAHL" in

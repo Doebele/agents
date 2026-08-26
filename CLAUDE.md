@@ -158,6 +158,27 @@ This is item two of the weekly list, and it is the item most likely to be
 worth doing. Do not skip it because nothing looks obviously broken. A stale
 price never looks broken.
 
+## The coding-agent benchmark rots the same way
+
+Harness sheets can carry an `aaAgent` block: the Artificial Analysis coding
+agent measurements — index, average wall time and average cost per task —
+one row per measured model configuration, styled like the model tiles.
+
+```json
+"aaAgent": { "url": "https://artificialanalysis.ai/agents/coding-agents",
+  "checked": "2026-08-26",
+  "rows": [ { "model": "…", "index": { "v": "0.68", "rank": "#1/9" },
+             "time": { "v": "23.7 min", "rank": "#7/9" },
+             "cost": { "v": "$8.17", "rank": "#8/9" } } ] }
+```
+
+The source is the AA coding-agents page; the index is a 0–1 composite of
+three benchmarks, and rank 1 is best in all three columns. These numbers
+move with every AA re-run, so they rotate like prices: read the page,
+refresh values and ranks, and bump `checked` even when nothing moved. The
+table also grows new agents and model configurations — when one appears
+that this catalogue carries, add its row; when AA drops one, remove it.
+
 ## What counts as a declared gap
 
 Item three of that list means two places, not one.

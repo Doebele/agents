@@ -1,0 +1,464 @@
+# Kreuzpruefung der Preise.
+#
+# Preise sind das, was am schnellsten falsch wird, und ein falscher Preis ist
+# schlimmer als ein fehlender: der Leser plant damit. Ein einzelner Agent, der
+# eine Anbieterseite liest, ist an genau dieser Stelle die duennste Stelle im
+# Ablauf — niemand prueft ihn nach.
+#
+# Also lesen zwei. Gemini und GLM bekommen dieselbe Liste, arbeiten unabhaengig
+# voneinander und schreiben ihren Befund in ein festes Schema. Ein Skript stellt
+# die beiden gegenueber, bevor ein Modell sie zu Gesicht bekommt. Claude
+# entscheidet nur noch, was strittig ist, und oeffnet den Pull Request.
+#
+# Montags und donnerstags, eine Stunde vor den Einzellaeufen. Seit es diesen
+# Lauf gibt, nehmen die vier Pflegelaeufe die Preise nicht mehr selbst — sonst
+# pruefen zwei Agenten am selben Morgen dieselbe Seite.
+#
+# Wie alles hier: nur Pull Requests, kein Push auf main.
+name: Kreuzpruefung (Preise)
+
+on:
+  schedule:
+    # Montag und Donnerstag 05:20 UTC.
+    - cron: "20 5 * * 1"
+    - cron: "20 5 * * 4"
+  workflow_dispatch:
+    inputs:
+      anzahl:
+        description: "Wie viele Steckbriefe prüfen (Standard 20)"
+        required: false
+        default: "20"
+        type: string
+
+jobs:
+  # ------------------------------------------------------------------ Auftrag
+  # Beide Rechercheure muessen dieselbe Liste bekommen, sonst gibt es nichts zu
+  # vergleichen. Deshalb waehlt ein Skript sie aus, nicht die Modelle.
+  auftrag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Die aeltesten Preisstaende waehlen
+        # Die Zahl kommt aus einem Feld, das der Maintainer ausfuellt. Sie
+        # wandert per Umgebungsvariable in den Schritt und wird geprueft, statt
+        # in die Kommandozeile interpoliert zu werden.
+        env:
+          ANZAHL: ${{ github.event.inputs.anzahl || '20' }}
+        run: |
+          set -euo pipefail
+          case "$ANZAHL" in
+            ''|*[!0-9]*) echo "anzahl muss eine Zahl sein, war: $ANZAHL"; exit 1 ;;
+          esac
+          python3 build/kreuzpruefung.py auftrag --anzahl "$ANZAHL" | tee /tmp/auftrag.txt
+          { echo "## Auftrag"; echo; echo '```'; cat /tmp/auftrag.txt; echo '```'; } \
+            >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: auftrag
+          path: auftrag.json
+
+  # ------------------------------------------------------------------ Gemini
+  gemini:
+    needs: auftrag
+    runs-on: ubuntu-latest
+    # Liest und schreibt eine Datei, sonst nichts. Kein Schreibrecht, kein
+    # App-Token: dieser Job soll nichts committen und nichts oeffnen koennen.
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/download-artifact@v4
+        with:
+          name: auftrag
+
+      - name: Preise lesen
+        uses: google-github-actions/run-gemini-cli@v0.1.22
+        env:
+          # Ein Checkout ist kein Ordner, dem jemand vertraut hat, und die CLI
+          # verweigert dann den Dienst. Interaktiv laesst sich das auf einem
+          # Runner nicht bestaetigen; die Variable ist der dokumentierte Weg.
+          GEMINI_CLI_TRUST_WORKSPACE: "true"
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          workflow_name: kreuzpruefung
+          settings: |-
+            {
+              "model": { "maxSessionTurns": 150 }
+            }
+          prompt: |
+            Du prüfst Preise für einen Katalog. Du änderst nichts, committest
+            nichts und öffnest nichts. Dein Ergebnis ist eine einzige Datei:
+            befund-gemini.json im Wurzelverzeichnis.
+
+            auftrag.json listet Steckbriefe mit Name, Anbieter und Startadresse.
+            Arbeite sie der Reihe nach ab. Für jeden Eintrag:
+
+            1. Von der Startadresse aus zur Preisseite des Anbieters selbst.
+               Nicht eine Vergleichsseite, nicht eine Pressemitteilung, nicht
+               dein Gedächtnis.
+            2. Ablesen, was dort steht.
+            3. In befund-gemini.json schreiben.
+
+            Sieh **nicht** in content/steckbrief.json nach. Was dort steht, ist
+            der Stand, den du prüfen sollst; wer ihn vorher liest, bestätigt ihn.
+
+            Genau dieses Schema, genau diese Feldnamen:
+
+            {
+              "agent": "gemini",
+              "stand": "JJJJ-MM-TT",
+              "eintraege": {
+                "<Name aus auftrag.json>": {
+                  "erhaeltlich": true,
+                  "gratis": false,
+                  "billing": ["abo"],
+                  "preise": [
+                    {"was": "Pro", "betrag": "20", "waehrung": "USD", "einheit": "Monat"}
+                  ],
+                  "quelle": "https://…",
+                  "notiz": ""
+                }
+              }
+            }
+
+            - `betrag` ohne Währungszeichen und ohne Einheit, nur die Zahl.
+            - `waehrung` als Code: USD, EUR, GBP.
+            - `einheit` das, worauf sich der Betrag bezieht: "Monat", "Jahr",
+              "1M Tokens", "Nutzer/Monat", "Stunde", "einmalig".
+            - `billing`: "abo", wenn ein Abonnement ein Kontingent kauft;
+              "api", wenn je Nutzung abgerechnet wird; beides, wenn der Anbieter
+              beides verkauft. Ein Coding-Abo, das als Schlüssel in fremde
+              Werkzeuge wandert, ist trotzdem "abo".
+            - `gratis`: gibt es eine dauerhaft kostenlose Stufe? Ein Startguthaben
+              ist keine.
+            - `erhaeltlich`: false, wenn das Produkt eingestellt wurde, in einem
+              anderen aufgegangen ist oder keine Neukunden mehr annimmt.
+            - `notiz`: ein Satz, wenn etwas nicht ins Schema passt. Sonst leer.
+
+            Was du nicht auf der Seite liest, schreibst du nicht auf. Lässt sich
+            ein Feld nicht belegen, lass es weg. Findest du die Preisseite nicht
+            in höchstens drei Abrufen, schreib den Eintrag mit `notiz` und ohne
+            `preise` und geh zum nächsten.
+
+            Schreib die Datei nach jedem Eintrag neu, nicht erst am Ende. Bricht
+            der Lauf vorzeitig ab, ist der Teil bis dahin trotzdem verwertbar.
+
+            Ein zweiter Agent prüft dieselbe Liste unabhängig von dir, ein dritter
+            vergleicht beides und schlägt strittige Stellen selbst nach. Rate
+            also nicht, um vollständig auszusehen: eine Lücke ist ehrlich, ein
+            geratener Preis ist Schaden.
+
+      - name: Befund sichern
+        if: always()
+        run: |
+          test -f befund-gemini.json \
+            && echo "befund-gemini.json: $(wc -c < befund-gemini.json) Bytes" \
+            || echo "kein Befund abgeliefert"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: befund-gemini
+          path: befund-gemini.json
+          if-no-files-found: warn
+
+  # ------------------------------------------------------------------ Z.AI
+  # Gleicher Aufbau wie pflege-zai.yml: GLM kommt ueber die Kimi-CLI herein,
+  # weil ZCode selbst keinen Kommandozeilenbetrieb kennt.
+  zai:
+    needs: auftrag
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/download-artifact@v4
+        with:
+          name: auftrag
+
+      # Der Anbieter installiert, indem er ein entferntes Skript in bash pipet.
+      # Das ist bei jedem Lauf eine Sache mehr, der man vertraut, als es eine
+      # gepinnte Action waere — besser bewusst als unbemerkt.
+      - name: Kimi Code CLI installieren
+        run: |
+          curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
+          echo "$HOME/.kimi-code/bin" >> "$GITHUB_PATH"
+          test -x "$HOME/.kimi-code/bin/kimi" || {
+            echo "kimi binary nicht am erwarteten Ort; Ausgabe des Installers oben"; exit 1; }
+
+      - name: Zugang und Modell in die config.toml
+        env:
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          ZAI_MODEL: ${{ vars.ZAI_MODEL }}
+        run: |
+          set -euo pipefail
+          test -n "$ZAI_API_KEY" || { echo "ZAI_API_KEY ist nicht gesetzt"; exit 1; }
+
+          BASE="https://api.z.ai/api/paas/v4"
+          code=$(curl -sS -o /tmp/models.json -w '%{http_code}' \
+                 -H "Authorization: Bearer $ZAI_API_KEY" "$BASE/models" || echo 000)
+          echo "  GET $BASE/models -> HTTP $code"
+
+          # /models listet, was die API kennt, nicht was dieser Schluessel darf.
+          # Also bekommt jeder Kandidat eine Ein-Token-Antwort, neuestes zuerst.
+          if [ "$code" = "200" ]; then
+            KANDIDATEN=$(python3 -c '
+          import json, os, sys
+          ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
+          print("Gelistet:", ", ".join(ids), file=sys.stderr)
+          want = os.environ.get("ZAI_MODEL") or ""
+          if want:
+              print(want)
+          else:
+              glm = sorted([i for i in ids if i.lower().startswith("glm")], reverse=True)
+              print("\n".join(glm or ids))
+          ')
+            MODEL=""
+            for m in $KANDIDATEN; do
+              rc=$(curl -sS -o /tmp/probe.json -w '%{http_code}' \
+                   -H "Authorization: Bearer $ZAI_API_KEY" \
+                   -H "Content-Type: application/json" \
+                   -d "{\"model\":\"$m\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1}" \
+                   "$BASE/chat/completions" || echo 000)
+              echo "    $m → HTTP $rc"
+              if [ "$rc" = "200" ]; then MODEL="$m"; break; fi
+            done
+            test -n "$MODEL" || { echo "Keines der gelisteten Modelle ist mit diesem Schlüssel nutzbar."; \
+                                  head -c 300 /tmp/probe.json; exit 1; }
+          else
+            echo "  keine Modelliste; zurück auf die dokumentierte Beispiel-Id"
+            MODEL="${ZAI_MODEL:-glm-4.6}"
+          fi
+          echo "Modell: $MODEL"
+
+          mkdir -p "$HOME/.kimi-code"
+          cat > "$HOME/.kimi-code/config.toml" <<TOML
+          default_model = "kreuzpruefung"
+          default_permission_mode = "auto"
+          telemetry = false
+
+          [providers.zai]
+          type = "openai"
+          base_url = "$BASE"
+          api_key = "$ZAI_API_KEY"
+
+          [models.kreuzpruefung]
+          provider = "zai"
+          model = "$MODEL"
+          max_context_size = 131072
+          TOML
+          chmod 600 "$HOME/.kimi-code/config.toml"
+          kimi --version
+
+      - name: Preise lesen
+        run: |
+          kimi -p "$(cat <<'PROMPT'
+          Du prüfst Preise für einen Katalog. Du änderst nichts, committest
+          nichts und öffnest nichts. Dein Ergebnis ist eine einzige Datei:
+          befund-zai.json im Wurzelverzeichnis.
+
+          auftrag.json listet Steckbriefe mit Name, Anbieter und Startadresse.
+          Arbeite sie der Reihe nach ab. Für jeden Eintrag:
+
+          1. Von der Startadresse aus zur Preisseite des Anbieters selbst.
+             Nicht eine Vergleichsseite, nicht eine Pressemitteilung, nicht
+             dein Gedächtnis.
+          2. Ablesen, was dort steht.
+          3. In befund-zai.json schreiben.
+
+          Sieh NICHT in content/steckbrief.json nach. Was dort steht, ist der
+          Stand, den du prüfen sollst; wer ihn vorher liest, bestätigt ihn.
+
+          Genau dieses Schema, genau diese Feldnamen:
+
+          {
+            "agent": "zai",
+            "stand": "JJJJ-MM-TT",
+            "eintraege": {
+              "<Name aus auftrag.json>": {
+                "erhaeltlich": true,
+                "gratis": false,
+                "billing": ["abo"],
+                "preise": [
+                  {"was": "Pro", "betrag": "20", "waehrung": "USD", "einheit": "Monat"}
+                ],
+                "quelle": "https://…",
+                "notiz": ""
+              }
+            }
+          }
+
+          - betrag ohne Währungszeichen und ohne Einheit, nur die Zahl.
+          - waehrung als Code: USD, EUR, GBP.
+          - einheit das, worauf sich der Betrag bezieht: "Monat", "Jahr",
+            "1M Tokens", "Nutzer/Monat", "Stunde", "einmalig".
+          - billing: "abo", wenn ein Abonnement ein Kontingent kauft; "api",
+            wenn je Nutzung abgerechnet wird; beides, wenn der Anbieter beides
+            verkauft. Ein Coding-Abo, das als Schlüssel in fremde Werkzeuge
+            wandert, ist trotzdem "abo".
+          - gratis: gibt es eine dauerhaft kostenlose Stufe? Ein Startguthaben
+            ist keine.
+          - erhaeltlich: false, wenn das Produkt eingestellt wurde, in einem
+            anderen aufgegangen ist oder keine Neukunden mehr annimmt.
+          - notiz: ein Satz, wenn etwas nicht ins Schema passt. Sonst leer.
+
+          Was du nicht auf der Seite liest, schreibst du nicht auf. Lässt sich
+          ein Feld nicht belegen, lass es weg. Findest du die Preisseite nicht
+          in höchstens drei Abrufen, schreib den Eintrag mit notiz und ohne
+          preise und geh zum nächsten.
+
+          Schreib die Datei nach jedem Eintrag neu, nicht erst am Ende. Bricht
+          der Lauf vorzeitig ab, ist der Teil bis dahin trotzdem verwertbar.
+
+          Ein zweiter Agent prüft dieselbe Liste unabhängig von dir, ein dritter
+          vergleicht beides und schlägt strittige Stellen selbst nach. Rate also
+          nicht, um vollständig auszusehen: eine Lücke ist ehrlich, ein
+          geratener Preis ist Schaden.
+          PROMPT
+          )"
+
+      - name: Befund sichern
+        if: always()
+        run: |
+          test -f befund-zai.json \
+            && echo "befund-zai.json: $(wc -c < befund-zai.json) Bytes" \
+            || echo "kein Befund abgeliefert"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: befund-zai
+          path: befund-zai.json
+          if-no-files-found: warn
+
+  # ------------------------------------------------------------------ Urteil
+  entscheidung:
+    needs: [auftrag, gemini, zai]
+    # Auch wenn einer der beiden Rechercheure gescheitert ist. Ein einzelner
+    # Befund gilt dann als ungeprueft — Claude schlaegt ihn selbst nach. Das
+    # ist immer noch besser als ein Lauf, der nichts liefert.
+    if: always() && needs.auftrag.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: auftrag
+
+      # Ein fehlender Befund darf den Lauf nicht abbrechen, deshalb einzeln und
+      # nachsichtig heruntergeladen.
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: befund-gemini
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: befund-zai
+
+      - name: Befunde gegenueberstellen
+        run: |
+          python3 build/kreuzpruefung.py vergleich befund-gemini.json befund-zai.json
+          { echo "## Vergleich"; echo; sed -n '1,40p' vergleich.md; } >> "$GITHUB_STEP_SUMMARY"
+
+      # Ein undurchsichtiger Fehlschlag hat hier einmal einen Abend gekostet:
+      # is_error true, ein Turn, null Kosten, keine Meldung im Log. Also wird
+      # der Schluessel vorher gefragt, und die Antwort steht im Log.
+      - name: Erreicht der Schluessel die API
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -uo pipefail
+          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY ist nicht gesetzt"; exit 1; }
+          code=$(curl -sS -o /tmp/ping.json -w '%{http_code}' \
+                 -X POST https://api.anthropic.com/v1/messages \
+                 -H "x-api-key: $ANTHROPIC_API_KEY" \
+                 -H "anthropic-version: 2023-06-01" \
+                 -H "content-type: application/json" \
+                 -d '{"model":"claude-opus-5","max_tokens":1,"messages":[{"role":"user","content":"hi"}]}' || echo 000)
+          echo "  POST /v1/messages -> HTTP $code"
+          head -c 400 /tmp/ping.json; echo
+          test "$code" = "200" || { echo "Der Schlüssel erreicht die API, darf aber nichts ausgeben."; exit 1; }
+
+      - name: Entscheiden und vorschlagen
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: |
+            --max-turns 200
+            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*)"
+          prompt: |
+            Du entscheidest die Kreuzprüfung der Preise. Lies zuerst CLAUDE.md —
+            seine Regeln binden dich, besonders: nie eine Angabe oder einen Link
+            erfinden, site/ nicht von Hand bearbeiten, nie auf main pushen.
+
+            vergleich.md stellt zwei unabhängige Befunde gegenüber, die Gemini
+            und GLM zu denselben Steckbriefen abgelesen haben, dazu den Stand
+            des Katalogs. build/kreuzpruefung.py hat den Vergleich gerechnet,
+            nicht ein Modell: was dort als einig steht, ist in Betrag, Währung,
+            Einheit, billing und Gratisstufe deckungsgleich.
+
+            Geh die Tabelle Eintrag für Eintrag durch:
+
+            - **einig** — übernehmen, aber die Quelle einmal selbst abrufen.
+              Zwei Modelle können dieselbe veraltete Seite gelesen haben.
+              Bestätigt die Seite es, schreibst du `plans` in beiden Sprachen
+              neu und setzt `plansChecked` auf heute.
+            - **uneinig** — die Seite des Anbieters selbst lesen und
+              entscheiden. Welcher Befund stimmte und warum, kommt in den
+              PR-Text.
+            - **einseitig** — gilt als ungeprüft, ein einzelner Befund ist
+              keine Bestätigung. Selbst nachschlagen wie bei uneinig.
+            - **leer** — nichts ändern. `plansChecked` bleibt, wie es ist, damit
+              der Eintrag beim nächsten Lauf wieder vorne steht. Im PR nennen.
+
+            Lässt sich ein Wert nicht belegen: Feld weglassen, `plansChecked`
+            NICHT setzen, im PR-Text nennen. Ein geratener Preis ist schlimmer
+            als ein fehlender.
+
+            Nicht nur die Zahlen. Ist das Abrechnungsmodell gewandert — ein Abo
+            neben der Nutzungsabrechnung, eine geöffnete API, eine gestrichene
+            Gratisstufe —, dann wandert `billing` in derselben Änderung mit.
+            Ist ein Produkt gar nicht mehr erhältlich, sag das im Eintrag,
+            statt die alte Zahl am Leben zu halten.
+
+            `plans` steht in beiden Sprachen, und das Deutsche ist Deutsch, keine
+            Übersetzung des Englischen. Halte dich an die Form der Nachbarn.
+
+            Ändere ausschließlich content/steckbrief.json. Dann:
+
+                python3 build/build.py
+
+            Das muss Exit 0 liefern. auftrag.json, befund-*.json, vergleich.md
+            und vergleich.json sind Lauf-Artefakte und gehören nicht in den
+            Commit.
+
+            Branch `kreuzpruefung/preise-<JJJJ-MM-TT>`, Pull Request gegen main
+            mit `gh pr create`, Titel mit `[Kreuzprüfung]` davor und in Klartext,
+            was geprüft wurde.
+
+            In den PR-Text gehören:
+
+            1. Die Tabelle aus vergleich.md.
+            2. Für jede geänderte Angabe die Quell-URL, von der sie stammt.
+            3. Was du NICHT geprüft hast.
+            4. Je Steckbrief eine Bilanzzeile in genau dieser Form, damit sich
+               später auszählen lässt, welcher Agent wie zuverlässig liest:
+
+               BILANZ <JJJJ-MM-TT> <Steckbrief> gemini=<richtig|daneben|nichts> zai=<richtig|daneben|nichts>
+
+               `richtig` heißt: der Befund deckte sich mit dem, was du auf der
+               Seite gelesen hast. `daneben`: er wich davon ab. `nichts`: dieser
+               Agent hat zu diesem Steckbrief nichts geliefert. Bei einem
+               einigen Eintrag, den die Quelle bestätigt hat, sind beide
+               `richtig`.

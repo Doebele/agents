@@ -144,12 +144,17 @@ nobody checks it, and the mistake it makes is exactly the mistake a reader
 plans around. So prices no longer travel with the weekly list. They have a run
 of their own, `.github/workflows/kreuzpruefung.yml`, Mondays and Thursdays.
 
-Twenty fact sheets per run, oldest `plansChecked` first, picked by a script so
-that both researchers get the same list:
+Twenty-five fact sheets per run, oldest `plansChecked` first, picked by a
+script so that both researchers get the same list:
 
 ```bash
-python3 build/kreuzpruefung.py auftrag --anzahl 20
+python3 build/kreuzpruefung.py auftrag --anzahl 25
 ```
+
+Fifty a week against the 85 fact sheets that carry a price: every price is
+read again inside a fortnight. The number is not the interesting part, the
+cycle is — pick it from the size of the stock, not from a feeling, and check
+it again when the catalogue has grown.
 
 Gemini and GLM then read the same vendor pages independently and write what
 they read into a fixed schema: amount, currency, unit, billing, free tier,
@@ -182,10 +187,10 @@ Set `plansChecked` on every entry that was actually read, including the many
 where nothing had moved. Leaving their date old sends the next run straight
 back to the same page.
 
-Twenty in one pull request is more than the ten a single agent may take
+Twenty-five in one pull request is more than the ten a single agent may take
 elsewhere, and that is deliberate: every value in it was read twice, and the
-comparison table makes the review scannable in a way twenty prose diffs are
-not.
+comparison table makes the review scannable in a way twenty-five prose diffs
+are not.
 
 The pull request carries one more line per fact sheet:
 

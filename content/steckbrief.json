@@ -471,8 +471,8 @@
    "en": "xAI's coding agent for the terminal: it reads your project, edits files and runs commands. On bigger jobs it puts a plan in front of you first — you can comment on single steps, rewrite it, or throw it out — and only then does it touch anything. The agent itself has been open source since July 2026 (Apache 2.0); the model behind it has not."
   },
   "tip": {
-   "de": "Der Zugang hängt an einem SuperGrok- oder X-Premium+-Abo; ohne das führt der Weg nur über einen API-Schlüssel und nutzungsabhängige Abrechnung. Wer schon mit Claude Code oder Codex arbeitet, kann AGENTS.md, MCP-Server, Hooks und Skills mitnehmen — die versteht er.",
-   "en": "Access hangs on a SuperGrok or X Premium+ subscription; without one the only route in is an API key and usage-based billing. If you already work with Claude Code or Codex you can bring your AGENTS.md, MCP servers, hooks and skills along — it reads them."
+   "de": "Mit einem Konto kostenlos nutzbar; daneben der Weg über einen API-Schlüssel und nutzungsabhängige Abrechnung. Wer schon mit Claude Code oder Codex arbeitet, kann AGENTS.md, MCP-Server, Hooks und Skills mitnehmen — die versteht er.",
+   "en": "Free to use with an account; alongside that, the route through an API key and usage-based billing. If you already work with Claude Code or Codex you can bring your AGENTS.md, MCP servers, hooks and skills along — it reads them."
   },
   "links": {
    "home": "https://x.ai/news/grok-build-cli",
@@ -480,11 +480,16 @@
    "code": "https://github.com/xai-org/grok-build"
   },
   "icon": "x",
-  "free": false,
+  "free": true,
   "plans": {
-   "de": "SuperGrok- oder X-Premium+-Abo · API (Grok 4.6) 2 $/6 $ pro 1M Token",
-   "en": "SuperGrok or X Premium+ subscription · API (Grok 4.6) $2/$6 per 1M tokens"
-  }
+   "de": "Mit Konto kostenlos nutzbar · alternativ API (grok-build-0.1) 1 $/2 $ pro 1M Token",
+   "en": "Free to use with an account · alternatively API (grok-build-0.1) $1/$2 per 1M tokens"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Zed": {
   "name": "Zed",
@@ -573,7 +578,12 @@
   "plans": {
    "de": "Open Source (MIT), kostenlos · optionale kostenpflichtige Stufen mit Credits",
    "en": "Open source (MIT), free · optional paid tiers with credits"
-  }
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Odysseus": {
   "name": "Odysseus",
@@ -1794,7 +1804,8 @@
   "plans": {
    "de": "Kostenlos, Open Source (MIT) · Modellkosten nach eigenem Anbieter",
    "en": "Free, open source (MIT) · model costs per your own provider"
-  }
+  },
+  "plansChecked": "2026-08-25"
  },
  "GPT-5.6": {
   "name": "GPT-5.6",
@@ -1843,13 +1854,14 @@
    }
   },
   "plans": {
-   "de": "API Terra 2 $/12 $ · Sol 5 $/30 $ · Luna 0,20 $/1,20 $ pro 1M Tok.",
-   "en": "API Terra $2/$12 · Sol $5/$30 · Luna $0.20/$1.20 per 1M tok."
+   "de": "API Terra 2 $/12 $ · Sol 4 $/20 $ · Luna 0,20 $/1,20 $ pro 1M Tok. — Sol zum Aktionspreis, mindestens bis 21.11.2026",
+   "en": "API Terra $2/$12 · Sol $4/$20 · Luna $0.20/$1.20 per 1M tok. — Sol at promotional pricing, at least through 21 Nov 2026"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Claude Opus 5 / Sonnet 5": {
   "name": "Claude Opus 5 / Sonnet 5",
@@ -1962,7 +1974,8 @@
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Grok 4.6": {
   "name": "Grok 4.6",
@@ -2008,13 +2021,14 @@
    }
   },
   "plans": {
-   "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · Agent 0,05 $/Min.",
-   "en": "API $2/$6 per 1M tokens (cache $0.50) · agent $0.05/min"
+   "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $)",
+   "en": "API $2/$6 per 1M tokens (cache $0.50)"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Qwen3.8-Max": {
   "name": "Qwen3.8-Max",
@@ -2230,13 +2244,13 @@
    }
   },
   "plans": {
-   "de": "API 1,40 $/4,40 $ pro 1M Token · zeitlich begrenzt kostenlos",
-   "en": "API $1.40/$4.40 per 1M tokens · limited-time free tier"
+   "de": "API 1,40 $/4,40 $ pro 1M Token · Cache-Speicher zeitlich begrenzt kostenlos",
+   "en": "API $1.40/$4.40 per 1M tokens · cached-input storage free for a limited time"
   },
   "billing": [
-   "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Anthropic Agent Skills": {
   "name": "Anthropic Agent Skills",
@@ -3489,9 +3503,13 @@
    "en": "When response time matters — chats, automation — worth comparing against Together AI. Billed per million tokens."
   },
   "plans": {
-   "de": "Abrechnung je 1M Tokens · Gratisstufe",
-   "en": "Billed per 1M tokens · free tier"
+   "de": "Abrechnung je 1M Tokens (GPT-OSS-120B z. B. 0,15 $/0,60 $) · 1 $ Startguthaben bei Registrierung, keine laufende Gratisstufe",
+   "en": "Billed per 1M tokens (GPT-OSS-120B e.g. $0.15/$0.60) · $1 signup credit at registration, no ongoing free tier"
   },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-25",
   "links": {
    "home": "https://fireworks.ai"
   }
@@ -3518,6 +3536,10 @@
    "de": "Abrechnung je 1M Tokens · Gratisstufe",
    "en": "Billed per 1M tokens · free tier"
   },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-25",
   "links": {
    "home": "https://groq.com"
   }
@@ -4006,9 +4028,13 @@
    "home": "https://www.glaze.app"
   },
   "plans": {
-   "de": "Preise nicht veröffentlicht · Pläne Pro und Team; Ausführen geteilter Apps mit Gratis-Konto",
-   "en": "Pricing not published · Pro and Team plans; running shared apps with a free account"
-  }
+   "de": "Installieren und Ausführen von Apps kostenlos · Bauen mit eigenem Claude-Abo während der Beta unbegrenzt, sonst einmaliges Willkommensguthaben und Nachfüllpacks · Pro 10 $/Mo. · Team während der Beta kostenlos",
+   "en": "Installing and running apps free · building with your own Claude subscription unlimited during beta, otherwise a one-time welcome pack of credits plus top-ups · Pro $10/mo · Team free during beta"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Berd": {
   "name": "Berd",

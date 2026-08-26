@@ -196,6 +196,40 @@ BILANZ 2026-08-27 Hetzner gemini=richtig zai=daneben
 Nobody needs those today. In two months they answer a question no comparison
 table can: which model actually reads a pricing page carefully.
 
+## Two dates, and neither is called "last updated"
+
+A fact sheet carries two freshness dates, and they mean different things. Merged
+into one they would mean neither.
+
+`plansChecked` is set by hand and says when someone read the vendor's pricing
+page. The section above covers it.
+
+The other one nobody sets. `build/stand.py` derives it from the git history:
+walk the commits that touched `content/steckbrief.json`, compare each entry's
+*parsed* value against the previous commit, and the newest commit where it
+differs is that entry's date. Because the comparison runs on the value and not
+on the text, reformatting the file moves no date, and a change to one fact
+sheet moves only its own. `build.py` hangs the result on each entry as `stand`
+and the drawer prints both:
+
+    Eintrag geändert 21.08.2026 · Preis geprüft 14.08.2026
+
+Do not add a `stand` field to the JSON. The point of deriving it is that no
+one has to remember it, no one can forget it, and no agent can set it to
+something flattering.
+
+It needs the full history. The deploy checkout therefore carries
+`fetch-depth: 0`; on a shallow clone `stand.py` returns nothing at all rather
+than dating every untouched entry to the graft commit, and the page then shows
+no date instead of a wrong one.
+
+The same list is a queue. The price rotation is ordered by `plansChecked`;
+what has gone longest without any attention is ordered by this:
+
+```bash
+python3 build/stand.py
+```
+
 ## The coding-agent benchmark rots the same way
 
 Harness sheets can carry an `aaAgent` block: the Artificial Analysis coding

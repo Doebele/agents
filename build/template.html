@@ -663,6 +663,13 @@ section{ position:relative; }
 .st-tip{ margin-top:18px; padding:13px 15px; border:1px solid var(--line); border-radius:10px; background:var(--surf); }
 .st-tip .l{ display:block; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ember); margin-bottom:4px; }
 .st-tip .t{ color:var(--ink-dim); font-size:14px; }
+/* Zwei Daten am Fuss der Schublade, gedaempft: was wann zuletzt anders war
+   und wann jemand die Preisseite gelesen hat. Zwei Angaben, weil eine von
+   beiden nichts Genaues sagen wuerde. */
+.st-stand{ margin-top:20px; padding-top:12px; border-top:1px solid var(--line);
+  font-family:var(--mono); font-size:10px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--muted); }
+.st-stand b{ color:var(--ink-dim); font-weight:600; }
 button.chip{ font-family:var(--body); text-align:left; }
 .chip i{ font-style:normal; color:var(--muted); font-size:11px; }
 .chip[data-key]{ cursor:none; } .chip[data-key]:hover{ border-color:var(--mc); color:var(--ink); transform:translateY(-1px); }
@@ -1392,6 +1399,7 @@ function renderDetail(key){
 {{T:t081}}
   h+=`</div>`; }
 {{T:t082}}
+{{T:t107}}
   body.innerHTML=h;
   /* Der Steckbrief-Text ist frisch im DOM — Glossarbegriffe darin verknuepfen. */
   if(_gtReady) linkGlossary();

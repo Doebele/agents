@@ -30,7 +30,14 @@ jobs:
     env:
       FTP_SERVER: ${{ secrets.STRATO_FTP_SERVER }}
     steps:
+      # Volle Historie, nicht der flache Standard-Klon: build/stand.py leitet
+      # aus ihr ab, wann jeder Steckbrief zuletzt inhaltlich anders aussah.
+      # Ein flacher Klon kennt die frueheren Commits nicht und wuerde jedem
+      # Eintrag ein zu junges Datum geben — deshalb laesst stand.py es dann
+      # ganz weg, und ohne diese Zeile stuende auf der Seite kein Datum.
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Build both language files
         run: python3 build/build.py

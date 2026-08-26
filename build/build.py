@@ -58,6 +58,15 @@ def _arbeitsarten():
 BLOECKE.append("ARBEITSARTEN")
 daten["ARBEITSARTEN"] = _arbeitsarten()
 
+# Wann ein Steckbrief zuletzt inhaltlich anders aussah, steht nicht im JSON,
+# sondern in der Historie — build/stand.py leitet es ab. Ohne Historie fehlt
+# das Feld, und die Seite zeigt kein Datum, statt eins zu erfinden.
+import stand as _stand  # noqa: E402
+
+for _name, _tag in _stand.stand().items():
+    if _name in daten["STECKBRIEF"]:
+        daten["STECKBRIEF"][_name]["stand"] = _tag
+
 
 def fuer(o, lang):
     """Zweisprachige Struktur auf eine Sprache eindampfen."""

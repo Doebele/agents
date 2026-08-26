@@ -65,6 +65,7 @@ jobs:
           test "$code" = "200" || { echo "The key reaches the API but may not spend; see the body above."; exit 1; }
 
       - name: Research and propose
+        id: claude
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -135,3 +136,10 @@ jobs:
             review.
 
             Title the PR in plain language: what changed, not "chore: update".
+
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: claude
+          execution: ${{ steps.claude.outputs.execution_file }}

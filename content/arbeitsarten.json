@@ -57,6 +57,7 @@
      "Cursor",
      "Osaurus",
      "Berd",
+     "Conductor",
      "Goose",
      "Agent SDK",
      "DeepSeek Harness",
@@ -1899,6 +1900,15 @@
     "text": {
      "de": "{h} läuft im Terminal und als Desktop-App. Für den ersten Auftrag genügt das Terminal: <code>setup.md</code> in den Arbeitsordner legen und {h} dort starten — der Ordner wird von selbst gesehen.",
      "en": "{h} runs in the terminal and as a desktop app. For the first task the terminal is enough: put <code>setup.md</code> in your working folder and start {h} there — the folder is seen by itself."
+    }
+   },
+   {
+    "keys": [
+     "Conductor"
+    ],
+    "text": {
+     "de": "Erstelle in {h} ein Projekt für deine Codebasis und starte einen Coding-Agenten wie Claude Code in einem cloudbasierten Sandbox-Workspace. Du kannst auch Teammitglieder einladen, um die Datei <code>setup.md</code> parallel und in Echtzeit zu bearbeiten.",
+     "en": "Create a project for your codebase in {h} and run a coding agent like Claude Code in a cloud-based sandbox workspace. You can also invite team members to edit the <code>setup.md</code> file in parallel and in real time."
     }
    }
   ],

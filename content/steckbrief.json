@@ -4380,5 +4380,38 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   }
+ },
+ "Conductor": {
+  "name": "Conductor",
+  "vendor": "Melty Labs",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Eine kollaborative Entwicklungsumgebung für das gemeinsame Steuern von Coding-Agenten im Team. Conductor führt Agenten wie Claude Code, Codex oder Cursor parallel in isolierten Cloud-Schnittstellen (Firecracker-MicroVMs mit 8 Kernen und 16 GB RAM) aus. Du kannst Workspace-Links teilen, um in Echtzeit mit Kollegen an Aufgaben zu arbeiten und Agenten beim Schreiben von Code zuzusehen. Ein besonderes Highlight ist das nahtlose Zusammenspiel mit Paper.design: Über MCP-Verbindungen können Agenten Entwürfe direkt aus Paper in lauffähigen Code im Cloud-Workspace übersetzen und Oberflächen-Varianten parallel erproben.",
+   "en": "A collaborative development environment for running and managing coding agents together as a team. Conductor runs agents like Claude Code, Codex, or Cursor in parallel within isolated cloud sandboxes (Firecracker microVMs with 8 cores and 16GB RAM). You can share workspace links to collaborate with teammates in real-time, prompting and watching agents write code together. A standout feature is its seamless integration with Paper.design: using MCP connections, agents can turn designs directly from Paper into working code in the cloud sandbox and test UI variants in parallel."
+  },
+  "tip": {
+   "de": "Die macOS-App und der Zugriff auf die Cloud-Workspaces sind derzeit kostenlos, du bringst jedoch deine eigenen API-Schlüssel oder Agenten-Abos mit (BYOK). Für die Zukunft sind nutzungsabhängige Cloud-Compute-Preise angekündigt. Perfekt für Teams, die parallel an einer Codebasis arbeiten und das Zusammenspiel mit Paper.design nutzen wollen. Eine iOS-App und eine öffentliche API sind als kommende Features gelistet.",
+   "en": "The macOS app and access to cloud workspaces are currently free, but you bring your own API keys or agent subscriptions (BYOK). Usage-based cloud compute pricing is planned for the future. Perfect for teams working on a codebase in parallel who want to utilize the integration with Paper.design. An iOS app and a public API are listed as upcoming features."
+  },
+  "links": {
+   "home": "https://www.conductor.build/",
+   "docs": "https://conductor.build/docs",
+   "code": null
+  },
+  "plans": {
+   "de": "Kostenlos · eigene Abos oder API-Schlüssel (BYOK)",
+   "en": "Free · own subscriptions or API keys (BYOK)"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-26"
  }
 }

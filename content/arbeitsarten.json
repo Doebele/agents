@@ -55,6 +55,7 @@
      "Grok Build",
      "Zed",
      "Cursor",
+     "Conductor",
      "Osaurus",
      "Berd",
      "Goose",
@@ -1848,6 +1849,7 @@
    {
     "keys": [
      "ZCode",
+     "Conductor",
      "Odysseus",
      "Bionic",
      "Hermes Agent",

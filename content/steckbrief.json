@@ -906,6 +906,38 @@
   ],
   "plansChecked": "2026-08-21"
  },
+ "Conductor": {
+  "name": "Conductor",
+  "vendor": "Melty Labs",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": false,
+  "blurb": {
+   "de": "Ein Orchestrator, mit dem du mehrere KI-Entwickler-Agenten (wie Claude Code oder OpenAI Codex) gleichzeitig und getrennt voneinander arbeiten lässt. Conductor richtet für jede Aufgabe automatisch ein eigenes, isoliertes Git-Verzeichnis (Worktree) ein. So kommen sich die Agenten nicht in die Quere, wenn sie parallel an verschiedenen Features oder Fehlern arbeiten. Die fertigen Änderungen prüfst du per Knopfdruck in einem Code-Review-Modus, bevor du sie freigibst.",
+   "en": "An orchestrator that lets you run multiple AI coding agents (such as Claude Code or OpenAI Codex) in parallel and in isolation. Conductor automatically sets up a dedicated, isolated Git worktree for every single task. This prevents agents from stepping on each other's toes while working on different features or bugs simultaneously. You can review the finished changes with a single shortcut before merging them."
+  },
+  "tip": {
+   "de": "Perfekt für das Zusammenspiel mit Paper: Über das Paper-MCP-Server-Plugin entwirft ein Agent auf der Canvas, während Conductor im Hintergrund den echten Code in Cloud-Umgebungen (MicroVMs) baut. Der Haken: Conductor selbst ist proprietär und setzt voraus, dass du deine eigenen API-Schlüssel oder Abonnements (wie GitHub Copilot oder Claude Pro) mitbringst, um die eigentlichen Modelle zu bezahlen. Die Desktop-App läuft derzeit nur unter macOS.",
+   "en": "Perfect for combining with Paper: through the Paper MCP plugin, an agent designs on the canvas while Conductor builds the production code in background cloud sandboxes (microVMs). The catch: Conductor itself is closed-source and requires you to bring your own API keys or subscriptions (like GitHub Copilot or Claude Pro) to pay for the underlying model usage. The desktop app is currently macOS-only."
+  },
+  "links": {
+   "home": "https://www.conductor.build/",
+   "docs": null,
+   "code": null
+  },
+  "free": true,
+  "plans": {
+   "de": "Starter kostenlos (1 aktives Projekt) · Pro-Plan für Cloud-Workspaces, API und mobile App (In-App-Abo/Anfrage) · Team/Enterprise auf Anfrage · Bring your own Keys (BYOK)",
+   "en": "Starter free (1 active project) · Pro plan for cloud workspaces, API and mobile app (in-app subscription/on request) · Team/Enterprise on request · Bring your own keys (BYOK)"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-26"
+ },
  "Qwen 3.6 / 3.8": {
   "name": "Qwen3",
   "vendor": "Alibaba Cloud",

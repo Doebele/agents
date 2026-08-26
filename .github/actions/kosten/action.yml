@@ -1,0 +1,68 @@
+# Was ein Agentenlauf verbraucht hat.
+#
+# Steht als eigene Action da, weil sechs Workflows dieselben drei Zeilen
+# brauchen und drei Harnesses ihre Zahlen an drei verschiedenen Stellen
+# ablegen. Wo es keine Zahlen gibt — die Kimi-CLI gibt ihre Token nicht
+# heraus — wird die Zeile trotzdem geschrieben, nur mit leeren Spalten.
+# Eine leere Spalte ist eine Aussage; eine geratene waere eine Behauptung.
+#
+# Die Zeile wandert als Artefakt aus dem Lauf heraus, nicht in einen Zweig:
+# zwei Jobs, die gleichzeitig fertig werden, wuerden einander sonst
+# ueberschreiben. kosten.yml sammelt sie woechentlich ein.
+name: Kosten erfassen
+description: Token, Kosten und Laufzeit eines Agentenlaufs als Artefakt ablegen
+
+inputs:
+  agent:
+    description: "claude · gemini · kimi · zai"
+    required: true
+  execution:
+    description: "execution_file von claude-code-action"
+    required: false
+    default: ""
+  telemetrie:
+    description: "Telemetriedatei der Gemini-CLI"
+    required: false
+    default: ""
+  modell:
+    description: "Modellname, falls er nicht im Protokoll steht"
+    required: false
+    default: ""
+  start:
+    description: "Unix-Zeit vom Beginn des Laufs, für die Dauer"
+    required: false
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Zahlen einsammeln
+      shell: bash
+      env:
+        AGENT: ${{ inputs.agent }}
+        EXECUTION: ${{ inputs.execution }}
+        TELEMETRIE: ${{ inputs.telemetrie }}
+        MODELL: ${{ inputs.modell }}
+        START: ${{ inputs.start }}
+      run: |
+        set -uo pipefail
+        DAUER=""
+        if [ -n "$START" ]; then DAUER=$(( $(date +%s) - START )); fi
+
+        python3 "$GITHUB_WORKSPACE/build/kosten.py" lauf \
+          --agent "$AGENT" \
+          ${EXECUTION:+--execution "$EXECUTION"} \
+          ${TELEMETRIE:+--telemetrie "$TELEMETRIE"} \
+          ${MODELL:+--modell "$MODELL"} \
+          ${DAUER:+--dauer "$DAUER"} \
+          --out "kosten-$AGENT.csv" | tee /tmp/kosten-"$AGENT".txt
+
+        { echo "### Aufwand · $AGENT"; echo; echo '```';
+          cat /tmp/kosten-"$AGENT".txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+    - name: Zeile aus dem Lauf heraustragen
+      uses: actions/upload-artifact@v4
+      with:
+        name: kosten-${{ github.run_id }}-${{ inputs.agent }}
+        path: kosten-${{ inputs.agent }}.csv
+        if-no-files-found: warn

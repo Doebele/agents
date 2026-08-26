@@ -907,6 +907,14 @@
        "en": "Dictation · open"
       },
       "k": "FreeFlow"
+     },
+     {
+      "n": "Anarlog",
+      "v": {
+       "de": "Meetings · offen",
+       "en": "Meetings · open"
+      },
+      "k": "Anarlog"
      }
     ]
    }

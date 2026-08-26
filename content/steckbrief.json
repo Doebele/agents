@@ -525,8 +525,8 @@
    "en": "xAI's coding agent for the terminal: it reads your project, edits files and runs commands. On bigger jobs it puts a plan in front of you first — you can comment on single steps, rewrite it, or throw it out — and only then does it touch anything. The agent itself has been open source since July 2026 (Apache 2.0); the model behind it has not."
   },
   "tip": {
-   "de": "Der Zugang hängt an einem SuperGrok- oder X-Premium+-Abo; ohne das führt der Weg nur über einen API-Schlüssel und nutzungsabhängige Abrechnung. Wer schon mit Claude Code oder Codex arbeitet, kann AGENTS.md, MCP-Server, Hooks und Skills mitnehmen — die versteht er.",
-   "en": "Access hangs on a SuperGrok or X Premium+ subscription; without one the only route in is an API key and usage-based billing. If you already work with Claude Code or Codex you can bring your AGENTS.md, MCP servers, hooks and skills along — it reads them."
+   "de": "Mit einem Konto kostenlos nutzbar; daneben der Weg über einen API-Schlüssel und nutzungsabhängige Abrechnung. Wer schon mit Claude Code oder Codex arbeitet, kann AGENTS.md, MCP-Server, Hooks und Skills mitnehmen — die versteht er.",
+   "en": "Free to use with an account; alongside that, the route through an API key and usage-based billing. If you already work with Claude Code or Codex you can bring your AGENTS.md, MCP servers, hooks and skills along — it reads them."
   },
   "links": {
    "home": "https://x.ai/news/grok-build-cli",
@@ -534,7 +534,7 @@
    "code": "https://github.com/xai-org/grok-build"
   },
   "icon": "x",
-  "free": false,
+  "free": true,
   "aaAgent": {
    "url": "https://artificialanalysis.ai/agents/coding-agents",
    "checked": "2026-08-26",
@@ -548,9 +548,14 @@
    ]
   },
   "plans": {
-   "de": "SuperGrok- oder X-Premium+-Abo · API (Grok 4.6) 2 $/6 $ pro 1M Token",
-   "en": "SuperGrok or X Premium+ subscription · API (Grok 4.6) $2/$6 per 1M tokens"
-  }
+   "de": "Mit Konto kostenlos nutzbar · alternativ API (grok-build-0.1) 1 $/2 $ pro 1M Token",
+   "en": "Free to use with an account · alternatively API (grok-build-0.1) $1/$2 per 1M tokens"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Zed": {
   "name": "Zed",
@@ -651,7 +656,12 @@
   "plans": {
    "de": "Open Source (MIT), kostenlos · optionale kostenpflichtige Stufen mit Credits",
    "en": "Open source (MIT), free · optional paid tiers with credits"
-  }
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Odysseus": {
   "name": "Odysseus",
@@ -1872,7 +1882,41 @@
   "plans": {
    "de": "Kostenlos, Open Source (MIT) · Modellkosten nach eigenem Anbieter",
    "en": "Free, open source (MIT) · model costs per your own provider"
-  }
+  },
+  "plansChecked": "2026-08-25"
+ },
+ "Anarlog": {
+  "name": "Anarlog",
+  "vendor": "fastrepl",
+  "cat": {
+   "de": "Meeting-Notizbuch · Baustein 06",
+   "en": "Meeting notepad · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Notizbuch für Meetings, kein Diktier-Werkzeug: Anarlog nimmt den Ton direkt auf dem eigenen Rechner auf — kein Bot sitzt in der Teilnehmerliste —, schreibt das Gespräch mit und fasst es zusammen. Auf unterstützten Macs läuft das Transkribieren lokal, sonst bei einem Anbieter deiner Wahl; fürs Zusammenfassen bringst du einen eigenen Schlüssel mit oder stellst ein lokales Modell wie Ollama daneben. Notizen und Mitschrift liegen in einer lokalen Datenbank, der Export geht als Markdown. Die App ist quelloffen (MIT), Windows und Linux sind noch Beta. Der Haken: Das Team baut inzwischen an einem anderen Produkt — Anarlog bleibt gepflegt und offen, ist aber nicht mehr dessen Schwerpunkt. Cloud-Transkription, Synchronisierung und Teilen kosten Pro.",
+   "en": "A notepad for meetings, not a dictation tool: Anarlog records the audio right on your own machine — no bot in the participant list — transcribes the conversation and sums it up. On supported Macs the transcription runs locally, otherwise with a provider of your choice; for the summary you bring your own key or put a local model like Ollama next to it. Notes and transcript sit in a local database, and export goes as Markdown. The app is open source (MIT), Windows and Linux are still beta. The catch: the team is now building another product — Anarlog stays maintained and open, but it is no longer their focus. Cloud transcription, sync and sharing cost Pro."
+  },
+  "tip": {
+   "de": "Die Wahl für vertrauliche Gespräche: Nichts muss das Gerät verlassen, und die Aufnahme gehört gleich dazu — anders als beim Transkriptions-Modell Whisper, das nur fertige Aufnahmen verarbeitet. Zum Diktieren in Textfelder ist Anarlog nicht da, dafür ist Wispr Flow im Katalog.",
+   "en": "The pick for confidential conversations: nothing has to leave the device, and the recording is part of the deal — unlike the Whisper transcription model, which only processes finished recordings. For dictating into text fields Anarlog is not the one; that is Wispr Flow's job in this catalogue."
+  },
+  "links": {
+   "home": "https://anarlog.so/",
+   "docs": "https://docs.anarlog.so",
+   "code": "https://github.com/fastrepl/anarlog"
+  },
+  "plans": {
+   "de": "Lokal und mit eigenem Schlüssel kostenlos, ohne Limit · Pro 15 $/Mo. oder 150 $/Jahr (Cloud-Transkription, Cloud-LLM, Synchronisierung, Teilen) · Enterprise mit SSO und eigenem Server auf Anfrage",
+   "en": "Local and with your own key free, without limit · Pro $15/mo or $150/year (cloud transcription, cloud LLM, sync, sharing) · Enterprise with SSO and own server on request"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-26"
  },
  "GPT-5.6": {
   "name": "GPT-5.6",
@@ -1921,13 +1965,14 @@
    }
   },
   "plans": {
-   "de": "API Terra 2 $/12 $ · Sol 5 $/30 $ · Luna 0,20 $/1,20 $ pro 1M Tok.",
-   "en": "API Terra $2/$12 · Sol $5/$30 · Luna $0.20/$1.20 per 1M tok."
+   "de": "API Terra 2 $/12 $ · Sol 4 $/20 $ · Luna 0,20 $/1,20 $ pro 1M Tok. — Sol zum Aktionspreis, mindestens bis 21.11.2026",
+   "en": "API Terra $2/$12 · Sol $4/$20 · Luna $0.20/$1.20 per 1M tok. — Sol at promotional pricing, at least through 21 Nov 2026"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Claude Opus 5 / Sonnet 5": {
   "name": "Claude Opus 5 / Sonnet 5",
@@ -2040,7 +2085,8 @@
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Grok 4.6": {
   "name": "Grok 4.6",
@@ -2086,13 +2132,14 @@
    }
   },
   "plans": {
-   "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · Agent 0,05 $/Min.",
-   "en": "API $2/$6 per 1M tokens (cache $0.50) · agent $0.05/min"
+   "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $)",
+   "en": "API $2/$6 per 1M tokens (cache $0.50)"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Qwen3.8-Max": {
   "name": "Qwen3.8-Max",
@@ -2308,13 +2355,13 @@
    }
   },
   "plans": {
-   "de": "API 1,40 $/4,40 $ pro 1M Token · zeitlich begrenzt kostenlos",
-   "en": "API $1.40/$4.40 per 1M tokens · limited-time free tier"
+   "de": "API 1,40 $/4,40 $ pro 1M Token · Cache-Speicher zeitlich begrenzt kostenlos",
+   "en": "API $1.40/$4.40 per 1M tokens · cached-input storage free for a limited time"
   },
   "billing": [
-   "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Anthropic Agent Skills": {
   "name": "Anthropic Agent Skills",
@@ -3567,9 +3614,13 @@
    "en": "When response time matters — chats, automation — worth comparing against Together AI. Billed per million tokens."
   },
   "plans": {
-   "de": "Abrechnung je 1M Tokens · Gratisstufe",
-   "en": "Billed per 1M tokens · free tier"
+   "de": "Abrechnung je 1M Tokens (GPT-OSS-120B z. B. 0,15 $/0,60 $) · 1 $ Startguthaben bei Registrierung, keine laufende Gratisstufe",
+   "en": "Billed per 1M tokens (GPT-OSS-120B e.g. $0.15/$0.60) · $1 signup credit at registration, no ongoing free tier"
   },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-25",
   "links": {
    "home": "https://fireworks.ai"
   }
@@ -3596,6 +3647,10 @@
    "de": "Abrechnung je 1M Tokens · Gratisstufe",
    "en": "Billed per 1M tokens · free tier"
   },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-25",
   "links": {
    "home": "https://groq.com"
   }
@@ -4084,9 +4139,13 @@
    "home": "https://www.glaze.app"
   },
   "plans": {
-   "de": "Preise nicht veröffentlicht · Pläne Pro und Team; Ausführen geteilter Apps mit Gratis-Konto",
-   "en": "Pricing not published · Pro and Team plans; running shared apps with a free account"
-  }
+   "de": "Installieren und Ausführen von Apps kostenlos · Bauen mit eigenem Claude-Abo während der Beta unbegrenzt, sonst einmaliges Willkommensguthaben und Nachfüllpacks · Pro 10 $/Mo. · Team während der Beta kostenlos",
+   "en": "Installing and running apps free · building with your own Claude subscription unlimited during beta, otherwise a one-time welcome pack of credits plus top-ups · Pro $10/mo · Team free during beta"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-25"
  },
  "Berd": {
   "name": "Berd",

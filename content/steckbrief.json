@@ -1807,6 +1807,39 @@
   },
   "plansChecked": "2026-08-25"
  },
+ "Anarlog": {
+  "name": "Anarlog",
+  "vendor": "fastrepl",
+  "cat": {
+   "de": "Meeting-Notizbuch · Baustein 06",
+   "en": "Meeting notepad · Block 06"
+  },
+  "accent": "var(--sky)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Notizbuch für Meetings, kein Diktier-Werkzeug: Anarlog nimmt den Ton direkt auf dem eigenen Rechner auf — kein Bot sitzt in der Teilnehmerliste —, schreibt das Gespräch mit und fasst es zusammen. Auf unterstützten Macs läuft das Transkribieren lokal, sonst bei einem Anbieter deiner Wahl; fürs Zusammenfassen bringst du einen eigenen Schlüssel mit oder stellst ein lokales Modell wie Ollama daneben. Notizen und Mitschrift liegen in einer lokalen Datenbank, der Export geht als Markdown. Die App ist quelloffen (MIT), Windows und Linux sind noch Beta. Der Haken: Das Team baut inzwischen an einem anderen Produkt — Anarlog bleibt gepflegt und offen, ist aber nicht mehr dessen Schwerpunkt. Cloud-Transkription, Synchronisierung und Teilen kosten Pro.",
+   "en": "A notepad for meetings, not a dictation tool: Anarlog records the audio right on your own machine — no bot in the participant list — transcribes the conversation and sums it up. On supported Macs the transcription runs locally, otherwise with a provider of your choice; for the summary you bring your own key or put a local model like Ollama next to it. Notes and transcript sit in a local database, and export goes as Markdown. The app is open source (MIT), Windows and Linux are still beta. The catch: the team is now building another product — Anarlog stays maintained and open, but it is no longer their focus. Cloud transcription, sync and sharing cost Pro."
+  },
+  "tip": {
+   "de": "Die Wahl für vertrauliche Gespräche: Nichts muss das Gerät verlassen, und die Aufnahme gehört gleich dazu — anders als beim Transkriptions-Modell Whisper, das nur fertige Aufnahmen verarbeitet. Zum Diktieren in Textfelder ist Anarlog nicht da, dafür ist Wispr Flow im Katalog.",
+   "en": "The pick for confidential conversations: nothing has to leave the device, and the recording is part of the deal — unlike the Whisper transcription model, which only processes finished recordings. For dictating into text fields Anarlog is not the one; that is Wispr Flow's job in this catalogue."
+  },
+  "links": {
+   "home": "https://anarlog.so/",
+   "docs": "https://docs.anarlog.so",
+   "code": "https://github.com/fastrepl/anarlog"
+  },
+  "plans": {
+   "de": "Lokal und mit eigenem Schlüssel kostenlos, ohne Limit · Pro 15 $/Mo. oder 150 $/Jahr (Cloud-Transkription, Cloud-LLM, Synchronisierung, Teilen) · Enterprise mit SSO und eigenem Server auf Anfrage",
+   "en": "Local and with your own key free, without limit · Pro $15/mo or $150/year (cloud transcription, cloud LLM, sync, sharing) · Enterprise with SSO and own server on request"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-26"
+ },
  "GPT-5.6": {
   "name": "GPT-5.6",
   "vendor": "OpenAI",

@@ -185,7 +185,8 @@
       "Voxtral",
       "Wispr Flow",
       "OpenWhispr",
-      "FreeFlow"
+      "FreeFlow",
+      "Anarlog"
      ],
      "empfehlung": [
       "Whisper"
@@ -1440,15 +1441,17 @@
       "Wispr Flow",
       "OpenWhispr",
       "FreeFlow",
+      "Anarlog",
       "Whisper",
       "Voxtral"
      ],
      "empfehlung": [
-      "Whisper"
+      "Whisper",
+      "Anarlog"
      ],
      "notiz": {
-      "de": "Zwei Sorten: Diktier-Werkzeuge (Wispr Flow, OpenWhispr, FreeFlow) fürs Reden in Echtzeit; Transkriptions-Modelle (Whisper, Voxtral) für fertige Aufnahmen — bei einer vollen Meetings-Länge die ruhigere Wahl.",
-      "en": "Two kinds: dictation tools (Wispr Flow, OpenWhispr, FreeFlow) for speaking in real time; transcription models (Whisper, Voxtral) for finished recordings — the calmer choice for a full meeting's length."
+      "de": "Drei Sorten: Diktier-Werkzeuge (Wispr Flow, OpenWhispr, FreeFlow) fürs Reden in Echtzeit; Transkriptions-Modelle (Whisper, Voxtral) für fertige Aufnahmen; und Anarlog, das das Meeting selbst mitschneidet — ohne Bot in der Teilnehmerliste, mit Mitschrift und Zusammenfassung, auf Wunsch alles auf dem eigenen Gerät.",
+      "en": "Three kinds: dictation tools (Wispr Flow, OpenWhispr, FreeFlow) for speaking in real time; transcription models (Whisper, Voxtral) for finished recordings; and Anarlog, which records the meeting itself — no bot in the participant list, transcript and summary included, all on your own device if you choose."
      }
     },
     "07_umgebung": {

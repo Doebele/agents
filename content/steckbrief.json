@@ -285,6 +285,30 @@
   },
   "icon": "anthropic",
   "free": false,
+  "aaAgent": {
+   "url": "https://artificialanalysis.ai/agents/coding-agents",
+   "checked": "2026-08-26",
+   "rows": [
+    {
+     "model": "Opus 5 (xhigh)",
+     "index": { "v": "0.68", "rank": "#1/9" },
+     "time": { "v": "23.7 min", "rank": "#7/9" },
+     "cost": { "v": "$8.17", "rank": "#8/9" }
+    },
+    {
+     "model": "Fable 5 (max, mit Fallback)",
+     "index": { "v": "0.67", "rank": "#2/9" },
+     "time": { "v": "23.5 min", "rank": "#6/9" },
+     "cost": { "v": "$11.69", "rank": "#9/9" }
+    },
+    {
+     "model": "GLM-5.2 (Novita)",
+     "index": { "v": "0.43", "rank": "#8/9" },
+     "time": { "v": "25.1 min", "rank": "#9/9" },
+     "cost": { "v": "$6.66", "rank": "#7/9" }
+    }
+   ]
+  },
   "plans": {
    "de": "Pro 20 $/Mo. (17 $ bei Jahreszahlung) · Max 5× 100 $ · Max 20× 200 $ (5-/20-faches Pro-Kontingent je 5-h-Fenster) · Team ab 25 $/Platz/Mo. · API nutzungsabhängig",
    "en": "Pro $20/mo ($17 paid annually) · Max 5x $100 · Max 20x $200 (5x/20x the Pro quota per 5-hour window) · Team from $25/seat/mo · usage-based API"
@@ -351,6 +375,24 @@
    "code": "https://github.com/openai/codex"
   },
   "free": true,
+  "aaAgent": {
+   "url": "https://artificialanalysis.ai/agents/coding-agents",
+   "checked": "2026-08-26",
+   "rows": [
+    {
+     "model": "GPT-5.6 Sol (max)",
+     "index": { "v": "0.65", "rank": "#3/9" },
+     "time": { "v": "10.2 min", "rank": "#3/9" },
+     "cost": { "v": "$6.42", "rank": "#6/9" }
+    },
+    {
+     "model": "DeepSeek V4 Flash 0731 (max)",
+     "index": { "v": "0.50", "rank": "#7/9" },
+     "time": { "v": "14.5 min", "rank": "#4/9" },
+     "cost": { "v": "$0.06", "rank": "#1/9" }
+    }
+   ]
+  },
   "plans": {
    "de": "In ChatGPT-Plänen (Free–Pro 200 $) · Pro bis zu 5×/20× Plus-Kontingent · API nutzungsabhängig",
    "en": "Included in ChatGPT plans (free–Pro $200) · Pro gets up to 5×/20× the Plus quota · usage-based API"
@@ -416,6 +458,18 @@
   },
   "icon": "kimi",
   "free": true,
+  "aaAgent": {
+   "url": "https://artificialanalysis.ai/agents/coding-agents",
+   "checked": "2026-08-26",
+   "rows": [
+    {
+     "model": "Kimi K3",
+     "index": { "v": "0.63", "rank": "#5/9" },
+     "time": { "v": "24.1 min", "rank": "#8/9" },
+     "cost": { "v": "$3.08", "rank": "#5/9" }
+    }
+   ]
+  },
   "plans": {
    "de": "Abo Free–199 $/Mo. (Stufen u. a. Moderato, Allegretto) · K3-1M verzehrt rund 2× so viel Kontingent wie K3-256k · 300–1.200 Requests je 5 h · API 0,60 $/2,50 $ pro 1M Token",
    "en": "Subscription free–$199/mo (tiers incl. Moderato, Allegretto) · K3-1M burns about 2× the quota of K3-256k · 300–1,200 requests per 5 h · API $0.60/$2.50 per 1M tokens"
@@ -481,6 +535,18 @@
   },
   "icon": "x",
   "free": true,
+  "aaAgent": {
+   "url": "https://artificialanalysis.ai/agents/coding-agents",
+   "checked": "2026-08-26",
+   "rows": [
+    {
+     "model": "Grok 4.5 (high)",
+     "index": { "v": "0.64", "rank": "#4/9" },
+     "time": { "v": "15.5 min", "rank": "#5/9" },
+     "cost": { "v": "$2.44", "rank": "#4/9" }
+    }
+   ]
+  },
   "plans": {
    "de": "Mit Konto kostenlos nutzbar · alternativ API (grok-build-0.1) 1 $/2 $ pro 1M Token",
    "en": "Free to use with an account · alternatively API (grok-build-0.1) $1/$2 per 1M tokens"
@@ -543,6 +609,18 @@
   },
   "icon": "cursor",
   "free": true,
+  "aaAgent": {
+   "url": "https://artificialanalysis.ai/agents/coding-agents",
+   "checked": "2026-08-26",
+   "rows": [
+    {
+     "model": "Composer 2.5 Fast (CLI)",
+     "index": { "v": "0.38", "rank": "#9/9" },
+     "time": { "v": "7.9 min", "rank": "#1/9" },
+     "cost": { "v": "$0.56", "rank": "#2/9" }
+    }
+   ]
+  },
   "plans": {
    "de": "Hobby kostenlos · Pro 20 $/Mo. · Teams 40 $/Nutzer/Mo.",
    "en": "Hobby free · Pro $20/mo · Teams $40/user/mo"

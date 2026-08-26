@@ -14,6 +14,7 @@ import datetime
 import ipaddress
 import json
 import pathlib
+import re
 import socket
 import sys
 import urllib.request
@@ -26,8 +27,20 @@ TIMEOUT = 10
 WORKERS = 12
 
 
+# Adressen, die in einem laengeren Text stecken statt allein in einem Feld:
+# ui.json traegt fertige HTML-Schnipsel, und ein href darin ist genauso ein
+# Link, der tot gehen kann. Endsatzzeichen und schliessende Anfuehrungszeichen
+# gehoeren nicht mehr dazu.
+URL_IM_TEXT = re.compile(r"""https?://[^\s"'<>)\]]+""")
+
+
 def urls_from_content():
-    """Jede Zeichenkette, die als ganze ein http(s)-URL ist, mit Herkunft."""
+    """Jede http(s)-Adresse in content/*.json, mit Herkunft.
+
+    Frueher nur Zeichenketten, die als ganze eine Adresse sind. Damit blieb
+    alles ungeprueft, was in einem HTML-Schnipsel steckt — in ui.json also
+    jeder Verweis der Seite selbst.
+    """
     found = {}
     for path in sorted(CONTENT.glob("*.json")):
         def walk(o, trail):
@@ -37,8 +50,16 @@ def urls_from_content():
             elif isinstance(o, list):
                 for i, v in enumerate(o):
                     walk(v, f"{trail}[{i}]")
-            elif isinstance(o, str) and o.startswith(("http://", "https://")):
-                found.setdefault(o, f"{path.name} {trail}")
+            elif isinstance(o, str):
+                if o.startswith(("http://", "https://")):
+                    found.setdefault(o, f"{path.name} {trail}")
+                else:
+                    for treffer in URL_IM_TEXT.findall(o):
+                        # In ui.json steht auch Javascript. Eine Adresse mit
+                        # ${...} darin ist eine Vorlage, keine Adresse.
+                        if "${" in treffer:
+                            continue
+                        found.setdefault(treffer.rstrip(".,;:"), f"{path.name} {trail}")
         walk(json.loads(path.read_text(encoding="utf-8")), "")
     return found
 

@@ -1609,6 +1609,210 @@
      }
     ]
    }
+  },
+  {
+   "id": "wissen-organisieren",
+   "name": {
+    "de": "Wissen organisieren",
+    "en": "Organize knowledge"
+   },
+   "these": {
+    "de": "Ein Modell vergisst zwischen den Gesprächen. Ein zweites Gehirn auch — aber eines, das dir gehört: Dateien im eigenen Ordner, Agenten mit Schlüssel dazu, Entscheidungen aufgeschrieben statt neu erklärt.",
+    "en": "A model forgets between conversations. A second brain forgets too — but one that belongs to you: files in your own folder, agents with keys to them, decisions written down instead of re-explained."
+   },
+   "beispiele": [
+    {
+     "de": "Ein zweites Gehirn aufsetzen",
+     "en": "Set up a second brain"
+    },
+    {
+     "de": "Ein Projekt-Gedächtnis anlegen",
+     "en": "Create a project memory"
+    },
+    {
+     "de": "Den Vault agenten-lesbar machen",
+     "en": "Make the vault agent-readable"
+    }
+   ],
+   "synonyme": [
+    "second brain",
+    "zweites gehirn",
+    "notizen",
+    "notizsystem",
+    "vault",
+    "obsidian",
+    "zettelkasten",
+    "para",
+    "gedächtnis",
+    "wissensspeicher",
+    "knowledge base",
+    "pkms",
+    "denkstatt",
+    "auslage"
+   ],
+   "stationen": {
+    "07_umgebung": {
+     "frage": {
+      "de": "Wo leben die Notizen?",
+      "en": "Where do the notes live?"
+     },
+     "kandidaten": [
+      "Obsidian",
+      "Notion",
+      "Gemini Notebook"
+     ],
+     "empfehlung": [
+      "Obsidian"
+     ],
+     "notiz": {
+      "de": "Obsidian und Notion sind die zwei Pole: Markdown-Dateien im eigenen Ordner gegen Workspace in der Cloud. Das Notebook ist kein Vault, aber ein starker Recherche-Begleiter daneben.",
+      "en": "Obsidian and Notion are the two poles: markdown files in your own folder versus a workspace in the cloud. The notebook is not a vault, but a strong research companion beside one."
+     }
+    },
+    "05_tools": {
+     "frage": {
+      "de": "Was darf der Agent mit den Notizen?",
+      "en": "What may the agent do with the notes?"
+     },
+     "kandidaten": [
+      "tool-dateien",
+      "tool-suche"
+     ],
+     "empfehlung": [
+      "tool-dateien",
+      "tool-suche"
+     ],
+     "notiz": {
+      "de": "Für einen Vault sind es zwei Rechte: lesen und schreiben (Dateisystem) und wiederfinden (Suche). Mehr braucht das Gehirn nicht — der Rest ist Methode.",
+      "en": "A vault needs two rights: read and write (file system) and find again (search). The brain needs no more — the rest is method."
+     }
+    },
+    "06_medien": {
+     "im_wizard": false,
+     "kandidaten": []
+    },
+    "03_skills": {
+     "frage": {
+      "de": "Welche Skills helfen beim Aufbau?",
+      "en": "Which skills help set it up?"
+     },
+     "kandidaten": [
+      "skills.sh",
+      "skill-creator",
+      "eigene-skills",
+      "research"
+     ],
+     "empfehlung": [
+      "eigene-skills"
+     ],
+     "notiz": {
+      "de": "research liest Quellen in den Vault ein; eigene-skills macht die eigenen Ordnungsregeln (PARA, Zettelkasten) für den Agenten wiederholbar.",
+      "en": "research reads sources into the vault; eigene-skills makes your own ordering rules (PARA, Zettelkasten) repeatable for the agent."
+     }
+    }
+   },
+   "voraussetzungen": [
+    {
+     "de": "Einen Ordner für die Notizen, der zum eigenen Lager gehört",
+     "en": "A folder for the notes that belongs to your own repo"
+    },
+    {
+     "de": "Klarheit, was Notiz ist und was Entscheidung — beides altert verschieden",
+     "en": "Clarity about what is a note and what a decision — the two age differently"
+    }
+   ],
+   "varianten": {
+    "frage": {
+     "de": "Was für ein Gehirn soll es werden?",
+     "en": "What kind of brain should it become?"
+    },
+    "optionen": [
+     {
+      "id": "notizen",
+      "name": {
+       "de": "Ein Notiz-Vault",
+       "en": "A note vault"
+      },
+      "sub": {
+       "de": "Gedanken, Quellen, Verweise — Obsidian und die Methoden PARA, Zettelkasten",
+       "en": "Thoughts, sources, links — Obsidian and the PARA, Zettelkasten methods"
+      },
+      "stationen": {
+       "03_skills": {
+        "kandidaten": [
+         "research",
+         "eigene-skills",
+         "skill-creator"
+        ],
+        "empfehlung": [
+         "research"
+        ],
+        "notiz": {
+         "de": "Der Klassiker aus Anleitung und Video (Julian Ivanov, «Obsidian + Claude Code»): Vault als Ordner, Agent startet darin, Methoden als Skills. research füllt ihn mit zitierter Substanz.",
+         "en": "The classic from guide and video (Julian Ivanov, «Obsidian + Claude Code»): the vault as a folder, the agent starts inside it, methods as skills. research fills it with cited substance."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "de": "Obsidian (oder ein anderer Markdown-Editor) und ein leeres Verzeichnis",
+        "en": "Obsidian (or another markdown editor) and an empty directory"
+       }
+      ]
+     },
+     {
+      "id": "gedaechtnis",
+      "name": {
+       "de": "Ein Projekt-Gedächtnis",
+       "en": "A project memory"
+      },
+      "sub": {
+       "de": "Entscheidungen statt Notizen — BRAIN.md als Konvention, gbrain als Schicht",
+       "en": "Decisions instead of notes — BRAIN.md as convention, gbrain as a layer"
+      },
+      "stationen": {
+       "03_skills": {
+        "kandidaten": [
+         "BRAIN.md",
+         "premortem",
+         "eigene-skills"
+        ],
+        "empfehlung": [
+         "BRAIN.md"
+        ],
+        "notiz": {
+         "de": "BRAIN.md legt die Konvention in den Ordner — der Agent lernt sie per Skill und schreibt Entscheidungen statt Neu-Erklärungen. premortem prüft die wichtigen davon vorher.",
+         "en": "BRAIN.md puts the convention into the folder — the agent learns it via skill and writes decisions instead of re-explanations. premortem stress-tests the important ones beforehand."
+        }
+       },
+       "04_mcp": {
+        "frage": {
+         "de": "Braucht es eine Abfrageschicht?",
+         "en": "Does it need a retrieval layer?"
+        },
+        "kandidaten": [
+         "filesystem-mcp",
+         "OpenViking",
+         "gbrain"
+        ],
+        "empfehlung": [
+         "filesystem-mcp"
+        ],
+        "notiz": {
+         "de": "Bis ein paar tausend Seiten reicht das Dateisystem. Danach entscheiden zwei Richtungen: gbrain als lokales Gehirn mit Traumzyklus, OpenViking als gehosteter Kontext-Dienst.",
+         "en": "Up to a few thousand pages the file system is enough. Beyond that two directions: gbrain as a local brain with a dream cycle, OpenViking as a hosted context service."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "de": "Ein Repo, in dem die Entscheidungen neben dem Code leben",
+        "en": "A repo where decisions live beside the code"
+       }
+      ]
+     }
+    ]
+   }
   }
  ],
  "freitext": {
@@ -1617,7 +1821,7 @@
   "offen": "Synonymlisten sind ein erster Wurf und müssen an echten Eingaben nachgeschärft werden."
  },
  "offene_entscheidung": {
-  "baustein_07": "Umbenennung von 'Design-Tools' zu einer Kategorie, die die Anwendung meint, in der das Ergebnis entsteht. Damit passen Obsidian und NotebookLM bei Recherche dorthin, wo bei Bauen v0 und bei Gestalten Figma steht. Betrifft die ausgelieferte Seite, deshalb nicht einseitig entschieden.",
+  "baustein_07": "Gelöst: die Gruppe heisst «Sammeln und notieren» — Obsidian, Gemini Notebook, Notion, Perplexity und Internxt sitzen dort, die Design-Tools bleiben unter sich.",
   "baustein_05": "Bleibt 'Tools' ein eigener Baustein, wenn seine Einträge zum Teil MCP-Server sind? Oder wird er die Kategorie für alles, was der Agent ausführt, ohne dass ein Produktname dranhängt?"
  },
  "stationen_ausserhalb": {
@@ -1909,6 +2113,17 @@
     "text": {
      "de": "Erstelle in {h} ein Projekt für deine Codebasis und starte einen Coding-Agenten wie Claude Code in einem cloudbasierten Sandbox-Workspace. Du kannst auch Teammitglieder einladen, um die Datei <code>setup.md</code> parallel und in Echtzeit zu bearbeiten.",
      "en": "Create a project for your codebase in {h} and run a coding agent like Claude Code in a cloud-based sandbox workspace. You can also invite team members to edit the <code>setup.md</code> file in parallel and in real time."
+    }
+   },
+   {
+    "keys": [
+     "Obsidian",
+     "Notion",
+     "Gemini Notebook"
+    ],
+    "text": {
+     "de": "Lege den Vault als gewöhnlichen Ordner an und starte {h} darin. Terminal-Agenten sehen die Notizen von selbst; <code>setup.md</code> hineinlegen beschreibt, wie das Gehirn sortiert sein will.",
+     "en": "Create the vault as an ordinary folder and start {h} inside it. Terminal agents see the notes by themselves; drop <code>setup.md</code> in to describe how the brain should be sorted."
     }
    }
   ],

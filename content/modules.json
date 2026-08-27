@@ -456,6 +456,11 @@
       "n": "to-questionnaire",
       "v": "Matt Pocock",
       "k": "to-questionnaire"
+     },
+     {
+      "n": "BRAIN.md",
+      "v": "MindMux",
+      "k": "BRAIN.md"
      }
     ]
    }
@@ -583,6 +588,14 @@
        "en": "context"
       },
       "k": "OpenViking"
+     },
+     {
+      "n": "gbrain",
+      "v": {
+       "de": "Gehirn · lokal",
+       "en": "brain · local"
+      },
+      "k": "gbrain"
      }
     ]
    }
@@ -1070,7 +1083,15 @@
       "n": "Xcode",
       "v": "Apple · iOS",
       "k": "Xcode"
-     },
+     }
+    ]
+   },
+   {
+    "label": {
+     "de": "Sammeln und notieren",
+     "en": "Collect and note"
+    },
+    "items": [
      {
       "n": "Gemini Notebook",
       "v": "Google",
@@ -1099,6 +1120,11 @@
        "en": "storage"
       },
       "k": "Internxt"
+     },
+     {
+      "n": "Notion",
+      "v": "Team-Wissen",
+      "k": "Notion"
      }
     ]
    },

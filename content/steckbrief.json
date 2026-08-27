@@ -258,7 +258,8 @@
   "icon": "obsidian",
   "links": {
    "home": "https://obsidian.md/",
-   "docs": "https://obsidian.md/help/"
+   "docs": "https://obsidian.md/help/",
+   "tut": "https://www.youtube.com/watch?v=NVUCQ-pzBn4"
   }
  },
  "Claude Code": {
@@ -291,21 +292,48 @@
    "rows": [
     {
      "model": "Opus 5 (xhigh)",
-     "index": { "v": "0.68", "rank": "#1/9" },
-     "time": { "v": "23.7 min", "rank": "#7/9" },
-     "cost": { "v": "$8.17", "rank": "#8/9" }
+     "index": {
+      "v": "0.68",
+      "rank": "#1/9"
+     },
+     "time": {
+      "v": "23.7 min",
+      "rank": "#7/9"
+     },
+     "cost": {
+      "v": "$8.17",
+      "rank": "#8/9"
+     }
     },
     {
      "model": "Fable 5 (max, mit Fallback)",
-     "index": { "v": "0.67", "rank": "#2/9" },
-     "time": { "v": "23.5 min", "rank": "#6/9" },
-     "cost": { "v": "$11.69", "rank": "#9/9" }
+     "index": {
+      "v": "0.67",
+      "rank": "#2/9"
+     },
+     "time": {
+      "v": "23.5 min",
+      "rank": "#6/9"
+     },
+     "cost": {
+      "v": "$11.69",
+      "rank": "#9/9"
+     }
     },
     {
      "model": "GLM-5.2 (Novita)",
-     "index": { "v": "0.43", "rank": "#8/9" },
-     "time": { "v": "25.1 min", "rank": "#9/9" },
-     "cost": { "v": "$6.66", "rank": "#7/9" }
+     "index": {
+      "v": "0.43",
+      "rank": "#8/9"
+     },
+     "time": {
+      "v": "25.1 min",
+      "rank": "#9/9"
+     },
+     "cost": {
+      "v": "$6.66",
+      "rank": "#7/9"
+     }
     }
    ]
   },
@@ -381,15 +409,33 @@
    "rows": [
     {
      "model": "GPT-5.6 Sol (max)",
-     "index": { "v": "0.65", "rank": "#3/9" },
-     "time": { "v": "10.2 min", "rank": "#3/9" },
-     "cost": { "v": "$6.42", "rank": "#6/9" }
+     "index": {
+      "v": "0.65",
+      "rank": "#3/9"
+     },
+     "time": {
+      "v": "10.2 min",
+      "rank": "#3/9"
+     },
+     "cost": {
+      "v": "$6.42",
+      "rank": "#6/9"
+     }
     },
     {
      "model": "DeepSeek V4 Flash 0731 (max)",
-     "index": { "v": "0.50", "rank": "#7/9" },
-     "time": { "v": "14.5 min", "rank": "#4/9" },
-     "cost": { "v": "$0.06", "rank": "#1/9" }
+     "index": {
+      "v": "0.50",
+      "rank": "#7/9"
+     },
+     "time": {
+      "v": "14.5 min",
+      "rank": "#4/9"
+     },
+     "cost": {
+      "v": "$0.06",
+      "rank": "#1/9"
+     }
     }
    ]
   },
@@ -464,9 +510,18 @@
    "rows": [
     {
      "model": "Kimi K3",
-     "index": { "v": "0.63", "rank": "#5/9" },
-     "time": { "v": "24.1 min", "rank": "#8/9" },
-     "cost": { "v": "$3.08", "rank": "#5/9" }
+     "index": {
+      "v": "0.63",
+      "rank": "#5/9"
+     },
+     "time": {
+      "v": "24.1 min",
+      "rank": "#8/9"
+     },
+     "cost": {
+      "v": "$3.08",
+      "rank": "#5/9"
+     }
     }
    ]
   },
@@ -541,9 +596,18 @@
    "rows": [
     {
      "model": "Grok 4.5 (high)",
-     "index": { "v": "0.64", "rank": "#4/9" },
-     "time": { "v": "15.5 min", "rank": "#5/9" },
-     "cost": { "v": "$2.44", "rank": "#4/9" }
+     "index": {
+      "v": "0.64",
+      "rank": "#4/9"
+     },
+     "time": {
+      "v": "15.5 min",
+      "rank": "#5/9"
+     },
+     "cost": {
+      "v": "$2.44",
+      "rank": "#4/9"
+     }
     }
    ]
   },
@@ -615,9 +679,18 @@
    "rows": [
     {
      "model": "Composer 2.5 Fast (CLI)",
-     "index": { "v": "0.38", "rank": "#9/9" },
-     "time": { "v": "7.9 min", "rank": "#1/9" },
-     "cost": { "v": "$0.56", "rank": "#2/9" }
+     "index": {
+      "v": "0.38",
+      "rank": "#9/9"
+     },
+     "time": {
+      "v": "7.9 min",
+      "rank": "#1/9"
+     },
+     "cost": {
+      "v": "$0.56",
+      "rank": "#2/9"
+     }
     }
    ]
   },
@@ -4413,5 +4486,87 @@
    "api"
   ],
   "plansChecked": "2026-08-26"
+ },
+ "gbrain": {
+  "name": "gbrain",
+  "vendor": "Garry Tan",
+  "cat": {
+   "de": "Kontext-Dienst · Baustein 04",
+   "en": "Context service · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Die Denkschicht unter dem Agenten, von Garry Tan gebaut für seine eigenen: gbrain hält das Wissen als Markdown-Dateien in einem Git-Lager — dem System of Record — und spiegelt es in eine Datenbank mit hybrider Abfrage (Vektor plus Stichwort, dann Rangfusion und Neusortierung). Obsidian-Wikilinks versteht es von Haus aus; jede geschriebene Seite verdrahtet sich selbst zu einem Wissensgraphen mit typisierten Kanten. Nachts träumt es: Ein cron-getriebener Zyklus reichert an, entdupliziert, flickt Zitate und findet Widersprüche. Agenten greifen über einen MCP-Server mit über hundert Operationen zu; ein «think»-Befehl liefert zitierte Antworten samt Lückenanalyse, was das Gehirn nicht weiss.",
+   "en": "The thinking layer under the agent, built by Garry Tan for his own: gbrain keeps knowledge as markdown files in a git repo — the system of record — mirrored into a database with hybrid retrieval (vector plus keyword, then rank fusion and reranking). It understands Obsidian wikilinks natively; every page written wires itself into a knowledge graph with typed edges. At night it dreams: a cron-driven cycle enriches, deduplicates, fixes citations and finds contradictions. Agents reach it through an MCP server with a hundred-plus operations; a «think» command returns cited answers plus a gap analysis of what the brain does not know."
+  },
+  "tip": {
+   "de": "Für Agenten-Gehirne ab tausenden Seiten die schwere Artillerie — im eigenen Lager von Obsidian-Vaults spricht es Wikilinks. Läuft lokal mit PGLite ganz ohne Konfiguration, wächst auf volles Postgres. Läuft nicht die Schleife selbst: Der Agent bleibt Claude Code oder Codex, gbrain ist sein Gedächtnis daneben.",
+   "en": "For agent brains from thousands of pages up, the heavy artillery — and it speaks wikilinks if your vault is Obsidian. Runs locally on PGLite with zero config, grows into full Postgres. It does not run the loop itself: the agent stays Claude Code or Codex, gbrain is the memory beside it."
+  },
+  "links": {
+   "home": "https://github.com/garrytan/gbrain",
+   "code": "https://github.com/garrytan/gbrain"
+  },
+  "plans": {
+   "de": "Kostenlos (MIT) · lokale PGLite oder eigenes Postgres",
+   "en": "Free (MIT) · local PGLite or your own Postgres"
+  }
+ },
+ "BRAIN.md": {
+  "name": "BRAIN.md",
+  "vendor": "MindMux",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Das Gedächtnis als Dateikonvention: BRAIN.md legt fest, wie ein Agent entscheidungsreifes Wissen in einem Markdown-Ordner im Repo ablegt — eine Wurzeldatei als Protokoll-Einstieg, sechs Stammseiten (Hintergrund, Architektur, Ablauf, Landkarte, Stack, Fahrplan) und granulare Seiten mit einer «compiled_truth», der aktuell gültigen Antwort, plus einem nur wachsenden Zeitstrahl der Entscheidungen. Ein CLI ohne Laufzeit-Abhängigkeiten (update-truth, create-page, lint-links) macht fehlerhafte Dateien strukturell unmöglich. Bewusst kein Notizhaufen und kein Vektor-Index: nur autoritative Entscheidungen, versioniert mit Git.",
+   "en": "Memory as a file convention: BRAIN.md defines how an agent stores decision-grade knowledge in a markdown folder inside the repo — a root file as protocol entry point, six fixed root pages (background, architecture, flow, mindmap, stack, roadmap) and granular pages with a «compiled_truth», the currently authoritative answer, plus an append-only timeline of decisions. A CLI with zero runtime dependencies (update-truth, create-page, lint-links) makes malformed files structurally impossible. Deliberately not a note dump and not a vector index: only authoritative decisions, versioned with git."
+  },
+  "tip": {
+   "de": "Der leichte Einstieg ins Agenten-Gedächtnis: kein Server, kein Daemon — ein Ordner, der mit dem Repo reist, und Skills, die Claude Code, Codex und Cursor das Protokoll lehren. Für Notizen ist ein Vault das Werkzeug; hier leben Entscheidungen.",
+   "en": "The lightweight entry into agent memory: no server, no daemon — a folder that travels with the repo, and skills that teach Claude Code, Codex and Cursor the protocol. Notes belong in a vault; this is where decisions live."
+  },
+  "links": {
+   "home": "https://projectbrain.md/",
+   "code": "https://github.com/mindmuxai/brain.md"
+  },
+  "plans": {
+   "de": "Kostenlos (Apache-2.0)",
+   "en": "Free (Apache-2.0)"
+  }
+ },
+ "Notion": {
+  "name": "Notion",
+  "vendor": "Notion",
+  "cat": {
+   "de": "Team-Datenbank · Baustein 07",
+   "en": "Team database · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Der Alleskleber fürs Team-Wissen: Seiten, Datenbanken, Wikis und Projekte in einem Werkzeug, das auch Nicht-Techniker bearbeiten. Für Agenten interessant geworden, seit Notion einen eigenen gehosteten MCP-Server betreibt — nach OAuth-Einwilligung lesen und schreiben Agenten direkt im Workspace, mit rund achtzehn Werkzeugen von der Suche bis zum Datenbank-Anlegen; daneben ein offizieller Open-Source-Server zum Selbstbetreiben. Eigene Agenten und Besprechungs-Notizen sind eingebaut, gegen Credits verrechnet. Der Preis der Alleskunst: Struktur braucht Disziplin, und ohne sie wird der Workspace zum Stapelschrank.",
+   "en": "The everything-glue for team knowledge: pages, databases, wikis and projects in one tool that non-engineers edit too. It became interesting for agents once Notion ran its own hosted MCP server — after OAuth consent, agents read and write the workspace directly, with about eighteen tools from search to database creation; alongside it an official open-source server to self-host. Custom agents and meeting notes are built in, billed against credits. The price of doing everything: structure needs discipline, without it the workspace becomes a filing cabinet nobody filed."
+  },
+  "tip": {
+   "de": "Wenn das zweite Gehirn ein Team teilen soll, ist Notion die_cloud-Antwort auf Obsidian: Agenten erreichen den Workspace über MCP statt über den Dateisystem-Server. Fürs Allein-Notieren bleibt der Markdown-Vault die freiere Wahl — Notion rechnet Agenten-Nutzung in Credits ab.",
+   "en": "When the second brain is shared with a team, Notion is the cloud answer to Obsidian: agents reach the workspace over MCP instead of the filesystem server. For solitary note-taking the markdown vault stays the freer choice — Notion bills agent usage in credits."
+  },
+  "links": {
+   "home": "https://www.notion.com",
+   "docs": "https://developers.notion.com/guides/mcp/overview",
+   "code": "https://github.com/makenotion/notion-mcp-server"
+  },
+  "plans": {
+   "de": "Gratis · Plus 10 $ · Business 20 $/Mitglied/Mo. · eigene Agenten nach Credits (10 $/1.000) · jährlich bis 20 % günstiger",
+   "en": "Free · Plus $10 · Business $20/member/mo · custom agents by credits ($10/1,000) · up to 20% cheaper annually"
+  }
  }
 }

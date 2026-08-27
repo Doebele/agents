@@ -177,7 +177,7 @@
   },
   "icon": "google",
   "links": {
-   "home": "https://notebooklm.google/"
+   "home": "https://notebook.google/"
   }
  },
  "Perplexity": {
@@ -398,7 +398,7 @@
    "en": "Set up as a reviewer on GitHub pull requests it comments on changes by itself — the most comfortable entry point, because there is nothing to install."
   },
   "links": {
-   "home": "https://chatgpt.com/codex/",
+   "home": "https://openai.com/codex",
    "docs": "https://learn.chatgpt.com/docs",
    "code": "https://github.com/openai/codex"
   },
@@ -2501,7 +2501,7 @@
    "en": "As with any marketplace: a skill is an instruction your agent will then follow. Read it before installing."
   },
   "links": {
-   "home": "https://skills.sh",
+   "home": "https://www.skills.sh/",
    "docs": null,
    "code": "https://github.com/vercel-labs/skills"
   }
@@ -2932,7 +2932,7 @@
    "en": "The bridge for designers who want to work on the live project without writing code."
   },
   "links": {
-   "home": "https://onlook.com/",
+   "home": "https://www.onlook.com/",
    "docs": null,
    "code": "https://github.com/onlook-dev/onlook"
   }
@@ -3613,7 +3613,7 @@
   ],
   "plansChecked": "2026-08-24",
   "links": {
-   "home": "https://pages.cloudflare.com"
+   "home": "https://www.cloudflare.com/products/pages/"
   }
  },
  "Render": {
@@ -4182,7 +4182,7 @@
    "en": "The tinkering and series tool: build a pipeline once, then run it in variants — only changed subgraphs re-execute. For the quick single image a service stays more convenient. Licence GPL-3.0, copyleft: read before embedding."
   },
   "links": {
-   "home": "https://www.comfy.org",
+   "home": "https://comfy.org/",
    "docs": "https://docs.comfy.org",
    "code": "https://github.com/comfyanonymous/ComfyUI"
   },

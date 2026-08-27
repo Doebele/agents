@@ -231,6 +231,10 @@
    "de": "1 GB kostenlos · 1–5 TB, auch als Lebenszeit-Zahlung",
    "en": "1 GB free · 1–5 TB, lifetime payments available"
   },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-27",
   "icon": "internxt",
   "links": {
    "home": "https://internxt.com",
@@ -440,13 +444,14 @@
    ]
   },
   "plans": {
-   "de": "In ChatGPT-Plänen (Free–Pro 200 $) · Pro bis zu 5×/20× Plus-Kontingent · API nutzungsabhängig",
-   "en": "Included in ChatGPT plans (free–Pro $200) · Pro gets up to 5×/20× the Plus quota · usage-based API"
+   "de": "In jedem ChatGPT-Plan enthalten: Free 0 $ · Go 8 $ · Plus 20 $ · Pro ab 100 $ · Business 20 $/Sitz/Mo. · Kontingent je 5-Stunden-Fenster, Pro mit 5× bis 20× des Plus-Kontingents · in CLI, SDK und IDE auch mit API-Schlüssel nach Verbrauch",
+   "en": "Included in every ChatGPT plan: Free $0 · Go $8 · Plus $20 · Pro from $100 · Business $20/seat/mo · quota per 5-hour window, Pro at 5× to 20× the Plus quota · in the CLI, SDK and IDE also usable with an API key, billed by usage"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-27"
  },
  "Agents SDK": {
   "name": "OpenAI Agents SDK",
@@ -762,7 +767,8 @@
   "plans": {
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Bionic": {
   "name": "Bionic",
@@ -821,9 +827,14 @@
   "icon": "langchain",
   "free": true,
   "plans": {
-   "de": "Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
-   "en": "Open source free · LangSmith Plus $39/seat/mo"
-  }
+   "de": "Open Source kostenlos (MIT) · bezahlt wird erst die Plattform darum herum: LangSmith Developer 0 $/Sitz, Plus 39 $/Sitz/Mo.",
+   "en": "Free and open source (MIT) · you only pay for the platform around it: LangSmith Developer $0/seat, Plus $39/seat/mo"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "LangChain": {
   "name": "LangChain",
@@ -850,9 +861,14 @@
   "icon": "langchain",
   "free": true,
   "plans": {
-   "de": "Framework Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
-   "en": "Framework open source free · LangSmith Plus $39/seat/mo"
-  }
+   "de": "Framework Open Source kostenlos · LangSmith Developer 0 $/Sitz mit 5.000 Traces/Mo., Plus 39 $/Sitz mit 10.000 · darüber nach Verbrauch (1,50 $ je Compute-Einheit, 1 $ je Storage-Einheit)",
+   "en": "Framework free and open source · LangSmith Developer $0/seat with 5,000 traces/mo, Plus $39/seat with 10,000 · beyond that pay-as-you-go ($1.50 per compute unit, $1.00 per storage unit)"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "CrewAI": {
   "name": "CrewAI",
@@ -1126,12 +1142,14 @@
    }
   },
   "plans": {
-   "de": "Open-Weight (Apache 2.0) · API 0,50 $/1,50 $ pro 1M Token",
-   "en": "Open-weight (Apache 2.0) · API $0.50/$1.50 per 1M tokens"
+   "de": "Open-Weight (Apache 2.0) · API 0,50 $ Eingabe / 1,50 $ Ausgabe pro 1M Token (die Preisseite nennt das Modell «Mistral Large») · Gratisstufe mit 10 $ API-Guthaben je Monat · Vibe Pro 14,99 $/Mo. (Studenten 5,99 $), Vibe Team 24,99 $/Nutzer/Mo. ab 50 $/Mo.",
+   "en": "Open-weight (Apache 2.0) · API $0.50 input / $1.50 output per 1M tokens (the pricing page calls the model «Mistral Large») · free tier with $10 a month in API credits · Vibe Pro $14.99/mo (students $5.99), Vibe Team $24.99/user/mo with a $50/mo minimum"
   },
   "billing": [
+   "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-27"
  },
  "Llama 4": {
   "name": "Llama 4",
@@ -1181,9 +1199,10 @@
    }
   },
   "plans": {
-   "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet",
-   "en": "Free (open-weight, Llama 4 Community License), self-hosted"
-  }
+   "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet · ab 700 Mio. monatlich aktiven Nutzern verlangt Meta eine eigene Lizenz",
+   "en": "Free (open-weight, Llama 4 Community License), self-hosted · above 700 million monthly active users Meta requires a separate licence"
+  },
+  "plansChecked": "2026-08-27"
  },
  "Ornith 1.0": {
   "name": "Ornith 1.0",
@@ -1237,9 +1256,13 @@
   },
   "free": true,
   "plans": {
-   "de": "Kostenlos (Desktop-App, Closed Source)",
-   "en": "Free (desktop app, closed source)"
-  }
+   "de": "Desktop-App kostenlos (Closed Source) · Cloud-Inferenz nach Verbrauch, z. B. Kimi K3 3 $/15 $, GLM-5.3-Flash 0,15 $/0,50 $ pro 1M Token · ein «Bionic Pass»-Abo ist angekündigt, aber noch ohne Preis",
+   "en": "Desktop app free (closed source) · cloud inference by usage, e.g. Kimi K3 $3/$15, GLM-5.3-Flash $0.15/$0.50 per 1M tokens · a «Bionic Pass» subscription is announced but not yet priced"
+  },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "Ollama": {
   "name": "Ollama",
@@ -1266,9 +1289,13 @@
   "icon": "ollama",
   "free": true,
   "plans": {
-   "de": "Kostenlos, Open Source (MIT)",
-   "en": "Free, open source (MIT)"
-  }
+   "de": "Lokal kostenlos und unbegrenzt, Open Source (MIT) · Cloud: Free 0 $ · Pro 20 $/Mo. (200 $/Jahr) · Max 100 $/Mo., für neue Anmeldungen derzeit pausiert",
+   "en": "Local use free and unlimited, open source (MIT) · cloud: Free $0 · Pro $20/mo ($200/year) · Max $100/mo, currently paused for new signups"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "llama.cpp": {
   "name": "llama.cpp",
@@ -1730,9 +1757,10 @@
    "code": "https://github.com/heygen-com/hyperframes"
   },
   "plans": {
-   "de": "Kostenlos (Apache 2.0) · ohne Render-Gebühren",
-   "en": "Free (Apache 2.0) · no per-render fees"
-  }
+   "de": "Kostenlos (Apache 2.0) · keine Render-Gebühren und keine Schwelle für kommerzielle Nutzung",
+   "en": "Free (Apache 2.0) · no per-render fees and no commercial-use threshold"
+  },
+  "plansChecked": "2026-08-27"
  },
  "ElevenLabs Eleven v3": {
   "name": "ElevenLabs Eleven v3",
@@ -1926,9 +1954,13 @@
   },
   "free": true,
   "plans": {
-   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Pro 6,67 $/Mo. (80 $/Jahr) · Business 13,33 $/Mo. (160 $/Jahr) · Enterprise auf Anfrage",
-   "en": "Local dictation free, open source (MIT) · Pro $6.67/mo ($80/year) · Business $13.33/mo ($160/year) · Enterprise on request"
-  }
+   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ mit 2.000 Wörtern je Woche · Pro 6,67 $/Nutzer/Mo. (80 $/Jahr) · Business 13,33 $/Nutzer/Mo. (160 $/Jahr) · Enterprise auf Anfrage",
+   "en": "Local dictation free, open source (MIT) · Free $0 with 2,000 words a week · Pro $6.67/user/mo ($80/year) · Business $13.33/user/mo ($160/year) · Enterprise on request"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "FreeFlow": {
   "name": "FreeFlow",
@@ -2317,13 +2349,14 @@
    }
   },
   "plans": {
-   "de": "API 3 $/15 $ pro 1M Token (Open-Weight, selbst hostbar)",
-   "en": "API $3/$15 per 1M tokens (open-weight, self-hostable)"
+   "de": "API 3 $ Eingabe / 15 $ Ausgabe pro 1M Token, gecachte Eingabe 0,30 $ · Open-Weight, selbst hostbar",
+   "en": "API $3 input / $15 output per 1M tokens, cached input $0.30 · open-weight, self-hostable"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-27"
  },
  "DeepSeek V4": {
   "name": "DeepSeek V4",
@@ -2983,6 +3016,7 @@
    "de": "Kostenlos (Apache 2.0) · nur eigene API-Kosten (BYOK)",
    "en": "Free (Apache 2.0) · only your own API costs (BYOK)"
   },
+  "plansChecked": "2026-08-27",
   "links": {
    "home": "https://open-design.ai/",
    "code": "https://github.com/nexu-io/open-design"
@@ -3475,9 +3509,13 @@
    "en": "Sensible when you want domain, email and storage from one place. For a site an agent builds, a Git-based host is usually more convenient."
   },
   "plans": {
-   "de": "Monatlich, meist mit langer Mindestlaufzeit für den Werbepreis.",
-   "en": "Monthly, usually with a long minimum term for the advertised price."
+   "de": "Premium 2,99 $/Mo. nur bei 48 Monaten Laufzeit (143,52 $ im Voraus), Verlängerung 10,99 $ · Unlimited 3,99 $ → 16,99 $ · Cloud Startup 7,99 $ → 25,99 $ · keine Gratisstufe, nur 30 Tage Geld-zurück",
+   "en": "Premium $2.99/mo only on a 48-month term ($143.52 upfront), renews at $10.99 · Unlimited $3.99 → $16.99 · Cloud Startup $7.99 → $25.99 · no free tier, only a 30-day money-back guarantee"
   },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-27",
   "links": {
    "home": "https://www.hostinger.com"
   }
@@ -3527,9 +3565,13 @@
    "en": "Good when you start small and do not want to rule out needing more later."
   },
   "plans": {
-   "de": "Monatlich, gestaffelt vom Paket bis zum eigenen Server.",
-   "en": "Monthly, tiered from package to your own server."
+   "de": "Webhosting Plus 1 €/Mo. für 12 Monate, danach 11 € · Standard 3 € → 6 € · Premium 8 € → 16 € · Ultimate 14 € → 28 € (Aktionspreise laufen 6 Monate) · je 10 € Einrichtung · keine Gratisstufe",
+   "en": "Web hosting Plus €1/mo for 12 months, then €11 · Standard €3 → €6 · Premium €8 → €16 · Ultimate €14 → €28 (promo prices run 6 months) · €10 setup fee on each · no free tier"
   },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-27",
   "links": {
    "home": "https://www.ionos.de"
   }
@@ -3553,9 +3595,13 @@
    "en": "The most comfortable route for a site an agent builds: it writes code, the rest happens by itself. The free tier is enough for small sites."
   },
   "plans": {
-   "de": "Gratisstufe für kleine Seiten, danach nach Verbrauch.",
-   "en": "Free tier for small sites, then usage-based."
+   "de": "Free 0 $ mit 300 Credits/Mo. · Personal 9 $ mit 1.000 · Pro 20 $ mit 3.000 · Credits nachkaufen: 5 $ für 500 (Personal), 10 $ für 1.500 (Pro) · Verbrauch z. B. 15 Credits je Production-Deploy, 20 je GB Bandbreite",
+   "en": "Free $0 with 300 credits/mo · Personal $9 with 1,000 · Pro $20 with 3,000 · extra credits $5 for 500 (Personal), $10 for 1,500 (Pro) · consumption e.g. 15 credits per production deploy, 20 per GB of bandwidth"
   },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-27",
   "links": {
    "home": "https://www.netlify.com"
   }
@@ -3803,9 +3849,13 @@
    "en": "When a model should run for a while — fine-tuning, continuous duty — dedicated cards are calmer than a marketplace. Billed per GPU hour."
   },
   "plans": {
-   "de": "Abrechnung je GPU-Stunde",
-   "en": "Billed per GPU hour"
+   "de": "Je GPU-Stunde: V100 0,79 $ · A100 SXM ab 1,99 $ · H100 SXM ab 3,99 $ · B200 SXM6 ab 6,69 $ · 1-Click-Cluster ab 8,87 $ je GPU-Stunde · keine Gratisstufe",
+   "en": "Per GPU hour: V100 $0.79 · A100 SXM from $1.99 · H100 SXM from $3.99 · B200 SXM6 from $6.69 · 1-Click Clusters from $8.87 per GPU hour · no free tier"
   },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-27",
   "links": {
    "home": "https://lambda.ai"
   }
@@ -3854,9 +3904,10 @@
    "en": "The price breaker for everything around the model — interfaces, databases, web services. Monthly or hourly price, no token billing."
   },
   "plans": {
-   "de": "Monatlich oder stundenweise, je Instanz",
-   "en": "Monthly or hourly, per instance"
+   "de": "Stundengenau abgerechnet, je Instanz gedeckelt auf den Monatspreis — nie mehr als der Monatspreis, auch bei durchgehendem Betrieb. Die Serverpreise selbst stehen nur im Preisrechner der Konsole, nicht als Text auf der Preisseite.",
+   "en": "Billed by the hour, capped per instance at the monthly price — never more than the monthly price, even running around the clock. The server prices themselves live only in the console's price calculator, not as text on the pricing page."
   },
+  "plansChecked": "2026-08-27",
   "icon": "hetzner",
   "links": {
    "home": "https://www.hetzner.com"
@@ -3881,9 +3932,14 @@
    "en": "For tools with a part of your own — preprocessing, pipelines, custom prompting — the clean path. Billed per second of runtime."
   },
   "plans": {
-   "de": "Abrechnung je Sekunde · Gratisstufe",
-   "en": "Billed per second · free tier"
+   "de": "Starter 0 $/Mo. plus Verbrauch, mit 30 $ Gratis-Guthaben jeden Monat · Team 250 $/Mo. mit 100 $ Guthaben · Rechenzeit sekundengenau: CPU-Kern 0,0000131 $/Sek., H100 SXM5 0,001097 $/Sek.",
+   "en": "Starter $0/mo plus compute, with $30 in free credits every month · Team $250/mo with $100 in credits · compute billed by the second: CPU core $0.0000131/sec, H100 SXM5 $0.001097/sec"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-27",
   "icon": "modal",
   "links": {
    "home": "https://modal.com"
@@ -3935,9 +3991,13 @@
    "en": "Handy for comparing and switching: change the model without changing key or billing. Speed and data privacy matter less in return."
   },
   "plans": {
-   "de": "Je 1M Tokens, plus Gebühr · Gratisstufe",
-   "en": "Per 1M tokens, plus fee · free tier"
+   "de": "Modellpreise werden ohne Aufschlag durchgereicht · Gebühr beim Guthabenkauf: 5,5 % (mindestens 0,80 $) per Karte, 5 % per Krypto · eigener Anbieterschlüssel (BYOK) bis 25.000 $/Mo. gebührenfrei, darüber 5 % · «:free»-Modelle: 50 Anfragen am Tag, ab 10 $ Guthaben 1.000",
+   "en": "Model prices are passed through without markup · fee on buying credits: 5.5% (minimum $0.80) by card, 5% by crypto · your own provider key (BYOK) is free up to $25,000/mo, then 5% · «:free» models: 50 requests a day, 1,000 with $10 or more in credits"
   },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-27",
   "icon": "openrouter",
   "links": {
    "home": "https://openrouter.ai"
@@ -4051,9 +4111,10 @@
    "code": "https://github.com/volcengine/OpenViking"
   },
   "plans": {
-   "de": "Selbst betrieben kostenlos (AGPLv3) · verwaltet mit Gratis-Teststufe",
-   "en": "Self-hosted free (AGPLv3) · managed with a free trial"
-  }
+   "de": "Selbst betrieben kostenlos (AGPLv3), ohne Funktionssperren und ohne Konto · daneben eine verwaltete Fassung auf Volcano Engine, deren Preise die Seite nicht nennt",
+   "en": "Self-hosted free (AGPLv3), no feature gates and no account needed · alongside it a managed edition on Volcano Engine, whose prices the page does not give"
+  },
+  "plansChecked": "2026-08-27"
  },
  "OpenPencil": {
   "name": "OpenPencil",
@@ -4080,7 +4141,8 @@
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "customer-research": {
   "name": "customer-research",
@@ -4539,7 +4601,8 @@
   "plans": {
    "de": "Kostenlos (Apache-2.0)",
    "en": "Free (Apache-2.0)"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Notion": {
   "name": "Notion",
@@ -4567,6 +4630,10 @@
   "plans": {
    "de": "Gratis · Plus 10 $ · Business 20 $/Mitglied/Mo. · eigene Agenten nach Credits (10 $/1.000) · jährlich bis 20 % günstiger",
    "en": "Free · Plus $10 · Business $20/member/mo · custom agents by credits ($10/1,000) · up to 20% cheaper annually"
-  }
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-27"
  }
 }

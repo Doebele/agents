@@ -43,7 +43,8 @@
    "home": "https://impeccable.style",
    "docs": "https://impeccable.style/tutorials/getting-started/",
    "code": "https://github.com/pbakaus/impeccable"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "skill-creator": {
   "name": "skill-creator",
@@ -177,8 +178,9 @@
   },
   "icon": "google",
   "links": {
-   "home": "https://notebooklm.google/"
-  }
+   "home": "https://notebook.google/"
+  },
+  "contentChecked": "2026-08-29"
  },
  "Perplexity": {
   "name": "Perplexity",
@@ -823,7 +825,8 @@
   "plans": {
    "de": "Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
    "en": "Open source free · LangSmith Plus $39/seat/mo"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "LangChain": {
   "name": "LangChain",
@@ -852,7 +855,8 @@
   "plans": {
    "de": "Framework Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
    "en": "Framework open source free · LangSmith Plus $39/seat/mo"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "CrewAI": {
   "name": "CrewAI",
@@ -1239,7 +1243,8 @@
   "plans": {
    "de": "Kostenlos (Desktop-App, Closed Source)",
    "en": "Free (desktop app, closed source)"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Ollama": {
   "name": "Ollama",
@@ -1372,10 +1377,11 @@
    "en": "If words should appear in the image, put the exact wording in quotation marks in your prompt."
   },
   "links": {
-   "home": "https://openai.com",
+   "home": "https://developers.openai.com/api/docs/models/gpt-image-2",
    "docs": "https://developers.openai.com/api/docs/guides/image-generation",
    "code": null
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Midjourney V8.2": {
   "name": "Midjourney V8.2",
@@ -1421,7 +1427,8 @@
    "home": "https://bfl.ai/models/flux-2",
    "docs": "https://bfl.ai/models/flux-2",
    "code": "https://github.com/black-forest-labs/flux2"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Qwen-Image": {
   "name": "Qwen-Image",
@@ -1467,7 +1474,8 @@
    "docs": "https://ai.google.dev/gemini-api/docs/imagen",
    "code": null
   },
-  "icon": "google"
+  "icon": "google",
+  "contentChecked": "2026-08-29"
  },
  "Ideogram": {
   "name": "Ideogram",
@@ -1490,7 +1498,8 @@
    "home": "https://ideogram.ai/",
    "docs": "https://developer.ideogram.ai/ideogram-api/api-overview",
    "code": null
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Recraft": {
   "name": "Recraft",
@@ -1587,7 +1596,8 @@
    "home": "https://kling.ai/",
    "docs": "https://kling.ai/document-api/quickStart/productIntroduction/overview",
    "code": null
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Seedance 2.5": {
   "name": "Seedance 2.5",
@@ -1756,7 +1766,8 @@
    "docs": "https://elevenlabs.io/docs/overview/intro",
    "code": null
   },
-  "icon": "elevenlabs"
+  "icon": "elevenlabs",
+  "contentChecked": "2026-08-29"
  },
  "Suno v5.5": {
   "name": "Suno v5.5",
@@ -1849,7 +1860,8 @@
    "home": "https://huggingface.co/hexgrad/Kokoro-82M",
    "docs": "https://github.com/hexgrad/kokoro",
    "code": "https://github.com/hexgrad/kokoro"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Voxtral": {
   "name": "Voxtral",
@@ -2455,10 +2467,11 @@
   },
   "links": {
    "home": "https://github.com/anthropics/skills",
-   "docs": "https://docs.anthropic.com/en/docs/claude-code/skills",
+   "docs": "https://code.claude.com/docs/en/skills",
    "code": "https://github.com/anthropics/skills"
   },
-  "icon": "anthropic"
+  "icon": "anthropic",
+  "contentChecked": "2026-08-29"
  },
  "agentskills.io": {
   "name": "Agent Skills (Open Standard)",
@@ -2704,8 +2717,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Das Standardwerkzeug, in dem Oberflächen entworfen werden, bevor sie jemand baut — im Browser, mit mehreren Leuten gleichzeitig. Für Agenten zählen zwei Zugänge: Figma Make baut aus einer Beschreibung eine lauffähige Oberfläche, und der Dev-Mode-Server lässt einen Agenten den fertigen Entwurf auslesen und in Code übersetzen.",
-   "en": "The standard tool where interfaces are designed before anyone builds them — in the browser, with several people at once. Two doors matter for agents: Figma Make turns a description into a working interface, and the dev-mode server lets an agent read a finished design and translate it into code."
+   "de": "Das Standardwerkzeug, in dem Oberflächen entworfen werden, bevor sie jemand baut — im Browser, mit mehreren Leuten gleichzeitig. Für Agenten zählen zwei Zugänge: Figma Make baut aus einer Beschreibung eine lauffähige Oberfläche, und der Figma-MCP-Server lässt einen Agenten den fertigen Entwurf auslesen und in Code übersetzen.",
+   "en": "The standard tool where interfaces are designed before anyone builds them — in the browser, with several people at once. Two doors matter for agents: Figma Make turns a description into a working interface, and the Figma MCP server lets an agent read a finished design and translate it into code."
   },
   "tip": {
    "de": "Wenn in deinem Umfeld Entwürfe entstehen, liegen sie vermutlich hier. Der MCP-Server ist dann der kürzeste Weg vom Entwurf zum Code.",
@@ -2716,7 +2729,8 @@
    "docs": "https://developers.figma.com/docs/figma-mcp-server/",
    "code": null
   },
-  "icon": "figma"
+  "icon": "figma",
+  "contentChecked": "2026-08-29"
  },
  "pencil.dev": {
   "name": "pencil.dev",
@@ -2807,8 +2821,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Googles Entwicklungsumgebung für den Fall, dass nicht ein Agent arbeitet, sondern mehrere gleichzeitig — jeder an seiner Aufgabe, nebeneinander in einem Fenster. Ein Programm für den Schreibtisch, kein Dienst im Browser.",
-   "en": "Google's development environment for the case where not one agent works but several at once — each on its own task, side by side in one window. A program for the desktop, not a service in the browser."
+   "de": "Googles Entwicklungsumgebung für den Fall, dass nicht ein Agent arbeitet, sondern mehrere gleichzeitig — jeder an seiner Aufgabe, nebeneinander in einem Fenster. Ein Programm für den Schreibtisch: Die Arbeit läuft auf deinem Rechner, seit Remote Control lässt sie sich aber aus jedem Browser weitersteuern.",
+   "en": "Google's development environment for the case where not one agent works but several at once — each on its own task, side by side in one window. A program for the desktop: the work runs on your own machine, though since Remote Control you can drive it on from any browser."
   },
   "tip": {
    "de": "Erst sinnvoll, wenn eine Aufgabe sich wirklich in unabhängige Teile zerlegen lässt. Sonst warten mehrere Agenten nur aufeinander.",
@@ -2818,7 +2832,8 @@
    "home": "https://antigravity.google/",
    "docs": "https://antigravity.google/docs/getting-started",
    "code": "https://antigravity.google/download"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Google Stitch": {
   "name": "Stitch",
@@ -2842,7 +2857,8 @@
    "docs": null,
    "code": null
   },
-  "icon": "google"
+  "icon": "google",
+  "contentChecked": "2026-08-29"
  },
  "v0": {
   "name": "v0",
@@ -2889,7 +2905,8 @@
    "home": "https://lovable.dev/",
    "docs": null,
    "code": null
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Bolt.new": {
   "name": "Bolt",
@@ -2912,7 +2929,8 @@
    "home": "https://bolt.new/",
    "docs": "https://support.bolt.new/home",
    "code": "https://github.com/stackblitz-labs/bolt.diy"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Onlook": {
   "name": "Onlook",
@@ -2959,7 +2977,8 @@
    "docs": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
    "code": null
   },
-  "icon": "anthropic"
+  "icon": "anthropic",
+  "contentChecked": "2026-08-29"
  },
  "OpenDesign": {
   "name": "OpenDesign",
@@ -3263,8 +3282,8 @@
   "open": false,
   "free": false,
   "blurb": {
-   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Läuft nur auf dem Mac und wird einmal gekauft statt monatlich gemietet — über die Jahre der günstigere Weg.",
-   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. Mac only, and bought once rather than rented monthly — over the years the cheaper route."
+   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Läuft auf dem Mac und auf dem iPad. Für den Mac gibt es beide Wege: einmal kaufen oder das Abo Apple Creator Studio, in dem zusätzliche Funktionen stecken.",
+   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. Runs on the Mac and on the iPad. On the Mac both routes exist: buy it once, or take the Apple Creator Studio subscription, which carries extra features."
   },
   "tip": {
    "de": "Sinnvoll, sobald ein Projekt mehr als ein paar Clips hat. Vor dem Kauf die kostenlose Testphase nutzen.",
@@ -3272,7 +3291,8 @@
   },
   "links": {
    "home": "https://www.apple.com/final-cut-pro/"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Premiere Pro": {
   "name": {
@@ -3322,7 +3342,8 @@
   },
   "links": {
    "home": "https://www.blackmagicdesign.com/products/davinciresolve"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Avid Media Composer": {
   "name": {
@@ -3347,7 +3368,8 @@
   },
   "links": {
    "home": "https://www.avid.com/media-composer"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "CapCut": {
   "name": {
@@ -3372,7 +3394,8 @@
   },
   "links": {
    "home": "https://www.capcut.com"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Shotcut": {
   "name": {
@@ -3480,7 +3503,8 @@
   },
   "links": {
    "home": "https://www.hostinger.com"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Strato": {
   "name": "Strato",
@@ -3532,7 +3556,8 @@
   },
   "links": {
    "home": "https://www.ionos.de"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Netlify": {
   "name": "Netlify",

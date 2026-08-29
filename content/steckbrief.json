@@ -2694,6 +2694,29 @@
   },
   "icon": "google"
  },
+ "davinci-resolve-mcp": {
+  "name": "DaVinci Resolve MCP",
+  "vendor": "Samuel Gursky",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Schnittprogramm wird mit Maus und Tastatur bedient — ein Agent kann weder klicken noch schneiden. DaVinci Resolve hat dafür eine offizielle Skriptschnittstelle, und dieser Server reicht sie als MCP-Werkzeuge weiter: Er legt Projekte und Timelines an, importiert Material, setzt Schnitte und Marker, konfiguriert Renderaufträge und spricht auch Farb- und Audiobearbeitung an. Resolve wird damit zum Arbeitsplatz, an dem ein Agent einen Rohschnitt baut, den du von Hand feinschneidest. Das Projekt benennt die Grenze selbst: Heraus kommt eine Erstfassung zum Weiterschneiden, kein fertiger Schnitt — und dein Ausgangsmaterial bleibt unangetastet.",
+   "en": "An editing suite is driven by mouse and keyboard — an agent can neither click nor cut. DaVinci Resolve ships an official scripting interface for exactly that, and this server hands it out as MCP tools: it creates projects and timelines, imports footage, sets cuts and markers, configures render jobs, and reaches into colour and audio as well. Resolve becomes the desk where an agent assembles a rough cut that you then trim by hand. The project names its own limit: what comes out is a first-pass assembly to keep cutting, not a finished edit — and your source footage stays untouched."
+  },
+  "tip": {
+   "de": "Setzt ein laufendes Resolve (18.5 oder neuer) voraus. Die Gratisfassung von Resolve sperrt die Skriptschnittstelle für die Fernsteuerung weg; dort erreicht der Server Resolve über ein Brückenskript innerhalb des Programms — der dokumentierte Weg, aber Blackmagic könnte ihn eines Tages schließen. Kommt von einem einzelnen Entwickler, MIT-Lizenz.",
+   "en": "Needs a running Resolve (18.5 or newer). Resolve's free edition locks remote scripting away; there the server reaches Resolve through a bridge script inside the program — the documented route, but Blackmagic could close it one day. Comes from a single developer, MIT licence."
+  },
+  "links": {
+   "home": "https://github.com/samuelgursky/davinci-resolve-mcp",
+   "code": "https://github.com/samuelgursky/davinci-resolve-mcp"
+  }
+ },
  "Figma": {
   "name": "Figma",
   "vendor": "Figma",

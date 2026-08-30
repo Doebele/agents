@@ -596,6 +596,14 @@
        "en": "brain · local"
       },
       "k": "gbrain"
+     },
+     {
+      "n": "DaVinci Resolve",
+      "v": {
+       "de": "Videoschnitt",
+       "en": "video editing"
+      },
+      "k": "davinci-resolve-mcp"
      }
     ]
    }

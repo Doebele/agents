@@ -177,7 +177,7 @@
   },
   "icon": "google",
   "links": {
-   "home": "https://notebooklm.google/"
+   "home": "https://notebook.google/"
   }
  },
  "Perplexity": {
@@ -669,7 +669,7 @@
   },
   "links": {
    "home": "https://cursor.com",
-   "docs": "https://docs.cursor.com"
+   "docs": "https://cursor.com/docs"
   },
   "icon": "cursor",
   "free": true,
@@ -1203,9 +1203,9 @@
    "en": "A young approach. Worth watching; for production work I would reach for the established families first."
   },
   "links": {
-   "home": "https://github.com/deepreinforce-ai/Ornith-1",
+   "home": "https://github.com/ornith-ai/Ornith-1",
    "docs": null,
-   "code": "https://github.com/deepreinforce-ai/Ornith-1"
+   "code": "https://github.com/ornith-ai/Ornith-1"
   },
   "free": true,
   "plans": {
@@ -2010,7 +2010,7 @@
   },
   "links": {
    "home": "https://openai.com/index/gpt-5-6/",
-   "docs": "https://platform.openai.com/docs/models",
+   "docs": "https://developers.openai.com/api/docs/models",
    "code": null
   },
   "free": false,
@@ -2066,7 +2066,7 @@
   },
   "links": {
    "home": "https://www.anthropic.com/news/claude-opus-5",
-   "docs": "https://docs.claude.com/en/docs/about-claude/models/overview",
+   "docs": "https://platform.claude.com/docs/en/models/overview",
    "code": null
   },
   "icon": "anthropic",
@@ -2455,7 +2455,7 @@
   },
   "links": {
    "home": "https://github.com/anthropics/skills",
-   "docs": "https://docs.anthropic.com/en/docs/claude-code/skills",
+   "docs": "https://code.claude.com/docs/en/skills",
    "code": "https://github.com/anthropics/skills"
   },
   "icon": "anthropic"
@@ -3613,7 +3613,7 @@
   ],
   "plansChecked": "2026-08-24",
   "links": {
-   "home": "https://pages.cloudflare.com"
+   "home": "https://www.cloudflare.com/products/pages/"
   }
  },
  "Render": {
@@ -4001,8 +4001,8 @@
    "en": "Free (MIT)"
   }
  },
- "dot-skill": {
-  "name": "dot-skill",
+ "Distilly": {
+  "name": "Distilly",
   "vendor": "titanwings",
   "cat": {
    "de": "Skill · Baustein 03",
@@ -4012,21 +4012,22 @@
   "open": true,
   "free": true,
   "blurb": {
-   "de": "Ein Skill-Generator für Persona-Skills: Er destilliert aus Chats, Dokumenten und Notizen einer Person einen Skill, der nicht nur ihren Ton trifft, sondern Denk- und Entscheidungsstile nachbildet. Drei Szenarien von Haus aus: Wissen ausscheidender Kolleg:innen, das Gefühl von Familie und Freunden, oder Personen des öffentlichen Lebens. Gestartet per /dot-skill, die Ergebnisse rufst du mit /{Figur} auf. Früher unter dem Namen colleague-skill.",
-   "en": "A skill generator for persona skills: from a person's chats, documents and notes it distills a skill that captures not just their tone but their mental models and decision frameworks. Three scenarios by design: knowledge of departing colleagues, the feel of family and friends, or public figures. Started with /dot-skill; results are invoked by /{character}. Formerly known as colleague-skill."
+   "de": "Ein Skill-Generator für Personen-Profile: Aus Nachrichten, Dokumenten, Interviews und öffentlichen Quellen destilliert er ein «Person Profile», das nicht nur den Ton einer Person trifft, sondern ihre Denk- und Entscheidungsmuster nachbildet. Drei Familien von Haus aus: Kolleg:innen, nahe Menschen, öffentliche Figuren — letztere mit einer Recherche-Kette über sechs Dimensionen. Das Ergebnis ist ein Agent Skill, aufgerufen wird der Generator im Klartext statt über einen Slash-Befehl. Läuft inzwischen in acht Agenten-Umgebungen, nicht mehr nur in Claude Code.",
+   "en": "A skill generator for person profiles: from messages, documents, interviews and public sources it distills a Person Profile that captures not just someone's tone but their thinking and decision patterns. Three families by design: colleagues, close relationships, public figures — the last with a research chain across six dimensions. The result is an Agent Skill, and the generator is called in plain words rather than by a slash command. It now runs in eight agent hosts, no longer only in Claude Code."
   },
   "tip": {
-   "de": "Mit Bedacht einsetzen: Das Ergebnis ahmt eine Person nach, es ist keine. Am stärksten als Wissenssicherung vor einem Abschied — mit Quellen, die die Person auch teilen darf.",
-   "en": "Use with care: the result imitates a person, it is not one. Strongest as knowledge preservation before a departure — with sources the person is fine sharing."
+   "de": "Mit Bedacht einsetzen: Das Ergebnis ahmt eine Person nach, es ist keine — das schreibt das Projekt selbst. Am stärksten als Wissenssicherung vor einem Abschied — mit Quellen, die die Person auch teilen darf. Hieß bis August 2026 Colleague Skill, zwischenzeitlich dot-skill.",
+   "en": "Use with care: the result imitates a person, it is not one — the project says so itself. Strongest as knowledge preservation before a departure — with sources the person is fine sharing. Was called Colleague Skill until August 2026, dot-skill in between."
   },
   "links": {
-   "home": "https://github.com/titanwings/colleague-skill",
-   "code": "https://github.com/titanwings/colleague-skill"
+   "home": "https://github.com/titanwings/distilly",
+   "code": "https://github.com/titanwings/distilly"
   },
   "plans": {
    "de": "Kostenlos (MIT) · einzelne Datenquellen kosten Drittanbieter",
    "en": "Free (MIT) · individual data sources cost third parties"
-  }
+  },
+  "contentChecked": "2026-08-31"
  },
  "OpenViking": {
   "name": "OpenViking",
@@ -4184,7 +4185,7 @@
   "links": {
    "home": "https://www.comfy.org",
    "docs": "https://docs.comfy.org",
-   "code": "https://github.com/comfyanonymous/ComfyUI"
+   "code": "https://github.com/Comfy-Org/ComfyUI"
   },
   "plans": {
    "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo.",

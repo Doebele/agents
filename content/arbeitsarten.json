@@ -30,7 +30,7 @@
      "Mistral Large 3",
      "Llama 4",
      "gpt-oss",
-     "Ornith 1.0"
+     "Ornith 1.5"
     ],
     "empfehlung": [
      "Claude Opus 5 / Sonnet 5"
@@ -1937,8 +1937,8 @@
    "en": "Start over"
   },
   "blatt_fuss": {
-   "de": "Stand August 2026. Prüf die Angaben, bevor du dich darauf verlässt.",
-   "en": "As of August 2026. Check the details before relying on them."
+   "de": "Stand September 2026. Prüf die Angaben, bevor du dich darauf verlässt.",
+   "en": "As of September 2026. Check the details before relying on them."
   },
   "info": {
    "de": "Steckbrief zu",

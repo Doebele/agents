@@ -28,7 +28,7 @@
    "de": "pro 1M Token",
    "en": "per 1M tokens"
   },
-  "free": true,
+  "free": false,
   "url": "https://www.together.ai",
   "k": "Together AI"
  },

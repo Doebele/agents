@@ -2694,6 +2694,34 @@
   },
   "icon": "google"
  },
+ "buffer-mcp": {
+  "name": "Buffer MCP Server",
+  "vendor": "Buffer",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": false,
+  "blurb": {
+   "de": "Social-Media-Posts aus dem Agenten heraus: Entwürfe schreiben, Posting-Termine setzen, die Warteschlange prüfen, Ideen zwischenspeichern — aus Claude, ChatGPT oder dem Werkzeug, in dem du ohnehin arbeitest. Veröffentlicht wird nichts direkt: Alles landet als Entwurf oder geplanter Post in der Buffer-Warteschlange und geht erst raus, wenn du freigibst. Dafür braucht es ein Buffer-Konto, und der Server kann nur, was Buffers API hergibt.",
+   "en": "Social media posts from inside the agent: draft posts, set publishing times, check the queue, park ideas — from Claude, ChatGPT or whichever tool you work in anyway. Nothing is published directly: everything lands as a draft or scheduled post in the Buffer queue and only goes out once you approve it. For that you need a Buffer account, and the server can only do what Buffer's API exposes."
+  },
+  "tip": {
+   "de": "Der Freigabe-Schritt ist die Sicherung, nicht die Hürde: den Agenten entwerfen und einplanen lassen, aber gegenlesen, bevor etwas in deinem Namen rausgeht. Jede Verbindung läuft über deinen persönlichen API-Schlüssel oder eine OAuth-Anmeldung — Zugang entziehst du wieder, wenn ein Werkzeug sich erledigt hat.",
+   "en": "The approval step is the safety net, not the hurdle: let the agent draft and schedule, but read through before anything goes out in your name. Every connection runs on your personal API key or an OAuth sign-in — revoke the access once a tool has done its job."
+  },
+  "links": {
+   "home": "https://buffer.com/mcp",
+   "docs": "https://developers.buffer.com/guides/integrations/mcp",
+   "code": null
+  },
+  "icon": "buffer",
+  "free": true,
+  "billing": [
+   "abo"
+  ]
+ },
  "Figma": {
   "name": "Figma",
   "vendor": "Figma",

@@ -1315,13 +1315,12 @@
        "04_mcp": {
         "kandidaten": [
          "filesystem-mcp",
-         "gdrive-mcp"
+         "gdrive-mcp",
+         "buffer-mcp"
         ],
-        "empfehlung": [],
-        "luecke": {
-         "de": "Planung und automatisches Posten für soziale Netzwerke führt der Katalog noch nicht — Entwürfe bleiben Handarbeit.",
-         "en": "Planning and auto-posting for social networks is not in the catalogue yet — drafts stay manual work."
-        }
+        "empfehlung": [
+         "buffer-mcp"
+        ]
        },
        "03_skills": {
         "kandidaten": [

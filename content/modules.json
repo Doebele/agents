@@ -596,6 +596,14 @@
        "en": "brain · local"
       },
       "k": "gbrain"
+     },
+     {
+      "n": "Buffer",
+      "v": {
+       "de": "Soziale Netzwerke",
+       "en": "Social networks"
+      },
+      "k": "buffer-mcp"
      }
     ]
    }

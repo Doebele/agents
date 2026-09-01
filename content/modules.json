@@ -571,6 +571,14 @@
       "k": "excel-mcp"
      },
      {
+      "n": "Statista",
+      "v": {
+       "de": "Marktdaten · lizenzpflichtig",
+       "en": "market data · licensed"
+      },
+      "k": "Statista Connect"
+     },
+     {
       "n": {
        "de": "Gedächtnis",
        "en": "Memory"

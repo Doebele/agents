@@ -4612,5 +4612,26 @@
    "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
    "en": "Free (open-weight, MIT), self-hosted"
   }
+ },
+ "Statista Connect": {
+  "name": "Statista Connect",
+  "vendor": "Statista",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "blurb": {
+   "de": "Marktzahlen mit Methodik statt Suchtreffer: Der gehostete MCP-Server von Statista hängt Agenten direkt an den Datenkatalog — sechs Werkzeuge decken Statistiken (Suche plus komplette Zahlenwerte samt Quellen- und Methodikangaben je ID), weltweit umfragedaten (Consumer Insights, kreuztabelliert nach Jahr und Land filterbar) und Marktprognosen für über 1.000 Märkte in über 190 Ländern ab. Angemeldet wird per API-Schlüssel, anbinden lassen sich Claude, Gemini und OpenAI. Der Fang: Der Zugang ist an eine Statista-Lizenz gebunden und wird per Anfrage vergeben — testen ohne Abo geht nicht.",
+   "en": "Market numbers with methodology instead of search hits: Statista's hosted MCP server wires agents straight into the data catalogue — six tools cover statistics (search plus complete numerical values with source and methodology per ID), worldwide survey data (Consumer Insights, cross-tabulated, filterable by year and country) and market forecasts for over 1,000 markets in over 190 countries. Sign-in is by API key; Claude, Gemini and OpenAI are the named clients. The catch: access is tied to a Statista licence and granted on request — no testing without a subscription."
+  },
+  "tip": {
+   "de": "Für Recherchieren und Marktforschung die belegte Stufe über der Websuche: Zahlen mit Quelle und Erhebungsmethode, nicht der nächste Blogpost. Ohne bestehendes Statista-Abo lohnt der Einstieg kaum — der Preis steht erst im Gespräch.",
+   "en": "For research and market analysis the cited step above web search: numbers with source and survey method, not the next blog post. Without an existing Statista subscription the entry cost hardly pays — the price only appears in the sales talk."
+  },
+  "links": {
+   "home": "https://de.statista.com/business/connect-integrations-hub/",
+   "docs": "https://docs.platform.statista.ai/mcp-server/introduction"
+  }
  }
 }

@@ -164,7 +164,8 @@
      "kandidaten": [
       "tavily-mcp",
       "Playwright-mcp",
-      "filesystem-mcp"
+      "filesystem-mcp",
+      "Statista Connect"
      ],
      "empfehlung": [
       "tavily-mcp",
@@ -173,6 +174,10 @@
      "frage": {
       "de": "Woran soll er angeschlossen sein?",
       "en": "What should it be connected to?"
+     },
+     "notiz": {
+      "de": "Statista Connect liefert Marktzahlen mit Methodik und Quelle — der belegte Weg über die Websuche hinaus, wenn ein Statista-Abo da ist.",
+      "en": "Statista Connect supplies market numbers with methodology and source — the cited step beyond web search, if a Statista licence is at hand."
      }
     },
     "05_tools": {
@@ -292,7 +297,8 @@
       "excel-mcp",
       "pdf-mcp",
       "postgres-mcp",
-      "supabase-mcp"
+      "supabase-mcp",
+      "Statista Connect"
      ],
      "empfehlung": [
       "filesystem-mcp",

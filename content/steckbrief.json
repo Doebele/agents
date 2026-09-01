@@ -32,8 +32,8 @@
   "accent": "var(--lime)",
   "open": true,
   "blurb": {
-   "de": "Ein Sprachmodell hat kein Auge. Es baut Oberflächen, die technisch stimmen und trotzdem aussehen wie jede zweite — dieselben Karten, dieselben Verläufe, dieselbe Schrift. Impeccable gibt dem Agenten ein Design-Vokabular und dir 23 Befehle, mit denen du steuerst statt zu hoffen: prüfen, aufräumen, Typografie schärfen, Farbe setzen. Dazu 59 Regeln, die typische KI-Design-Marotten selbsttätig erkennen.",
-   "en": "A language model has no eye. It builds interfaces that are technically fine and still look like every other one — same cards, same gradients, same typeface. Impeccable gives the agent a design vocabulary and you 23 commands to direct with instead of hope: audit, tidy, sharpen typography, set colour. Plus 59 rules that catch the usual AI design tells on their own."
+   "de": "Ein Sprachmodell hat kein Auge. Es baut Oberflächen, die technisch stimmen und trotzdem aussehen wie jede zweite — dieselben Karten, dieselben Verläufe, dieselbe Schrift. Impeccable gibt dem Agenten ein Design-Vokabular und dir 23 Befehle, mit denen du steuerst statt zu hoffen: prüfen, aufräumen, Typografie schärfen, Farbe setzen. Dazu 61 Regeln, die typische KI-Design-Marotten selbsttätig erkennen.",
+   "en": "A language model has no eye. It builds interfaces that are technically fine and still look like every other one — same cards, same gradients, same typeface. Impeccable gives the agent a design vocabulary and you 23 commands to direct with instead of hope: audit, tidy, sharpen typography, set colour. Plus 61 rules that catch the usual AI design tells on their own."
   },
   "tip": {
    "de": "Einrichtung mit npx impeccable install, danach /impeccable init. Der erste Schritt ist ein Interview über Zielgruppe und Produkt — ohne diesen Kontext bleibt auch dieser Skill generisch.",
@@ -43,7 +43,8 @@
    "home": "https://impeccable.style",
    "docs": "https://impeccable.style/tutorials/getting-started/",
    "code": "https://github.com/pbakaus/impeccable"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "skill-creator": {
   "name": "skill-creator",
@@ -177,8 +178,9 @@
   },
   "icon": "google",
   "links": {
-   "home": "https://notebooklm.google/"
-  }
+   "home": "https://notebook.google/"
+  },
+  "contentChecked": "2026-09-01"
  },
  "Perplexity": {
   "name": "Perplexity",
@@ -823,7 +825,8 @@
   "plans": {
    "de": "Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
    "en": "Open source free · LangSmith Plus $39/seat/mo"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "LangChain": {
   "name": "LangChain",
@@ -852,7 +855,8 @@
   "plans": {
    "de": "Framework Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
    "en": "Framework open source free · LangSmith Plus $39/seat/mo"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "CrewAI": {
   "name": "CrewAI",
@@ -1239,7 +1243,8 @@
   "plans": {
    "de": "Kostenlos (Desktop-App, Closed Source)",
    "en": "Free (desktop app, closed source)"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Ollama": {
   "name": "Ollama",
@@ -1375,7 +1380,8 @@
    "home": "https://openai.com",
    "docs": "https://developers.openai.com/api/docs/guides/image-generation",
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Midjourney V8.2": {
   "name": "Midjourney V8.2",
@@ -1421,7 +1427,8 @@
    "home": "https://bfl.ai/models/flux-2",
    "docs": "https://bfl.ai/models/flux-2",
    "code": "https://github.com/black-forest-labs/flux2"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Qwen-Image": {
   "name": "Qwen-Image",
@@ -1467,7 +1474,8 @@
    "docs": "https://ai.google.dev/gemini-api/docs/imagen",
    "code": null
   },
-  "icon": "google"
+  "icon": "google",
+  "contentChecked": "2026-09-01"
  },
  "Ideogram": {
   "name": "Ideogram",
@@ -1490,7 +1498,8 @@
    "home": "https://ideogram.ai/",
    "docs": "https://developer.ideogram.ai/ideogram-api/api-overview",
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Recraft": {
   "name": "Recraft",
@@ -1756,7 +1765,8 @@
    "docs": "https://elevenlabs.io/docs/overview/intro",
    "code": null
   },
-  "icon": "elevenlabs"
+  "icon": "elevenlabs",
+  "contentChecked": "2026-09-01"
  },
  "Suno v5.5": {
   "name": "Suno v5.5",
@@ -1849,7 +1859,8 @@
    "home": "https://huggingface.co/hexgrad/Kokoro-82M",
    "docs": "https://github.com/hexgrad/kokoro",
    "code": "https://github.com/hexgrad/kokoro"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Voxtral": {
   "name": "Voxtral",
@@ -2458,7 +2469,8 @@
    "docs": "https://docs.anthropic.com/en/docs/claude-code/skills",
    "code": "https://github.com/anthropics/skills"
   },
-  "icon": "anthropic"
+  "icon": "anthropic",
+  "contentChecked": "2026-09-01"
  },
  "agentskills.io": {
   "name": "Agent Skills (Open Standard)",
@@ -2704,8 +2716,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Das Standardwerkzeug, in dem Oberflächen entworfen werden, bevor sie jemand baut — im Browser, mit mehreren Leuten gleichzeitig. Für Agenten zählen zwei Zugänge: Figma Make baut aus einer Beschreibung eine lauffähige Oberfläche, und der Dev-Mode-Server lässt einen Agenten den fertigen Entwurf auslesen und in Code übersetzen.",
-   "en": "The standard tool where interfaces are designed before anyone builds them — in the browser, with several people at once. Two doors matter for agents: Figma Make turns a description into a working interface, and the dev-mode server lets an agent read a finished design and translate it into code."
+   "de": "Das Standardwerkzeug, in dem Oberflächen entworfen werden, bevor sie jemand baut — im Browser, mit mehreren Leuten gleichzeitig. Für Agenten zählen zwei Zugänge: Figma Make baut aus einer Beschreibung eine lauffähige Oberfläche, und der Figma-MCP-Server lässt einen Agenten den fertigen Entwurf auslesen und in Code übersetzen — inzwischen auch umgekehrt Rahmen, Komponenten und Variablen auf der Zeichenfläche anlegen.",
+   "en": "The standard tool where interfaces are designed before anyone builds them — in the browser, with several people at once. Two doors matter for agents: Figma Make turns a description into a working interface, and the Figma MCP server lets an agent read a finished design and translate it into code — and by now the other way round too, creating frames, components and variables on the canvas."
   },
   "tip": {
    "de": "Wenn in deinem Umfeld Entwürfe entstehen, liegen sie vermutlich hier. Der MCP-Server ist dann der kürzeste Weg vom Entwurf zum Code.",
@@ -2716,7 +2728,8 @@
    "docs": "https://developers.figma.com/docs/figma-mcp-server/",
    "code": null
   },
-  "icon": "figma"
+  "icon": "figma",
+  "contentChecked": "2026-09-01"
  },
  "pencil.dev": {
   "name": "pencil.dev",
@@ -2801,8 +2814,8 @@
   "name": "Google Antigravity",
   "vendor": "Google",
   "cat": {
-   "de": "Design-Tool · Baustein 07",
-   "en": "Design tool · Block 07"
+   "de": "Entwicklungsumgebung · Baustein 07",
+   "en": "Development environment · Block 07"
   },
   "accent": "var(--amber)",
   "open": false,
@@ -2818,7 +2831,8 @@
    "home": "https://antigravity.google/",
    "docs": "https://antigravity.google/docs/getting-started",
    "code": "https://antigravity.google/download"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Google Stitch": {
   "name": "Stitch",
@@ -2842,7 +2856,8 @@
    "docs": null,
    "code": null
   },
-  "icon": "google"
+  "icon": "google",
+  "contentChecked": "2026-09-01"
  },
  "v0": {
   "name": "v0",
@@ -2889,7 +2904,8 @@
    "home": "https://lovable.dev/",
    "docs": null,
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Bolt.new": {
   "name": "Bolt",
@@ -2912,7 +2928,8 @@
    "home": "https://bolt.new/",
    "docs": "https://support.bolt.new/home",
    "code": "https://github.com/stackblitz-labs/bolt.diy"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Onlook": {
   "name": "Onlook",
@@ -2959,7 +2976,8 @@
    "docs": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
    "code": null
   },
-  "icon": "anthropic"
+  "icon": "anthropic",
+  "contentChecked": "2026-09-01"
  },
  "OpenDesign": {
   "name": "OpenDesign",
@@ -3263,8 +3281,8 @@
   "open": false,
   "free": false,
   "blurb": {
-   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Läuft nur auf dem Mac und wird einmal gekauft statt monatlich gemietet — über die Jahre der günstigere Weg.",
-   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. Mac only, and bought once rather than rented monthly — over the years the cheaper route."
+   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Es gibt eine Mac- und eine iPad-Fassung. Für den Mac lässt es sich weiterhin einmalig kaufen, inzwischen aber auch im Abo Apple Creator Studio mieten — wer es lange behält, fährt mit dem Kauf günstiger.",
+   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. There is a Mac edition and an iPad one. On the Mac you can still buy it outright, but by now it is also rented inside the Apple Creator Studio subscription — keep it for years and buying works out cheaper."
   },
   "tip": {
    "de": "Sinnvoll, sobald ein Projekt mehr als ein paar Clips hat. Vor dem Kauf die kostenlose Testphase nutzen.",
@@ -3272,7 +3290,8 @@
   },
   "links": {
    "home": "https://www.apple.com/final-cut-pro/"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Premiere Pro": {
   "name": {
@@ -3322,7 +3341,8 @@
   },
   "links": {
    "home": "https://www.blackmagicdesign.com/products/davinciresolve"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Avid Media Composer": {
   "name": {
@@ -3347,7 +3367,8 @@
   },
   "links": {
    "home": "https://www.avid.com/media-composer"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "CapCut": {
   "name": {
@@ -3372,7 +3393,8 @@
   },
   "links": {
    "home": "https://www.capcut.com"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Shotcut": {
   "name": {
@@ -3480,7 +3502,8 @@
   },
   "links": {
    "home": "https://www.hostinger.com"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Strato": {
   "name": "Strato",
@@ -3532,7 +3555,8 @@
   },
   "links": {
    "home": "https://www.ionos.de"
-  }
+  },
+  "contentChecked": "2026-09-01"
  },
  "Netlify": {
   "name": "Netlify",

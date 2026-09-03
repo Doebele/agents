@@ -3479,6 +3479,9 @@
    "de": "Monatlich, meist mit langer Mindestlaufzeit für den Werbepreis.",
    "en": "Monthly, usually with a long minimum term for the advertised price."
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://www.hostinger.com"
   },
@@ -3506,6 +3509,9 @@
    "de": "Monatliche Pakete, Domain meist enthalten.",
    "en": "Monthly packages, domain usually included."
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://www.strato.de"
   },
@@ -3533,6 +3539,9 @@
    "de": "Monatlich, gestaffelt vom Paket bis zum eigenen Server.",
    "en": "Monthly, tiered from package to your own server."
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://www.ionos.de"
   },
@@ -3560,6 +3569,9 @@
    "de": "Gratisstufe für kleine Seiten · Personal 9 $ · Pro 20 $/Mo. · darüber Credit-Packs nach Verbrauch",
    "en": "Free tier for small sites · Personal $9 · Pro $20/mo · beyond that credit packs by usage"
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://www.netlify.com"
   },
@@ -3587,6 +3599,9 @@
    "de": "Gratisstufe für private Projekte, danach je Mitglied und Verbrauch.",
    "en": "Free tier for personal projects, then per seat and usage."
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://vercel.com"
   },
@@ -3644,6 +3659,9 @@
    "de": "Gratisstufe mit Einschränkungen, danach je Dienst.",
    "en": "Free tier with limits, then per service."
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://render.com"
   },
@@ -3703,6 +3721,9 @@
    "de": "Abrechnung je 1M Tokens · Vorauskasse (ab 5 $ Guthaben)",
    "en": "Billed per 1M tokens · prepaid (from $5 credit)"
   },
+  "billing": [
+   "api"
+  ],
   "links": {
    "home": "https://www.together.ai"
   },
@@ -3789,6 +3810,9 @@
    "de": "Abrechnung je GPU-Stunde/-Sekunde",
    "en": "Billed per GPU hour/second"
   },
+  "billing": [
+   "api"
+  ],
   "links": {
    "home": "https://www.runpod.io"
   },
@@ -3868,6 +3892,9 @@
    "de": "Monatlich oder stundenweise, je Instanz",
    "en": "Monthly or hourly, per instance"
   },
+  "billing": [
+   "abo"
+  ],
   "icon": "hetzner",
   "links": {
    "home": "https://www.hetzner.com"
@@ -3924,6 +3951,9 @@
    "de": "Abrechnung je Sekunde oder Ergebnis",
    "en": "Billed per second or per output"
   },
+  "billing": [
+   "api"
+  ],
   "icon": "replicate",
   "links": {
    "home": "https://replicate.com"

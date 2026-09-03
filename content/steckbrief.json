@@ -778,7 +778,7 @@
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
   },
-  "plansChecked": "2026-08-31",
+  "plansChecked": "2026-09-03",
   "contentChecked": "2026-09-05"
  },
  "Bionic": {
@@ -845,7 +845,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-31",
+  "plansChecked": "2026-09-03",
   "contentChecked": "2026-09-05"
  },
  "LangChain": {
@@ -880,7 +880,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-31",
+  "plansChecked": "2026-09-03",
   "contentChecked": "2026-09-05"
  },
  "CrewAI": {
@@ -939,9 +939,10 @@
   },
   "free": true,
   "plans": {
-   "de": "Open Source (MIT) kostenlos · Managed Cloud ab 10 €/Mo.",
-   "en": "Open source (MIT) free · managed cloud from €10/mo"
+   "de": "Kostenlos, Open Source (MIT), selbst betrieben",
+   "en": "Free, open source (MIT), self-hosted"
   },
+  "plansChecked": "2026-09-03",
   "contentChecked": "2026-09-05"
  },
  "MS Agent Framework": {
@@ -1217,7 +1218,7 @@
    "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet · ab 700 Mio. monatlich aktiven Nutzern verlangt Meta eine eigene Lizenz",
    "en": "Free (open-weight, Llama 4 Community License), self-hosted · above 700 million monthly active users Meta requires a separate licence"
   },
-  "plansChecked": "2026-08-31"
+  "plansChecked": "2026-09-03"
  },
  "LM Studio": {
   "name": "LM Studio",
@@ -1249,7 +1250,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-31",
+  "plansChecked": "2026-09-03",
   "contentChecked": "2026-09-05"
  },
  "Ollama": {
@@ -1277,15 +1278,16 @@
   "icon": "ollama",
   "free": true,
   "plans": {
-   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Free 0 $ (Startguthaben) · Pro 20 $/Mo. (60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (300 $ Guthaben, 10 gleichzeitige Anfragen) · Team 500 $/Mo. (1.000 $ Guthaben fürs Team, Vorabzugang)",
-   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Free $0 (starter credits) · Pro $20/mo ($60 of credits a month) · Pro Max $100/mo ($300 of credits, 10 concurrent requests) · Team $500/mo ($1,000 of credits for the team, early access)"
+   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Free 0 $ (Startguthaben) · Pro 20 $/Mo. (60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (300 $ Guthaben, 10 gleichzeitige Anfragen) · Team 500 $/Mo. (1.000 $ Guthaben fürs Team, Vorabzugang) · Verbrauch über das Guthaben hinaus wird zusätzlich abgerechnet",
+   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Free $0 (starter credits) · Pro $20/mo ($60 of credits a month) · Pro Max $100/mo ($300 of credits, 10 concurrent requests) · Team $500/mo ($1,000 of credits for the team, early access) · usage beyond the included credits is billed on top"
   },
   "plansJahr": {
-   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Free 0 $ (Startguthaben) · Pro 16,67 $/Mo. (200 $/Jahr, 60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (nur monatlich) · Team 500 $/Mo. (nur monatlich)",
-   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Free $0 (starter credits) · Pro $16.67/mo ($200/year, $60 of credits a month) · Pro Max $100/mo (monthly only) · Team $500/mo (monthly only)"
+   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Free 0 $ (Startguthaben) · Pro 16,67 $/Mo. (200 $/Jahr, 60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (nur monatlich) · Team 500 $/Mo. (nur monatlich) · Verbrauch über das Guthaben hinaus wird zusätzlich abgerechnet",
+   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Free $0 (starter credits) · Pro $16.67/mo ($200/year, $60 of credits a month) · Pro Max $100/mo (monthly only) · Team $500/mo (monthly only) · usage beyond the included credits is billed on top"
   },
   "billing": [
-   "abo"
+   "abo",
+   "api"
   ],
   "plansChecked": "2026-09-06",
   "contentChecked": "2026-09-05"
@@ -1316,7 +1318,8 @@
   "plans": {
    "de": "Kostenlos, Open Source (MIT)",
    "en": "Free, open source (MIT)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "vLLM": {
   "name": "vLLM",
@@ -1372,7 +1375,8 @@
   "plans": {
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "GPT Image 2": {
   "name": "GPT Image 2",
@@ -3100,14 +3104,22 @@
    "en": "The entry point when you like Claude Design but want everything open and local. Bring your own keys: the program is free (Apache 2.0), the model bills run through your own accounts."
   },
   "plans": {
-   "de": "Kostenlos (Apache 2.0) · nur eigene API-Kosten (BYOK)",
-   "en": "Free (Apache 2.0) · only your own API costs (BYOK)"
+   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Plus 20 $/Mo. · Pro 100 $/Mo. · Max 200 $/Mo. · Team 105 $/Sitz/Mo. · Enterprise auf Anfrage · derzeit rabattiert: erster Monat Plus 16 $, Pro 70 $, Max 120 $, Team 63 $/Sitz",
+   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Plus $20/mo · Pro $100/mo · Max $200/mo · Team $105/seat/mo · Enterprise on request · currently discounted: first month Plus $16, Pro $70, Max $120, Team $63/seat"
+  },
+  "plansJahr": {
+   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Plus 14 $/Mo. (168 $/Jahr) · Pro 60 $/Mo. (720 $/Jahr) · Max 98 $/Mo. (1.176 $/Jahr) · Team 105 $/Sitz/Mo. (nur monatlich ausgewiesen) · Enterprise auf Anfrage",
+   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Plus $14/mo ($168/year) · Pro $60/mo ($720/year) · Max $98/mo ($1,176/year) · Team $105/seat/mo (monthly only) · Enterprise on request"
   },
   "links": {
    "home": "https://open-design.ai/",
    "code": "https://github.com/nexu-io/open-design"
   },
-  "plansChecked": "2026-08-31"
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-09-06"
  },
  "Uizard": {
   "name": "Uizard",
@@ -4181,7 +4193,8 @@
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "Distilly": {
   "name": "Distilly",
@@ -4206,10 +4219,11 @@
    "code": "https://github.com/titanwings/distilly"
   },
   "plans": {
-   "de": "Kostenlos (MIT) · einzelne Datenquellen kosten Drittanbieter",
-   "en": "Free (MIT) · individual data sources cost third parties"
+   "de": "Kostenlos (MIT)",
+   "en": "Free (MIT)"
   },
-  "contentChecked": "2026-08-31"
+  "contentChecked": "2026-08-31",
+  "plansChecked": "2026-09-03"
  },
  "OpenViking": {
   "name": "OpenViking",
@@ -4237,7 +4251,7 @@
    "de": "Selbst betrieben kostenlos (AGPLv3, ohne Funktionssperren) · verwaltet auf Volcano Engine mit Gratis-Test bis 50 Dateien; was es darüber kostet, nennt der Anbieter nicht",
    "en": "Self-hosted free (AGPLv3, with no feature gates) · managed on Volcano Engine with a free trial of up to 50 files; the vendor names no price beyond that"
   },
-  "plansChecked": "2026-08-31"
+  "plansChecked": "2026-09-03"
  },
  "OpenPencil": {
   "name": "OpenPencil",
@@ -4265,7 +4279,7 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-08-31"
+  "plansChecked": "2026-09-03"
  },
  "customer-research": {
   "name": "customer-research",
@@ -4292,7 +4306,8 @@
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "cro": {
   "name": "cro",
@@ -4319,7 +4334,8 @@
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "premortem": {
   "name": "premortem",
@@ -4346,7 +4362,8 @@
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "ComfyUI": {
   "name": "ComfyUI",
@@ -4410,7 +4427,8 @@
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "Glaze": {
   "name": "Glaze",
@@ -4560,7 +4578,8 @@
   "plans": {
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "research": {
   "name": "research",
@@ -4587,7 +4606,8 @@
   "plans": {
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "qa": {
   "name": "qa",
@@ -4614,7 +4634,8 @@
   "plans": {
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "to-questionnaire": {
   "name": "to-questionnaire",
@@ -4641,7 +4662,8 @@
   "plans": {
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "Conductor": {
   "name": "Conductor",
@@ -4701,7 +4723,8 @@
   "plans": {
    "de": "Kostenlos (MIT) · lokale PGLite oder eigenes Postgres",
    "en": "Free (MIT) · local PGLite or your own Postgres"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "BRAIN.md": {
   "name": "BRAIN.md",
@@ -4729,7 +4752,7 @@
    "de": "Kostenlos (Apache-2.0)",
    "en": "Free (Apache-2.0)"
   },
-  "plansChecked": "2026-08-31"
+  "plansChecked": "2026-09-03"
  },
  "Notion": {
   "name": "Notion",
@@ -4789,7 +4812,8 @@
   "plans": {
    "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
    "en": "Free (open-weight, MIT), self-hosted"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "Statista Connect": {
   "name": "Statista Connect",

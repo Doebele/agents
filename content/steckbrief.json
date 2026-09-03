@@ -768,7 +768,8 @@
   "plans": {
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "Bionic": {
   "name": "Bionic",
@@ -827,9 +828,14 @@
   "icon": "langchain",
   "free": true,
   "plans": {
-   "de": "Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
-   "en": "Open source free · LangSmith Plus $39/seat/mo"
-  }
+   "de": "Open Source kostenlos (MIT) · LangSmith Developer 0 $, Plus 39 $/Sitz/Mo.",
+   "en": "Open source free (MIT) · LangSmith Developer $0, Plus $39/seat/mo"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-09-03"
  },
  "LangChain": {
   "name": "LangChain",
@@ -856,9 +862,14 @@
   "icon": "langchain",
   "free": true,
   "plans": {
-   "de": "Framework Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
-   "en": "Framework open source free · LangSmith Plus $39/seat/mo"
-  }
+   "de": "Framework Open Source kostenlos · LangSmith Developer 0 $, Plus 39 $/Sitz/Mo., darüber nutzungsabhängig",
+   "en": "Framework open source free · LangSmith Developer $0, Plus $39/seat/mo, usage-based beyond that"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-09-03"
  },
  "CrewAI": {
   "name": "CrewAI",
@@ -916,9 +927,10 @@
   },
   "free": true,
   "plans": {
-   "de": "Open Source (MIT) kostenlos · Managed Cloud ab 10 €/Mo.",
-   "en": "Open source (MIT) free · managed cloud from €10/mo"
-  }
+   "de": "Kostenlos, Open Source (MIT), selbst betrieben",
+   "en": "Free, open source (MIT), self-hosted"
+  },
+  "plansChecked": "2026-09-03"
  },
  "MS Agent Framework": {
   "name": "Microsoft Agent Framework",
@@ -1191,7 +1203,8 @@
   "plans": {
    "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet",
    "en": "Free (open-weight, Llama 4 Community License), self-hosted"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "LM Studio": {
   "name": "LM Studio",
@@ -1217,9 +1230,13 @@
   },
   "free": true,
   "plans": {
-   "de": "Kostenlos (Desktop-App, Closed Source)",
-   "en": "Free (desktop app, closed source)"
-  }
+   "de": "Desktop-App kostenlos (Closed Source) · Cloud-Modelle nach Verbrauch, ab 0,13 $ je 1 Mio. Eingabe-Token",
+   "en": "Free desktop app (closed source) · cloud models pay-as-you-go, from $0.13 per 1M input tokens"
+  },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-09-03"
  },
  "Ollama": {
   "name": "Ollama",
@@ -1246,9 +1263,14 @@
   "icon": "ollama",
   "free": true,
   "plans": {
-   "de": "Kostenlos, Open Source (MIT)",
-   "en": "Free, open source (MIT)"
-  }
+   "de": "Lokal kostenlos, Open Source (MIT) · Cloud-Abos Pro 20 $, Max 100 $, Team 500 $/Mo. mit enthaltenem Guthaben",
+   "en": "Free locally, open source (MIT) · cloud plans Pro $20, Max $100, Team $500/mo with included credits"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-09-03"
  },
  "llama.cpp": {
   "name": "llama.cpp",
@@ -1276,7 +1298,8 @@
   "plans": {
    "de": "Kostenlos, Open Source (MIT)",
    "en": "Free, open source (MIT)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "vLLM": {
   "name": "vLLM",
@@ -1332,7 +1355,8 @@
   "plans": {
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "GPT Image 2": {
   "name": "GPT Image 2",
@@ -2981,13 +3005,18 @@
    "en": "The entry point when you like Claude Design but want everything open and local. Bring your own keys: the program is free (Apache 2.0), the model bills run through your own accounts."
   },
   "plans": {
-   "de": "Kostenlos (Apache 2.0) · nur eigene API-Kosten (BYOK)",
-   "en": "Free (Apache 2.0) · only your own API costs (BYOK)"
+   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel · Cloud-Abos Light 10 $, Plus 20 $, Pro 100 $, Max 200 $/Mo. mit Modell-Guthaben",
+   "en": "Free (Apache 2.0) with your own API key · cloud plans Light $10, Plus $20, Pro $100, Max $200/mo with model credits"
   },
   "links": {
    "home": "https://open-design.ai/",
    "code": "https://github.com/nexu-io/open-design"
-  }
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-09-03"
  },
  "Uizard": {
   "name": "Uizard",
@@ -4014,7 +4043,8 @@
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "dot-skill": {
   "name": "dot-skill",
@@ -4039,9 +4069,10 @@
    "code": "https://github.com/titanwings/colleague-skill"
   },
   "plans": {
-   "de": "Kostenlos (MIT) · einzelne Datenquellen kosten Drittanbieter",
-   "en": "Free (MIT) · individual data sources cost third parties"
-  }
+   "de": "Kostenlos (MIT)",
+   "en": "Free (MIT)"
+  },
+  "plansChecked": "2026-09-03"
  },
  "OpenViking": {
   "name": "OpenViking",
@@ -4068,7 +4099,8 @@
   "plans": {
    "de": "Selbst betrieben kostenlos (AGPLv3) · verwaltet mit Gratis-Teststufe",
    "en": "Self-hosted free (AGPLv3) · managed with a free trial"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "OpenPencil": {
   "name": "OpenPencil",
@@ -4095,7 +4127,8 @@
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "customer-research": {
   "name": "customer-research",
@@ -4122,7 +4155,8 @@
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "cro": {
   "name": "cro",
@@ -4149,7 +4183,8 @@
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "premortem": {
   "name": "premortem",
@@ -4176,7 +4211,8 @@
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "ComfyUI": {
   "name": "ComfyUI",
@@ -4236,7 +4272,8 @@
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "Glaze": {
   "name": "Glaze",
@@ -4386,7 +4423,8 @@
   "plans": {
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "research": {
   "name": "research",
@@ -4413,7 +4451,8 @@
   "plans": {
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "qa": {
   "name": "qa",
@@ -4440,7 +4479,8 @@
   "plans": {
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "to-questionnaire": {
   "name": "to-questionnaire",
@@ -4467,7 +4507,8 @@
   "plans": {
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "Conductor": {
   "name": "Conductor",
@@ -4527,7 +4568,8 @@
   "plans": {
    "de": "Kostenlos (MIT) · lokale PGLite oder eigenes Postgres",
    "en": "Free (MIT) · local PGLite or your own Postgres"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "BRAIN.md": {
   "name": "BRAIN.md",
@@ -4554,7 +4596,8 @@
   "plans": {
    "de": "Kostenlos (Apache-2.0)",
    "en": "Free (Apache-2.0)"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "Notion": {
   "name": "Notion",
@@ -4611,7 +4654,8 @@
   "plans": {
    "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
    "en": "Free (open-weight, MIT), self-hosted"
-  }
+  },
+  "plansChecked": "2026-09-03"
  },
  "Statista Connect": {
   "name": "Statista Connect",

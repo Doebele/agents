@@ -32,8 +32,8 @@
   "accent": "var(--lime)",
   "open": true,
   "blurb": {
-   "de": "Ein Sprachmodell hat kein Auge. Es baut Oberflächen, die technisch stimmen und trotzdem aussehen wie jede zweite — dieselben Karten, dieselben Verläufe, dieselbe Schrift. Impeccable gibt dem Agenten ein Design-Vokabular und dir 23 Befehle, mit denen du steuerst statt zu hoffen: prüfen, aufräumen, Typografie schärfen, Farbe setzen. Dazu 59 Regeln, die typische KI-Design-Marotten selbsttätig erkennen.",
-   "en": "A language model has no eye. It builds interfaces that are technically fine and still look like every other one — same cards, same gradients, same typeface. Impeccable gives the agent a design vocabulary and you 23 commands to direct with instead of hope: audit, tidy, sharpen typography, set colour. Plus 59 rules that catch the usual AI design tells on their own."
+   "de": "Ein Sprachmodell hat kein Auge. Es baut Oberflächen, die technisch stimmen und trotzdem aussehen wie jede zweite — dieselben Karten, dieselben Verläufe, dieselbe Schrift. Impeccable gibt dem Agenten ein Design-Vokabular und dir 23 Befehle, mit denen du steuerst statt zu hoffen: prüfen, aufräumen, Typografie schärfen, Farbe setzen. Dazu 61 Regeln, die typische KI-Design-Marotten selbsttätig erkennen.",
+   "en": "A language model has no eye. It builds interfaces that are technically fine and still look like every other one — same cards, same gradients, same typeface. Impeccable gives the agent a design vocabulary and you 23 commands to direct with instead of hope: audit, tidy, sharpen typography, set colour. Plus 61 rules that catch the usual AI design tells on their own."
   },
   "tip": {
    "de": "Einrichtung mit npx impeccable install, danach /impeccable init. Der erste Schritt ist ein Interview über Zielgruppe und Produkt — ohne diesen Kontext bleibt auch dieser Skill generisch.",
@@ -43,7 +43,8 @@
    "home": "https://impeccable.style",
    "docs": "https://impeccable.style/tutorials/getting-started/",
    "code": "https://github.com/pbakaus/impeccable"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "skill-creator": {
   "name": "skill-creator",
@@ -177,8 +178,9 @@
   },
   "icon": "google",
   "links": {
-   "home": "https://notebooklm.google/"
-  }
+   "home": "https://notebook.google/"
+  },
+  "contentChecked": "2026-09-05"
  },
  "Perplexity": {
   "name": "Perplexity",
@@ -768,7 +770,8 @@
   "plans": {
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Bionic": {
   "name": "Bionic",
@@ -829,7 +832,8 @@
   "plans": {
    "de": "Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
    "en": "Open source free · LangSmith Plus $39/seat/mo"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "LangChain": {
   "name": "LangChain",
@@ -858,7 +862,8 @@
   "plans": {
    "de": "Framework Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
    "en": "Framework open source free · LangSmith Plus $39/seat/mo"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "CrewAI": {
   "name": "CrewAI",
@@ -910,7 +915,7 @@
    "en": "Interesting when several agents should run alongside each other permanently rather than for a single session."
   },
   "links": {
-   "home": "https://github.com/paperclipai/paperclip",
+   "home": "https://paperclip.ing",
    "docs": null,
    "code": "https://github.com/paperclipai/paperclip"
   },
@@ -918,7 +923,8 @@
   "plans": {
    "de": "Open Source (MIT) kostenlos · Managed Cloud ab 10 €/Mo.",
    "en": "Open source (MIT) free · managed cloud from €10/mo"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "MS Agent Framework": {
   "name": "Microsoft Agent Framework",
@@ -1219,7 +1225,8 @@
   "plans": {
    "de": "Kostenlos (Desktop-App, Closed Source)",
    "en": "Free (desktop app, closed source)"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Ollama": {
   "name": "Ollama",
@@ -1231,8 +1238,8 @@
   "accent": "var(--cyan)",
   "open": true,
   "blurb": {
-   "de": "Dasselbe Ziel wie LM Studio, aber über die Kommandozeile: Ein Befehl lädt das Modell und startet es. Zusätzlich läuft es als kleiner Server im Hintergrund, sodass eigene Programme und Agenten das lokale Modell genauso ansprechen können wie eines aus der Cloud.",
-   "en": "The same goal as LM Studio, but through the command line: one command downloads a model and starts it. It also runs as a small background server, so your own programs and agents can address the local model exactly like a cloud one."
+   "de": "Dasselbe Ziel wie LM Studio, nur von der Kommandozeile her gedacht: Ein Befehl lädt das Modell und startet es. Seit 2025 gibt es zusätzlich eine Anwendung mit Fenster für macOS und Windows. Der eigentliche Unterschied bleibt der kleine Server im Hintergrund, über den eigene Programme und Agenten das lokale Modell genauso ansprechen können wie eines aus der Cloud.",
+   "en": "The same goal as LM Studio, but thought out from the command line: one command downloads a model and starts it. Since 2025 there is a windowed app for macOS and Windows as well. The real difference stays the small background server, through which your own programs and agents can address the local model exactly like a cloud one."
   },
   "tip": {
    "de": "Der übliche Weg, wenn ein Agent lokal arbeiten soll: einmal starten, danach greift alles darauf zu.",
@@ -1248,7 +1255,8 @@
   "plans": {
    "de": "Kostenlos, Open Source (MIT)",
    "en": "Free, open source (MIT)"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "llama.cpp": {
   "name": "llama.cpp",
@@ -1355,7 +1363,8 @@
    "home": "https://openai.com",
    "docs": "https://developers.openai.com/api/docs/guides/image-generation",
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Midjourney V8.2": {
   "name": "Midjourney V8.2",
@@ -1573,7 +1582,8 @@
    "home": "https://kling.ai/",
    "docs": "https://kling.ai/document-api/quickStart/productIntroduction/overview",
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Seedance 2.5": {
   "name": "Seedance 2.5",
@@ -1753,7 +1763,8 @@
    "docs": "https://elevenlabs.io/docs/overview/intro",
    "code": null
   },
-  "icon": "elevenlabs"
+  "icon": "elevenlabs",
+  "contentChecked": "2026-09-05"
  },
  "Suno v5.5": {
   "name": "Suno v5.5",
@@ -1846,7 +1857,8 @@
    "home": "https://huggingface.co/hexgrad/Kokoro-82M",
    "docs": "https://github.com/hexgrad/kokoro",
    "code": "https://github.com/hexgrad/kokoro"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Voxtral": {
   "name": "Voxtral",
@@ -2456,10 +2468,11 @@
   },
   "links": {
    "home": "https://github.com/anthropics/skills",
-   "docs": "https://docs.anthropic.com/en/docs/claude-code/skills",
+   "docs": "https://code.claude.com/docs/en/skills",
    "code": "https://github.com/anthropics/skills"
   },
-  "icon": "anthropic"
+  "icon": "anthropic",
+  "contentChecked": "2026-09-05"
  },
  "agentskills.io": {
   "name": "Agent Skills (Open Standard)",
@@ -2528,7 +2541,8 @@
    "home": "https://modelcontextprotocol.io",
    "docs": "https://modelcontextprotocol.io/docs",
    "code": "https://github.com/modelcontextprotocol/modelcontextprotocol"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Playwright-mcp": {
   "name": "Playwright MCP",
@@ -2717,7 +2731,8 @@
    "docs": "https://developers.figma.com/docs/figma-mcp-server/",
    "code": null
   },
-  "icon": "figma"
+  "icon": "figma",
+  "contentChecked": "2026-09-05"
  },
  "pencil.dev": {
   "name": "pencil.dev",
@@ -2764,7 +2779,8 @@
    "docs": "https://help.penpot.app/",
    "code": "https://github.com/penpot/penpot"
   },
-  "icon": "penpot"
+  "icon": "penpot",
+  "contentChecked": "2026-09-05"
  },
  "Paper": {
   "name": "Paper",
@@ -2843,7 +2859,8 @@
    "docs": null,
    "code": null
   },
-  "icon": "google"
+  "icon": "google",
+  "contentChecked": "2026-09-05"
  },
  "v0": {
   "name": "v0",
@@ -2890,7 +2907,8 @@
    "home": "https://lovable.dev/",
    "docs": null,
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Bolt.new": {
   "name": "Bolt",
@@ -2913,7 +2931,8 @@
    "home": "https://bolt.new/",
    "docs": "https://support.bolt.new/home",
    "code": "https://github.com/stackblitz-labs/bolt.diy"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Onlook": {
   "name": "Onlook",
@@ -2936,7 +2955,8 @@
    "home": "https://onlook.com/",
    "docs": null,
    "code": "https://github.com/onlook-dev/onlook"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Claude Design": {
   "name": "Claude Design",
@@ -2960,7 +2980,8 @@
    "docs": "https://support.claude.com/en/articles/14604416-get-started-with-claude-design",
    "code": null
   },
-  "icon": "anthropic"
+  "icon": "anthropic",
+  "contentChecked": "2026-09-05"
  },
  "OpenDesign": {
   "name": "OpenDesign",
@@ -3323,7 +3344,8 @@
   },
   "links": {
    "home": "https://www.blackmagicdesign.com/products/davinciresolve"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Avid Media Composer": {
   "name": {
@@ -3348,7 +3370,8 @@
   },
   "links": {
    "home": "https://www.avid.com/media-composer"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "CapCut": {
   "name": {
@@ -3373,7 +3396,8 @@
   },
   "links": {
    "home": "https://www.capcut.com"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "Shotcut": {
   "name": {
@@ -3423,7 +3447,8 @@
   },
   "links": {
    "home": "https://www.openshot.org"
-  }
+  },
+  "contentChecked": "2026-09-05"
  },
  "DeepSeek Harness": {
   "name": "DeepSeek Harness",

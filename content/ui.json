@@ -8,8 +8,8 @@
   "en": "<title>AGENT // SYSTEM — A Field Guide to the AI Agent Landscape</title>"
  },
  "t003": {
-  "de": "<meta name=\"description\" content=\"Sieben Bausteine, eine Schleife: ein interaktiver Feldführer durch die KI-Agenten-Landschaft. Für Einsteiger. Stand August 2026.\" />",
-  "en": "<meta name=\"description\" content=\"Seven building blocks, one loop: an interactive field guide to the AI agent landscape. For beginners. As of August 2026.\" />"
+  "de": "<meta name=\"description\" content=\"Sieben Bausteine, eine Schleife: ein interaktiver Feldführer durch die KI-Agenten-Landschaft. Für Einsteiger. Stand September 2026.\" />",
+  "en": "<meta name=\"description\" content=\"Seven building blocks, one loop: an interactive field guide to the AI agent landscape. For beginners. As of September 2026.\" />"
  },
  "t004": {
   "de": "/*  AGENT // SYSTEM | Darkmode-Feldführer                                   */",
@@ -60,8 +60,8 @@
   "en": "      <span class=\"pill\">For <b>beginners</b></span>"
  },
  "t016": {
-  "de": "      <span class=\"pill\">Stand <b>August 2026</b></span>",
-  "en": "      <span class=\"pill\">As of <b>August 2026</b></span>"
+  "de": "      <span class=\"pill\">Stand <b>September 2026</b></span>",
+  "en": "      <span class=\"pill\">As of <b>September 2026</b></span>"
  },
  "t017": {
   "de": "      <span class=\"pill\"><b>{{N:STECKBRIEF}}</b> Steckbriefe</span>",
@@ -108,8 +108,8 @@
   "en": "        <h2 id=\"modstitel\">Seven building blocks, <em>one loop.</em></h2>"
  },
  "t028": {
-  "de": "        <p>Jeder Agent besteht aus diesen Teilen. Tippe ein Modul an. Dahinter stehen die echten Werkzeuge und Modelle von August 2026.</p>",
-  "en": "        <p>Every agent is built from these parts. Tap a module. Behind each one are the real tools and models as of August 2026.</p>"
+  "de": "        <p>Jeder Agent besteht aus diesen Teilen. Tippe ein Modul an. Dahinter stehen die echten Werkzeuge und Modelle von September 2026.</p>",
+  "en": "        <p>Every agent is built from these parts. Tap a module. Behind each one are the real tools and models as of September 2026.</p>"
  },
  "t029": {
   "de": "<svg class=\"loop-svg\" viewBox=\"0 0 1000 830\" id=\"loopsvg\" role=\"img\" aria-label=\"Der Agenten-Kreislauf: Denken, Handeln, Beobachten\">",
@@ -236,8 +236,8 @@
   "en": "      <span>AGENT // SYSTEM · Field guide to AI agents</span>"
  },
  "t064": {
-  "de": "      <span>Stand August 2026 · Zum Weiterbauen gedacht</span>",
-  "en": "      <span>As of August 2026 · meant to be built upon</span>"
+  "de": "      <span>Stand September 2026 · Zum Weiterbauen gedacht</span>",
+  "en": "      <span>As of September 2026 · meant to be built upon</span>"
  },
  "t065": {
   "de": "<div class=\"spot\" id=\"spot\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Suche\">",
@@ -372,8 +372,8 @@
   "en": "    <section id=\"lg-imp\">\n      <h3>Imprint</h3>\n      <p><b>Information pursuant to § 5 DDG</b><br>\n      (German Digital Services Act)</p>\n      <p>Claus Medvesek<br>\n      Ringstrasse 10<br>\n      8274 Tägerwilen<br>\n      Switzerland<br>\n      Email: <a href=\"mailto:medvesek@gmail.com\">medvesek@gmail.com</a></p>\n      <p><b>Responsible for the content of this site</b><br>\n      pursuant to § 18 (2) MStV: Claus Medvesek, address as above.</p>\n      <p><b>Provider and hosting</b><br>\n      This sub-site consists of two self-contained files (one per language) —\n      no tracking, no cookies, no analytics. Hosted by STRATO AG,\n      Pascalstraße 10, 10587 Berlin, Germany; domain: medvesek.com.</p>\n      <p><b>Copyright</b><br>\n      The texts, diagrams and structure of this site are our own work. Use with\n      attribution is permitted; for icons and third-party trademarks the\n      disclaimer applies — the rights rest with their owners.</p>\n    </section>"
  },
  "t099": {
-  "de": "    <section id=\"lg-dis\">\n      <h3>Disclaimer</h3>\n      <p><b>Icons und Logos.</b> Die Oberflächen-Icons stammen aus\n      <a href=\"https://iconoir.com\" target=\"_blank\" rel=\"noopener noreferrer\">Iconoir</a>\n      (MIT-Lizenz). Hersteller-Logos werden über\n      <a href=\"https://simpleicons.org\" target=\"_blank\" rel=\"noopener noreferrer\">Simple Icons</a>\n      eingebunden. Alle Marken, Produktnamen, Logos und Warenzeichen gehören\n      ihren jeweiligen Eigentümern. Sie werden ausschließlich zur Identifikation\n      der genannten Dienste verwendet — keine Verbindung, keine Empfehlung,\n      kein Endorsement.</p>\n      <p><b>Angaben und Quellen.</b> Alle Angaben stehen unter dem Vorbehalt\n      „Stand August 2026\" und ohne Gewähr: Preise, Stufen und Konditionen\n      ändern sich häufig und können veraltet oder unvollständig sein. Jeder\n      Steckbrief verlinkt seine Quelle; die Kennzahlen der Modelle stammen von\n      <a href=\"https://artificialanalysis.ai\" target=\"_blank\" rel=\"noopener noreferrer\">Artificial Analysis</a>,\n      deren Ränge immer relativ zur jeweiligen Vergleichsklasse sind. Für\n      Entscheidungen, die auf Zahlen dieser Seite gestützt werden, gilt:\n      selber nachprüfen.</p>\n      <p><b>Externe Links.</b> Für Inhalte verlinkter Seiten sind allein deren\n      Betreiber verantwortlich; ein Link ist keine Übernahme der Inhalte.</p>\n      <p><b>Pflege.</b> Der Katalog wird maschinell gepflegt und vor jedem\n      Veröffentlichen von Menschen geprüft — Fehler sind trotzdem möglich.\n      Korrekturen sind im Repository willkommen.</p>\n    </section>",
-  "en": "    <section id=\"lg-dis\">\n      <h3>Disclaimer</h3>\n      <p><b>Icons and logos.</b> The interface icons come from\n      <a href=\"https://iconoir.com\" target=\"_blank\" rel=\"noopener noreferrer\">Iconoir</a>\n      (MIT licence). Vendor logos are served through\n      <a href=\"https://simpleicons.org\" target=\"_blank\" rel=\"noopener noreferrer\">Simple Icons</a>.\n      All brands, product names, logos and trademarks belong to their\n      respective owners. They are used solely to identify the services named —\n      no affiliation, no recommendation, no endorsement.</p>\n      <p><b>Facts and sources.</b> Everything on this page carries the caveat\n      “as of August 2026” and no guarantee: prices, tiers and conditions\n      change often and may be outdated or incomplete. Every fact sheet links\n      its source; the model metrics come from\n      <a href=\"https://artificialanalysis.ai\" target=\"_blank\" rel=\"noopener noreferrer\">Artificial Analysis</a>,\n      whose ranks are always relative to a comparison class. For any decision\n      built on numbers from this page: verify them yourself.</p>\n      <p><b>External links.</b> Linked pages are the responsibility of their\n      operators alone; a link is not an adoption of their content.</p>\n      <p><b>Maintenance.</b> The catalogue is maintained by machines and\n      reviewed by a human before anything goes live — mistakes are still\n      possible. Corrections are welcome in the repository.</p>\n    </section>"
+  "de": "    <section id=\"lg-dis\">\n      <h3>Disclaimer</h3>\n      <p><b>Icons und Logos.</b> Die Oberflächen-Icons stammen aus\n      <a href=\"https://iconoir.com\" target=\"_blank\" rel=\"noopener noreferrer\">Iconoir</a>\n      (MIT-Lizenz). Hersteller-Logos werden über\n      <a href=\"https://simpleicons.org\" target=\"_blank\" rel=\"noopener noreferrer\">Simple Icons</a>\n      eingebunden. Alle Marken, Produktnamen, Logos und Warenzeichen gehören\n      ihren jeweiligen Eigentümern. Sie werden ausschließlich zur Identifikation\n      der genannten Dienste verwendet — keine Verbindung, keine Empfehlung,\n      kein Endorsement.</p>\n      <p><b>Angaben und Quellen.</b> Alle Angaben stehen unter dem Vorbehalt\n      „Stand September 2026\" und ohne Gewähr: Preise, Stufen und Konditionen\n      ändern sich häufig und können veraltet oder unvollständig sein. Jeder\n      Steckbrief verlinkt seine Quelle; die Kennzahlen der Modelle stammen von\n      <a href=\"https://artificialanalysis.ai\" target=\"_blank\" rel=\"noopener noreferrer\">Artificial Analysis</a>,\n      deren Ränge immer relativ zur jeweiligen Vergleichsklasse sind. Für\n      Entscheidungen, die auf Zahlen dieser Seite gestützt werden, gilt:\n      selber nachprüfen.</p>\n      <p><b>Externe Links.</b> Für Inhalte verlinkter Seiten sind allein deren\n      Betreiber verantwortlich; ein Link ist keine Übernahme der Inhalte.</p>\n      <p><b>Pflege.</b> Der Katalog wird maschinell gepflegt und vor jedem\n      Veröffentlichen von Menschen geprüft — Fehler sind trotzdem möglich.\n      Korrekturen sind im Repository willkommen.</p>\n    </section>",
+  "en": "    <section id=\"lg-dis\">\n      <h3>Disclaimer</h3>\n      <p><b>Icons and logos.</b> The interface icons come from\n      <a href=\"https://iconoir.com\" target=\"_blank\" rel=\"noopener noreferrer\">Iconoir</a>\n      (MIT licence). Vendor logos are served through\n      <a href=\"https://simpleicons.org\" target=\"_blank\" rel=\"noopener noreferrer\">Simple Icons</a>.\n      All brands, product names, logos and trademarks belong to their\n      respective owners. They are used solely to identify the services named —\n      no affiliation, no recommendation, no endorsement.</p>\n      <p><b>Facts and sources.</b> Everything on this page carries the caveat\n      “as of September 2026” and no guarantee: prices, tiers and conditions\n      change often and may be outdated or incomplete. Every fact sheet links\n      its source; the model metrics come from\n      <a href=\"https://artificialanalysis.ai\" target=\"_blank\" rel=\"noopener noreferrer\">Artificial Analysis</a>,\n      whose ranks are always relative to a comparison class. For any decision\n      built on numbers from this page: verify them yourself.</p>\n      <p><b>External links.</b> Linked pages are the responsibility of their\n      operators alone; a link is not an adoption of their content.</p>\n      <p><b>Maintenance.</b> The catalogue is maintained by machines and\n      reviewed by a human before anything goes live — mistakes are still\n      possible. Corrections are welcome in the repository.</p>\n    </section>"
  },
  "t100": {
   "de": "      <span><button type=\"button\" class=\"lgl\" data-lgl=\"lg-imp\">Impressum</button> · <button type=\"button\" class=\"lgl\" data-lgl=\"lg-dis\">Disclaimer</button></span>",

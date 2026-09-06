@@ -1589,8 +1589,9 @@ if(!COARSE && !PRM){
   const cur = $('#cur'), dot = $('#curdot');
   let cx=innerWidth/2, cy=innerHeight/2, tx=cx, ty=cy;
   addEventListener('mousemove', e=>{ tx=e.clientX; ty=e.clientY; dot.style.transform=`translate(${tx}px,${ty}px) translate(-50%,-50%)`; });
-  /* Der Punkt sitzt genau auf der Maus, das Kreuz zieht weich nach. */
-  (function loop(){ cx+=(tx-cx)*.18; cy+=(ty-cy)*.18;
+  /* Der Punkt sitzt genau auf der Maus, das Kreuz zieht weich nach —
+     Faktor 0.45 statt 0.18: folgt deutlich schneller, behält ein Rest Gewicht. */
+  (function loop(){ cx+=(tx-cx)*.45; cy+=(ty-cy)*.45;
     cur.style.left=cx+'px'; cur.style.top=cy+'px'; requestAnimationFrame(loop); })();
   /* Alles, was der Zeiger als bedienbar melden soll — inklusive der Teile,
      die es erst mit dem Wizard gab. */

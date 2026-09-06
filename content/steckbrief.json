@@ -1384,7 +1384,7 @@
    "en": "If words should appear in the image, put the exact wording in quotation marks in your prompt."
   },
   "links": {
-   "home": "https://openai.com",
+   "home": "https://developers.openai.com/api/docs/models/gpt-image-2",
    "docs": "https://developers.openai.com/api/docs/guides/image-generation",
    "code": null
   },
@@ -1439,7 +1439,8 @@
    "home": "https://bfl.ai/models/flux-2",
    "docs": "https://bfl.ai/models/flux-2",
    "code": "https://github.com/black-forest-labs/flux2"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Qwen-Image": {
   "name": "Qwen-Image",
@@ -1485,7 +1486,8 @@
    "docs": "https://ai.google.dev/gemini-api/docs/imagen",
    "code": null
   },
-  "icon": "google"
+  "icon": "google",
+  "contentChecked": "2026-08-29"
  },
  "Ideogram": {
   "name": "Ideogram",
@@ -1508,7 +1510,8 @@
    "home": "https://ideogram.ai/",
    "docs": "https://developer.ideogram.ai/ideogram-api/api-overview",
    "code": null
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Recraft": {
   "name": "Recraft",
@@ -2759,6 +2762,34 @@
    "code": "https://github.com/samuelgursky/davinci-resolve-mcp"
   }
  },
+ "buffer-mcp": {
+  "name": "Buffer MCP Server",
+  "vendor": "Buffer",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": false,
+  "blurb": {
+   "de": "Social-Media-Posts aus dem Agenten heraus: Entwürfe schreiben, Posting-Termine setzen, die Warteschlange prüfen, Ideen zwischenspeichern — aus Claude, ChatGPT oder dem Werkzeug, in dem du ohnehin arbeitest. Veröffentlicht wird nichts direkt: Alles landet als Entwurf oder geplanter Post in der Buffer-Warteschlange und geht erst raus, wenn du freigibst. Dafür braucht es ein Buffer-Konto, und der Server kann nur, was Buffers API hergibt.",
+   "en": "Social media posts from inside the agent: draft posts, set publishing times, check the queue, park ideas — from Claude, ChatGPT or whichever tool you work in anyway. Nothing is published directly: everything lands as a draft or scheduled post in the Buffer queue and only goes out once you approve it. For that you need a Buffer account, and the server can only do what Buffer's API exposes."
+  },
+  "tip": {
+   "de": "Der Freigabe-Schritt ist die Sicherung, nicht die Hürde: den Agenten entwerfen und einplanen lassen, aber gegenlesen, bevor etwas in deinem Namen rausgeht. Jede Verbindung läuft über deinen persönlichen API-Schlüssel oder eine OAuth-Anmeldung — Zugang entziehst du wieder, wenn ein Werkzeug sich erledigt hat.",
+   "en": "The approval step is the safety net, not the hurdle: let the agent draft and schedule, but read through before anything goes out in your name. Every connection runs on your personal API key or an OAuth sign-in — revoke the access once a tool has done its job."
+  },
+  "links": {
+   "home": "https://buffer.com/mcp",
+   "docs": "https://developers.buffer.com/guides/integrations/mcp",
+   "code": null
+  },
+  "icon": "buffer",
+  "free": true,
+  "billing": [
+   "abo"
+  ]
+ },
  "Figma": {
   "name": "Figma",
   "vendor": "Figma",
@@ -2769,8 +2800,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Das Standardwerkzeug, in dem Oberflächen entworfen werden, bevor sie jemand baut — im Browser, mit mehreren Leuten gleichzeitig. Für Agenten zählen zwei Zugänge: Figma Make baut aus einer Beschreibung eine lauffähige Oberfläche, und der Dev-Mode-Server lässt einen Agenten den fertigen Entwurf auslesen und in Code übersetzen.",
-   "en": "The standard tool where interfaces are designed before anyone builds them — in the browser, with several people at once. Two doors matter for agents: Figma Make turns a description into a working interface, and the dev-mode server lets an agent read a finished design and translate it into code."
+   "de": "Das Standardwerkzeug, in dem Oberflächen entworfen werden, bevor sie jemand baut — im Browser, mit mehreren Leuten gleichzeitig. Für Agenten zählen zwei Zugänge: Figma Make baut aus einer Beschreibung eine lauffähige Oberfläche, und der Figma-MCP-Server lässt einen Agenten den fertigen Entwurf auslesen und in Code übersetzen.",
+   "en": "The standard tool where interfaces are designed before anyone builds them — in the browser, with several people at once. Two doors matter for agents: Figma Make turns a description into a working interface, and the Figma MCP server lets an agent read a finished design and translate it into code."
   },
   "tip": {
    "de": "Wenn in deinem Umfeld Entwürfe entstehen, liegen sie vermutlich hier. Der MCP-Server ist dann der kürzeste Weg vom Entwurf zum Code.",
@@ -2874,8 +2905,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Googles Entwicklungsumgebung für den Fall, dass nicht ein Agent arbeitet, sondern mehrere gleichzeitig — jeder an seiner Aufgabe, nebeneinander in einem Fenster. Ein Programm für den Schreibtisch, kein Dienst im Browser. Seit 2.0 gehört eine Kommandozeile dazu.",
-   "en": "Google's development environment for the case where not one agent works but several at once — each on its own task, side by side in one window. A program for the desktop, not a service in the browser. Since 2.0 a command line ships along."
+   "de": "Googles Entwicklungsumgebung für den Fall, dass nicht ein Agent arbeitet, sondern mehrere gleichzeitig — jeder an seiner Aufgabe, nebeneinander in einem Fenster. Ein Programm für den Schreibtisch: Die Arbeit läuft auf deinem Rechner, seit Remote Control lässt sie sich aber aus jedem Browser weitersteuern. Seit 2.0 gehört eine Kommandozeile dazu.",
+   "en": "Google's development environment for the case where not one agent works but several at once — each on its own task, side by side in one window. A program for the desktop: the work runs on your own machine, though since Remote Control you can drive it on from any browser. Since 2.0 a command line ships along."
   },
   "tip": {
    "de": "Erst sinnvoll, wenn eine Aufgabe sich wirklich in unabhängige Teile zerlegen lässt. Sonst warten mehrere Agenten nur aufeinander.",
@@ -2885,7 +2916,8 @@
    "home": "https://antigravity.google/",
    "docs": "https://antigravity.google/docs/getting-started",
    "code": "https://antigravity.google/download"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Google Stitch": {
   "name": "Stitch",
@@ -3336,8 +3368,8 @@
   "open": false,
   "free": false,
   "blurb": {
-   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Läuft nur auf dem Mac und wird einmal gekauft statt monatlich gemietet — über die Jahre der günstigere Weg. Seit 2026 gibt es daneben das Apple-Creator-Studio-Abo (12,99 $/Monat) mit Final Cut darin; der Einmalkauf bleibt bestehen.",
-   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. Mac only, and bought once rather than rented monthly — over the years the cheaper route. Since 2026 the Apple Creator Studio subscription ($12.99/month) also includes Final Cut; the one-time purchase remains."
+   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Läuft auf dem Mac und auf dem iPad. Für den Mac gibt es beide Wege: einmal kaufen oder das Apple-Creator-Studio-Abo (12,99 $/Monat), in dem zusätzliche Funktionen stecken; der Einmalkauf bleibt bestehen.",
+   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. Runs on the Mac and on the iPad. On the Mac both routes exist: buy it once, or take the Apple Creator Studio subscription ($12.99/month), which carries extra features; the one-time purchase remains."
   },
   "tip": {
    "de": "Sinnvoll, sobald ein Projekt mehr als ein paar Clips hat. Vor dem Kauf die kostenlose Testphase nutzen.",
@@ -3345,7 +3377,8 @@
   },
   "links": {
    "home": "https://www.apple.com/final-cut-pro/"
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Premiere Pro": {
   "name": {
@@ -3561,7 +3594,8 @@
   "links": {
    "home": "https://www.hostinger.com"
   },
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-06",
+  "contentChecked": "2026-08-29"
  },
  "Strato": {
   "name": "Strato",
@@ -3621,7 +3655,8 @@
   "links": {
    "home": "https://www.ionos.de"
   },
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-06",
+  "contentChecked": "2026-08-29"
  },
  "Netlify": {
   "name": "Netlify",

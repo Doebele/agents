@@ -199,15 +199,16 @@
   },
   "free": true,
   "plans": {
-   "de": "Kostenlos · Pro 20 $/Mo.",
-   "en": "Free · Pro $20/mo"
+   "de": "Kostenlos · Pro 20 $/Mo. · Max 200 $/Mo.",
+   "en": "Free · Pro $20/mo · Max $200/mo"
   },
   "icon": "perplexity",
   "links": {
    "home": "https://www.perplexity.ai/",
    "docs": "https://docs.perplexity.ai/",
    "code": "https://github.com/perplexityai/modelcontextprotocol"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Internxt": {
   "name": "Internxt",
@@ -231,11 +232,15 @@
    "de": "1 GB kostenlos · 1–5 TB, auch als Lebenszeit-Zahlung",
    "en": "1 GB free · 1–5 TB, lifetime payments available"
   },
+  "billing": [
+   "abo"
+  ],
   "icon": "internxt",
   "links": {
    "home": "https://internxt.com",
    "code": "https://github.com/internxt"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Obsidian": {
   "name": "Obsidian",
@@ -251,8 +256,8 @@
    "en": "A notes app that keeps your writing as ordinary Markdown files in a folder on your disk — no account, no cloud, works offline. That is exactly what makes it interesting for agents: whatever sits on disk as a file is reachable through the filesystem server, no integration needed."
   },
   "tip": {
-   "de": "Für die persönliche Nutzung kostenlos. Wenn du eine Wissensablage suchst, auf die dein Agent zugreifen soll, ist der schlichte Ordner mit Textdateien der einfachste Weg.",
-   "en": "Free for personal use. If you want a knowledge base your agent can reach, a plain folder of text files is the simplest route."
+   "de": "Kostenlos — auch im Beruf, eine Lizenzpflicht gibt es nicht. Wer mag, kauft die freiwillige Commercial-Lizenz und unterstützt damit die Entwicklung.",
+   "en": "Free — including for work, no licence required. If you like, the voluntary commercial licence supports development."
   },
   "free": true,
   "icon": "obsidian",
@@ -345,7 +350,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-24"
+  "plansChecked": "2026-09-01"
  },
  "Agent SDK": {
   "name": "Claude Agent SDK",
@@ -398,7 +403,7 @@
    "en": "Set up as a reviewer on GitHub pull requests it comments on changes by itself — the most comfortable entry point, because there is nothing to install."
   },
   "links": {
-   "home": "https://chatgpt.com/codex/",
+   "home": "https://openai.com/codex",
    "docs": "https://learn.chatgpt.com/docs",
    "code": "https://github.com/openai/codex"
   },
@@ -440,13 +445,14 @@
    ]
   },
   "plans": {
-   "de": "In ChatGPT-Plänen (Free–Pro 200 $) · Pro bis zu 5×/20× Plus-Kontingent · API nutzungsabhängig",
-   "en": "Included in ChatGPT plans (free–Pro $200) · Pro gets up to 5×/20× the Plus quota · usage-based API"
+   "de": "In jedem ChatGPT-Plan enthalten: Free 0 $ · Go 8 $ · Plus 20 $ · Pro ab 100 $ · Business 20 $/Sitz/Mo. · Kontingent je 5-Stunden-Fenster, Pro mit 5× bis 20× des Plus-Kontingents · in CLI, SDK und IDE auch mit API-Schlüssel nach Verbrauch",
+   "en": "Included in every ChatGPT plan: Free $0 · Go $8 · Plus $20 · Pro from $100 · Business $20/seat/mo · quota per 5-hour window, Pro at 5× to 20× the Plus quota · in the CLI, SDK and IDE also usable with an API key, billed by usage"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-27"
  },
  "Agents SDK": {
   "name": "OpenAI Agents SDK",
@@ -532,7 +538,8 @@
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-09-01"
  },
  "ZCode": {
   "name": "ZCode",
@@ -564,7 +571,8 @@
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-09-01"
  },
  "Grok Build": {
   "name": "Grok Build",
@@ -648,7 +656,8 @@
   "plans": {
    "de": "Editor kostenlos · Pro 10 $/Mo.",
    "en": "Editor free · Pro $10/mo"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Cursor": {
   "name": "Cursor",
@@ -762,7 +771,8 @@
   "plans": {
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Bionic": {
   "name": "Bionic",
@@ -821,9 +831,14 @@
   "icon": "langchain",
   "free": true,
   "plans": {
-   "de": "Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
-   "en": "Open source free · LangSmith Plus $39/seat/mo"
-  }
+   "de": "Open Source kostenlos (MIT) · bezahlt wird erst die Plattform darum herum: LangSmith Developer 0 $/Sitz, Plus 39 $/Sitz/Mo.",
+   "en": "Free and open source (MIT) · you only pay for the platform around it: LangSmith Developer $0/seat, Plus $39/seat/mo"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "LangChain": {
   "name": "LangChain",
@@ -850,9 +865,14 @@
   "icon": "langchain",
   "free": true,
   "plans": {
-   "de": "Framework Open Source kostenlos · LangSmith Plus 39 $/Sitz/Mo.",
-   "en": "Framework open source free · LangSmith Plus $39/seat/mo"
-  }
+   "de": "Framework Open Source kostenlos · LangSmith Developer 0 $/Sitz mit 5.000 Traces/Mo., Plus 39 $/Sitz mit 10.000 · darüber nach Verbrauch (1,50 $ je Compute-Einheit, 1 $ je Storage-Einheit)",
+   "en": "Framework free and open source · LangSmith Developer $0/seat with 5,000 traces/mo, Plus $39/seat with 10,000 · beyond that pay-as-you-go ($1.50 per compute unit, $1.00 per storage unit)"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "CrewAI": {
   "name": "CrewAI",
@@ -1004,11 +1024,10 @@
   "icon": "alibabacloud",
   "free": true,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/qwen3-max",
+   "url": "https://artificialanalysis.ai/models/qwen3-8-max",
    "intel": {
-    "v": "24",
-    "rank": "#28/67",
-    "u": 3
+    "v": "58",
+    "rank": "#13/187"
    },
    "speed": {
     "v": "61.4",
@@ -1016,7 +1035,7 @@
     "u": 2
    },
    "cost": {
-    "v": "$1.20/$6.00"
+    "v": "$2/$6"
    }
   },
   "plans": {
@@ -1025,7 +1044,8 @@
   },
   "billing": [
    "api"
-  ]
+  ],
+  "plansChecked": "2026-09-01"
  },
  "gpt-oss": {
   "name": "gpt-oss",
@@ -1076,7 +1096,8 @@
   "plans": {
    "de": "Kostenlos (Open-Weight, Apache 2.0), selbst gehostet",
    "en": "Free (open-weight, Apache 2.0), self-hosted"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Mistral Large 3": {
   "name": "Mistral Large 3",
@@ -1110,8 +1131,8 @@
     "u": 2
    },
    "speed": {
-    "v": "52.9",
-    "rank": "#12/44",
+    "v": "78.4",
+    "rank": "#6/44",
     "u": 2
    },
    "cost": {
@@ -1126,12 +1147,14 @@
    }
   },
   "plans": {
-   "de": "Open-Weight (Apache 2.0) · API 0,50 $/1,50 $ pro 1M Token",
-   "en": "Open-weight (Apache 2.0) · API $0.50/$1.50 per 1M tokens"
+   "de": "Open-Weight (Apache 2.0) · API 0,50 $ Eingabe / 1,50 $ Ausgabe pro 1M Token (die Preisseite nennt das Modell «Mistral Large») · Gratisstufe mit 10 $ API-Guthaben je Monat · Vibe Pro 14,99 $/Mo. (Studenten 5,99 $), Vibe Team 24,99 $/Nutzer/Mo. ab 50 $/Mo.",
+   "en": "Open-weight (Apache 2.0) · API $0.50 input / $1.50 output per 1M tokens (the pricing page calls the model «Mistral Large») · free tier with $10 a month in API credits · Vibe Pro $14.99/mo (students $5.99), Vibe Team $24.99/user/mo with a $50/mo minimum"
   },
   "billing": [
+   "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-27"
  },
  "Llama 4": {
   "name": "Llama 4",
@@ -1147,8 +1170,8 @@
    "en": "Meta's open model family, processing text and image together from the ground up. Two variants: Scout is built for very long inputs, Maverick is the all-rounder. Technically a mixture-of-experts — only part of the model works per request, which saves compute."
   },
   "tip": {
-   "de": "Die am weitesten verbreitete offene Familie; entsprechend viele Anleitungen und Werkzeuge sind darauf abgestimmt.",
-   "en": "The most widely used open family, so a great many guides and tools are tuned for it."
+   "de": "Die am weitesten verbreitete offene Familie; entsprechend viele Anleitungen und Werkzeuge sind darauf abgestimmt. Metas neuere Modelllinie heißt inzwischen Muse — von Muse Glimmer 30B und Muse Spark 1.2 gibt es ebenfalls offene Gewichte.",
+   "en": "The most widely used open family, so a great many guides and tools are tuned for it. Meta's newer model line is now called Muse — Muse Glimmer 30B and Muse Spark 1.2 have shipped open weights as well."
   },
   "links": {
    "home": "https://developer.meta.com/ai/models/llama-4/",
@@ -1165,12 +1188,12 @@
     "u": 2
    },
    "speed": {
-    "v": "117.6",
-    "rank": "#2/44",
+    "v": "84.1",
+    "rank": "#4/44",
     "u": 4
    },
    "cost": {
-    "v": "$0.27/$0.85",
+    "v": "$0.26/$0.91",
     "rank": "#2/44",
     "u": 2
    },
@@ -1181,37 +1204,10 @@
    }
   },
   "plans": {
-   "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet",
-   "en": "Free (open-weight, Llama 4 Community License), self-hosted"
-  }
- },
- "Ornith 1.0": {
-  "name": "Ornith 1.0",
-  "vendor": "DeepReinforce",
-  "cat": {
-   "de": "Sprachmodell · Baustein 01",
-   "en": "Open-weight · Block 01"
+   "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet · ab 700 Mio. monatlich aktiven Nutzern verlangt Meta eine eigene Lizenz",
+   "en": "Free (open-weight, Llama 4 Community License), self-hosted · above 700 million monthly active users Meta requires a separate licence"
   },
-  "accent": "var(--cyan)",
-  "open": true,
-  "blurb": {
-   "de": "Offene Modelle unter MIT-Lizenz, die sich beim agentischen Programmieren selbst verbessern — sie lernen aus ihren eigenen Durchläufen, statt unverändert zu bleiben.",
-   "en": "Open models under the MIT licence that improve themselves at agentic coding — they learn from their own runs instead of staying fixed."
-  },
-  "tip": {
-   "de": "Ein junger Ansatz. Interessant zum Beobachten; für den Produktivbetrieb würde ich zuerst zu den etablierten Familien greifen.",
-   "en": "A young approach. Worth watching; for production work I would reach for the established families first."
-  },
-  "links": {
-   "home": "https://github.com/ornith-ai/Ornith-1",
-   "docs": null,
-   "code": "https://github.com/ornith-ai/Ornith-1"
-  },
-  "free": true,
-  "plans": {
-   "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
-   "en": "Free (open-weight, MIT), self-hosted"
-  }
+  "plansChecked": "2026-08-27"
  },
  "LM Studio": {
   "name": "LM Studio",
@@ -1237,9 +1233,13 @@
   },
   "free": true,
   "plans": {
-   "de": "Kostenlos (Desktop-App, Closed Source)",
-   "en": "Free (desktop app, closed source)"
-  }
+   "de": "Desktop-App kostenlos (Closed Source) · Cloud-Inferenz nach Verbrauch, z. B. Kimi K3 3 $/15 $, GLM-5.3-Flash 0,15 $/0,50 $ pro 1M Token · ein «Bionic Pass»-Abo ist angekündigt, aber noch ohne Preis",
+   "en": "Desktop app free (closed source) · cloud inference by usage, e.g. Kimi K3 $3/$15, GLM-5.3-Flash $0.15/$0.50 per 1M tokens · a «Bionic Pass» subscription is announced but not yet priced"
+  },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "Ollama": {
   "name": "Ollama",
@@ -1266,9 +1266,13 @@
   "icon": "ollama",
   "free": true,
   "plans": {
-   "de": "Kostenlos, Open Source (MIT)",
-   "en": "Free, open source (MIT)"
-  }
+   "de": "Lokal kostenlos und unbegrenzt, Open Source (MIT) · Cloud: Free 0 $ · Pro 20 $/Mo. (200 $/Jahr) · Max 100 $/Mo., für neue Anmeldungen derzeit pausiert",
+   "en": "Local use free and unlimited, open source (MIT) · cloud: Free $0 · Pro $20/mo ($200/year) · Max $100/mo, currently paused for new signups"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "llama.cpp": {
   "name": "llama.cpp",
@@ -1398,7 +1402,12 @@
    "home": "https://www.midjourney.com/",
    "docs": "https://docs.midjourney.com/hc/en-us",
    "code": null
-  }
+  },
+  "plans": {
+   "de": "Basic 10 $ · Standard 30 $ · Pro 60 $ · Mega 120 $/Mo. · jährlich rund 20 % günstiger · Stealth ab Pro",
+   "en": "Basic $10 · Standard $30 · Pro $60 · Mega $120/mo · about 20% cheaper annually · Stealth from Pro"
+  },
+  "plansChecked": "2026-09-01"
  },
  "FLUX.2": {
   "name": "FLUX.2",
@@ -1410,8 +1419,8 @@
   "accent": "var(--sky)",
   "open": true,
   "blurb": {
-   "de": "Ein offenes Bildmodell, das mit den geschlossenen mithält. Offen heisst hier: Du kannst die Gewichte herunterladen und das Modell auf eigener Hardware betreiben — nichts verlässt deinen Rechner, und je Bild fallen keine Gebühren an.",
-   "en": "An open image model that keeps up with the closed ones. Open here means you can download the weights and run it on your own hardware — nothing leaves your machine and there is no per-image fee."
+   "de": "Ein offenes Bildmodell, das mit den geschlossenen mithält. Offen heisst hier: Du kannst die Gewichte herunterladen und das Modell auf eigener Hardware betreiben — nichts verlässt deinen Rechner, und je Bild fallen keine Gebühren an. Seit Juli 2026 steht der Nachfolger FLUX 3 im Early Access — multimodal, mit Video und Ton; die offenen Gewichte dafür sind angekündigt, noch nicht veröffentlicht.",
+   "en": "An open image model that keeps up with the closed ones. Open here means you can download the weights and run it on your own hardware — nothing leaves your machine and there is no per-image fee. Since July 2026 the successor FLUX 3 is in early access — multimodal, with video and sound; its open weights are announced, not yet released."
   },
   "tip": {
    "de": "Braucht eine kräftige Grafikkarte. Wer nur gelegentlich ein Bild will, fährt über einen Dienst günstiger als über eigene Hardware.",
@@ -1433,8 +1442,8 @@
   "accent": "var(--sky)",
   "open": true,
   "blurb": {
-   "de": "Alibabas offenes Bildmodell. Setzt Texte zuverlässig ins Bild — Beschriftungen, Schilder, kurze Slogans — und kann neben dem Erzeugen auch vorhandene Bilder umbauen. Offene Gewichte: herunterladen, auf eigener Hardware betreiben, nichts verlässt den Rechner.",
-   "en": "Alibaba's open image model. It puts text into images reliably — labels, signs, short slogans — and besides generating can rework existing images. Open weights: download them, run them on your own hardware, nothing leaves the machine."
+   "de": "Alibabas offenes Bildmodell. Setzt Texte zuverlässig ins Bild — Beschriftungen, Schilder, kurze Slogans — und kann neben dem Erzeugen auch vorhandene Bilder umbauen. Offene Gewichte: herunterladen, auf eigener Hardware betreiben, nichts verlässt den Rechner. Die neuesten Ausbaustufen 2.0 und 3.0 laufen nur über Qwen Chat und die Alibaba-Cloud; zum Herunterladen bleibt Qwen-Image-2512 das aktuellste offene Modell.",
+   "en": "Alibaba's open image model. It puts text into images reliably — labels, signs, short slogans — and besides generating can rework existing images. Open weights: download them, run them on your own hardware, nothing leaves the machine. The newest iterations 2.0 and 3.0 run only in Qwen Chat and the Alibaba cloud; for downloading, Qwen-Image-2512 remains the newest open model."
   },
   "tip": {
    "de": "Läuft lokal über die üblichen Werkzeuge für offene Modelle, braucht dafür eine kräftige Grafikkarte. Für Gelegenheitsbilder ist ein Dienst mit Gratisstufe bequemer als eigene Hardware.",
@@ -1455,8 +1464,8 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "Googles Bildmodell, auf Fotorealismus und Tempo getrimmt — Ergebnisse kommen fast ohne Wartezeit. Läuft über dieselbe Schnittstelle wie Gemini, was es naheliegend macht, wenn du ohnehin dort arbeitest.",
-   "en": "Google's image model, tuned for photorealism and speed — results arrive with almost no wait. It runs through the same interface as Gemini, which makes it an obvious pick if you already work there."
+   "de": "Googles Bildmodell, auf Fotorealismus und Tempo getrimmt — Ergebnisse kommen fast ohne Wartezeit. Läuft über dieselbe Schnittstelle wie Gemini, was es naheliegend macht, wenn du ohnehin dort arbeitest. Googles neueste Bildarbeit steckt inzwischen in der Nano-Banana-Reihe — Imagen 4 bleibt über dieselbe Schnittstelle verfügbar.",
+   "en": "Google's image model, tuned for photorealism and speed — results arrive with almost no wait. It runs through the same interface as Gemini, which makes it an obvious pick if you already work there. Google's newest image work now lives in the Nano Banana line — Imagen 4 remains available through the same interface."
   },
   "tip": {
    "de": "Die schnelle Wahl, wenn du viele Varianten hintereinander sehen willst, etwa auf der Suche nach einer Bildidee.",
@@ -1477,10 +1486,10 @@
    "en": "Image model · Block 06"
   },
   "accent": "var(--sky)",
-  "open": false,
+  "open": true,
   "blurb": {
-   "de": "Auf eine Sache spezialisiert: Schrift im Bild. Wo andere Modelle bei Beschriftungen Buchstabensalat produzieren, kommen hier lesbare Wörter heraus — nützlich für Plakate, Verpackungen, erste Logo-Entwürfe.",
-   "en": "Specialised in one thing: type inside the image. Where other models turn captions into letter soup, this one produces readable words — useful for posters, packaging, first logo sketches."
+   "de": "Auf eine Sache spezialisiert: Schrift im Bild. Wo andere Modelle bei Beschriftungen Buchstabensalat produzieren, kommen hier lesbare Wörter heraus — nützlich für Plakate, Verpackungen, erste Logo-Entwürfe. Seit Juni 2026 ist der Nachfolger Ideogram 4.0 sogar offen: 9,3 Milliarden Parameter zum Herunterladen.",
+   "en": "Specialised in one thing: type inside the image. Where other models turn captions into letter soup, this one produces readable words — useful for posters, packaging, first logo sketches. Since June 2026 the successor Ideogram 4.0 is even open: 9.3 billion parameters to download."
   },
   "tip": {
    "de": "Erste Wahl, wenn Text im Bild lesbar sein muss. Für reine Bildstimmung ohne Schrift sind andere Modelle stärker.",
@@ -1517,7 +1526,8 @@
   "plans": {
    "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 12 $/Mo. · Pro ab 2.000 Credits 20 $/Mo. · Teams ab 2.000 Credits 22 $/Mo. · jährlich bis 20 % günstiger",
    "en": "Free (images public, Recraft owns the rights) · Basic 1,000 credits 12 $/mo · Pro from 2,000 credits 20 $/mo · Teams from 2,000 credits 22 $/mo · up to 20% cheaper annually"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Seedream": {
   "name": "Seedream",
@@ -1529,8 +1539,8 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "Erzeugen und Bearbeiten in einem Modell: Du lässt ein Bild machen und änderst danach im selben Zug einzelne Teile, statt neu anzufangen. Das erspart die Runden, in denen sonst mit jedem Versuch auch alles Gelungene wieder kippt.",
-   "en": "Generating and editing in one model: you have an image made, then change individual parts in the same breath instead of starting over. That spares you the rounds where every retry also ruins what already worked."
+   "de": "Erzeugen und Bearbeiten in einem Modell: Du lässt ein Bild machen und änderst danach im selben Zug einzelne Teile, statt neu anzufangen. Das erspart die Runden, in denen sonst mit jedem Versuch auch alles Gelungene wieder kippt. Inzwischen ist Seedream 5.0 Lite nachgerückt; Erzeugen und Bearbeiten in einem Modell gilt weiter.",
+   "en": "Generating and editing in one model: you have an image made, then change individual parts in the same breath instead of starting over. That spares you the rounds where every retry also ruins what already worked. Seedream 5.0 Lite has since followed; generate and edit in one model still holds."
   },
   "tip": {
    "de": "Gut, wenn ein Bild fast stimmt und nur ein Detail stört.",
@@ -1620,14 +1630,14 @@
    "en": "Video model · Block 06"
   },
   "accent": "var(--sky)",
-  "open": true,
+  "open": false,
   "blurb": {
-   "de": "Alibabas offenes Videomodell: Gewichte frei verfügbar, bis 30 Sekunden, 4K, Ton inklusive. Damit wird Videoerzeugung ohne fremden Dienst machbar — auf eigener Hardware und ohne Abrechnung je Clip.",
-   "en": "Alibaba's open video model: weights freely available, up to 30 seconds, 4K, audio included. That makes video generation possible without anyone else's service — on your own hardware and with no per-clip billing."
+   "de": "Alibabas jüngste Videogeneration ist nicht mehr offen: Wan 3.0 läuft nur über die Cloud-API, derzeit als Vorschau — bis 30 Sekunden am Stück, 1080p, Ton inklusive. Die letzten frei verfügbaren Gewichte stammen von Wan 2.2 (Apache 2.0); ohne fremden Dienst geht Videoerzeugung in dieser Familie nur in der älteren Generation.",
+   "en": "Alibaba's newest video generation is no longer open: Wan 3.0 runs only through the cloud API, currently in preview — up to 30 seconds at a stretch, 1080p, sound included. The last freely available weights date from Wan 2.2 (Apache 2.0); without someone else's service, video generation in this family stops at the older generation."
   },
   "tip": {
-   "de": "Selbst betreiben lohnt sich ab vielen Clips. Für einzelne Versuche ist ein Dienst der kürzere Weg.",
-   "en": "Self-hosting pays off from many clips onward. For single experiments a service is the shorter route."
+   "de": "Selbst betreiben geht nur mit Wan 2.2 — dort lohnt es sich ab vielen Clips. Für Wan 3.0 bleibt der Dienst der einzige Weg.",
+   "en": "Self-hosting works only with Wan 2.2 — worth it from many clips on. For Wan 3.0 the hosted service remains the only route."
   },
   "links": {
    "home": "https://github.com/Wan-Video",
@@ -1656,7 +1666,12 @@
    "home": "https://runway.com/",
    "docs": "https://docs.dev.runwayml.com/",
    "code": null
-  }
+  },
+  "plans": {
+   "de": "Gratis 125 Credits · Standard 15 $ (625) · Pro 35 $ (2.250) · Max 95 $/Mo. (9.500) · Gen-4.5 kostet 12 Credits je Sekunde · jährlich rund 20 % günstiger",
+   "en": "Free 125 credits · Standard $15 (625) · Pro $35 (2,250) · Max $95/mo (9,500) · Gen-4.5 costs 12 credits per second · about 20% cheaper annually"
+  },
+  "plansChecked": "2026-09-01"
  },
  "Luma": {
   "name": "Luma",
@@ -1679,7 +1694,12 @@
    "home": "https://lumalabs.ai/",
    "docs": "https://docs.lumalabs.ai/docs/api",
    "code": null
-  }
+  },
+  "plans": {
+   "de": "Plus 30 $ · Pro 90 $ · Ultra 300 $/Mo.",
+   "en": "Plus $30 · Pro $90 · Ultra $300/mo"
+  },
+  "plansChecked": "2026-09-01"
  },
  "Higgsfield": {
   "name": "Higgsfield",
@@ -1730,9 +1750,10 @@
    "code": "https://github.com/heygen-com/hyperframes"
   },
   "plans": {
-   "de": "Kostenlos (Apache 2.0) · ohne Render-Gebühren",
-   "en": "Free (Apache 2.0) · no per-render fees"
-  }
+   "de": "Kostenlos (Apache 2.0) · keine Render-Gebühren und keine Schwelle für kommerzielle Nutzung",
+   "en": "Free (Apache 2.0) · no per-render fees and no commercial-use threshold"
+  },
+  "plansChecked": "2026-08-27"
  },
  "ElevenLabs Eleven v3": {
   "name": "ElevenLabs Eleven v3",
@@ -1885,8 +1906,8 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "Diktieren statt tippen: Das Programm läuft im Hintergrund, hört auf einen Tastendruck zu und setzt den gesprochenen Satz dort ein, wo der Cursor steht — im Mailfeld, im Chat, im Editor. Anders als bei Whisper geht es nicht um vorhandene Aufnahmen, sondern um Text, der gerade entsteht; Füllwörter und Versprecher räumt es dabei weg. Über 100 Sprachen, Mac, Windows, iPhone und Android. Die Aufnahme verlässt allerdings das Gerät, der Quelltext ist geschlossen, und die Gratisstufe endet nach 2.000 Wörtern pro Woche.",
-   "en": "Dictation instead of typing: the program sits in the background, listens on a keypress and drops the spoken sentence wherever the cursor is — a mail field, a chat, an editor. Unlike Whisper it is not about recordings you already have but about text as it comes into being, and it clears out filler words and false starts on the way. Over 100 languages, on Mac, Windows, iPhone and Android. The recording does leave the device, the source is closed, and the free tier ends after 2,000 words a week."
+   "de": "Diktieren statt tippen: Das Programm läuft im Hintergrund, hört auf einen Tastendruck zu und setzt den gesprochenen Satz dort ein, wo der Cursor steht — im Mailfeld, im Chat, im Editor. Anders als bei Whisper geht es nicht um vorhandene Aufnahmen, sondern um Text, der gerade entsteht; Füllwörter und Versprecher räumt es dabei weg. Über 100 Sprachen, Mac, Windows, iPhone und Android. Die Aufnahme verlässt allerdings das Gerät, der Quelltext ist geschlossen, und die Gratisstufe am Desktop nach 2.000 Wörtern pro Woche endet, am iPhone nach 1.000 — auf Android diktiert man gratis unbegrenzt.",
+   "en": "Dictation instead of typing: the program sits in the background, listens on a keypress and drops the spoken sentence wherever the cursor is — a mail field, a chat, an editor. Unlike Whisper it is not about recordings you already have but about text as it comes into being, and it clears out filler words and false starts on the way. Over 100 languages, on Mac, Windows, iPhone and Android. The recording does leave the device, the source is closed, and the free tier ends after 2,000 words a week on desktop, 1,000 on iPhone — on Android dictation is unlimited for free."
   },
   "tip": {
    "de": "Der bequemste Weg, einem Agenten einen langen Auftrag zu geben, ohne ihn zu tippen. Wer Vertrauliches spricht, sollte wissen, dass die Aufnahme zur Verarbeitung zum Anbieter geht — dafür ist OpenWhispr die lokale Alternative.",
@@ -1898,9 +1919,10 @@
   },
   "free": true,
   "plans": {
-   "de": "Kostenlos bis 2.000 Wörter/Woche · Pro 15 $/Mo., jährlich 12 $/Mo. · Enterprise auf Anfrage",
-   "en": "Free up to 2,000 words/week · Pro $15/mo, $12/mo billed annually · Enterprise on request"
-  }
+   "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 15 $/Mo., jährlich 12 $/Mo. · Growth/Enterprise ab 18 $/Nutzer/Mo. bei jährlicher Zahlung",
+   "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $15/mo, $12/mo billed annually · Growth/Enterprise from $18/user/mo billed annually"
+  },
+  "plansChecked": "2026-09-01"
  },
  "OpenWhispr": {
   "name": "OpenWhispr",
@@ -1916,8 +1938,8 @@
    "en": "The same dictation as Wispr Flow, but on your own machine: Whisper or NVIDIA's Parakeet compute locally, and what you say stays where it is spoken. The source is open (MIT), Mac, Windows and Linux are covered, and local dictation costs nothing. In exchange you download the models yourself, and how fluid it feels depends on your hardware."
   },
   "tip": {
-   "de": "Die Wahl, wenn Gesprochenes das Gerät nicht verlassen darf. Wer über mehrere Geräte hinweg synchronisieren oder Besprechungen mitschneiden will, zahlt auch hier — gratis bleibt das Diktieren selbst.",
-   "en": "The pick when what you say must not leave the device. Syncing across several devices or recording meetings costs money here too — what stays free is the dictation itself."
+   "de": "Die Wahl, wenn Gesprochenes das Gerät nicht verlassen darf. Wer über Geräte hinweg synchronisieren oder mehr als die wenigen Gratis-Stunden Meeting-Mitschnitt im Monat will, zahlt auch hier — gratis bleibt das Diktieren selbst.",
+   "en": "The pick when what you say must not leave the device. Syncing across devices or recording more than the few free meeting hours a month costs money here too — what stays free is the dictation itself."
   },
   "links": {
    "home": "https://openwhispr.com/",
@@ -1926,9 +1948,13 @@
   },
   "free": true,
   "plans": {
-   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Pro 6,67 $/Mo. (80 $/Jahr) · Business 13,33 $/Mo. (160 $/Jahr) · Enterprise auf Anfrage",
-   "en": "Local dictation free, open source (MIT) · Pro $6.67/mo ($80/year) · Business $13.33/mo ($160/year) · Enterprise on request"
-  }
+   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ mit 2.000 Wörtern je Woche · Pro 6,67 $/Nutzer/Mo. (80 $/Jahr) · Business 13,33 $/Nutzer/Mo. (160 $/Jahr) · Enterprise auf Anfrage",
+   "en": "Local dictation free, open source (MIT) · Free $0 with 2,000 words a week · Pro $6.67/user/mo ($80/year) · Business $13.33/user/mo ($160/year) · Enterprise on request"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-08-27"
  },
  "FreeFlow": {
   "name": "FreeFlow",
@@ -2027,7 +2053,7 @@
     "u": 2
    },
    "cost": {
-    "v": "$5/$30",
+    "v": "$4/$20",
     "rank": "#68/188",
     "u": 4
    },
@@ -2045,7 +2071,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-25"
+  "plansChecked": "2026-09-01"
  },
  "Claude Opus 5 / Sonnet 5": {
   "name": "Claude Opus 5 / Sonnet 5",
@@ -2102,7 +2128,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-24"
+  "plansChecked": "2026-09-01"
  },
  "Gemini 3.1 Pro": {
   "name": "Gemini 3.1 Pro",
@@ -2159,7 +2185,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-25"
+  "plansChecked": "2026-09-01"
  },
  "Grok 4.6": {
   "name": "Grok 4.6",
@@ -2205,14 +2231,14 @@
    }
   },
   "plans": {
-   "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $)",
-   "en": "API $2/$6 per 1M tokens (cache $0.50)"
+   "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · ab 200k Token Prompt das Doppelte: 4 $/12 $ (Cache 1 $)",
+   "en": "API $2/$6 per 1M tokens (cache $0.50) · double for prompts of 200k+ tokens: $4/$12 (cache $1)"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-25"
+  "plansChecked": "2026-09-01"
  },
  "Qwen3.8-Max": {
   "name": "Qwen3.8-Max",
@@ -2262,12 +2288,13 @@
    }
   },
   "plans": {
-   "de": "Kostenlose Stufe · Open-Weight · API Max-Tarif ca. 2,5/10 ¥/1M Tok.",
-   "en": "Free tier · open weights · API Max tier ~¥2.5/¥10 per 1M tok."
+   "de": "Kostenloses Startguthaben · API des Max-Tarifs ca. 2 $/6 $ pro 1M Token · die 2,4T-Variante Qwen3.8-2.4T-A95B gibt es inzwischen auch als offene Gewichte (eigene Qwen-Lizenz)",
+   "en": "Free starter quota · Max-tier API about $2/$6 per 1M tokens · the 2.4T variant Qwen3.8-2.4T-A95B now also ships as open weights (Qwen's own licence)"
   },
   "billing": [
    "api"
-  ]
+  ],
+  "plansChecked": "2026-09-01"
  },
  "Kimi K3": {
   "name": "Kimi K3",
@@ -2317,13 +2344,14 @@
    }
   },
   "plans": {
-   "de": "API 3 $/15 $ pro 1M Token (Open-Weight, selbst hostbar)",
-   "en": "API $3/$15 per 1M tokens (open-weight, self-hostable)"
+   "de": "API 3 $ Eingabe / 15 $ Ausgabe pro 1M Token, gecachte Eingabe 0,30 $ · Open-Weight, selbst hostbar",
+   "en": "API $3 input / $15 output per 1M tokens, cached input $0.30 · open-weight, self-hostable"
   },
   "billing": [
    "abo",
    "api"
-  ]
+  ],
+  "plansChecked": "2026-08-27"
  },
  "DeepSeek V4": {
   "name": "DeepSeek V4",
@@ -2343,7 +2371,7 @@
    "en": "When licence and cost drive the decision, this is the first candidate."
   },
   "links": {
-   "home": "https://deepseek.ai/deepseek-v4",
+   "home": "https://www.deepseek.com/",
    "docs": "https://api-docs.deepseek.com/updates",
    "code": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
   },
@@ -2379,7 +2407,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-24"
+  "plansChecked": "2026-09-01"
  },
  "GLM-5.2": {
   "name": "GLM-5.2",
@@ -2395,8 +2423,8 @@
    "en": "An open model with 753 billion parameters and a one-million-token context, built for engineering work. MIT licensed as well, so free to use."
   },
   "tip": {
-   "de": "Läuft mit genug Grafikspeicher auch auf eigener Hardware — anders als die ganz großen offenen Modelle noch im Bereich des Machbaren. Z.AIs Nachfolger GLM-5.3 ist inzwischen im GLM-Coding-Abo erhältlich, aber noch nicht als offene Gewichte.",
-   "en": "With enough graphics memory it runs on your own hardware — unlike the very largest open models, this one is still within reach. Z.AI's successor GLM-5.3 is available through the GLM Coding plan, but not yet as open weights."
+   "de": "Läuft mit genug Grafikspeicher auch auf eigener Hardware — anders als die ganz großen offenen Modelle noch im Bereich des Machbaren. Z.AIs Nachfolger GLM-5.3 ist inzwischen im GLM-Coding-Abo erhältlich, inzwischen ebenfalls als offene Gewichte (753 Milliarden Parameter, eigene GLM-Lizenz).",
+   "en": "With enough graphics memory it runs on your own hardware — unlike the very largest open models, this one is still within reach. Z.AI's successor GLM-5.3 is available through the GLM Coding plan, since also released as open weights (753 billion parameters, under a GLM licence of its own)."
   },
   "links": {
    "home": "https://z.ai/blog/glm-5.2",
@@ -2412,8 +2440,8 @@
     "u": 4
    },
    "speed": {
-    "v": "136.5",
-    "rank": "#7/106",
+    "v": "67.1",
+    "rank": "#31/111",
     "u": 4
    },
    "cost": {
@@ -2434,7 +2462,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-25"
+  "plansChecked": "2026-09-01"
  },
  "Anthropic Agent Skills": {
   "name": "Anthropic Agent Skills",
@@ -2501,7 +2529,7 @@
    "en": "As with any marketplace: a skill is an instruction your agent will then follow. Read it before installing."
   },
   "links": {
-   "home": "https://skills.sh",
+   "home": "https://www.skills.sh/",
    "docs": null,
    "code": "https://github.com/vercel-labs/skills"
   }
@@ -2694,6 +2722,29 @@
   },
   "icon": "google"
  },
+ "davinci-resolve-mcp": {
+  "name": "DaVinci Resolve MCP",
+  "vendor": "Samuel Gursky",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Schnittprogramm wird mit Maus und Tastatur bedient — ein Agent kann weder klicken noch schneiden. DaVinci Resolve hat dafür eine offizielle Skriptschnittstelle, und dieser Server reicht sie als MCP-Werkzeuge weiter: Er legt Projekte und Timelines an, importiert Material, setzt Schnitte und Marker, konfiguriert Renderaufträge und spricht auch Farb- und Audiobearbeitung an. Resolve wird damit zum Arbeitsplatz, an dem ein Agent einen Rohschnitt baut, den du von Hand feinschneidest. Das Projekt benennt die Grenze selbst: Heraus kommt eine Erstfassung zum Weiterschneiden, kein fertiger Schnitt — und dein Ausgangsmaterial bleibt unangetastet.",
+   "en": "An editing suite is driven by mouse and keyboard — an agent can neither click nor cut. DaVinci Resolve ships an official scripting interface for exactly that, and this server hands it out as MCP tools: it creates projects and timelines, imports footage, sets cuts and markers, configures render jobs, and reaches into colour and audio as well. Resolve becomes the desk where an agent assembles a rough cut that you then trim by hand. The project names its own limit: what comes out is a first-pass assembly to keep cutting, not a finished edit — and your source footage stays untouched."
+  },
+  "tip": {
+   "de": "Setzt ein laufendes Resolve (18.5 oder neuer) voraus. Die Gratisfassung von Resolve sperrt die Skriptschnittstelle für die Fernsteuerung weg; dort erreicht der Server Resolve über ein Brückenskript innerhalb des Programms — der dokumentierte Weg, aber Blackmagic könnte ihn eines Tages schließen. Kommt von einem einzelnen Entwickler, MIT-Lizenz.",
+   "en": "Needs a running Resolve (18.5 or newer). Resolve's free edition locks remote scripting away; there the server reaches Resolve through a bridge script inside the program — the documented route, but Blackmagic could close it one day. Comes from a single developer, MIT licence."
+  },
+  "links": {
+   "home": "https://github.com/samuelgursky/davinci-resolve-mcp",
+   "code": "https://github.com/samuelgursky/davinci-resolve-mcp"
+  }
+ },
  "Figma": {
   "name": "Figma",
   "vendor": "Figma",
@@ -2807,8 +2858,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Googles Entwicklungsumgebung für den Fall, dass nicht ein Agent arbeitet, sondern mehrere gleichzeitig — jeder an seiner Aufgabe, nebeneinander in einem Fenster. Ein Programm für den Schreibtisch, kein Dienst im Browser.",
-   "en": "Google's development environment for the case where not one agent works but several at once — each on its own task, side by side in one window. A program for the desktop, not a service in the browser."
+   "de": "Googles Entwicklungsumgebung für den Fall, dass nicht ein Agent arbeitet, sondern mehrere gleichzeitig — jeder an seiner Aufgabe, nebeneinander in einem Fenster. Ein Programm für den Schreibtisch, kein Dienst im Browser. Seit 2.0 gehört eine Kommandozeile dazu.",
+   "en": "Google's development environment for the case where not one agent works but several at once — each on its own task, side by side in one window. A program for the desktop, not a service in the browser. Since 2.0 a command line ships along."
   },
   "tip": {
    "de": "Erst sinnvoll, wenn eine Aufgabe sich wirklich in unabhängige Teile zerlegen lässt. Sonst warten mehrere Agenten nur aufeinander.",
@@ -2932,7 +2983,7 @@
    "en": "The bridge for designers who want to work on the live project without writing code."
   },
   "links": {
-   "home": "https://onlook.com/",
+   "home": "https://www.onlook.com/",
    "docs": null,
    "code": "https://github.com/onlook-dev/onlook"
   }
@@ -2986,7 +3037,8 @@
   "links": {
    "home": "https://open-design.ai/",
    "code": "https://github.com/nexu-io/open-design"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Uizard": {
   "name": "Uizard",
@@ -3263,8 +3315,8 @@
   "open": false,
   "free": false,
   "blurb": {
-   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Läuft nur auf dem Mac und wird einmal gekauft statt monatlich gemietet — über die Jahre der günstigere Weg.",
-   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. Mac only, and bought once rather than rented monthly — over the years the cheaper route."
+   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Läuft nur auf dem Mac und wird einmal gekauft statt monatlich gemietet — über die Jahre der günstigere Weg. Seit 2026 gibt es daneben das Apple-Creator-Studio-Abo (12,99 $/Monat) mit Final Cut darin; der Einmalkauf bleibt bestehen.",
+   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. Mac only, and bought once rather than rented monthly — over the years the cheaper route. Since 2026 the Apple Creator Studio subscription ($12.99/month) also includes Final Cut; the one-time purchase remains."
   },
   "tip": {
    "de": "Sinnvoll, sobald ein Projekt mehr als ein paar Clips hat. Vor dem Kauf die kostenlose Testphase nutzen.",
@@ -3467,20 +3519,24 @@
   "open": false,
   "free": false,
   "blurb": {
-   "de": "Günstiges Paket-Hosting mit Domain, Postfach und Verwaltungsoberfläche — der klassische Weg, eine Seite ins Netz zu bringen. Es gibt auch Server zur alleinigen Nutzung; unter diesem Namen taucht Hostinger deshalb auch in der Übersicht zum Modell-Hosting auf.",
-   "en": "Cheap package hosting with a domain, mailbox and control panel — the classic way to put a site online. Dedicated servers are available too, which is why Hostinger also appears in the model-hosting overview."
+   "de": "Günstiges Paket-Hosting mit Domain, Postfach und Verwaltungsoberfläche — der klassische Weg, eine Seite ins Netz zu bringen. Dazu kommen VPS mit vollem Root-Zugriff; unter diesem Namen taucht Hostinger deshalb auch in der Übersicht zum Modell-Hosting auf.",
+   "en": "Cheap package hosting with a domain, mailbox and control panel — the classic way to put a site online. VPS with full root access are available too, which is why Hostinger also appears in the model-hosting overview."
   },
   "tip": {
    "de": "Sinnvoll, wenn du Domain, E-Mail und Speicherplatz aus einer Hand willst. Für eine Seite, die ein Agent baut, ist ein Git-Anbieter meist bequemer.",
    "en": "Sensible when you want domain, email and storage from one place. For a site an agent builds, a Git-based host is usually more convenient."
   },
   "plans": {
-   "de": "Monatlich, meist mit langer Mindestlaufzeit für den Werbepreis.",
-   "en": "Monthly, usually with a long minimum term for the advertised price."
+   "de": "Premium 2,99 $/Mo. nur bei 48 Monaten Laufzeit (143,52 $ im Voraus), Verlängerung 10,99 $ · Unlimited 3,99 $ → 16,99 $ · Cloud Startup 7,99 $ → 25,99 $ · keine Gratisstufe, nur 30 Tage Geld-zurück",
+   "en": "Premium $2.99/mo only on a 48-month term ($143.52 upfront), renews at $10.99 · Unlimited $3.99 → $16.99 · Cloud Startup $7.99 → $25.99 · no free tier, only a 30-day money-back guarantee"
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://www.hostinger.com"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Strato": {
   "name": "Strato",
@@ -3504,9 +3560,13 @@
    "de": "Monatliche Pakete, Domain meist enthalten.",
    "en": "Monthly packages, domain usually included."
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://www.strato.de"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "IONOS": {
   "name": "IONOS",
@@ -3527,12 +3587,16 @@
    "en": "Good when you start small and do not want to rule out needing more later."
   },
   "plans": {
-   "de": "Monatlich, gestaffelt vom Paket bis zum eigenen Server.",
-   "en": "Monthly, tiered from package to your own server."
+   "de": "Webhosting Plus 1 €/Mo. für 12 Monate, danach 11 € · Standard 3 € → 6 € · Premium 8 € → 16 € · Ultimate 14 € → 28 € (Aktionspreise laufen 6 Monate) · je 10 € Einrichtung · keine Gratisstufe",
+   "en": "Web hosting Plus €1/mo for 12 months, then €11 · Standard €3 → €6 · Premium €8 → €16 · Ultimate €14 → €28 (promo prices run 6 months) · €10 setup fee on each · no free tier"
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://www.ionos.de"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Netlify": {
   "name": "Netlify",
@@ -3553,12 +3617,16 @@
    "en": "The most comfortable route for a site an agent builds: it writes code, the rest happens by itself. The free tier is enough for small sites."
   },
   "plans": {
-   "de": "Gratisstufe für kleine Seiten, danach nach Verbrauch.",
-   "en": "Free tier for small sites, then usage-based."
+   "de": "Free 0 $ mit 300 Credits/Mo. · Personal 9 $ mit 1.000 · Pro 20 $ mit 3.000 · Credits nachkaufen: 5 $ für 500 (Personal), 10 $ für 1.500 (Pro) · Verbrauch z. B. 15 Credits je Production-Deploy, 20 je GB Bandbreite",
+   "en": "Free $0 with 300 credits/mo · Personal $9 with 1,000 · Pro $20 with 3,000 · extra credits $5 for 500 (Personal), $10 for 1,500 (Pro) · consumption e.g. 15 credits per production deploy, 20 per GB of bandwidth"
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://www.netlify.com"
-  }
+  },
+  "plansChecked": "2026-09-06"
  },
  "Vercel": {
   "name": "Vercel",
@@ -3582,9 +3650,13 @@
    "de": "Gratisstufe für private Projekte, danach je Mitglied und Verbrauch.",
    "en": "Free tier for personal projects, then per seat and usage."
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://vercel.com"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Cloudflare Pages": {
   "name": "Cloudflare Pages",
@@ -3638,9 +3710,13 @@
    "de": "Gratisstufe mit Einschränkungen, danach je Dienst.",
    "en": "Free tier with limits, then per service."
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://render.com"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Coolify": {
   "name": "Coolify",
@@ -3683,7 +3759,7 @@
   },
   "accent": "var(--amber)",
   "open": false,
-  "free": true,
+  "free": false,
   "blurb": {
    "de": "Fertig gehostete offene Modelle hinter einer API: Du rufst sie auf, Together AI betreibt die Hardware. Große Auswahl an Open-Weight-Modellen, dazu Feintuning für eigene Varianten — ohne dass du je eine Grafikkarte anfassen musst.",
    "en": "Open models hosted and served behind an API: you call them, Together AI runs the hardware. A wide choice of open-weight models, plus fine-tuning for your own variants — without ever touching a graphics card."
@@ -3693,12 +3769,16 @@
    "en": "The convenient middle way when open models should run but no hardware is around. Billed per million tokens."
   },
   "plans": {
-   "de": "Abrechnung je 1M Tokens · Gratisstufe",
-   "en": "Billed per 1M tokens · free tier"
+   "de": "Abrechnung je 1M Tokens · Vorauskasse (ab 5 $ Guthaben)",
+   "en": "Billed per 1M tokens · prepaid (from $5 credit)"
   },
+  "billing": [
+   "api"
+  ],
   "links": {
    "home": "https://www.together.ai"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Fireworks AI": {
   "name": "Fireworks AI",
@@ -3781,9 +3861,13 @@
    "de": "Abrechnung je GPU-Stunde/-Sekunde",
    "en": "Billed per GPU hour/second"
   },
+  "billing": [
+   "api"
+  ],
   "links": {
    "home": "https://www.runpod.io"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Lambda": {
   "name": "Lambda",
@@ -3803,12 +3887,16 @@
    "en": "When a model should run for a while — fine-tuning, continuous duty — dedicated cards are calmer than a marketplace. Billed per GPU hour."
   },
   "plans": {
-   "de": "Abrechnung je GPU-Stunde",
-   "en": "Billed per GPU hour"
+   "de": "Je GPU-Stunde: V100 0,79 $ · A100 SXM ab 1,99 $ · H100 SXM ab 3,99 $ · B200 SXM6 ab 6,69 $ · 1-Click-Cluster ab 8,87 $ je GPU-Stunde · keine Gratisstufe",
+   "en": "Per GPU hour: V100 $0.79 · A100 SXM from $1.99 · H100 SXM from $3.99 · B200 SXM6 from $6.69 · 1-Click Clusters from $8.87 per GPU hour · no free tier"
   },
+  "billing": [
+   "api"
+  ],
   "links": {
    "home": "https://lambda.ai"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Vast.ai": {
   "name": "Vast.ai",
@@ -3833,7 +3921,8 @@
   },
   "links": {
    "home": "https://vast.ai"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "Hetzner": {
   "name": "Hetzner",
@@ -3846,21 +3935,25 @@
   "open": false,
   "free": false,
   "blurb": {
-   "de": "Deutscher Hoster mit sehr günstigen dedizierten Servern und Cloud-Instanzen, Rechenzentren in Deutschland und Finnland. Für Modell-Hosting vor allem mit CPU-Seite gemeint: eigene Dienste und kleine Modelle selbst betreiben, GPU-Maschinen sind nicht das Angebot.",
-   "en": "German hoster with very cheap dedicated servers and cloud instances, data centres in Germany and Finland. For model hosting this is the CPU side of things: self-hosting your own services and small models; GPU machines are not what they sell."
+   "de": "Deutscher Hoster mit sehr günstigen dedizierten Servern und Cloud-Instanzen, Rechenzentren in Deutschland und Finnland. Für Modell-Hosting vor allem mit CPU-Seite gemeint: eigene Dienste und kleine Modelle selbst betreiben, GPU-Server gibt es inzwischen auch — die eigene Karte im dedizierten Rechner zum festen Preis, nicht nach der Sekunde abgerechnet wie bei den GPU-Wolken.",
+   "en": "German hoster with very cheap dedicated servers and cloud instances, data centres in Germany and Finland. For model hosting this is the CPU side of things: self-hosting your own services and small models; GPU servers exist now too — your own card in a dedicated machine at a fixed price, not billed by the second like the GPU clouds."
   },
   "tip": {
    "de": "Der Preisbrecher für alles um das Modell herum — Schnittstellen, Datenbanken, Web-Dienste. Monats- oder Stundenpreis, ohne Token-Abrechnung.",
    "en": "The price breaker for everything around the model — interfaces, databases, web services. Monthly or hourly price, no token billing."
   },
   "plans": {
-   "de": "Monatlich oder stundenweise, je Instanz",
-   "en": "Monthly or hourly, per instance"
+   "de": "Stundengenau abgerechnet, je Instanz gedeckelt auf den Monatspreis — nie mehr als der Monatspreis, auch bei durchgehendem Betrieb. Die Serverpreise selbst stehen nur im Preisrechner der Konsole, nicht als Text auf der Preisseite.",
+   "en": "Billed by the hour, capped per instance at the monthly price — never more than the monthly price, even running around the clock. The server prices themselves live only in the console's price calculator, not as text on the pricing page."
   },
+  "billing": [
+   "abo"
+  ],
   "icon": "hetzner",
   "links": {
    "home": "https://www.hetzner.com"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Modal": {
   "name": "Modal",
@@ -3881,13 +3974,18 @@
    "en": "For tools with a part of your own — preprocessing, pipelines, custom prompting — the clean path. Billed per second of runtime."
   },
   "plans": {
-   "de": "Abrechnung je Sekunde · Gratisstufe",
-   "en": "Billed per second · free tier"
+   "de": "Starter 0 $/Mo. plus Verbrauch, mit 30 $ Gratis-Guthaben jeden Monat · Team 250 $/Mo. mit 100 $ Guthaben · Rechenzeit sekundengenau: CPU-Kern 0,0000131 $/Sek., H100 SXM5 0,001097 $/Sek.",
+   "en": "Starter $0/mo plus compute, with $30 in free credits every month · Team $250/mo with $100 in credits · compute billed by the second: CPU core $0.0000131/sec, H100 SXM5 $0.001097/sec"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "icon": "modal",
   "links": {
    "home": "https://modal.com"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Replicate": {
   "name": "Replicate",
@@ -3911,10 +4009,14 @@
    "de": "Abrechnung je Sekunde oder Ergebnis",
    "en": "Billed per second or per output"
   },
+  "billing": [
+   "api"
+  ],
   "icon": "replicate",
   "links": {
    "home": "https://replicate.com"
-  }
+  },
+  "plansChecked": "2026-09-01"
  },
  "OpenRouter": {
   "name": "OpenRouter",
@@ -3927,21 +4029,25 @@
   "open": false,
   "free": true,
   "blurb": {
-   "de": "Die Drehscheibe: ein Schlüssel und eine Abrechnung für die Modelle vieler Anbieter — offene wie geschlossene. Der Aufruf geht an OpenRouter, der leitet ihn an den Hersteller weiter und setzt eine kleine Gebühr obendrauf.",
-   "en": "The junction box: one key and one bill for the models of many providers — open and closed alike. The call goes to OpenRouter, which forwards it to the vendor and adds a small fee on top."
+   "de": "Die Drehscheibe: ein Schlüssel und eine Abrechnung für die Modelle vieler Anbieter — offene wie geschlossene. Der Aufruf geht an OpenRouter, der leitet ihn an den Hersteller weiter und leitet ihn ohne Aufschlag an den Hersteller weiter — die kleine Gebühr fällt beim Aufladen des Guthabens an.",
+   "en": "The junction box: one key and one bill for the models of many providers — open and closed alike. The call goes to OpenRouter, which forwards it to the vendor and forwards it to the vendor without a markup — the small fee is charged when you top up your balance."
   },
   "tip": {
    "de": "Praktisch zum Vergleichen und Ausweichen: Modell gewechselt, ohne Schlüssel und Rechnung zu wechseln. Wem es auf letzte Geschwindigkeit ankommt, ruft den Anbieter direkt.",
    "en": "Handy for comparing and switching: change the model without changing key or billing. Speed and data privacy matter less in return."
   },
   "plans": {
-   "de": "Je 1M Tokens, plus Gebühr · Gratisstufe",
-   "en": "Per 1M tokens, plus fee · free tier"
+   "de": "Modellpreise werden ohne Aufschlag durchgereicht · Gebühr beim Guthabenkauf: 5,5 % (mindestens 0,80 $) per Karte, 5 % per Krypto · eigener Anbieterschlüssel (BYOK) bis 25.000 $/Mo. gebührenfrei, darüber 5 % · «:free»-Modelle: 50 Anfragen am Tag, ab 10 $ Guthaben 1.000",
+   "en": "Model prices are passed through without markup · fee on buying credits: 5.5% (minimum $0.80) by card, 5% by crypto · your own provider key (BYOK) is free up to $25,000/mo, then 5% · «:free» models: 50 requests a day, 1,000 with $10 or more in credits"
   },
+  "billing": [
+   "api"
+  ],
   "icon": "openrouter",
   "links": {
    "home": "https://openrouter.ai"
-  }
+  },
+  "plansChecked": "2026-09-06"
  },
  "DeepSeek-Reasonix": {
   "name": "DeepSeek-Reasonix",
@@ -4052,9 +4158,10 @@
    "code": "https://github.com/volcengine/OpenViking"
   },
   "plans": {
-   "de": "Selbst betrieben kostenlos (AGPLv3) · verwaltet mit Gratis-Teststufe",
-   "en": "Self-hosted free (AGPLv3) · managed with a free trial"
-  }
+   "de": "Selbst betrieben kostenlos (AGPLv3), ohne Funktionssperren und ohne Konto · daneben eine verwaltete Fassung auf Volcano Engine, deren Preise die Seite nicht nennt",
+   "en": "Self-hosted free (AGPLv3), no feature gates and no account needed · alongside it a managed edition on Volcano Engine, whose prices the page does not give"
+  },
+  "plansChecked": "2026-08-27"
  },
  "OpenPencil": {
   "name": "OpenPencil",
@@ -4081,7 +4188,8 @@
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "customer-research": {
   "name": "customer-research",
@@ -4183,7 +4291,7 @@
    "en": "The tinkering and series tool: build a pipeline once, then run it in variants — only changed subgraphs re-execute. For the quick single image a service stays more convenient. Licence GPL-3.0, copyleft: read before embedding."
   },
   "links": {
-   "home": "https://www.comfy.org",
+   "home": "https://comfy.org/",
    "docs": "https://docs.comfy.org",
    "code": "https://github.com/Comfy-Org/ComfyUI"
   },
@@ -4251,7 +4359,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-25"
+  "plansChecked": "2026-09-01"
  },
  "Berd": {
   "name": "Berd",
@@ -4540,7 +4648,8 @@
   "plans": {
    "de": "Kostenlos (Apache-2.0)",
    "en": "Free (Apache-2.0)"
-  }
+  },
+  "plansChecked": "2026-08-27"
  },
  "Notion": {
   "name": "Notion",
@@ -4568,6 +4677,59 @@
   "plans": {
    "de": "Gratis · Plus 10 $ · Business 20 $/Mitglied/Mo. · eigene Agenten nach Credits (10 $/1.000) · jährlich bis 20 % günstiger",
    "en": "Free · Plus $10 · Business $20/member/mo · custom agents by credits ($10/1,000) · up to 20% cheaper annually"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-09-01"
+ },
+ "Ornith 1.5": {
+  "name": "Ornith 1.5",
+  "vendor": "DeepReinforce",
+  "cat": {
+   "de": "Sprachmodell · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Offene Modelle unter MIT-Lizenz, die sich beim agentischen Programmieren selbst verbessern — sie lernen aus ihren eigenen Durchläufen, statt unverändert zu bleiben. Die aktuelle Version 1.5 erweitert das Prinzip zu einem Kreislauf: Sie schlägt sich Aufgaben selbst vor und macht daraus ihr eigenes Trainingsmaterial.",
+   "en": "Open models under the MIT licence that improve themselves at agentic coding — they learn from their own runs instead of staying fixed. Version 1.5 extends the principle into a loop: it proposes its own tasks and turns them into its own training material."
+  },
+  "tip": {
+   "de": "Ein junger Ansatz. Interessant zum Beobachten; für den Produktivbetrieb würde ich zuerst zu den etablierten Familien greifen.",
+   "en": "A young approach. Worth watching; for production work I would reach for the established families first."
+  },
+  "links": {
+   "home": "https://github.com/ornith-ai/Ornith-1",
+   "docs": null,
+   "code": "https://github.com/ornith-ai/Ornith-1"
+  },
+  "free": true,
+  "plans": {
+   "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
+   "en": "Free (open-weight, MIT), self-hosted"
+  }
+ },
+ "Statista Connect": {
+  "name": "Statista Connect",
+  "vendor": "Statista",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "blurb": {
+   "de": "Marktzahlen mit Methodik statt Suchtreffer: Der gehostete MCP-Server von Statista hängt Agenten direkt an den Datenkatalog — sechs Werkzeuge decken Statistiken (Suche plus komplette Zahlenwerte samt Quellen- und Methodikangaben je ID), weltweit umfragedaten (Consumer Insights, kreuztabelliert nach Jahr und Land filterbar) und Marktprognosen für über 1.000 Märkte in über 190 Ländern ab. Angemeldet wird per API-Schlüssel, anbinden lassen sich Claude, Gemini und OpenAI. Der Fang: Der Zugang ist an eine Statista-Lizenz gebunden und wird per Anfrage vergeben — testen ohne Abo geht nicht.",
+   "en": "Market numbers with methodology instead of search hits: Statista's hosted MCP server wires agents straight into the data catalogue — six tools cover statistics (search plus complete numerical values with source and methodology per ID), worldwide survey data (Consumer Insights, cross-tabulated, filterable by year and country) and market forecasts for over 1,000 markets in over 190 countries. Sign-in is by API key; Claude, Gemini and OpenAI are the named clients. The catch: access is tied to a Statista licence and granted on request — no testing without a subscription."
+  },
+  "tip": {
+   "de": "Für Recherchieren und Marktforschung die belegte Stufe über der Websuche: Zahlen mit Quelle und Erhebungsmethode, nicht der nächste Blogpost. Ohne bestehendes Statista-Abo lohnt der Einstieg kaum — der Preis steht erst im Gespräch.",
+   "en": "For research and market analysis the cited step above web search: numbers with source and survey method, not the next blog post. Without an existing Statista subscription the entry cost hardly pays — the price only appears in the sales talk."
+  },
+  "links": {
+   "home": "https://de.statista.com/business/connect-integrations-hub/",
+   "docs": "https://docs.platform.statista.ai/mcp-server/introduction"
   }
  }
 }

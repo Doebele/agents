@@ -1440,7 +1440,7 @@
    "docs": "https://bfl.ai/models/flux-2",
    "code": "https://github.com/black-forest-labs/flux2"
   },
-  "contentChecked": "2026-08-29"
+  "contentChecked": "2026-09-01"
  },
  "Qwen-Image": {
   "name": "Qwen-Image",
@@ -1487,7 +1487,7 @@
    "code": null
   },
   "icon": "google",
-  "contentChecked": "2026-08-29"
+  "contentChecked": "2026-09-01"
  },
  "Ideogram": {
   "name": "Ideogram",
@@ -1511,7 +1511,7 @@
    "docs": "https://developer.ideogram.ai/ideogram-api/api-overview",
    "code": null
   },
-  "contentChecked": "2026-08-29"
+  "contentChecked": "2026-09-01"
  },
  "Recraft": {
   "name": "Recraft",
@@ -2800,8 +2800,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Das Standardwerkzeug, in dem Oberflächen entworfen werden, bevor sie jemand baut — im Browser, mit mehreren Leuten gleichzeitig. Für Agenten zählen zwei Zugänge: Figma Make baut aus einer Beschreibung eine lauffähige Oberfläche, und der Figma-MCP-Server lässt einen Agenten den fertigen Entwurf auslesen und in Code übersetzen.",
-   "en": "The standard tool where interfaces are designed before anyone builds them — in the browser, with several people at once. Two doors matter for agents: Figma Make turns a description into a working interface, and the Figma MCP server lets an agent read a finished design and translate it into code."
+   "de": "Das Standardwerkzeug, in dem Oberflächen entworfen werden, bevor sie jemand baut — im Browser, mit mehreren Leuten gleichzeitig. Für Agenten zählen zwei Zugänge: Figma Make baut aus einer Beschreibung eine lauffähige Oberfläche, und der Figma-MCP-Server lässt einen Agenten den fertigen Entwurf auslesen und in Code übersetzen — inzwischen auch umgekehrt Rahmen, Komponenten und Variablen auf der Zeichenfläche anlegen.",
+   "en": "The standard tool where interfaces are designed before anyone builds them — in the browser, with several people at once. Two doors matter for agents: Figma Make turns a description into a working interface, and the Figma MCP server lets an agent read a finished design and translate it into code — and by now the other way round too, creating frames, components and variables on the canvas."
   },
   "tip": {
    "de": "Wenn in deinem Umfeld Entwürfe entstehen, liegen sie vermutlich hier. Der MCP-Server ist dann der kürzeste Weg vom Entwurf zum Code.",
@@ -2899,8 +2899,8 @@
   "name": "Google Antigravity",
   "vendor": "Google",
   "cat": {
-   "de": "Design-Tool · Baustein 07",
-   "en": "Design tool · Block 07"
+   "de": "Entwicklungsumgebung · Baustein 07",
+   "en": "Development environment · Block 07"
   },
   "accent": "var(--amber)",
   "open": false,
@@ -2917,7 +2917,7 @@
    "docs": "https://antigravity.google/docs/getting-started",
    "code": "https://antigravity.google/download"
   },
-  "contentChecked": "2026-08-29"
+  "contentChecked": "2026-09-01"
  },
  "Google Stitch": {
   "name": "Stitch",
@@ -3368,8 +3368,8 @@
   "open": false,
   "free": false,
   "blurb": {
-   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Läuft auf dem Mac und auf dem iPad. Für den Mac gibt es beide Wege: einmal kaufen oder das Apple-Creator-Studio-Abo (12,99 $/Monat), in dem zusätzliche Funktionen stecken; der Einmalkauf bleibt bestehen.",
-   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. Runs on the Mac and on the iPad. On the Mac both routes exist: buy it once, or take the Apple Creator Studio subscription ($12.99/month), which carries extra features; the one-time purchase remains."
+   "de": "Apples Schnittprogramm für ernsthafte Arbeit: Mehrspur-Schnitt, Farbkorrektur, Ton. Es gibt eine Mac- und eine iPad-Fassung. Für den Mac lässt es sich weiterhin einmalig kaufen, inzwischen aber auch im Abo Apple Creator Studio (12,99 $/Monat) mieten — wer es lange behält, fährt mit dem Kauf günstiger.",
+   "en": "Apple's editing program for serious work: multitrack editing, colour grading, audio. There is a Mac edition and an iPad one. On the Mac you can still buy it outright, but by now it is also rented inside the Apple Creator Studio subscription ($12.99/month) — keep it for years and buying works out cheaper."
   },
   "tip": {
    "de": "Sinnvoll, sobald ein Projekt mehr als ein paar Clips hat. Vor dem Kauf die kostenlose Testphase nutzen.",
@@ -3378,7 +3378,7 @@
   "links": {
    "home": "https://www.apple.com/final-cut-pro/"
   },
-  "contentChecked": "2026-08-29"
+  "contentChecked": "2026-09-01"
  },
  "Premiere Pro": {
   "name": {
@@ -3595,7 +3595,7 @@
    "home": "https://www.hostinger.com"
   },
   "plansChecked": "2026-09-06",
-  "contentChecked": "2026-08-29"
+  "contentChecked": "2026-09-01"
  },
  "Strato": {
   "name": "Strato",
@@ -3656,7 +3656,7 @@
    "home": "https://www.ionos.de"
   },
   "plansChecked": "2026-09-06",
-  "contentChecked": "2026-08-29"
+  "contentChecked": "2026-09-01"
  },
  "Netlify": {
   "name": "Netlify",

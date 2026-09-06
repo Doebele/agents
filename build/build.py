@@ -117,6 +117,18 @@ def pruefe():
         if not isinstance(b, list) or not b or any(x not in ("abo", "api") for x in b):
             fehler.append(f"Steckbrief {k!r}: billing muss Liste aus 'abo'/'api' sein")
 
+    # plansJahr: der Preis bei Jahreszahlung, und nur wo der Anbieter ihn
+    # selbst ausweist. Ohne plans hat er nichts, wogegen er stuende — der
+    # Umschalter in der Schublade braucht beide Seiten. Und wer einen zweiten
+    # Preis eintraegt, hat die Preisseite gelesen: ohne plansChecked waere das
+    # eine Zahl ohne Datum, also eine, der niemand ansieht, wie alt sie ist.
+    for k, d in daten["STECKBRIEF"].items():
+        if not d.get("plansJahr"): continue
+        if not d.get("plans"):
+            fehler.append(f"Steckbrief {k!r}: plansJahr ohne plans")
+        if not d.get("plansChecked"):
+            fehler.append(f"Steckbrief {k!r}: plansJahr ohne plansChecked")
+
     # plansChecked: optional, aber wenn gesetzt, ein echtes Datum in der
     # Vergangenheit. Ein Pruefdatum, das in der Zukunft liegt, ist keine
     # Schlamperei sondern eine Falschaussage: es behauptet eine Pruefung,

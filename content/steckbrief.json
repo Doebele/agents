@@ -345,14 +345,18 @@
    ]
   },
   "plans": {
-   "de": "Pro 20 $/Mo. (17 $ bei Jahreszahlung) · Max 5× 100 $ · Max 20× 200 $ (5-/20-faches Pro-Kontingent je 5-h-Fenster) · Team ab 25 $/Platz/Mo. · API nutzungsabhängig",
-   "en": "Pro $20/mo ($17 paid annually) · Max 5x $100 · Max 20x $200 (5x/20x the Pro quota per 5-hour window) · Team from $25/seat/mo · usage-based API"
+   "de": "Pro 20 $/Mo. · Max 5× 100 $ · Max 20× 200 $ (5-/20-faches Pro-Kontingent je 5-h-Fenster) · Team ab 25 $/Platz/Mo. · API nutzungsabhängig",
+   "en": "Pro $20/mo · Max 5x $100 · Max 20x $200 (5x/20x the Pro quota per 5-hour window) · Team from $25/seat/mo · usage-based API"
+  },
+  "plansJahr": {
+   "de": "Pro 17 $/Mo. (200 $ im Voraus) · Max 5× 100 $ (nur monatlich) · Max 20× 200 $ (nur monatlich, 5-/20-faches Pro-Kontingent je 5-h-Fenster) · Team ab 20 $/Platz/Mo. · API nutzungsabhängig",
+   "en": "Pro $17/mo ($200 up front) · Max 5x $100 (monthly only) · Max 20x $200 (monthly only, 5x/20x the Pro quota per 5-hour window) · Team from $20/seat/mo · usage-based API"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-06"
  },
  "Agent SDK": {
   "name": "Claude Agent SDK",
@@ -1273,13 +1277,17 @@
   "icon": "ollama",
   "free": true,
   "plans": {
-   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Free 0 $ (1 Modell gleichzeitig), Pro 20 $/Mo. bzw. 200 $/Jahr (3 Modelle), Max 100 $/Mo. (10 Modelle, neue Anmeldungen derzeit pausiert), Team 25 $/Sitz/Mo. ab 5 Sitzen",
-   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Free $0 (one model at a time), Pro $20/mo or $200/year (three models), Max $100/mo (ten models, new sign-ups currently paused), Team $25/seat/mo from five seats"
+   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Free 0 $ (Startguthaben) · Pro 20 $/Mo. (60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (300 $ Guthaben, 10 gleichzeitige Anfragen) · Team 500 $/Mo. (1.000 $ Guthaben fürs Team, Vorabzugang)",
+   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Free $0 (starter credits) · Pro $20/mo ($60 of credits a month) · Pro Max $100/mo ($300 of credits, 10 concurrent requests) · Team $500/mo ($1,000 of credits for the team, early access)"
+  },
+  "plansJahr": {
+   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Free 0 $ (Startguthaben) · Pro 16,67 $/Mo. (200 $/Jahr, 60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (nur monatlich) · Team 500 $/Mo. (nur monatlich)",
+   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Free $0 (starter credits) · Pro $16.67/mo ($200/year, $60 of credits a month) · Pro Max $100/mo (monthly only) · Team $500/mo (monthly only)"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-31",
+  "plansChecked": "2026-09-06",
   "contentChecked": "2026-09-05"
  },
  "llama.cpp": {
@@ -2023,14 +2031,18 @@
    "code": "https://github.com/fastrepl/anarlog"
   },
   "plans": {
-   "de": "Lokal und mit eigenem Schlüssel kostenlos, ohne Limit · Pro 15 $/Mo. oder 150 $/Jahr (Cloud-Transkription, Cloud-LLM, Synchronisierung, Teilen) · Enterprise mit SSO und eigenem Server auf Anfrage",
-   "en": "Local and with your own key free, without limit · Pro $15/mo or $150/year (cloud transcription, cloud LLM, sync, sharing) · Enterprise with SSO and own server on request"
+   "de": "Lokal und mit eigenem Schlüssel kostenlos, ohne Limit · Pro 15 $/Mo. (Cloud-Transkription, Cloud-LLM, Synchronisierung, Teilen) · Team 20 $/Person/Mo. · Enterprise mit SSO und eigenem Server auf Anfrage",
+   "en": "Local and with your own key free, without limit · Pro $15/mo (cloud transcription, cloud LLM, sync, sharing) · Team $20/person/mo · Enterprise with SSO and own server on request"
+  },
+  "plansJahr": {
+   "de": "Lokal und mit eigenem Schlüssel kostenlos, ohne Limit · Pro 12,50 $/Mo. (150 $/Jahr; Cloud-Transkription, Cloud-LLM, Synchronisierung, Teilen) · Team 16,67 $/Person/Mo. (200 $/Person/Jahr) · Enterprise mit SSO und eigenem Server auf Anfrage",
+   "en": "Local and with your own key free, without limit · Pro $12.50/mo ($150/year; cloud transcription, cloud LLM, sync, sharing) · Team $16.67/person/mo ($200/person/year) · Enterprise with SSO and own server on request"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-26"
+  "plansChecked": "2026-09-06"
  },
  "GPT-5.6": {
   "name": "GPT-5.6",
@@ -2887,13 +2899,17 @@
   },
   "free": true,
   "plans": {
-   "de": "Kostenlos mit unbegrenzten Zuschauern und Bearbeitern (100 MCP-Aufrufe/Woche) · Pro 20 $ je Bearbeiter/Mo., 16 $ bei Jahreszahlung (1 Mio. MCP-Aufrufe/Woche) · Organisationen auf Anfrage",
-   "en": "Free with unlimited viewers and editors (100 MCP calls/week) · Pro $20 per editor/mo, $16 billed yearly (1M MCP calls/week) · Organizations on request"
+   "de": "Kostenlos mit unbegrenzten Zuschauern und Bearbeitern (100 MCP-Aufrufe/Woche) · Pro 20 $ je Bearbeiter/Mo. (1 Mio. MCP-Aufrufe/Woche) · Organisationen auf Anfrage",
+   "en": "Free with unlimited viewers and editors (100 MCP calls/week) · Pro $20 per editor/mo (1M MCP calls/week) · Organizations on request"
+  },
+  "plansJahr": {
+   "de": "Kostenlos mit unbegrenzten Zuschauern und Bearbeitern (100 MCP-Aufrufe/Woche) · Pro 16 $ je Bearbeiter/Mo. bei Jahreszahlung (1 Mio. MCP-Aufrufe/Woche) · Organisationen auf Anfrage",
+   "en": "Free with unlimited viewers and editors (100 MCP calls/week) · Pro $16 per editor/mo billed yearly (1M MCP calls/week) · Organizations on request"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-24"
+  "plansChecked": "2026-09-06"
  },
  "Antigravity 2.0": {
   "name": "Google Antigravity",
@@ -4359,10 +4375,14 @@
    "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo.",
    "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $20/mo, Creator $35/mo, Pro $100/mo"
   },
+  "plansJahr": {
+   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 16 $/Mo. (192 $/Jahr), Creator 28 $/Mo. (336 $/Jahr), Pro 80 $/Mo. (960 $/Jahr)",
+   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $16/mo ($192/year), Creator $28/mo ($336/year), Pro $80/mo ($960/year)"
+  },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-24"
+  "plansChecked": "2026-09-06"
  },
  "Osaurus": {
   "name": "Osaurus",

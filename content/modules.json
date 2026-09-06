@@ -392,12 +392,12 @@
       "k": "archify"
      },
      {
-      "n": "dot-skill",
+      "n": "Distilly",
       "v": {
        "de": "Persona",
        "en": "persona"
       },
-      "k": "dot-skill"
+      "k": "Distilly"
      },
      {
       "n": {
@@ -604,6 +604,14 @@
        "en": "brain · local"
       },
       "k": "gbrain"
+     },
+     {
+      "n": "DaVinci Resolve",
+      "v": {
+       "de": "Videoschnitt",
+       "en": "video editing"
+      },
+      "k": "davinci-resolve-mcp"
      }
     ]
    }

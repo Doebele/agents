@@ -179,6 +179,47 @@ no `plansChecked` counts as never checked, which puts it first in line.
 `build.py` refuses a date that is malformed, that lies in the future, or that
 sits on an entry with no `plans`.
 
+### Monthly or yearly is two prices, not one
+
+Most subscriptions cost less if you pay for a year at once, and the gap is not
+small — a fifth off is the going rate. An entry carrying only one of the two
+numbers is right for half its readers and wrong for the other half, and from
+the outside there is no way to tell which half you are in.
+
+So the two sit side by side:
+
+```json
+"plans":     { "de": "Pro 20 $/Mo. · …",              "en": "Pro $20/mo · …" },
+"plansJahr": { "de": "Pro 17 $/Mo. (200 $ im Voraus) · …",
+               "en": "Pro $17/mo ($200 up front) · …" },
+"plansChecked": "2026-09-06"
+```
+
+`plans` is what it costs paid by the month. `plansJahr` is the same list of
+tiers priced as it stands when you pay for a year — stated **per month**, so
+that the two views compare and the bars stay on one scale, with the yearly
+total in brackets so nobody has to take the division on trust. The drawer
+grows a monthly/yearly switch wherever `plansJahr` exists, and nowhere else.
+
+Three rules, and the first is the one that matters:
+
+- **Only where the vendor publishes the figure.** Plenty of pricing pages
+  advertise "save 20 %" and reveal the number only after their toggle is
+  clicked, which fetching the page does not do. A percentage is not a price.
+  Where the annual figure cannot be read, `plansJahr` stays out and the
+  discount stays in the prose of `plans`, in words.
+- **Every tier, including those with no annual rate.** The switch replaces the
+  whole list, so a tier missing from `plansJahr` would vanish the moment a
+  reader flips it. One sold only by the month keeps its monthly price there
+  and says so: `(nur monatlich)` / `(monthly only)`.
+- **Know which of the two you are reading.** A pricing page whose toggle
+  starts on yearly — Notion's does — puts the annual price exactly where a
+  reader expects the monthly one. Read the toggle, not just the number.
+
+`build.py` refuses `plansJahr` without `plans`, and without `plansChecked`: a
+second price is still a price, and a price with no date is one whose age
+nobody can judge.
+
 ### Two read, one decides
 
 One agent reading a pricing page is the thinnest point in the whole routine:

@@ -853,6 +853,14 @@ button.it{ width:100%; font-family:var(--body); text-align:left; background:none
 .st-bill{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 0; }
 .st-bill-b{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase;
   color:var(--ink-dim); border:1px solid var(--line-2); border-radius:999px; padding:3px 9px; }
+/* Monatlich oder jaehrlich. Zwei Schalter im Stil der Abrechnungs-Badges, und
+   nur dort, wo der Anbieter beide Preise selbst ausweist — wo er nur einen
+   Rabatt in Prozent nennt, bleibt der Umschalter weg. */
+.pb-turnus{ display:flex; gap:6px; margin:8px 0 0; }
+.pb-turnus button{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); background:none; border:1px solid var(--line-2); border-radius:999px;
+  padding:3px 9px; cursor:pointer; }
+.pb-turnus button[aria-pressed="true"]{ color:var(--mc); border-color:var(--mc); background:var(--surf-2); }
 .pb-grp{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:12px 0 6px; }
 .price-bars .pb-grp:first-child{ margin-top:2px; }
 .pb-fill{ height:100%; border-radius:4px; background:var(--mc); opacity:.6; }
@@ -1308,6 +1316,10 @@ MODULES.forEach(m=>{
 /* ====================================================================== */
 const drawer=$('#drawer'), scrim=$('#scrim');
 let currentModule=null, detailActive=false, pushed=false, lastFocus=null;
+/* Monatlich oder jaehrlich: die Wahl gilt fuer die ganze Sitzung, nicht nur
+   fuer den offenen Steckbrief. Wer jaehrlich rechnet, rechnet ueberall so —
+   und muss den Schalter nicht bei jedem Eintrag neu umlegen. */
+let preisTurnus='mon';
 
 function renderOverview(m){
   drawer.classList.remove('detail');
@@ -1372,7 +1384,11 @@ function renderDetail(key){
       else if(/min\.|minute/i.test(cost)) cls='min';
       return {name:name||seg,cost:cost,val:Math.max.apply(null,zahlen),cls:cls};
     };
-    const _segs=d.plans.split(' \u00b7 ');
+    /* Ein Jahrespreis steht nur dort, wo der Anbieter ihn selbst ausweist.
+       Fehlt plansJahr, fehlt auch der Umschalter \u2014 dann ist der Monatspreis
+       nicht die eine von zwei Ansichten, sondern der einzige Preis. */
+    const _hasJ=!!d.plansJahr, _jahr=_hasJ&&preisTurnus==='jahr';
+    const _segs=(_jahr?d.plansJahr:d.plans).split(' \u00b7 ');
     const _parsed=_segs.map(_pPlan);
     /* Nach Abrechnungsklasse gruppieren — die Abo-Treppe (Pro/Max/…) steht
        zusammen, die Token-Preise danach —, innerhalb der Klasse nach Preis. */
@@ -1383,7 +1399,9 @@ function renderDetail(key){
       if(a.noPrice) return 1; if(b.noPrice) return -1;
       return (_ord[a.cls]-_ord[b.cls])||(a.val-b.val); });
     /* Der Massstab ist global ueber alle Steckbriefe, je Einheitenklasse — so
-       sind Balken verschiedener Modelle direkt vergleichbar. Einmal gereicht. */
+       sind Balken verschiedener Modelle direkt vergleichbar. Einmal gereicht.
+       Er bleibt auf den Monatspreisen stehen, auch in der Jahresansicht: dann
+       schrumpfen die Balken beim Umschalten, und genau das ist die Ersparnis. */
     if(!window._pScale){ window._pScale={tok:0,mon:0,min:0};
       for(const _k in STECKBRIEF){ const _pl=STECKBRIEF[_k].plans;
         if(!_pl||typeof _pl.split!=='function') continue;
@@ -1396,7 +1414,7 @@ function renderDetail(key){
         var w=_s>0?Math.max(p.val/_s*100,2):0;
         /* Gruppenkopf vor jedem Klassenwechsel: Abo-Treppe, Token-Preise, Minuten */
         if(p.cls!==_pbLast){ _pbLast=p.cls;
-          h+='<div class="pb-grp">'+_cL[p.cls]+'</div>'; }
+          h+='<div class="pb-grp">'+((_jahr&&p.cls==='mon')?_cJ:_cL[p.cls])+'</div>'; }
         h+='<div class="price-bar"><div class="pb-head"><span class="pb-name">'+p.name+'</span><span class="pb-cost">'+p.cost+'</span></div><div class="pb-track"><div class="pb-fill" style="width:'+w+'%"></div></div></div>'; }
     });
     h+='</div></div>';
@@ -1414,6 +1432,16 @@ function renderDetail(key){
 {{T:t082}}
 {{T:t107}}
   body.innerHTML=h;
+  /* Der Umschalter baut den Steckbrief neu auf. Danach ist der geklickte Knopf
+     ein anderes Element als vorher, deshalb holt er den Fokus ausdruecklich
+     zurueck — sonst faellt er auf den Anfang der Schublade. */
+  body.querySelectorAll('[data-turnus]').forEach(function(b){
+    b.addEventListener('click', function(){
+      preisTurnus=b.getAttribute('data-turnus'); renderDetail(key);
+      const n=body.querySelector('[data-turnus="'+preisTurnus+'"]');
+      if(n){ try{ n.focus(); }catch(e){} }
+    });
+  });
   /* Der Steckbrief-Text ist frisch im DOM — Glossarbegriffe darin verknuepfen. */
   if(_gtReady) linkGlossary();
 }

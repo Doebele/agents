@@ -1381,7 +1381,7 @@
    "en": "If words should appear in the image, put the exact wording in quotation marks in your prompt."
   },
   "links": {
-   "home": "https://openai.com",
+   "home": "https://developers.openai.com/api/docs/models/gpt-image-2",
    "docs": "https://developers.openai.com/api/docs/guides/image-generation",
    "code": null
   },
@@ -1606,7 +1606,8 @@
    "home": "https://kling.ai/",
    "docs": "https://kling.ai/document-api/quickStart/productIntroduction/overview",
    "code": null
-  }
+  },
+  "contentChecked": "2026-08-29"
  },
  "Seedance 2.5": {
   "name": "Seedance 2.5",
@@ -2757,6 +2758,34 @@
    "code": "https://github.com/samuelgursky/davinci-resolve-mcp"
   }
  },
+ "buffer-mcp": {
+  "name": "Buffer MCP Server",
+  "vendor": "Buffer",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": false,
+  "blurb": {
+   "de": "Social-Media-Posts aus dem Agenten heraus: Entwürfe schreiben, Posting-Termine setzen, die Warteschlange prüfen, Ideen zwischenspeichern — aus Claude, ChatGPT oder dem Werkzeug, in dem du ohnehin arbeitest. Veröffentlicht wird nichts direkt: Alles landet als Entwurf oder geplanter Post in der Buffer-Warteschlange und geht erst raus, wenn du freigibst. Dafür braucht es ein Buffer-Konto, und der Server kann nur, was Buffers API hergibt.",
+   "en": "Social media posts from inside the agent: draft posts, set publishing times, check the queue, park ideas — from Claude, ChatGPT or whichever tool you work in anyway. Nothing is published directly: everything lands as a draft or scheduled post in the Buffer queue and only goes out once you approve it. For that you need a Buffer account, and the server can only do what Buffer's API exposes."
+  },
+  "tip": {
+   "de": "Der Freigabe-Schritt ist die Sicherung, nicht die Hürde: den Agenten entwerfen und einplanen lassen, aber gegenlesen, bevor etwas in deinem Namen rausgeht. Jede Verbindung läuft über deinen persönlichen API-Schlüssel oder eine OAuth-Anmeldung — Zugang entziehst du wieder, wenn ein Werkzeug sich erledigt hat.",
+   "en": "The approval step is the safety net, not the hurdle: let the agent draft and schedule, but read through before anything goes out in your name. Every connection runs on your personal API key or an OAuth sign-in — revoke the access once a tool has done its job."
+  },
+  "links": {
+   "home": "https://buffer.com/mcp",
+   "docs": "https://developers.buffer.com/guides/integrations/mcp",
+   "code": null
+  },
+  "icon": "buffer",
+  "free": true,
+  "billing": [
+   "abo"
+  ]
+ },
  "Figma": {
   "name": "Figma",
   "vendor": "Figma",
@@ -2871,8 +2900,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Googles Entwicklungsumgebung für den Fall, dass nicht ein Agent arbeitet, sondern mehrere gleichzeitig — jeder an seiner Aufgabe, nebeneinander in einem Fenster. Ein Programm für den Schreibtisch, kein Dienst im Browser. Seit 2.0 gehört eine Kommandozeile dazu.",
-   "en": "Google's development environment for the case where not one agent works but several at once — each on its own task, side by side in one window. A program for the desktop, not a service in the browser. Since 2.0 a command line ships along."
+   "de": "Googles Entwicklungsumgebung für den Fall, dass nicht ein Agent arbeitet, sondern mehrere gleichzeitig — jeder an seiner Aufgabe, nebeneinander in einem Fenster. Ein Programm für den Schreibtisch: Die Arbeit läuft auf deinem Rechner, seit Remote Control lässt sie sich aber aus jedem Browser weitersteuern. Seit 2.0 gehört eine Kommandozeile dazu.",
+   "en": "Google's development environment for the case where not one agent works but several at once — each on its own task, side by side in one window. A program for the desktop: the work runs on your own machine, though since Remote Control you can drive it on from any browser. Since 2.0 a command line ships along."
   },
   "tip": {
    "de": "Erst sinnvoll, wenn eine Aufgabe sich wirklich in unabhängige Teile zerlegen lässt. Sonst warten mehrere Agenten nur aufeinander.",

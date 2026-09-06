@@ -612,6 +612,14 @@
        "en": "video editing"
       },
       "k": "davinci-resolve-mcp"
+     },
+     {
+      "n": "Buffer",
+      "v": {
+       "de": "Soziale Netzwerke",
+       "en": "Social networks"
+      },
+      "k": "buffer-mcp"
      }
     ]
    }

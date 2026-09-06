@@ -92,9 +92,9 @@
       "k": "Llama 4"
      },
      {
-      "n": "Ornith 1.0",
+      "n": "Ornith 1.5",
       "v": "Open",
-      "k": "Ornith 1.0"
+      "k": "Ornith 1.5"
      }
     ]
    },
@@ -392,12 +392,12 @@
       "k": "archify"
      },
      {
-      "n": "dot-skill",
+      "n": "Distilly",
       "v": {
        "de": "Persona",
        "en": "persona"
       },
-      "k": "dot-skill"
+      "k": "Distilly"
      },
      {
       "n": {
@@ -571,6 +571,14 @@
       "k": "excel-mcp"
      },
      {
+      "n": "Statista",
+      "v": {
+       "de": "Marktdaten · lizenzpflichtig",
+       "en": "market data · licensed"
+      },
+      "k": "Statista Connect"
+     },
+     {
       "n": {
        "de": "Gedächtnis",
        "en": "Memory"
@@ -596,6 +604,14 @@
        "en": "brain · local"
       },
       "k": "gbrain"
+     },
+     {
+      "n": "DaVinci Resolve",
+      "v": {
+       "de": "Videoschnitt",
+       "en": "video editing"
+      },
+      "k": "davinci-resolve-mcp"
      }
     ]
    }
@@ -818,8 +834,8 @@
      {
       "n": "Wan 3.0",
       "v": {
-       "de": "Alibaba · offen",
-       "en": "Alibaba · open"
+       "de": "Alibaba · API",
+       "en": "Alibaba · API"
       },
       "k": "Wan 3.0"
      },

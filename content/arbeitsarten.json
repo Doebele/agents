@@ -325,19 +325,20 @@
     },
     "07_umgebung": {
      "kandidaten": [
-      "Gemini Notebook"
+      "Gemini Notebook",
+      "Rows"
      ],
-     "luecke": {
-      "de": "Eine Tabellenumgebung, in der das Ergebnis weiterverarbeitet wird, fehlt noch.",
-      "en": "A spreadsheet environment for working on the result further is still missing."
-     },
      "frage": {
       "de": "Wo soll das Ergebnis entstehen?",
       "en": "Where should the result take shape?"
      },
      "empfehlung": [
       "Gemini Notebook"
-     ]
+     ],
+     "notiz": {
+      "de": "Notebook hält die Quellen fest, Rows hält die Tabelle am Leben: die Auswertung bleibt dort weiterbearbeitbar.",
+      "en": "Notebook keeps the sources, Rows keeps the sheet alive: the analysis stays editable there."
+     }
     }
    },
    "voraussetzungen": [

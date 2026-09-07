@@ -269,6 +269,42 @@
    "tut": "https://www.youtube.com/watch?v=NVUCQ-pzBn4"
   }
  },
+ "Rows": {
+  "name": "Rows",
+  "vendor": "Rows",
+  "cat": {
+   "de": "Tabellenumgebung · Baustein 07",
+   "en": "Spreadsheet workspace · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Eine Tabellenumgebung im Browser, der eine KI beigestellt ist: Du importierst Daten — aus Dateien oder aus über fünfzig Diensten — und lässt die KI daraus Auswertungen, kleine Rechner und Automatisierungen bauen, die wie Formeln in der Tabelle mitrechnen. Das Ergebnis bleibt eine echte Tabelle: selbst weiterbearbeiten, teilen, einbetten und auf Wunsch regelmäßig auffrischen lassen.",
+   "en": "A spreadsheet workspace in the browser with an AI attached: you import data — from files or from over fifty services — and let the AI build analyses, small calculators and automations that recalculate like formulas inside the sheet. The result stays a real spreadsheet: edit it yourself, share it, embed it, and have it refreshed on a schedule."
+  },
+  "tip": {
+   "de": "Nimm es, wenn das Ergebnis eine lebende Tabelle bleiben soll — Daten und Auswertung bleiben hier beieinander, statt nach jedem Schritt exportiert zu werden. Der Haken: KI-Aufgaben sind gezählt, die freie Stufe gibt fünf pro Monat.",
+   "en": "Reach for it when the result should stay a living spreadsheet — the data and the analysis stay together instead of being exported after every step. The catch: AI tasks are metered, the free tier allows five a month."
+  },
+  "free": true,
+  "plans": {
+   "de": "Gratis (5 KI-Aufgaben/Mo.) · Plus 8 $/Mitglied/Mo. · Pro 79 $/Mo. zuzüglich 8 $/Mitglied/Mo. · Enterprise auf Anfrage",
+   "en": "Free (5 AI tasks/mo) · Plus $8/member/mo · Pro $79/mo plus $8/member/mo · Enterprise on request"
+  },
+  "plansJahr": {
+   "de": "Gratis · Plus 6 $/Mitglied/Mo. (72 $/Jahr) · Pro 59 $/Mo. zuzüglich 6 $/Mitglied/Mo. (Grundpreis 708 $/Jahr) · Enterprise auf Anfrage",
+   "en": "Free · Plus $6/member/mo ($72/yr) · Pro $59/mo plus $6/member/mo ($708/yr base) · Enterprise on request"
+  },
+  "billing": [
+   "abo"
+  ],
+  "links": {
+   "home": "https://rows.com/",
+   "docs": "https://rows.com/docs"
+  },
+  "plansChecked": "2026-09-07",
+  "contentChecked": "2026-09-07"
+ },
  "Claude Code": {
   "name": "Claude Code",
   "vendor": "Anthropic",

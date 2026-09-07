@@ -1370,7 +1370,7 @@ function renderDetail(key){
        Formen, auch innerhalb eines Ausdrucks ("3 $/15 $", "$3/$15"). Die Klasse
        entscheidet ueber den Massstab: Token gegen Token, Monat gegen Monat,
        Minute gegen Minute — nie Monatsabo gegen Token-Preis. */
-    const _pPlan=function(seg){
+    const _pPlan=function(seg,monatsblick){
       const _atom='(?:\\$\\s?\\d+(?:[.,]\\d+)?|\\d+(?:[.,]\\d+)?\\s*\\$)';
       const m=seg.match(new RegExp(_atom+'(?:\\s*\\/\\s*'+_atom+')*'));
       if(!m) return {noPrice:true,name:seg};
@@ -1382,6 +1382,7 @@ function renderDetail(key){
       let cls='mon';                                    // nacktes einzelnes $ ist hier stets ein Monats-Abo
       if(/tok/i.test(cost)||m[0].indexOf('/')>=0) cls='tok';
       else if(/min\.|minute/i.test(cost)) cls='min';
+      else if(monatsblick&&/jahr\b|year\b/i.test(cost)) cls='jahr';
       return {name:name||seg,cost:cost,val:Math.max.apply(null,zahlen),cls:cls};
     };
     /* Ein Jahrespreis steht nur dort, wo der Anbieter ihn selbst ausweist.
@@ -1389,10 +1390,10 @@ function renderDetail(key){
        nicht die eine von zwei Ansichten, sondern der einzige Preis. */
     const _hasJ=!!d.plansJahr, _jahr=_hasJ&&preisTurnus==='jahr';
     const _segs=(_jahr?d.plansJahr:d.plans).split(' \u00b7 ');
-    const _parsed=_segs.map(_pPlan);
+    const _parsed=_segs.map(function(s){return _pPlan(s,!_jahr);});
     /* Nach Abrechnungsklasse gruppieren — die Abo-Treppe (Pro/Max/…) steht
        zusammen, die Token-Preise danach —, innerhalb der Klasse nach Preis. */
-    const _ord={mon:0,tok:1,min:2};
+    const _ord={mon:0,tok:1,min:2,jahr:3};
     var _pbLast=null;
     _parsed.sort(function(a,b){
       if(a.noPrice&&b.noPrice) return 0;
@@ -1402,10 +1403,10 @@ function renderDetail(key){
        sind Balken verschiedener Modelle direkt vergleichbar. Einmal gereicht.
        Er bleibt auf den Monatspreisen stehen, auch in der Jahresansicht: dann
        schrumpfen die Balken beim Umschalten, und genau das ist die Ersparnis. */
-    if(!window._pScale){ window._pScale={tok:0,mon:0,min:0};
+    if(!window._pScale){ window._pScale={tok:0,mon:0,min:0,jahr:0};
       for(const _k in STECKBRIEF){ const _pl=STECKBRIEF[_k].plans;
         if(!_pl||typeof _pl.split!=='function') continue;
-        _pl.split(' \u00b7 ').forEach(function(s){ const p=_pPlan(s);
+        _pl.split(' \u00b7 ').forEach(function(s){ const p=_pPlan(s,true);
           if(!p.noPrice&&p.cls&&p.val>window._pScale[p.cls]) window._pScale[p.cls]=p.val; }); } }
 {{T:t077}}
     _parsed.forEach(function(p){

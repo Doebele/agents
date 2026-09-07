@@ -231,8 +231,8 @@
   },
   "free": true,
   "plans": {
-   "de": "1 GB kostenlos · 1–5 TB, auch als Lebenszeit-Zahlung",
-   "en": "1 GB free · 1–5 TB, lifetime payments available"
+   "de": "1 GB kostenlos · Essential 1 TB 11,99 $/Jahr · Premium 3 TB 21,99 $/Jahr · Ultimate 5 TB 31,99 $/Jahr · auch als Einmalkauf (Lifetime)",
+   "en": "1 GB free · Essential 1 TB $11.99/yr · Premium 3 TB $21.99/yr · Ultimate 5 TB $31.99/yr · also as one-time payment (lifetime)"
   },
   "billing": [
    "abo"
@@ -242,7 +242,7 @@
    "home": "https://internxt.com",
    "code": "https://github.com/internxt"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-07"
  },
  "Obsidian": {
   "name": "Obsidian",
@@ -545,7 +545,11 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-07",
+  "plansJahr": {
+   "de": "Adagio kostenlos · Moderato 15 $/Mo. (180 $/Jahr) · Allegretto 31 $/Mo. (372 $/Jahr) · Allegro 79 $/Mo. (948 $/Jahr) · Vivace 159 $/Mo. (1.908 $/Jahr) · K3-1M verzehrt rund 2× so viel Kontingent wie K3-256k · 300–1.200 Requests je 5 h · API 0,60 $/2,50 $ pro 1M Token",
+   "en": "Adagio free · Moderato $15/mo ($180/yr) · Allegretto $31/mo ($372/yr) · Allegro $79/mo ($948/yr) · Vivace $159/mo ($1,908/yr) · K3-1M burns about 2× the quota of K3-256k · 300–1,200 requests per 5 h · API $0.60/$2.50 per 1M tokens"
+  }
  },
  "ZCode": {
   "name": "ZCode",
@@ -578,7 +582,11 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-07",
+  "plansJahr": {
+   "de": "GLM-Coding-Abo: Lite 151,20 $/Jahr · Pro 672 $/Jahr · Max 1.411,20 $/Jahr · GLM-5.3 verzehrt in Spitzenlast 3× so viel Kontingent wie GLM-4.7 (Mo–Fr 14–18 Uhr UTC+8)",
+   "en": "GLM Coding plan: Lite $151.20/yr · Pro $672/yr · Max $1,411.20/yr · at peak (Mon–Fri 2–6 pm UTC+8) GLM-5.3 burns 3× the quota of GLM-4.7"
+  }
  },
  "Grok Build": {
   "name": "Grok Build",
@@ -1427,10 +1435,14 @@
    "code": null
   },
   "plans": {
-   "de": "Basic 10 $ · Standard 30 $ · Pro 60 $ · Mega 120 $/Mo. · jährlich rund 20 % günstiger · Stealth ab Pro",
-   "en": "Basic $10 · Standard $30 · Pro $60 · Mega $120/mo · about 20% cheaper annually · Stealth from Pro"
+   "de": "Basic 10 $ · Standard 30 $ · Pro 60 $ · Mega 120 $/Mo. · Stealth ab Pro",
+   "en": "Basic $10 · Standard $30 · Pro $60 · Mega $120/mo · Stealth from Pro"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-07",
+  "plansJahr": {
+   "de": "Basic 8 $/Mo. (96 $/Jahr) · Standard 24 $/Mo. (288 $/Jahr) · Pro 48 $/Mo. (576 $/Jahr) · Mega 96 $/Mo. (1.152 $/Jahr) · Stealth ab Pro",
+   "en": "Basic $8/mo ($96/yr) · Standard $24/mo ($288/yr) · Pro $48/mo ($576/yr) · Mega $96/mo ($1,152/yr) · Stealth from Pro"
+  }
  },
  "FLUX.2": {
   "name": "FLUX.2",
@@ -1550,10 +1562,14 @@
    "code": null
   },
   "plans": {
-   "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 12 $/Mo. · Pro ab 2.000 Credits 20 $/Mo. · Teams ab 2.000 Credits 22 $/Mo. · jährlich bis 20 % günstiger",
-   "en": "Free (images public, Recraft owns the rights) · Basic 1,000 credits 12 $/mo · Pro from 2,000 credits 20 $/mo · Teams from 2,000 credits 22 $/mo · up to 20% cheaper annually"
+   "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 12 $/Mo. · Pro ab 2.000 Credits 20 $/Mo. · Teams ab 2.000 Credits 22 $/Mo.",
+   "en": "Free (images public, Recraft owns the rights) · Basic 1,000 credits $12/mo · Pro from 2,000 credits $20/mo · Teams from 2,000 credits $22/mo"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-07",
+  "plansJahr": {
+   "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 10 $/Mo. (120 $/Jahr) · Pro ab 2.000 Credits 16 $/Mo. · Teams ab 2.000 Credits 18 $/Mo.",
+   "en": "Free (images public, Recraft owns the rights) · Basic 1,000 credits $10/mo ($120/yr) · Pro from 2,000 credits $16/mo · Teams from 2,000 credits $18/mo"
+  }
  },
  "Seedream": {
   "name": "Seedream",
@@ -1695,10 +1711,14 @@
    "code": null
   },
   "plans": {
-   "de": "Gratis 125 Credits · Standard 15 $ (625) · Pro 35 $ (2.250) · Max 95 $/Mo. (9.500) · Gen-4.5 kostet 12 Credits je Sekunde · jährlich rund 20 % günstiger",
-   "en": "Free 125 credits · Standard $15 (625) · Pro $35 (2,250) · Max $95/mo (9,500) · Gen-4.5 costs 12 credits per second · about 20% cheaper annually"
+   "de": "Gratis 125 Credits · Standard 15 $ (625) · Pro 35 $ (2.250) · Max 95 $/Mo. (9.500) · Gen-4.5 kostet 12 Credits je Sekunde",
+   "en": "Free 125 credits · Standard $15 (625) · Pro $35 (2,250) · Max $95/mo (9,500) · Gen-4.5 costs 12 credits per second"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-07",
+  "plansJahr": {
+   "de": "Gratis 125 Credits · Standard 12 $/Mo. bei Jahreszahlung · Pro 28 $/Mo. · Max 76 $/Mo. · Gen-4.5 kostet 12 Credits je Sekunde",
+   "en": "Free 125 credits · Standard $12/mo billed annually · Pro $28/mo · Max $76/mo · Gen-4.5 costs 12 credits per second"
+  }
  },
  "Luma": {
   "name": "Luma",
@@ -1726,7 +1746,11 @@
    "de": "Plus 30 $ · Pro 90 $ · Ultra 300 $/Mo.",
    "en": "Plus $30 · Pro $90 · Ultra $300/mo"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-07",
+  "plansJahr": {
+   "de": "Plus 25 $/Mo. (300 $/Jahr) · Pro 75 $/Mo. (900 $/Jahr) · Ultra 250 $/Mo. (3.000 $/Jahr)",
+   "en": "Plus $25/mo ($300/yr) · Pro $75/mo ($900/yr) · Ultra $250/mo ($3,000/yr)"
+  }
  },
  "Higgsfield": {
   "name": "Higgsfield",
@@ -1948,10 +1972,14 @@
   },
   "free": true,
   "plans": {
-   "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 15 $/Mo., jährlich 12 $/Mo. · Growth/Enterprise ab 18 $/Nutzer/Mo. bei jährlicher Zahlung",
-   "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $15/mo, $12/mo billed annually · Growth/Enterprise from $18/user/mo billed annually"
+   "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 15 $/Mo. · Growth/Enterprise ab 23 $/Nutzer/Mo.",
+   "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $15/mo · Growth/Enterprise from $23/user/mo"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-07",
+  "plansJahr": {
+   "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 12 $/Mo. · Growth/Enterprise ab 18 $/Nutzer/Mo.",
+   "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $12/mo · Growth/Enterprise from $18/user/mo"
+  }
  },
  "OpenWhispr": {
   "name": "OpenWhispr",
@@ -3651,8 +3679,8 @@
    "en": "The pick when processing data in Germany is a requirement. Modern Git-based deployment is less at home here."
   },
   "plans": {
-   "de": "Monatliche Pakete, Domain meist enthalten.",
-   "en": "Monthly packages, domain usually included."
+   "de": "Monats-Tarife: Starter 6 € · Basic 10 € · Plus 14 € · Pro 24 €/Mo. · Domain meist enthalten · 10 € Einrichtung",
+   "en": "Monthly terms: Starter €6 · Basic €10 · Plus €14 · Pro €24/mo · domain usually included · €10 setup"
   },
   "billing": [
    "abo"
@@ -3660,7 +3688,11 @@
   "links": {
    "home": "https://www.strato.de"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-07",
+  "plansJahr": {
+   "de": "12-Monats-Tarife: Starter erster Monat 0 €, dann 5 €/Mo. · Basic 1 €/Mo. für 12 Monate, dann 9 € · Plus erster Monat 0 €, dann 12 € · Pro erster Monat 0 €, dann 22 €/Mo. · Einrichtung 0 €",
+   "en": "12-month terms: Starter first month €0, then €5/mo · Basic €1/mo for 12 months, then €9 · Plus first month €0, then €12 · Pro first month €0, then €22/mo · setup €0"
+  }
  },
  "IONOS": {
   "name": "IONOS",
@@ -4792,14 +4824,18 @@
    "code": "https://github.com/makenotion/notion-mcp-server"
   },
   "plans": {
-   "de": "Gratis · Plus 10 $ · Business 20 $/Mitglied/Mo. · eigene Agenten nach Credits (10 $/1.000) · jährlich bis 20 % günstiger",
-   "en": "Free · Plus $10 · Business $20/member/mo · custom agents by credits ($10/1,000) · up to 20% cheaper annually"
+   "de": "Gratis · Plus 12 $ · Business 24 $/Mitglied/Mo. · eigene Agenten nach Credits (10 $/1.000)",
+   "en": "Free · Plus $12 · Business $24/member/mo · custom agents by credits ($10/1,000)"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-01",
-  "icon": "notion"
+  "plansChecked": "2026-09-07",
+  "icon": "notion",
+  "plansJahr": {
+   "de": "Gratis · Plus 10 $/Mitglied/Mo. (120 $/Jahr) · Business 20 $/Mitglied/Mo. (240 $/Jahr) · eigene Agenten nach Credits (10 $/1.000)",
+   "en": "Free · Plus $10/member/mo ($120/yr) · Business $20/member/mo ($240/yr) · custom agents by credits ($10/1,000)"
+  }
  },
  "Ornith 1.5": {
   "name": "Ornith 1.5",

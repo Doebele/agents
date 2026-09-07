@@ -1149,6 +1149,14 @@
       "n": "Notion",
       "v": "Team-Wissen",
       "k": "Notion"
+     },
+     {
+      "n": "Rows",
+      "v": {
+       "de": "Tabellen",
+       "en": "spreadsheets"
+      },
+      "k": "Rows"
      }
     ]
    },

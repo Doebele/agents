@@ -913,7 +913,8 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-24"
+  "plansChecked": "2026-08-24",
+  "icon": "crewai"
  },
  "Paperclip": {
   "name": "Paperclip",
@@ -1251,7 +1252,8 @@
    "api"
   ],
   "plansChecked": "2026-09-03",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-05",
+  "icon": "lmstudio"
  },
  "Ollama": {
   "name": "Ollama",
@@ -2588,7 +2590,8 @@
    "docs": "https://modelcontextprotocol.io/docs",
    "code": "https://github.com/modelcontextprotocol/modelcontextprotocol"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-05",
+  "icon": "modelcontextprotocol"
  },
  "Playwright-mcp": {
   "name": "Playwright MCP",
@@ -3194,7 +3197,8 @@
    "home": "https://developer.apple.com/xcode/",
    "docs": "https://developer.apple.com/documentation/xcode/",
    "code": null
-  }
+  },
+  "icon": "xcode"
  },
  "tool-suche": {
   "name": {
@@ -3457,7 +3461,8 @@
   "links": {
    "home": "https://www.blackmagicdesign.com/products/davinciresolve"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-05",
+  "icon": "davinciresolve"
  },
  "Avid Media Composer": {
   "name": {
@@ -3592,7 +3597,8 @@
    "home": "https://deepseek.com/harness/en/",
    "code": "https://github.com/deepseek-ai/deepseek-harness",
    "docs": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin"
-  }
+  },
+  "icon": "deepseek"
  },
  "Hostinger": {
   "name": "Hostinger",
@@ -3623,7 +3629,8 @@
    "home": "https://www.hostinger.com"
   },
   "plansChecked": "2026-09-06",
-  "contentChecked": "2026-09-01"
+  "contentChecked": "2026-09-01",
+  "icon": "hostinger"
  },
  "Strato": {
   "name": "Strato",
@@ -3684,7 +3691,8 @@
    "home": "https://www.ionos.de"
   },
   "plansChecked": "2026-09-06",
-  "contentChecked": "2026-09-01"
+  "contentChecked": "2026-09-01",
+  "icon": "ionos"
  },
  "Netlify": {
   "name": "Netlify",
@@ -3714,7 +3722,8 @@
   "links": {
    "home": "https://www.netlify.com"
   },
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-06",
+  "icon": "netlify"
  },
  "Vercel": {
   "name": "Vercel",
@@ -3744,7 +3753,8 @@
   "links": {
    "home": "https://vercel.com"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "icon": "vercel"
  },
  "Cloudflare Pages": {
   "name": "Cloudflare Pages",
@@ -3774,7 +3784,8 @@
   "plansChecked": "2026-08-24",
   "links": {
    "home": "https://www.cloudflare.com/products/pages/"
-  }
+  },
+  "icon": "cloudflarepages"
  },
  "Render": {
   "name": "Render",
@@ -3804,7 +3815,8 @@
   "links": {
    "home": "https://render.com"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "icon": "render"
  },
  "Coolify": {
   "name": "Coolify",
@@ -3836,7 +3848,8 @@
    "home": "https://coolify.io",
    "docs": "https://coolify.io/docs",
    "code": "https://github.com/coollabsio/coolify"
-  }
+  },
+  "icon": "coolify"
  },
  "Together AI": {
   "name": "Together AI",
@@ -4166,7 +4179,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-21"
+  "plansChecked": "2026-08-21",
+  "icon": "deepseek"
  },
  "archify": {
   "name": "archify",
@@ -4784,7 +4798,8 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "icon": "notion"
  },
  "Ornith 1.5": {
   "name": "Ornith 1.5",
@@ -4834,6 +4849,7 @@
   "links": {
    "home": "https://de.statista.com/business/connect-integrations-hub/",
    "docs": "https://docs.platform.statista.ai/mcp-server/introduction"
-  }
+  },
+  "icon": "statista"
  }
 }

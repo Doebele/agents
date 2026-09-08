@@ -20,7 +20,8 @@
   "tip": {
    "de": "Fang mit der einen Sache an, die du am häufigsten erklärst. Ein Skill ist eine Anleitung in normaler Sprache, kein Programm — wenn du es einem neuen Kollegen erklären kannst, kannst du es aufschreiben.",
    "en": "Start with the one thing you explain most often. A skill is an instruction in plain language, not a program — if you can explain it to a new colleague, you can write it down."
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "Impeccable": {
   "name": "Impeccable",
@@ -67,7 +68,8 @@
    "home": "https://github.com/anthropics/skills",
    "docs": "https://agentskills.io",
    "code": "https://github.com/anthropics/skills/tree/main/skills"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "tavily-mcp": {
   "name": "Tavily MCP Server",
@@ -91,7 +93,8 @@
    "home": "https://www.tavily.com",
    "docs": "https://docs.tavily.com/documentation/mcp",
    "code": "https://github.com/tavily-ai/tavily-mcp"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "pdf-mcp": {
   "name": "PyMuPDF4LLM MCP Server",
@@ -113,7 +116,8 @@
   "links": {
    "home": "https://github.com/pymupdf/pymupdf4llm-mcp",
    "code": "https://github.com/pymupdf/pymupdf4llm-mcp"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "excel-mcp": {
   "name": "Excel MCP Server",
@@ -135,7 +139,8 @@
   "links": {
    "home": "https://github.com/negokaz/excel-mcp-server",
    "code": "https://github.com/negokaz/excel-mcp-server"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "memory-mcp": {
   "name": "Memory MCP Server",
@@ -157,7 +162,8 @@
   "links": {
    "home": "https://github.com/modelcontextprotocol/servers",
    "code": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "Gemini Notebook": {
   "name": "Gemini Notebook",
@@ -1652,7 +1658,8 @@
    "docs": "https://ai.google.dev/gemini-api/docs/video",
    "code": null
   },
-  "icon": "google"
+  "icon": "google",
+  "contentChecked": "2026-09-08"
  },
  "Kling 3.0": {
   "name": "Kling 3.0",
@@ -1688,18 +1695,19 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "Bis zu 30 Sekunden am Stück, mit Ton in mehreren Sprachen. Dreissig Sekunden klingen wenig, sind in diesem Feld aber lang — viele Modelle geben fünf bis zehn.",
-   "en": "Up to 30 seconds in one piece, with audio in several languages. Thirty seconds sounds short but is long for this field — many models give you five to ten."
+   "de": "Bis zu 30 Sekunden am Stück, mit Ton in mehreren Sprachen. Dreissig Sekunden klingen wenig, sind in diesem Feld aber lang — viele Modelle geben fünf bis zehn. Zweimal verlängern lässt sich ein Clip ausserdem, damit kommt man auf mehrere Minuten.",
+   "en": "Up to 30 seconds in one piece, with audio in several languages. Thirty seconds sounds short but is long for this field — many models give you five to ten. A clip can also be extended twice, which adds up to several minutes."
   },
   "tip": {
-   "de": "Für einen Werbeclip reicht das meist. Längeres entsteht, indem man mehrere Clips aneinanderreiht.",
-   "en": "Usually enough for an ad clip. Anything longer is made by stringing several clips together."
+   "de": "Für einen Werbeclip reicht das meist. Was darüber hinausgeht, entsteht über die Verlängerungen oder indem man mehrere Clips aneinanderreiht.",
+   "en": "Usually enough for an ad clip. Anything beyond that comes from the extensions or from stringing several clips together."
   },
   "links": {
-   "home": "https://seed.bytedance.com/",
+   "home": "https://seed.bytedance.com/en/seedance2_5",
    "docs": "https://docs.byteplus.com/en/docs/ModelArk/1520757",
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "Wan 3.0": {
   "name": "Wan 3.0",
@@ -1889,7 +1897,8 @@
    "docs": null,
    "code": null
   },
-  "icon": "suno"
+  "icon": "suno",
+  "contentChecked": "2026-09-08"
  },
  "Stable Audio 3": {
   "name": "Stable Audio 3",
@@ -1901,8 +1910,8 @@
   "accent": "var(--sky)",
   "open": true,
   "blurb": {
-   "de": "Offene Modelle für Musik ohne Gesang und für einzelne Geräusche — Schritte, Türen, Wind. Genau das, was ein Video braucht, damit es nicht stumm wirkt.",
-   "en": "Open models for instrumental music and for single sounds — footsteps, doors, wind. Exactly what a video needs so it does not feel mute."
+   "de": "Offene Modelle für Musik ohne Gesang und für einzelne Geräusche — Schritte, Türen, Wind. Genau das, was ein Video braucht, damit es nicht stumm wirkt. Offen sind das mittlere und die beiden kleinen Modelle; das grösste gibt es nur über die Schnittstelle.",
+   "en": "Open models for instrumental music and for single sounds — footsteps, doors, wind. Exactly what a video needs so it does not feel mute. The medium and the two small models are the open ones; the largest is available only through the API."
   },
   "tip": {
    "de": "Offen heisst selbst betreibbar. Für Geräusche, die man immer wieder braucht, der günstigere Weg.",
@@ -1912,7 +1921,8 @@
    "home": "https://stability.ai/stable-audio",
    "docs": "https://github.com/Stability-AI/stable-audio-3",
    "code": "https://github.com/Stability-AI/stable-audio-3"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "Whisper": {
   "name": "Whisper",
@@ -1935,7 +1945,8 @@
    "home": "https://openai.com/index/whisper/",
    "docs": "https://github.com/openai/whisper",
    "code": "https://github.com/openai/whisper"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "Kokoro": {
   "name": "Kokoro",
@@ -1983,7 +1994,8 @@
    "docs": "https://huggingface.co/docs/transformers/en/model_doc/voxtral",
    "code": null
   },
-  "icon": "mistralai"
+  "icon": "mistralai",
+  "contentChecked": "2026-09-08"
  },
  "Wispr Flow": {
   "name": "Wispr Flow",
@@ -2607,7 +2619,8 @@
    "home": "https://agentskills.io",
    "docs": "https://agentskills.io/specification",
    "code": "https://github.com/agentskills/agentskills"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "skills.sh": {
   "name": "skills.sh",
@@ -2678,7 +2691,8 @@
    "home": "https://github.com/microsoft/playwright-mcp",
    "docs": "https://playwright.dev/docs/getting-started-mcp",
    "code": "https://github.com/microsoft/playwright-mcp"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "github-mcp": {
   "name": "GitHub MCP Server",
@@ -2702,7 +2716,8 @@
    "docs": "https://github.blog/ai-and-ml/generative-ai/a-practical-guide-on-how-to-use-the-github-mcp-server/",
    "code": "https://github.com/github/github-mcp-server"
   },
-  "icon": "github"
+  "icon": "github",
+  "contentChecked": "2026-09-08"
  },
  "filesystem-mcp": {
   "name": "Filesystem MCP Server",
@@ -2725,7 +2740,8 @@
    "home": "https://github.com/modelcontextprotocol/servers",
    "docs": null,
    "code": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "slack-mcp": {
   "name": "Slack MCP Server",
@@ -2748,7 +2764,8 @@
    "home": "https://slack.com/help/articles/48855576908307-Guide-to-Model-Context-Protocol-in-Slack",
    "docs": "https://docs.slack.dev/ai/slack-mcp-server",
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "postgres-mcp": {
   "name": "Postgres MCP Server",
@@ -2772,7 +2789,8 @@
    "docs": null,
    "code": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres"
   },
-  "icon": "postgresql"
+  "icon": "postgresql",
+  "contentChecked": "2026-09-08"
  },
  "supabase-mcp": {
   "name": "Supabase MCP Server",
@@ -2796,7 +2814,8 @@
    "docs": "https://supabase.com/docs/guides/ai-tools/mcp",
    "code": "https://github.com/supabase/mcp"
   },
-  "icon": "supabase"
+  "icon": "supabase",
+  "contentChecked": "2026-09-08"
  },
  "gdrive-mcp": {
   "name": "Google Drive MCP Server",
@@ -2806,21 +2825,21 @@
    "en": "MCP server · Block 04"
   },
   "accent": "var(--violet)",
-  "open": true,
+  "open": false,
   "blurb": {
-   "de": "Öffnet dem Agenten deine Ablage bei Google: Dokumente und Tabellen suchen, öffnen, auswerten. Der Server läuft bei Google selbst, du installierst nichts — die Anmeldung läuft über dein Google-Konto.",
-   "en": "Opens your Google storage to the agent: search, open and analyse documents and spreadsheets. The server runs at Google itself, so you install nothing — sign-in goes through your Google account."
+   "de": "Öffnet dem Agenten deine Ablage bei Google: Dateien suchen, Inhalte lesen, Dateien anlegen und kopieren. Der Server läuft bei Google selbst, du installierst nichts. Dafür ist die Einrichtung sperrig — er steckt in Googles Developer Preview, und du brauchst ein Google-Cloud-Projekt mit eigenen OAuth-Zugangsdaten.",
+   "en": "Opens your Google storage to the agent: search files, read content, create and copy files. The server runs at Google itself, so you install nothing. Setting it up is the awkward part — it sits in Google's Developer Preview and needs a Google Cloud project with OAuth credentials of your own."
   },
   "tip": {
    "de": "Bei der Freigabe genau hinsehen: Der Agent bekommt Zugriff auf das, was dein Konto sieht. Ein eigenes Konto nur für diesen Zweck hält den Ausschnitt klein.",
    "en": "Look closely when granting access: the agent gets whatever your account can see. A separate account just for this keeps the slice small."
   },
   "links": {
-   "home": "https://github.com/google/mcp",
-   "docs": "https://developers.google.com/workspace/drive/api/guides/configure-mcp-server",
-   "code": "https://github.com/google/mcp"
+   "home": "https://developers.google.com/workspace/drive/api/guides/configure-mcp-server",
+   "docs": "https://developers.google.com/workspace/drive/api/reference/mcp"
   },
-  "icon": "google"
+  "icon": "google",
+  "contentChecked": "2026-09-08"
  },
  "davinci-resolve-mcp": {
   "name": "DaVinci Resolve MCP",
@@ -2899,7 +2918,7 @@
   "contentChecked": "2026-09-05"
  },
  "pencil.dev": {
-  "name": "pencil.dev",
+  "name": "pen.dev",
   "vendor": "Pencil",
   "cat": {
    "de": "Design-Tool · Baustein 07",
@@ -2908,8 +2927,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Ein Entwurfswerkzeug, das von Anfang an für die Zusammenarbeit mit KI gebaut wurde. Die Entwürfe liegen als .pen-Dateien vor, die ein Agent über MCP nicht nur ansehen, sondern verändern kann — er zeichnet also mit, statt nur zu beschreiben.",
-   "en": "A design tool built from the start for working with AI. Designs live as .pen files that an agent can not only read but change through MCP — so it draws alongside you rather than only describing."
+   "de": "Ein Entwurfswerkzeug, das von Anfang an für die Zusammenarbeit mit KI gebaut wurde; es hiess bis vor kurzem pencil.dev. Die Entwürfe liegen als .pen-Dateien vor, die ein Agent über MCP nicht nur ansehen, sondern verändern kann — er zeichnet also mit, statt nur zu beschreiben.",
+   "en": "A design tool built from the start for working with AI; until recently it was called pencil.dev. Designs live as .pen files that an agent can not only read but change through MCP — so it draws alongside you rather than only describing."
   },
   "tip": {
    "de": "Interessant, wenn der Agent selbst gestalten soll und nicht bloss einen fertigen Entwurf abliest.",
@@ -2919,7 +2938,8 @@
    "home": "https://pen.dev/",
    "docs": "https://docs.pencil.dev/",
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "Penpot": {
   "name": "Penpot",
@@ -3209,7 +3229,8 @@
    "home": "https://uizard.io/",
    "docs": null,
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "Relume": {
   "name": "Relume",
@@ -3221,8 +3242,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Setzt einen Schritt vor dem Entwurf an: Es baut zuerst die Struktur einer Website — welche Seiten es gibt und was auf ihnen steht — und daraus grobe Seitengerüste. Die lassen sich nach Figma übergeben und dort ausgestalten.",
-   "en": "It starts one step before the design: first the structure of a site — which pages exist and what goes on them — and rough page skeletons from that. Those can be handed to Figma and detailed there."
+   "de": "Setzt einen Schritt vor dem Entwurf an: Es baut zuerst die Struktur einer Website — welche Seiten es gibt und was auf ihnen steht — und daraus grobe Seitengerüste. Inzwischen entsteht daraus auch eine fertige Marketing-Seite; ausgeben lässt sie sich nach Figma, Webflow oder als React.",
+   "en": "It starts one step before the design: first the structure of a site — which pages exist and what goes on them — and rough page skeletons from that. These days it also builds the finished marketing site from them, and exports to Figma, Webflow or React."
   },
   "tip": {
    "de": "Nützlich gegen das leere Blatt: erst die Gliederung klären, dann gestalten.",
@@ -3232,7 +3253,8 @@
    "home": "https://www.relume.ai/",
    "docs": "https://www.relume.ai/resources/docs/building-a-sitemap-with-ai",
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "Xcode": {
   "name": "Xcode",
@@ -3477,10 +3499,7 @@
   "contentChecked": "2026-09-01"
  },
  "Premiere Pro": {
-  "name": {
-   "de": "Premiere Pro",
-   "en": "Premiere Pro"
-  },
+  "name": "Premiere",
   "vendor": "Adobe",
   "cat": {
    "de": "Schnittprogramm · Baustein 07",
@@ -3490,8 +3509,8 @@
   "open": false,
   "free": false,
   "blurb": {
-   "de": "Adobes Schnittprogramm, verbreitet in Agenturen und Redaktionen. Der eigentliche Vorteil ist die Nachbarschaft: After Effects für Bewegtgrafik und Photoshop liegen daneben und tauschen Dateien ohne Umweg.",
-   "en": "Adobe's editing program, common in agencies and newsrooms. Its real advantage is the neighbourhood: After Effects for motion graphics and Photoshop sit next door and exchange files without detours."
+   "de": "Adobes Schnittprogramm, verbreitet in Agenturen und Redaktionen. Es hiess lange „Premiere Pro“ und heisst inzwischen nur noch „Premiere“ — Adobe fasst darunter die Familie aus Desktop- und Handy-Apps zusammen. Der eigentliche Vorteil ist die Nachbarschaft: After Effects für Bewegtgrafik und Photoshop liegen daneben und tauschen Dateien ohne Umweg.",
+   "en": "Adobe's editing program, common in agencies and newsrooms. It was called \"Premiere Pro\" for years and is now just \"Premiere\" — Adobe uses the name for the family of desktop and phone apps together. Its real advantage is the neighbourhood: After Effects for motion graphics and Photoshop sit next door and exchange files without detours."
   },
   "tip": {
    "de": "Läuft auf Mac und Windows. Das Abo läuft weiter, auch wenn das Projekt längst fertig ist — daran denken.",
@@ -3499,7 +3518,8 @@
   },
   "links": {
    "home": "https://www.adobe.com/products/premiere.html"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "DaVinci Resolve": {
   "name": {
@@ -3603,7 +3623,8 @@
   },
   "links": {
    "home": "https://shotcut.org"
-  }
+  },
+  "contentChecked": "2026-09-08"
  },
  "OpenShot": {
   "name": {

@@ -1037,15 +1037,16 @@
     },
     "04_mcp": {
      "kandidaten": [
-      "filesystem-mcp"
+      "filesystem-mcp",
+      "higgsfield-mcp"
      ],
-     "luecke": {
-      "de": "Ein Medien-Server fehlt, obwohl Higgsfield genau darüber erreichbar wäre.",
-      "en": "A media server is missing, although Higgsfield would be reachable exactly that way."
-     },
      "frage": {
       "de": "Woran soll er angeschlossen sein?",
       "en": "What should it be connected to?"
+     },
+     "notiz": {
+      "de": "filesystem-mcp bringt das eigene Material an den Agenten; Higgsfield MCP erzeugt Neues — Bilder und Videoclips aus dem Agenten heraus, bezahlt mit Credits aus dem Higgsfield-Abo.",
+      "en": "filesystem-mcp brings your own material to the agent; Higgsfield MCP produces new work — images and video clips from inside the agent, paid in credits from a Higgsfield subscription."
      }
     },
     "05_tools": {

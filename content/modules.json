@@ -620,6 +620,14 @@
        "en": "Social networks"
       },
       "k": "buffer-mcp"
+     },
+     {
+      "n": "Higgsfield",
+      "v": {
+       "de": "Medien-Modelle",
+       "en": "media models"
+      },
+      "k": "higgsfield-mcp"
      }
     ]
    }

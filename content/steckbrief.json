@@ -425,7 +425,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-21"
+  "plansChecked": "2026-09-10"
  },
  "OpenAI Codex": {
   "name": "Codex",
@@ -526,7 +526,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-21"
+  "plansChecked": "2026-09-10"
  },
  "Kimi Code": {
   "name": "Kimi Code",
@@ -647,7 +647,7 @@
    "code": "https://github.com/xai-org/grok-build"
   },
   "icon": "x",
-  "free": true,
+  "free": false,
   "aaAgent": {
    "url": "https://artificialanalysis.ai/agents/coding-agents",
    "checked": "2026-08-26",
@@ -670,14 +670,14 @@
    ]
   },
   "plans": {
-   "de": "Mit Konto kostenlos nutzbar · alternativ API (grok-build-0.1) 1 $/2 $ pro 1M Token",
-   "en": "Free to use with an account · alternatively API (grok-build-0.1) $1/$2 per 1M tokens"
+   "de": "Nicht mehr gratis: Die CLI steht nur Abonnenten von SuperGrok oder X Premium+ offen, und was diese Abos kosten, steht auf keiner Seite von x.ai, die sich abrufen lässt · über die API kostet grok-build-0.1 1 $/2 $ pro 1M Token, ab 200.000 Token im Prompt 2 $/4 $",
+   "en": "No longer free: the CLI is open to SuperGrok and X Premium+ subscribers only, and no readable page on x.ai says what those subscriptions cost · via the API, grok-build-0.1 costs $1/$2 per 1M tokens, or $2/$4 from 200,000 prompt tokens up"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-25"
+  "plansChecked": "2026-09-10"
  },
  "Zed": {
   "name": "Zed",
@@ -754,13 +754,13 @@
    ]
   },
   "plans": {
-   "de": "Hobby kostenlos · Pro 20 $/Mo. · Teams 40 $/Nutzer/Mo.",
-   "en": "Hobby free · Pro $20/mo · Teams $40/user/mo"
+   "de": "Hobby kostenlos · Pro 20 $/Mo. · Pro+ 60 $/Mo. · Ultra 200 $/Mo. · Teams 40 $/Nutzer/Mo. · Enterprise auf Anfrage · Jahreszahlung wirbt mit 20 % Nachlass, die Beträge dazu druckt die Seite nicht",
+   "en": "Hobby free · Pro $20/mo · Pro+ $60/mo · Ultra $200/mo · Teams $40/user/mo · Enterprise on request · yearly billing advertises 20% off, but the page does not print those amounts"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-24"
+  "plansChecked": "2026-09-10"
  },
  "Hermes Agent": {
   "name": "Hermes Agent",
@@ -786,14 +786,14 @@
   },
   "free": true,
   "plans": {
-   "de": "Open Source (MIT), kostenlos · optionale kostenpflichtige Stufen mit Credits",
-   "en": "Open source (MIT), free · optional paid tiers with credits"
+   "de": "Open Source (MIT), lokal kostenlos · wer die gehosteten Modelle will, abonniert das Nous Portal: Free 0 $ mit freien Modellen, Plus 20 $/Mo. mit 22 $ Guthaben, Super 100 $/Mo. mit 110 $, Ultra 200 $/Mo. mit 220 $",
+   "en": "Open source (MIT), free to run locally · the hosted models come with a Nous Portal subscription: Free $0 with free models, Plus $20/mo with $22 in credits, Super $100/mo with $110, Ultra $200/mo with $220"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-25"
+  "plansChecked": "2026-09-10"
  },
  "Odysseus": {
   "name": "Odysseus",
@@ -849,13 +849,13 @@
   },
   "free": true,
   "plans": {
-   "de": "Gratisstufe 0 $ mit lokalen Modellen · Cloud-Guthaben nach Verbrauch (DeepSeek V4 Flash z. B. 0,13 $/0,26 $ pro 1M Tok.) · ein „Bionic Pass“ ist angekündigt, ein Preis dafür steht noch nicht auf der Seite",
-   "en": "Free tier $0 with local models · pay-as-you-go cloud credits (DeepSeek V4 Flash e.g. $0.13/$0.26 per 1M tok.) · a „Bionic Pass“ is announced, no price on the page yet"
+   "de": "Gratisstufe 0 $ mit lokalen Modellen · Cloud-Guthaben nach Verbrauch (DeepSeek V4 Flash z. B. 0,13 $/0,26 $ pro 1M Tok., Kimi K3 3 $/15 $) · eigene „Bionic Plans“ stehen als „coming soon“ auf der Preisseite, ein Betrag dafür noch nicht",
+   "en": "Free tier $0 with local models · pay-as-you-go cloud credits (DeepSeek V4 Flash e.g. $0.13/$0.26 per 1M tok., Kimi K3 $3/$15) · the pricing page lists „Bionic Plans“ as coming soon, without an amount"
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-24"
+  "plansChecked": "2026-09-10"
  },
  "LangGraph": {
   "name": "LangGraph",
@@ -957,7 +957,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-24",
+  "plansChecked": "2026-09-10",
   "icon": "crewai"
  },
  "Paperclip": {
@@ -1020,7 +1020,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-21"
+  "plansChecked": "2026-09-10"
  },
  "Google ADK": {
   "name": "Agent Development Kit",
@@ -1053,7 +1053,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-21"
+  "plansChecked": "2026-09-10"
  },
  "Qwen 3.6 / 3.8": {
   "name": "Qwen3",
@@ -1393,7 +1393,8 @@
   "plans": {
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
-  }
+  },
+  "plansChecked": "2026-09-10"
  },
  "SGLang": {
   "name": "SGLang",
@@ -1840,7 +1841,7 @@
    "de": "Kostenlos (Apache 2.0) · keine Render-Gebühren und keine Schwelle für kommerzielle Nutzung",
    "en": "Free (Apache 2.0) · no per-render fees and no commercial-use threshold"
   },
-  "plansChecked": "2026-08-31"
+  "plansChecked": "2026-09-10"
  },
  "ElevenLabs Eleven v3": {
   "name": "ElevenLabs Eleven v3",
@@ -2072,10 +2073,13 @@
    "code": "https://github.com/zachlatta/freeflow"
   },
   "plans": {
-   "de": "Kostenlos, Open Source (MIT) · Modellkosten nach eigenem Anbieter",
-   "en": "Free, open source (MIT) · model costs per your own provider"
+   "de": "Kostenlos, Open Source (MIT) · die Transkription läuft über einen eigenen Groq-Schlüssel oder ein lokales Modell, die Kosten fallen dort an",
+   "en": "Free, open source (MIT) · transcription runs on your own Groq key or a local model, and that is where the cost lands"
   },
-  "plansChecked": "2026-08-25"
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-09-10"
  },
  "Anarlog": {
   "name": "Anarlog",
@@ -2441,14 +2445,14 @@
    }
   },
   "plans": {
-   "de": "API 3 $ Eingabe / 15 $ Ausgabe pro 1M Token, gecachte Eingabe 0,30 $ · Open-Weight, selbst hostbar",
-   "en": "API $3 input / $15 output per 1M tokens, cached input $0.30 · open-weight, self-hostable"
+   "de": "API 3 $ Eingabe / 15 $ Ausgabe pro 1M Token, gecachte Eingabe 0,30 $ · keine Gratisstufe, vor dem ersten Aufruf muss mindestens 1 $ aufgeladen sein · Open-Weight unter der Kimi-K3-Lizenz, selbst hostbar",
+   "en": "API $3 input / $15 output per 1M tokens, cached input $0.30 · no free tier: at least $1 has to be topped up before the first call · open-weight under the Kimi K3 licence, self-hostable"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-31"
+  "plansChecked": "2026-09-10"
  },
  "DeepSeek V4": {
   "name": "DeepSeek V4",
@@ -3256,7 +3260,10 @@
    "de": "Kostenlos · App-Store-Vertrieb nur mit Apple-Developer-Programm (99 $/Jahr)",
    "en": "Free · App Store distribution only with an Apple Developer Program membership ($99/year)"
   },
-  "plansChecked": "2026-08-21",
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-09-10",
   "links": {
    "home": "https://developer.apple.com/xcode/",
    "docs": "https://developer.apple.com/documentation/xcode/",
@@ -3656,7 +3663,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-24",
+  "plansChecked": "2026-09-10",
   "links": {
    "home": "https://deepseek.com/harness/en/",
    "code": "https://github.com/deepseek-ai/deepseek-harness",
@@ -3843,13 +3850,13 @@
    "en": "Interesting when visitors come from many countries. Background services need the accompanying Workers."
   },
   "plans": {
-   "de": "Gratisstufe: statische Dateien werden unbegrenzt ausgeliefert, dazu 100.000 Funktionsaufrufe am Tag · darüber hinaus Workers Paid ab 5 $/Mo. Mindestbetrag, der Pages Functions mit abdeckt.",
-   "en": "Free tier: static files are served without limit, plus 100,000 function requests a day · beyond that Workers Paid from a $5/mo minimum charge, which covers Pages Functions too."
+   "de": "Gratisstufe: Anfragen an statische Dateien sind kostenlos und unbegrenzt, dazu 100.000 Anfragen am Tag, die eine Funktion auslösen · darüber hinaus Workers Paid, 5 $/Mo. Mindestbetrag je Konto mit 10 Mio. Anfragen im Monat inklusive. Pages Functions werden als Workers abgerechnet.",
+   "en": "Free tier: requests for static files are free and unlimited, plus 100,000 requests a day that invoke a function · beyond that Workers Paid, a $5/mo minimum per account with 10 million requests a month included. Pages Functions are billed as Workers."
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-24",
+  "plansChecked": "2026-09-10",
   "links": {
    "home": "https://www.cloudflare.com/products/pages/"
   },
@@ -3911,7 +3918,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-26",
+  "plansChecked": "2026-09-10",
   "links": {
    "home": "https://coolify.io",
    "docs": "https://coolify.io/docs",
@@ -3968,13 +3975,13 @@
    "en": "When response time matters — chats, automation — worth comparing against Together AI. Billed per million tokens."
   },
   "plans": {
-   "de": "Abrechnung je 1M Tokens (GPT-OSS-120B z. B. 0,15 $/0,60 $) · 1 $ Startguthaben bei Registrierung, keine laufende Gratisstufe",
-   "en": "Billed per 1M tokens (GPT-OSS-120B e.g. $0.15/$0.60) · $1 signup credit at registration, no ongoing free tier"
+   "de": "Abrechnung je 1M Tokens (GPT-OSS-120B z. B. 0,15 $/0,60 $, gecachte Eingabe 0,015 $) · wer eine GPU für sich allein will, zahlt nach Stunde, seit dem 1. September teurer (H100 und H200 je 8 $/Std., vorher 7 $) · 1 $ Startguthaben bei Registrierung, keine laufende Gratisstufe",
+   "en": "Billed per 1M tokens (GPT-OSS-120B e.g. $0.15/$0.60, cached input $0.015) · a GPU to yourself is billed by the hour and went up on 1 September (H100 and H200 $8/h each, previously $7) · $1 signup credit at registration, no ongoing free tier"
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-25",
+  "plansChecked": "2026-09-10",
   "links": {
    "home": "https://fireworks.ai"
   }
@@ -3998,13 +4005,13 @@
    "en": "Impressive for demos and the chat feel; for model choice, look at Together or Fireworks. Billed per million tokens. The free key also powers tools whose dictation runs on Groq — FreeFlow, for one, uses it as its default provider."
   },
   "plans": {
-   "de": "Abrechnung je 1M Tokens · Gratisstufe",
-   "en": "Billed per 1M tokens · free tier"
+   "de": "Abrechnung je 1M Tokens (GPT-OSS-120B z. B. 0,15 $/0,60 $, GPT-OSS-20B 0,075 $/0,30 $) · Gratisstufe mit engen Ratengrenzen, darüber der Developer-Plan · die Beträge stehen in der Dokumentation der Konsole, groq.com/pricing führt keine mehr",
+   "en": "Billed per 1M tokens (GPT-OSS-120B e.g. $0.15/$0.60, GPT-OSS-20B $0.075/$0.30) · a free tier with tight rate limits, the Developer plan above it · the amounts live in the console documentation; groq.com/pricing no longer carries any"
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-25",
+  "plansChecked": "2026-09-10",
   "links": {
    "home": "https://groq.com"
   }
@@ -4122,7 +4129,7 @@
   "links": {
    "home": "https://www.hetzner.com"
   },
-  "plansChecked": "2026-08-27"
+  "plansChecked": "2026-09-10"
  },
  "Modal": {
   "name": "Modal",
@@ -4247,7 +4254,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-08-21",
+  "plansChecked": "2026-09-10",
   "icon": "deepseek"
  },
  "archify": {
@@ -4565,13 +4572,10 @@
    "guide": "https://block.xyz/inside/designing-ai-with-character-what-we-learned-building-berd"
   },
   "plans": {
-   "de": "Kostenlos (Apache-2.0) · Modelle über eigene Zugänge",
-   "en": "Free (Apache-2.0) · models via your own access"
+   "de": "Kostenlos, Open Source (Apache-2.0) · Berd spricht mit dem Goose-Unterbau; einen Preis nennt weder die Produktseite noch das Repository",
+   "en": "Free, open source (Apache-2.0) · Berd talks to the Goose backend; neither the product page nor the repository names a price"
   },
-  "billing": [
-   "api"
-  ],
-  "plansChecked": "2026-08-21"
+  "plansChecked": "2026-09-10"
  },
  "Goose": {
   "name": "Goose",
@@ -4604,7 +4608,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-21"
+  "plansChecked": "2026-09-10"
  },
  "Buzz": {
   "name": "Buzz",
@@ -4633,7 +4637,7 @@
    "de": "Kostenlos (Apache-2.0) · selbst hostbar, frühe Instanz auf buzz.xyz",
    "en": "Free (Apache-2.0) · self-hostable, early instance at buzz.xyz"
   },
-  "plansChecked": "2026-08-24"
+  "plansChecked": "2026-09-10"
  },
  "grill-with-docs": {
   "name": "grill-with-docs",
@@ -4771,14 +4775,14 @@
    "code": null
   },
   "plans": {
-   "de": "Kostenlos · eigene Abos oder API-Schlüssel (BYOK)",
-   "en": "Free · own subscriptions or API keys (BYOK)"
+   "de": "Kostenlos für lokale Arbeitsflächen auf dem Mac, mit eigenen Abos oder API-Schlüsseln (BYOK) · Pro 50 $/Mo. und Teams 60 $/Nutzer/Mo. bringen Arbeitsflächen in der Cloud, Enterprise auf Anfrage · für Cloud-Rechenzeit ist nutzungsbasierte Abrechnung angekündigt, aber noch nicht in Kraft",
+   "en": "Free for local workspaces on your Mac, with your own subscriptions or API keys (BYOK) · Pro $50/mo and Teams $60/user/mo add workspaces in the cloud, Enterprise on request · usage-based pricing for cloud compute is announced but not yet in force"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-08-26"
+  "plansChecked": "2026-09-10"
  },
  "gbrain": {
   "name": "gbrain",

@@ -210,6 +210,10 @@
    "de": "Kostenlos · Pro 20 $/Mo. · Max 200 $/Mo.",
    "en": "Free · Pro $20/mo · Max $200/mo"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "icon": "perplexity",
   "links": {
    "home": "https://www.perplexity.ai/",
@@ -713,6 +717,9 @@
    "de": "Editor kostenlos · Pro 10 $/Mo.",
    "en": "Editor free · Pro $10/mo"
   },
+  "billing": [
+   "abo"
+  ],
   "plansChecked": "2026-09-01"
  },
  "Cursor": {
@@ -1481,6 +1488,9 @@
    "de": "Basic 10 $ · Standard 30 $ · Pro 60 $ · Mega 120 $/Mo. · Stealth ab Pro",
    "en": "Basic $10 · Standard $30 · Pro $60 · Mega $120/mo · Stealth from Pro"
   },
+  "billing": [
+   "abo"
+  ],
   "plansChecked": "2026-09-07",
   "plansJahr": {
    "de": "Basic 8 $/Mo. (96 $/Jahr) · Standard 24 $/Mo. (288 $/Jahr) · Pro 48 $/Mo. (576 $/Jahr) · Mega 96 $/Mo. (1.152 $/Jahr) · Stealth ab Pro",
@@ -1608,6 +1618,10 @@
    "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 12 $/Mo. · Pro ab 2.000 Credits 20 $/Mo. · Teams ab 2.000 Credits 22 $/Mo.",
    "en": "Free (images public, Recraft owns the rights) · Basic 1,000 credits $12/mo · Pro from 2,000 credits $20/mo · Teams from 2,000 credits $22/mo"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-09-07",
   "plansJahr": {
    "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 10 $/Mo. (120 $/Jahr) · Pro ab 2.000 Credits 16 $/Mo. · Teams ab 2.000 Credits 18 $/Mo.",
@@ -1759,6 +1773,10 @@
    "de": "Gratis 125 Credits · Standard 15 $ (625) · Pro 35 $ (2.250) · Max 95 $/Mo. (9.500) · Gen-4.5 kostet 12 Credits je Sekunde",
    "en": "Free 125 credits · Standard $15 (625) · Pro $35 (2,250) · Max $95/mo (9,500) · Gen-4.5 costs 12 credits per second"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-09-07",
   "plansJahr": {
    "de": "Gratis 125 Credits · Standard 12 $/Mo. bei Jahreszahlung · Pro 28 $/Mo. · Max 76 $/Mo. · Gen-4.5 kostet 12 Credits je Sekunde",
@@ -1791,6 +1809,10 @@
    "de": "Plus 30 $ · Pro 90 $ · Ultra 300 $/Mo.",
    "en": "Plus $30 · Pro $90 · Ultra $300/mo"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-09-07",
   "plansJahr": {
    "de": "Plus 25 $/Mo. (300 $/Jahr) · Pro 75 $/Mo. (900 $/Jahr) · Ultra 250 $/Mo. (3.000 $/Jahr)",
@@ -2024,6 +2046,9 @@
    "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 15 $/Mo. · Growth/Enterprise ab 23 $/Nutzer/Mo.",
    "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $15/mo · Growth/Enterprise from $23/user/mo"
   },
+  "billing": [
+   "abo"
+  ],
   "plansChecked": "2026-09-07",
   "plansJahr": {
    "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 12 $/Mo. · Growth/Enterprise ab 18 $/Nutzer/Mo.",
@@ -4141,6 +4166,9 @@
    "de": "Stündliche Marktpreise",
    "en": "Hourly market prices"
   },
+  "billing": [
+   "api"
+  ],
   "links": {
    "home": "https://vast.ai"
   },

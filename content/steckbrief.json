@@ -2892,6 +2892,31 @@
    "abo"
   ]
  },
+ "higgsfield-mcp": {
+  "name": "Higgsfield MCP",
+  "vendor": "Higgsfield",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": false,
+  "blurb": {
+   "de": "Medien erzeugen aus dem Agenten heraus: Der MCP-Server von Higgsfield hängt über dreißig Bild- und Videomodelle hinter einer einzigen Anmeldung — Seedance, Sora, Veo, Kling, GPT Image 2, Flux, Hailuo, Nano Banana Pro, dazu die hauseigenen Soul und Cinema Studio. Einmal per OAuth mit dem Higgsfield-Konto angemeldet, ruft der Agent die Modelle wie jedes andere Werkzeug auf, statt für jeden Anbieter einen eigenen API-Schlüssel zu pflegen. Die Modelle laufen in Higgsfields Cloud, bezahlt wird mit Credits aus dem Higgsfield-Abo; der Server kann nur, was Higgsfield durch ihn freigibt.",
+   "en": "Producing media from inside the agent: Higgsfield's MCP server puts more than thirty image and video models behind a single sign-in — Seedance, Sora, Veo, Kling, GPT Image 2, Flux, Hailuo, Nano Banana Pro, plus the in-house Soul and Cinema Studio. Signed in once via OAuth with the Higgsfield account, the agent calls the models like any other tool instead of keeping a separate API key per provider. The models run in Higgsfield's cloud, paid in credits from a Higgsfield subscription; the server can only do what Higgsfield exposes through it."
+  },
+  "tip": {
+   "de": "Lohnt nur, wer Higgsfield ohnehin abonniert hat — die Anleitung sagt es selbst: nicht für ein einzelnes Projekt abonnieren. Der Endpunkt läuft auf Higgsfields eigener Domain (mcp.higgsfield.ai), die fertige Verpackung für Claude Code aber kommt von einem einzelnen Entwickler (Jay, RoboLabs) und kann brechen, wenn Higgsfield etwas ändert. Vor bezahlten Läufen nennt die Anleitung die Credit-Kosten und erinnert an die Freigabeschwelle.",
+   "en": "Worth it only with a Higgsfield subscription you already pay for — the instructions say so themselves: don't subscribe for a single project. The endpoint runs on Higgsfield's own domain (mcp.higgsfield.ai), but the ready-made packaging for Claude Code comes from one individual developer (Jay, RoboLabs) and can break when Higgsfield changes something. Before paid runs, the instructions name the credit costs and point at the cost-approval gate."
+  },
+  "links": {
+   "home": "https://github.com/robonuggets/higgsfield-skill",
+   "code": null
+  },
+  "billing": [
+   "abo"
+  ]
+ },
  "Figma": {
   "name": "Figma",
   "vendor": "Figma",

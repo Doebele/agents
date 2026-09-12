@@ -277,7 +277,8 @@
    "home": "https://obsidian.md/",
    "docs": "https://obsidian.md/help/",
    "tut": "https://www.youtube.com/watch?v=NVUCQ-pzBn4"
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "Rows": {
   "name": "Rows",
@@ -1114,7 +1115,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "contentChecked": "2026-09-12"
  },
  "gpt-oss": {
   "name": "gpt-oss",
@@ -1166,7 +1168,8 @@
    "de": "Kostenlos (Open-Weight, Apache 2.0), selbst gehostet",
    "en": "Free (open-weight, Apache 2.0), self-hosted"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "contentChecked": "2026-09-12"
  },
  "Mistral Large 3": {
   "name": "Mistral Large 3",
@@ -1541,7 +1544,8 @@
   "links": {
    "home": "https://qwen.ai",
    "code": "https://github.com/QwenLM/Qwen-Image"
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "Imagen 4": {
   "name": "Imagen 4",
@@ -1638,18 +1642,19 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "Erzeugen und Bearbeiten in einem Modell: Du lässt ein Bild machen und änderst danach im selben Zug einzelne Teile, statt neu anzufangen. Das erspart die Runden, in denen sonst mit jedem Versuch auch alles Gelungene wieder kippt. Inzwischen ist Seedream 5.0 Lite nachgerückt; Erzeugen und Bearbeiten in einem Modell gilt weiter.",
-   "en": "Generating and editing in one model: you have an image made, then change individual parts in the same breath instead of starting over. That spares you the rounds where every retry also ruins what already worked. Seedream 5.0 Lite has since followed; generate and edit in one model still holds."
+   "de": "Erzeugen und Bearbeiten in einem Modell: Du lässt ein Bild machen und änderst danach im selben Zug einzelne Teile, statt neu anzufangen. Das erspart die Runden, in denen sonst mit jedem Versuch auch alles Gelungene wieder kippt. An der Spitze steht seit dem 8. Juli 2026 Seedream 5.0 Pro: Erzeugen und Bearbeiten bleiben in einem Modell, dazu kommen Eingriffe per Punkt, Lasso und Skizze direkt im Bild, das Auftrennen in einzelne Ebenen und Text in über zehn Sprachen. Daneben steht weiterhin das kleinere 5.0 Lite.",
+   "en": "Generating and editing in one model: you have an image made, then change individual parts in the same breath instead of starting over. That spares you the rounds where every retry also ruins what already worked. Since 8 July 2026 Seedream 5.0 Pro sits at the top: generating and editing stay in one model, joined by edits by point, lasso and sketch straight in the picture, separation into individual layers, and text in more than ten languages. The smaller 5.0 Lite remains beside it."
   },
   "tip": {
    "de": "Gut, wenn ein Bild fast stimmt und nur ein Detail stört.",
    "en": "Good when an image is nearly right and only one detail bothers you."
   },
   "links": {
-   "home": "https://seed.bytedance.com/",
+   "home": "https://seed.bytedance.com/en/seedream5_0_pro",
    "docs": "https://docs.byteplus.com/en/docs/ModelArk/1541523",
    "code": null
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "Veo 3.1": {
   "name": "Veo 3.1",
@@ -1745,7 +1750,8 @@
    "home": "https://github.com/Wan-Video",
    "docs": "https://help.aliyun.com/en/model-studio/wan3-video-generation-api-reference",
    "code": "https://github.com/Wan-Video"
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "Runway": {
   "name": "Runway",
@@ -1842,7 +1848,8 @@
    "code": null,
    "guide": "https://pyrite-mallow-3b0.notion.site/Everything-You-Need-to-Start-Building-Your-AI-Cinematic-World-and-my-thoughts-on-HF-s-updated-T-C-3ae49da027d780cea5b2e139b25800ec",
    "tut": "https://youtu.be/fMU7Ku8ma4A"
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "HyperFrames": {
   "name": "HyperFrames",
@@ -2153,7 +2160,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-06",
+  "contentChecked": "2026-09-12"
  },
  "GPT-5.6": {
   "name": "GPT-5.6",
@@ -2323,7 +2331,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "contentChecked": "2026-09-12"
  },
  "Grok 4.6": {
   "name": "Grok 4.6",
@@ -2376,7 +2385,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "contentChecked": "2026-09-12"
  },
  "Qwen3.8-Max": {
   "name": "Qwen3.8-Max",
@@ -2432,7 +2442,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "contentChecked": "2026-09-12"
  },
  "Kimi K3": {
   "name": "Kimi K3",
@@ -2505,8 +2516,8 @@
    "en": "An open model family under the MIT licence — the most permissive of the common ones, usable almost without restriction, commercially too. Technically a mixture-of-experts: only part of the many parameters is active per request, which makes it large and frugal at once. Plus a one-million-token context and strong coding ability."
   },
   "tip": {
-   "de": "Wenn Lizenz und Kosten die Entscheidung treiben, ist das der erste Kandidat.",
-   "en": "When licence and cost drive the decision, this is the first candidate."
+   "de": "Wenn Lizenz und Kosten die Entscheidung treiben, ist das der erste Kandidat. Seit dem 10. September 2026 steht mit V4.1-Flash das kleinste Modell einer neuen Architekturgeneration daneben, mit eingebautem Bildverständnis; V4-Pro bleibt über die API erhältlich.",
+   "en": "When licence and cost drive the decision, this is the first candidate. Since 10 September 2026 V4.1-Flash stands beside it, the smallest model of a new architecture generation with built-in image understanding; V4-Pro stays available through the API."
   },
   "links": {
    "home": "https://www.deepseek.com/",
@@ -2545,7 +2556,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "contentChecked": "2026-09-12"
  },
  "GLM-5.2": {
   "name": "GLM-5.2",
@@ -2600,7 +2612,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "contentChecked": "2026-09-12"
  },
  "Anthropic Agent Skills": {
   "name": "Anthropic Agent Skills",
@@ -2625,7 +2638,7 @@
    "code": "https://github.com/anthropics/skills"
   },
   "icon": "anthropic",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-12"
  },
  "agentskills.io": {
   "name": "Agent Skills (Open Standard)",
@@ -3078,7 +3091,7 @@
    "docs": "https://antigravity.google/docs/getting-started",
    "code": "https://antigravity.google/download"
   },
-  "contentChecked": "2026-09-01"
+  "contentChecked": "2026-09-12"
  },
  "Google Stitch": {
   "name": "Stitch",
@@ -3115,8 +3128,8 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Erzeugt aus einer Beschreibung fertige Oberflächen in React und Next.js — samt Code, den du herunterladen und weiterverwenden kannst. Von Vercel, wo sich das Ergebnis auch gleich veröffentlichen lässt.",
-   "en": "Turns a description into finished interfaces in React and Next.js — including code you can download and keep using. From Vercel, where the result can also be published straight away."
+   "de": "Erzeugt aus einer Beschreibung fertige Oberflächen in React und Next.js — samt Code, den du herunterladen und weiterverwenden kannst. Von Vercel, wo sich das Ergebnis auch gleich veröffentlichen lässt. Inzwischen bleibt es nicht bei der Oberfläche: v0 arbeitet als Agent, bindet ein Backend an, sucht im Web, sieht sich die gebaute Seite selbst an und bessert eigene Fehler nach.",
+   "en": "Turns a description into finished interfaces in React and Next.js — including code you can download and keep using. From Vercel, where the result can also be published straight away. It no longer stops at the surface: v0 works as an agent, wires up a backend, searches the web, inspects the site it built and fixes its own errors."
   },
   "tip": {
    "de": "Setzt auf einen bestimmten Technikstapel. Passt gut, wenn dein Projekt ohnehin React nutzt, sonst weniger.",
@@ -3127,7 +3140,8 @@
    "docs": "https://v0.app/docs/",
    "code": null
   },
-  "icon": "v0"
+  "icon": "v0",
+  "contentChecked": "2026-09-12"
  },
  "Lovable": {
   "name": "Lovable",
@@ -3364,7 +3378,8 @@
   "tip": {
    "de": "Das erste Werkzeug, das fast jede Aufgabe braucht. Achte darauf, ob die Antwort eine Fundstelle nennt: Ohne Quelle ist auch ein gesuchtes Ergebnis nur eine Behauptung.",
    "en": "The first tool almost every task needs. Check whether the answer names a source: without one, even a searched result is just an assertion."
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "tool-code": {
   "name": {
@@ -3387,7 +3402,8 @@
   "tip": {
    "de": "Unverzichtbar für alles mit Zahlen, Tabellen und Umrechnungen. Frag nach, wo der Code läuft — auf deinem Rechner oder in einer abgeschotteten Kapsel.",
    "en": "Indispensable for anything with numbers, tables and conversions. Ask where the code runs — on your machine or inside a sealed sandbox."
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "tool-dateien": {
   "name": {
@@ -3410,7 +3426,8 @@
   "tip": {
    "de": "Immer den engsten Ordner freigeben, mit dem die Aufgabe noch geht. Und vorher eine Sicherung: Ein Agent löscht schneller, als du zurücknehmen kannst.",
    "en": "Always expose the narrowest folder the task still works in. And make a backup first: an agent deletes faster than you can undo."
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "tool-browser": {
   "name": {
@@ -3433,7 +3450,8 @@
   "tip": {
    "de": "Im Browser handelt der Agent unter deinem Namen und mit deinen Rechten. Bei allem, was abschickt, bezahlt oder verschickt, den letzten Klick selbst machen.",
    "en": "In the browser the agent acts under your name and with your rights. For anything that submits, pays or sends, make the final click yourself."
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "tool-datenbank": {
   "name": {
@@ -3456,7 +3474,8 @@
   "tip": {
    "de": "Für Auswertungen einen schreibgeschützten Zugang einrichten. Dann richtet auch eine falsch verstandene Frage keinen Schaden an.",
    "en": "Set up read-only access for analysis. Then even a misunderstood question does no damage."
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "tool-kommunikation": {
   "name": {
@@ -3479,7 +3498,8 @@
   "tip": {
    "de": "Das Werkzeug mit den grössten Folgen bei Fehlern. Erst nur Lesen erlauben — Senden später, und mit einer Rückfrage vor jedem Versand.",
    "en": "The tool with the biggest consequences when it goes wrong. Allow reading only at first — sending later, and with a confirmation before every send."
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "tool-medien": {
   "name": {
@@ -3502,7 +3522,8 @@
   "tip": {
    "de": "Erzeugte Medien kosten je Stück. Bei Video kann eine unbeaufsichtigte Schleife schnell teuer werden — setz eine Obergrenze.",
    "en": "Generated media costs per piece. With video an unattended loop gets expensive fast — set an upper limit."
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "iMovie": {
   "name": {
@@ -3527,7 +3548,8 @@
   },
   "links": {
    "home": "https://support.apple.com/imovie"
-  }
+  },
+  "contentChecked": "2026-09-12"
  },
  "Final Cut Pro": {
   "name": {
@@ -4620,7 +4642,8 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "contentChecked": "2026-09-12"
  },
  "Berd": {
   "name": "Berd",

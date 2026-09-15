@@ -4522,6 +4522,34 @@
   },
   "plansChecked": "2026-09-03"
  },
+ "video": {
+  "name": "video",
+  "vendor": "Corey Haines",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Videoproduktion als Skill: Er hilft zuerst bei der Wegwahl — programmatisch gebaut (Remotion), aus Text erzeugt (Veo, Sora, Runway), mit Avatar (HeyGen) oder im Editor geschnitten (Descript) — und begleitet dann die Umsetzung: Videomodell-Prompts nach Motiv, Aktion, Kamera, Stil und Stimmung, und aus einem Referenzclip wird eine wiederverwendbare Schnittvorgabe mit Beat-Sheet. Markenvorgaben liest er aus einer Kontextdatei, die jemand pflegen muss.",
+   "en": "Video production as a skill: it first helps pick the route — built programmatically (Remotion), generated from text (Veo, Sora, Runway), with an avatar (HeyGen) or cut in an editor (Descript) — then stays through execution: video-model prompts along subject, action, camera, style and mood, and a reference clip becomes a reusable edit spec with a beat sheet. Brand guidelines come from a context file that someone has to maintain."
+  },
+  "tip": {
+   "de": "Der passt, wenn ein Agent einen Clip von der Idee bis zum Schnitt bringen soll statt nur ein Modell anzufragen. Die Werkzeug- und Preistabelle im Skill rotiert — vor der Wahl selbst nachschlagen.",
+   "en": "It fits when an agent should take a clip from idea to edit rather than just query a model. The tool and price table inside the skill rotates — check it yourself before choosing."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/coreyhaines31/marketingskills",
+   "code": "https://github.com/coreyhaines31/marketingskills"
+  },
+  "plansChecked": "2026-09-15"
+ },
  "premortem": {
   "name": "premortem",
   "vendor": "vibeeval",

@@ -427,6 +427,14 @@
       "k": "cro"
      },
      {
+      "n": "video",
+      "v": {
+       "de": "Videoproduktion",
+       "en": "video production"
+      },
+      "k": "video"
+     },
+     {
       "n": "grill-with-docs",
       "v": {
        "de": "Interview",

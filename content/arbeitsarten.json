@@ -1021,12 +1021,9 @@
       "Anthropic Agent Skills",
       "skills.sh",
       "skill-creator",
-      "eigene-skills"
+      "eigene-skills",
+      "video"
      ],
-     "luecke": {
-      "de": "Skills für Shotliste, Schnittregeln und Markenvorgaben fehlen.",
-      "en": "Skills for shot lists, editing rules and brand guidelines are missing."
-     },
      "frage": {
       "de": "Welches Wissen soll der Agent mitbringen?",
       "en": "What knowledge should the agent bring along?"

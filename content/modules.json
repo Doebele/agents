@@ -636,6 +636,14 @@
        "en": "media models"
       },
       "k": "higgsfield-mcp"
+     },
+     {
+      "n": "E2B",
+      "v": {
+       "de": "Code-Ausführung",
+       "en": "code execution"
+      },
+      "k": "e2b-mcp"
      }
     ]
    }

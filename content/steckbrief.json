@@ -5052,5 +5052,38 @@
    "docs": "https://docs.platform.statista.ai/mcp-server/introduction"
   },
   "icon": "statista"
+ },
+ "e2b-mcp": {
+  "name": "E2B MCP Server",
+  "vendor": "E2B",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "free": true,
+  "billing": [
+   "api"
+  ],
+  "blurb": {
+   "de": "Gibt dem Agenten eine sichere, isolierte Cloud-Sandbox zum Ausführen von Code (Python, JavaScript, Bash). Der Agent schreibt ein Skript, lässt es in einer Firecracker-MicroVM laufen und bekommt stdout, stderr sowie generierte Diagramme und Grafiken zurück, ohne dein lokales Dateisystem zu gefährden.",
+   "en": "Gives the agent a secure, isolated cloud sandbox for executing code (Python, JavaScript, Bash). The agent writes a script, runs it inside a Firecracker microVM, and gets back stdout, stderr, and any generated charts or plots without risking your local file system."
+  },
+  "tip": {
+   "de": "Unerlässlich für Datenanalyse, mathematische Berechnungen und Diagrammerstellung direkt im Gespräch. Verlangt einen E2B-API-Schlüssel; abgerechnet wird nach MicroVM-Minuten nach Aufbrauch des monatlichen Freiguthabens.",
+   "en": "Essential for data analysis, mathematical calculations, and chart generation directly inside a conversation. Requires an E2B API key; billing is based on microVM minutes after the monthly free credits are used."
+  },
+  "plans": {
+   "de": "Hobby kostenlos (100 Std./Mo.) · Pro 150 $/Mo. · plus Nutzungsgebühren",
+   "en": "Hobby free (100 hrs/mo) · Pro $150/mo · plus usage fees"
+  },
+  "links": {
+   "home": "https://e2b.dev",
+   "docs": "https://docs.e2b.dev",
+   "code": "https://github.com/e2b-dev/E2B"
+  },
+  "plansChecked": "2026-09-17",
+  "contentChecked": "2026-09-17"
  }
 }

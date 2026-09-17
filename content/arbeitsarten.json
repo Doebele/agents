@@ -298,6 +298,7 @@
       "pdf-mcp",
       "postgres-mcp",
       "supabase-mcp",
+      "e2b-mcp",
       "Statista Connect"
      ],
      "empfehlung": [
@@ -658,7 +659,8 @@
       "filesystem-mcp",
       "Playwright-mcp",
       "supabase-mcp",
-      "postgres-mcp"
+      "postgres-mcp",
+      "e2b-mcp"
      ],
      "empfehlung": [
       "github-mcp",

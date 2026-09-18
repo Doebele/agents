@@ -2191,8 +2191,8 @@
   "plansChecked": "2026-09-06",
   "contentChecked": "2026-09-12"
  },
- "GPT-5.6": {
-  "name": "GPT-5.6",
+ "GPT-6 Astra": {
+  "name": "GPT-6 Astra",
   "vendor": "OpenAI",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
@@ -2201,51 +2201,29 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "OpenAIs aktuelles Spitzenmodell und der bekannteste Allrounder — dasselbe Modell, das hinter ChatGPT steckt. Es ist auffällig sparsam: Es braucht weniger Text, um zum selben Ergebnis zu kommen, und das spart bei langen Agentenläufen unmittelbar Geld. Seine Stärken liegen bei Programmierung, wissenschaftlichen Fragen und Sicherheitsthemen.",
-   "en": "OpenAI's current flagship and the best-known all-rounder — the same model behind ChatGPT. It is notably frugal: it needs less text to reach the same result, which directly saves money across long agent runs. Its strengths are programming, scientific questions and security topics."
+   "de": "OpenAIs neuestes Spitzenmodell und Nachfolger von GPT-5.6, ab September 2026 in allen bezahlten ChatGPT-Plänen und über die API. Sein stärkstes Feld ist die Agentenarbeit am Bildschirm: Formulare ausfüllen, im Netz recherchieren, Software selbst installieren und testen. OpenAI nennt es sein am besten ausgerichtetes Modell: Es fragt nach, wenn eine Aufgabe unklar ist, und ging in der eigenen Prüfung nie über den Auftrag hinaus. Der Haken: Als API mit 10 $/50 $ pro Million Tokens deutlich teurer als der Vorgänger — im ChatGPT-Abo ist die Nutzung ohne Aufpreis in den bestehenden Kontingenten enthalten.",
+   "en": "OpenAI's newest flagship and successor to GPT-5.6, available from September 2026 across all paid ChatGPT plans and through the API. Its strongest field is agent work on the computer: filling in forms, researching the web, installing and testing software on its own. OpenAI calls it its best-aligned model: it asks follow-up questions when a task is unclear and, in the company's own evaluation, never went beyond its assignment. The catch: at $10/$50 per million tokens the API is markedly dearer than its predecessor — inside a ChatGPT subscription, usage is included in the existing quotas at no extra charge."
   },
   "tip": {
-   "de": "Wenn du nicht weißt, womit du anfangen sollst, ist das eine sichere Wahl. Nutzbar über ChatGPT oder über die Schnittstelle für eigene Programme.",
-   "en": "If you don't know where to start, this is a safe choice. Use it through ChatGPT or through the interface for your own programs."
+   "de": "Kein Aufpreis im ChatGPT-Abo — die Nutzung läuft in den gewohnten Kontingenten mit. Erste Wahl, wenn der Rechner selbst arbeiten soll: Formulare, Webrecherche, Dokumente und Präsentationen. Auf Pro-, Business- und Enterprise-Plänen gibt es zusätzlich die Variante GPT-6 Astra Pro.",
+   "en": "No surcharge in a ChatGPT subscription — usage runs inside the usual quotas. The first choice when the computer itself should work: forms, web research, documents and presentations. Pro, Business and Enterprise plans also carry a GPT-6 Astra Pro variant."
   },
   "links": {
-   "home": "https://openai.com/index/gpt-5-6/",
+   "home": "https://openai.com/index/gpt-6-astra/",
    "docs": "https://developers.openai.com/api/docs/models",
    "code": null
   },
   "free": false,
-  "aa": {
-   "url": "https://artificialanalysis.ai/models/gpt-5-6-sol",
-   "intel": {
-    "v": "61",
-    "rank": "#5/188",
-    "u": 4
-   },
-   "speed": {
-    "v": "73.7",
-    "rank": "#77/188",
-    "u": 2
-   },
-   "cost": {
-    "v": "$4/$20",
-    "rank": "#68/188",
-    "u": 4
-   },
-   "verb": {
-    "v": "70M",
-    "rank": "#38/188",
-    "u": 2
-   }
-  },
   "plans": {
-   "de": "API Terra 2 $/12 $ · Sol 4 $/20 $ · Luna 0,20 $/1,20 $ pro 1M Tok. — Sol zum Aktionspreis, mindestens bis 21.11.2026",
-   "en": "API Terra $2/$12 · Sol $4/$20 · Luna $0.20/$1.20 per 1M tok. — Sol at promotional pricing, at least through 21 Nov 2026"
+   "de": "API 10 $/50 $ pro 1M Tok. (Standard) · Fast-Mode 2× Preis, bis zu 2× so schnell · im ChatGPT-Abo ohne Aufpreis in den Kontingenten enthalten · GPT-6 Astra Pro zusätzlich auf Pro, Business, Enterprise",
+   "en": "API $10/$50 per 1M tok. (Standard) · Fast mode 2× the price, up to 2× the speed · included in ChatGPT quotas at no extra charge · GPT-6 Astra Pro additionally on Pro, Business, Enterprise"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-18",
+  "contentChecked": "2026-09-18"
  },
  "Claude Opus 5 / Sonnet 5": {
   "name": "Claude Opus 5 / Sonnet 5",

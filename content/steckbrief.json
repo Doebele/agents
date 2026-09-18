@@ -456,6 +456,10 @@
    "en": "Agent mode is part of the paid plans and starts from the tools menu or the command /agent. It clicks through the web in your name: give it bounded tasks, sign in only where you must, and watch while it works."
   },
   "free": true,
+  "plans": {
+   "de": "Free 0 $ · Go 8 $/Mo. (US-Preis, in einigen Märkten lokalisiert) · Plus 20 $/Mo. · Pro 100 $/Mo. (5× Plus-Kontingent) oder 200 $/Mo. (20×; dafür seit dem 10.09.2026 keine neuen Anmeldungen mehr) · Business und Enterprise: Preise auf der OpenAI-Preisseite · Free und Go nutzen GPT-5.6 Luna, Sol und Terra ab Plus (Terra in Codex auch für Free/Go) · Astra ist ab Plus im bestehenden Kontingent dabei, Astra Pro auf Pro, Business und Enterprise",
+   "en": "Free $0 · Go $8/mo (US price, localized in some markets) · Plus $20/mo · Pro $100/mo (5× the Plus quota) or $200/mo (20×; new sign-ups for it paused since Sep 10, 2026) · Business and Enterprise: prices on the OpenAI pricing page · Free and Go run GPT-5.6 Luna, Sol and Terra from Plus up (Terra in Codex also on Free/Go) · Astra is included from Plus within the existing quota, Astra Pro on Pro, Business and Enterprise"
+  },
   "billing": [
    "abo"
   ],
@@ -464,7 +468,8 @@
    "docs": "https://help.openai.com/en/articles/11752874-chatgpt-agent",
    "code": null
   },
-  "contentChecked": "2026-09-18"
+  "contentChecked": "2026-09-18",
+  "plansChecked": "2026-09-18"
  },
  "OpenAI Codex": {
   "name": "Codex",

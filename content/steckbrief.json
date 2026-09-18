@@ -457,8 +457,8 @@
   },
   "free": true,
   "plans": {
-   "de": "Free 0 $ · Go 8 $/Mo. (US-Preis, in einigen Märkten lokalisiert) · Plus 20 $/Mo. · Pro 100 $/Mo. (5× Plus-Kontingent) oder 200 $/Mo. (20×; dafür seit dem 10.09.2026 keine neuen Anmeldungen mehr) · Business und Enterprise: Preise auf der OpenAI-Preisseite · Free und Go nutzen GPT-5.6 Luna, Sol und Terra ab Plus (Terra in Codex auch für Free/Go) · Astra ist ab Plus im bestehenden Kontingent dabei, Astra Pro auf Pro, Business und Enterprise",
-   "en": "Free $0 · Go $8/mo (US price, localized in some markets) · Plus $20/mo · Pro $100/mo (5× the Plus quota) or $200/mo (20×; new sign-ups for it paused since Sep 10, 2026) · Business and Enterprise: prices on the OpenAI pricing page · Free and Go run GPT-5.6 Luna, Sol and Terra from Plus up (Terra in Codex also on Free/Go) · Astra is included from Plus within the existing quota, Astra Pro on Pro, Business and Enterprise"
+   "de": "Free 0 $ · Go 8 $/Mo. (US-Preis, in einigen Märkten lokalisiert) · Plus 20 $/Mo. · Pro 100 $/Mo. (5× Plus-Kontingent) oder 200 $/Mo. (20×; dafür seit dem 10.09.2026 keine neuen Anmeldungen mehr) · Business und Enterprise: Preise auf der OpenAI-Preisseite · Free und Go nutzen GPT-5.6 Luna (kein Sol) · Sol und Terra ab Plus (Terra in Codex auch für Free/Go) · Astra ist ab Plus im bestehenden Kontingent dabei, Astra Pro auf Pro, Business und Enterprise",
+   "en": "Free $0 · Go $8/mo (US price, localized in some markets) · Plus $20/mo · Pro $100/mo (5× the Plus quota) or $200/mo (20×; new sign-ups for it paused since Sep 10, 2026) · Business and Enterprise: prices on the OpenAI pricing page · Free and Go run GPT-5.6 Luna (no Sol) · Sol and Terra from Plus up (Terra in Codex also on Free/Go) · Astra is included from Plus within the existing quota, Astra Pro on Pro, Business and Enterprise"
   },
   "billing": [
    "abo"
@@ -2219,9 +2219,32 @@
    "code": null
   },
   "free": false,
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/gpt-6-astra",
+   "intel": {
+    "v": "53",
+    "rank": "#3/199",
+    "u": 4
+   },
+   "speed": {
+    "v": "51.3",
+    "rank": "#114/199",
+    "u": 2
+   },
+   "cost": {
+    "v": "$10/$50",
+    "rank": "#71/199",
+    "u": 4
+   },
+   "verb": {
+    "v": "60M",
+    "rank": "#28/199",
+    "u": 2
+   }
+  },
   "plans": {
-   "de": "API 10 $/50 $ pro 1M Tok. (Standard) · Fast-Mode 2× Preis, bis zu 2× so schnell · im ChatGPT-Abo ohne Aufpreis in den Kontingenten enthalten · GPT-6 Astra Pro zusätzlich auf Pro, Business, Enterprise",
-   "en": "API $10/$50 per 1M tok. (Standard) · Fast mode 2× the price, up to 2× the speed · included in ChatGPT quotas at no extra charge · GPT-6 Astra Pro additionally on Pro, Business, Enterprise"
+   "de": "API 10 $/50 $ pro 1M Tok. (Standard) · Fast-Mode 2× Preis, bis zu 2× so schnell · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.) · GPT-6 Astra Pro zusätzlich auf Pro, Business, Enterprise",
+   "en": "API $10/$50 per 1M tok. (standard) · Fast mode 2× the price, up to 2× the speed · in a ChatGPT subscription included from Plus within the quotas at no extra charge (Plus $20/mo, Pro $100/mo) · GPT-6 Astra Pro additionally on Pro, Business, Enterprise"
   },
   "billing": [
    "abo",

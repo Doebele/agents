@@ -182,6 +182,11 @@
       "k": "Agent SDK"
      },
      {
+      "n": "ChatGPT",
+      "v": "OpenAI",
+      "k": "ChatGPT"
+     },
+     {
       "n": "OpenAI Codex",
       "v": "OpenAI",
       "k": "OpenAI Codex"

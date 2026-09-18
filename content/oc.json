@@ -44,8 +44,8 @@
  "closed": [
   {
    "v": "OpenAI",
-   "m": "GPT-5.6",
-   "key": "GPT-5.6"
+   "m": "GPT-6 Astra",
+   "key": "GPT-6 Astra"
   },
   {
    "v": "Anthropic",

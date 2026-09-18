@@ -438,6 +438,34 @@
   ],
   "plansChecked": "2026-09-10"
  },
+ "ChatGPT": {
+  "name": "ChatGPT",
+  "vendor": "OpenAI",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": false,
+  "blurb": {
+   "de": "Die Agentenumgebung, die die meisten zuerst treffen: OpenAIs Chat, dessen Agenten-Modus selbstständig Aufgaben im Netz erledigt — recherchieren, Formulare ausfüllen, mit hochgeladenen Dateien arbeiten. Bei heiklen Schritten wie Logins hält er inne und übergibt dir die Steuerung. Der eigene Browser Atlas, mit dem OpenAI 2025 denselben Weg ging, wurde im August 2026 eingestellt; die agentenbasierten Browser-Arbeiten stecken jetzt in der ChatGPT-Desktop-App.",
+   "en": "The agent environment most people meet first: OpenAI's chat, whose agent mode takes on tasks on the web by itself — researching, filling in forms, working with uploaded files. At sensitive steps such as logins it pauses and hands control to you. Atlas, OpenAI's own browser that tried the same route in 2025, was shut down in August 2026; that browser-based agent work now lives in the ChatGPT desktop app."
+  },
+  "tip": {
+   "de": "Der Agenten-Modus gehört zu den Bezahlplänen und lässt sich über das Werkzeuge-Menü oder den Befehl /agent starten. Er klickt in deinem Namen durchs Netz: Gib ihm abgegrenzte Aufgaben, logge dich nur ein, wo es nötig ist, und sieh dabei zu.",
+   "en": "Agent mode is part of the paid plans and starts from the tools menu or the command /agent. It clicks through the web in your name: give it bounded tasks, sign in only where you must, and watch while it works."
+  },
+  "free": true,
+  "billing": [
+   "abo"
+  ],
+  "links": {
+   "home": "https://chatgpt.com/",
+   "docs": "https://help.openai.com/en/articles/11752874-chatgpt-agent",
+   "code": null
+  },
+  "contentChecked": "2026-09-18"
+ },
  "OpenAI Codex": {
   "name": "Codex",
   "vendor": "OpenAI",

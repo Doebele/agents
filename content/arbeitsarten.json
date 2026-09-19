@@ -1817,6 +1817,105 @@
      }
     ]
    }
+  },
+  {
+   "id": "ablaeufe-automatisieren",
+   "name": {
+    "de": "Abläufe automatisieren",
+    "en": "Automate processes"
+   },
+   "these": "Der Agent sitzt nicht im Chat, sondern in einem Ablauf: Ein Auslöser startet ihn, er trifft je Element ein Urteil und verteilt das Ergebnis — als Diagramm aus Knoten sichtbar, nicht als Gespräch.",
+   "beispiele": [
+    {
+     "de": "E-Mails automatisch sortieren",
+     "en": "Sort incoming email automatically"
+    },
+    {
+     "de": "Anfragen aus einem Formular vorprüfen und verteilen",
+     "en": "Pre-check and route requests from a form"
+    }
+   ],
+   "synonyme": [
+    "email",
+    "e-mail",
+    "mails",
+    "gmail",
+    "newsletter",
+    "postfach",
+    "inbox",
+    "triage",
+    "sortieren",
+    "automatisierung",
+    "automatisieren",
+    "workflow",
+    "abläufe",
+    "n8n",
+    "zapier"
+   ],
+   "stationen": {
+    "01_entscheidung": {
+     "frage": {
+      "de": "Wer entscheidet, was mit jedem Element geschieht?",
+      "en": "Who decides what happens to each item?"
+     },
+     "kandidaten": [
+      "Jev"
+     ],
+     "notiz": {
+      "de": "Für das Urteil je Element: eine feste Frage pro Postfach-Eintrag — „welcher Ordner?“ — mit festen Antworttypen. Der Ablauf ruft das Modell je Element per HTTP und verteilt nach der Antwort.",
+      "en": "For the judgment per item: one fixed question per inbox entry — \"which folder?\" — with fixed answer types. The workflow calls the model per item over HTTP and routes by the answer."
+     }
+    },
+    "04_mcp": {
+     "frage": {
+      "de": "Woran soll er angeschlossen sein?",
+      "en": "What should it be connected to?"
+     },
+     "kandidaten": [
+      "filesystem-mcp",
+      "slack-mcp"
+     ],
+     "luecke": {
+      "de": "Einen E-Mail-Konnektor für den Katalog gibt es noch nicht — am Sortier-Beispiel hängt der Zugang zum Postfach.",
+      "en": "The catalogue has no email connector yet — the sorting example hangs on access to the inbox."
+     }
+    },
+    "07_umgebung": {
+     "frage": {
+      "de": "Wo soll der Ablauf sichtbar sein?",
+      "en": "Where should the workflow be visible?"
+     },
+     "kandidaten": [
+      "n8n"
+     ],
+     "notiz": {
+      "de": "Der Ablauf liegt als Diagramm vor: ein Auslöser am Posteingang, eine Urteils-Stufe, ein Verteil-Knoten. Die Instanz stellt einen MCP-Endpunkt, an den ein Agent andockt.",
+      "en": "The workflow sits as a diagram: a trigger on the inbox, a judgment step, a routing node. The instance exposes an MCP endpoint an agent docks onto."
+     }
+    }
+   },
+   "voraussetzungen": [
+    {
+     "titel": {
+      "de": "Ein Ort, an dem der Ablauf läuft",
+      "en": "Somewhere for the workflow to run"
+     },
+     "text": {
+      "de": "Ein Ablauf muss dauerhaft lauschen: als Cloud-Konto beim Werkzeug oder selbst gehostet auf einer Maschine, die an bleibt. Ein Agent im Chat-Fenster reicht dafür nicht.",
+      "en": "A workflow has to listen permanently: as a cloud account with the tool, or self-hosted on a machine that stays on. A chat-window agent will not do."
+     }
+    },
+    {
+     "titel": {
+      "de": "Zugang zum Postfach, das den Ablauf startet",
+      "en": "Access to the inbox that starts the workflow"
+     },
+     "text": {
+      "de": "Ohne Lesezugriff auf das Postfach bleibt das Sortier-Beispiel Theorie. Viele Anbieter stellen dafür ein App-Passwort oder ein Dienstkonto aus — genau dieser Zugang fehlt im Katalog noch.",
+      "en": "Without read access to the inbox the sorting example stays theory. Many providers hand out an app password or a service account — that access is the gap still open in this catalogue."
+     }
+    }
+   ]
   }
  ],
  "freitext": {

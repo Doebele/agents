@@ -1382,6 +1382,22 @@
    },
    {
     "label": {
+     "de": "Abläufe automatisieren",
+     "en": "Automate processes"
+    },
+    "items": [
+     {
+      "n": "n8n",
+      "v": {
+       "de": "Workflow-Canvas",
+       "en": "workflow canvas"
+      },
+      "k": "n8n"
+     }
+    ]
+   },
+   {
+    "label": {
      "de": "Modelle betreiben",
      "en": "Run models"
     },

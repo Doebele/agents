@@ -5118,5 +5118,33 @@
    "docs": "https://docs.platform.statista.ai/mcp-server/introduction"
   },
   "icon": "statista"
+ },
+ "n8n": {
+  "name": "n8n",
+  "vendor": "n8n",
+  "cat": {
+   "de": "Arbeitsabläufe · Baustein 07",
+   "en": "Workflows · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Arbeitsabläufe als Bild statt als Skript: Ein Ablauf liegt in n8n als Diagramm verbundener Knoten auf einer Leinwand — Auslöser, Schritte, Verzweigungen —, und an jedem Knoten lässt sich bei Bedarf eigener Code in JavaScript oder Python dazuschieben. Modelle von OpenAI, Anthropic, Google oder aus der Open-Source-Welt kommen als eigene Schritte in den Ablauf, Menschen lassen sich für Freigaben zwischenschalten, und die Instanz stellt selbst einen MCP-Endpunkt bereit, an den ein Agent andockt. Selbst hosten kostet nichts außer dem Betrieb (Docker genügt, der Editor läuft im Browser), die Cloud-Stufen sind kostenpflichtig. Der Fang: n8n nennt sich „fair-code“, ist aber kein Open Source im Sinne der Open-Source-Definition — die Sustainable-Use-Lizenz erlaubt die Nutzung nur für eigene interne oder nichtkommerzielle Zwecke; wer das Werkzeug selbst als Produkt anbietet, braucht die separate Enterprise-Lizenz.",
+   "en": "Workflows as a picture rather than a script: in n8n a flow sits on a canvas as a diagram of connected nodes — trigger, steps, branches — and any node can take your own code in JavaScript or Python. Models from OpenAI, Anthropic, Google or the open-source world join the flow as steps of their own, humans can be switched in for approvals, and the instance itself exposes an MCP endpoint an agent can dock onto. Self-hosting costs nothing but the running of it (Docker is enough, the editor runs in the browser); the cloud tiers are paid. The catch: n8n calls itself \"fair-code\" but is not open source in the Open Source Initiative's sense — the Sustainable Use License permits use only for your own internal or non-commercial purposes; whoever offers the tool as a product of their own needs the separate Enterprise License."
+  },
+  "tip": {
+   "de": "Für Abläufe, die regelmäßig ohne dich laufen sollen — Postfach überwachen, Antworten einsortieren, Nachfragen verschicken. Das Sortier-Beispiel lässt sich mit Jev aus diesem Katalog bauen: Ein Auslöser feuert je neuem Postfach-Eintrag, ein HTTP-Knoten stellt Jev die feste Frage „welcher Ordner?“, ein Verteilknoten legt die Nachricht entsprechend ab. Über den MCP-Endpunkt kann auch ein Coding-Agent die Instanz bedienen. Fair-code heißt nicht gratis: Selbst gehostet zahlt man nur den Betrieb, die Cloud-Stufen kosten Geld — die Beträge stehen auf der Preisseite.",
+   "en": "For flows that should run without you — watch an inbox, file replies, send follow-ups. The sorting example pairs with Jev from this catalogue: a trigger fires per new inbox item, an HTTP node asks Jev its fixed question \"which folder?\", a routing node files the message accordingly. Through the MCP endpoint a coding agent can operate the instance too. Fair-code does not mean free: self-hosted you pay only for running it, the cloud tiers cost money — the amounts sit on the pricing page."
+  },
+  "links": {
+   "home": "https://n8n.io/",
+   "docs": "https://docs.n8n.io/",
+   "code": "https://github.com/n8n-io/n8n"
+  },
+  "billing": [
+   "abo"
+  ],
+  "contentChecked": "2026-09-19"
  }
 }

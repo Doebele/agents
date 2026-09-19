@@ -136,6 +136,19 @@
       "k": "SGLang"
      }
     ]
+   },
+   {
+    "label": {
+     "de": "Entscheidungsmodelle · nur API",
+     "en": "Decision models · API only"
+    },
+    "items": [
+     {
+      "n": "Jev",
+      "v": "TypeSafe AI",
+      "k": "Jev"
+     }
+    ]
    }
   ],
   "insight": {

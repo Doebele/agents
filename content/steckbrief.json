@@ -5065,6 +5065,38 @@
   },
   "plansChecked": "2026-09-03"
  },
+ "Jev": {
+  "name": "Jev",
+  "vendor": "TypeSafe AI",
+  "cat": {
+   "de": "Entscheidungsmodell · Baustein 01",
+   "en": "Decision model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Ein Modell, das keine Texte schreibt, sondern gestellte Fragen in festen Antworttypen beantwortet: eine Wahl aus selbst definierten Optionen, ein Punktwert entlang eigener Skalen oder die Wahrscheinlichkeit für Ja/Nein — jeweils mit Verteilung und Konfidenz, so dass Software damit weiterrechnen kann. TypeSafe nennt die Modellklasse „System One“, nach dem schnellen Urteilen bei Kahneman: kein Chat, sondern Urteile in Serie — Tickets einsortieren, Nachrichten nach Dringlichkeit ordnen, Ausgaben gegen Vorgaben prüfen. Der Fang: Jev erklärt und formuliert nichts; drumherum braucht es eigenen Code, der Fragen stellt und Antworten auswertet — als Denkmodell im Agenten taugt es nicht, und nur Text geht als Eingabe hinein. Geschwindigkeits- und Sparversprechen (je Arbeitslauf über 190× schneller, über 440× günstiger als LLMs) sind eigene Messungen des Herstellers, nicht unabhängig nachgeprüft; das Modell ist der erste Produkt-Entwurf eines jungen Unternehmens und nur im frühen Zugang erhältlich.",
+   "en": "A model that does not write text but answers posed questions in fixed answer types: a choice from options you define, a score against your own rubric, or the probability of a yes/no question — each with a distribution and a confidence figure software can act on. TypeSafe calls the class \"System One models\", after the fast, intuitive kind of thinking in Kahneman's work: not chat but judgments in series — sorting support tickets, ranking messages by urgency, checking output against rules. The catch: Jev explains, phrases and justifies nothing; your own code has to ask the questions and act on the answers — it is no good as the thinking model inside an agent, and only text goes in as input. Every speed and price claim (over 190× faster, over 440× cheaper per workflow than LLMs) comes from the vendor's own runs, not independent verification; the model is the first product of a young company and sold in early access only."
+  },
+  "tip": {
+   "de": "Zum Ausprobieren reicht der Playground in der Konsole; im Betrieb holt man einen API-Schlüssel und stellt seine Fragen über die HTTP-API oder die SDKs für Python und JavaScript — abgerechnet wird nur, was als Eingabe hineingeht. Für Coding-Agenten liegt ein fertiger TypeSafe-Skill bereit, der Fragetypen und Baumuster kennt. Nicht als Ersatz für das Sprachmodell im Agenten sehen, sondern für die vielen kleinen Urteile daneben: sortieren, bewerten, weiterleiten, freigeben.",
+   "en": "The console's playground is enough to try it; in operation you fetch an API key and put your questions over the HTTP API or the Python and JavaScript SDKs — only what goes in as input is billed. For coding agents there is a ready-made TypeSafe skill that knows the question types and build patterns. Treat it not as a replacement for the language model in your agent but for the many small judgments beside it: sort, score, route, approve."
+  },
+  "links": {
+   "home": "https://typesafe.ai/",
+   "docs": "https://docs.typesafe.ai/introduction"
+  },
+  "billing": [
+   "api"
+  ],
+  "plans": {
+   "de": "API 0,042 $ je 1M Eingabe-Tokens (42 $ je Milliarde) · Ausgabe-Tokens werden nicht berechnet · Ratengrenzen 250.000 Tokens/s und 1.200 Anfragen/Min., werden derzeit dynamisch angepasst · höhere Grenzen über Custom- und Enterprise-Pläne",
+   "en": "API $0.042 per 1M input tokens ($42 per billion) · output tokens are not billed · rate limits of 250,000 tokens/s and 1,200 requests/min, currently adjusted dynamically · higher limits via custom and enterprise plans"
+  },
+  "plansChecked": "2026-09-19",
+  "contentChecked": "2026-09-19"
+ },
  "Statista Connect": {
   "name": "Statista Connect",
   "vendor": "Statista",

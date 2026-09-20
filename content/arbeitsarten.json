@@ -1549,7 +1549,53 @@
        "de": "Besprechung, Jour fixe",
        "en": "team meeting, stand-up"
       },
-      "stationen": {},
+      "stationen": {
+       "06_medien": {
+        "kandidaten": [
+         "Anarlog",
+         "Whisper",
+         "Voxtral"
+        ],
+        "empfehlung": [
+         "Anarlog"
+        ],
+        "notiz": {
+         "de": "Anarlog nimmt auf dem eigenen Rechner auf, es sitzt also kein Bot in der Teilnehmerliste. Das ist bei einer Besprechung der Unterschied, der zählt: Man sieht dem Mitschnitt nicht an, dass mitgeschnitten wird — sag es deshalb vorher.",
+         "en": "Anarlog records on your own machine, so no bot sits in the participant list. In a meeting that is the difference that counts: nobody can see that recording is happening — so say so beforehand."
+        }
+       },
+       "07_umgebung": {
+        "kandidaten": [
+         "Obsidian",
+         "Gemini Notebook"
+        ],
+        "empfehlung": [
+         "Obsidian"
+        ],
+        "notiz": {
+         "de": "Ein Jour fixe ist eine Reihe, kein Einzelstück. Im Vault liegen die Protokolle nebeneinander und verweisen aufeinander — was vor drei Wochen beschlossen wurde, findest du wieder.",
+         "en": "A recurring meeting is a series, not a one-off. In a vault the minutes sit side by side and point at each other — what was decided three weeks ago is findable again."
+        }
+       },
+       "03_skills": {
+        "kandidaten": [
+         "eigene-skills",
+         "skill-creator",
+         "obsidian-skills"
+        ],
+        "empfehlung": [
+         "eigene-skills"
+        ],
+        "notiz": {
+         "de": "Wie euer Protokoll aussieht, weiss kein fremder Skill: Wer entscheidet, was als Aufgabe zählt, wie ihr Termine schreibt. Einmal als eigener Skill hinterlegt, sieht jedes Protokoll gleich aus.",
+         "en": "No outside skill knows what your minutes look like: who decides, what counts as a task, how you write dates. Written down once as your own skill, every set of minutes comes out the same."
+        },
+        "luecke": {
+         "de": "Ein fertiger Skill für Protokolle und Beschlussverfolgung fehlt im Katalog.",
+         "en": "A ready-made skill for minutes and decision tracking is missing from the catalogue."
+        }
+       }
+      },
       "voraussetzungen": [
        {
         "titel": {
@@ -1559,6 +1605,16 @@
         "text": {
          "de": "Beschlüsse und Aufgaben am Ende sammeln — genau die fragt man morgen wieder ab.",
          "en": "Collect decisions and tasks at the end — those are what tomorrow asks about."
+        }
+       },
+       {
+        "titel": {
+         "de": "Einverständnis vor dem Mitschnitt",
+         "en": "Consent before recording"
+        },
+        "text": {
+         "de": "Ein Mitschnitt, von dem niemand weiss, ist der schnellste Weg, Vertrauen zu verlieren — und je nach Ort nicht erlaubt. Frag zu Beginn, nicht hinterher.",
+         "en": "A recording nobody knows about is the fastest way to lose trust — and depending on where you are, not permitted. Ask at the start, not afterwards."
         }
        }
       ]
@@ -1787,16 +1843,18 @@
       "stationen": {
        "03_skills": {
         "kandidaten": [
+         "obsidian-skills",
          "research",
+         "notebooklm-py",
          "eigene-skills",
          "skill-creator"
         ],
         "empfehlung": [
-         "research"
+         "obsidian-skills"
         ],
         "notiz": {
-         "de": "Der Klassiker aus Anleitung und Video (Julian Ivanov, «Obsidian + Claude Code»): Vault als Ordner, Agent startet darin, Methoden als Skills. research füllt ihn mit zitierter Substanz.",
-         "en": "The classic from guide and video (Julian Ivanov, «Obsidian + Claude Code»): the vault as a folder, the agent starts inside it, methods as skills. research fills it with cited substance."
+         "de": "obsidian-skills bringt die Obsidian-Kommandozeile mit — damit liest, sucht und verknüpft der Agent im Vault selbst, statt dass du die Verweise von Hand setzt. research füllt ihn mit belegter Substanz, notebooklm-py holt Quellen dazu.",
+         "en": "obsidian-skills brings the Obsidian command line with it — the agent reads, searches and links inside the vault itself instead of you setting the links by hand. research fills it with sourced substance, notebooklm-py brings sources in."
         }
        }
       },
@@ -1934,6 +1992,25 @@
      "notiz": {
       "de": "Der Ablauf liegt als Diagramm vor: ein Auslöser am Posteingang, eine Urteils-Stufe, ein Verteil-Knoten. Die Instanz stellt einen MCP-Endpunkt, an den ein Agent andockt.",
       "en": "The workflow sits as a diagram: a trigger on the inbox, a judgment step, a routing node. The instance exposes an MCP endpoint an agent docks onto."
+     }
+    },
+    "03_skills": {
+     "kandidaten": [
+      "skill-creator",
+      "eigene-skills",
+      "Anthropic Agent Skills",
+      "grill-me"
+     ],
+     "empfehlung": [
+      "skill-creator"
+     ],
+     "notiz": {
+      "de": "Ein Ablauf, den du zweimal erklärst, gehört in einen Skill. skill-creator schreibt ihn auf, grill-me fragt vorher durch, was der Ablauf eigentlich tun soll — bei Automatisierung rächt sich Unklarheit erst im Betrieb.",
+      "en": "A procedure you explain twice belongs in a skill. skill-creator writes it down, grill-me first questions what the procedure is actually meant to do — with automation, vagueness only takes its revenge in production."
+     },
+     "luecke": {
+      "de": "Ein Skill für n8n-Knoten und Fehlerbehandlung in Abläufen fehlt im Katalog.",
+      "en": "A skill for n8n nodes and error handling inside workflows is missing from the catalogue."
      }
     }
    },

@@ -640,12 +640,12 @@
       "eigene-skills",
       "Impeccable",
       "archify",
-      "qa"
+      "qa",
+      "claude-md-management",
+      "feature-dev",
+      "superpowers",
+      "security-audit"
      ],
-     "luecke": {
-      "de": "Skills für Hausregeln, Framework-Konventionen und Review-Vorgaben fehlen.",
-      "en": "Skills for house rules, framework conventions and review standards are missing."
-     },
      "frage": {
       "de": "Welches Wissen soll der Agent mitbringen?",
       "en": "What knowledge should the agent bring along?"
@@ -654,8 +654,8 @@
       "Anthropic Agent Skills"
      ],
      "notiz": {
-      "de": "Impeccable und archify helfen beim Bauen, qa danach: Probleme beim eigenen Testdurchlauf schildern, saubere Issues bekommen.",
-      "en": "Impeccable and archify help while building, qa afterwards: describe the problems from your own test run, receive clean issues."
+      "de": "Hausregeln schreibt claude-md-management fort, den Ablauf geben feature-dev und superpowers vor, qa prüft danach. security-audit gehört ans Ende: einmal vor dem Ausliefern, nicht nebenbei.",
+      "en": "claude-md-management keeps the house rules current, feature-dev and superpowers set the procedure, qa checks afterwards. security-audit belongs at the end: once before you ship, not alongside."
      }
     },
     "04_mcp": {
@@ -789,6 +789,21 @@
          "de": "Drei Sorten: Git-Plattformen bauen aus deinem Codestand selbst, klassische Pakete bringen Domain und Postfach mit, und Coolify betreibst du auf einem eigenen Server.",
          "en": "Three kinds: Git platforms build from your code themselves, classic packages come with a domain and mailbox, and Coolify you run on a server of your own."
         }
+       },
+       "03_skills": {
+        "kandidaten": [
+         "Impeccable",
+         "scroll-craft",
+         "archify",
+         "eigene-skills"
+        ],
+        "empfehlung": [
+         "Impeccable"
+        ],
+        "notiz": {
+         "de": "Impeccable arbeitet am Aussehen und geht den Entwurf mit dir durch. scroll-craft macht das Scrollen selbst zur Animation — die auffälligere Wahl, aber sie verlangt Node, ffmpeg und einen Browser für die Prüfung.",
+         "en": "Impeccable works on the look and walks the draft through with you. scroll-craft turns the scroll itself into the animation — the louder choice, but it wants Node, ffmpeg and a browser for its verification pass."
+        }
        }
       },
       "voraussetzungen": [
@@ -857,6 +872,22 @@
         "notiz": {
          "de": "Eine Anwendung braucht mehr als Dateiablage — Hintergrunddienste und eine Datenbank müssen mitlaufen. Coolify richtet beides auf einem eigenen Server ein, verlangt dafür aber, dass du ihn selbst betreust.",
          "en": "An application needs more than file storage — background services and a database have to run alongside. Coolify sets up both on a server of your own, but expects you to look after it yourself."
+        }
+       },
+       "03_skills": {
+        "kandidaten": [
+         "superpowers",
+         "feature-dev",
+         "security-audit",
+         "qa",
+         "eigene-skills"
+        ],
+        "empfehlung": [
+         "security-audit"
+        ],
+        "notiz": {
+         "de": "Sobald sich Leute anmelden und Daten liegen bleiben, ist die Sicherheitsfrage keine Kür mehr. security-audit prüft in Phasen und lässt jeden Fund von einem zweiten Agenten widerlegen — teuer, aber einmal vor dem Ausliefern lohnt es.",
+         "en": "The moment people sign in and data stays behind, security stops being optional. security-audit works in phases and has a second agent try to refute every finding — expensive, but worth it once before you ship."
         }
        }
       },

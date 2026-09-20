@@ -5473,5 +5473,94 @@
   },
   "plansChecked": "2026-09-20",
   "contentChecked": "2026-09-20"
+ },
+ "scroll-craft": {
+  "name": "scroll-craft",
+  "vendor": "Nate Herk",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Baut Landingpages, bei denen das Scrollen selbst die Animation steuert: Zahlen zählen hoch, während du rollst, Bilder ziehen vorbei, der Besucher bestimmt das Tempo. Zuerst befragt dich der Skill — Reise des Besuchers, Gefühl, vorhandenes Material —, dann wählt er eine von acht Seitensprachen, die sich gegenseitig ausschliessen, damit zwei Ergebnisse nicht doch wieder gleich aussehen. Zum Schluss öffnet er die fertige Seite in einem unsichtbaren Browser und sucht nach toten Scrollstrecken, unlesbarem Kontrast und Videos ohne Wirkung.",
+   "en": "Builds landing pages where the scroll itself drives the animation: numbers count up as you roll, images pass by, the visitor sets the pace. First the skill interviews you — visitor journey, feeling, material you already have — then it picks one of eight mutually exclusive page grammars, so that two results cannot quietly converge. Finally it opens the finished page in an invisible browser and hunts for dead scroll stretches, unreadable contrast and video that does nothing."
+  },
+  "tip": {
+   "de": "Die Voraussetzungen sind mehr als bei anderen Skills: Node 18, ein vollständiges ffmpeg und ein Chrome für die Prüfung. Eigene Fotos sind kostenlos, erzeugte Bilder und Videos laufen über einen kie.ai-Schlüssel und kosten. Die Anleitung nennt selbst zwei Grenzen: Geprüft ist bisher nur unter Windows, und der unsichtbare Browser findet Mängel, aber nicht, ob die Seite etwas bewirkt.",
+   "en": "It asks more of you than other skills: Node 18, a full ffmpeg build and a Chrome for the verification pass. Your own photos cost nothing; generated images and video run through a kie.ai key and do cost. The instructions name two limits themselves: it has only been tested on Windows, and the invisible browser finds flaws but not whether the page lands."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (MIT) · erzeugte Bilder und Videos über kie.ai",
+   "en": "Free, a text file (MIT) · generated images and video via kie.ai"
+  },
+  "links": {
+   "home": "https://github.com/nateherkai/scroll-craft"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "security-audit": {
+  "name": "security-audit",
+  "vendor": "Cloudflare",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Macht aus dem Agenten einen Prüfer, und zwar in sechs Phasen statt in einem Durchgang: Erst wird kartiert, wo Daten von aussen hereinkommen, dann suchen mehrere getrennte Agenten parallel — einer nach Injection, einer nach Zugriffsrechten, einer nach Abläufen, die technisch sauber und trotzdem missbrauchbar sind. Die eine Regel, auf der alles steht: Wer einen Fund prüft, darf nie der sein, der ihn gefunden hat. Am Ende stehen ein lesbarer Bericht und eine Datei mit bestätigten, offenen und verworfenen Funden.",
+   "en": "Turns the agent into an auditor, in six phases rather than one pass: first it maps where data enters from outside, then several isolated agents hunt in parallel — one for injection, one for access rights, one for flows that are technically clean and still abusable. The rule everything rests on: whoever verifies a finding is never the one who found it. Out comes a readable report and a file of confirmed, open and rejected findings."
+  },
+  "tip": {
+   "de": "Der Skill verlangt ein Modell, das Unteraufträge parallel fahren kann, und eine abgeschottete Umgebung für fremden Code. Viele Agenten gleichzeitig heisst: teuer und langsam — das ist nichts für nebenbei, sondern für einmal vor dem Ausliefern. Aus diesem Skill ist Cloudflares eigenes Prüfsystem entstanden, mit dem die Firma ihre Codebasis durchgeht.",
+   "en": "The skill needs a model that can run subagents in parallel, and a sandboxed environment for foreign code. Many agents at once means expensive and slow — not something to run alongside, but once before you ship. Cloudflare's own vulnerability harness grew out of this skill and now runs across the company's codebase."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (MIT) · Kosten entstehen durch die vielen Agentenläufe",
+   "en": "Free, a text file (MIT) · the cost sits in the many agent runs"
+  },
+  "links": {
+   "home": "https://github.com/cloudflare/security-audit-skill",
+   "guide": "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "kie.ai": {
+  "name": "kie.ai",
+  "vendor": "kie.ai",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Ein Zugang für viele Medien-Modelle: Video, Bild und Ton über dieselbe Schnittstelle, statt für jedes Modell ein eigenes Konto und einen eigenen Schlüssel. Das ist für Bild und Video, was OpenRouter für Sprachmodelle ist. Abgerechnet wird über Guthaben, je nach Modell pro Bild, pro Sekunde oder pro Million Token — und fehlgeschlagene Aufträge kosten nichts.",
+   "en": "One doorway to many media models: video, image and sound through the same interface instead of an account and a key per model. It is for image and video what OpenRouter is for language models. Billing runs on credits, per image, per second or per million tokens depending on the model — and failed jobs are not charged."
+  },
+  "tip": {
+   "de": "Interessant, sobald ein Agent unbeaufsichtigt Material erzeugt und du nicht für jedes Modell ein Konto anlegen willst. Der Skill scroll-craft holt sich seine Bilder und Videos von hier. Ein Sammel-Zugang bleibt aber eine Zwischenschicht: Du bist von seiner Verfügbarkeit und seiner Modellauswahl abhängig, und neue Modelle erscheinen dort später als beim Anbieter selbst.",
+   "en": "Worth a look once an agent generates material unattended and you would rather not open an account per model. The scroll-craft skill fetches its images and video from here. A gateway stays a middle layer, though: you depend on its uptime and on the models it carries, and new models arrive there later than at the vendor."
+  },
+  "plans": {
+   "de": "Guthaben, je nach Modell pro Bild, pro Sekunde oder pro 1M Token · 80 Gratis-Credits zum Testen",
+   "en": "Credits, per image, per second or per 1M tokens depending on the model · 80 free credits to try"
+  },
+  "billing": [
+   "api"
+  ],
+  "links": {
+   "home": "https://kie.ai",
+   "docs": "https://docs.kie.ai"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
  }
 }

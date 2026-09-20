@@ -559,6 +559,22 @@
        "en": "AI patterns out, German"
       },
       "k": "vermenschlichen"
+     },
+     {
+      "n": "scroll-craft",
+      "v": {
+       "de": "Scroll-Landingpages",
+       "en": "scroll landing pages"
+      },
+      "k": "scroll-craft"
+     },
+     {
+      "n": "security-audit",
+      "v": {
+       "de": "Sicherheitsprüfung",
+       "en": "security audit"
+      },
+      "k": "security-audit"
      }
     ]
    }
@@ -1556,6 +1572,14 @@
        "en": "servers"
       },
       "k": "Hetzner"
+     },
+     {
+      "n": "kie.ai",
+      "v": {
+       "de": "Medien-Modelle gebündelt",
+       "en": "media models bundled"
+      },
+      "k": "kie.ai"
      }
     ]
    }

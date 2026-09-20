@@ -411,7 +411,9 @@
       "skill-creator",
       "eigene-skills",
       "Impeccable",
-      "archify"
+      "archify",
+      "vermenschlichen",
+      "humanizer"
      ],
      "frage": {
       "de": "Welches Wissen soll der Agent mitbringen?",
@@ -419,7 +421,11 @@
      },
      "empfehlung": [
       "Anthropic Agent Skills"
-     ]
+     ],
+     "notiz": {
+      "de": "Wer einen Text abgibt, gibt auch dessen Herkunft mit ab: vermenschlichen räumt die Muster aus deutschen Texten, humanizer aus englischen. Beide erfinden nichts nach, sie schreiben um.",
+      "en": "Handing over a text hands over its provenance too: vermenschlichen clears the patterns from German text, humanizer from English. Neither invents anything, they rewrite."
+     }
     },
     "04_mcp": {
      "kandidaten": [
@@ -1331,11 +1337,13 @@
         "kandidaten": [
          "customer-research",
          "cro",
-         "eigene-skills"
+         "eigene-skills",
+         "vermenschlichen",
+         "humanizer"
         ],
         "notiz": {
-         "de": "customer-research liefert die Stimme der Kundinnen, cro macht aus dem Entwurf eine Seite, die wirkt.",
-         "en": "customer-research brings the voice of the customers, cro turns the draft into a page that works."
+         "de": "customer-research liefert die Stimme der Kundinnen, cro macht aus dem Entwurf eine Seite, die wirkt. Vor dem Posten lohnt ein Durchgang mit vermenschlichen oder humanizer — Werbetext ist die Gattung, in der KI-Muster am schnellsten auffallen.",
+         "en": "customer-research brings the voice of the customers, cro turns the draft into a page that works. Before posting, a pass with vermenschlichen or humanizer pays off — ad copy is the genre where AI patterns stand out fastest."
         }
        }
       },

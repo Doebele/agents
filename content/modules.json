@@ -543,6 +543,22 @@
        "en": "project memory"
       },
       "k": "claude-md-management"
+     },
+     {
+      "n": "humanizer",
+      "v": {
+       "de": "KI-Muster raus, englisch",
+       "en": "AI patterns out, English"
+      },
+      "k": "humanizer"
+     },
+     {
+      "n": "vermenschlichen",
+      "v": {
+       "de": "KI-Muster raus, deutsch",
+       "en": "AI patterns out, German"
+      },
+      "k": "vermenschlichen"
      }
     ]
    }

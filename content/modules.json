@@ -487,6 +487,62 @@
       "n": "BRAIN.md",
       "v": "MindMux",
       "k": "BRAIN.md"
+     },
+     {
+      "n": "Excalidraw",
+      "v": {
+       "de": "Diagramme",
+       "en": "diagrams"
+      },
+      "k": "excalidraw-skill"
+     },
+     {
+      "n": "NotebookLM",
+      "v": {
+       "de": "Quellen & Podcasts",
+       "en": "sources & podcasts"
+      },
+      "k": "notebooklm-py"
+     },
+     {
+      "n": "Remotion",
+      "v": {
+       "de": "Video aus Code",
+       "en": "video from code"
+      },
+      "k": "remotion-skill"
+     },
+     {
+      "n": "Obsidian",
+      "v": {
+       "de": "Notizen",
+       "en": "notes"
+      },
+      "k": "obsidian-skills"
+     },
+     {
+      "n": "Feature Dev",
+      "v": {
+       "de": "Workflow-Plugin",
+       "en": "workflow plugin"
+      },
+      "k": "feature-dev"
+     },
+     {
+      "n": "Superpowers",
+      "v": {
+       "de": "TDD-Methodik",
+       "en": "TDD methodology"
+      },
+      "k": "superpowers"
+     },
+     {
+      "n": "CLAUDE.md",
+      "v": {
+       "de": "Projektgedächtnis",
+       "en": "project memory"
+      },
+      "k": "claude-md-management"
      }
     ]
    }
@@ -654,6 +710,30 @@
        "en": "media models"
       },
       "k": "higgsfield-mcp"
+     },
+     {
+      "n": "Context7",
+      "v": {
+       "de": "aktuelle Doku",
+       "en": "current docs"
+      },
+      "k": "context7"
+     },
+     {
+      "n": "Firecrawl",
+      "v": {
+       "de": "Web als Markdown",
+       "en": "web as markdown"
+      },
+      "k": "firecrawl"
+     },
+     {
+      "n": "Playwright CLI",
+      "v": {
+       "de": "Browser · CLI",
+       "en": "browser · CLI"
+      },
+      "k": "playwright-cli"
      }
     ]
    }

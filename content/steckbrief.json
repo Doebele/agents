@@ -5146,5 +5146,274 @@
    "abo"
   ],
   "contentChecked": "2026-09-19"
+ },
+ "excalidraw-skill": {
+  "name": "excalidraw-skill",
+  "vendor": "coleam00",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "free": true,
+  "blurb": {
+   "de": "Diagramme als Skill: Aus einer Beschreibung in normaler Sprache baut der Agent eine Excalidraw-Datei — Architektur, Abläufe, Zusammenhänge. Die Form folgt der Bedeutung statt einem Kachelraster: Fächerungen für Ein-zu-viele, Zeitstrahlen für Folgen. Danach rendert der Agent sein Werk per Playwright selbst, schaut es an und korrigiert überlappenden Text und schiefe Pfeile in einer Schleife, bevor du die Datei zu sehen bekommst.",
+   "en": "Diagrams as a skill: from a description in plain language the agent builds an Excalidraw file — architecture, flows, relationships. Form follows meaning instead of a tile grid: fan-outs for one-to-many, timelines for sequences. The agent then renders its own work with Playwright, looks at it, and fixes overlapping text and crooked arrows in a loop before you ever see the file."
+  },
+  "tip": {
+   "de": "Die Farben stehen alle in einer Datei (references/color-palette.md) — dort trägst du euer Branding einmal ein, und jedes künftige Diagramm folgt ihm. Der Haken: Das Repository trägt keine Lizenz, es ist also unklar, was du über das eigene Benutzen hinaus damit darfst.",
+   "en": "All the colors live in one file (references/color-palette.md) — put your branding there once and every future diagram follows it. The catch: the repository carries no license, so what you may do with it beyond using it yourself is unclear."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/coleam00/excalidraw-diagram-skill"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "notebooklm-py": {
+  "name": "notebooklm-py",
+  "vendor": "teng-lin",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Eine inoffizielle Python-Bibliothek samt Skill für Gemini Notebook (bis Juli 2026 NotebookLM): Quellen in Massen importieren — URLs, PDFs, YouTube-Videos, Google Drive — und daraus Podcasts, Videos, Quiz, Lernkarten und Mindmaps erzeugen lassen. Dazu Exporte, die die Web-Oberfläche nicht anbietet: alle Artefakte einer Sorte auf einmal als MP3, PDF, JSON oder Markdown herunterladen.",
+   "en": "An unofficial Python library plus skill for Gemini Notebook (called NotebookLM until July 2026): import sources in bulk — URLs, PDFs, YouTube videos, Google Drive — and have podcasts, videos, quizzes, flashcards and mind maps generated from them. Plus exports the web UI doesn't offer: download every artifact of a kind at once as MP3, PDF, JSON or Markdown."
+  },
+  "tip": {
+   "de": "Unoffiziell ist hier wörtlich gemeint: Die Bibliothek spricht undokumentierte Google-Schnittstellen an, die sich jederzeit ändern können — dann bricht sie, und du nutzt sie auf eigenes Risiko. Den Dienst dahinter beschreibt der Eintrag Gemini Notebook.",
+   "en": "Unofficial is meant literally here: the library talks to undocumented Google interfaces that can change at any time — and then it breaks, and you use it at your own risk. The service behind it is described in the Gemini Notebook entry."
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source",
+   "en": "Free, open source"
+  },
+  "links": {
+   "home": "https://github.com/teng-lin/notebooklm-py"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "remotion-skill": {
+  "name": "remotion-skill",
+  "vendor": "Remotion",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "free": true,
+  "blurb": {
+   "de": "Remotion baut Videos als Programm — in React geschrieben, gerendert statt im Editor geschnitten. Dieses Skill-Paket gibt dem Agenten die Regeln dafür mit: über 30 Regeldateien zu Animationen, Ton, Untertiteln, Diagrammen und Übergängen. remotion-best-practices umfasst alle anderen Skills und ist der richtige Einstieg, wenn du noch nicht weißt, welcher zutrifft.",
+   "en": "Remotion builds video as a program — written in React and rendered rather than cut in an editor. This skill pack hands the agent the rules: 30+ rule files covering animation, audio, captions, charts and transitions. remotion-best-practices encompasses all the others and is the right starting point when you don't yet know which one applies."
+  },
+  "tip": {
+   "de": "Remotion dokumentiert die Skills selbst unter remotion.dev/docs/ai/skills; das Skill-Repository trägt aber keine Lizenz. Bei Videos aus Code bedeutet jede kleine Änderung einen neuen Renderdurchlauf. Die anderen Wege zum Video — Modell, Avatar, Editor — listet der Eintrag video.",
+   "en": "Remotion documents the skills itself at remotion.dev/docs/ai/skills; the skill repository carries no license, though. With video from code, every small change means another render pass. The other routes to video — model, avatar, editor — are listed in the video entry."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://www.skills.sh/remotion-dev/skills/remotion-best-practices",
+   "docs": "https://www.remotion.dev/docs/ai/skills"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "context7": {
+  "name": "context7",
+  "vendor": "Upstash",
+  "cat": {
+   "de": "Kontext-Dienst · Baustein 04",
+   "en": "Context service · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "blurb": {
+   "de": "Ein Kontext-Dienst gegen ein bekanntes Problem: Modelle sind auf alten Bibliotheksversionen trainiert und raten Funktionen, die es so nicht mehr gibt. Context7 zieht die aktuelle, versionsspezifische Dokumentation direkt aus der Quelle in den Prompt. Auf zwei Wegen zu haben: als MCP-Server oder als CLI mit Skill — eingerichtet mit einem einzigen Befehl (npx ctx7 setup).",
+   "en": "A context service against a familiar problem: models are trained on old library versions and hallucinate functions that no longer exist. Context7 pulls current, version-specific documentation straight from the source into your prompt. Available two ways: as an MCP server, or as a CLI with a skill — set up with a single command (npx ctx7 setup)."
+  },
+  "tip": {
+   "de": "Ohne API-Key reicht es zum Ausprobieren; der kostenlose Key von context7.com/dashboard schaltet höhere Limits frei. Wo Context7 nicht greift, liegt die Lücke woanders: Es liefert die passende Doku zum Aufruf — wissen, was du bauen willst, musst du selber.",
+   "en": "Without an API key it's enough for trying things out; the free key from context7.com/dashboard unlocks higher limits. Where Context7 doesn't help, the gap is elsewhere: it hands over the right docs for the call — knowing what you want to build is still your job."
+  },
+  "links": {
+   "home": "https://context7.com",
+   "code": "https://github.com/upstash/context7"
+  },
+  "contentChecked": "2026-09-20"
+ },
+ "firecrawl": {
+  "name": "firecrawl",
+  "vendor": "Firecrawl",
+  "cat": {
+   "de": "Kontext-Dienst · Baustein 04",
+   "en": "Context service · Block 04"
+  },
+  "accent": "var(--violet)",
+  "blurb": {
+   "de": "Webseiten in Futter für Agenten verwandeln: Das Firecrawl-CLI durchsucht das Netz, holt einzelne Seiten, crawlt ganze Websites und zeichnet Seitenkarten — heraus kommt sauberes Markdown statt HTML-Wüste. Ein Befehl richtet alles ein, CLI, Anmeldung und Skills in jedem gefundenen Coding-Editor: npx -y firecrawl-cli@latest init -y --browser. Drei Skill-Gruppen decken die Bandbreite ab: core für die Grundbefehle (scrape, search, crawl, map), build für die eigene Anbindung an die API, workflows für fertige Abläufe wie Lead-Recherche.",
+   "en": "Turning web pages into food for agents: the Firecrawl CLI searches the web, fetches single pages, crawls whole sites and draws site maps — out comes clean Markdown instead of an HTML desert. One command sets everything up — CLI, sign-in and skills in every coding editor it finds: npx -y firecrawl-cli@latest init -y --browser. Three skill groups cover the range: core for the basic commands (scrape, search, crawl, map), build for wiring up the API yourself, workflows for ready-made runs like lead research."
+  },
+  "tip": {
+   "de": "Die CLI ist nur die Fernbedienung — gerechnet wird beim Dienst dahinter, und der will einen Account mit API-Key. Zum Kennenlernen gibt es einen Gratisbereich, größere Crawls laufen auf Credits.",
+   "en": "The CLI is only the remote control — the computing happens on the service behind it, and that wants an account with an API key. There's a free tier for getting to know it; bigger crawls run on credits."
+  },
+  "links": {
+   "home": "https://www.firecrawl.dev/",
+   "docs": "https://docs.firecrawl.dev/cli",
+   "code": "https://github.com/firecrawl/cli"
+  },
+  "contentChecked": "2026-09-20"
+ },
+ "playwright-cli": {
+  "name": "playwright-cli",
+  "vendor": "Microsoft",
+  "cat": {
+   "de": "Browser-CLI · Baustein 04",
+   "en": "Browser CLI · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Browser-Automatisierung als kurze Befehle statt als Werkzeugliste: Damit steuert der Agent den Browser — öffnen, klicken, tippen, Schnappschuss —, ohne große Werkzeugschemata und Accessibility-Bäume in den Kontext zu laden. Genau das spart Tokens, wenn neben der Browserarbeit auch noch ein ganzer Codebase im Kopf liegen muss.",
+   "en": "Browser automation as short commands instead of a tool list: the agent drives the browser — open, click, type, snapshot — rather than loading large tool schemas and accessibility trees into its context. That is exactly what saves tokens when the agent also has a whole codebase to keep in mind."
+  },
+  "tip": {
+   "de": "Der Kontrast zum MCP-Weg steht in der eigenen README (im Katalog: Playwright-mcp): Für langes, iteratives Arbeiten mit offener Browser-Session — Selbstheil-Tests, erkundendes Automatisieren — bleibt MCP die bessere Wahl; für Coding-Agenten, die zwischen Code und Browser wechseln, ist die CLI-Schiene sparsamer. Die Skills kommen mit playwright-cli install --skills dazu.",
+   "en": "The contrast with the MCP route is spelled out in its own README (in this catalogue: Playwright-mcp): for long, iterative work with an open browser session — self-healing tests, exploratory automation — MCP stays the better choice; for coding agents that switch between code and browser, the CLI route is the thrifty one. The skills come along with playwright-cli install --skills."
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source",
+   "en": "Free, open source"
+  },
+  "links": {
+   "home": "https://github.com/microsoft/playwright-cli"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "obsidian-skills": {
+  "name": "obsidian-skills",
+  "vendor": "kepano",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Skills für Obsidian, die Notiz-App, die dein Wissen als Klartext-Dateien hält: Der Agent lernt Obsidians Markdown-Dialekt mit Wikilinks, Callouts und Properties, die .base-Dateien für Ansichten und Filter und das JSON-Canvas-Format für Tafeln. Zwei Zugaben: defuddle presst Webseiten in sauberes Markdown und spart damit Tokens, knap erzeugt aus JSON- oder CSV-Daten Dateien nach Vorlage.",
+   "en": "Skills for Obsidian, the notes app that keeps your knowledge as plain-text files: the agent learns Obsidian's Markdown dialect with wikilinks, callouts and properties, the .base files for views and filters, and the JSON Canvas format for boards. Two extras: defuddle squeezes web pages into clean Markdown, saving tokens, and knap renders files from JSON or CSV data through templates."
+  },
+  "tip": {
+   "de": "Das Paket folgt der agentskills.io-Spezifikation und läuft darum auch außerhalb von Claude Code — die README zeigt die Wege für Codex und OpenCode. Wer keinen Obsidian-Vault pflegt, schaut trotzdem lohnend hinein: defuddle zeigt, wie aus einer chaotischen Webseite eine brauchbare Markdown-Datei wird.",
+   "en": "The pack follows the agentskills.io specification, so it also runs outside Claude Code — the README shows the routes for Codex and OpenCode. Even without an Obsidian vault it's worth a look: defuddle shows how a chaotic web page becomes a usable Markdown file."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/kepano/obsidian-skills"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "feature-dev": {
+  "name": "feature-dev",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "free": true,
+  "blurb": {
+   "de": "Ein Plugin mit festem Ablauf für neue Features: Der Befehl /feature-dev startet sieben Phasen statt direktem Code — erst das Verstehen der Aufgabe, dann zwei bis drei code-explorer-Agenten parallel im Bestand, dann klärende Fragen, erst danach Architekturentwurf und Umsetzung, am Ende ein Qualitäts-Review. Gedacht für Features, die in einen bestehenden Codebase passen müssen.",
+   "en": "A plugin with a fixed routine for new features: the /feature-dev command starts seven phases instead of immediate code — first understanding the request, then two or three code-explorer agents combing the existing codebase in parallel, then clarifying questions, and only then architecture design and implementation, with a quality review at the end. Meant for features that have to fit into an existing codebase."
+  },
+  "tip": {
+   "de": "Was es kostet, ist Geduld: Wer nur eine kleine Korrektur braucht, wartet sieben Phasen lang umsonst — dafür bleibt der normale Weg besser. Das Repository (anthropics/claude-code) trägt keine Lizenz; was das für die Weiterverwendung bedeutet, ist ungeklärt.",
+   "en": "What it costs is patience: if you only need a small fix, seven phases are a detour — the ordinary way stays better for that. The repository (anthropics/claude-code) carries no license; what that means for reuse is unresolved."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "superpowers": {
+  "name": "superpowers",
+  "vendor": "Jesse Vincent",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Eine ganze Arbeitsmethodik als Plugin: Aus dem Gespräch zieht Superpowers eine Spezifikation und zeigt sie Abschnitt für Abschnitt zum Mitlesen; daraus entsteht ein Plan, der absichtlich so detailliert ist, dass ihm ein begeisterter Junior ohne Projektkontext folgen könnte. Umgesetzt wird der Plan von Subagenten Schritt für Schritt — mit echtem Rot-Grün-TDD, YAGNI und DRY, notfalls stundenlang autonom.",
+   "en": "A whole working methodology as a plugin: from the conversation, Superpowers teases out a specification and shows it to you section by section; from it comes a plan deliberately detailed enough that an enthusiastic junior with no project context could follow it. Subagents then carry the plan out step by step — with true red/green TDD, YAGNI and DRY, autonomously for hours if need be."
+  },
+  "tip": {
+   "de": "Die Skills lösen von selbst aus — du musst nichts Besonderes aufrufen, der Agent arbeitet von sich aus nach dieser Methodik. Genau darum lohnt das Mitlesen am Anfang: Der Plan ist deine Kontrollinstanz, lies ihn, bevor du „go“ sagst. Installiert wird es über den offiziellen Claude-Marktplatz; dieselbe Codebasis bedient auch Codex, Cursor und weitere Umgebungen.",
+   "en": "The skills trigger on their own — you don't invoke anything special, the agent follows this methodology unprompted. Which is exactly why following along early pays off: the plan is your point of control; read it before you say go. Install it from the official Claude marketplace; the same codebase also serves Codex, Cursor and other environments."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/obra/superpowers",
+   "docs": "https://claude.com/plugins/superpowers"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "claude-md-management": {
+  "name": "claude-md-management",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "CLAUDE.md ist die Textdatei, in der ein Projekt seinem Coding-Agenten erklärt, wie es hier zugeht — und sie veraltet leise, während der Code sich weiterbewegt. Dieses Plugin hält sie frisch mit zwei Werkzeugen: Der Skill claude-md-improver prüft die Datei gegen den aktuellen Stand des Codes und zeigt, was überholt ist; der Befehl /revise-claude-md fängt am Ende einer Session die Erkenntnisse ein, die nur dieser eine Lauf hervorgebracht hat.",
+   "en": "CLAUDE.md is the text file in which a project explains to its coding agent how things are done here — and it quietly goes stale while the code keeps moving. This plugin keeps it fresh with two tools: the claude-md-improver skill audits the file against the current state of the code and shows what has fallen behind; the /revise-claude-md command captures, at the end of a session, the learnings that only that one run produced."
+  },
+  "tip": {
+   "de": "Zwei Werkzeuge, zwei Anlässe: Wartung, wenn der Code sich geändert hat; Nachfassen, wenn eine Session etwas zutage gebracht hat, das die nächste noch brauchen wird. Nicht jede Erkenntnis gehört in die Datei — wirf nach dem /revise-Lauf einen Blick darauf, was er aufgeschrieben hat.",
+   "en": "Two tools, two occasions: maintenance when the code has changed; follow-up when a session surfaced something the next one will still need. Not every learning belongs in the file — glance at what the /revise run wrote down."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
  }
 }

@@ -575,6 +575,30 @@
        "en": "security audit"
       },
       "k": "security-audit"
+     },
+     {
+      "n": "teach",
+      "v": {
+       "de": "Kurs statt Chat",
+       "en": "a course, not a chat"
+      },
+      "k": "teach"
+     },
+     {
+      "n": "grill-me",
+      "v": {
+       "de": "Verhör vor dem Bauen",
+       "en": "interrogation before building"
+      },
+      "k": "grill-me"
+     },
+     {
+      "n": "watch",
+      "v": {
+       "de": "Videos sehen",
+       "en": "watch video"
+      },
+      "k": "watch"
      }
     ]
    }

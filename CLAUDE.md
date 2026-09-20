@@ -297,7 +297,25 @@ walk the commits that touched `content/steckbrief.json`, compare each entry's
 *parsed* value against the previous commit, and the newest commit where it
 differs is that entry's date. Because the comparison runs on the value and not
 on the text, reformatting the file moves no date, and a change to one fact
-sheet moves only its own. `build.py` hangs the result on each entry as `stand`
+sheet moves only its own.
+
+Only six fields count as content: `name`, `vendor`, `cat`, `blurb`, `tip`,
+`links` — what a reader sees. `plans`, `plansJahr`, `billing`, `plansChecked`,
+`contentChecked`, `icon` and `accent` do not move the date.
+
+That is not tidiness, it is what makes the content queue work. The
+cross-check sets `plansChecked` on fifty entries a week; when that counted as
+a change, every price visit shoved the entry to the back of the content queue
+without anyone having read its text. The queue then circled the front of the
+alphabet while 78 fact sheets sat there never having been read at all. Reading
+a price is not reading an entry.
+
+```bash
+python3 build/stand.py --selbsttest
+```
+
+That check fails the moment a bookkeeping field finds its way back into the
+list. `build.py` hangs the result on each entry as `stand`
 and the drawer prints at most two dates:
 
     Inhalt geprüft 27.08.2026 · Preis geprüft 14.08.2026

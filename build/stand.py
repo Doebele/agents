@@ -9,6 +9,14 @@ Verglichen wird der geparste Eintrag, nicht sein Text. Eine Umformatierung der
 Datei verschiebt deshalb kein einziges Datum, eine echte Aenderung an genau
 einem Steckbrief nur dessen eigenes.
 
+Und verglichen werden nur die Felder, die ein Leser sieht: name, vendor, cat,
+blurb, tip, links. Preise, Abrechnung und die beiden Pruefdaten bleiben
+aussen vor. Sie haben eigene Datumsfelder und eine eigene Rotation, und sie
+bewegen sich oft: die Kreuzpruefung setzt zweimal die Woche 25 mal
+plansChecked. Zaehlte das als Aenderung, wuerde jeder Preisbesuch den Eintrag
+in der Inhalts-Warteschlange nach hinten schieben, ohne dass seinen Text
+jemand gelesen haette.
+
     python3 build/stand.py            # die aeltesten zuerst, als Warteschlange
     python3 build/stand.py --alle
 
@@ -23,6 +31,11 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATEI = "content/steckbrief.json"
+
+# Was als Inhalt zaehlt. Alles andere bewegt das Datum nicht: plans,
+# plansJahr, plansChecked und billing gehoeren der Preisrotation,
+# contentChecked ist Buchhaltung, icon und accent sind Anstrich.
+INHALT = ("name", "vendor", "cat", "blurb", "tip", "links")
 
 
 def _git(*args):
@@ -70,7 +83,9 @@ def stand():
         if not isinstance(d, dict):
             continue
         for k, v in d.items():
-            s = json.dumps(v, sort_keys=True, ensure_ascii=False)
+            if not isinstance(v, dict):
+                continue
+            s = _kern(v)
             if vorher.get(k) != s:
                 datum[k] = tag
                 vorher[k] = s
@@ -79,10 +94,54 @@ def stand():
     return {k: v for k, v in datum.items() if k in jetzt}
 
 
+def _kern(v):
+    """Der Teil eines Eintrags, dessen Aenderung das Datum bewegen darf."""
+    return json.dumps({f: v.get(f) for f in INHALT},
+                      sort_keys=True, ensure_ascii=False)
+
+
+def selbsttest():
+    """Die eine Regel, die hier kaputtgehen kann: Buchhaltung ist kein Inhalt."""
+    a = {"name": "X", "vendor": "Y", "cat": {"de": "c", "en": "c"},
+         "blurb": {"de": "b", "en": "b"}, "tip": {"de": "t", "en": "t"},
+         "links": {"home": "https://x.example"},
+         "plans": {"de": "10 $", "en": "$10"}, "plansChecked": "2026-09-01",
+         "billing": ["api"], "contentChecked": "2026-09-01", "icon": "x"}
+
+    def mit(**aenderung):
+        b = dict(a); b.update(aenderung); return b
+
+    # Preis, Abrechnung, Pruefdaten und Anstrich bewegen das Datum nicht.
+    for feld, wert in (("plansChecked", "2026-09-20"), ("contentChecked", "2026-09-20"),
+                       ("plans", {"de": "99 $", "en": "$99"}), ("billing", ["abo", "api"]),
+                       ("plansJahr", {"de": "8 $", "en": "$8"}), ("icon", "z")):
+        assert _kern(mit(**{feld: wert})) == _kern(a), f"{feld} darf das Datum nicht bewegen"
+
+    # Die sechs Inhaltsfelder bewegen es sehr wohl.
+    for feld, wert in (("name", "Z"), ("vendor", "Q"),
+                       ("cat", {"de": "d", "en": "d"}),
+                       ("blurb", {"de": "neu", "en": "new"}),
+                       ("tip", {"de": "neu", "en": "new"}),
+                       ("links", {"home": "https://y.example"})):
+        assert _kern(mit(**{feld: wert})) != _kern(a), f"{feld} muss das Datum bewegen"
+
+    # Ein weggefallenes Inhaltsfeld ist auch eine Aenderung.
+    ohne = {k: v for k, v in a.items() if k != "links"}
+    assert _kern(ohne) != _kern(a), "ein entfernter Link muss das Datum bewegen"
+
+    print(f"Selbsttest bestanden — Inhalt sind: {', '.join(INHALT)}")
+    return 0
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("--alle", action="store_true", help="alle statt der ältesten 20")
+    p.add_argument("--selbsttest", action="store_true",
+                   help="prueft, dass nur Inhaltsfelder das Datum bewegen")
     args = p.parse_args()
+
+    if args.selbsttest:
+        return selbsttest()
 
     d = stand()
     if not d:

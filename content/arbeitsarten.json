@@ -142,7 +142,8 @@
       "eigene-skills",
       "Distilly",
       "customer-research",
-      "research"
+      "research",
+      "watch"
      ],
      "luecke": {
       "de": "Für Zitierweise und Rechercheprotokoll führt der Katalog noch keinen Skill.",
@@ -156,8 +157,8 @@
       "Anthropic Agent Skills"
      ],
      "notiz": {
-      "de": "Die ersten vier sind Quellen für Skills; research ist der Skill, der die Recherche selbst ausführt — als Hintergrund-Agent gegen Primärquellen, mit Zitier-Datei am Ende.",
-      "en": "The first four are sources for skills; research is the skill that does the research itself — a background agent against primary sources, with a cited file at the end."
+      "de": "watch gehört dazu, sobald Quellen Videos sind: Es zieht Standbilder und Untertitel heraus, damit der Agent auch das auswertet, was gezeigt und nicht gesagt wird.",
+      "en": "watch belongs here as soon as sources are videos: it pulls stills and captions so the agent also works through what is shown rather than said."
      }
     },
     "04_mcp": {
@@ -644,7 +645,8 @@
       "claude-md-management",
       "feature-dev",
       "superpowers",
-      "security-audit"
+      "security-audit",
+      "grill-me"
      ],
      "frage": {
       "de": "Welches Wissen soll der Agent mitbringen?",
@@ -1629,11 +1631,12 @@
          "grill-with-docs",
          "to-questionnaire",
          "premortem",
-         "eigene-skills"
+         "eigene-skills",
+         "grill-me"
         ],
         "notiz": {
-         "de": "grill-with-docs dreht die Richtung um — der Agent befragt dich und schärft deinen Plan. to-questionnaire dreht sie nochmals: Es baut den Fragebogen für den Experten, der mehr weiss als du.",
-         "en": "grill-with-docs flips the direction — the agent questions you and sharpens your plan. to-questionnaire flips it once more: it builds the questionnaire for the expert who knows more than you."
+         "de": "grill-with-docs dreht die Richtung um — der Agent befragt dich und schärft deinen Plan, gegen das, was schon aufgeschrieben ist. grill-me tut dasselbe ohne Aktenlage, für den Anfang. to-questionnaire dreht sie nochmals: Es baut den Fragebogen für den Experten, der mehr weiss als du.",
+         "en": "grill-with-docs flips the direction — the agent questions you and sharpens your plan against what is already written down. grill-me does the same with no paper trail, for the start. to-questionnaire flips it once more: it builds the questionnaire for the expert who knows more than you."
         }
        }
       },
@@ -1743,14 +1746,15 @@
       "skills.sh",
       "skill-creator",
       "eigene-skills",
-      "research"
+      "research",
+      "teach"
      ],
      "empfehlung": [
       "eigene-skills"
      ],
      "notiz": {
-      "de": "research liest Quellen in den Vault ein; eigene-skills macht die eigenen Ordnungsregeln (PARA, Zettelkasten) für den Agenten wiederholbar.",
-      "en": "research reads sources into the vault; eigene-skills makes your own ordering rules (PARA, Zettelkasten) repeatable for the agent."
+      "de": "teach legt für ein Thema einen eigenen Lernordner an — Mission, Quellen, Lektionen, Protokoll. Das ist nicht dasselbe wie ein Vault, passt aber daneben: Wissen sammeln und Wissen aneignen sind zwei Bewegungen.",
+      "en": "teach builds a learning folder of its own for one topic — mission, sources, lessons, record. That is not the same as a vault, but it sits well beside one: collecting knowledge and acquiring it are two different motions."
      }
     }
    },

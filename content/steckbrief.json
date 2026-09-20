@@ -5562,5 +5562,91 @@
   },
   "plansChecked": "2026-09-20",
   "contentChecked": "2026-09-20"
+ },
+ "teach": {
+  "name": "teach",
+  "vendor": "Matt Pocock",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Verwandelt „erklär mir das“ in einen Kurs, der über Wochen trägt. Statt eines langen Chatverlaufs legt der Skill einen Ordner an: eine Missionsdatei, warum du das lernst und woran du Erfolg misst; eine Quellendatei, damit die Lektionen belegt sind; die Lektionen selbst als HTML-Seiten mit Abbildungen und Übungen zum Anklicken; und ein Lernprotokoll, das festhält, was gesessen hat und wo es hakte. Die nächste Lektion setzt genau dort an.",
+   "en": "Turns “explain this to me” into a course that lasts for weeks. Instead of one long chat, the skill creates a folder: a mission file for why you are learning this and how you will know it worked; a resources file so the lessons rest on sources; the lessons themselves as HTML pages with diagrams and exercises you click through; and a learning record of what stuck and where you got stuck. The next lesson starts exactly there."
+  },
+  "tip": {
+   "de": "Löst nicht von selbst aus — du rufst ihn mit /teach auf, und das ist Absicht: Er legt einen ganzen Ordner an, das soll niemandem aus Versehen passieren. Taugt für alles, nicht nur fürs Programmieren. Was er braucht, ist ein Ort dafür und die Bereitschaft, zwischen den Lektionen tatsächlich zu üben; ohne das bleibt es eine hübsch gesetzte Leseliste.",
+   "en": "It does not trigger on its own — you call it with /teach, and that is deliberate: it creates a whole folder, which should never happen by accident. It works for anything, not just programming. What it needs is somewhere to live and your willingness to practise between lessons; without that it stays a nicely typeset reading list."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (MIT)",
+   "en": "Free, a text file (MIT)"
+  },
+  "links": {
+   "home": "https://www.skills.sh/mattpocock/skills/teach",
+   "code": "https://github.com/mattpocock/skills"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "grill-me": {
+  "name": "grill-me",
+  "vendor": "Matt Pocock",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Dreht die Richtung um: Du beschreibst ein Vorhaben, und statt loszulegen befragt dich der Agent — Entscheidungsbaum für Entscheidungsbaum, bis beide dasselbe verstanden haben. Liegt Code vor, sieht er selbst nach, statt dich zu fragen, was er nachlesen kann. Gedacht für die Minuten vor dem Bauen, in denen sich am meisten sparen lässt.",
+   "en": "Flips the direction: you describe a plan, and instead of starting the agent interviews you — decision tree by decision tree, until you both understand the same thing. Where code exists it looks for itself rather than asking what it could read. Made for the minutes before building, where the most is saved."
+  },
+  "tip": {
+   "de": "Nicht zu verwechseln mit grill-with-docs vom selben Autor. grill-me befragt dich zum Vorhaben, grill-with-docs prüft den Plan zusätzlich gegen das, was schon aufgeschrieben ist. Wer nichts Geschriebenes hat, nimmt diesen hier. Das Verhör dauert und kann anstrengend sein — das ist der Punkt.",
+   "en": "Not to be confused with grill-with-docs by the same author. grill-me questions you about the plan; grill-with-docs additionally tests it against what is already written down. With nothing written down yet, take this one. The interrogation takes a while and can be tiring — that is the point."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (MIT)",
+   "en": "Free, a text file (MIT)"
+  },
+  "links": {
+   "home": "https://www.skills.sh/mattpocock/skills/grill-me",
+   "code": "https://github.com/mattpocock/skills"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
+ },
+ "watch": {
+  "name": "watch",
+  "vendor": "bradautomates",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Gibt dem Agenten Augen für Videos. Du nennst eine Adresse oder eine Datei und eine Frage; der Skill lädt das Video, schneidet Standbilder heraus und holt die Untertitel — fehlen sie, lässt er den Ton transkribieren. Der Agent bekommt beides mit Zeitmarken und antwortet aus dem, was er tatsächlich sieht und hört, statt nur aus dem Transkript. Das zählt überall dort, wo im Video gezeigt und nicht gesprochen wird.",
+   "en": "Gives the agent eyes for video. You name an address or a file and a question; the skill downloads the video, cuts out stills and fetches the captions — where there are none it has the audio transcribed. The agent gets both with timestamps and answers from what it actually sees and hears rather than from the transcript alone. That counts wherever a video shows something instead of saying it."
+  },
+  "tip": {
+   "de": "Braucht yt-dlp und ffmpeg auf dem Rechner; unter macOS richtet es sich selbst ein. Die Kosten stecken in den Bildern, nicht im Herunterladen: Je feiner du abtastest, desto teurer wird der Lauf. Bei Videos über etwa zehn Minuten wird die Abdeckung dünn — dann lieber einen Abschnitt eingrenzen als das Ganze grob überfliegen.",
+   "en": "Needs yt-dlp and ffmpeg on the machine; on macOS it sets itself up. The cost sits in the frames, not the download: the finer you sample, the more expensive the run. Past roughly ten minutes coverage thins out — better to narrow a section than to skim the whole thing coarsely."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (MIT) · Transkription nur nötig, wenn Untertitel fehlen",
+   "en": "Free, a text file (MIT) · transcription only needed when captions are missing"
+  },
+  "links": {
+   "home": "https://github.com/bradautomates/claude-video"
+  },
+  "plansChecked": "2026-09-20",
+  "contentChecked": "2026-09-20"
  }
 }

@@ -2119,8 +2119,12 @@
   },
   "free": true,
   "plans": {
-   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ (2.000 Wörter/Woche, 5 h Meetings/Mo.) · Pro 80 $/Nutzer/Jahr (ausgewiesen als 6,67 $/Mo.) · Business 160 $/Nutzer/Jahr (13,33 $/Mo.) · Enterprise auf Anfrage · Jahreszahlung spart zwei Monate, den Monatspreis nennt die Seite nicht im Text",
-   "en": "Local dictation free, open source (MIT) · Free $0 (2,000 words/week, 5 h of meetings/mo) · Pro $80/user/year (shown as $6.67/mo) · Business $160/user/year ($13.33/mo) · Enterprise on request · paying yearly saves two months; the page does not spell out the monthly rate"
+   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ (2.000 Wörter/Woche, 5 h Meetings/Mo.) · Pro 8 $/Nutzer/Mo. · Business 16 $/Nutzer/Mo. · Enterprise auf Anfrage",
+   "en": "Local dictation free, open source (MIT) · Free $0 (2,000 words/week, 5 h of meetings/mo) · Pro $8/user/mo · Business $16/user/mo · Enterprise on request"
+  },
+  "plansJahr": {
+   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ (2.000 Wörter/Woche, 5 h Meetings/Mo.) · Pro 6,67 $/Nutzer/Mo. (80 $/Jahr) · Business 13,33 $/Nutzer/Mo. (160 $/Jahr) · Enterprise auf Anfrage",
+   "en": "Local dictation free, open source (MIT) · Free $0 (2,000 words/week, 5 h of meetings/mo) · Pro $6.67/user/mo ($80/year) · Business $13.33/user/mo ($160/year) · Enterprise on request"
   },
   "billing": [
    "abo"

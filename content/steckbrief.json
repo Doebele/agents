@@ -403,7 +403,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-21"
  },
  "Agent SDK": {
   "name": "Claude Agent SDK",
@@ -1034,7 +1034,7 @@
    "de": "Kostenlos, Open Source (MIT), selbst betrieben",
    "en": "Free, open source (MIT), self-hosted"
   },
-  "plansChecked": "2026-09-03",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-05"
  },
  "MS Agent Framework": {
@@ -1259,7 +1259,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-21"
  },
  "Llama 4": {
   "name": "Llama 4",
@@ -1414,7 +1414,7 @@
    "de": "Kostenlos, Open Source (MIT)",
    "en": "Free, open source (MIT)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "vLLM": {
   "name": "vLLM",
@@ -1472,7 +1472,7 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "GPT Image 2": {
   "name": "GPT Image 2",
@@ -2193,7 +2193,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-06",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "GPT-6 Astra": {
@@ -3826,7 +3826,7 @@
   "links": {
    "home": "https://www.hostinger.com"
   },
-  "plansChecked": "2026-09-06",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-01",
   "icon": "hostinger"
  },
@@ -3883,8 +3883,8 @@
    "en": "Good when you start small and do not want to rule out needing more later."
   },
   "plans": {
-   "de": "Webhosting Plus 1 €/Mo. für 12 Monate, danach 11 € · Standard 3 € → 6 € · Premium 8 € → 16 € · Ultimate 14 € → 28 € (Aktionspreise laufen 6 Monate) · VPS M+ 3 € → 9 €, XXL+ 15 € → 58 € (Aktion 3 Monate) · je 10 € Einrichtung · 30 Tage Geld-zurück, keine Gratisstufe",
-   "en": "Web hosting Plus €1/mo for 12 months, then €11 · Standard €3 → €6 · Premium €8 → €16 · Ultimate €14 → €28 (promo prices run 6 months) · VPS M+ €3 → €9, XXL+ €15 → €58 (3-month promo) · €10 setup fee on each · 30-day money-back guarantee, no free tier"
+   "de": "Webhosting Plus 1 €/Mo. für 12 Monate, danach 11 € · Standard 3 € → 6 € · Premium 8 € → 16 € · Ultimate 14 € → 28 € (Aktionspreise laufen 6 Monate) · VPS M+ 4 € → 12 €, XXL+ 17 € → 59 € (Aktion 3 Monate) · je 10 € Einrichtung · 30 Tage Geld-zurück, keine Gratisstufe",
+   "en": "Web hosting Plus €1/mo for 12 months, then €11 · Standard €3 → €6 · Premium €8 → €16 · Ultimate €14 → €28 (promo prices run 6 months) · VPS M+ €4 → €12, XXL+ €17 → €59 (3-month promo) · €10 setup fee on each · 30-day money-back guarantee, no free tier"
   },
   "billing": [
    "abo"
@@ -3892,7 +3892,7 @@
   "links": {
    "home": "https://www.ionos.de"
   },
-  "plansChecked": "2026-09-06",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-01",
   "icon": "ionos"
  },
@@ -4199,7 +4199,7 @@
   "links": {
    "home": "https://lambda.ai"
   },
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-21"
  },
  "Vast.ai": {
   "name": "Vast.ai",
@@ -4280,8 +4280,8 @@
    "en": "For tools with a part of your own — preprocessing, pipelines, custom prompting — the clean path. Billed per second of runtime."
   },
   "plans": {
-   "de": "Starter 0 $/Mo. mit 30 $ Gratis-Guthaben monatlich · Team 250 $/Mo. mit 100 $ · Enterprise auf Anfrage · Rechenzeit obendrauf, sekundengenau: 0,0000131 $ je CPU-Kern, 0,00000222 $ je GiB Arbeitsspeicher, GPUs von 0,000164 $ (T4) über 0,001097 $ (H100 SXM5) bis 0,001972 $ (B300)",
-   "en": "Starter $0/mo with $30 in free credits every month · Team $250/mo with $100 · Enterprise on request · compute billed on top, by the second: $0.0000131 per CPU core, $0.00000222 per GiB of memory, GPUs from $0.000164 (T4) through $0.001097 (H100 SXM5) to $0.001972 (B300)"
+   "de": "Starter 0 $/Mo. mit 30 $ Gratis-Guthaben monatlich · Team 250 $/Mo. mit 100 $ · Enterprise auf Anfrage · Rechenzeit obendrauf, sekundengenau: 0,00003942 $ je CPU-Kern, 0,00000667 $ je GiB Arbeitsspeicher, GPUs von 0,000164 $ (T4) über 0,001097 $ (H100 SXM5) bis 0,001972 $ (B300)",
+   "en": "Starter $0/mo with $30 in free credits every month · Team $250/mo with $100 · Enterprise on request · compute billed on top, by the second: $0.00003942 per CPU core, $0.00000667 per GiB of memory, GPUs from $0.000164 (T4) through $0.001097 (H100 SXM5) to $0.001972 (B300)"
   },
   "billing": [
    "abo",
@@ -4291,7 +4291,7 @@
   "links": {
    "home": "https://modal.com"
   },
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-21"
  },
  "Replicate": {
   "name": "Replicate",
@@ -4413,7 +4413,7 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "Distilly": {
   "name": "Distilly",
@@ -4470,7 +4470,7 @@
    "de": "Selbst betrieben kostenlos (AGPLv3, ohne Funktionssperren) · verwaltet auf Volcano Engine mit Gratis-Test bis 50 Dateien; was es darüber kostet, nennt der Anbieter nicht",
    "en": "Self-hosted free (AGPLv3, with no feature gates) · managed on Volcano Engine with a free trial of up to 50 files; the vendor names no price beyond that"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "OpenPencil": {
   "name": "OpenPencil",
@@ -4498,7 +4498,7 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "customer-research": {
   "name": "customer-research",
@@ -4526,7 +4526,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "cro": {
   "name": "cro",
@@ -4554,7 +4554,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "video": {
   "name": "video",
@@ -4610,7 +4610,7 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "ComfyUI": {
   "name": "ComfyUI",
@@ -4636,17 +4636,18 @@
    "code": "https://github.com/Comfy-Org/ComfyUI"
   },
   "plans": {
-   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo.",
-   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $20/mo, Creator $35/mo, Pro $100/mo"
+   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo., Team ab 700 $/Mo. · API nach GPU-Sekunde",
+   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $20/mo, Creator $35/mo, Pro $100/mo, Team from $700/mo · API billed by the GPU second"
   },
   "plansJahr": {
-   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 16 $/Mo. (192 $/Jahr), Creator 28 $/Mo. (336 $/Jahr), Pro 80 $/Mo. (960 $/Jahr)",
-   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $16/mo ($192/year), Creator $28/mo ($336/year), Pro $80/mo ($960/year)"
+   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 16 $/Mo. (192 $/Jahr), Creator 28 $/Mo. (336 $/Jahr), Pro 80 $/Mo. (960 $/Jahr), Team ab 630 $/Mo. (7.560 $/Jahr) · API nach GPU-Sekunde",
+   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $16/mo ($192/year), Creator $28/mo ($336/year), Pro $80/mo ($960/year), Team from $630/mo ($7,560/year) · API billed by the GPU second"
   },
   "billing": [
-   "abo"
+   "abo",
+   "api"
   ],
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-21"
  },
  "Osaurus": {
   "name": "Osaurus",
@@ -4672,10 +4673,18 @@
    "code": "https://github.com/osaurus-ai/osaurus"
   },
   "plans": {
-   "de": "Kostenlos (MIT)",
-   "en": "Free (MIT)"
+   "de": "Kostenlos (MIT) für Einzelne, lokale Modelle ohne Abo und Konto · Cloud-Modelle über Prepaid-Guthaben nach Verbrauch · Workspaces für Teams 20 $/Mo. je Arbeitsbereich (20 $ Cloud-Guthaben im Monat inklusive, 14 Tage Test) · Enterprise auf Anfrage",
+   "en": "Free (MIT) for individuals, local models with no subscription or account · cloud models via prepaid credits, pay per use · Workspaces for teams $20/mo per workspace ($20 of cloud credits a month included, 14-day trial) · Enterprise on request"
   },
-  "plansChecked": "2026-09-03"
+  "plansJahr": {
+   "de": "Kostenlos (MIT) für Einzelne, lokale Modelle ohne Abo und Konto · Cloud-Modelle über Prepaid-Guthaben nach Verbrauch · Workspaces für Teams 16,67 $/Mo. je Arbeitsbereich (200 $/Jahr) · Enterprise auf Anfrage",
+   "en": "Free (MIT) for individuals, local models with no subscription or account · cloud models via prepaid credits, pay per use · Workspaces for teams $16.67/mo per workspace ($200/year) · Enterprise on request"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-09-21"
  },
  "Glaze": {
   "name": "Glaze",
@@ -4824,7 +4833,7 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "research": {
   "name": "research",
@@ -4852,7 +4861,7 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "qa": {
   "name": "qa",
@@ -4880,7 +4889,7 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "to-questionnaire": {
   "name": "to-questionnaire",
@@ -4908,7 +4917,7 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "Conductor": {
   "name": "Conductor",
@@ -4969,7 +4978,7 @@
    "de": "Kostenlos (MIT) · lokale PGLite oder eigenes Postgres",
    "en": "Free (MIT) · local PGLite or your own Postgres"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "BRAIN.md": {
   "name": "BRAIN.md",
@@ -5063,7 +5072,7 @@
    "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
    "en": "Free (open-weight, MIT), self-hosted"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "Jev": {
   "name": "Jev",

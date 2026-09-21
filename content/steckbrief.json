@@ -2119,13 +2119,13 @@
   },
   "free": true,
   "plans": {
-   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ (2.000 Wörter/Woche, 5 h Meetings/Mo.) · Pro 80 $/Nutzer/Jahr (ausgewiesen als 6,67 $/Mo.) · Business 160 $/Nutzer/Jahr (13,33 $/Mo.) · Enterprise auf Anfrage",
-   "en": "Local dictation free, open source (MIT) · Free $0 (2,000 words/week, 5 h of meetings/mo) · Pro $80/user/year (shown as $6.67/mo) · Business $160/user/year ($13.33/mo) · Enterprise on request"
+   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ (2.000 Wörter/Woche, 5 h Meetings/Mo.) · Pro 80 $/Nutzer/Jahr (ausgewiesen als 6,67 $/Mo.) · Business 160 $/Nutzer/Jahr (13,33 $/Mo.) · Enterprise auf Anfrage — nur jährlich, ein Monatsabo gibt es nicht",
+   "en": "Local dictation free, open source (MIT) · Free $0 (2,000 words/week, 5 h of meetings/mo) · Pro $80/user/year (shown as $6.67/mo) · Business $160/user/year ($13.33/mo) · Enterprise on request — annual billing only, no monthly plan"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-31"
+  "plansChecked": "2026-09-21"
  },
  "FreeFlow": {
   "name": "FreeFlow",
@@ -2301,14 +2301,14 @@
    }
   },
   "plans": {
-   "de": "API Opus 5 5 $/25 $ pro 1M Token · Sonnet 5 2 $/10 $ pro 1M Token — der Einführungspreis für Sonnet ist inzwischen der reguläre, die für den 1.9.2026 angekündigte Erhöhung auf 3 $/15 $ entfällt",
-   "en": "API Opus 5 $5/$25 per 1M tokens · Sonnet 5 $2/$10 per 1M tokens — Sonnet's introductory price is now the standard one, the increase to $3/$15 announced for 1 Sept 2026 will not happen"
+   "de": "API Opus 5 5 $/25 $ pro 1M Token · Sonnet 5 2 $/10 $ pro 1M Token — der Einführungspreis für Sonnet ist inzwischen der reguläre, die für den 1.9.2026 angekündigte Erhöhung auf 3 $/15 $ entfällt · Fast-Modus für Opus 5 (Research Preview) zum Doppelpreis 10 $/50 $",
+   "en": "API Opus 5 $5/$25 per 1M tokens · Sonnet 5 $2/$10 per 1M tokens — Sonnet's introductory price is now the standard one, the increase to $3/$15 announced for 1 Sept 2026 will not happen · Fast mode for Opus 5 (research preview) at double rate, $10/$50"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-21"
  },
  "Gemini 3.1 Pro": {
   "name": "Gemini 3.1 Pro",
@@ -2584,13 +2584,13 @@
    }
   },
   "plans": {
-   "de": "API pro 1M Tok. zur Hauptzeit: V4-Pro 1,32 $/3,96 $ · Flash 0,44 $/1,32 $. Ausserhalb der Hauptzeit (nachts und am Wochenende, UTC) kostet alles die Hälfte.",
-   "en": "API per 1M tok. at peak: V4-Pro $1.32/$3.96 · Flash $0.44/$1.32. Outside peak hours (nights and weekends, UTC) everything costs half."
+   "de": "API pro 1M Tok. zur Hauptzeit: V4-Pro 1,32 $/3,96 $ · Flash 0,30 $/1,20 $. Außerhalb der Hauptzeit (nachts und am Wochenende, UTC) kostet alles die Hälfte; Cache-Treffer beim Eingangspreis noch einmal deutlich weniger.",
+   "en": "API per 1M tok. at peak: V4-Pro $1.32/$3.96 · Flash $0.30/$1.20. Outside peak hours (nights and weekends, UTC) everything costs half; cache hits on input tokens cost considerably less again."
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "GLM-5.2": {

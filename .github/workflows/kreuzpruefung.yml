@@ -75,7 +75,12 @@ jobs:
         with:
           name: auftrag
 
+      # Die Grenze sitzt am Schritt, nicht am Job: "Befund sichern" und das
+      # Hochladen laufen danach trotzdem, und was bis dahin in der Datei steht,
+      # geht an die Entscheidung. Ohne Grenze wartet die bis zu sechs Stunden
+      # auf einen haengenden Lauf. Der langsamste bisher brauchte 32 Minuten.
       - name: Preise lesen
+        timeout-minutes: 45
         uses: google-github-actions/run-gemini-cli@v0.1.22
         env:
           # Ein Checkout ist kein Ordner, dem jemand vertraut hat, und die CLI
@@ -273,7 +278,9 @@ jobs:
       - name: Startzeit merken
         run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
 
+      # Grenze wie bei Gemini, aus demselben Grund.
       - name: Preise lesen
+        timeout-minutes: 45
         run: |
           kimi -p "$(cat <<'PROMPT'
           Du prüfst Preise für einen Katalog. Du änderst nichts, committest

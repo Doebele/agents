@@ -256,8 +256,22 @@ and sets `billing`. Both read the same page, both are right, and the run paid
 for a third fetch to settle a dispute that was never there. Measured on the
 run of 10 September, two thirds of the "uneinig" entries were of that kind.
 
-Claude decides from that table, and the rules are the point of the whole
-arrangement:
+One agent decides from that table, and the rules are the point of the whole
+arrangement. Which agent is a repository variable, not a code change:
+
+```bash
+gh variable set KREUZPRUEFUNG_ENTSCHEIDER --body kimi --repo Doebele/agents
+```
+
+`claude` or `kimi`; without the variable, `claude`. A manual run can override
+it for that run alone through the `entscheider` input, which is how one
+comparison gets decided by both without touching the default. Kimi is neither
+of the two researchers, so independence holds either way.
+
+Both read the same instructions from `build/kreuzpruefung-entscheidung.md`.
+They used to live inside the workflow; two copies would have drifted apart at
+the first edit, and then the two deciders would have followed different rules
+without anyone noticing.
 
 - **einig** — take it, and do **not** fetch. Two independent readers who read
   the same thing are the check.
@@ -302,11 +316,13 @@ are not.
 The pull request carries one more line per fact sheet:
 
 ```
-BILANZ 2026-08-27 Hetzner gemini=richtig zai=daneben
+BILANZ 2026-08-27 Hetzner gemini=richtig zai=daneben entscheider=claude
 ```
 
 Nobody needs those today. In two months they answer a question no comparison
-table can: which model actually reads a pricing page carefully.
+table can: which model actually reads a pricing page carefully. The
+`entscheider` field keeps the verdicts of the two deciders apart, so the
+tally can also show whether they judge the same findings the same way.
 
 ## Two dates, and neither is called "last updated"
 

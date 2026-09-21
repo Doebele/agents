@@ -29,6 +29,10 @@ on:
         required: false
         default: "25"
         type: string
+      entscheider:
+        description: "claude oder kimi, nur für diesen Lauf (leer = Repository-Variable)"
+        required: false
+        type: string
 
 jobs:
   # ------------------------------------------------------------------ Auftrag
@@ -365,8 +369,8 @@ jobs:
   entscheidung:
     needs: [auftrag, gemini, zai]
     # Auch wenn einer der beiden Rechercheure gescheitert ist. Ein einzelner
-    # Befund gilt dann als ungeprueft — Claude schlaegt ihn selbst nach. Das
-    # ist immer noch besser als ein Lauf, der nichts liefert.
+    # Befund gilt dann als ungeprueft — der Entscheider schlaegt ihn selbst
+    # nach. Das ist immer noch besser als ein Lauf, der nichts liefert.
     if: always() && needs.auftrag.result == 'success'
     runs-on: ubuntu-latest
     permissions:
@@ -374,6 +378,24 @@ jobs:
       pull-requests: write
       issues: write
       id-token: write
+    # Wer entscheidet, ist eine Repository-Variable und keine Codeaenderung:
+    #
+    #   gh variable set KREUZPRUEFUNG_ENTSCHEIDER --body kimi --repo Doebele/agents
+    #
+    # claude oder kimi, ohne Variable claude. Beide lesen denselben Auftrag aus
+    # build/kreuzpruefung-entscheidung.md. Er lag frueher hier im Ablauf; zwei
+    # Abschriften waeren beim ersten Nachbessern auseinandergelaufen, und dann
+    # entschieden die beiden nach verschiedenen Regeln, ohne dass es auffaellt.
+    #
+    # Kimi ist keiner der beiden Rechercheure, die Unabhaengigkeit bleibt also
+    # gewahrt. Es laeuft ueber das Kimi-Code-Abo statt ueber eine Token-Rechnung.
+    env:
+      # Reihenfolge: Eingabe eines manuellen Laufs, dann die Variable, dann
+      # claude. So laesst sich Kimi einmal ausprobieren oder derselbe
+      # Vergleich von beiden entscheiden, ohne die Voreinstellung fuer die
+      # planmaessigen Laeufe anzufassen.
+      ENTSCHEIDER: ${{ inputs.entscheider || vars.KREUZPRUEFUNG_ENTSCHEIDER || 'claude' }}
+      APP_ID: ${{ secrets.KIMI_APP_ID }}
     steps:
       - uses: actions/checkout@v5
 
@@ -392,6 +414,15 @@ jobs:
         with:
           name: befund-zai
 
+      # Ein Tippfehler in der Variable soll laut scheitern, nicht still auf
+      # einen Entscheider zurueckfallen, den niemand gewaehlt hat.
+      - name: Entscheider pruefen
+        run: |
+          case "$ENTSCHEIDER" in
+            claude|kimi) echo "Entscheider: $ENTSCHEIDER" ;;
+            *) echo "KREUZPRUEFUNG_ENTSCHEIDER ist '$ENTSCHEIDER', erlaubt sind claude und kimi."; exit 1 ;;
+          esac
+
       - name: Befunde gegenueberstellen
         run: |
           python3 build/kreuzpruefung.py vergleich befund-gemini.json befund-zai.json
@@ -404,7 +435,19 @@ jobs:
       # Gefragt wird nach demselben Modell, das der Lauf danach benutzt. Eine
       # Sondierung auf ein anderes Modell beantwortet die falsche Frage:
       # Berechtigung und Guthaben koennen sich je Modell unterscheiden.
+      # Der Auftrag, fuer beide Entscheider derselbe, mit dem eigenen Namen
+      # fuer Zweig, Titel und Bilanzzeilen.
+      - name: Auftrag einlesen
+        id: auftrag
+        run: |
+          {
+            echo "text<<ENDE_DES_AUFTRAGS"
+            sed "s/{ENTSCHEIDER}/$ENTSCHEIDER/g" build/kreuzpruefung-entscheidung.md
+            echo "ENDE_DES_AUFTRAGS"
+          } >> "$GITHUB_OUTPUT"
+
       - name: Erreicht der Schluessel die API
+        if: env.ENTSCHEIDER == 'claude'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
@@ -420,8 +463,9 @@ jobs:
           head -c 400 /tmp/ping.json; echo
           test "$code" = "200" || { echo "Der Schlüssel erreicht die API, darf aber nichts ausgeben."; exit 1; }
 
-      - name: Entscheiden und vorschlagen
+      - name: Entscheiden und vorschlagen (Claude)
         id: claude
+        if: env.ENTSCHEIDER == 'claude'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -429,90 +473,107 @@ jobs:
             --model claude-sonnet-5
             --max-turns 200
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*)"
-          prompt: |
-            Du entscheidest die Kreuzprüfung der Preise. Lies zuerst CLAUDE.md —
-            seine Regeln binden dich, besonders: nie eine Angabe oder einen Link
-            erfinden, site/ nicht von Hand bearbeiten, nie auf main pushen.
+          prompt: ${{ steps.auftrag.outputs.text }}
 
-            vergleich.md stellt zwei unabhängige Befunde gegenüber, die Gemini
-            und GLM zu denselben Steckbriefen abgelesen haben, dazu den Stand
-            des Katalogs. build/kreuzpruefung.py hat den Vergleich gerechnet,
-            nicht ein Modell: was dort als einig steht, ist in Betrag, Währung,
-            Einheit, billing und Gratisstufe deckungsgleich.
+      # --- Kimi als Entscheider -------------------------------------------
+      #
+      # ponytail: Installation und Zugang stehen hier ein zweites Mal, fast
+      # wortgleich wie in pflege-kimi.yml und im Z.AI-Rechercheur oben. Bei
+      # einem dritten Verbraucher gehoeren sie in eine gemeinsame Action unter
+      # .github/actions/, wie es die Kosten-Action vormacht.
 
-            Geh die Tabelle Eintrag für Eintrag durch. Das Urteil sagt dir,
-            ob du die Seite abrufen musst. Ruf keine Seite ab, bei der die
-            Tabelle es nicht verlangt:
+      # Ohne eigene App oeffnet Kimi den Pull Request als github-actions[bot],
+      # und ein solcher Pull Request startet keine weiteren Ablaeufe: Die
+      # Baupruefung liefe auf Kimis Vorschlag nicht. Mit KIMI_APP_ID schon.
+      - name: Eine eigene Kennung
+        id: app
+        if: env.ENTSCHEIDER == 'kimi' && env.APP_ID != ''
+        uses: actions/create-github-app-token@v3.2.0
+        with:
+          app-id: ${{ env.APP_ID }}
+          private-key: ${{ secrets.KIMI_APP_KEY }}
 
-            - **einig** — übernehmen, **nicht** abrufen. Zwei unabhängige
-              Leser, die dasselbe gelesen haben, sind die Prüfung. `plans` in
-              beiden Sprachen schreiben, `plansChecked` auf heute.
-            - **einig (Stichprobe)** — abrufen. Etwa jeder dritte einige
-              Eintrag wird nachgeprüft, damit der Fall auffällt, dass beide
-              dieselbe veraltete Seite gelesen haben. Bestätigt die Seite es,
-              wie bei einig verfahren; weicht sie ab, wie bei uneinig.
-            - **ohne Preis** — beide haben auf der Seite keinen Preis
-              gefunden. Nicht abrufen. Den Eintrag entsprechend formulieren
-              (etwa quelloffen und kostenfrei, Kosten entstehen erst beim
-              Modellanbieter) und `plansChecked` auf heute setzen. Dass es
-              nichts zu bezahlen gibt, haben zwei Leser unabhängig bestätigt.
-            - **uneinig** — die Seite des Anbieters selbst lesen und
-              entscheiden. Welcher Befund stimmte und warum, kommt in den
-              PR-Text.
-            - **einseitig** — gilt als ungeprüft, ein einzelner Befund ist
-              keine Bestätigung. Selbst nachschlagen wie bei uneinig.
-            - **leer** — nichts ändern. `plansChecked` bleibt, wie es ist, damit
-              der Eintrag beim nächsten Lauf wieder vorne steht. Im PR nennen.
+      - name: Kimi Code CLI installieren
+        if: env.ENTSCHEIDER == 'kimi'
+        run: |
+          curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
+          echo "$HOME/.kimi-code/bin" >> "$GITHUB_PATH"
+          test -x "$HOME/.kimi-code/bin/kimi" || {
+            echo "kimi binary nicht am erwarteten Ort; Ausgabe des Installers oben"; exit 1; }
 
-            Zwei Regeln zum Vorgehen, weil dieser Schritt sonst teuer wird:
-            Ruf jede Seite höchstens einmal ab, und arbeite einen Eintrag
-            fertig, bevor du den nächsten anfängst. Jede abgerufene Seite
-            bleibt im Verlauf und wird bei jedem weiteren Zug mitgeschickt.
+      # Der Entscheider haengt am Kimi-Code-Abo, nicht an der
+      # Entwicklerplattform. Ein Abo-Schluessel antwortet nur auf einer der
+      # beiden Coding-Adressen; welche, sagt die Sondierung.
+      - name: Zugang und Modell (Kimi)
+        if: env.ENTSCHEIDER == 'kimi'
+        env:
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          KIMI_MODEL: ${{ vars.KIMI_MODEL }}
+        run: |
+          set -euo pipefail
+          test -n "$KIMI_API_KEY" || { echo "KIMI_API_KEY ist nicht gesetzt"; exit 1; }
+          BASE=""
+          for url in https://api.kimi.ai/coding/v1 https://api.kimi.com/coding/v1; do
+            code=$(curl -sS -o /tmp/models.json -w '%{http_code}' \
+                   -H "Authorization: Bearer $KIMI_API_KEY" "$url/models" || echo 000)
+            echo "  GET $url/models -> HTTP $code"
+            if [ "$code" = "200" ]; then BASE="$url"; break; fi
+            head -c 200 /tmp/models.json; echo
+          done
+          test -n "$BASE" || { echo "Keine Coding-Adresse nimmt den Schlüssel. Stammt er aus kimi.ai/code?"; exit 1; }
+          MODEL=$(python3 -c '
+          import json, os, sys
+          ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
+          print("Verfuegbar:", ", ".join(ids), file=sys.stderr)
+          want = os.environ.get("KIMI_MODEL") or ""
+          if want and want not in ids:
+              sys.exit(f"KIMI_MODEL={want} steht nicht in der Liste")
+          print(want or ("k3" if "k3" in ids else ids[0]))
+          ')
+          echo "Adresse: $BASE · Modell: $MODEL"
+          mkdir -p "$HOME/.kimi-code"
+          cat > "$HOME/.kimi-code/config.toml" <<TOML
+          default_model = "entscheidung"
+          default_permission_mode = "auto"
+          telemetry = false
 
-            Lässt sich ein Wert nicht belegen: Feld weglassen, `plansChecked`
-            NICHT setzen, im PR-Text nennen. Ein geratener Preis ist schlimmer
-            als ein fehlender.
+          [providers.kimi]
+          type = "kimi"
+          base_url = "$BASE"
+          api_key = "$KIMI_API_KEY"
 
-            Nicht nur die Zahlen. Ist das Abrechnungsmodell gewandert — ein Abo
-            neben der Nutzungsabrechnung, eine geöffnete API, eine gestrichene
-            Gratisstufe —, dann wandert `billing` in derselben Änderung mit.
-            Ist ein Produkt gar nicht mehr erhältlich, sag das im Eintrag,
-            statt die alte Zahl am Leben zu halten.
+          [models.entscheidung]
+          provider = "kimi"
+          model = "$MODEL"
+          max_context_size = 262144
+          TOML
+          chmod 600 "$HOME/.kimi-code/config.toml"
+          kimi --version
 
-            `plans` steht in beiden Sprachen, und das Deutsche ist Deutsch, keine
-            Übersetzung des Englischen. Halte dich an die Form der Nachbarn.
+      - name: Identitaet fuer git (Kimi)
+        if: env.ENTSCHEIDER == 'kimi'
+        run: |
+          git config user.name  "Kimi Upkeep"
+          git config user.email "kimi-upkeep@users.noreply.github.com"
 
-            Ändere ausschließlich content/steckbrief.json. Dann:
+      # Die Kimi-CLI gibt ihren Verbrauch nicht heraus, also bleibt die Laufzeit.
+      - name: Startzeit merken
+        if: env.ENTSCHEIDER == 'kimi'
+        run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
 
-                python3 build/build.py
-
-            Das muss Exit 0 liefern. auftrag.json, befund-*.json, vergleich.md
-            und vergleich.json sind Lauf-Artefakte und gehören nicht in den
-            Commit.
-
-            Branch `kreuzpruefung/preise-<JJJJ-MM-TT>`, Pull Request gegen main
-            mit `gh pr create`, Titel mit `[Kreuzprüfung]` davor und in Klartext,
-            was geprüft wurde.
-
-            In den PR-Text gehören:
-
-            1. Die Tabelle aus vergleich.md.
-            2. Für jede geänderte Angabe die Quell-URL, von der sie stammt.
-            3. Was du NICHT geprüft hast.
-            4. Je Steckbrief eine Bilanzzeile in genau dieser Form, damit sich
-               später auszählen lässt, welcher Agent wie zuverlässig liest:
-
-               BILANZ <JJJJ-MM-TT> <Steckbrief> gemini=<richtig|daneben|nichts> zai=<richtig|daneben|nichts>
-
-               `richtig` heißt: der Befund deckte sich mit dem, was du auf der
-               Seite gelesen hast. `daneben`: er wich davon ab. `nichts`: dieser
-               Agent hat zu diesem Steckbrief nichts geliefert. Bei einem
-               einigen Eintrag, den die Quelle bestätigt hat, sind beide
-               `richtig`.
+      # Der Auftrag kommt aus der Datei und wird von der Shell nur innerhalb
+      # von Anfuehrungszeichen eingesetzt, nie als Befehl gelesen.
+      - name: Entscheiden und vorschlagen (Kimi)
+        if: env.ENTSCHEIDER == 'kimi'
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token || secrets.GITHUB_TOKEN }}
+        run: |
+          AUFTRAG=$(sed "s/{ENTSCHEIDER}/$ENTSCHEIDER/g" build/kreuzpruefung-entscheidung.md)
+          kimi -p "$AUFTRAG"
 
       - name: Aufwand erfassen
         if: always()
         uses: ./.github/actions/kosten
         with:
-          agent: claude
+          agent: ${{ env.ENTSCHEIDER }}
           execution: ${{ steps.claude.outputs.execution_file }}

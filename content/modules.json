@@ -688,6 +688,14 @@
       "k": "gdrive-mcp"
      },
      {
+      "n": "Gmail",
+      "v": {
+       "de": "Postfach",
+       "en": "Inbox"
+      },
+      "k": "gmail-mcp"
+     },
+     {
       "n": {
        "de": "Websuche",
        "en": "Web search"

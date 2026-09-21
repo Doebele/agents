@@ -748,13 +748,13 @@
   "icon": "zedindustries",
   "free": true,
   "plans": {
-   "de": "Editor kostenlos · Pro 10 $/Mo.",
-   "en": "Editor free · Pro $10/mo"
+   "de": "Editor kostenlos (Personal 0 $) · Pro 10 $/Mo. mit 5 $ Token-Guthaben im Monat, Mehrverbrauch nach Nutzung · Business 30 $/Platz/Mo.",
+   "en": "Editor free (Personal $0) · Pro $10/mo with $5 of token credit a month, more billed by usage · Business $30/seat/mo"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-21"
  },
  "Cursor": {
   "name": "Cursor",
@@ -869,7 +869,7 @@
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
   },
-  "plansChecked": "2026-09-03",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-05"
  },
  "Bionic": {
@@ -936,7 +936,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-03",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-05"
  },
  "LangChain": {
@@ -971,7 +971,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-03",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-05"
  },
  "CrewAI": {
@@ -1142,13 +1142,13 @@
    }
   },
   "plans": {
-   "de": "Open-Weight (Apache 2.0), kostenlos selbst hostbar · API via Model Studio",
-   "en": "Open-weight (Apache 2.0), free to self-host · API via Model Studio"
+   "de": "Open-Weight (Apache 2.0), kostenlos selbst hostbar · über Alibabas Model Studio nach Verbrauch, Region Singapur je 1M Token: qwen3.8-flash 0,15 $/0,47 $ · qwen3.6-flash 0,25 $/1,50 $ · qwen3.6-plus 0,50 $/3 $ · lange Prompts kosten mehr · 1 Mio. Token gratis, 90 Tage ab Freischaltung",
+   "en": "Open-weight (Apache 2.0), free to self-host · usage-based through Alibaba's Model Studio, Singapore region per 1M tokens: qwen3.8-flash $0.15/$0.47 · qwen3.6-flash $0.25/$1.50 · qwen3.6-plus $0.50/$3 · long prompts cost more · 1M tokens free for 90 days from activation"
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "gpt-oss": {
@@ -1201,7 +1201,7 @@
    "de": "Kostenlos (Open-Weight, Apache 2.0), selbst gehostet",
    "en": "Free (open-weight, Apache 2.0), self-hosted"
   },
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "Mistral Large 3": {
@@ -1312,7 +1312,7 @@
    "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet · ab 700 Mio. monatlich aktiven Nutzern verlangt Meta eine eigene Lizenz",
    "en": "Free (open-weight, Llama 4 Community License), self-hosted · above 700 million monthly active users Meta requires a separate licence"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "LM Studio": {
   "name": "LM Studio",
@@ -1338,13 +1338,13 @@
   },
   "free": true,
   "plans": {
-   "de": "Desktop-App kostenlos (Closed Source) · Cloud-Inferenz nach Verbrauch, je 1M Token etwa GLM-5.3-Flash 0,15 $/0,50 $, Kimi K3 3 $/15 $, DeepSeek V4 Flash 0,13 $/0,26 $ · das Abo „Bionic Pass“ ist angekündigt, ein Preis steht noch nicht",
-   "en": "Desktop app free (closed source) · cloud inference billed by usage, per 1M tokens roughly GLM-5.3-Flash $0.15/$0.50, Kimi K3 $3/$15, DeepSeek V4 Flash $0.13/$0.26 · a “Bionic Pass” subscription is announced, with no price yet"
+   "de": "Desktop-App kostenlos (Closed Source) · Free 0 $: lokale Modelle über llama.cpp und MLX, Offline-Transkription, LM Link für bis zu 5 Geräte · Bionic+ 20 $/Mo.: dazu US-gehostete Open-Source-Modelle wie Kimi K3, GLM 5.3 und DeepSeek V4 Flash · Pro 100 $/Mo.: fünffache Nutzungsgrenzen · Team-Tarife sind angekündigt, ohne Preis · Verbrauch über das enthaltene Kontingent hinaus zehrt an Cloud-Guthaben, dessen Sätze die Seite nicht mehr nennt",
+   "en": "Desktop app free (closed source) · Free $0: local models through llama.cpp and MLX, offline transcription, LM Link for up to 5 devices · Bionic+ $20/mo: adds US-hosted open-source models such as Kimi K3, GLM 5.3 and DeepSeek V4 Flash · Pro $100/mo: five times the usage limits · team plans are announced without a price · usage beyond the included allowance draws on cloud credits, whose rates the page no longer states"
   },
   "billing": [
-   "api"
+   "abo"
   ],
-  "plansChecked": "2026-09-03",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-05",
   "icon": "lmstudio"
  },
@@ -2119,13 +2119,17 @@
   },
   "free": true,
   "plans": {
-   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ (2.000 Wörter/Woche, 5 h Meetings/Mo.) · Pro 80 $/Nutzer/Jahr (ausgewiesen als 6,67 $/Mo.) · Business 160 $/Nutzer/Jahr (13,33 $/Mo.) · Enterprise auf Anfrage",
-   "en": "Local dictation free, open source (MIT) · Free $0 (2,000 words/week, 5 h of meetings/mo) · Pro $80/user/year (shown as $6.67/mo) · Business $160/user/year ($13.33/mo) · Enterprise on request"
+   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ (2.000 Wörter/Woche, 5 h Meetings/Mo.) · Pro 8 $/Nutzer/Mo. · Business 16 $/Nutzer/Mo. · Enterprise auf Anfrage",
+   "en": "Local dictation free, open source (MIT) · Free $0 (2,000 words/week, 5 h of meetings/mo) · Pro $8/user/mo · Business $16/user/mo · Enterprise on request"
+  },
+  "plansJahr": {
+   "de": "Lokales Diktieren kostenlos, Open Source (MIT) · Free 0 $ (2.000 Wörter/Woche, 5 h Meetings/Mo.) · Pro 6,67 $/Nutzer/Mo. (80 $/Jahr) · Business 13,33 $/Nutzer/Mo. (160 $/Jahr) · Enterprise auf Anfrage",
+   "en": "Local dictation free, open source (MIT) · Free $0 (2,000 words/week, 5 h of meetings/mo) · Pro $6.67/user/mo ($80/year) · Business $13.33/user/mo ($160/year) · Enterprise on request"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-08-31"
+  "plansChecked": "2026-09-21"
  },
  "FreeFlow": {
   "name": "FreeFlow",
@@ -2308,7 +2312,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-21"
  },
  "Gemini 3.1 Pro": {
   "name": "Gemini 3.1 Pro",
@@ -2358,14 +2362,18 @@
    }
   },
   "plans": {
-   "de": "API 2 $/12 $ pro 1M Token · Google AI Pro 19,99 $/Mo.",
-   "en": "API $2/$12 per 1M tokens · Google AI Pro $19.99/mo"
+   "de": "API pro 1M Token 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · Google AI Pro 19,99 $/Mo.",
+   "en": "API per 1M tokens $2/$12, from 200k tokens in the prompt $4/$18 · Google AI Pro $19.99/mo"
+  },
+  "plansJahr": {
+   "de": "API pro 1M Token 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ (nach Verbrauch, keine Jahreszahlung) · Google AI Pro 16,67 $/Mo. (199,99 $ im Voraus)",
+   "en": "API per 1M tokens $2/$12, from 200k tokens in the prompt $4/$18 (usage-based, no annual rate) · Google AI Pro $16.67/mo ($199.99 up front)"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "Grok 4.6": {
@@ -2419,7 +2427,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "Qwen3.8-Max": {
@@ -2470,13 +2478,13 @@
    }
   },
   "plans": {
-   "de": "Kostenloses Startguthaben · API des Max-Tarifs ca. 2 $/6 $ pro 1M Token · die 2,4T-Variante Qwen3.8-2.4T-A95B gibt es inzwischen auch als offene Gewichte (eigene Qwen-Lizenz)",
-   "en": "Free starter quota · Max-tier API about $2/$6 per 1M tokens · the 2.4T variant Qwen3.8-2.4T-A95B now also ships as open weights (Qwen's own licence)"
+   "de": "API über Model Studio 2 $/6 $ pro 1M Token (Region Singapur) · 1 Mio. Token gratis, 90 Tage ab Freischaltung · die 2,4T-Variante Qwen3.8-2.4T-A95B gibt es inzwischen auch als offene Gewichte (eigene Qwen-Lizenz)",
+   "en": "API through Model Studio $2/$6 per 1M tokens (Singapore region) · 1M tokens free for 90 days from activation · the 2.4T variant Qwen3.8-2.4T-A95B now also ships as open weights (Qwen's own licence)"
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "Kimi K3": {
@@ -2584,13 +2592,13 @@
    }
   },
   "plans": {
-   "de": "API pro 1M Tok. zur Hauptzeit: V4-Pro 1,32 $/3,96 $ · Flash 0,44 $/1,32 $. Ausserhalb der Hauptzeit (nachts und am Wochenende, UTC) kostet alles die Hälfte.",
-   "en": "API per 1M tok. at peak: V4-Pro $1.32/$3.96 · Flash $0.44/$1.32. Outside peak hours (nights and weekends, UTC) everything costs half."
+   "de": "API pro 1M Token zur Hauptzeit: V4-Pro 1,32 $/3,96 $ · deepseek-flash (V4.1-Flash) 0,30 $/1,20 $ · Cache-Treffer sind viel billiger (V4-Pro 0,044 $). Hauptzeit ist Mo–Fr 01–04 und 06–10 Uhr UTC; zu allen anderen Zeiten, Wochenende eingeschlossen, kostet alles die Hälfte.",
+   "en": "API per 1M tokens at peak: V4-Pro $1.32/$3.96 · deepseek-flash (V4.1-Flash) $0.30/$1.20 · cache hits are far cheaper (V4-Pro $0.044). Peak is Mon–Fri 01:00–04:00 and 06:00–10:00 UTC; at every other time, weekends included, everything costs half."
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "GLM-5.2": {
@@ -2640,13 +2648,14 @@
    }
   },
   "plans": {
-   "de": "API 1,40 $/4,40 $ pro 1M Token · Cache-Speicher zeitlich begrenzt kostenlos",
-   "en": "API $1.40/$4.40 per 1M tokens · cached-input storage free for a limited time"
+   "de": "API 1,40 $/4,40 $ pro 1M Token · gecachte Eingabe 0,26 $, der Cache-Speicher ist zeitlich begrenzt kostenlos · GLM-5.2 steckt auch im GLM-Coding-Abo",
+   "en": "API $1.40/$4.40 per 1M tokens · cached input $0.26, cached-input storage free for a limited time · GLM-5.2 is also part of the GLM Coding Plan subscription"
   },
   "billing": [
-   "api"
+   "api",
+   "abo"
   ],
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "Anthropic Agent Skills": {
@@ -3946,8 +3955,8 @@
    "en": "First choice when the project uses React or Next.js. Less compelling with other stacks."
   },
   "plans": {
-   "de": "Gratisstufe für private Projekte, danach je Mitglied und Verbrauch.",
-   "en": "Free tier for personal projects, then per seat and usage."
+   "de": "Hobby 0 $ für private Projekte · Pro 20 $/Mo. Grundgebühr, darin ein Platz zum Veröffentlichen und 20 $ Verbrauchsguthaben; jeder weitere solche Platz 20 $/Mo., Nur-Lese-Plätze gratis · was über das Guthaben hinausgeht, wird nach Verbrauch abgerechnet · Enterprise auf Anfrage",
+   "en": "Hobby $0 for personal projects · Pro $20/mo platform fee, including one deploying seat and $20 of usage credit; each further such seat $20/mo, read-only seats free · anything beyond the credit is billed on demand · Enterprise on request"
   },
   "billing": [
    "abo"
@@ -3955,7 +3964,7 @@
   "links": {
    "home": "https://vercel.com"
   },
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "icon": "vercel"
  },
  "Cloudflare Pages": {
@@ -4008,8 +4017,8 @@
    "en": "The pick when your application needs a database. Free services go to sleep when idle and take a moment on the first request."
   },
   "plans": {
-   "de": "Gratisstufe mit Einschränkungen, danach je Dienst.",
-   "en": "Free tier with limits, then per service."
+   "de": "Hobby 0 $ (Web-Dienste schlafen nach 15 Min. ohne Zugriff ein, 750 Instanzstunden/Mo., die Gratis-Postgres läuft nach 30 Tagen ab) · Pro 25 $/Mo. pauschal · Scale 499 $/Mo. pauschal, beide mit unbegrenzt vielen Mitgliedern · Enterprise auf Anfrage · die Rechenleistung je Dienst wird zusätzlich abgerechnet",
+   "en": "Hobby $0 (web services spin down after 15 min without traffic, 750 instance hours/mo, the free Postgres expires after 30 days) · Pro $25/mo flat · Scale $499/mo flat, both with unlimited members · Enterprise on request · compute per service is billed on top"
   },
   "billing": [
    "abo"
@@ -4017,7 +4026,7 @@
   "links": {
    "home": "https://render.com"
   },
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "icon": "render"
  },
  "Coolify": {
@@ -4072,8 +4081,8 @@
    "en": "The convenient middle way when open models should run but no hardware is around. Billed per million tokens."
   },
   "plans": {
-   "de": "Abrechnung je 1M Tokens · Vorauskasse (ab 5 $ Guthaben)",
-   "en": "Billed per 1M tokens · prepaid (from $5 credit)"
+   "de": "Serverless nach Token, je 1M Token etwa qwen3.8-flash 0,15 $/0,47 $ · gpt-oss-120B 0,15 $/0,60 $ · GLM-5.2 1,40 $/4,40 $ · Kimi K3 3 $/15 $ · eigene GPUs je Stunde: H100 3,99 $ (Aktionspreis bis 30.9.2026, sonst 5,49 $), B200 8,99 $ · Vorauskasse ab 5 $ Guthaben, keine Testphase",
+   "en": "Serverless billed by token, per 1M tokens roughly qwen3.8-flash $0.15/$0.47 · gpt-oss-120B $0.15/$0.60 · GLM-5.2 $1.40/$4.40 · Kimi K3 $3/$15 · dedicated GPUs by the hour: H100 $3.99 (promotional until 30 Sept 2026, otherwise $5.49), B200 $8.99 · prepaid from $5 of credit, no trial"
   },
   "billing": [
    "api"
@@ -4081,7 +4090,7 @@
   "links": {
    "home": "https://www.together.ai"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-21"
  },
  "Fireworks AI": {
   "name": "Fireworks AI",
@@ -4161,8 +4170,8 @@
    "en": "The step between “finished API” and “own server”: your own model, but rented hardware. Billed per GPU hour or second."
   },
   "plans": {
-   "de": "Abrechnung je GPU-Stunde/-Sekunde",
-   "en": "Billed per GPU hour/second"
+   "de": "Abrechnung je Sekunde, ausgewiesen je GPU-Stunde · zwei Stufen, Community Cloud günstiger als Secure Cloud: RTX 4090 0,34/0,74 $ · A100 80 GB 1,19/1,59 $ · H100 SXM 2,69/3,49 $ · H200 3,59/4,59 $ · B200 5,98/6,79 $ · keine Gratisstufe",
+   "en": "Billed per second, quoted per GPU hour · two tiers, Community Cloud cheaper than Secure Cloud: RTX 4090 $0.34/$0.74 · A100 80 GB $1.19/$1.59 · H100 SXM $2.69/$3.49 · H200 $3.59/$4.59 · B200 $5.98/$6.79 · no free tier"
   },
   "billing": [
    "api"
@@ -4170,7 +4179,7 @@
   "links": {
    "home": "https://www.runpod.io"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-21"
  },
  "Lambda": {
   "name": "Lambda",
@@ -4219,8 +4228,8 @@
    "en": "Great for experiments and compute without a budget. For anything that must reliably stay reachable, take a commercial provider instead. Billed hourly."
   },
   "plans": {
-   "de": "Stündliche Marktpreise",
-   "en": "Hourly market prices"
+   "de": "Marktplatz ohne Listenpreise: die Gastgeber setzen ihre Preise selbst · GPU je Sekunde abgerechnet, solange die Instanz läuft · der Speicher läuft weiter, auch wenn sie gestoppt ist · Bandbreite je übertragenem Byte · unterbrechbare Instanzen oft über 50 % billiger, reservierte bis 50 % Rabatt · Guthaben muss vorher aufgeladen sein",
+   "en": "A marketplace without list prices: hosts set their own · GPU billed per second while the instance runs · storage keeps billing even when it is stopped · bandwidth per byte transferred · interruptible instances often 50 %+ cheaper, reserved ones up to 50 % off · credits have to be topped up in advance"
   },
   "billing": [
    "api"
@@ -4228,7 +4237,7 @@
   "links": {
    "home": "https://vast.ai"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-21"
  },
  "Hetzner": {
   "name": "Hetzner",
@@ -4312,8 +4321,8 @@
    "en": "The quickest way to try a specific open model without hosting it yourself. Billed per second or per output."
   },
   "plans": {
-   "de": "Abrechnung je Sekunde oder Ergebnis",
-   "en": "Billed per second or per output"
+   "de": "Abrechnung je Sekunde nach Hardware oder je Ergebnis · Hardware je Stunde: CPU 0,09–0,36 $ · Nvidia T4 0,81 $ · L40S 3,51 $ · A100 80 GB 5,04 $ · H100 5,49 $ · manche Modelle kosten je Ausgabe (etwa 0,04 $ je Bild) · keine Gratisstufe",
+   "en": "Billed per second of hardware time or per output · hardware per hour: CPU $0.09–0.36 · Nvidia T4 $0.81 · L40S $3.51 · A100 80 GB $5.04 · H100 $5.49 · some models charge per output (around $0.04 an image) · no free tier"
   },
   "billing": [
    "api"
@@ -4322,7 +4331,7 @@
   "links": {
    "home": "https://replicate.com"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-21"
  },
  "OpenRouter": {
   "name": "OpenRouter",
@@ -4442,7 +4451,7 @@
    "en": "Free (MIT)"
   },
   "contentChecked": "2026-08-31",
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "OpenViking": {
   "name": "OpenViking",
@@ -4686,6 +4695,7 @@
   },
   "accent": "var(--amber)",
   "open": false,
+  "free": true,
   "blurb": {
    "de": "Der App-Baukasten für den Mac-Desktop von Raycast: beschreiben statt programmieren — aus dem Chat entstehen native Apps, die lokal laufen und ins System greifen (Dateien, Menüleiste, Shortcuts, Hintergrundprozesse). Gebaute Apps dürfen auf APIs, lokale Dateien und KI-Modelle zugreifen; der Code gehört dir. Fertige Apps lassen sich in einen Store stellen oder unverzeichnet teilen. Braucht macOS Tahoe auf Apple Silicon; Windows und Linux sind angekündigt.",
    "en": "The desktop app builder for the Mac from Raycast: describe instead of program — native apps come out of the chat, run locally and reach into the system (files, menu bar, shortcuts, background processes). Built apps may access APIs, local files and AI models; the code is yours. Finished apps can go into a store or be shared unlisted. Needs macOS Tahoe on Apple Silicon; Windows and Linux are announced."
@@ -4698,13 +4708,13 @@
    "home": "https://www.glaze.app"
   },
   "plans": {
-   "de": "Installieren und Ausführen von Apps kostenlos · Bauen mit eigenem Claude-Abo während der Beta unbegrenzt, sonst einmaliges Willkommensguthaben und Nachfüllpacks · Pro 10 $/Mo. · Team während der Beta kostenlos",
-   "en": "Installing and running apps free · building with your own Claude subscription unlimited during beta, otherwise a one-time welcome pack of credits plus top-ups · Pro $10/mo · Team free during beta"
+   "de": "Apps installieren und ausführen kostenlos · Free mit einmaligem Willkommenspaket von 50 Credits, Bauen mit eigenem Claude-Abo während der Beta unbegrenzt · Pro 10 $/Mo. (100 Credits im Monat, Zugriff auf die Glaze-Smart-Modelle) · Team während der Beta kostenlos",
+   "en": "Installing and running apps free · Free comes with a one-time welcome pack of 50 credits, building with your own Claude subscription is unlimited during the beta · Pro $10/mo (100 credits a month, access to the Glaze Smart models) · Team free during the beta"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-01",
+  "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
  "Berd": {
@@ -4997,7 +5007,7 @@
    "de": "Kostenlos (Apache-2.0)",
    "en": "Free (Apache-2.0)"
   },
-  "plansChecked": "2026-09-03"
+  "plansChecked": "2026-09-21"
  },
  "Notion": {
   "name": "Notion",

@@ -4280,8 +4280,8 @@
    "en": "For tools with a part of your own — preprocessing, pipelines, custom prompting — the clean path. Billed per second of runtime."
   },
   "plans": {
-   "de": "Starter 0 $/Mo. mit 30 $ Gratis-Guthaben monatlich · Team 250 $/Mo. mit 100 $ · Enterprise auf Anfrage · Rechenzeit obendrauf, sekundengenau: 0,00003942 $ je CPU-Kern, 0,00000667 $ je GiB Arbeitsspeicher, GPUs von 0,000164 $ (T4) über 0,001097 $ (H100 SXM5) bis 0,001972 $ (B300)",
-   "en": "Starter $0/mo with $30 in free credits every month · Team $250/mo with $100 · Enterprise on request · compute billed on top, by the second: $0.00003942 per CPU core, $0.00000667 per GiB of memory, GPUs from $0.000164 (T4) through $0.001097 (H100 SXM5) to $0.001972 (B300)"
+   "de": "Starter 0 $/Mo. mit 30 $ Gratis-Guthaben monatlich · Team 250 $/Mo. mit 100 $ · Enterprise auf Anfrage · Rechenzeit obendrauf, sekundengenau: 0,0000131 $ je CPU-Kern, 0,00000222 $ je GiB Arbeitsspeicher, GPUs von 0,000164 $ (T4) über 0,001097 $ (H100 SXM5) bis 0,001972 $ (B300)",
+   "en": "Starter $0/mo with $30 in free credits every month · Team $250/mo with $100 · Enterprise on request · compute billed on top, by the second: $0.0000131 per CPU core, $0.00000222 per GiB of memory, GPUs from $0.000164 (T4) through $0.001097 (H100 SXM5) to $0.001972 (B300)"
   },
   "billing": [
    "abo",
@@ -4636,12 +4636,12 @@
    "code": "https://github.com/Comfy-Org/ComfyUI"
   },
   "plans": {
-   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo., Team ab 700 $/Mo. · API nach GPU-Sekunde",
-   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $20/mo, Creator $35/mo, Pro $100/mo, Team from $700/mo · API billed by the GPU second"
+   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo., Team 200 bis 2.500 $/Mo. (fünf Stufen nach Credit-Kontingent) · API nach GPU-Sekunde",
+   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $20/mo, Creator $35/mo, Pro $100/mo, Team $200 to $2,500/mo (five tiers by credit commitment) · API billed by the GPU second"
   },
   "plansJahr": {
-   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 16 $/Mo. (192 $/Jahr), Creator 28 $/Mo. (336 $/Jahr), Pro 80 $/Mo. (960 $/Jahr), Team ab 630 $/Mo. (7.560 $/Jahr) · API nach GPU-Sekunde",
-   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $16/mo ($192/year), Creator $28/mo ($336/year), Pro $80/mo ($960/year), Team from $630/mo ($7,560/year) · API billed by the GPU second"
+   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 16 $/Mo. (192 $/Jahr), Creator 28 $/Mo. (336 $/Jahr), Pro 80 $/Mo. (960 $/Jahr), Team 200 bis 2.500 $/Mo. (fünf Stufen, Jahresrabatt bis 20 % je nach Stufe) · API nach GPU-Sekunde",
+   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $16/mo ($192/year), Creator $28/mo ($336/year), Pro $80/mo ($960/year), Team $200 to $2,500/mo (five tiers, annual discount up to 20 % by tier) · API billed by the GPU second"
   },
   "billing": [
    "abo",

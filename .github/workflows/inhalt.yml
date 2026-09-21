@@ -59,6 +59,10 @@ jobs:
       # Ein undurchsichtiger Fehlschlag hat einmal einen Abend gekostet:
       # is_error true, ein Turn, null Kosten, keine Meldung im Log. Also wird
       # der Schluessel vorher gefragt, und die Antwort steht im Log.
+      #
+      # Gefragt wird nach demselben Modell, das der Lauf danach benutzt. Eine
+      # Sondierung auf ein anderes Modell beantwortet die falsche Frage:
+      # Berechtigung und Guthaben koennen sich je Modell unterscheiden.
       - name: Erreicht der Schluessel die API
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -70,7 +74,7 @@ jobs:
                  -H "x-api-key: $ANTHROPIC_API_KEY" \
                  -H "anthropic-version: 2023-06-01" \
                  -H "content-type: application/json" \
-                 -d '{"model":"claude-opus-5","max_tokens":1,"messages":[{"role":"user","content":"hi"}]}' || echo 000)
+                 -d '{"model":"claude-sonnet-5","max_tokens":1,"messages":[{"role":"user","content":"hi"}]}' || echo 000)
           echo "  POST /v1/messages -> HTTP $code"
           head -c 400 /tmp/ping.json; echo
           test "$code" = "200" || { echo "Der Schlüssel erreicht die API, darf aber nichts ausgeben."; exit 1; }
@@ -81,6 +85,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
+            --model claude-sonnet-5
             --max-turns 200
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*)"
           prompt: |
@@ -112,6 +117,11 @@ jobs:
             5. **Zeigt `links.home` noch auf dieses Produkt?** Erreichbar heißt
                nicht richtig: eine Adresse kann heute eine Sammelseite oder ein
                anderes Produkt zeigen und trotzdem 200 antworten.
+
+            Zwei Regeln zum Vorgehen, weil dieser Schritt sonst teuer wird:
+            Ruf jede Seite höchstens einmal ab, und arbeite einen Eintrag
+            fertig, bevor du den nächsten anfängst. Jede abgerufene Seite
+            bleibt im Verlauf und wird bei jedem weiteren Zug mitgeschickt.
 
             ## Was nicht geprüft wird
 

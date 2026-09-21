@@ -31,9 +31,24 @@ on:
         type: string
   repository_dispatch:
     types: [telegram]
+  # The same on-demand channel the others have, with @kimi.
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
 
 jobs:
   upkeep:
+    # Scheduled, dispatched and Telegram runs pass unconditionally. A mention
+    # only counts from the repository owner — otherwise anyone who can comment
+    # could spend the membership's quota.
+    if: |
+      (github.event_name != 'issues' && github.event_name != 'issue_comment') ||
+      (github.event.sender.login == github.repository_owner &&
+       (
+         (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@kimi')) ||
+         (github.event_name == 'issues' && (contains(github.event.issue.body, '@kimi') || contains(github.event.issue.title, '@kimi')))
+       ))
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -41,8 +56,23 @@ jobs:
       issues: write
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      APP_ID: ${{ secrets.KIMI_APP_ID }}
     steps:
       - uses: actions/checkout@v5
+
+      # An identity of its own, when there is an app to lend one. Without it
+      # the run speaks as github-actions[bot], and — the part that matters —
+      # a pull request opened by the built-in token starts no further
+      # workflow, so the build check would never run on Kimi's proposals.
+      # Until KIMI_APP_ID exists this step is skipped and the run falls back
+      # to the built-in token: it keeps working, it just stays anonymous.
+      - name: A token of its own
+        id: app
+        if: env.APP_ID != ''
+        uses: actions/create-github-app-token@v3.2.0
+        with:
+          app-id: ${{ env.APP_ID }}
+          private-key: ${{ secrets.KIMI_APP_KEY }}
 
       # The deterministic half of the link check, so the model spends its
       # attention on judging, not on fetching: this writes
@@ -151,6 +181,16 @@ jobs:
         run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
 
       - name: Research and propose
+        # The order of an ordered task: dispatch input, Telegram, comment,
+        # issue body. It travels by environment variable, never interpolated
+        # into the command line — a comment carrying a quote or a backtick
+        # would otherwise be a shell injection. Before this change the
+        # dispatch and Telegram text went straight into the command; a
+        # mention channel would have handed that to anyone with write access.
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token || secrets.GITHUB_TOKEN }}
+          AUFTRAG: ${{ github.event.inputs.focus || github.event.client_payload.task || github.event.comment.body || github.event.issue.body }}
+          ISSUE: ${{ github.event.issue.number }}
         run: |
           kimi -p "$(cat <<'PROMPT'
           You are the upkeep agent for this catalogue, running as a third
@@ -194,9 +234,17 @@ jobs:
           The body must contain, for every claim you changed or added, the
           source URL it rests on. Also say plainly what you did NOT verify.
           PROMPT
-          )${{ (github.event.inputs.focus || github.event.client_payload.task) && format('
+          )${AUFTRAG:+
 
-          The maintainer asked you to look at this specifically, which overrides the list above: {0}', (github.event.inputs.focus || github.event.client_payload.task)) || '' }}"
+          The maintainer asked you to look at this specifically, which
+          overrides the list above:
+
+          $AUFTRAG}${ISSUE:+
+
+          This reached you through issue #$ISSUE. When you are done, answer in
+          that thread: gh issue comment $ISSUE --body '...'. Say what you did,
+          or why you did not act, and name the pull request if you opened one.
+          An unanswered issue looks exactly like a broken agent.}"
 
       - name: Aufwand erfassen
         if: always()

@@ -488,13 +488,21 @@ Each agent listens for its own name, and only from the repository owner:
 | `@claude` | Claude | zuruf.yml |
 | `@gemini` | Gemini | pflege-gemini.yml |
 | `@zai` | GLM by way of Z.AI | pflege-zai.yml |
+| `@kimi` | Kimi | pflege-kimi.yml |
 
 Naming two in one issue starts two runs, which is occasionally what you
 want and usually not. Whoever is addressed answers in the thread when it is
 done — an issue left unanswered is indistinguishable from a broken agent,
 and that mistake has already cost four days here.
 
-Kimi has no mention of its own: it takes orders through Telegram.
+Kimi also takes orders through Telegram, routed as `repository_dispatch`.
+
+Kimi runs on the Kimi Code membership, not on the developer platform. The two
+are separate products with separate keys that are not interchangeable: a
+membership key comes from kimi.ai/code under API Keys and answers only on a
+coding endpoint (`api.kimi.ai/coding`, `api.kimi.com/coding`). A key from
+platform.kimi.ai or moonshot.cn is a different thing and was the reason this
+agent stood still from August to September.
 
 ## "As of August 2026"
 

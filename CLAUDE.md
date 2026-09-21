@@ -246,20 +246,44 @@ the catalogue's current values first — whoever reads the old price confirms
 it. Neither may commit or open anything; a finding file is all they produce.
 
 `build/kreuzpruefung.py vergleich` holds the two against each other before any
-model sees them and marks every entry einig, uneinig, einseitig or leer. It
-compares the numbers, not the prose: how someone labels a tier is taste,
-what it costs is not.
+model sees them and marks every entry. It compares the numbers, not the prose:
+how someone labels a tier is taste, what it costs is not.
+
+Two of the six verdicts exist because the first version manufactured
+disagreement. An omitted field is not a contradiction: on a free library with
+no pricing page one reader writes `gratis: true` and the other leaves it out
+and sets `billing`. Both read the same page, both are right, and the run paid
+for a third fetch to settle a dispute that was never there. Measured on the
+run of 10 September, two thirds of the "uneinig" entries were of that kind.
 
 Claude decides from that table, and the rules are the point of the whole
 arrangement:
 
-- **einig** — take it, but fetch the source once yourself. Two models can read
-  the same outdated page.
+- **einig** — take it, and do **not** fetch. Two independent readers who read
+  the same thing are the check.
+- **einig (Stichprobe)** — fetch. Roughly every third agreeing entry is
+  re-read, so the case where both read the same stale page still surfaces.
+  The draw is deterministic, seeded with the entry name and the date, so it
+  rotates across runs and can be recomputed from the report.
+- **ohne Preis** — neither reader found a price on the page. Do not fetch.
+  Say so in the entry and set `plansChecked`: that there is nothing to pay
+  was confirmed twice.
 - **uneinig** — read the vendor's page and decide. Why, goes in the pull request.
 - **einseitig** — one finding is not a confirmation. Treat it as unchecked and
   look it up.
 - **leer** — change nothing, and leave `plansChecked` alone so the entry stays
   at the front of the queue.
+
+Fetch each page at most once and finish one entry before starting the next.
+Every page fetched stays in the conversation and is re-sent on every later
+turn; that, not the thinking, is what the run costs. The decision runs on
+Sonnet rather than Opus for the same reason: the comparison is already
+computed in Python, and what remains is reading a page, not weighing a
+judgement call.
+
+```bash
+python3 build/kreuzpruefung.py selbsttest
+```
 
 Where nothing can be sourced, the field stays out and `plansChecked` stays
 unset. A press release or a comparison site is not a source. Where a vendor no

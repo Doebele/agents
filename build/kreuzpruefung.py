@@ -16,6 +16,7 @@ dieser Agent nichts geliefert hat, und die Eintraege gelten als ungeprueft.
 """
 import argparse
 import datetime
+import hashlib
 import json
 import pathlib
 import re
@@ -146,8 +147,32 @@ def befund_lesen(pfad):
     return d.get("agent") or name, d["eintraege"], None
 
 
-def urteil(a, b):
-    """einig · uneinig · einseitig · leer — plus die Felder, die auseinandergehen."""
+def stichprobe(name, datum):
+    """Trifft rund jeden dritten Eintrag, reproduzierbar statt zufaellig.
+
+    Derselbe Lauf waehlt dieselben Eintraege, also laesst sich die Auswahl im
+    Pull Request nachrechnen. Weil das Datum eingeht, rotiert sie ueber die
+    Laeufe: was heute durchrutscht, kommt beim naechsten Mal dran.
+    """
+    h = hashlib.blake2s(f"{name}|{datum}".encode("utf-8")).hexdigest()[:8]
+    return int(h, 16) % 3 == 0
+
+
+def urteil(a, b, name="", datum=""):
+    """einig · einig-stichprobe · ohne-preis · uneinig · einseitig · leer.
+
+    Zwei Faelle sahen frueher wie Streit aus und waren keiner.
+
+    Erstens: Ein ausgelassenes Feld ist kein Widerspruch. Bei einer freien
+    Bibliothek ohne Preisseite traegt der eine Leser `gratis: true` ein und der
+    andere laesst das Feld weg und setzt `billing`. Beide lesen dieselbe Seite,
+    beide haben recht. Tragen beide gar keine `preise`, gibt es keinen Preis,
+    ueber den man uneinig sein koennte: das Urteil heisst dann `ohne-preis`.
+
+    Zweitens: Wenn beide dasselbe lesen, ist das die Pruefung. Ein dritter
+    Abruf faengt nur den Fall ab, dass beide dieselbe veraltete Seite gelesen
+    haben. Selten, aber real, deshalb Stichprobe statt alles oder nichts.
+    """
     if a is None and b is None:
         return "leer", []
     if a is None or b is None:
@@ -162,7 +187,12 @@ def urteil(a, b):
     pb = {preisschluessel(p) for p in (b.get("preise") or []) if isinstance(p, dict)}
     if pa != pb:
         ab.append("preise")
-    return ("einig" if not ab else "uneinig"), ab
+
+    if not pa and not pb and a.get("erhaeltlich") == b.get("erhaeltlich"):
+        return "ohne-preis", [f for f in ab if f != "preise"]
+    if ab:
+        return "uneinig", ab
+    return ("einig-stichprobe" if stichprobe(name, datum) else "einig"), []
 
 
 def preiszeile(p):
@@ -199,12 +229,14 @@ def vergleich(args):
     a_name, a_daten, a_fehler = befund_lesen(args.befund_a)
     b_name, b_daten, b_fehler = befund_lesen(args.befund_b)
 
+    heute = datetime.date.today().isoformat()
     zeilen, tabelle, maschine = [], [], {}
-    zaehler = {"einig": 0, "uneinig": 0, "einseitig": 0, "leer": 0}
+    zaehler = {"einig": 0, "einig-stichprobe": 0, "ohne-preis": 0,
+               "uneinig": 0, "einseitig": 0, "leer": 0}
 
     for n in namen:
         a, b = a_daten.get(n), b_daten.get(n)
-        u, felder = urteil(a, b)
+        u, felder = urteil(a, b, n, heute)
         zaehler[u] += 1
         maschine[n] = {"urteil": u, "felder": felder,
                        a_name: a, b_name: b,
@@ -212,13 +244,17 @@ def vergleich(args):
                                "billing": kat.get(n, {}).get("billing"),
                                "plansChecked": kat.get(n, {}).get("plansChecked")}}
 
-        marke = {"einig": "einig", "uneinig": "**uneinig**",
+        marke = {"einig": "einig", "einig-stichprobe": "einig (Stichprobe)",
+                 "ohne-preis": "ohne Preis", "uneinig": "**uneinig**",
                  "einseitig": "einseitig", "leer": "leer"}[u]
         tabelle.append(f"| {n} | {kat.get(n, {}).get('plansChecked') or 'nie'} | {marke} | "
                        f"{', '.join(felder) or '—'} |")
 
         # Wo beide nichts geliefert haben, sagt die Tabelle bereits alles.
-        if u == "leer":
+        # Bei einem einigen Eintrag ohne Stichprobe ebenso: Er wird uebernommen,
+        # nicht nachgelesen, und ein Detailblock im Bericht laedt nur dazu ein,
+        # ihn doch aufzurufen. Was dort stuende, steht in vergleich.json.
+        if u in ("leer", "einig"):
             continue
 
         zeilen.append(f"### {n}")
@@ -236,8 +272,14 @@ def vergleich(args):
         "# Kreuzprüfung Preise",
         "",
         f"{datetime.date.today().isoformat()} · {len(namen)} Steckbriefe · "
-        f"{zaehler['einig']} einig · **{zaehler['uneinig']} uneinig** · "
-        f"{zaehler['einseitig']} einseitig · {zaehler['leer']} ohne Befund",
+        f"{zaehler['einig']} einig · {zaehler['einig-stichprobe']} davon in der "
+        f"Stichprobe · {zaehler['ohne-preis']} ohne Preis · "
+        f"**{zaehler['uneinig']} uneinig** · {zaehler['einseitig']} einseitig · "
+        f"{zaehler['leer']} ohne Befund",
+        "",
+        "Abgerufen wird nur, was abgerufen werden muss: die uneinigen, die "
+        "einseitigen und die Stichprobe. Wo zwei unabhängige Leser dasselbe "
+        "gelesen haben, ist das die Prüfung.",
         "",
     ]
     for agent, fehler in ((a_name, a_fehler), (b_name, b_fehler)):
@@ -252,9 +294,48 @@ def vergleich(args):
                     "agenten": [a_name, b_name], "eintraege": maschine},
                    ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    print(f"{zaehler['einig']} einig · {zaehler['uneinig']} uneinig · "
+    nachlesen = (zaehler["einig-stichprobe"] + zaehler["uneinig"]
+                 + zaehler["einseitig"])
+    print(f"{zaehler['einig']} einig · {zaehler['einig-stichprobe']} Stichprobe · "
+          f"{zaehler['ohne-preis']} ohne Preis · {zaehler['uneinig']} uneinig · "
           f"{zaehler['einseitig']} einseitig · {zaehler['leer']} ohne Befund")
+    print(f"Nachzulesen sind {nachlesen} von {len(namen)} Seiten.")
     print(f"Bericht: {args.out}")
+    return 0
+
+
+def selbsttest(args):
+    """Die zwei Regeln, die hier still kaputtgehen koennen."""
+    basis = {"erhaeltlich": True, "quelle": "https://x.example"}
+    preis = {"was": "Pro", "betrag": "20", "waehrung": "USD", "einheit": "Monat"}
+
+    # 1. Ein ausgelassenes Feld ist kein Widerspruch, solange es keinen Preis gibt.
+    g = dict(basis, gratis=True)
+    z = dict(basis, billing=["api"])
+    u, _ = urteil(g, z, "X", "2026-09-21")
+    assert u == "ohne-preis", f"ohne Preis darf nicht uneinig heissen, war {u}"
+
+    # 2. Verschiedene Preise bleiben ein Widerspruch, auch mit gleichem Rest.
+    u, felder = urteil(dict(basis, preise=[preis]),
+                       dict(basis, preise=[dict(preis, betrag="30")]),
+                       "X", "2026-09-21")
+    assert u == "uneinig" and "preise" in felder, f"Preisstreit verschluckt: {u} {felder}"
+
+    # 3. Gleiche Preise heissen einig, mit oder ohne Stichprobe.
+    u, _ = urteil(dict(basis, preise=[preis]), dict(basis, preise=[dict(preis)]),
+                  "X", "2026-09-21")
+    assert u in ("einig", "einig-stichprobe"), f"Uebereinstimmung nicht erkannt: {u}"
+
+    # 4. Die Stichprobe ist reproduzierbar und rotiert.
+    namen = [f"S{i}" for i in range(300)]
+    a = [n for n in namen if stichprobe(n, "2026-09-21")]
+    b = [n for n in namen if stichprobe(n, "2026-09-21")]
+    c = [n for n in namen if stichprobe(n, "2026-09-24")]
+    assert a == b, "gleiches Datum muss dieselbe Auswahl treffen"
+    assert a != c, "anderes Datum muss eine andere Auswahl treffen"
+    assert 0.2 < len(a) / len(namen) < 0.45, f"Stichprobe trifft {len(a)}/{len(namen)}"
+
+    print(f"Selbsttest bestanden · Stichprobe trifft {len(a)} von {len(namen)}")
     return 0
 
 
@@ -274,6 +355,9 @@ def main():
     v.add_argument("--out", default="vergleich.md")
     v.add_argument("--json", default="vergleich.json")
     v.set_defaults(func=vergleich)
+
+    s = sub.add_parser("selbsttest", help="prüft Urteil und Stichprobe")
+    s.set_defaults(func=selbsttest)
 
     args = p.parse_args()
     return args.func(args)

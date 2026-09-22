@@ -13,8 +13,8 @@
      "en": "Entry"
     },
     "spec": {
-     "de": "MacBook Air · MacBook Pro 14-Zoll · Mac mini, M4, 16–32 GB",
-     "en": "MacBook Air · MacBook Pro 14-inch · Mac mini, M4, 16–32 GB"
+     "de": "Mac mini M6 · MacBook Air, 16–32 GB",
+     "en": "Mac mini M6 · MacBook Air, 16–32 GB"
     },
     "runs": "7B–13B"
    },
@@ -24,7 +24,10 @@
      "de": "Mittel",
      "en": "Mid"
     },
-    "spec": "MacBook Pro M4 Pro (48 GB) · Mac mini M4 Pro (64 GB)",
+    "spec": {
+     "de": "Mac mini M5 Pro (48–64 GB, 307 GB/s) · MacBook Pro M5 Pro (48 GB)",
+     "en": "Mac mini M5 Pro (48–64 GB, 307 GB/s) · MacBook Pro M5 Pro (48 GB)"
+    },
     "runs": {
      "de": "bis 34B, 70B (Q4)",
      "en": "up to 34B, 70B (Q4)"
@@ -34,10 +37,13 @@
     "k": "pro",
     "t": "Pro",
     "spec": {
-     "de": "MacBook Pro 16-Zoll M4/M5 Max (128 GB) · Mac Studio M4 Max / M3 Ultra (512 GB)",
-     "en": "MacBook Pro 16-inch M4/M5 Max (128 GB) · Mac Studio M4 Max / M3 Ultra (512 GB)"
+     "de": "MacBook Pro 16-Zoll M5 Max (128 GB) · Mac Studio M5 Max · M5 Ultra (bis 512 GB, 1,2 TB/s)",
+     "en": "MacBook Pro 16-inch M5 Max (128 GB) · Mac Studio M5 Max · M5 Ultra (up to 512 GB, 1.2 TB/s)"
     },
-    "runs": "70B–120B+"
+    "runs": {
+     "de": "70B–120B+ · M5 Ultra mit 512 GB: Modelle mit Hunderten Milliarden Parametern (Q4)",
+     "en": "70B–120B+ · M5 Ultra with 512 GB: models with hundreds of billions of parameters (Q4)"
+    }
    }
   ]
  },

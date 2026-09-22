@@ -810,7 +810,9 @@ button.it{ width:100%; font-family:var(--body); text-align:left; background:none
 .hw-tier .tt{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; min-width:74px; }
 .hw-tier.t-entry .tt{ color:var(--cyan); } .hw-tier.t-mid .tt{ color:var(--ember); } .hw-tier.t-pro .tt{ color:var(--lime); }
 .hw-tier .tspec{ flex:1; color:var(--ink); font-size:14px; }
-.hw-tier .truns{ color:var(--muted); font-family:var(--mono); font-size:11px; text-align:right; min-width:104px; }
+/* Der Läuf-Text bekommt einen festen Anteil und bricht in mehrere Zeilen —
+   sonst drückt ein langer Text die Spezifikation auf Ein-Wort-Spalten. */
+.hw-tier .truns{ flex:0 0 34%; color:var(--muted); font-family:var(--mono); font-size:11px; text-align:right; }
 .hw-mine{ margin-top:16px; padding:13px 15px; border:1px solid color-mix(in srgb,var(--ember) 45%,transparent); background:rgba(255,122,51,.06); border-radius:10px; font-size:13px; color:var(--ink-dim); }
 .hw-mine b{ color:var(--ember); }
 .hw-rule{ grid-column:1/-1; margin-top:4px; padding:16px 18px; border:1px solid var(--line); border-radius:12px; font-family:var(--mono); font-size:12px; color:var(--ink-dim); letter-spacing:.01em; }

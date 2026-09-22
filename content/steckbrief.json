@@ -2926,6 +2926,30 @@
   "icon": "google",
   "contentChecked": "2026-09-08"
  },
+ "gmail-mcp": {
+  "name": "Gmail MCP Server",
+  "vendor": "Google",
+  "cat": {
+   "de": "MCP-Server · Baustein 04",
+   "en": "MCP server · Block 04"
+  },
+  "accent": "var(--violet)",
+  "open": false,
+  "blurb": {
+   "de": "Hängt den Agenten an dein Gmail-Postfach: Threads suchen und lesen, Labels setzen und wieder abnehmen, Entwürfe anlegen und auflisten. Verschickt wird nichts — unter den Werkzeugen des Servers gibt es keines zum Senden, der letzte Klick bleibt bei dir. Genau das macht ihn zum Anschluss für die Postfach-Triage: Der Agent liest eine Mail, entscheidet, hängt ein Label dran, und die Antwort liegt danach als Entwurf bereit. Der Server läuft bei Google, installiert wird nichts. Die Hürde ist der Zugang — er steckt in Googles Developer Preview, du brauchst ein Google-Cloud-Projekt mit eigenen OAuth-Zugangsdaten, und zur Anmeldung beim Vorschauprogramm verlangt Google ein Workspace-Konto; eine private Gmail-Adresse genügt dafür nicht.",
+   "en": "Hooks the agent into your Gmail: search and read threads, add and remove labels, create and list drafts. Nothing goes out — the server exposes no send tool, so the last click stays with you. That is what makes it the connector for inbox triage: the agent reads a mail, decides, hangs a label on it, and leaves the reply sitting in drafts. The server runs at Google, so you install nothing. The hurdle is getting in — it sits in Google's Developer Preview, it needs a Google Cloud project with OAuth credentials of your own, and the preview programme is applied for with a Workspace account; a personal Gmail address is not enough for it."
+  },
+  "tip": {
+   "de": "Die Freigabe genau lesen: Neben dem Lesezugriff verlangt der Server die Berechtigung gmail.compose, und die beschreibt Google selbst als „Entwürfe verwalten und E-Mails senden“ — also mehr, als die Werkzeugliste des Servers hergibt. Erst an einem Zweitkonto ausprobieren, bevor das Postfach drankommt, in dem du wirklich arbeitest. Dokumentierte Wirte sind Antigravity und Claude, bei Claude ab einem bezahlten Tarif.",
+   "en": "Read the consent screen closely: besides read access the server asks for gmail.compose, which Google itself describes as \"Manage drafts and send emails\" — more than the server's own tool list does. Try it on a second account before you point it at the inbox you actually work in. The documented hosts are Antigravity and Claude, and for Claude a paid plan."
+  },
+  "links": {
+   "home": "https://developers.google.com/workspace/gmail/api/guides/configure-mcp-server",
+   "docs": "https://developers.google.com/workspace/gmail/api/reference/mcp"
+  },
+  "icon": "google",
+  "contentChecked": "2026-09-21"
+ },
  "davinci-resolve-mcp": {
   "name": "DaVinci Resolve MCP",
   "vendor": "Samuel Gursky",

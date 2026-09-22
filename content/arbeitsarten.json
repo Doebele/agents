@@ -1973,12 +1973,13 @@
       "en": "What should it be connected to?"
      },
      "kandidaten": [
+      "gmail-mcp",
       "filesystem-mcp",
       "slack-mcp"
      ],
-     "luecke": {
-      "de": "Einen E-Mail-Konnektor für den Katalog gibt es noch nicht — am Sortier-Beispiel hängt der Zugang zum Postfach.",
-      "en": "The catalogue has no email connector yet — the sorting example hangs on access to the inbox."
+     "notiz": {
+      "de": "gmail-mcp ist der Zugang zum Postfach, an dem das Sortier-Beispiel hängt: Threads lesen, Labels setzen, Entwürfe anlegen. Gesendet wird nichts, und die Einrichtung führt über Googles Developer Preview.",
+      "en": "gmail-mcp is the access to the inbox the sorting example hangs on: read threads, set labels, create drafts. Nothing gets sent, and setting it up runs through Google's Developer Preview."
      }
     },
     "07_umgebung": {
@@ -2031,8 +2032,8 @@
       "en": "Access to the inbox that starts the workflow"
      },
      "text": {
-      "de": "Ohne Lesezugriff auf das Postfach bleibt das Sortier-Beispiel Theorie. Viele Anbieter stellen dafür ein App-Passwort oder ein Dienstkonto aus — genau dieser Zugang fehlt im Katalog noch.",
-      "en": "Without read access to the inbox the sorting example stays theory. Many providers hand out an app password or a service account — that access is the gap still open in this catalogue."
+      "de": "Ohne Lesezugriff auf das Postfach bleibt das Sortier-Beispiel Theorie. Viele Anbieter stellen dafür ein App-Passwort oder ein Dienstkonto aus; für Gmail führt der Weg über gmail-mcp, und der verlangt ein Google-Cloud-Projekt und die Aufnahme in Googles Developer Preview — eingerichtet ist das nicht in fünf Minuten.",
+      "en": "Without read access to the inbox the sorting example stays theory. Many providers hand out an app password or a service account; for Gmail the route is gmail-mcp, which wants a Google Cloud project and a place in Google's Developer Preview — not something set up in five minutes."
      }
     }
    ]

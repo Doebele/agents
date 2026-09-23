@@ -222,42 +222,18 @@ jobs:
           set -euo pipefail
           test -n "$ZAI_API_KEY" || { echo "ZAI_API_KEY ist nicht gesetzt"; exit 1; }
 
-          BASE="https://api.z.ai/api/paas/v4"
-          code=$(curl -sS -o /tmp/models.json -w '%{http_code}' \
-                 -H "Authorization: Bearer $ZAI_API_KEY" "$BASE/models" || echo 000)
-          echo "  GET $BASE/models -> HTTP $code"
-
-          # /models listet, was die API kennt, nicht was dieser Schluessel darf.
-          # Also bekommt jeder Kandidat eine Ein-Token-Antwort, neuestes zuerst.
-          if [ "$code" = "200" ]; then
-            KANDIDATEN=$(python3 -c '
-          import json, os, sys
-          ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
-          print("Gelistet:", ", ".join(ids), file=sys.stderr)
-          want = os.environ.get("ZAI_MODEL") or ""
-          if want:
-              print(want)
-          else:
-              glm = sorted([i for i in ids if i.lower().startswith("glm")], reverse=True)
-              print("\n".join(glm or ids))
-          ')
-            MODEL=""
-            for m in $KANDIDATEN; do
-              rc=$(curl -sS -o /tmp/probe.json -w '%{http_code}' \
-                   -H "Authorization: Bearer $ZAI_API_KEY" \
-                   -H "Content-Type: application/json" \
-                   -d "{\"model\":\"$m\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1}" \
-                   "$BASE/chat/completions" || echo 000)
-              echo "    $m → HTTP $rc"
-              if [ "$rc" = "200" ]; then MODEL="$m"; break; fi
-            done
-            test -n "$MODEL" || { echo "Keines der gelisteten Modelle ist mit diesem Schlüssel nutzbar."; \
-                                  head -c 300 /tmp/probe.json; exit 1; }
-          else
-            echo "  keine Modelliste; zurück auf die dokumentierte Beispiel-Id"
-            MODEL="${ZAI_MODEL:-glm-4.6}"
-          fi
-          echo "Modell: $MODEL"
+          # Welche Tuer der Schluessel oeffnet, wird nicht vorausgesetzt:
+          # build/zai_zugang.py probiert erst den Endpunkt des Coding-Abos, dann
+          # den je Token abgerechneten, und sagt, aus welchem Topf bezahlt wird.
+          # Frueher stand hier fest /api/paas/v4, die Guthaben-Tuer — ein Abo,
+          # wo es eines gibt, wurde nie gefragt, und als das Guthaben leer war,
+          # starb jeder Lauf an Code 1113. Dieselbe Datei wie in pflege-zai.yml, damit die beiden
+          # nicht auseinanderlaufen.
+          #
+          # Nicht eval "$(…)": unter set -e fiele ein Fehler darin nicht auf.
+          ZUGANG=$(python3 build/zai_zugang.py)
+          eval "$ZUGANG"
+          echo "Modell: $ZAI_MODELL ($ZAI_TOPF)"
 
           mkdir -p "$HOME/.kimi-code"
           cat > "$HOME/.kimi-code/config.toml" <<TOML
@@ -267,12 +243,12 @@ jobs:
 
           [providers.zai]
           type = "openai"
-          base_url = "$BASE"
+          base_url = "$ZAI_BASE"
           api_key = "$ZAI_API_KEY"
 
           [models.kreuzpruefung]
           provider = "zai"
-          model = "$MODEL"
+          model = "$ZAI_MODELL"
           max_context_size = 131072
           TOML
           chmod 600 "$HOME/.kimi-code/config.toml"

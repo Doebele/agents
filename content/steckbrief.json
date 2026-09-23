@@ -2824,58 +2824,72 @@
    "checked": "2026-09-23"
   }
  },
- "GPT-5.6 Terra": {
-  "name": "GPT-5.6 Terra",
-  "vendor": "OpenAI",
+ "Motif 3": {
+  "name": "Motif 3",
+  "vendor": "Motif Technologies",
   "cat": {
-   "de": "Frontier-Modell · Baustein 01",
-   "en": "Frontier model · Block 01"
+   "de": "Open-Weight · Baustein 01",
+   "en": "Open-weight · Block 01"
   },
   "accent": "var(--cyan)",
-  "open": false,
+  "open": true,
   "blurb": {
-   "de": "Die mittlere Stufe von OpenAIs GPT-5.6-Reihe, angesiedelt zwischen dem knapperen Luna und dem teureren Flaggschiff Sol — OpenAI selbst nennt es ungefähr das, was frühere GPT-5-Generationen „Mini\" nannten. 1,05 Millionen Token Kontext, bis zu 128.000 Token Ausgabe. Der Haken: Das ist nicht dieselbe Reihe wie das neuere GPT-6 Astra, das dieser Katalog bereits führt — wer OpenAIs aktuelles Flaggschiff sucht, findet es dort; Terra ist die günstigere Zwischenstufe der Generation davor.",
-   "en": "The middle tier of OpenAI's GPT-5.6 line, sitting between the leaner Luna and the pricier flagship Sol — OpenAI itself describes it as roughly what earlier GPT-5 generations called \"mini\". 1.05 million token context, up to 128,000 tokens of output. The catch: this isn't the same line as the newer GPT-6 Astra already in this catalogue — anyone after OpenAI's current flagship will find it there; Terra is the cheaper middle tier of the generation before it."
+   "de": "Offenes Modell des südkoreanischen Unternehmens Motif Technologies: 314 Milliarden Parameter (Mixture-of-Experts, davon 13,2 Milliarden pro Anfrage aktiv), seit der finalen Fassung unter der MIT-Lizenz und damit auch kommerziell frei nutzbar. 256.000 Token Kontext, trainiert mit Schwerpunkt auf Koreanisch, Recht, Finanzen, Code und Mathematik; besonders stark bei Werkzeugnutzung und agentenartigen Aufgaben. Der Haken: Bei wissensintensiven Fragen hält es sich bewusst zurück, statt zu raten — wo größere Modelle raten, bekommt man hier eher gar keine Antwort.",
+   "en": "An open model from the South Korean company Motif Technologies: 314 billion parameters (mixture-of-experts, 13.2 billion active per request), MIT licensed since the final release and so free to use commercially too. 256,000-token context, trained with an emphasis on Korean, legal, financial, code and maths content; particularly strong at tool use and agentic tasks. The catch: on knowledge-heavy questions it deliberately holds back rather than guess — where a bigger model would take a guess, this one is more likely to give no answer at all."
   },
   "tip": {
-   "de": "Sinnvoll, wenn GPT-6 Astra zu teuer ist, aber GPT-5.6 Luna zu wenig kann — die Zwischenstufe für alltägliches Programmieren und Schlussfolgern. Wissensstand 16. Februar 2026.",
-   "en": "Worth it when GPT-6 Astra costs too much but GPT-5.6 Luna isn't capable enough — the middle step for everyday coding and reasoning. Knowledge cutoff 16 February 2026."
+   "de": "Ein Kandidat, wenn offene Gewichte und Agenten- oder Werkzeugstärke zählen, vor allem bei koreanischsprachigen oder Code-lastigen Aufgaben. Für breites Allgemeinwissen eher nicht die erste Wahl.",
+   "en": "Worth a look when open weights and agentic or tool strength matter, especially for Korean-language or code-heavy work. Not the first choice for broad general knowledge."
   },
   "links": {
-   "home": "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+   "home": "https://motiftech.io/en/",
+   "code": "https://huggingface.co/Motif-Technologies/Motif-3"
   },
   "aa": {
-   "url": "https://artificialanalysis.ai/models/gpt-5-6-terra",
+   "url": "https://artificialanalysis.ai/models/motif-3",
    "intel": {
-    "v": "42",
-    "rank": "#38/212",
+    "v": "34",
+    "rank": "#12/114",
     "u": 4
    },
-   "speed": {
-    "v": "82.7",
-    "rank": "#71/212",
-    "u": 3
-   },
-   "cost": {
-    "v": "$2/$12",
-    "rank": "#57/212",
-    "u": 3
+   "checked": "2026-09-23"
+  }
+ },
+ "K2 Horizon 375B A23B": {
+  "name": "K2 Horizon 375B A23B",
+  "vendor": "Institute of Foundation Models",
+  "cat": {
+   "de": "Open-Weight · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Offenes Modell mit 375 Milliarden Parametern (Mixture-of-Experts, davon 23 Milliarden pro Anfrage aktiv) unter der freizügigen Apache-2.0-Lizenz, also auch kommerziell frei nutzbar. 512.000 Token Kontext, ausgelegt auf Werkzeugnutzung im Terminal und lange Agentenabläufe; dort erreicht es laut Anbieter das Niveau deutlich größerer offener Modelle. Der Haken: Für den Betrieb braucht es Rechenzentrums-Hardware — die vom Anbieter geprüfte Konfiguration läuft auf acht H200-Grafikkarten —, und ohne die empfohlenen Inferenz-Einstellungen bleibt die Leistung hinter dem Testwert zurück.",
+   "en": "An open model with 375 billion parameters (mixture-of-experts, 23 billion active per request) under the permissive Apache 2.0 licence, so free to use commercially too. 512,000-token context, built for terminal tool use and long agentic workflows; the vendor says it reaches the level of markedly larger open models there. The catch: running it needs data-centre hardware — the vendor's own validated setup runs on eight H200 GPUs — and without the recommended inference settings, performance falls short of the benchmark figure."
+  },
+  "tip": {
+   "de": "Für Agentenaufgaben mit langem Atem ein starkes offenes Modell, aber nur mit passender Hardware oder einem Hoster realistisch — auf dem eigenen Laptop läuft es nicht. Trainingscode und -daten will der Anbieter nach und nach ebenfalls offenlegen.",
+   "en": "A strong open model for long-running agent work, but only realistic with matching hardware or a hosting provider — it won't run on your own laptop. The vendor says it plans to open up its training code and data too, over time."
+  },
+  "links": {
+   "home": "https://ifm.ai/",
+   "code": "https://huggingface.co/IFM/K2-Horizon-375B-A23B"
+  },
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/k2-horizon-375b-a23b",
+   "intel": {
+    "v": "31",
+    "rank": "#13/114",
+    "u": 4
    },
    "verb": {
-    "v": "120M",
-    "rank": "#65/212",
-    "u": 3
+    "v": "130M",
+    "rank": "#14/114",
+    "u": 2
    },
    "checked": "2026-09-23"
-  },
-  "plans": {
-   "de": "API 2 $ Eingabe / 12 $ Ausgabe pro 1M Token, gecachte Eingabe 0,20 $ · 1,05 Mio. Token Kontext, bis 128.000 Token Ausgabe",
-   "en": "API $2 input / $12 output per 1M tokens, cached input $0.20 · 1.05M token context, up to 128,000 tokens of output"
-  },
-  "billing": [
-   "api"
-  ],
-  "plansChecked": "2026-09-23"
+  }
  },
  "Anthropic Agent Skills": {
   "name": "Anthropic Agent Skills",

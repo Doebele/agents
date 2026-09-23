@@ -47,6 +47,16 @@
       "n": "Qwen3.8-Max",
       "v": "Alibaba",
       "k": "Qwen3.8-Max"
+     },
+     {
+      "n": "Muse Spark 1.3",
+      "v": "Meta",
+      "k": "Muse Spark 1.3"
+     },
+     {
+      "n": "Step 5 Preview",
+      "v": "StepFun",
+      "k": "Step 5 Preview"
      }
     ]
    },
@@ -95,6 +105,21 @@
       "n": "Ornith 1.5",
       "v": "Open",
       "k": "Ornith 1.5"
+     },
+     {
+      "n": "MiMo-V2.6-Pro",
+      "v": "Xiaomi",
+      "k": "MiMo-V2.6-Pro"
+     },
+     {
+      "n": "Motif 3",
+      "v": "Motif Technologies",
+      "k": "Motif 3"
+     },
+     {
+      "n": "K2 Horizon 375B A23B",
+      "v": "Institute of Foundation Models",
+      "k": "K2 Horizon 375B A23B"
      }
     ]
    },

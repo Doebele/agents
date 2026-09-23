@@ -2688,6 +2688,220 @@
   "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
+ "Muse Spark 1.3": {
+  "name": "Muse Spark 1.3",
+  "vendor": "Meta",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "Metas erster Schritt weg von den offenen Llama-Gewichten: ein nativ multimodales Modell mit Werkzeugnutzung, sichtbarer Gedankenkette und mehreren zusammenarbeitenden Agenten, entwickelt von den neu gegründeten Meta Superintelligence Labs. Stark bei alltäglicher Wahrnehmung, allgemeinen Fragen und Gesundheitsthemen; bei langwierigen Agentenaufgaben und beim Programmieren räumt Meta selbst noch Lücken ein. Der Haken: Es gibt bislang keine offene API — erreichbar ist es nur über meta.ai und die Meta-AI-App, während der Entwicklerzugang als private Vorschau für ausgewählte Nutzer läuft.",
+   "en": "Meta's first step away from open Llama weights: a natively multimodal model with tool use, visible chain of thought and multi-agent orchestration, built by the newly formed Meta Superintelligence Labs. Strong at everyday perception, general questions and health topics; Meta itself admits gaps in long-running agent work and coding. The catch: there's no open API yet — it's only reachable through meta.ai and the Meta AI app, while developer access runs as a private preview for selected users."
+  },
+  "tip": {
+   "de": "Kein Kandidat für eigene Projekte, solange der API-Zugang privat bleibt — dafür bleiben die anderen Modelle hier die Wahl. Zum Ausprobieren reicht die Meta-AI-App oder meta.ai.",
+   "en": "Not a candidate for your own projects while API access stays private — the other models here remain the choice for that. For trying it out, the Meta AI app or meta.ai is enough."
+  },
+  "links": {
+   "home": "https://ai.meta.com/blog/introducing-muse-spark-msl/"
+  },
+  "icon": "meta",
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/muse-spark-1-3",
+   "intel": {
+    "v": "48",
+    "rank": "#17/212",
+    "u": 4
+   },
+   "speed": {
+    "v": "223.0",
+    "rank": "#7/212",
+    "u": 4
+   },
+   "cost": {
+    "v": "$1.25/$4.25",
+    "rank": "#62/212",
+    "u": 3
+   },
+   "verb": {
+    "v": "170M",
+    "rank": "#79/212",
+    "u": 4
+   },
+   "checked": "2026-09-23"
+  }
+ },
+ "MiMo-V2.6-Pro": {
+  "name": "MiMo-V2.6-Pro",
+  "vendor": "Xiaomi",
+  "cat": {
+   "de": "Open-Weight · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Offenes Modell mit rund einer Billion Parametern (Mixture-of-Experts, davon etwa 42 Milliarden pro Anfrage aktiv), MIT-lizenziert und damit frei nutzbar, auch kommerziell. Verarbeitet Text, Bild, Video und Ton bei einer Million Token Kontext und steht laut Artificial Analysis aktuell vor allen anderen offenen Modellen bei der Intelligenz. Der Haken: Für den Eigenbetrieb braucht es entsprechend große Hardware — für die meisten ist ein Hoster der realistischere Weg als der eigene Rechner.",
+   "en": "An open model with roughly one trillion parameters (mixture-of-experts, about 42 billion active per request), MIT licensed and so free to use, commercially too. Handles text, image, video and audio at a one-million-token context and, per Artificial Analysis, currently leads every other open model on intelligence. The catch: running it yourself needs correspondingly large hardware — for most people a hosting provider is the realistic route, not their own machine."
+  },
+  "tip": {
+   "de": "Wenn offene Gewichte und Spitzenleistung beide zählen, aktuell die erste Adresse unter den offenen Modellen — noch vor Kimi K3 auf der Intelligenz-Rangliste von AA. Über die API kostet das Token-Paar 0,44 $ Eingabe / 0,87 $ Ausgabe pro Million.",
+   "en": "When open weights and top-tier performance both matter, this is currently the first stop among open models — ahead of Kimi K3 on AA's intelligence ranking. Through the API the token pair costs $0.44 input / $0.87 output per million."
+  },
+  "links": {
+   "home": "https://mimo.mi.com/models/en-US/mimo-v2.6-pro",
+   "code": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+  },
+  "icon": "xiaomi",
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+   "intel": {
+    "v": "46",
+    "rank": "#1/114",
+    "u": 4
+   },
+   "speed": {
+    "v": "53.9",
+    "rank": "#42/114",
+    "u": 2
+   },
+   "cost": {
+    "v": "$0.44/$0.87",
+    "rank": "#12/114",
+    "u": 2
+   },
+   "verb": {
+    "v": "140M",
+    "rank": "#18/114",
+    "u": 3
+   },
+   "checked": "2026-09-23"
+  },
+  "plans": {
+   "de": "API pro 1M Token: 0,435 $ Eingabe (0,0036 $ bei Cache-Treffer) / 0,87 $ Ausgabe · Open-Weight unter MIT-Lizenz, selbst hostbar",
+   "en": "API per 1M tokens: $0.435 input ($0.0036 on a cache hit) / $0.87 output · open-weight under the MIT licence, self-hostable"
+  },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-09-23"
+ },
+ "Step 5 Preview": {
+  "name": "Step 5 Preview",
+  "vendor": "StepFun",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "StepFuns neues Flaggschiff für reale Aufgaben, mit Schwerpunkt auf Programmieren und Wissensarbeit. Verarbeitet nativ Text, Bild und Video bei einer Million Token Kontext und hält laut Artificial Analysis mit deutlich teureren Modellen mit. Der Haken: Schon der Name sagt es — StepFun führt es selbst als „Preview\", die Gewichte sind bislang nicht offen, erreichbar ist es nur über die API.",
+   "en": "StepFun's new flagship for real-world tasks, with a focus on programming and knowledge work. Natively handles text, image and video at a one-million-token context and, per Artificial Analysis, keeps pace with markedly pricier models. The catch is in the name — StepFun itself labels it a \"preview\", the weights aren't open yet, and it's reachable only through the API."
+  },
+  "tip": {
+   "de": "Günstig für seine Klasse und über eine OpenAI-kompatible API leicht einzubinden — ein Kandidat, wenn das Budget knapp ist und die Aufgabe Programmieren oder Dokumente heißt. Noch ohne die Erfahrung etablierter Anbieter wie OpenAI oder Anthropic.",
+   "en": "Inexpensive for its class and easy to plug in through an OpenAI-compatible API — worth a look when budget is tight and the task is coding or documents. It doesn't yet carry the track record of an established vendor like OpenAI or Anthropic."
+  },
+  "links": {
+   "home": "https://www.stepfun.com/step-5-preview",
+   "docs": "https://platform.stepfun.com/docs/zh/guides/models/step-5-preview"
+  },
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/step-5",
+   "intel": {
+    "v": "44",
+    "rank": "#32/212",
+    "u": 4
+   },
+   "speed": {
+    "v": "83.6",
+    "rank": "#68/212",
+    "u": 3
+   },
+   "cost": {
+    "v": "$1/$2.70",
+    "rank": "#33/212",
+    "u": 2
+   },
+   "verb": {
+    "v": "160M",
+    "rank": "#75/212",
+    "u": 4
+   },
+   "checked": "2026-09-23"
+  }
+ },
+ "Motif 3": {
+  "name": "Motif 3",
+  "vendor": "Motif Technologies",
+  "cat": {
+   "de": "Open-Weight · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Offenes Modell des südkoreanischen Unternehmens Motif Technologies: 314 Milliarden Parameter (Mixture-of-Experts, davon 13,2 Milliarden pro Anfrage aktiv), seit der finalen Fassung unter der MIT-Lizenz und damit auch kommerziell frei nutzbar. 256.000 Token Kontext, trainiert mit Schwerpunkt auf Koreanisch, Recht, Finanzen, Code und Mathematik; besonders stark bei Werkzeugnutzung und agentenartigen Aufgaben. Der Haken: Bei wissensintensiven Fragen hält es sich bewusst zurück, statt zu raten — wo größere Modelle raten, bekommt man hier eher gar keine Antwort.",
+   "en": "An open model from the South Korean company Motif Technologies: 314 billion parameters (mixture-of-experts, 13.2 billion active per request), MIT licensed since the final release and so free to use commercially too. 256,000-token context, trained with an emphasis on Korean, legal, financial, code and maths content; particularly strong at tool use and agentic tasks. The catch: on knowledge-heavy questions it deliberately holds back rather than guess — where a bigger model would take a guess, this one is more likely to give no answer at all."
+  },
+  "tip": {
+   "de": "Ein Kandidat, wenn offene Gewichte und Agenten- oder Werkzeugstärke zählen, vor allem bei koreanischsprachigen oder Code-lastigen Aufgaben. Für breites Allgemeinwissen eher nicht die erste Wahl.",
+   "en": "Worth a look when open weights and agentic or tool strength matter, especially for Korean-language or code-heavy work. Not the first choice for broad general knowledge."
+  },
+  "links": {
+   "home": "https://motiftech.io/en/",
+   "code": "https://huggingface.co/Motif-Technologies/Motif-3"
+  },
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/motif-3",
+   "intel": {
+    "v": "34",
+    "rank": "#12/114",
+    "u": 4
+   },
+   "checked": "2026-09-23"
+  }
+ },
+ "K2 Horizon 375B A23B": {
+  "name": "K2 Horizon 375B A23B",
+  "vendor": "Institute of Foundation Models",
+  "cat": {
+   "de": "Open-Weight · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Offenes Modell mit 375 Milliarden Parametern (Mixture-of-Experts, davon 23 Milliarden pro Anfrage aktiv) unter der freizügigen Apache-2.0-Lizenz, also auch kommerziell frei nutzbar. 512.000 Token Kontext, ausgelegt auf Werkzeugnutzung im Terminal und lange Agentenabläufe; dort erreicht es laut Anbieter das Niveau deutlich größerer offener Modelle. Der Haken: Für den Betrieb braucht es Rechenzentrums-Hardware — die vom Anbieter geprüfte Konfiguration läuft auf acht H200-Grafikkarten —, und ohne die empfohlenen Inferenz-Einstellungen bleibt die Leistung hinter dem Testwert zurück.",
+   "en": "An open model with 375 billion parameters (mixture-of-experts, 23 billion active per request) under the permissive Apache 2.0 licence, so free to use commercially too. 512,000-token context, built for terminal tool use and long agentic workflows; the vendor says it reaches the level of markedly larger open models there. The catch: running it needs data-centre hardware — the vendor's own validated setup runs on eight H200 GPUs — and without the recommended inference settings, performance falls short of the benchmark figure."
+  },
+  "tip": {
+   "de": "Für Agentenaufgaben mit langem Atem ein starkes offenes Modell, aber nur mit passender Hardware oder einem Hoster realistisch — auf dem eigenen Laptop läuft es nicht. Trainingscode und -daten will der Anbieter nach und nach ebenfalls offenlegen.",
+   "en": "A strong open model for long-running agent work, but only realistic with matching hardware or a hosting provider — it won't run on your own laptop. The vendor says it plans to open up its training code and data too, over time."
+  },
+  "links": {
+   "home": "https://ifm.ai/",
+   "code": "https://huggingface.co/IFM/K2-Horizon-375B-A23B"
+  },
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/k2-horizon-375b-a23b",
+   "intel": {
+    "v": "31",
+    "rank": "#13/114",
+    "u": 4
+   },
+   "verb": {
+    "v": "130M",
+    "rank": "#14/114",
+    "u": 2
+   },
+   "checked": "2026-09-23"
+  }
+ },
  "Anthropic Agent Skills": {
   "name": "Anthropic Agent Skills",
   "vendor": "Anthropic",

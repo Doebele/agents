@@ -1140,17 +1140,21 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/qwen3-8-max",
    "intel": {
-    "v": "58",
-    "rank": "#13/187"
+    "v": "45",
+    "rank": "#24/212"
    },
    "speed": {
-    "v": "61.4",
-    "rank": "#29/67",
-    "u": 2
+    "v": "39.3",
+    "rank": "#160/212"
    },
    "cost": {
     "v": "$2/$6"
-   }
+   },
+   "verb": {
+    "v": "190M",
+    "rank": "#88/212"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "Open-Weight (Apache 2.0), kostenlos selbst hostbar · über Alibabas Model Studio nach Verbrauch, Region Singapur je 1M Token: qwen3.8-flash 0,15 $/0,47 $ · qwen3.6-flash 0,25 $/1,50 $ · qwen3.6-plus 0,50 $/3 $ · lange Prompts kosten mehr · 1 Mio. Token gratis, 90 Tage ab Freischaltung",
@@ -1188,25 +1192,22 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/gpt-oss-120b",
    "intel": {
-    "v": "24",
-    "rank": "#6/63",
-    "u": 4
+    "v": "12",
+    "rank": "#9/65"
    },
    "speed": {
-    "v": "180.0",
-    "rank": "#4/63",
-    "u": 4
+    "v": "184.1",
+    "rank": "#2/65"
    },
    "cost": {
-    "v": "$0.15/$0.60",
-    "rank": "#5/63",
-    "u": 2
+    "v": "$0.15/$0.595",
+    "rank": "#3/65"
    },
    "verb": {
-    "v": "88M",
-    "rank": "#9/63",
-    "u": 3
-   }
+    "v": "84M",
+    "rank": "#4/65"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "Kostenlos (Open-Weight, Apache 2.0), selbst gehostet",
@@ -1242,25 +1243,22 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/mistral-large-3",
    "intel": {
-    "v": "16",
-    "rank": "#24/44",
-    "u": 2
+    "v": "9",
+    "rank": "#27/44"
    },
    "speed": {
-    "v": "78.4",
-    "rank": "#6/44",
-    "u": 2
+    "v": "76.7",
+    "rank": "#5/44"
    },
    "cost": {
     "v": "$0.50/$1.50",
-    "rank": "#4/44",
-    "u": 4
+    "rank": "#2/44"
    },
    "verb": {
-    "v": "5.6M",
-    "rank": "#4/44",
-    "u": 4
-   }
+    "v": "9.8M",
+    "rank": "#3/44"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "Open-Weight (Apache 2.0) · API 0,50 $ Eingabe / 1,50 $ Ausgabe pro 1M Token (die Preisseite nennt das Modell «Mistral Large»), Stapelbetrieb zum halben Preis, zwischengespeicherte Eingabe 90 % günstiger · Gratisstufe mit 10 $ API-Guthaben je Monat · Vibe Pro 14,99 $/Mo. (Studenten 5,99 $), Vibe Team 24,99 $/Nutzer/Mo. ab 50 $/Mo.",
@@ -1300,25 +1298,17 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/llama-4-maverick",
    "intel": {
-    "v": "14",
-    "rank": "#26/44",
-    "u": 2
+    "v": "10",
+    "rank": "#24/44"
    },
    "speed": {
-    "v": "84.1",
-    "rank": "#4/44",
-    "u": 4
+    "v": "112.7",
+    "rank": "#2/44"
    },
    "cost": {
-    "v": "$0.26/$0.91",
-    "rank": "#2/44",
-    "u": 2
+    "v": "$0.26/$0.91"
    },
-   "verb": {
-    "v": "4.7M",
-    "rank": "#3/44",
-    "u": 3
-   }
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet · ab 700 Mio. monatlich aktiven Nutzern verlangt Meta eine eigene Lizenz",
@@ -2245,24 +2235,21 @@
    "url": "https://artificialanalysis.ai/models/gpt-6-astra",
    "intel": {
     "v": "53",
-    "rank": "#3/199",
-    "u": 4
+    "rank": "#6/212"
    },
    "speed": {
-    "v": "51.3",
-    "rank": "#114/199",
-    "u": 2
+    "v": "52.5",
+    "rank": "#133/212"
    },
    "cost": {
     "v": "$10/$50",
-    "rank": "#71/199",
-    "u": 4
+    "rank": "#82/212"
    },
    "verb": {
     "v": "60M",
-    "rank": "#28/199",
-    "u": 2
-   }
+    "rank": "#36/212"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "API 10 $/50 $ pro 1M Tok. (Standard) · Fast-Mode 2× Preis, bis zu 2× so schnell · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.) · GPT-6 Astra Pro zusätzlich auf Pro, Business, Enterprise",
@@ -2275,8 +2262,8 @@
   "plansChecked": "2026-09-18",
   "contentChecked": "2026-09-18"
  },
- "Claude Opus 5 / Sonnet 5": {
-  "name": "Claude Opus 5 / Sonnet 5",
+ "Claude Opus 5.5 / Sonnet 5": {
+  "name": "Claude Opus 5.5 / Sonnet 5",
   "vendor": "Anthropic",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
@@ -2293,34 +2280,27 @@
    "en": "Use Sonnet as your default and switch to Opus when a task stalls. On easy work the difference is barely noticeable, on tricky work it is clear."
   },
   "links": {
-   "home": "https://www.anthropic.com/news/claude-opus-5",
+   "home": "https://www.anthropic.com/news/claude-opus-5-5",
    "docs": "https://platform.claude.com/docs/en/models/overview",
    "code": null
   },
   "icon": "anthropic",
   "free": false,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/claude-opus-5",
+   "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
    "intel": {
-    "v": "63",
-    "rank": "#1/188",
-    "u": 4
-   },
-   "speed": {
-    "v": "56.7",
-    "rank": "#112/188",
-    "u": 1
+    "v": "58",
+    "rank": "#1/212"
    },
    "cost": {
-    "v": "$5/$25",
-    "rank": "#73/188",
-    "u": 4
+    "v": "$4/$20",
+    "rank": "#93/212"
    },
    "verb": {
-    "v": "100M",
-    "rank": "#56/188",
-    "u": 3
-   }
+    "v": "260M",
+    "rank": "#95/212"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "API Opus 5 5 $/25 $ pro 1M Token · Sonnet 5 2 $/10 $ pro 1M Token — der Einführungspreis für Sonnet ist inzwischen der reguläre, die für den 1.9.2026 angekündigte Erhöhung auf 3 $/15 $ entfällt",
@@ -2359,25 +2339,22 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
    "intel": {
-    "v": "48",
-    "rank": "#38/188",
-    "u": 4
+    "v": "30",
+    "rank": "#81/212"
    },
    "speed": {
-    "v": "115.8",
-    "rank": "#42/188",
-    "u": 3
+    "v": "121.7",
+    "rank": "#34/212"
    },
    "cost": {
     "v": "$2/$12",
-    "rank": "#33/188",
-    "u": 2
+    "rank": "#31/212"
    },
    "verb": {
-    "v": "56M",
-    "rank": "#30/188",
-    "u": 2
-   }
+    "v": "67M",
+    "rank": "#39/212"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "API pro 1M Token 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · Google AI Pro 19,99 $/Mo.",
@@ -2394,9 +2371,9 @@
   "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
- "Grok 4.6": {
-  "name": "Grok 4.6",
-  "vendor": "xAI",
+ "Grok 4.7": {
+  "name": "Grok 4.7",
+  "vendor": "SpaceXAI",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
    "en": "Frontier model · Block 01"
@@ -2404,38 +2381,39 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "xAIs Spitzenmodell mit Schwerpunkt auf langlebigen Agentenaufgaben und anspruchsvoller interaktiver und visueller Arbeit. Es ist direkt in X eingebunden, was es für alles interessant macht, was mit dem Geschehen auf dieser Plattform zu tun hat.",
-   "en": "xAI's flagship, focused on long-running agent tasks and ambitious interactive and visual work. It is wired directly into X, which makes it interesting for anything tied to what happens on that platform."
+   "de": "SpaceXAIs (vormals xAI) Spitzenmodell mit Schwerpunkt auf langlebigen Agentenaufgaben und anspruchsvoller interaktiver und visueller Arbeit. Es ist direkt in X eingebunden, was es für alles interessant macht, was mit dem Geschehen auf dieser Plattform zu tun hat.",
+   "en": "SpaceXAI's (formerly xAI) flagship, focused on long-running agent tasks and ambitious interactive and visual work. It is wired directly into X, which makes it interesting for anything tied to what happens on that platform."
   },
   "tip": {
    "de": "Am ehesten relevant, wenn du ohnehin auf X arbeitest oder von dort Daten brauchst.",
    "en": "Most relevant if you already work on X or need data from there."
   },
   "links": {
-   "home": "https://x.ai/news/grok-4-6",
-   "docs": "https://docs.x.ai/developers/models/grok-4.6",
+   "home": "https://x.ai/news/grok-4-7",
+   "docs": "https://docs.x.ai/developers/models/grok-4.7",
    "code": null
   },
   "icon": "x",
   "free": false,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/grok-4-6",
+   "url": "https://artificialanalysis.ai/models/grok-4-7",
    "intel": {
-    "v": "61",
-    "rank": "#6/182"
+    "v": "46",
+    "rank": "#21/212"
    },
    "speed": {
-    "v": "66.1",
-    "rank": "#87/182"
+    "v": "39.8",
+    "rank": "#156/212"
    },
    "cost": {
     "v": "$2/$6",
-    "rank": "#59/182"
+    "rank": "#85/212"
    },
    "verb": {
-    "v": "72M",
-    "rank": "#39/182"
-   }
+    "v": "240M",
+    "rank": "#94/212"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · ab 200k Token Prompt das Doppelte: 4 $/12 $ (Cache 1 $)",
@@ -2475,25 +2453,21 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/qwen3-8-max",
    "intel": {
-    "v": "58",
-    "rank": "#10/188",
-    "u": 4
+    "v": "45",
+    "rank": "#24/212"
    },
    "speed": {
-    "v": "46.9",
-    "rank": "#125/188",
-    "u": 1
+    "v": "39.3",
+    "rank": "#160/212"
    },
    "cost": {
-    "v": "$2/$6",
-    "rank": "#64/188",
-    "u": 4
+    "v": "$2/$6"
    },
    "verb": {
-    "v": "150M",
-    "rank": "#72/188",
-    "u": 4
-   }
+    "v": "190M",
+    "rank": "#88/212"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "API über Model Studio 2 $/6 $ pro 1M Token (Region Singapur) · 1 Mio. Token gratis, 90 Tage ab Freischaltung · die 2,4T-Variante Qwen3.8-2.4T-A95B gibt es inzwischen auch als offene Gewichte (eigene Qwen-Lizenz)",
@@ -2532,25 +2506,22 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/kimi-k3",
    "intel": {
-    "v": "60",
-    "rank": "#1/106",
-    "u": 4
+    "v": "44",
+    "rank": "#3/114"
    },
    "speed": {
-    "v": "39.4",
-    "rank": "#54/106",
-    "u": 1
+    "v": "36.7",
+    "rank": "#55/114"
    },
    "cost": {
     "v": "$3/$15",
-    "rank": "#35/106",
-    "u": 4
+    "rank": "#29/114"
    },
    "verb": {
-    "v": "130M",
-    "rank": "#28/106",
-    "u": 3
-   }
+    "v": "160M",
+    "rank": "#20/114"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "API 3 $ Eingabe / 15 $ Ausgabe pro 1M Token, gecachte Eingabe 0,30 $ · keine Gratisstufe, vor dem ersten Aufruf muss mindestens 1 $ aufgeladen sein · Open-Weight unter der Kimi-K3-Lizenz, selbst hostbar",
@@ -2588,27 +2559,24 @@
   "icon": "deepseek",
   "free": false,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/deepseek-v4-flash",
+   "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
    "intel": {
-    "v": "52",
-    "rank": "#5/106",
-    "u": 4
+    "v": "39",
+    "rank": "#7/114"
    },
    "speed": {
-    "v": "117.1",
-    "rank": "#11/106",
-    "u": 4
+    "v": "232.3",
+    "rank": "#2/114"
    },
    "cost": {
-    "v": "$0.44/$1.32",
-    "rank": "#17/106",
-    "u": 2
+    "v": "$0.30/$1.20",
+    "rank": "#16/114"
    },
    "verb": {
-    "v": "210M",
-    "rank": "#37/106",
-    "u": 4
-   }
+    "v": "250M",
+    "rank": "#32/114"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "API pro 1M Token zur Hauptzeit: V4-Pro 1,32 $/3,96 $ · deepseek-flash (V4.1-Flash) 0,30 $/1,20 $ · Cache-Treffer sind viel billiger (V4-Pro 0,044 $). Hauptzeit ist Mo–Fr 01–04 und 06–10 Uhr UTC; zu allen anderen Zeiten, Wochenende eingeschlossen, kostet alles die Hälfte.",
@@ -2620,8 +2588,8 @@
   "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
- "GLM-5.2": {
-  "name": "GLM-5.2",
+ "GLM-5.3": {
+  "name": "GLM-5.3",
   "vendor": "Z.AI",
   "cat": {
    "de": "Open-Weight · Baustein 01",
@@ -2630,41 +2598,38 @@
   "accent": "var(--cyan)",
   "open": true,
   "blurb": {
-   "de": "Offenes Modell mit 753 Milliarden Parametern und einer Million Token Kontext, gebaut für Ingenieursarbeit. Ebenfalls MIT-Lizenz, also frei verwendbar.",
-   "en": "An open model with 753 billion parameters and a one-million-token context, built for engineering work. MIT licensed as well, so free to use."
+   "de": "Offenes Modell mit 753 Milliarden Parametern und einer Million Token Kontext, gebaut für Ingenieursarbeit. Läuft unter einer eigenen GLM-Lizenz, nicht mehr der MIT-Lizenz des Vorgängers GLM-5.2.",
+   "en": "An open model with 753 billion parameters and a one-million-token context, built for engineering work. Released under Z.AI's own GLM licence rather than the MIT licence its predecessor GLM-5.2 used."
   },
   "tip": {
-   "de": "Läuft mit genug Grafikspeicher auch auf eigener Hardware — anders als die ganz großen offenen Modelle noch im Bereich des Machbaren. Z.AIs Nachfolger GLM-5.3 ist inzwischen im GLM-Coding-Abo erhältlich, inzwischen ebenfalls als offene Gewichte (753 Milliarden Parameter, eigene GLM-Lizenz).",
-   "en": "With enough graphics memory it runs on your own hardware — unlike the very largest open models, this one is still within reach. Z.AI's successor GLM-5.3 is available through the GLM Coding plan, since also released as open weights (753 billion parameters, under a GLM licence of its own)."
+   "de": "Läuft mit genug Grafikspeicher auch auf eigener Hardware — anders als die ganz großen offenen Modelle noch im Bereich des Machbaren. Dieselbe Grundarchitektur wie GLM-5.2, mit deutlich stärkerem Programmieren und neu auftretenden Fähigkeiten bei der Sicherheitsanalyse; auch über das GLM-Coding-Abo erreichbar. Der Vorgänger GLM-5.2 bleibt unter MIT-Lizenz verfügbar.",
+   "en": "With enough graphics memory it runs on your own hardware too — unlike the very largest open models, this one is still within reach. Same base architecture as GLM-5.2, with markedly stronger coding and newly emergent security-analysis skills; also reachable through the GLM Coding plan. Predecessor GLM-5.2 stays available under the MIT licence."
   },
   "links": {
-   "home": "https://z.ai/blog/glm-5.2",
-   "docs": "https://docs.z.ai/guides/llm/glm-5.2",
-   "code": "https://huggingface.co/zai-org/GLM-5.2"
+   "home": "https://z.ai/blog/glm-5.3",
+   "docs": "https://docs.z.ai/guides/llm/glm-5.3",
+   "code": "https://huggingface.co/zai-org/GLM-5.3"
   },
   "free": true,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/glm-5-2",
+   "url": "https://artificialanalysis.ai/models/glm-5-3",
    "intel": {
-    "v": "53",
-    "rank": "#4/106",
-    "u": 4
+    "v": "45",
+    "rank": "#2/114"
    },
    "speed": {
-    "v": "67.1",
-    "rank": "#31/111",
-    "u": 4
+    "v": "60.7",
+    "rank": "#34/114"
    },
    "cost": {
     "v": "$1.40/$4.40",
-    "rank": "#28/106",
-    "u": 4
+    "rank": "#30/114"
    },
    "verb": {
-    "v": "140M",
-    "rank": "#30/106",
-    "u": 3
-   }
+    "v": "210M",
+    "rank": "#27/114"
+   },
+   "checked": "2026-09-23"
   },
   "plans": {
    "de": "API 1,40 $/4,40 $ pro 1M Token · gecachte Eingabe 0,26 $, der Cache-Speicher ist zeitlich begrenzt kostenlos · GLM-5.2 steckt auch im GLM-Coding-Abo",

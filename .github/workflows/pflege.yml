@@ -23,6 +23,10 @@ on:
         description: "Optional: what to look at this run (leave empty to let it choose)"
         required: false
         type: string
+      zugang:
+        description: "api or abo, for this run alone (empty = repository variable CLAUDE_ZUGANG)"
+        required: false
+        type: string
 
 jobs:
   upkeep:
@@ -35,40 +39,26 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # An opaque failure once cost an evening here: is_error true, one turn,
-      # zero cost, and no message anywhere in the log. So the key gets asked
-      # a question before the agent starts, and the answer goes into the log.
-      - name: Can the key reach the API
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          set -uo pipefail
-          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY is not set"; exit 1; }
-          code=$(curl -sS -o /tmp/anthropic.json -w '%{http_code}' \
-                 -H "x-api-key: $ANTHROPIC_API_KEY" \
-                 -H "anthropic-version: 2023-06-01" \
-                 https://api.anthropic.com/v1/models || echo 000)
-          echo "  GET /v1/models -> HTTP $code"
-          head -c 400 /tmp/anthropic.json; echo
-          test "$code" = "200" || { echo "The key cannot reach the API; see the body above."; exit 1; }
-
-          # Listing models costs nothing and answers 200 on an empty account
-          # too. Only a real completion says whether the key may still spend.
-          code=$(curl -sS -o /tmp/ping.json -w '%{http_code}' \
-                 -X POST https://api.anthropic.com/v1/messages \
-                 -H "x-api-key: $ANTHROPIC_API_KEY" \
-                 -H "anthropic-version: 2023-06-01" \
-                 -H "content-type: application/json" \
-                 -d '{"model":"claude-opus-5","max_tokens":1,"messages":[{"role":"user","content":"hi"}]}' || echo 000)
-          echo "  POST /v1/messages -> HTTP $code"
-          head -c 400 /tmp/ping.json; echo
-          test "$code" = "200" || { echo "The key reaches the API but may not spend; see the body above."; exit 1; }
+      # Who pays: the Console balance or the subscription. See
+      # .github/actions/claude-zugang, which also checks it before the run.
+      - name: Who pays, and can it
+        id: zugang
+        uses: ./.github/actions/claude-zugang
+        with:
+          wahl: ${{ inputs.zugang }}
+          variable: ${{ vars.CLAUDE_ZUGANG }}
+          api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          modell: claude-opus-5
 
       - name: Research and propose
         id: claude
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Exactly one of the two, the other stays empty: with both set the
+          # API key wins and the subscription never pays.
+          anthropic_api_key: ${{ steps.zugang.outputs.zugang == 'api' && secrets.ANTHROPIC_API_KEY || '' }}
+          claude_code_oauth_token: ${{ steps.zugang.outputs.zugang == 'abo' && secrets.CLAUDE_CODE_OAUTH_TOKEN || '' }}
           # Two failure modes met here. Pinning Bash to python3, git and gh
           # produced permission_denials_count 4 and no answer. Replacing the
           # whole list with bare Bash plus TodoWrite was worse: the run died
@@ -141,5 +131,5 @@ jobs:
         if: always()
         uses: ./.github/actions/kosten
         with:
-          agent: claude
+          agent: ${{ steps.zugang.outputs.zugang == 'abo' && 'claude-abo' || 'claude' }}
           execution: ${{ steps.claude.outputs.execution_file }}

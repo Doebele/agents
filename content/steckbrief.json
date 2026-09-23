@@ -220,7 +220,8 @@
    "docs": "https://docs.perplexity.ai/",
    "code": "https://github.com/perplexityai/modelcontextprotocol"
   },
-  "plansChecked": "2026-09-01"
+  "plansChecked": "2026-09-01",
+  "contentChecked": "2026-09-22"
  },
  "Internxt": {
   "name": "Internxt",
@@ -252,7 +253,8 @@
    "home": "https://internxt.com",
    "code": "https://github.com/internxt"
   },
-  "plansChecked": "2026-09-07"
+  "plansChecked": "2026-09-07",
+  "contentChecked": "2026-09-22"
  },
  "Obsidian": {
   "name": "Obsidian",
@@ -326,8 +328,8 @@
   "accent": "var(--ember)",
   "open": false,
   "blurb": {
-   "de": "Ein fertiges Programm, das du im Terminal startest und dem du in normaler Sprache aufträgst, was zu tun ist: Dateien lesen, Code ändern, Befehle ausführen. Wenn du später etwas Eigenes bauen willst, gibt es dieselbe Schleife als Baukasten im Agent SDK.",
-   "en": "A finished program you start in the terminal and instruct in plain language: read files, change code, run commands. If you later want to build your own, the same loop is available as a toolkit in the Agent SDK."
+   "de": "Ein fertiges Programm, dem du in normaler Sprache aufträgst, was zu tun ist: Dateien lesen, Code ändern, Befehle ausführen. Ursprünglich ein reines Terminal-Werkzeug, läuft es inzwischen auch als Desktop-App, in VS Code und JetBrains, im Browser und in Slack. Wenn du später etwas Eigenes bauen willst, gibt es dieselbe Schleife als Baukasten im Agent SDK.",
+   "en": "A finished program you instruct in plain language: read files, change code, run commands. Originally a pure terminal tool, it now also runs as a desktop app, inside VS Code and JetBrains, in the browser and in Slack. If you later want to build your own, the same loop is available as a toolkit in the Agent SDK."
   },
   "tip": {
    "de": "Im Projektordner starten und mit /init einen Projektkontext anlegen. Danach kennt der Agent deine Codebasis, ohne dass du sie jedes Mal erklärst.",
@@ -403,7 +405,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-22"
  },
  "Agent SDK": {
   "name": "Claude Agent SDK",
@@ -570,7 +573,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-22"
  },
  "Kimi Code": {
   "name": "Kimi Code",
@@ -582,8 +586,8 @@
   "accent": "var(--ember)",
   "open": true,
   "blurb": {
-   "de": "Moonshots Agent fürs Terminal: liest Code, führt Shell-Befehle aus und ruft Webseiten ab. Fertig nutzbar wie Claude Code, aber mit offenen Modellen im Rücken.",
-   "en": "Moonshot's terminal agent: reads code, runs shell commands and fetches web pages. Ready to use like Claude Code, but backed by open models."
+   "de": "Moonshots Agent für Code: liest Code, führt Shell-Befehle aus und ruft Webseiten ab. Läuft als Terminal-CLI, Desktop-App oder IDE-Plugin (VS Code, JetBrains, Zed) — fertig nutzbar wie Claude Code, aber mit offenen Modellen im Rücken.",
+   "en": "Moonshot's coding agent: reads code, runs shell commands and fetches web pages. Runs as a terminal CLI, desktop app or IDE plugin (VS Code, JetBrains, Zed) — ready to use like Claude Code, but backed by open models."
   },
   "tip": {
    "de": "Kommt mit sehr großem Kontext zurecht — du kannst lange Dateien komplett mitgeben, statt sie zu zerstückeln.",
@@ -629,7 +633,8 @@
   "plansJahr": {
    "de": "Adagio kostenlos · Moderato 15 $/Mo. (180 $/Jahr) · Allegretto 31 $/Mo. (372 $/Jahr) · Allegro 79 $/Mo. (948 $/Jahr) · Vivace 159 $/Mo. (1.908 $/Jahr) · K3-1M verzehrt rund 2× so viel Kontingent wie K3-256k · 300–1.200 Requests je 5 h · API 0,60 $/2,50 $ pro 1M Token",
    "en": "Adagio free · Moderato $15/mo ($180/yr) · Allegretto $31/mo ($372/yr) · Allegro $79/mo ($948/yr) · Vivace $159/mo ($1,908/yr) · K3-1M burns about 2× the quota of K3-256k · 300–1,200 requests per 5 h · API $0.60/$2.50 per 1M tokens"
-  }
+  },
+  "contentChecked": "2026-09-22"
  },
  "ZCode": {
   "name": "ZCode",
@@ -754,7 +759,8 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-22"
  },
  "Cursor": {
   "name": "Cursor",
@@ -819,8 +825,8 @@
   "accent": "var(--ember)",
   "open": true,
   "blurb": {
-   "de": "Ein quelloffener Agent, der aus seinen eigenen Durchläufen lernt und mit der Zeit mehr kann. Fertig nutzbar, aber erkennbar ein Forschungsprojekt und kein poliertes Produkt.",
-   "en": "An open-source agent that learns from its own runs and grows more capable over time. Ready to use, but visibly a research project rather than a polished product."
+   "de": "Ein quelloffener Agent, der aus seinen eigenen Durchläufen lernt und mit der Zeit mehr kann: Er merkt sich, wie er ein Problem gelöst hat, und legt sich daraus eigene Skills an. Läuft als Desktop-App oder angebunden an Messenger wie Telegram, Discord, Slack oder WhatsApp.",
+   "en": "An open-source agent that learns from its own runs and grows more capable over time: it remembers how it solved a problem and turns that into its own skills. Runs as a desktop app or hooked up to messengers like Telegram, Discord, Slack or WhatsApp."
   },
   "tip": {
    "de": "Interessant, wenn du sehen willst, wie ein Agent sich selbst Fähigkeiten beibringt. Für verlässliche Arbeit sind die etablierten Werkzeuge die ruhigere Wahl.",
@@ -840,7 +846,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-22"
  },
  "Odysseus": {
   "name": "Odysseus",
@@ -902,7 +909,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-22"
  },
  "LangGraph": {
   "name": "LangGraph",
@@ -1005,7 +1013,8 @@
    "abo"
   ],
   "plansChecked": "2026-09-10",
-  "icon": "crewai"
+  "icon": "crewai",
+  "contentChecked": "2026-09-22"
  },
  "Paperclip": {
   "name": "Paperclip",
@@ -1067,7 +1076,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-22"
  },
  "Google ADK": {
   "name": "Agent Development Kit",
@@ -1100,7 +1110,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-22"
  },
  "Qwen 3.6 / 3.8": {
   "name": "Qwen3",
@@ -1259,7 +1270,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-22"
  },
  "Llama 4": {
   "name": "Llama 4",
@@ -1414,7 +1426,8 @@
    "de": "Kostenlos, Open Source (MIT)",
    "en": "Free, open source (MIT)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-22"
  },
  "vLLM": {
   "name": "vLLM",
@@ -1443,7 +1456,8 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-22"
  },
  "SGLang": {
   "name": "SGLang",
@@ -1472,7 +1486,8 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-22"
  },
  "GPT Image 2": {
   "name": "GPT Image 2",
@@ -1663,7 +1678,8 @@
   "plansJahr": {
    "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 10 $/Mo. (120 $/Jahr) · Pro ab 2.000 Credits 16 $/Mo. · Teams ab 2.000 Credits 18 $/Mo.",
    "en": "Free (images public, Recraft owns the rights) · Basic 1,000 credits $10/mo ($120/yr) · Pro from 2,000 credits $16/mo · Teams from 2,000 credits $18/mo"
-  }
+  },
+  "contentChecked": "2026-09-22"
  },
  "Seedream": {
   "name": "Seedream",
@@ -1820,7 +1836,8 @@
   "plansJahr": {
    "de": "Gratis 125 Credits · Standard 12 $/Mo. bei Jahreszahlung · Pro 28 $/Mo. · Max 76 $/Mo. · Gen-4.5 kostet 12 Credits je Sekunde",
    "en": "Free 125 credits · Standard $12/mo billed annually · Pro $28/mo · Max $76/mo · Gen-4.5 costs 12 credits per second"
-  }
+  },
+  "contentChecked": "2026-09-22"
  },
  "Luma": {
   "name": "Luma",
@@ -1832,8 +1849,8 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "Dream Machine ist auf ruhige, weiche Bewegung getrimmt — Kamerafahrten und Schwenks wirken weniger zappelig als bei manchen Konkurrenten. Ein Standbild kann als Ausgangspunkt dienen.",
-   "en": "Dream Machine is tuned for calm, soft movement — dollies and pans come out less jittery than with some competitors. A still can serve as the starting point."
+   "de": "Luma erzeugt und bearbeitet Video über das hauseigene Ray-Modell (aktuell Ray 3.2) und legt den Schwerpunkt auf Regie-Kontrolle: Die Bewegung aus einer Vorlage lässt sich auf eine neue Szene übertragen, und Schnitte bleiben dabei in sich stimmig. Ein Standbild kann als Ausgangspunkt dienen. Der frühere Name „Dream Machine“ taucht auf der Seite selbst nicht mehr auf, in der API-Dokumentation aber noch.",
+   "en": "Luma generates and edits video through its in-house Ray model (currently Ray 3.2), with a focus on directorial control: motion from a reference clip can be transferred onto a new scene, and cuts stay consistent with each other. A still image can serve as the starting point. The earlier name „Dream Machine“ no longer appears on the marketing site itself, though it still does in the API documentation."
   },
   "tip": {
    "de": "Gut für ruhige Stimmungsbilder; bei schneller Action sind andere Modelle treffsicherer.",
@@ -1856,7 +1873,8 @@
   "plansJahr": {
    "de": "Plus 25 $/Mo. (300 $/Jahr) · Pro 75 $/Mo. (900 $/Jahr) · Ultra 250 $/Mo. (3.000 $/Jahr)",
    "en": "Plus $25/mo ($300/yr) · Pro $75/mo ($900/yr) · Ultra $250/mo ($3,000/yr)"
-  }
+  },
+  "contentChecked": "2026-09-22"
  },
  "Higgsfield": {
   "name": "Higgsfield",
@@ -2542,7 +2560,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-22"
  },
  "DeepSeek V4": {
   "name": "DeepSeek V4",
@@ -3895,7 +3914,8 @@
   "plansJahr": {
    "de": "12-Monats-Tarife: Starter erster Monat 0 €, dann 5 €/Mo. · Basic 1 €/Mo. für 12 Monate, dann 9 € · Plus erster Monat 0 €, dann 12 € · Pro erster Monat 0 €, dann 22 €/Mo. · Einrichtung 0 €",
    "en": "12-month terms: Starter first month €0, then €5/mo · Basic €1/mo for 12 months, then €9 · Plus first month €0, then €12 · Pro first month €0, then €22/mo · setup €0"
-  }
+  },
+  "contentChecked": "2026-09-22"
  },
  "IONOS": {
   "name": "IONOS",
@@ -3958,7 +3978,8 @@
    "home": "https://www.netlify.com"
   },
   "plansChecked": "2026-09-06",
-  "icon": "netlify"
+  "icon": "netlify",
+  "contentChecked": "2026-09-22"
  },
  "Vercel": {
   "name": "Vercel",
@@ -3989,7 +4010,8 @@
    "home": "https://vercel.com"
   },
   "plansChecked": "2026-09-21",
-  "icon": "vercel"
+  "icon": "vercel",
+  "contentChecked": "2026-09-22"
  },
  "Cloudflare Pages": {
   "name": "Cloudflare Pages",
@@ -4051,7 +4073,8 @@
    "home": "https://render.com"
   },
   "plansChecked": "2026-09-21",
-  "icon": "render"
+  "icon": "render",
+  "contentChecked": "2026-09-22"
  },
  "Coolify": {
   "name": "Coolify",
@@ -4144,7 +4167,8 @@
   "plansChecked": "2026-09-10",
   "links": {
    "home": "https://fireworks.ai"
-  }
+  },
+  "contentChecked": "2026-09-22"
  },
  "Groq": {
   "name": "Groq",

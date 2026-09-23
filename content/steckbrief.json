@@ -1141,18 +1141,22 @@
    "url": "https://artificialanalysis.ai/models/qwen3-8-max",
    "intel": {
     "v": "45",
-    "rank": "#24/212"
+    "rank": "#24/212",
+    "u": 4
    },
    "speed": {
     "v": "39.3",
-    "rank": "#160/212"
+    "rank": "#160/212",
+    "u": 1
    },
    "cost": {
-    "v": "$2/$6"
+    "v": "$2/$6",
+    "u": 4
    },
    "verb": {
     "v": "190M",
-    "rank": "#88/212"
+    "rank": "#88/212",
+    "u": 4
    },
    "checked": "2026-09-23"
   },
@@ -1193,19 +1197,23 @@
    "url": "https://artificialanalysis.ai/models/gpt-oss-120b",
    "intel": {
     "v": "12",
-    "rank": "#9/65"
+    "rank": "#9/65",
+    "u": 4
    },
    "speed": {
     "v": "184.1",
-    "rank": "#2/65"
+    "rank": "#2/65",
+    "u": 4
    },
    "cost": {
     "v": "$0.15/$0.595",
-    "rank": "#3/65"
+    "rank": "#3/65",
+    "u": 2
    },
    "verb": {
     "v": "84M",
-    "rank": "#4/65"
+    "rank": "#4/65",
+    "u": 2
    },
    "checked": "2026-09-23"
   },
@@ -1244,19 +1252,23 @@
    "url": "https://artificialanalysis.ai/models/mistral-large-3",
    "intel": {
     "v": "9",
-    "rank": "#27/44"
+    "rank": "#27/44",
+    "u": 2
    },
    "speed": {
     "v": "76.7",
-    "rank": "#5/44"
+    "rank": "#5/44",
+    "u": 4
    },
    "cost": {
     "v": "$0.50/$1.50",
-    "rank": "#2/44"
+    "rank": "#2/44",
+    "u": 2
    },
    "verb": {
     "v": "9.8M",
-    "rank": "#3/44"
+    "rank": "#3/44",
+    "u": 4
    },
    "checked": "2026-09-23"
   },
@@ -1299,14 +1311,17 @@
    "url": "https://artificialanalysis.ai/models/llama-4-maverick",
    "intel": {
     "v": "10",
-    "rank": "#24/44"
+    "rank": "#24/44",
+    "u": 2
    },
    "speed": {
     "v": "112.7",
-    "rank": "#2/44"
+    "rank": "#2/44",
+    "u": 4
    },
    "cost": {
-    "v": "$0.26/$0.91"
+    "v": "$0.26/$0.91",
+    "u": 2
    },
    "checked": "2026-09-23"
   },
@@ -2235,19 +2250,23 @@
    "url": "https://artificialanalysis.ai/models/gpt-6-astra",
    "intel": {
     "v": "53",
-    "rank": "#6/212"
+    "rank": "#6/212",
+    "u": 4
    },
    "speed": {
     "v": "52.5",
-    "rank": "#133/212"
+    "rank": "#133/212",
+    "u": 1
    },
    "cost": {
     "v": "$10/$50",
-    "rank": "#82/212"
+    "rank": "#82/212",
+    "u": 4
    },
    "verb": {
     "v": "60M",
-    "rank": "#36/212"
+    "rank": "#36/212",
+    "u": 2
    },
    "checked": "2026-09-23"
   },
@@ -2290,15 +2309,18 @@
    "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
    "intel": {
     "v": "58",
-    "rank": "#1/212"
+    "rank": "#1/212",
+    "u": 4
    },
    "cost": {
     "v": "$4/$20",
-    "rank": "#93/212"
+    "rank": "#93/212",
+    "u": 4
    },
    "verb": {
     "v": "260M",
-    "rank": "#95/212"
+    "rank": "#95/212",
+    "u": 4
    },
    "checked": "2026-09-23"
   },
@@ -2340,19 +2362,23 @@
    "url": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
    "intel": {
     "v": "30",
-    "rank": "#81/212"
+    "rank": "#81/212",
+    "u": 3
    },
    "speed": {
     "v": "121.7",
-    "rank": "#34/212"
+    "rank": "#34/212",
+    "u": 4
    },
    "cost": {
     "v": "$2/$12",
-    "rank": "#31/212"
+    "rank": "#31/212",
+    "u": 2
    },
    "verb": {
     "v": "67M",
-    "rank": "#39/212"
+    "rank": "#39/212",
+    "u": 2
    },
    "checked": "2026-09-23"
   },
@@ -2399,19 +2425,23 @@
    "url": "https://artificialanalysis.ai/models/grok-4-7",
    "intel": {
     "v": "46",
-    "rank": "#21/212"
+    "rank": "#21/212",
+    "u": 4
    },
    "speed": {
     "v": "39.8",
-    "rank": "#156/212"
+    "rank": "#156/212",
+    "u": 1
    },
    "cost": {
     "v": "$2/$6",
-    "rank": "#85/212"
+    "rank": "#85/212",
+    "u": 4
    },
    "verb": {
     "v": "240M",
-    "rank": "#94/212"
+    "rank": "#94/212",
+    "u": 4
    },
    "checked": "2026-09-23"
   },
@@ -2454,18 +2484,22 @@
    "url": "https://artificialanalysis.ai/models/qwen3-8-max",
    "intel": {
     "v": "45",
-    "rank": "#24/212"
+    "rank": "#24/212",
+    "u": 4
    },
    "speed": {
     "v": "39.3",
-    "rank": "#160/212"
+    "rank": "#160/212",
+    "u": 1
    },
    "cost": {
-    "v": "$2/$6"
+    "v": "$2/$6",
+    "u": 4
    },
    "verb": {
     "v": "190M",
-    "rank": "#88/212"
+    "rank": "#88/212",
+    "u": 4
    },
    "checked": "2026-09-23"
   },
@@ -2507,19 +2541,23 @@
    "url": "https://artificialanalysis.ai/models/kimi-k3",
    "intel": {
     "v": "44",
-    "rank": "#3/114"
+    "rank": "#3/114",
+    "u": 4
    },
    "speed": {
     "v": "36.7",
-    "rank": "#55/114"
+    "rank": "#55/114",
+    "u": 1
    },
    "cost": {
     "v": "$3/$15",
-    "rank": "#29/114"
+    "rank": "#29/114",
+    "u": 4
    },
    "verb": {
     "v": "160M",
-    "rank": "#20/114"
+    "rank": "#20/114",
+    "u": 3
    },
    "checked": "2026-09-23"
   },
@@ -2562,19 +2600,23 @@
    "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
    "intel": {
     "v": "39",
-    "rank": "#7/114"
+    "rank": "#7/114",
+    "u": 4
    },
    "speed": {
     "v": "232.3",
-    "rank": "#2/114"
+    "rank": "#2/114",
+    "u": 4
    },
    "cost": {
     "v": "$0.30/$1.20",
-    "rank": "#16/114"
+    "rank": "#16/114",
+    "u": 2
    },
    "verb": {
     "v": "250M",
-    "rank": "#32/114"
+    "rank": "#32/114",
+    "u": 4
    },
    "checked": "2026-09-23"
   },
@@ -2615,19 +2657,23 @@
    "url": "https://artificialanalysis.ai/models/glm-5-3",
    "intel": {
     "v": "45",
-    "rank": "#2/114"
+    "rank": "#2/114",
+    "u": 4
    },
    "speed": {
     "v": "60.7",
-    "rank": "#34/114"
+    "rank": "#34/114",
+    "u": 2
    },
    "cost": {
     "v": "$1.40/$4.40",
-    "rank": "#30/114"
+    "rank": "#30/114",
+    "u": 4
    },
    "verb": {
     "v": "210M",
-    "rank": "#27/114"
+    "rank": "#27/114",
+    "u": 4
    },
    "checked": "2026-09-23"
   },

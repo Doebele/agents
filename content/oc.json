@@ -12,8 +12,8 @@
   },
   {
    "v": "Z.AI",
-   "m": "GLM-5.2",
-   "key": "GLM-5.2"
+   "m": "GLM-5.3",
+   "key": "GLM-5.3"
   },
   {
    "v": "Alibaba",
@@ -49,8 +49,8 @@
   },
   {
    "v": "Anthropic",
-   "m": "Claude Opus 5",
-   "key": "Claude Opus 5 / Sonnet 5"
+   "m": "Claude Opus 5.5",
+   "key": "Claude Opus 5.5 / Sonnet 5"
   },
   {
    "v": "Google",
@@ -58,9 +58,9 @@
    "key": "Gemini 3.1 Pro"
   },
   {
-   "v": "xAI",
-   "m": "Grok 4.6",
-   "key": "Grok 4.6"
+   "v": "SpaceXAI",
+   "m": "Grok 4.7",
+   "key": "Grok 4.7"
   },
   {
    "v": "Alibaba",

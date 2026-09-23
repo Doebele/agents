@@ -464,6 +464,14 @@ refresh values and ranks, and bump `checked` even when nothing moved. The
 table also grows new agents and model configurations — when one appears
 that this catalogue carries, add its row; when AA drops one, remove it.
 
+The `aa` block on a model's own fact sheet — intelligence, speed, cost,
+verbosity, each with a rank — rots the same way and now carries the same
+`checked`. Read AA's model page, refresh values and ranks, and set
+`checked` to the day you read it, even where nothing moved. Where AA lists
+a newer model of the same line, raise the fact sheet onto it: `name`,
+`blurb`, `tip`, `aa.url` and the values move together, so the sheet never
+describes one generation while showing another's numbers.
+
 ## What counts as a declared gap
 
 Item three of that list means two places, not one.

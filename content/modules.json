@@ -29,9 +29,9 @@
       "k": "GPT-6 Astra"
      },
      {
-      "n": "Claude Opus 5 / Sonnet 5",
+      "n": "Claude Opus 5.5 / Sonnet 5",
       "v": "Anthropic",
-      "k": "Claude Opus 5 / Sonnet 5"
+      "k": "Claude Opus 5.5 / Sonnet 5"
      },
      {
       "n": "Gemini 3.1 Pro",
@@ -39,9 +39,9 @@
       "k": "Gemini 3.1 Pro"
      },
      {
-      "n": "Grok 4.6",
-      "v": "xAI",
-      "k": "Grok 4.6"
+      "n": "Grok 4.7",
+      "v": "SpaceXAI",
+      "k": "Grok 4.7"
      },
      {
       "n": "Qwen3.8-Max",
@@ -67,9 +67,9 @@
       "k": "DeepSeek V4"
      },
      {
-      "n": "GLM-5.2",
+      "n": "GLM-5.3",
       "v": "Z.AI",
-      "k": "GLM-5.2"
+      "k": "GLM-5.3"
      },
      {
       "n": "Qwen 3.6 / 3.8",

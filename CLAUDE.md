@@ -544,6 +544,24 @@ coding endpoint (`api.kimi.ai/coding`, `api.kimi.com/coding`). A key from
 platform.kimi.ai or moonshot.cn is a different thing and was the reason this
 agent stood still from August to September.
 
+Z.AI splits the same way, and which pot pays depends on the endpoint a request
+is sent to. The GLM Coding Plan answers on `api.z.ai/api/coding/paas/v4`;
+pay-per-token answers on `api.z.ai/api/paas/v4`. Sent to the wrong one, a Coding
+Plan request gets HTTP 429 with code 1113, "Insufficient balance or no resource
+package" — which reads like an empty account and is in fact the wrong door.
+
+The workflows used to hard-wire the pay-per-token door. When that balance ran
+out on 22 September, every Z.AI run died inside its first minute, before the
+agent could say a word, and two issues addressed to `@zai` sat unanswered.
+`build/zai_zugang.py` now tries the Coding Plan door first and pay-per-token
+second, and the log names which pot paid. It also picks the full model before
+its smaller siblings; the old reverse text sort put `glm-5.3-flashx` ahead of
+`glm-5.3`.
+
+```bash
+python3 build/zai_zugang.py --selbsttest
+```
+
 ## "As of August 2026"
 
 That line is a maintenance promise, not a timestamp. It is the reason this

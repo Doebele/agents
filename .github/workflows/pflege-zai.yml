@@ -100,11 +100,8 @@ jobs:
           test -x "$HOME/.kimi-code/bin/kimi" || {
             echo "kimi binary not where expected; installer output above"; exit 1; }
 
-      # Same shape as the Kimi run: probe first, write config after. Z.AI does
-      # not advertise OpenAI compatibility in so many words, but it serves
-      # chat completions under /api/paas/v4, which is the shape the CLI's
-      # `openai` provider type speaks. If that turns out wrong, the probe says
-      # so in the log rather than failing three steps later.
+      # Same shape as the Kimi run: probe first, write config after. Both Z.AI
+      # doors speak the OpenAI shape the CLI's `openai` provider expects.
       - name: Credentials and model into config.toml
         env:
           ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
@@ -113,47 +110,17 @@ jobs:
           set -euo pipefail
           test -n "$ZAI_API_KEY" || { echo "ZAI_API_KEY is not set"; exit 1; }
 
-          BASE="https://api.z.ai/api/paas/v4"
-          echo "--- probing $BASE/models"
-          code=$(curl -sS -o /tmp/models.json -w '%{http_code}' \
-                 -H "Authorization: Bearer $ZAI_API_KEY" "$BASE/models" || echo 000)
-          echo "    HTTP $code"
-          head -c 300 /tmp/models.json; echo
-
-          # /models lists what the API knows, not what this key may use.
-          # A first run picked the newest and got "403 You do not have
-          # permission to access glm-5.3". So each candidate gets a one-token
-          # completion, newest first, and the first that answers 200 wins.
-          if [ "$code" = "200" ]; then
-            KANDIDATEN=$(python3 -c '
-          import json, os, sys
-          ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
-          print("Listed:", ", ".join(ids), file=sys.stderr)
-          want = os.environ.get("ZAI_MODEL") or ""
-          if want:
-              print(want)
-          else:
-              glm = sorted([i for i in ids if i.lower().startswith("glm")], reverse=True)
-              print("\n".join(glm or ids))
-          ')
-            MODEL=""
-            for m in $KANDIDATEN; do
-              rc=$(curl -sS -o /tmp/probe.json -w '%{http_code}' \
-                   -H "Authorization: Bearer $ZAI_API_KEY" \
-                   -H "Content-Type: application/json" \
-                   -d "{\"model\":\"$m\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":1}" \
-                   "$BASE/chat/completions" || echo 000)
-              echo "    $m → HTTP $rc"
-              if [ "$rc" = "200" ]; then MODEL="$m"; break; fi
-            done
-            test -n "$MODEL" || { echo "None of the listed models is usable with this key."; \
-                                  head -c 300 /tmp/probe.json; exit 1; }
-          else
-            echo "    no model list; falling back to the documented example id"
-            MODEL="${ZAI_MODEL:-glm-4.6}"
-          fi
-          test -n "$MODEL" || { echo "No model could be chosen."; exit 1; }
-          echo "Using model: $MODEL"
+          # Which door the key opens is not assumed: build/zai_zugang.py tries the
+          # Coding Plan endpoint first, then pay-per-token, and says which pot
+          # pays. The step used to hard-wire /api/paas/v4 — the pay-per-token
+          # door — a Coding Plan, where there is one, never got asked, and once
+          # the balance ran dry every run died on code 1113.
+          #
+          # Not eval "$(…)": under set -e a failing substitution inside eval
+          # goes unnoticed. The assignment on its own line fails the step.
+          ZUGANG=$(python3 build/zai_zugang.py)
+          eval "$ZUGANG"
+          echo "Using model: $ZAI_MODELL ($ZAI_TOPF)"
 
           mkdir -p "$HOME/.kimi-code"
           cat > "$HOME/.kimi-code/config.toml" <<TOML
@@ -163,12 +130,12 @@ jobs:
 
           [providers.zai]
           type = "openai"
-          base_url = "$BASE"
+          base_url = "$ZAI_BASE"
           api_key = "$ZAI_API_KEY"
 
           [models.upkeep]
           provider = "zai"
-          model = "$MODEL"
+          model = "$ZAI_MODELL"
           max_context_size = 131072
           TOML
           chmod 600 "$HOME/.kimi-code/config.toml"

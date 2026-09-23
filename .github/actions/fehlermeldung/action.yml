@@ -1,0 +1,46 @@
+# Wenn ein Agentenlauf scheitert, der aus einem Issue kam: den Grund dorthin.
+#
+# Ein unbeantwortetes Issue sieht aus wie ein kaputter Agent. Am 23. September
+# standen drei Auftraege gleichzeitig stumm da, weil jeder Lauf abbrach, bevor
+# der Agent ein Wort schreiben konnte. Dieser Schritt schreibt an seiner Stelle:
+# welcher Schritt riss, der Link aufs Log, und — wo es einen gibt — der Grund.
+#
+# Gedacht als letzter Schritt eines Jobs, mit
+#
+#   if: failure() && (github.event.issue.number || github.event.pull_request.number)
+#
+# Ein Schritt, der den Grund kennt, legt ihn in $RUNNER_TEMP/fehlergrund.txt ab;
+# der wird mitzitiert. Bei Claude liest der Schritt ausserdem das execution_file.
+#
+# Braucht `actions: read` (um den gescheiterten Schritt zu finden) und
+# `issues: write`. Scheitert selbst nie laut: der Lauf ist schon rot, ein
+# zweiter Fehler wuerde den ersten nur verdecken.
+name: Scheitern im Issue melden
+description: Schreibt Schritt, Log-Link und Grund eines gescheiterten Agentenlaufs in das Issue, aus dem er kam
+
+inputs:
+  agent:
+    description: "Anzeigename: Claude · Gemini · Z.AI · Kimi"
+    required: true
+  execution:
+    description: "execution_file von claude-code-action, falls vorhanden"
+    required: false
+    default: ""
+  github-token:
+    description: "Token, unter dessen Namen der Kommentar erscheint; leer heisst github.token"
+    required: false
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Grund ins Issue schreiben
+      shell: bash
+      env:
+        AGENT: ${{ inputs.agent }}
+        EXECUTION: ${{ inputs.execution }}
+        # Lesen mit dem eingebauten Token, das `actions: read` hat; schreiben
+        # unter dem Namen des Agenten, wenn er eine eigene App hat.
+        GH_TOKEN_LESEN: ${{ github.token }}
+        GH_TOKEN_SCHREIBEN: ${{ inputs.github-token || github.token }}
+      run: python3 "$GITHUB_WORKSPACE/build/fehlermeldung.py" || true

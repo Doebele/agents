@@ -44,6 +44,8 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
+      # Read the run's own jobs, so a failure report can name the step that broke.
+      actions: read
       id-token: write
     env:
       APP_ID: ${{ secrets.GEMINI_APP_ID }}
@@ -207,3 +209,13 @@ jobs:
         with:
           agent: gemini
           telemetrie: /tmp/gemini-telemetrie.log
+
+      # Last, and only when something broke on an order from an issue: say so
+      # in that issue. The agent never gets to when the run dies before it
+      # starts, and an unanswered issue looks exactly like a broken agent.
+      - name: Scheitern im Issue melden
+        if: failure() && github.event.issue.number
+        uses: ./.github/actions/fehlermeldung
+        with:
+          agent: Gemini
+          github-token: ${{ steps.app.outputs.token }}

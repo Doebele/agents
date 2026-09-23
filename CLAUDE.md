@@ -535,6 +535,26 @@ want and usually not. Whoever is addressed answers in the thread when it is
 done — an issue left unanswered is indistinguishable from a broken agent,
 and that mistake has already cost four days here.
 
+A run that dies answers too. The agent cannot say anything when the run breaks
+before it starts or cuts it off mid-sentence, so the last step of all four
+mention workflows, `.github/actions/fehlermeldung`, does it instead: which step
+broke, a link to that job's log, and the reason where one is known. On 23
+September three orders sat silent at once — one to Z.AI dead on code 1113 in
+its first minute, two to Claude cut off in the same second after nine — and the
+only sign was that nothing happened.
+
+A step that knows why it failed leaves the reason in
+`$RUNNER_TEMP/fehlergrund.txt`; the report quotes it. The key check in
+`zuruf.yml` does, which is why it now runs after the checkout: an empty API
+balance fails right there, and the report needs the repository to exist. That
+balance is the one in the Console, not the one in the Claude app — two separate
+pots behind two identical-looking "balance" labels, and the report says so when
+the API's answer names it.
+
+```bash
+python3 build/fehlermeldung.py --selbsttest
+```
+
 Kimi also takes orders through Telegram, routed as `repository_dispatch`.
 
 Kimi runs on the Kimi Code membership, not on the developer platform. The two

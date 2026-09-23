@@ -57,7 +57,7 @@ HINWEISE = [
     # ebenfalls als authentication_error.
     (r"oauth",
      "Das **Abo-Token** fehlt oder wird nicht angenommen. Neu erzeugen mit "
-     "`claude setup-token` (nur mit Pro oder Max) und als Secret "
+     "`claude setup-token` (mit einem Claude-Abo; gilt ein Jahr) und als Secret "
      "`CLAUDE_CODE_OAUTH_TOKEN` hinterlegen."),
     (r"invalid x-api-key|authentication_error|invalid api key",
      "Der Schlüssel wird nicht angenommen — abgelaufen, widerrufen oder falsch hinterlegt."),

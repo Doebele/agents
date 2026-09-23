@@ -578,7 +578,7 @@ the `zugang` input for a manual run. Plain `@claude` follows the variable.
   Admin API in `kosten.yml` can say how much.
 - **abo** draws on the Claude subscription through `CLAUDE_CODE_OAUTH_TOKEN`,
   which `claude setup-token` generates on a machine where Claude Code is
-  signed in — Pro or Max only. No bill per run, but the runs share the
+  signed in and valid for a year — any Claude subscription (Pro, Max, Team, Enterprise). No bill per run, but the runs share the
   subscription's usage windows with everything else done on that account.
 
 `.github/actions/claude-zugang` chooses, checks and hands on the word, never

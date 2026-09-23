@@ -2677,6 +2677,206 @@
   "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-12"
  },
+ "Muse Spark 1.3": {
+  "name": "Muse Spark 1.3",
+  "vendor": "Meta",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "Metas erster Schritt weg von den offenen Llama-Gewichten: ein nativ multimodales Modell mit Werkzeugnutzung, sichtbarer Gedankenkette und mehreren zusammenarbeitenden Agenten, entwickelt von den neu gegründeten Meta Superintelligence Labs. Stark bei alltäglicher Wahrnehmung, allgemeinen Fragen und Gesundheitsthemen; bei langwierigen Agentenaufgaben und beim Programmieren räumt Meta selbst noch Lücken ein. Der Haken: Es gibt bislang keine offene API — erreichbar ist es nur über meta.ai und die Meta-AI-App, während der Entwicklerzugang als private Vorschau für ausgewählte Nutzer läuft.",
+   "en": "Meta's first step away from open Llama weights: a natively multimodal model with tool use, visible chain of thought and multi-agent orchestration, built by the newly formed Meta Superintelligence Labs. Strong at everyday perception, general questions and health topics; Meta itself admits gaps in long-running agent work and coding. The catch: there's no open API yet — it's only reachable through meta.ai and the Meta AI app, while developer access runs as a private preview for selected users."
+  },
+  "tip": {
+   "de": "Kein Kandidat für eigene Projekte, solange der API-Zugang privat bleibt — dafür bleiben die anderen Modelle hier die Wahl. Zum Ausprobieren reicht die Meta-AI-App oder meta.ai.",
+   "en": "Not a candidate for your own projects while API access stays private — the other models here remain the choice for that. For trying it out, the Meta AI app or meta.ai is enough."
+  },
+  "links": {
+   "home": "https://ai.meta.com/blog/introducing-muse-spark-msl/"
+  },
+  "icon": "meta",
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/muse-spark-1-3",
+   "intel": {
+    "v": "48",
+    "rank": "#17/212",
+    "u": 4
+   },
+   "speed": {
+    "v": "223.0",
+    "rank": "#7/212",
+    "u": 4
+   },
+   "cost": {
+    "v": "$1.25/$4.25",
+    "rank": "#62/212",
+    "u": 3
+   },
+   "verb": {
+    "v": "170M",
+    "rank": "#79/212",
+    "u": 4
+   },
+   "checked": "2026-09-23"
+  }
+ },
+ "MiMo-V2.6-Pro": {
+  "name": "MiMo-V2.6-Pro",
+  "vendor": "Xiaomi",
+  "cat": {
+   "de": "Open-Weight · Baustein 01",
+   "en": "Open-weight · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": true,
+  "blurb": {
+   "de": "Offenes Modell mit rund einer Billion Parametern (Mixture-of-Experts, davon etwa 42 Milliarden pro Anfrage aktiv), MIT-lizenziert und damit frei nutzbar, auch kommerziell. Verarbeitet Text, Bild, Video und Ton bei einer Million Token Kontext und steht laut Artificial Analysis aktuell vor allen anderen offenen Modellen bei der Intelligenz. Der Haken: Für den Eigenbetrieb braucht es entsprechend große Hardware — für die meisten ist ein Hoster der realistischere Weg als der eigene Rechner.",
+   "en": "An open model with roughly one trillion parameters (mixture-of-experts, about 42 billion active per request), MIT licensed and so free to use, commercially too. Handles text, image, video and audio at a one-million-token context and, per Artificial Analysis, currently leads every other open model on intelligence. The catch: running it yourself needs correspondingly large hardware — for most people a hosting provider is the realistic route, not their own machine."
+  },
+  "tip": {
+   "de": "Wenn offene Gewichte und Spitzenleistung beide zählen, aktuell die erste Adresse unter den offenen Modellen — noch vor Kimi K3 auf der Intelligenz-Rangliste von AA. Über die API kostet das Token-Paar 0,44 $ Eingabe / 0,87 $ Ausgabe pro Million.",
+   "en": "When open weights and top-tier performance both matter, this is currently the first stop among open models — ahead of Kimi K3 on AA's intelligence ranking. Through the API the token pair costs $0.44 input / $0.87 output per million."
+  },
+  "links": {
+   "home": "https://mimo.mi.com/models/en-US/mimo-v2.6-pro",
+   "code": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+  },
+  "icon": "xiaomi",
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+   "intel": {
+    "v": "46",
+    "rank": "#1/114",
+    "u": 4
+   },
+   "speed": {
+    "v": "53.9",
+    "rank": "#42/114",
+    "u": 2
+   },
+   "cost": {
+    "v": "$0.44/$0.87",
+    "rank": "#12/114",
+    "u": 2
+   },
+   "verb": {
+    "v": "140M",
+    "rank": "#18/114",
+    "u": 3
+   },
+   "checked": "2026-09-23"
+  },
+  "plans": {
+   "de": "API pro 1M Token: 0,435 $ Eingabe (0,0036 $ bei Cache-Treffer) / 0,87 $ Ausgabe · Open-Weight unter MIT-Lizenz, selbst hostbar",
+   "en": "API per 1M tokens: $0.435 input ($0.0036 on a cache hit) / $0.87 output · open-weight under the MIT licence, self-hostable"
+  },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-09-23"
+ },
+ "Step 5 Preview": {
+  "name": "Step 5 Preview",
+  "vendor": "StepFun",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "StepFuns neues Flaggschiff für reale Aufgaben, mit Schwerpunkt auf Programmieren und Wissensarbeit. Verarbeitet nativ Text, Bild und Video bei einer Million Token Kontext und hält laut Artificial Analysis mit deutlich teureren Modellen mit. Der Haken: Schon der Name sagt es — StepFun führt es selbst als „Preview\", die Gewichte sind bislang nicht offen, erreichbar ist es nur über die API.",
+   "en": "StepFun's new flagship for real-world tasks, with a focus on programming and knowledge work. Natively handles text, image and video at a one-million-token context and, per Artificial Analysis, keeps pace with markedly pricier models. The catch is in the name — StepFun itself labels it a \"preview\", the weights aren't open yet, and it's reachable only through the API."
+  },
+  "tip": {
+   "de": "Günstig für seine Klasse und über eine OpenAI-kompatible API leicht einzubinden — ein Kandidat, wenn das Budget knapp ist und die Aufgabe Programmieren oder Dokumente heißt. Noch ohne die Erfahrung etablierter Anbieter wie OpenAI oder Anthropic.",
+   "en": "Inexpensive for its class and easy to plug in through an OpenAI-compatible API — worth a look when budget is tight and the task is coding or documents. It doesn't yet carry the track record of an established vendor like OpenAI or Anthropic."
+  },
+  "links": {
+   "home": "https://www.stepfun.com/step-5-preview",
+   "docs": "https://platform.stepfun.com/docs/zh/guides/models/step-5-preview"
+  },
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/step-5",
+   "intel": {
+    "v": "44",
+    "rank": "#32/212",
+    "u": 4
+   },
+   "speed": {
+    "v": "83.6",
+    "rank": "#68/212",
+    "u": 3
+   },
+   "cost": {
+    "v": "$1/$2.70",
+    "rank": "#33/212",
+    "u": 2
+   },
+   "verb": {
+    "v": "160M",
+    "rank": "#75/212",
+    "u": 4
+   },
+   "checked": "2026-09-23"
+  }
+ },
+ "GPT-5.6 Terra": {
+  "name": "GPT-5.6 Terra",
+  "vendor": "OpenAI",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "blurb": {
+   "de": "Die mittlere Stufe von OpenAIs GPT-5.6-Reihe, angesiedelt zwischen dem knapperen Luna und dem teureren Flaggschiff Sol — OpenAI selbst nennt es ungefähr das, was frühere GPT-5-Generationen „Mini\" nannten. 1,05 Millionen Token Kontext, bis zu 128.000 Token Ausgabe. Der Haken: Das ist nicht dieselbe Reihe wie das neuere GPT-6 Astra, das dieser Katalog bereits führt — wer OpenAIs aktuelles Flaggschiff sucht, findet es dort; Terra ist die günstigere Zwischenstufe der Generation davor.",
+   "en": "The middle tier of OpenAI's GPT-5.6 line, sitting between the leaner Luna and the pricier flagship Sol — OpenAI itself describes it as roughly what earlier GPT-5 generations called \"mini\". 1.05 million token context, up to 128,000 tokens of output. The catch: this isn't the same line as the newer GPT-6 Astra already in this catalogue — anyone after OpenAI's current flagship will find it there; Terra is the cheaper middle tier of the generation before it."
+  },
+  "tip": {
+   "de": "Sinnvoll, wenn GPT-6 Astra zu teuer ist, aber GPT-5.6 Luna zu wenig kann — die Zwischenstufe für alltägliches Programmieren und Schlussfolgern. Wissensstand 16. Februar 2026.",
+   "en": "Worth it when GPT-6 Astra costs too much but GPT-5.6 Luna isn't capable enough — the middle step for everyday coding and reasoning. Knowledge cutoff 16 February 2026."
+  },
+  "links": {
+   "home": "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+  },
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/gpt-5-6-terra",
+   "intel": {
+    "v": "42",
+    "rank": "#38/212",
+    "u": 4
+   },
+   "speed": {
+    "v": "82.7",
+    "rank": "#71/212",
+    "u": 3
+   },
+   "cost": {
+    "v": "$2/$12",
+    "rank": "#57/212",
+    "u": 3
+   },
+   "verb": {
+    "v": "120M",
+    "rank": "#65/212",
+    "u": 3
+   },
+   "checked": "2026-09-23"
+  },
+  "plans": {
+   "de": "API 2 $ Eingabe / 12 $ Ausgabe pro 1M Token, gecachte Eingabe 0,20 $ · 1,05 Mio. Token Kontext, bis 128.000 Token Ausgabe",
+   "en": "API $2 input / $12 output per 1M tokens, cached input $0.20 · 1.05M token context, up to 128,000 tokens of output"
+  },
+  "billing": [
+   "api"
+  ],
+  "plansChecked": "2026-09-23"
+ },
  "Anthropic Agent Skills": {
   "name": "Anthropic Agent Skills",
   "vendor": "Anthropic",

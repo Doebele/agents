@@ -36,6 +36,11 @@ jobs:
       id-token: write
       actions: write
     steps:
+      # First, before anything can fail: the failure report at the end is an
+      # action from this repository and cannot start without a checkout. The
+      # key check below is exactly where an empty API balance shows up.
+      - uses: actions/checkout@v5
+
       # An opaque failure once cost an evening here: is_error true, one turn,
       # zero cost, and no message anywhere in the log. So the key gets asked
       # a question before the agent starts, and the answer goes into the log.
@@ -44,14 +49,19 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           set -uo pipefail
-          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY is not set"; exit 1; }
+          # Whatever makes this step fail is also left for the failure report,
+          # which quotes it in the issue — the API's own words, not a guess.
+          melde() { { echo "$1"; head -c 400 "$2" 2>/dev/null; } > "$RUNNER_TEMP/fehlergrund.txt"; }
+          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY is not set"; \
+            echo "ANTHROPIC_API_KEY is not set" > "$RUNNER_TEMP/fehlergrund.txt"; exit 1; }
           code=$(curl -sS -o /tmp/anthropic.json -w '%{http_code}' \
                  -H "x-api-key: $ANTHROPIC_API_KEY" \
                  -H "anthropic-version: 2023-06-01" \
                  https://api.anthropic.com/v1/models || echo 000)
           echo "  GET /v1/models -> HTTP $code"
           head -c 400 /tmp/anthropic.json; echo
-          test "$code" = "200" || { echo "The key cannot reach the API; see the body above."; exit 1; }
+          test "$code" = "200" || { echo "The key cannot reach the API; see the body above."; \
+            melde "GET /v1/models -> HTTP $code" /tmp/anthropic.json; exit 1; }
 
           # Listing models costs nothing and answers 200 on an empty account
           # too. Only a real completion says whether the key may still spend.
@@ -63,9 +73,8 @@ jobs:
                  -d '{"model":"claude-opus-5","max_tokens":1,"messages":[{"role":"user","content":"hi"}]}' || echo 000)
           echo "  POST /v1/messages -> HTTP $code"
           head -c 400 /tmp/ping.json; echo
-          test "$code" = "200" || { echo "The key reaches the API but may not spend; see the body above."; exit 1; }
-
-      - uses: actions/checkout@v5
+          test "$code" = "200" || { echo "The key reaches the API but may not spend; see the body above."; \
+            melde "POST /v1/messages -> HTTP $code" /tmp/ping.json; exit 1; }
 
       - id: claude
         uses: anthropics/claude-code-action@v1
@@ -104,4 +113,11 @@ jobs:
         uses: ./.github/actions/kosten
         with:
           agent: claude
+          execution: ${{ steps.claude.outputs.execution_file }}
+
+      - name: Scheitern im Issue melden
+        if: failure() && (github.event.issue.number || github.event.pull_request.number)
+        uses: ./.github/actions/fehlermeldung
+        with:
+          agent: Claude
           execution: ${{ steps.claude.outputs.execution_file }}

@@ -577,9 +577,10 @@ the `zugang` input for a manual run. Plain `@claude` follows the variable.
   through `ANTHROPIC_API_KEY`. Every run costs money of its own, and the
   Admin API in `kosten.yml` can say how much.
 - **abo** draws on the Claude subscription through `CLAUDE_CODE_OAUTH_TOKEN`,
-  which `claude setup-token` generates on a machine where Claude Code is
-  signed in and valid for a year — any Claude subscription (Pro, Max, Team, Enterprise). No bill per run, but the runs share the
-  subscription's usage windows with everything else done on that account.
+  a token that `claude setup-token` prints after a browser sign-in. It needs
+  a Claude subscription and is valid for one year, so it wants renewing each
+  September. No bill per run, but the runs share the subscription's usage
+  windows with everything else done on that account.
 
 `.github/actions/claude-zugang` chooses, checks and hands on the word, never
 the secret. The workflow then fills exactly one of the two inputs of

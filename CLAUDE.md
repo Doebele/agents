@@ -592,9 +592,12 @@ subscription token cannot be tested that way outside Claude Code, so the
 check only makes sure it is there; when it fails later, the failure report
 says so.
 
-The mention needs its own trigger phrase. The action answers to its phrase
-only when a space or punctuation follows, so `@claude` does not answer to
-`@claude-abo`; `zuruf.yml` hands on whichever of the three was written.
+`zuruf.yml` gives the action a prompt of its own, and that puts the action in
+agent mode: Claude receives the prompt and nothing else — not the issue, not
+the comment that called it. The prompt therefore names the thread and links the
+comment. Without that, the first run on the subscription went looking for its
+order, was refused five times and stopped after thirteen seconds without a
+word.
 
 Kimi also takes orders through Telegram, routed as `repository_dispatch`.
 

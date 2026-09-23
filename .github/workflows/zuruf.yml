@@ -46,9 +46,9 @@ jobs:
       - uses: actions/checkout@v5
 
       # @claude-abo and @claude-api choose the pot for this order alone. The
-      # action looks for its trigger phrase followed by a space or punctuation,
-      # so "@claude" does not answer to "@claude-abo" — the phrase that was
-      # actually written is handed on as the trigger.
+      # phrase that was written is also handed on as trigger_phrase. With the
+      # prompt below the action runs in agent mode and does not look at it;
+      # without a prompt it would, and "@claude" does not match "@claude-abo".
       - name: Which pot was called
         id: ruf
         env:
@@ -99,13 +99,29 @@ jobs:
           claude_args: |
             --max-turns 150
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*)"
+          # With a prompt of its own the action runs in agent mode, and agent
+          # mode hands Claude this text and nothing else: no issue number, no
+          # comment. On 23 September a run on the subscription went looking
+          # for its order with commands it was not allowed, was refused five
+          # times, gave up after thirteen seconds and said nothing anywhere.
+          # So the prompt names the thread and the comment itself.
           prompt: |
             Read CLAUDE.md before anything else. Its rules bind you —
             especially: never invent a fact or a link, never edit site/ by
             hand, never push to main, one topic per pull request.
 
-            Do what the maintainer asked in the issue or comment that
-            triggered you.
+            You were called in ${{ (github.event.issue.pull_request || github.event.pull_request) && 'pull request' || 'issue' }} #${{ github.event.issue.number || github.event.pull_request.number }} of ${{ github.repository }}, by this comment:
+            ${{ github.event.comment.html_url || github.event.issue.html_url }}
+
+            Read that thread first, with all its comments:
+
+                gh ${{ (github.event.issue.pull_request || github.event.pull_request) && 'pr' || 'issue' }} view ${{ github.event.issue.number || github.event.pull_request.number }} --repo ${{ github.repository }} --comments
+
+            The order is in the comment that called you. Where that comment
+            only points at the order above it ("run the task above again"),
+            the order is the opening post of the thread.
+
+            Do what the maintainer asked.
 
             If it involves changing the catalogue: edit content/*.json, then
             run `python3 build/build.py`, which must exit 0. Commit only the
@@ -114,6 +130,11 @@ jobs:
 
             If the request is unclear, or if doing it would mean guessing at a
             fact, do not guess. Reply in the thread and ask.
+
+            Whatever the outcome, end with a reply in that same thread —
+            `gh ${{ (github.event.issue.pull_request || github.event.pull_request) && 'pr' || 'issue' }} comment ${{ github.event.issue.number || github.event.pull_request.number }} --repo ${{ github.repository }} --body-file <file>` —
+            with the link to your pull request, or with why there is none.
+            An order left without an answer looks exactly like a broken agent.
 
       - name: Aufwand erfassen
         if: always()

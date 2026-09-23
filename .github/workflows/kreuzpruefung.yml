@@ -33,6 +33,10 @@ on:
         description: "claude oder kimi, nur für diesen Lauf (leer = Repository-Variable)"
         required: false
         type: string
+      zugang:
+        description: "api oder abo, nur für diesen Lauf (leer = Repository-Variable CLAUDE_ZUGANG)"
+        required: false
+        type: string
 
 jobs:
   # ------------------------------------------------------------------ Auftrag
@@ -411,13 +415,6 @@ jobs:
           python3 build/kreuzpruefung.py vergleich befund-gemini.json befund-zai.json
           { echo "## Vergleich"; echo; sed -n '1,40p' vergleich.md; } >> "$GITHUB_STEP_SUMMARY"
 
-      # Ein undurchsichtiger Fehlschlag hat hier einmal einen Abend gekostet:
-      # is_error true, ein Turn, null Kosten, keine Meldung im Log. Also wird
-      # der Schluessel vorher gefragt, und die Antwort steht im Log.
-      #
-      # Gefragt wird nach demselben Modell, das der Lauf danach benutzt. Eine
-      # Sondierung auf ein anderes Modell beantwortet die falsche Frage:
-      # Berechtigung und Guthaben koennen sich je Modell unterscheiden.
       # Der Auftrag, fuer beide Entscheider derselbe, mit dem eigenen Namen
       # fuer Zweig, Titel und Bilanzzeilen.
       - name: Auftrag einlesen
@@ -429,29 +426,27 @@ jobs:
             echo "ENDE_DES_AUFTRAGS"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Erreicht der Schluessel die API
+      # Wer zahlt: API-Guthaben oder Abo. Siehe .github/actions/claude-zugang.
+      - name: Wer zahlt, und geht es (Claude)
+        id: zugang
         if: env.ENTSCHEIDER == 'claude'
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: |
-          set -uo pipefail
-          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY ist nicht gesetzt"; exit 1; }
-          code=$(curl -sS -o /tmp/ping.json -w '%{http_code}' \
-                 -X POST https://api.anthropic.com/v1/messages \
-                 -H "x-api-key: $ANTHROPIC_API_KEY" \
-                 -H "anthropic-version: 2023-06-01" \
-                 -H "content-type: application/json" \
-                 -d '{"model":"claude-sonnet-5","max_tokens":1,"messages":[{"role":"user","content":"hi"}]}' || echo 000)
-          echo "  POST /v1/messages -> HTTP $code"
-          head -c 400 /tmp/ping.json; echo
-          test "$code" = "200" || { echo "Der Schlüssel erreicht die API, darf aber nichts ausgeben."; exit 1; }
+        uses: ./.github/actions/claude-zugang
+        with:
+          wahl: ${{ inputs.zugang }}
+          variable: ${{ vars.CLAUDE_ZUGANG }}
+          api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          modell: claude-sonnet-5
 
       - name: Entscheiden und vorschlagen (Claude)
         id: claude
         if: env.ENTSCHEIDER == 'claude'
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Genau einer von beiden, der andere bleibt leer: Sind beide
+          # gesetzt, gewinnt der API-Schluessel, und das Abo zahlt nie.
+          anthropic_api_key: ${{ steps.zugang.outputs.zugang == 'api' && secrets.ANTHROPIC_API_KEY || '' }}
+          claude_code_oauth_token: ${{ steps.zugang.outputs.zugang == 'abo' && secrets.CLAUDE_CODE_OAUTH_TOKEN || '' }}
           claude_args: |
             --model claude-sonnet-5
             --max-turns 200
@@ -558,5 +553,5 @@ jobs:
         if: always()
         uses: ./.github/actions/kosten
         with:
-          agent: ${{ env.ENTSCHEIDER }}
+          agent: ${{ env.ENTSCHEIDER == 'claude' && steps.zugang.outputs.zugang == 'abo' && 'claude-abo' || env.ENTSCHEIDER }}
           execution: ${{ steps.claude.outputs.execution_file }}

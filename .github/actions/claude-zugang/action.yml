@@ -1,0 +1,134 @@
+# Welcher Topf einen Claude-Lauf bezahlt.
+#
+# Anthropic fuehrt zwei getrennte Guthaben, und beide heissen "Balance": das
+# vorausbezahlte in der Console (platform.claude.com), von dem ein API-Schluessel
+# abbucht, und das Kontingent des Claude-Abos. Am 23. September brachen zwei
+# Laeufe ab, weil das eine leer war, waehrend die App beim anderen 93 zeigte.
+#
+# Welcher Topf zahlt, ist deshalb eine Einstellung und keine Codeaenderung:
+#
+#   gh variable set CLAUDE_ZUGANG --body abo --repo Doebele/agents
+#
+# api oder abo, ohne Variable api. Ein einzelner Lauf kann die Einstellung fuer
+# sich ueberstimmen: der Zuruf mit @claude-abo oder @claude-api, ein manueller
+# Lauf mit der Eingabe zugang.
+#
+# Die Action waehlt, prueft und sagt, was es geworden ist. Die Secrets kommen
+# als Eingaben herein, weil eine Action sie sonst nicht sieht; heraus geht nur
+# das Wort api oder abo. Der aufrufende Schritt setzt damit genau einen der
+# beiden Eingaenge von claude-code-action und laesst den anderen leer. Darauf
+# kommt es an: Sind beide gesetzt, gewinnt der API-Schluessel, und das Abo
+# zahlt nie.
+name: Claude-Zugang
+description: Waehlt zwischen API-Guthaben und Abo, prueft den gewaehlten Zugang und gibt ihn aus
+
+inputs:
+  wahl:
+    description: "api oder abo fuer diesen Lauf allein (Zuruf, manuelle Eingabe); leer heisst: die Variable entscheidet"
+    required: false
+    default: ""
+  variable:
+    description: "vars.CLAUDE_ZUGANG"
+    required: false
+    default: ""
+  api-key:
+    description: "secrets.ANTHROPIC_API_KEY"
+    required: false
+    default: ""
+  oauth-token:
+    description: "secrets.CLAUDE_CODE_OAUTH_TOKEN"
+    required: false
+    default: ""
+  modell:
+    description: "Das Modell, das der Lauf danach benutzt; nach ihm wird gefragt"
+    required: false
+    default: "claude-opus-5"
+
+outputs:
+  zugang:
+    description: "api oder abo"
+    value: ${{ steps.waehle.outputs.zugang }}
+
+runs:
+  using: composite
+  steps:
+    # Ein eigener Schritt, damit die Ausgabe auch dann steht, wenn die Pruefung
+    # danach scheitert. Die Fehlermeldung im Issue nennt dann trotzdem den Topf.
+    - name: Zugang waehlen
+      id: waehle
+      shell: bash
+      env:
+        WAHL: ${{ inputs.wahl }}
+        VARIABLE: ${{ inputs.variable }}
+      run: |
+        set -uo pipefail
+        if [ -n "$WAHL" ]; then QUELLE="für diesen Lauf gewählt"
+        elif [ -n "$VARIABLE" ]; then QUELLE="Repository-Variable CLAUDE_ZUGANG"
+        else QUELLE="Voreinstellung"; fi
+        ZUGANG=$(printf '%s' "${WAHL:-${VARIABLE:-api}}" | tr 'A-Z' 'a-z' | tr -d '[:space:]')
+        # Ein Tippfehler soll laut scheitern, nicht still auf einen Topf
+        # zurueckfallen, den niemand gewaehlt hat.
+        case "$ZUGANG" in
+          api|abo) ;;
+          *) echo "Claude-Zugang ist '$ZUGANG' ($QUELLE), erlaubt sind api und abo." \
+               | tee "$RUNNER_TEMP/fehlergrund.txt"; exit 1 ;;
+        esac
+        echo "zugang=$ZUGANG" >> "$GITHUB_OUTPUT"
+        case "$ZUGANG" in
+          api) WER="API-Guthaben der Console" ;;
+          abo) WER="Kontingent des Claude-Abos" ;;
+        esac
+        echo "Claude-Zugang: $ZUGANG, also $WER ($QUELLE)"
+        echo "**Claude-Zugang:** \`$ZUGANG\`, also $WER ($QUELLE)" >> "$GITHUB_STEP_SUMMARY"
+
+    # Ein undurchsichtiger Fehlschlag hat einmal einen Abend gekostet: is_error
+    # true, ein Turn, null Kosten, keine Meldung im Log. Also wird der Zugang
+    # vorher gefragt, und die Antwort steht im Log und in fehlergrund.txt, aus
+    # dem die Fehlermeldung im Issue zitiert.
+    - name: Zugang pruefen
+      shell: bash
+      env:
+        ZUGANG: ${{ steps.waehle.outputs.zugang }}
+        ANTHROPIC_API_KEY: ${{ inputs.api-key }}
+        OAUTH_TOKEN: ${{ inputs.oauth-token }}
+        MODELL: ${{ inputs.modell }}
+      run: |
+        set -uo pipefail
+        melde() { { echo "$1"; head -c 400 "$2" 2>/dev/null; } > "$RUNNER_TEMP/fehlergrund.txt"; }
+
+        # Fuer ein Abo-Token gibt es keine dokumentierte Abfrage ausserhalb von
+        # Claude Code. Geprueft wird deshalb nur, dass es hinterlegt ist.
+        # Scheitert es danach, steht der Grund in der Fehlermeldung.
+        if [ "$ZUGANG" = "abo" ]; then
+          test -n "$OAUTH_TOKEN" || { echo "CLAUDE_CODE_OAUTH_TOKEN ist nicht gesetzt (claude setup-token)" \
+            | tee "$RUNNER_TEMP/fehlergrund.txt"; exit 1; }
+          echo "CLAUDE_CODE_OAUTH_TOKEN ist hinterlegt."
+          exit 0
+        fi
+
+        test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY ist nicht gesetzt" \
+          | tee "$RUNNER_TEMP/fehlergrund.txt"; exit 1; }
+        code=$(curl -sS -o /tmp/anthropic.json -w '%{http_code}' \
+               -H "x-api-key: $ANTHROPIC_API_KEY" \
+               -H "anthropic-version: 2023-06-01" \
+               https://api.anthropic.com/v1/models || echo 000)
+        echo "  GET /v1/models -> HTTP $code"
+        head -c 400 /tmp/anthropic.json; echo
+        test "$code" = "200" || { echo "Der Schlüssel erreicht die API nicht; die Antwort steht oben."; \
+          melde "GET /v1/models -> HTTP $code" /tmp/anthropic.json; exit 1; }
+
+        # Die Modellliste kostet nichts und antwortet auch auf einem leeren
+        # Konto mit 200. Erst eine echte Anfrage sagt, ob der Schluessel noch
+        # ausgeben darf. Gefragt wird nach demselben Modell, das der Lauf
+        # danach benutzt: Berechtigung und Guthaben koennen sich je Modell
+        # unterscheiden.
+        code=$(curl -sS -o /tmp/ping.json -w '%{http_code}' \
+               -X POST https://api.anthropic.com/v1/messages \
+               -H "x-api-key: $ANTHROPIC_API_KEY" \
+               -H "anthropic-version: 2023-06-01" \
+               -H "content-type: application/json" \
+               -d "{\"model\":\"$MODELL\",\"max_tokens\":1,\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}]}" || echo 000)
+        echo "  POST /v1/messages ($MODELL) -> HTTP $code"
+        head -c 400 /tmp/ping.json; echo
+        test "$code" = "200" || { echo "Der Schlüssel erreicht die API, darf aber nichts ausgeben; die Antwort steht oben."; \
+          melde "POST /v1/messages -> HTTP $code" /tmp/ping.json; exit 1; }

@@ -107,7 +107,9 @@ not equally trustworthy:
 
 - **Claude runs** — the action's `execution_file` carries token counts and
   `total_cost_usd`. That figure is the client's own estimate. Good as a trend,
-  not as a bill.
+  not as a bill. A run on the subscription carries the agent name
+  `claude-abo`: its figure is the same estimate at API prices, and nothing
+  was billed for it.
 - **Gemini runs** — the CLI writes OpenTelemetry to a local file when the
   `settings` input names one. Token counts, no cost.
 - **Kimi and GLM runs** — the CLI does not hand its usage out. The row carries
@@ -525,7 +527,9 @@ Each agent listens for its own name, and only from the repository owner:
 
 | Mention | Reaches | Runs |
 |---|---|---|
-| `@claude` | Claude | zuruf.yml |
+| `@claude` | Claude, paid as `CLAUDE_ZUGANG` says | zuruf.yml |
+| `@claude-abo` | Claude, paid from the subscription | zuruf.yml |
+| `@claude-api` | Claude, paid from the Console balance | zuruf.yml |
 | `@gemini` | Gemini | pflege-gemini.yml |
 | `@zai` | GLM by way of Z.AI | pflege-zai.yml |
 | `@kimi` | Kimi | pflege-kimi.yml |
@@ -544,16 +548,53 @@ its first minute, two to Claude cut off in the same second after nine — and th
 only sign was that nothing happened.
 
 A step that knows why it failed leaves the reason in
-`$RUNNER_TEMP/fehlergrund.txt`; the report quotes it. The key check in
-`zuruf.yml` does, which is why it now runs after the checkout: an empty API
-balance fails right there, and the report needs the repository to exist. That
-balance is the one in the Console, not the one in the Claude app — two separate
-pots behind two identical-looking "balance" labels, and the report says so when
-the API's answer names it.
+`$RUNNER_TEMP/fehlergrund.txt`; the report quotes it. The access check in
+`.github/actions/claude-zugang` does, which is why `zuruf.yml` checks out the
+repository first: an empty API balance fails right there, and the report needs
+the repository to exist. That balance is the one in the Console, not the one in
+the Claude app — two separate pots behind two identical-looking "balance"
+labels, and the report says so when the API's answer names it.
 
 ```bash
 python3 build/fehlermeldung.py --selbsttest
 ```
+
+### Which pot pays for Claude
+
+Those two pots are both usable, and which one pays is a repository variable,
+not a code change:
+
+```bash
+gh variable set CLAUDE_ZUGANG --body abo --repo Doebele/agents
+```
+
+`api` or `abo`; without the variable, `api`. It holds for all four Claude
+workflows — `zuruf.yml`, `pflege.yml`, `kreuzpruefung.yml` and `inhalt.yml`.
+A single run can override it: `@claude-abo` or `@claude-api` for an order,
+the `zugang` input for a manual run. Plain `@claude` follows the variable.
+
+- **api** draws on the prepaid balance in the Console (platform.claude.com)
+  through `ANTHROPIC_API_KEY`. Every run costs money of its own, and the
+  Admin API in `kosten.yml` can say how much.
+- **abo** draws on the Claude subscription through `CLAUDE_CODE_OAUTH_TOKEN`,
+  a token that `claude setup-token` prints after a browser sign-in. It needs
+  a Claude subscription and is valid for one year, so it wants renewing each
+  September. No bill per run, but the runs share the subscription's usage
+  windows with everything else done on that account.
+
+`.github/actions/claude-zugang` chooses, checks and hands on the word, never
+the secret. The workflow then fills exactly one of the two inputs of
+`claude-code-action` and leaves the other empty. That is the part not to
+undo: with both set the API key wins, and the subscription never pays.
+
+An API key gets a real one-token request before the run, as before. A
+subscription token cannot be tested that way outside Claude Code, so the
+check only makes sure it is there; when it fails later, the failure report
+says so.
+
+The mention needs its own trigger phrase. The action answers to its phrase
+only when a space or punctuation follows, so `@claude` does not answer to
+`@claude-abo`; `zuruf.yml` hands on whichever of the three was written.
 
 Kimi also takes orders through Telegram, routed as `repository_dispatch`.
 

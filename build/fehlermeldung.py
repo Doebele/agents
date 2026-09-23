@@ -40,7 +40,12 @@ HINWEISE = [
     (r"credit balance|balance is too low",
      "Das **API-Guthaben** des Anthropic-Kontos reicht nicht. Gemeint ist das "
      "Guthaben in der Console (platform.claude.com), nicht das in der Claude-App — "
-     "das sind zwei getrennte Töpfe."),
+     "das sind zwei getrennte Töpfe. Ohne Aufladen geht es über das Abo: "
+     "`@\u200bclaude-abo` für diesen Auftrag, die Variable `CLAUDE_ZUGANG=abo` für alle."),
+    (r"usage limit",
+     "Das **Kontingent des Claude-Abos** ist für dieses Zeitfenster aufgebraucht. "
+     "Es füllt sich von selbst wieder auf; wer nicht warten will, nimmt für diesen "
+     "Auftrag das API-Guthaben: `@\u200bclaude-api`."),
     (r"\b1113\b|insufficient balance",
      "Z.AI nimmt die Anfrage nicht an: entweder ist das Guthaben leer, oder der "
      "Schlüssel gehört zum Coding-Abo und ging an den Endpunkt für Guthaben."),
@@ -48,6 +53,12 @@ HINWEISE = [
      "Die API hat gedrosselt oder war überlastet. Ein späterer Versuch hilft meist."),
     (r"error_max_turns|max(imum)?[_ ]turns",
      "Die Obergrenze an Turns war erreicht, bevor der Auftrag fertig war."),
+    # Vor der allgemeinen Anmelderegel: ein abgelehntes Abo-Token meldet sich
+    # ebenfalls als authentication_error.
+    (r"oauth",
+     "Das **Abo-Token** fehlt oder wird nicht angenommen. Neu erzeugen mit "
+     "`claude setup-token` (mit einem Claude-Abo; gilt ein Jahr) und als Secret "
+     "`CLAUDE_CODE_OAUTH_TOKEN` hinterlegen."),
     (r"invalid x-api-key|authentication_error|invalid api key",
      "Der Schlüssel wird nicht angenommen — abgelaufen, widerrufen oder falsch hinterlegt."),
 ]
@@ -229,6 +240,15 @@ def selbsttest():
 
     pruefe("Guthaben der Console wird erkannt",
            "API-Guthaben" in hinweis("Your credit balance is too low to access the Anthropic API"))
+    pruefe("leeres Guthaben zeigt den Weg ueber das Abo",
+           "claude-abo" in hinweis("credit balance is too low"))
+    pruefe("ausgeschoepftes Abo wird erkannt",
+           "Kontingent des Claude-Abos" in hinweis("Claude AI usage limit reached"))
+    pruefe("fehlendes Abo-Token wird erkannt, nicht als API-Schluessel",
+           "Abo-Token" in hinweis("CLAUDE_CODE_OAUTH_TOKEN ist nicht gesetzt")
+           and "Abo-Token" in hinweis('{"type":"authentication_error","message":"OAuth token has expired"}'))
+    pruefe("Hinweise selbst pingen niemanden an",
+           not any(re.search(r"@(claude|zai|gemini|kimi)", satz) for _, satz in HINWEISE))
     pruefe("Z.AI-Code 1113 wird erkannt",
            "Z.AI" in hinweis('{"error":{"code":"1113"}}'))
     pruefe("Zahl 11130 ist nicht Code 1113", hinweis("Token 11130") == "")

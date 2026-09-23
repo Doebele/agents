@@ -7,6 +7,10 @@
 # This is the input channel. It works from the GitHub app on a phone, which
 # is also where the resulting pull request gets reviewed and merged. No bot,
 # no token, no second service that can go down.
+#
+# Who pays is the repository variable CLAUDE_ZUGANG: api (the Console balance,
+# the default) or abo (the Claude subscription). @claude-api and @claude-abo
+# override it for that one order; plain @claude follows the variable.
 name: Claude on request
 
 on:
@@ -41,45 +45,48 @@ jobs:
       # key check below is exactly where an empty API balance shows up.
       - uses: actions/checkout@v5
 
-      # An opaque failure once cost an evening here: is_error true, one turn,
-      # zero cost, and no message anywhere in the log. So the key gets asked
-      # a question before the agent starts, and the answer goes into the log.
-      - name: Can the key reach the API
+      # @claude-abo and @claude-api choose the pot for this order alone. The
+      # action looks for its trigger phrase followed by a space or punctuation,
+      # so "@claude" does not answer to "@claude-abo" — the phrase that was
+      # actually written is handed on as the trigger.
+      - name: Which pot was called
+        id: ruf
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TEXT: ${{ github.event.comment.body || format('{0} {1}', github.event.issue.title, github.event.issue.body) }}
         run: |
           set -uo pipefail
-          # Whatever makes this step fail is also left for the failure report,
-          # which quotes it in the issue — the API's own words, not a guess.
-          melde() { { echo "$1"; head -c 400 "$2" 2>/dev/null; } > "$RUNNER_TEMP/fehlergrund.txt"; }
-          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY is not set"; \
-            echo "ANTHROPIC_API_KEY is not set" > "$RUNNER_TEMP/fehlergrund.txt"; exit 1; }
-          code=$(curl -sS -o /tmp/anthropic.json -w '%{http_code}' \
-                 -H "x-api-key: $ANTHROPIC_API_KEY" \
-                 -H "anthropic-version: 2023-06-01" \
-                 https://api.anthropic.com/v1/models || echo 000)
-          echo "  GET /v1/models -> HTTP $code"
-          head -c 400 /tmp/anthropic.json; echo
-          test "$code" = "200" || { echo "The key cannot reach the API; see the body above."; \
-            melde "GET /v1/models -> HTTP $code" /tmp/anthropic.json; exit 1; }
+          # One word per line, so that two mentions a single space apart
+          # are both seen.
+          WAHL=$(printf '%s\n' "$TEXT" | tr -s '[:space:]' '\n' \
+                 | grep -iE '^@claude-(abo|api)([.,!?;:].*)?$' \
+                 | cut -c9-11 | tr 'A-Z' 'a-z' | sort -u)
+          if [ "$(printf '%s' "$WAHL" | grep -c .)" -gt 1 ]; then
+            echo "Both @claude-abo and @claude-api in one order; which pot is meant is unclear." \
+              | tee "$RUNNER_TEMP/fehlergrund.txt"
+            exit 1
+          fi
+          echo "wahl=$WAHL" >> "$GITHUB_OUTPUT"
+          echo "ausloeser=@claude${WAHL:+-$WAHL}" >> "$GITHUB_OUTPUT"
+          echo "Called as @claude${WAHL:+-$WAHL}"
 
-          # Listing models costs nothing and answers 200 on an empty account
-          # too. Only a real completion says whether the key may still spend.
-          code=$(curl -sS -o /tmp/ping.json -w '%{http_code}' \
-                 -X POST https://api.anthropic.com/v1/messages \
-                 -H "x-api-key: $ANTHROPIC_API_KEY" \
-                 -H "anthropic-version: 2023-06-01" \
-                 -H "content-type: application/json" \
-                 -d '{"model":"claude-opus-5","max_tokens":1,"messages":[{"role":"user","content":"hi"}]}' || echo 000)
-          echo "  POST /v1/messages -> HTTP $code"
-          head -c 400 /tmp/ping.json; echo
-          test "$code" = "200" || { echo "The key reaches the API but may not spend; see the body above."; \
-            melde "POST /v1/messages -> HTTP $code" /tmp/ping.json; exit 1; }
+      - name: Choose and check the access
+        id: zugang
+        uses: ./.github/actions/claude-zugang
+        with:
+          wahl: ${{ steps.ruf.outputs.wahl }}
+          variable: ${{ vars.CLAUDE_ZUGANG }}
+          api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          modell: claude-opus-5
 
       - id: claude
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Exactly one of the two, the other stays empty: with both set the
+          # API key wins and the subscription never pays.
+          anthropic_api_key: ${{ steps.zugang.outputs.zugang == 'api' && secrets.ANTHROPIC_API_KEY || '' }}
+          claude_code_oauth_token: ${{ steps.zugang.outputs.zugang == 'abo' && secrets.CLAUDE_CODE_OAUTH_TOKEN || '' }}
+          trigger_phrase: ${{ steps.ruf.outputs.ausloeser }}
           # Bash(cmd:*) is the form the action accepts; the earlier narrow
           # list produced permission_denials_count 4 and no answer, so it
           # covers the shell basics as well.
@@ -112,12 +119,12 @@ jobs:
         if: always()
         uses: ./.github/actions/kosten
         with:
-          agent: claude
+          agent: ${{ steps.zugang.outputs.zugang == 'abo' && 'claude-abo' || 'claude' }}
           execution: ${{ steps.claude.outputs.execution_file }}
 
       - name: Scheitern im Issue melden
         if: failure() && (github.event.issue.number || github.event.pull_request.number)
         uses: ./.github/actions/fehlermeldung
         with:
-          agent: Claude
+          agent: ${{ format('Claude ({0})', steps.zugang.outputs.zugang || 'Zugang unklar') }}
           execution: ${{ steps.claude.outputs.execution_file }}

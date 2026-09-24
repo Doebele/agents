@@ -472,6 +472,15 @@ a newer model of the same line, raise the fact sheet onto it: `name`,
 `blurb`, `tip`, `aa.url` and the values move together, so the sheet never
 describes one generation while showing another's numbers.
 
+Looking for models the catalogue lacks is a different job, and it stops at
+rank 20. The AA leaderboard lists one model several times, once per reasoning
+level; merge those rows and count the model once, at its best row. The first
+twenty distinct models are the pool. What sits below them is not a gap in
+this catalogue. The one exception is a model the maintainer names by hand. On
+23 September a run read the list down to rank 60, got the same rows back under
+different numbers past that point, and ran out of turns before it could open
+its pull request.
+
 ## What counts as a declared gap
 
 Item three of that list means two places, not one.

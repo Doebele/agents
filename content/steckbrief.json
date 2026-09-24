@@ -242,8 +242,8 @@
   },
   "free": true,
   "plans": {
-   "de": "1 GB kostenlos · Essential 1 TB 11,99 $/Jahr · Premium 3 TB 21,99 $/Jahr · Ultimate 5 TB 31,99 $/Jahr · auch als Einmalkauf (Lifetime)",
-   "en": "1 GB free · Essential 1 TB $11.99/yr · Premium 3 TB $21.99/yr · Ultimate 5 TB $31.99/yr · also as one-time payment (lifetime)"
+   "de": "1 GB kostenlos · Essential 1 TB 9,99 €/Mo. · Premium 3 TB 19,99 €/Mo. · Ultimate 5 TB 29,99 €/Mo. (Jahres-Abo, monatlich abgerechnet, erster Monat 80 % Rabatt) · auch als Einmalkauf (Lifetime) erhältlich",
+   "en": "1 GB free · Essential 1 TB €9.99/mo · Premium 3 TB €19.99/mo · Ultimate 5 TB €29.99/mo (annual plan, billed monthly, first month 80% off) · also available as a one-time lifetime purchase"
   },
   "billing": [
    "abo"
@@ -253,7 +253,7 @@
    "home": "https://internxt.com",
    "code": "https://github.com/internxt"
   },
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-09-24",
   "contentChecked": "2026-09-22"
  },
  "Obsidian": {
@@ -315,7 +315,7 @@
    "home": "https://rows.com/",
    "docs": "https://rows.com/docs"
   },
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-09-24",
   "contentChecked": "2026-09-07"
  },
  "Claude Code": {
@@ -439,7 +439,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-24"
  },
  "ChatGPT": {
   "name": "ChatGPT",
@@ -541,7 +541,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-24"
  },
  "Agents SDK": {
   "name": "OpenAI Agents SDK",
@@ -573,7 +573,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-24",
   "contentChecked": "2026-09-22"
  },
  "Kimi Code": {
@@ -667,7 +667,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-09-24",
   "plansJahr": {
    "de": "GLM-Coding-Abo: Lite 151,20 $/Jahr · Pro 672 $/Jahr · Max 1.411,20 $/Jahr · GLM-5.3 verzehrt in Spitzenlast 3× so viel Kontingent wie GLM-4.7 (Mo–Fr 14–18 Uhr UTC+8)",
    "en": "GLM Coding plan: Lite $151.20/yr · Pro $672/yr · Max $1,411.20/yr · at peak (Mon–Fri 2–6 pm UTC+8) GLM-5.3 burns 3× the quota of GLM-4.7"
@@ -903,13 +903,14 @@
   },
   "free": true,
   "plans": {
-   "de": "Gratisstufe 0 $ mit lokalen Modellen · Cloud-Guthaben nach Verbrauch (DeepSeek V4 Flash z. B. 0,13 $/0,26 $ pro 1M Tok., Kimi K3 3 $/15 $) · eigene „Bionic Plans“ stehen als „coming soon“ auf der Preisseite, ein Betrag dafür noch nicht",
-   "en": "Free tier $0 with local models · pay-as-you-go cloud credits (DeepSeek V4 Flash e.g. $0.13/$0.26 per 1M tok., Kimi K3 $3/$15) · the pricing page lists „Bionic Plans“ as coming soon, without an amount"
+   "de": "Gratisstufe 0 $ mit lokalen Modellen · Bionic+ 20 $/Mo. (gehostete Open-Source-Modelle wie Kimi K3, GLM 5.3, DeepSeek V4 Flash, vergünstigte Zusatz-Tokens) · Pro 100 $/Mo. (5× Nutzung von Bionic+, früher Zugang zu neuen Funktionen) · Verbrauch über das Kontingent hinaus wird über Cloud-Guthaben abgerechnet",
+   "en": "Free tier $0 with local models · Bionic+ $20/mo (hosted open-source models like Kimi K3, GLM 5.3, DeepSeek V4 Flash, discounted extra tokens) · Pro $100/mo (5× the usage of Bionic+, early access to new features) · usage beyond the plan is billed through cloud credits"
   },
   "billing": [
+   "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-24",
   "contentChecked": "2026-09-22"
  },
  "LangGraph": {
@@ -1401,7 +1402,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-06",
+  "plansChecked": "2026-09-24",
   "contentChecked": "2026-09-05"
  },
  "llama.cpp": {
@@ -1837,12 +1838,13 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-09-24",
   "plansJahr": {
    "de": "Gratis 125 Credits · Standard 12 $/Mo. bei Jahreszahlung · Pro 28 $/Mo. · Max 76 $/Mo. · Gen-4.5 kostet 12 Credits je Sekunde",
    "en": "Free 125 credits · Standard $12/mo billed annually · Pro $28/mo · Max $76/mo · Gen-4.5 costs 12 credits per second"
   },
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-09-22",
+  "free": true
  },
  "Luma": {
   "name": "Luma",
@@ -1874,7 +1876,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-09-24",
   "plansJahr": {
    "de": "Plus 25 $/Mo. (300 $/Jahr) · Pro 75 $/Mo. (900 $/Jahr) · Ultra 250 $/Mo. (3.000 $/Jahr)",
    "en": "Plus $25/mo ($300/yr) · Pro $75/mo ($900/yr) · Ultra $250/mo ($3,000/yr)"
@@ -2112,7 +2114,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-09-24",
   "plansJahr": {
    "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 12 $/Mo. · Growth/Enterprise ab 18 $/Nutzer/Mo.",
    "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $12/mo · Growth/Enterprise from $18/user/mo"
@@ -3378,7 +3380,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-24"
  },
  "Antigravity 2.0": {
   "name": "Google Antigravity",
@@ -3570,12 +3572,12 @@
    "en": "The entry point when you like Claude Design but want everything open and local. Bring your own keys: the program is free (Apache 2.0), the model bills run through your own accounts."
   },
   "plans": {
-   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Plus 20 $/Mo. · Pro 100 $/Mo. · Max 200 $/Mo. · Team 105 $/Sitz/Mo. · Enterprise auf Anfrage · derzeit rabattiert: erster Monat Plus 16 $, Pro 70 $, Max 120 $, Team 63 $/Sitz",
-   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Plus $20/mo · Pro $100/mo · Max $200/mo · Team $105/seat/mo · Enterprise on request · currently discounted: first month Plus $16, Pro $70, Max $120, Team $63/seat"
+   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Go 10 $/Mo. · Plus 20 $/Mo. · Pro 100 $/Mo. · Max 200 $/Mo. · Team 105 $/Sitz/Mo. · Enterprise auf Anfrage · derzeit rabattiert: erster Monat Go 8 $, Plus 16 $, Pro 70 $, Max 120 $, Team 63 $/Sitz",
+   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Go $10/mo · Plus $20/mo · Pro $100/mo · Max $200/mo · Team $105/seat/mo · Enterprise on request · currently discounted: first month Go $8, Plus $16, Pro $70, Max $120, Team $63/seat"
   },
   "plansJahr": {
-   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Plus 14 $/Mo. (168 $/Jahr) · Pro 60 $/Mo. (720 $/Jahr) · Max 98 $/Mo. (1.176 $/Jahr) · Team 105 $/Sitz/Mo. (nur monatlich ausgewiesen) · Enterprise auf Anfrage",
-   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Plus $14/mo ($168/year) · Pro $60/mo ($720/year) · Max $98/mo ($1,176/year) · Team $105/seat/mo (monthly only) · Enterprise on request"
+   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Go 7 $/Mo. (84 $/Jahr) · Plus 14 $/Mo. (168 $/Jahr) · Pro 60 $/Mo. (720 $/Jahr) · Max 98 $/Mo. (1.176 $/Jahr) · Team 105 $/Sitz/Mo. (nur monatlich ausgewiesen) · Enterprise auf Anfrage",
+   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Go $7/mo ($84/year) · Plus $14/mo ($168/year) · Pro $60/mo ($720/year) · Max $98/mo ($1,176/year) · Team $105/seat/mo (monthly only) · Enterprise on request"
   },
   "links": {
    "home": "https://open-design.ai/",
@@ -3585,7 +3587,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-24"
  },
  "Uizard": {
   "name": "Uizard",
@@ -4135,7 +4137,7 @@
   "links": {
    "home": "https://www.strato.de"
   },
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-09-24",
   "plansJahr": {
    "de": "12-Monats-Tarife: Starter erster Monat 0 €, dann 5 €/Mo. · Basic 1 €/Mo. für 12 Monate, dann 9 € · Plus erster Monat 0 €, dann 12 € · Pro erster Monat 0 €, dann 22 €/Mo. · Einrichtung 0 €",
    "en": "12-month terms: Starter first month €0, then €5/mo · Basic €1/mo for 12 months, then €9 · Plus first month €0, then €12 · Pro first month €0, then €22/mo · setup €0"
@@ -4202,7 +4204,7 @@
   "links": {
    "home": "https://www.netlify.com"
   },
-  "plansChecked": "2026-09-06",
+  "plansChecked": "2026-09-24",
   "icon": "netlify",
   "contentChecked": "2026-09-22"
  },
@@ -4263,7 +4265,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-24",
   "links": {
    "home": "https://www.cloudflare.com/products/pages/"
   },
@@ -4635,7 +4637,7 @@
   "links": {
    "home": "https://openrouter.ai"
   },
-  "plansChecked": "2026-09-06"
+  "plansChecked": "2026-09-24"
  },
  "DeepSeek-Reasonix": {
   "name": "DeepSeek-Reasonix",
@@ -5026,7 +5028,7 @@
    "de": "Kostenlos, Open Source (Apache-2.0) · Berd spricht mit dem Goose-Unterbau; einen Preis nennt weder die Produktseite noch das Repository",
    "en": "Free, open source (Apache-2.0) · Berd talks to the Goose backend; neither the product page nor the repository names a price"
   },
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-24"
  },
  "Goose": {
   "name": "Goose",
@@ -5088,7 +5090,7 @@
    "de": "Kostenlos (Apache-2.0) · selbst hostbar, frühe Instanz auf buzz.xyz",
    "en": "Free (Apache-2.0) · self-hostable, early instance at buzz.xyz"
   },
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-24"
  },
  "grill-with-docs": {
   "name": "grill-with-docs",
@@ -5233,7 +5235,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-24"
  },
  "gbrain": {
   "name": "gbrain",

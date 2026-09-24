@@ -1577,6 +1577,11 @@
       "k": "OpenRouter"
      },
      {
+      "n": "Abacus.AI",
+      "v": "Aggregator",
+      "k": "Abacus.AI"
+     },
+     {
       "n": "Together AI",
       "v": "Managed API",
       "k": "Together AI"

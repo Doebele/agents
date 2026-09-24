@@ -4637,6 +4637,37 @@
   },
   "plansChecked": "2026-09-06"
  },
+ "Abacus.AI": {
+  "name": "Abacus.AI",
+  "vendor": "Abacus.AI",
+  "cat": {
+   "de": "Modell-Hosting · Baustein 07",
+   "en": "Model hosting · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "blurb": {
+   "de": "Der Sammelanschluss als Abo: über 100 Modelle — geschlossene wie GPT-6 und Claude, offene wie DeepSeek und GLM — hinter einem Zugang für 10 $ im Monat, bezahlt als Festpreis statt pro Token. RouteLLM wählt zur Anfrage das passende Modell, oder du wählst selbst. Agent, Bild- und Videostudio sind mit an Bord; die RouteLLM-API für eigenen Code zehrt vom selben Guthaben. Bezahlt wird in Credits, deren Verbrauch je Modell Abacus nicht veröffentlicht — sichtbar erst nach der Nutzung.",
+   "en": "The bundle deal: 100+ models — closed ones like GPT-6 and Claude, open ones like DeepSeek and GLM — behind one account for $10 a month, a flat fee instead of per-token billing. RouteLLM picks the model for each prompt, or you choose yourself. An agent and an image-and-video studio come along; the RouteLLM API for your own code draws on the same balance. You pay in credits, and Abacus publishes no per-model credit rates — you see the cost only after use."
+  },
+  "tip": {
+   "de": "Wer viele Modelle ausprobieren will, ohne eine Token-Rechnung zu fürchten, ist hier richtig; wer Modelle in eigenem Code aufruft und vorab wissen muss, was ein Aufruf kostet, nimmt OpenRouter. Die Modellliste stellt Abacus selbst zusammen und ändert sie — dass ein bestimmtes Modell bleibt, ist nicht zugesagt.",
+   "en": "Right if you want to try many models without fearing a token bill; if you call models from your own code and need to know what a call costs before you make it, take OpenRouter. Abacus assembles the model list and changes it — no promise that a particular model stays."
+  },
+  "plans": {
+   "de": "Basic 10 $/Nutzer/Mo. (20.000 Credits) · Pro 20 $/Nutzer/Mo. (30.000 Credits, Agent und Studio ohne Begrenzung, SuperComputer) · Enterprise ab 5.000 $ · RouteLLM-API zehrt von denselben Credits",
+   "en": "Basic $10/user/mo (20,000 credits) · Pro $20/user/mo (30,000 credits, unrestricted agent and studio, SuperComputer) · Enterprise from $5,000 · RouteLLM API draws on the same credits"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "links": {
+   "home": "https://abacus.ai",
+   "docs": "https://abacus.ai/help/chatllm-ai-super-assistant/introduction"
+  },
+  "plansChecked": "2026-09-24"
+ },
  "DeepSeek-Reasonix": {
   "name": "DeepSeek-Reasonix",
   "vendor": "esengine",

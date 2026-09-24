@@ -169,5 +169,20 @@
   "free": true,
   "url": "https://openrouter.ai",
   "k": "OpenRouter"
+ },
+ {
+  "n": "Abacus.AI",
+  "type": "Aggregator",
+  "gf": {
+   "de": "100+ Modelle hinter einem Abo",
+   "en": "100+ models behind one subscription"
+  },
+  "price": {
+   "de": "monatliches Abo, Credits",
+   "en": "monthly plan, credits"
+  },
+  "free": false,
+  "url": "https://abacus.ai",
+  "k": "Abacus.AI"
  }
 ]

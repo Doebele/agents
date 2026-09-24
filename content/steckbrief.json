@@ -66,7 +66,7 @@
   },
   "links": {
    "home": "https://github.com/anthropics/skills",
-   "docs": "https://agentskills.io",
+   "docs": "https://agentskills.io/home",
    "code": "https://github.com/anthropics/skills/tree/main/skills"
   },
   "contentChecked": "2026-09-08"
@@ -655,7 +655,7 @@
   },
   "links": {
    "home": "https://zcode.z.ai/en",
-   "docs": "https://zcode.z.ai/en/docs",
+   "docs": "https://zcode.z.ai/en/docs/welcome",
    "code": null
   },
   "free": false,
@@ -1301,7 +1301,7 @@
    "en": "The most widely used open family, so a great many guides and tools are tuned for it. Meta's newer model line is now called Muse — Muse Glimmer 30B and Muse Spark 1.2 have shipped open weights as well."
   },
   "links": {
-   "home": "https://developer.meta.com/ai/models/llama-4/",
+   "home": "https://dev.meta.ai/llama/models/llama-4",
    "docs": null,
    "code": "https://github.com/meta-llama/llama-models"
   },
@@ -2299,7 +2299,7 @@
    "en": "Use Sonnet as your default and switch to Opus when a task stalls. On easy work the difference is barely noticeable, on tricky work it is clear."
   },
   "links": {
-   "home": "https://www.anthropic.com/news/claude-opus-5-5",
+   "home": "https://www.anthropic.com/claude-opus-5-5",
    "docs": "https://platform.claude.com/docs/en/models/overview",
    "code": null
   },
@@ -2945,7 +2945,7 @@
    "en": "If you want to see how little there is to a skill: the specification reads in ten minutes."
   },
   "links": {
-   "home": "https://agentskills.io",
+   "home": "https://agentskills.io/home",
    "docs": "https://agentskills.io/specification",
    "code": "https://github.com/agentskills/agentskills"
   },
@@ -3313,7 +3313,7 @@
    "en": "Interesting when the agent should design itself, not merely read off a finished layout."
   },
   "links": {
-   "home": "https://pen.dev/",
+   "home": "https://www.pen.dev/",
    "docs": "https://docs.pencil.dev/",
    "code": null
   },
@@ -3497,7 +3497,7 @@
   },
   "links": {
    "home": "https://bolt.new/",
-   "docs": "https://support.bolt.new/home",
+   "docs": "https://support.bolt.new/",
    "code": "https://github.com/stackblitz-labs/bolt.diy"
   },
   "contentChecked": "2026-09-05"
@@ -5222,7 +5222,7 @@
   },
   "links": {
    "home": "https://www.conductor.build/",
-   "docs": "https://conductor.build/docs",
+   "docs": "https://www.conductor.build/docs",
    "code": null
   },
   "plans": {
@@ -5563,7 +5563,7 @@
   },
   "links": {
    "home": "https://www.firecrawl.dev/",
-   "docs": "https://docs.firecrawl.dev/cli",
+   "docs": "https://docs.firecrawl.dev/sdks/cli",
    "code": "https://github.com/firecrawl/cli"
   },
   "contentChecked": "2026-09-20"
@@ -5675,7 +5675,7 @@
   },
   "links": {
    "home": "https://github.com/obra/superpowers",
-   "docs": "https://claude.com/plugins/superpowers"
+   "docs": "https://claude.com/marketplace/plugins/superpowers"
   },
   "plansChecked": "2026-09-20",
   "contentChecked": "2026-09-20"

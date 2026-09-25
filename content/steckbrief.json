@@ -439,7 +439,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-24"
+  "plansChecked": "2026-09-24",
+  "contentChecked": "2026-09-25"
  },
  "ChatGPT": {
   "name": "ChatGPT",
@@ -1936,7 +1937,8 @@
    "de": "Kostenlos (Apache 2.0) · keine Render-Gebühren und keine Schwelle für kommerzielle Nutzung",
    "en": "Free (Apache 2.0) · no per-render fees and no commercial-use threshold"
   },
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-25"
  },
  "ElevenLabs Eleven v3": {
   "name": "ElevenLabs Eleven v3",
@@ -2185,7 +2187,8 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-25"
  },
  "Anarlog": {
   "name": "Anarlog",
@@ -3380,7 +3383,8 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-24"
+  "plansChecked": "2026-09-24",
+  "contentChecked": "2026-09-25"
  },
  "Antigravity 2.0": {
   "name": "Google Antigravity",
@@ -3587,7 +3591,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-24"
+  "plansChecked": "2026-09-24",
+  "contentChecked": "2026-09-25"
  },
  "Uizard": {
   "name": "Uizard",
@@ -3668,7 +3673,8 @@
    "docs": "https://developer.apple.com/documentation/xcode/",
    "code": null
   },
-  "icon": "xcode"
+  "icon": "xcode",
+  "contentChecked": "2026-09-25"
  },
  "tool-suche": {
   "name": {
@@ -4075,7 +4081,8 @@
    "code": "https://github.com/deepseek-ai/deepseek-harness",
    "docs": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin"
   },
-  "icon": "deepseek"
+  "icon": "deepseek",
+  "contentChecked": "2026-09-25"
  },
  "Hostinger": {
   "name": "Hostinger",
@@ -4364,7 +4371,8 @@
   "links": {
    "home": "https://www.together.ai"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "Fireworks AI": {
   "name": "Fireworks AI",
@@ -4425,7 +4433,8 @@
   "plansChecked": "2026-09-10",
   "links": {
    "home": "https://groq.com"
-  }
+  },
+  "contentChecked": "2026-09-25"
  },
  "RunPod": {
   "name": "RunPod",
@@ -4454,7 +4463,8 @@
   "links": {
    "home": "https://www.runpod.io"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "Lambda": {
   "name": "Lambda",
@@ -4483,7 +4493,8 @@
   "links": {
    "home": "https://lambda.ai"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "Vast.ai": {
   "name": "Vast.ai",
@@ -4512,7 +4523,8 @@
   "links": {
    "home": "https://vast.ai"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "Hetzner": {
   "name": "Hetzner",
@@ -4575,7 +4587,8 @@
   "links": {
    "home": "https://modal.com"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "Replicate": {
   "name": "Replicate",
@@ -4606,7 +4619,8 @@
   "links": {
    "home": "https://replicate.com"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "OpenRouter": {
   "name": "OpenRouter",
@@ -4700,7 +4714,8 @@
    "api"
   ],
   "plansChecked": "2026-09-10",
-  "icon": "deepseek"
+  "icon": "deepseek",
+  "contentChecked": "2026-09-25"
  },
  "archify": {
   "name": "archify",
@@ -4728,7 +4743,8 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "Distilly": {
   "name": "Distilly",
@@ -4785,7 +4801,8 @@
    "de": "Selbst betrieben kostenlos (AGPLv3, ohne Funktionssperren) · verwaltet auf Volcano Engine mit Gratis-Test bis 50 Dateien; was es darüber kostet, nennt der Anbieter nicht",
    "en": "Self-hosted free (AGPLv3, with no feature gates) · managed on Volcano Engine with a free trial of up to 50 files; the vendor names no price beyond that"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "OpenPencil": {
   "name": "OpenPencil",
@@ -4813,7 +4830,8 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "customer-research": {
   "name": "customer-research",
@@ -4841,7 +4859,8 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "cro": {
   "name": "cro",
@@ -4869,7 +4888,8 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "video": {
   "name": "video",
@@ -4999,7 +5019,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-25"
  },
  "Glaze": {
   "name": "Glaze",
@@ -5059,7 +5080,8 @@
    "de": "Kostenlos, Open Source (Apache-2.0) · Berd spricht mit dem Goose-Unterbau; einen Preis nennt weder die Produktseite noch das Repository",
    "en": "Free, open source (Apache-2.0) · Berd talks to the Goose backend; neither the product page nor the repository names a price"
   },
-  "plansChecked": "2026-09-24"
+  "plansChecked": "2026-09-24",
+  "contentChecked": "2026-09-25"
  },
  "Goose": {
   "name": "Goose",
@@ -5092,7 +5114,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-25"
  },
  "Buzz": {
   "name": "Buzz",
@@ -5121,7 +5144,8 @@
    "de": "Kostenlos (Apache-2.0) · selbst hostbar, frühe Instanz auf buzz.xyz",
    "en": "Free (Apache-2.0) · self-hostable, early instance at buzz.xyz"
   },
-  "plansChecked": "2026-09-24"
+  "plansChecked": "2026-09-24",
+  "contentChecked": "2026-09-25"
  },
  "grill-with-docs": {
   "name": "grill-with-docs",

@@ -5496,6 +5496,35 @@
   ],
   "contentChecked": "2026-09-19"
  },
+ "n8n-skills": {
+  "name": "n8n Skills",
+  "vendor": "n8n",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Das offizielle Skill-Paket des n8n-Teams: dreizehn Fach-Skills für den ganzen Lebenslauf eines Ablaufs — Knoten konfigurieren, Ausdrücke schreiben, Schleifen und Paginierung, AI-Agenten, Zugangsdaten, Fehlerbehandlung, Fehlersuche — dazu ein Meta-Skill, der den Agenten je Aufgabe zum passenden Fach-Skill lotst, und über fünfzig Referenz-Dokumente mit Knoten-Fallen und fertigem Workflow-JSON. Der Fehlerbehandlungs-Skill dreht die Voreinstellung um: Statt dass ein Ablauf beim ersten Fehler still stehen bleibt, werden Fehlerausgänge verdrahtet, Statuscodes sauber zugeordnet und ein Fehler-Workflow für alles gefangen, was entwischt. Gedacht ist das Paket als Begleitung zum MCP-Endpunkt der eigenen n8n-Instanz, damit der Agent Abläufe baut, die nicht erst im Betrieb auseinanderfallen.",
+   "en": "The official skill package from the n8n team: thirteen capability skills for the whole life of a workflow — configuring nodes, writing expressions, loops and pagination, AI agents, credentials, error handling, debugging — plus a meta-skill that routes the agent to the right capability skill per task, and over fifty reference documents with per-node gotchas and ready-made workflow JSON. The error-handling skill reverses the default: instead of a flow silently halting on its first error, error outputs get wired, status codes mapped properly, and an error workflow catches whatever escapes. The package is meant as the companion to your own n8n instance's MCP endpoint, so the agent builds flows that do not fall apart only once they are running."
+  },
+  "tip": {
+   "de": "Der Fang steht in der Einrichtung: Das Paket setzt eine eigene n8n-Instanz voraus (ab Version 2.2.0, Cloud oder selbst gehostet) mit eingeschaltetem MCP-Server auf Instanz-Ebene — ohne den Endpunkt bleiben die Skills Theorie. In Claude Code kommt es als Plugin über den Marketplace, bei anderen Agenten über npx skills add n8n-io/skills; danach fragt die Einrichtung nach der Adresse der Instanz.",
+   "en": "The catch sits in the setup: the package assumes your own n8n instance (version 2.2.0 or later, cloud or self-hosted) with the instance-level MCP server switched on — without that endpoint the skills stay theory. In Claude Code it arrives as a plugin through the marketplace, with other agents via npx skills add n8n-io/skills; setup then asks for the instance's address."
+  },
+  "plans": {
+   "de": "Kostenlos (Apache 2.0) · eigene n8n-Instanz nötig",
+   "en": "Free (Apache 2.0) · needs your own n8n instance"
+  },
+  "links": {
+   "home": "https://github.com/n8n-io/skills",
+   "code": "https://github.com/n8n-io/skills"
+  },
+  "plansChecked": "2026-09-26",
+  "contentChecked": "2026-09-26"
+ },
  "excalidraw-skill": {
   "name": "excalidraw-skill",
   "vendor": "coleam00",

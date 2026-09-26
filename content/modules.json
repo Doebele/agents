@@ -624,6 +624,14 @@
        "en": "watch video"
       },
       "k": "watch"
+     },
+     {
+      "n": "n8n Skills",
+      "v": {
+       "de": "Abläufe & Fehler",
+       "en": "workflows & errors"
+      },
+      "k": "n8n-skills"
      }
     ]
    }

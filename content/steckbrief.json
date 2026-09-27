@@ -688,8 +688,8 @@
    "en": "xAI's coding agent for the terminal: it reads your project, edits files and runs commands. On bigger jobs it puts a plan in front of you first — you can comment on single steps, rewrite it, or throw it out — and only then does it touch anything. The agent itself has been open source since July 2026 (Apache 2.0); the model behind it has not."
   },
   "tip": {
-   "de": "Mit einem Konto kostenlos nutzbar; daneben der Weg über einen API-Schlüssel und nutzungsabhängige Abrechnung. Wer schon mit Claude Code oder Codex arbeitet, kann AGENTS.md, MCP-Server, Hooks und Skills mitnehmen — die versteht er.",
-   "en": "Free to use with an account; alongside that, the route through an API key and usage-based billing. If you already work with Claude Code or Codex you can bring your AGENTS.md, MCP servers, hooks and skills along — it reads them."
+   "de": "Läuft nur noch mit einem SuperGrok- oder X-Premium+-Abo, kostenlos ist hier nichts mehr; daneben der Weg über einen API-Schlüssel und nutzungsabhängige Abrechnung. Wer schon mit Claude Code oder Codex arbeitet, kann AGENTS.md, MCP-Server, Hooks und Skills mitnehmen — die versteht er.",
+   "en": "Only runs with a SuperGrok or X Premium+ subscription now, nothing free here any more; alongside that, the route through an API key and usage-based billing. If you already work with Claude Code or Codex you can bring your AGENTS.md, MCP servers, hooks and skills along — it reads them."
   },
   "links": {
    "home": "https://x.ai/news/grok-build-cli",
@@ -727,7 +727,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-26"
  },
  "Zed": {
   "name": "Zed",
@@ -1565,8 +1566,8 @@
   "accent": "var(--sky)",
   "open": true,
   "blurb": {
-   "de": "Ein offenes Bildmodell, das mit den geschlossenen mithält. Offen heisst hier: Du kannst die Gewichte herunterladen und das Modell auf eigener Hardware betreiben — nichts verlässt deinen Rechner, und je Bild fallen keine Gebühren an. Seit Juli 2026 steht der Nachfolger FLUX 3 im Early Access — multimodal, mit Video und Ton; die offenen Gewichte dafür sind angekündigt, noch nicht veröffentlicht.",
-   "en": "An open image model that keeps up with the closed ones. Open here means you can download the weights and run it on your own hardware — nothing leaves your machine and there is no per-image fee. Since July 2026 the successor FLUX 3 is in early access — multimodal, with video and sound; its open weights are announced, not yet released."
+   "de": "Ein offenes Bildmodell, das mit den geschlossenen mithält. Offen heisst hier: Du kannst die Gewichte herunterladen und das Modell auf eigener Hardware betreiben — nichts verlässt deinen Rechner, und je Bild fallen keine Gebühren an. Seit Juli 2026 gibt es den Nachfolger FLUX 3 — multimodal, mit Video und Ton; der Video-Teil läuft inzwischen regulär über die API, Bild und Action noch in eingeschränktem Zugang für ausgewählte Partner, und die offenen Gewichte des Dev-Modells sind weiterhin nur angekündigt, noch nicht veröffentlicht.",
+   "en": "An open image model that keeps up with the closed ones. Open here means you can download the weights and run it on your own hardware — nothing leaves your machine and there is no per-image fee. Since July 2026 the successor FLUX 3 exists — multimodal, with video and sound; its video part now runs generally through the API, image and action are still limited to selected partners, and the open weights for the Dev model remain announced but not yet released."
   },
   "tip": {
    "de": "Braucht eine kräftige Grafikkarte. Wer nur gelegentlich ein Bild will, fährt über einen Dienst günstiger als über eigene Hardware.",
@@ -1577,7 +1578,7 @@
    "docs": "https://bfl.ai/models/flux-2",
    "code": "https://github.com/black-forest-labs/flux2"
   },
-  "contentChecked": "2026-09-01"
+  "contentChecked": "2026-09-26"
  },
  "Qwen-Image": {
   "name": "Qwen-Image",
@@ -1612,12 +1613,12 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "Googles Bildmodell, auf Fotorealismus und Tempo getrimmt — Ergebnisse kommen fast ohne Wartezeit. Läuft über dieselbe Schnittstelle wie Gemini, was es naheliegend macht, wenn du ohnehin dort arbeitest. Googles neueste Bildarbeit steckt inzwischen in der Nano-Banana-Reihe — Imagen 4 bleibt über dieselbe Schnittstelle verfügbar.",
-   "en": "Google's image model, tuned for photorealism and speed — results arrive with almost no wait. It runs through the same interface as Gemini, which makes it an obvious pick if you already work there. Google's newest image work now lives in the Nano Banana line — Imagen 4 remains available through the same interface."
+   "de": "War Googles Bildmodell, auf Fotorealismus und Tempo getrimmt. Google hat Imagen inzwischen abgeschaltet: Die Gemini-API führt es als „legacy … now shut down“, und auch die frühere Modellseite zeigt nur noch die Nachfolge-Reihe. Die Rolle übernimmt jetzt Nano Banana (aktuell Pro auf Gemini 3, daneben 2 und 2 Lite) — unter dem Namen Imagen läuft nichts mehr.",
+   "en": "Used to be Google's image model, tuned for photorealism and speed. Google has since shut Imagen down: the Gemini API lists it as “legacy … now shut down,” and its old model page now shows only the successor line. Its role is taken over by Nano Banana (currently Pro on Gemini 3, alongside 2 and 2 Lite) — nothing answers to the name Imagen any more."
   },
   "tip": {
-   "de": "Die schnelle Wahl, wenn du viele Varianten hintereinander sehen willst, etwa auf der Suche nach einer Bildidee.",
-   "en": "The fast choice when you want to see many variants in a row, for instance while hunting for an idea."
+   "de": "Für neue Aufrufe ist diese Seite eine Sackgasse — Nano Banana ist der Weg, nicht mehr Imagen.",
+   "en": "For anything new this is a dead end — Nano Banana is the route now, not Imagen."
   },
   "links": {
    "home": "https://deepmind.google/models/imagen/",
@@ -1625,7 +1626,7 @@
    "code": null
   },
   "icon": "google",
-  "contentChecked": "2026-09-01"
+  "contentChecked": "2026-09-26"
  },
  "Ideogram": {
   "name": "Ideogram",
@@ -1649,7 +1650,7 @@
    "docs": "https://developer.ideogram.ai/ideogram-api/api-overview",
    "code": null
   },
-  "contentChecked": "2026-09-01"
+  "contentChecked": "2026-09-26"
  },
  "Recraft": {
   "name": "Recraft",
@@ -2120,7 +2121,8 @@
   "plansJahr": {
    "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 12 $/Mo. · Growth/Enterprise ab 18 $/Nutzer/Mo.",
    "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $12/mo · Growth/Enterprise from $18/user/mo"
-  }
+  },
+  "contentChecked": "2026-09-26"
  },
  "OpenWhispr": {
   "name": "OpenWhispr",
@@ -2156,7 +2158,8 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-26"
  },
  "FreeFlow": {
   "name": "FreeFlow",
@@ -3555,7 +3558,7 @@
    "code": null
   },
   "icon": "anthropic",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-26"
  },
  "OpenDesign": {
   "name": "OpenDesign",
@@ -3943,7 +3946,7 @@
   "links": {
    "home": "https://www.blackmagicdesign.com/products/davinciresolve"
   },
-  "contentChecked": "2026-09-05",
+  "contentChecked": "2026-09-26",
   "icon": "davinciresolve"
  },
  "Avid Media Composer": {
@@ -3970,7 +3973,7 @@
   "links": {
    "home": "https://www.avid.com/media-composer"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-26"
  },
  "CapCut": {
   "name": {
@@ -3996,7 +3999,7 @@
   "links": {
    "home": "https://www.capcut.com"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-26"
  },
  "Shotcut": {
   "name": {
@@ -4113,7 +4116,7 @@
    "home": "https://www.hostinger.com"
   },
   "plansChecked": "2026-09-21",
-  "contentChecked": "2026-09-01",
+  "contentChecked": "2026-09-26",
   "icon": "hostinger"
  },
  "Strato": {
@@ -4180,7 +4183,7 @@
    "home": "https://www.ionos.de"
   },
   "plansChecked": "2026-09-21",
-  "contentChecked": "2026-09-01",
+  "contentChecked": "2026-09-26",
   "icon": "ionos"
  },
  "Netlify": {
@@ -4341,7 +4344,8 @@
    "docs": "https://coolify.io/docs",
    "code": "https://github.com/coollabsio/coolify"
   },
-  "icon": "coolify"
+  "icon": "coolify",
+  "contentChecked": "2026-09-26"
  },
  "Together AI": {
   "name": "Together AI",
@@ -4555,7 +4559,8 @@
   "links": {
    "home": "https://www.hetzner.com"
   },
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-10",
+  "contentChecked": "2026-09-26"
  },
  "Modal": {
   "name": "Modal",
@@ -4651,7 +4656,8 @@
   "links": {
    "home": "https://openrouter.ai"
   },
-  "plansChecked": "2026-09-24"
+  "plansChecked": "2026-09-24",
+  "contentChecked": "2026-09-26"
  },
  "Abacus.AI": {
   "name": "Abacus.AI",
@@ -4945,7 +4951,8 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-26"
  },
  "ComfyUI": {
   "name": "ComfyUI",
@@ -5173,7 +5180,8 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-26"
  },
  "research": {
   "name": "research",
@@ -5201,7 +5209,8 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-26"
  },
  "qa": {
   "name": "qa",
@@ -5229,7 +5238,8 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-26"
  },
  "to-questionnaire": {
   "name": "to-questionnaire",
@@ -5257,7 +5267,8 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-26"
  },
  "Conductor": {
   "name": "Conductor",
@@ -5318,7 +5329,8 @@
    "de": "Kostenlos (MIT) · lokale PGLite oder eigenes Postgres",
    "en": "Free (MIT) · local PGLite or your own Postgres"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-26"
  },
  "BRAIN.md": {
   "name": "BRAIN.md",
@@ -5346,7 +5358,8 @@
    "de": "Kostenlos (Apache-2.0)",
    "en": "Free (Apache-2.0)"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-26"
  },
  "Notion": {
   "name": "Notion",
@@ -5383,7 +5396,8 @@
   "plansJahr": {
    "de": "Gratis · Plus 10 $/Mitglied/Mo. (120 $/Jahr) · Business 20 $/Mitglied/Mo. (240 $/Jahr) · eigene Agenten nach Credits (10 $/1.000)",
    "en": "Free · Plus $10/member/mo ($120/yr) · Business $20/member/mo ($240/yr) · custom agents by credits ($10/1,000)"
-  }
+  },
+  "contentChecked": "2026-09-26"
  },
  "Ornith 1.5": {
   "name": "Ornith 1.5",
@@ -5466,7 +5480,8 @@
    "home": "https://de.statista.com/business/connect-integrations-hub/",
    "docs": "https://docs.platform.statista.ai/mcp-server/introduction"
   },
-  "icon": "statista"
+  "icon": "statista",
+  "contentChecked": "2026-09-26"
  },
  "n8n": {
   "name": "n8n",

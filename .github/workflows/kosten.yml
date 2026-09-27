@@ -82,7 +82,10 @@ jobs:
             python3 /tmp/kosten.py bericht metriken/laeufe.csv; } \
             | tee -a "$GITHUB_STEP_SUMMARY"
 
-          git add metriken
+          # -f, weil main den Ordner in .gitignore fuehrt, damit er dort nie
+          # landet; auf dem Zweig metriken liegt die Datei vom Checkout noch
+          # im Arbeitsverzeichnis. Ohne -f scheiterte hier der erste Lauf.
+          git add -f metriken
           if git diff --cached --quiet; then
             echo "Nichts Neues."
             exit 0

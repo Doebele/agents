@@ -349,6 +349,35 @@ def _csv(pfad, spalten, zeilen):
 
 # ---------------------------------------------------------------- Sammeln
 
+def herunterladen(url, kopf, timeout=60):
+    """Ein Artefakt holen, ohne den Schluessel an den Speicher weiterzureichen.
+
+    GitHub beantwortet den Download eines Artefakts mit einer Weiterleitung auf
+    eine vorsignierte Speicheradresse. urllib folgt ihr und nimmt dabei den
+    Authorization-Kopf mit; der Speicher lehnt einen fremden Bearer-Token neben
+    der eigenen Signatur mit 401 ab. So scheiterte am 25. September jedes
+    einzelne Artefakt, und die Auszaehlung blieb leer. Also: die Weiterleitung
+    selbst lesen und die Zieladresse ohne Kopf abholen.
+    """
+    import urllib.error
+    import urllib.request
+
+    class KeineWeiterleitung(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, *args, **kwargs):
+            return None
+
+    oeffner = urllib.request.build_opener(KeineWeiterleitung)
+    try:
+        with oeffner.open(urllib.request.Request(url, headers=kopf), timeout=timeout) as r:
+            return r.read()
+    except urllib.error.HTTPError as e:
+        ziel = e.headers.get("Location") if e.code in (301, 302, 303, 307, 308) else None
+        if not ziel:
+            raise
+    with urllib.request.urlopen(urllib.request.Request(ziel), timeout=timeout) as r:
+        return r.read()
+
+
 def sammeln(args):
     """Die kosten-Artefakte der letzten Tage einsammeln und zusammenfuehren.
 
@@ -368,14 +397,15 @@ def sammeln(args):
         return 0
 
     def api(pfad, roh=False):
-        req = urllib.request.Request(
-            pfad if pfad.startswith("http") else f"https://api.github.com/repos/{repo}/{pfad}",
-            headers={"Authorization": f"Bearer {token}",
-                     "Accept": "application/vnd.github+json",
-                     "X-GitHub-Api-Version": "2022-11-28"})
+        url = pfad if pfad.startswith("http") else f"https://api.github.com/repos/{repo}/{pfad}"
+        kopf = {"Authorization": f"Bearer {token}",
+                "Accept": "application/vnd.github+json",
+                "X-GitHub-Api-Version": "2022-11-28"}
         try:
-            with urllib.request.urlopen(req, timeout=60) as r:
-                return r.read() if roh else json.load(r)
+            if roh:
+                return herunterladen(url, kopf)
+            with urllib.request.urlopen(urllib.request.Request(url, headers=kopf), timeout=60) as r:
+                return json.load(r)
         except urllib.error.HTTPError as e:
             print(f"  {pfad}: HTTP {e.code}")
         except Exception as e:

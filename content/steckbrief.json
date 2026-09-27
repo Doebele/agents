@@ -1603,8 +1603,8 @@
   },
   "contentChecked": "2026-09-12"
  },
- "Imagen 4": {
-  "name": "Imagen 4",
+ "Nano Banana": {
+  "name": "Nano Banana",
   "vendor": "Google",
   "cat": {
    "de": "Bild-Modell · Baustein 06",
@@ -1613,20 +1613,29 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "War Googles Bildmodell, auf Fotorealismus und Tempo getrimmt. Google hat Imagen inzwischen abgeschaltet: Die Gemini-API führt es als „legacy … now shut down“, und auch die frühere Modellseite zeigt nur noch die Nachfolge-Reihe. Die Rolle übernimmt jetzt Nano Banana (aktuell Pro auf Gemini 3, daneben 2 und 2 Lite) — unter dem Namen Imagen läuft nichts mehr.",
-   "en": "Used to be Google's image model, tuned for photorealism and speed. Google has since shut Imagen down: the Gemini API lists it as “legacy … now shut down,” and its old model page now shows only the successor line. Its role is taken over by Nano Banana (currently Pro on Gemini 3, alongside 2 and 2 Lite) — nothing answers to the name Imagen any more."
+   "de": "Googles Bildmodell-Reihe — der Name, unter dem die Gemini-Modelle Bilder erzeugen und bearbeiten. Vier Ausbaustufen: Nano Banana 2 Lite ist das schnellste und billigste, Nano Banana 2 der Allrounder mit 4K und zuverlässiger Schrift im Bild, Nano Banana Pro die Studio-Variante auf Gemini 3 für die kniffligen Fälle. Das ursprüngliche Nano Banana (Gemini 2.5 Flash Image) läuft noch bis zum 2. Oktober 2026 und wird dann abgeschaltet. Es ersetzt Imagen, das Google inzwischen ganz eingestellt hat — die API-Doku sagt dazu nur noch: „Imagen is shut down … Use Nano Banana.“ Erreichbar über die Gemini-App, Google AI Studio und die Gemini-API.",
+   "en": "Google's image model line — the name under which the Gemini models generate and edit images. Four levels: Nano Banana 2 Lite is the fastest and cheapest, Nano Banana 2 the all-rounder with 4K and reliable lettering, Nano Banana Pro the studio variant on Gemini 3 for the tricky cases. The original Nano Banana (Gemini 2.5 Flash Image) runs until 2 October 2026 and is then switched off. It replaces Imagen, which Google has since shut down entirely — the API docs say only: “Imagen is shut down … Use Nano Banana.” Reachable through the Gemini app, Google AI Studio and the Gemini API."
   },
   "tip": {
-   "de": "Für neue Aufrufe ist diese Seite eine Sackgasse — Nano Banana ist der Weg, nicht mehr Imagen.",
-   "en": "For anything new this is a dead end — Nano Banana is the route now, not Imagen."
+   "de": "Zum Ausprobieren reichen die Gemini-App oder Google AI Studio — beides ohne API-Schlüssel. In der API selbst gibt es keine Gratisstufe; wer nur gelegentlich ein Bild braucht, ist in der App besser aufgehoben.",
+   "en": "For trying it out, the Gemini app or Google AI Studio is enough — neither needs an API key. The API itself has no free tier; if you only need the occasional image, the app is the better place."
   },
+  "free": true,
+  "plans": {
+   "de": "In der Gemini-App und in Google AI Studio kostenlos testbar · API je 1K-Bild: Nano Banana 2 Lite 0,034 $ · Nano Banana 2 0,067 $ (0,5K 0,045 $, 4K 0,151 $) · Nano Banana Pro 0,134 $ (4K 0,24 $) · keine Gratisstufe in der API",
+   "en": "Free to try in the Gemini app and in Google AI Studio · API per 1K image: Nano Banana 2 Lite $0.034 · Nano Banana 2 $0.067 (0.5K $0.045, 4K $0.151) · Nano Banana Pro $0.134 (4K $0.24) · no free tier in the API"
+  },
+  "billing": [
+   "api"
+  ],
   "links": {
-   "home": "https://deepmind.google/models/imagen/",
-   "docs": "https://ai.google.dev/gemini-api/docs/imagen",
+   "home": "https://deepmind.google/models/gemini-image/",
+   "docs": "https://ai.google.dev/gemini-api/docs/image-generation",
    "code": null
   },
   "icon": "google",
-  "contentChecked": "2026-09-26"
+  "plansChecked": "2026-09-27",
+  "contentChecked": "2026-09-27"
  },
  "Ideogram": {
   "name": "Ideogram",

@@ -2000,18 +2000,15 @@
       "skill-creator",
       "eigene-skills",
       "Anthropic Agent Skills",
-      "grill-me"
+      "grill-me",
+      "n8n-skills"
      ],
      "empfehlung": [
       "skill-creator"
      ],
      "notiz": {
-      "de": "Ein Ablauf, den du zweimal erklärst, gehört in einen Skill. skill-creator schreibt ihn auf, grill-me fragt vorher durch, was der Ablauf eigentlich tun soll — bei Automatisierung rächt sich Unklarheit erst im Betrieb.",
-      "en": "A procedure you explain twice belongs in a skill. skill-creator writes it down, grill-me first questions what the procedure is actually meant to do — with automation, vagueness only takes its revenge in production."
-     },
-     "luecke": {
-      "de": "Ein Skill für n8n-Knoten und Fehlerbehandlung in Abläufen fehlt im Katalog.",
-      "en": "A skill for n8n nodes and error handling inside workflows is missing from the catalogue."
+      "de": "Ein Ablauf, den du zweimal erklärst, gehört in einen Skill. skill-creator schreibt ihn auf, grill-me fragt vorher durch, was der Ablauf eigentlich tun soll — bei Automatisierung rächt sich Unklarheit erst im Betrieb. Läuft der Ablauf in n8n, bringt das offizielle n8n-Skills-Paket das Wissen über Knoten und Fehlerbehandlung gleich mit.",
+      "en": "A procedure you explain twice belongs in a skill. skill-creator writes it down, grill-me first questions what the procedure is actually meant to do — with automation, vagueness only takes its revenge in production. If the flow runs in n8n, the official n8n Skills package brings the knowledge about nodes and error handling along with it."
      }
     }
    },

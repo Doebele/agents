@@ -815,7 +815,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-10"
+  "plansChecked": "2026-09-28"
  },
  "Hermes Agent": {
   "name": "Hermes Agent",
@@ -848,7 +848,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-22"
  },
  "Odysseus": {
@@ -1015,7 +1015,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "icon": "crewai",
   "contentChecked": "2026-09-22"
  },
@@ -1079,7 +1079,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-22"
  },
  "Google ADK": {
@@ -1113,7 +1113,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-22"
  },
  "Qwen 3.6 / 3.8": {
@@ -1464,7 +1464,7 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-22"
  },
  "SGLang": {
@@ -1947,7 +1947,7 @@
    "de": "Kostenlos (Apache 2.0) · keine Render-Gebühren und keine Schwelle für kommerzielle Nutzung",
    "en": "Free (Apache 2.0) · no per-render fees and no commercial-use threshold"
   },
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-25"
  },
  "ElevenLabs Eleven v3": {
@@ -2199,7 +2199,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-25"
  },
  "Anarlog": {
@@ -2586,7 +2586,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-22"
  },
  "DeepSeek V4": {
@@ -3679,7 +3679,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "links": {
    "home": "https://developer.apple.com/xcode/",
    "docs": "https://developer.apple.com/documentation/xcode/",
@@ -4087,7 +4087,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "links": {
    "home": "https://deepseek.com/harness/en/",
    "code": "https://github.com/deepseek-ai/deepseek-harness",
@@ -4347,7 +4347,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "links": {
    "home": "https://coolify.io",
    "docs": "https://coolify.io/docs",
@@ -4412,7 +4412,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "links": {
    "home": "https://fireworks.ai"
   },
@@ -4728,7 +4728,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "icon": "deepseek",
   "contentChecked": "2026-09-25"
  },
@@ -4932,7 +4932,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-09-15"
+  "plansChecked": "2026-09-28"
  },
  "premortem": {
   "name": "premortem",
@@ -5130,7 +5130,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-25"
  },
  "Buzz": {
@@ -5400,7 +5400,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-09-28",
   "icon": "notion",
   "plansJahr": {
    "de": "Gratis · Plus 10 $/Mitglied/Mo. (120 $/Jahr) · Business 20 $/Mitglied/Mo. (240 $/Jahr) · eigene Agenten nach Credits (10 $/1.000)",

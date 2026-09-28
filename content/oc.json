@@ -43,19 +43,24 @@
  ],
  "closed": [
   {
-   "v": "OpenAI",
-   "m": "GPT-6 Astra",
-   "key": "GPT-6 Astra"
-  },
-  {
    "v": "Anthropic",
    "m": "Claude Opus 5.5",
    "key": "Claude Opus 5.5 / Sonnet 5"
   },
   {
-   "v": "Google",
-   "m": "Gemini 3.1 Pro",
-   "key": "Gemini 3.1 Pro"
+   "v": "Anthropic",
+   "m": "Claude Fable 5.1",
+   "key": "Claude Fable 5.1"
+  },
+  {
+   "v": "OpenAI",
+   "m": "GPT-6 Astra",
+   "key": "GPT-6 Astra"
+  },
+  {
+   "v": "Meta",
+   "m": "Muse Spark 1.3",
+   "key": "Muse Spark 1.3"
   },
   {
    "v": "SpaceXAI",
@@ -66,6 +71,16 @@
    "v": "Alibaba",
    "m": "Qwen3.8-Max",
    "key": "Qwen3.8-Max"
+  },
+  {
+   "v": "StepFun",
+   "m": "Step 5 Preview",
+   "key": "Step 5 Preview"
+  },
+  {
+   "v": "Google",
+   "m": "Gemini 3.1 Pro",
+   "key": "Gemini 3.1 Pro"
   }
  ]
 }

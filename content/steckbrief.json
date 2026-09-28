@@ -6050,5 +6050,57 @@
   },
   "plansChecked": "2026-09-20",
   "contentChecked": "2026-09-20"
+ },
+ "Claude Fable 5.1": {
+  "name": "Claude Fable 5.1",
+  "vendor": "Anthropic",
+  "cat": {
+   "de": "Frontier-Modell · Baustein 01",
+   "en": "Frontier model · Block 01"
+  },
+  "accent": "var(--cyan)",
+  "open": false,
+  "free": false,
+  "icon": "anthropic",
+  "blurb": {
+   "de": "Die Stufe über dem Opus: Fable 5.1 ist für Agentenläufe gebaut, die lange durchhalten müssen — „Next generation intelligence for long-running agents“, sagt Anthropic selbst. Eine Million Token Kontext, Bilder im Eingang, gestuftes sichtbares Nachdenken; auf der Intelligenzskala von Artificial Analysis liegt es knapp hinter dem Opus mit Maximum-Einstellung, aber vor allem anderen am Markt. Der Fang ist der Tagespreis: 10 $ Eingang und 50 $ Ausgang je Million Token — das Fünffache von Opus 5.5 —, und im Abo frisst es die Hälfte des Wochenlimits.",
+   "en": "The tier above the Opus: Fable 5.1 is built for agent runs that have to last — \"next generation intelligence for long-running agents\", in Anthropic's own words. One million tokens of context, images on input, stepped visible reasoning; on Artificial Analysis' intelligence scale it sits just behind the Opus at maximum effort, ahead of nearly everything else on the market. The catch is the day rate: $10 input and $50 output per million tokens — five times Opus 5.5 — and on a subscription it eats half the weekly limit."
+  },
+  "tip": {
+   "de": "Der Tagesfahrer bleibt Opus 5.5. Fable 5.1 nimmt man, wenn ein Lauf Stunden dauert und die Stufe dazwischen nicht reicht: Migrationen, tiefe Recherchen, mehrstufige Agentenketten. Im Abo zählt jeder Fable-Zug doppelt aufs Limit — im API-Kredit zählt er halt einfach.",
+   "en": "The daily driver stays Opus 5.5. Fable 5.1 is for runs that take hours and where the tier below stops being enough: migrations, deep research, multi-step agent chains. On a subscription every Fable move counts double against the limit — on API credit it simply counts."
+  },
+  "links": {
+   "home": "https://claude.com/pricing",
+   "docs": "https://platform.claude.com/docs/en/models/overview"
+  },
+  "plans": {
+   "de": "In Claude-Abos mit halbiertem Wochenlimit · API 10 $/50 $ pro 1M Token · Cache-Lesen 0,25 $ · Batch −50 %",
+   "en": "In Claude plans with half the weekly limit · API $10/$50 per 1M tokens · cache read $0.25 · batch −50%"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "aa": {
+   "url": "https://artificialanalysis.ai/models/claude-fable-5-1",
+   "intel": {
+    "v": "53",
+    "rank": "#4/211"
+   },
+   "speed": {
+    "v": "68.5",
+    "rank": "#104/211"
+   },
+   "cost": {
+    "v": "$10/$50",
+    "rank": "#94/211"
+   },
+   "verb": {
+    "v": "190M",
+    "rank": "#88/211"
+   }
+  },
+  "plansChecked": "2026-09-28"
  }
 }

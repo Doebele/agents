@@ -1580,6 +1580,7 @@
        "03_skills": {
         "kandidaten": [
          "eigene-skills",
+         "meeting-notes",
          "skill-creator",
          "obsidian-skills"
         ],
@@ -1587,12 +1588,8 @@
          "eigene-skills"
         ],
         "notiz": {
-         "de": "Wie euer Protokoll aussieht, weiss kein fremder Skill: Wer entscheidet, was als Aufgabe zählt, wie ihr Termine schreibt. Einmal als eigener Skill hinterlegt, sieht jedes Protokoll gleich aus.",
-         "en": "No outside skill knows what your minutes look like: who decides, what counts as a task, how you write dates. Written down once as your own skill, every set of minutes comes out the same."
-        },
-        "luecke": {
-         "de": "Ein fertiger Skill für Protokolle und Beschlussverfolgung fehlt im Katalog.",
-         "en": "A ready-made skill for minutes and decision tracking is missing from the catalogue."
+         "de": "Wie euer Protokoll aussieht, weiss kein fremder Skill: Wer entscheidet, was als Aufgabe zählt, wie ihr Termine schreibt. Einmal als eigener Skill hinterlegt, sieht jedes Protokoll gleich aus. Wer keine eigenen Regeln braucht, nimmt stattdessen meeting-notes: eine fertige Vorlage mit Entscheidungen und einer Aufgabentabelle samt Verantwortlichen.",
+         "en": "No outside skill knows what your minutes look like: who decides, what counts as a task, how you write dates. Written down once as your own skill, every set of minutes comes out the same. Anyone without their own rules can take meeting-notes instead: a ready-made template with a decisions section and a task table with owners."
         }
        }
       },

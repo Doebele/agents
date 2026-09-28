@@ -631,6 +631,14 @@
       "k": "watch"
      },
      {
+      "n": "meeting-notes",
+      "v": {
+       "de": "Protokolle",
+       "en": "meeting minutes"
+      },
+      "k": "meeting-notes"
+     },
+     {
       "n": "n8n Skills",
       "v": {
        "de": "Abläufe & Fehler",

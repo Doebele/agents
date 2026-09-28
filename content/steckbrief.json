@@ -6051,6 +6051,35 @@
   "plansChecked": "2026-09-20",
   "contentChecked": "2026-09-20"
  },
+ "meeting-notes": {
+  "name": "meeting-notes",
+  "vendor": "claude-office-skills",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Vorlagen-Skill für Protokolle: Rohe Notizen, ein Mitschnitt oder ein Transkript rein, dazu die Art des Termins — Stand-up, Projekt-Review, Kundengespräch —, und heraus kommt eine strukturierte Zusammenfassung mit einem eigenen Abschnitt für getroffene Entscheidungen und einer Tabelle aus Aufgabe, Verantwortlicher, Termin und Status. Aufgezeichnet wird hier nichts: Das Rohmaterial muss schon vorliegen, etwa aus einem Mitschnitt-Werkzeug oder einer Transkription.",
+   "en": "A template skill for minutes: hand it raw notes, a recording or a transcript along with the meeting type — standup, project review, client call — and it returns a structured summary with its own section for decisions made and a table of task, owner, due date and status. It records nothing itself: the raw material has to exist already, from a recording tool or a transcription."
+  },
+  "tip": {
+   "de": "Schließt die Lücke, die die Arbeitsart „Gespräche begleiten“ für Meetings bisher offen ließ: eine fertige Vorlage statt eines eigenen Formats. Wer ein festes Team-Protokoll mit eigenen Regeln will, schreibt trotzdem besser einen eigenen Skill — dieser hier bringt drei feste Vorlagen mit, keine anpassbare.",
+   "en": "Closes the gap the „Capture conversations“ work type left open for meetings: a ready template instead of a custom one. A team wanting a fixed set of minutes with its own rules is still better served writing its own skill — this one ships three fixed templates, not a customisable one."
+  },
+  "links": {
+   "home": "https://www.skills.sh/claude-office-skills/skills/meeting-notes",
+   "code": "https://github.com/claude-office-skills/skills/tree/main/meeting-notes"
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (MIT)",
+   "en": "Free, a text file (MIT)"
+  },
+  "plansChecked": "2026-09-28",
+  "contentChecked": "2026-09-28"
+ },
  "Claude Fable 5.1": {
   "name": "Claude Fable 5.1",
   "vendor": "Anthropic",

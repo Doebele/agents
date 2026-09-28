@@ -162,6 +162,31 @@ def pruefe():
     return fehler
 
 
+def stand_datum(lang):
+    """Der Stand des Katalogs als Monatsname: aus dem letzten Commit, der
+    content/ oder build/ beruehrt — derselbe Trick wie in stand.py. Ein
+    handgepflegtes Datum rottet lautlos; git kann nicht vergessen. Ohne
+    Historie (flacher Klon) zaehlt der Bautag, der in der CI ohnehin der
+    Veröffentlichungstag ist."""
+    import subprocess
+    try:
+        r = subprocess.run(["git", "log", "-1", "--format=%cs", "--", "content", "build"],
+                           capture_output=True, text=True, timeout=30)
+        iso = r.stdout.strip() if r.returncode == 0 and r.stdout.strip() else None
+    except (OSError, subprocess.SubprocessError):
+        iso = None
+    if not iso:
+        iso = datetime.date.today().isoformat()
+    jahr, monat, _ = iso.split("-")
+    monate = {
+        "de": ["januar", "februar", "märz", "april", "mai", "juni", "juli",
+               "august", "september", "oktober", "november", "dezember"],
+        "en": ["january", "february", "march", "april", "may", "june", "july",
+               "august", "september", "october", "november", "december"],
+    }
+    return f"{monate[lang][int(monat)-1]} {jahr}"
+
+
 def baue(lang):
     t = VORLAGE
     for b in BLOECKE:
@@ -170,6 +195,8 @@ def baue(lang):
         t = t.replace("{{DATA:"+b+"}}", f"const {b} = {j};")
     for k, v in ui.items():
         t = t.replace("{{T:"+k+"}}", v[lang])
+    # Der Stand im Boot-Bildschirm: aus git abgeleitet, nicht von Hand.
+    t = t.replace("{{STAND}}", stand_datum(lang))
     # Zaehlmarken zuletzt: sie stehen auch in uebersetzten Zeilen und sollen
     # nie wieder von Hand nachgezogen werden muessen.
     for b in BLOECKE:

@@ -24,8 +24,8 @@
   "en": "  <div class=\"ln\">// loading 7 blocks · 1 loop …</div>"
  },
  "t007": {
-  "de": "  <div class=\"ln\">// stand: august 2026</div>",
-  "en": "  <div class=\"ln\">// status: august 2026</div>"
+  "de": "  <div class=\"ln\">// stand: {{STAND}}</div>",
+  "en": "  <div class=\"ln\">// status: {{STAND}}</div>"
  },
  "t008": {
   "de": "/* Notausgang: stirbt das Modul-Script, bleibt der Bootscreen sonst stehen. */",

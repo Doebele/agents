@@ -1052,7 +1052,12 @@
     "sprecher",
     "musik",
     "vertonung",
-    "bild"
+    "bild",
+    "figur",
+    "avatar",
+    "influencer",
+    "persona",
+    "reel"
    ],
    "stationen": {
     "03_skills": {
@@ -1265,6 +1270,133 @@
         "text": {
          "de": "Ein Schnittprogramm rechnet den fertigen Film am Ende neu durch. Das dauert und braucht nochmal so viel Platz wie das Rohmaterial.",
          "en": "An editing program re-renders the finished film at the end. That takes time and needs as much space again as the raw footage."
+        }
+       }
+      ]
+     },
+     {
+      "id": "figur",
+      "name": {
+       "de": "Eine wiederkehrende Figur",
+       "en": "A recurring character"
+      },
+      "sub": {
+       "de": "Avatar, Sprecher, Serienfigur",
+       "en": "Avatar, presenter, series character"
+      },
+      "stationen": {
+       "03_skills": {
+        "kandidaten": [
+         "higgsfield-soul-id",
+         "social",
+         "offers",
+         "video",
+         "eigene-skills"
+        ],
+        "empfehlung": [
+         "higgsfield-soul-id",
+         "social"
+        ],
+        "notiz": {
+         "de": "higgsfield-soul-id hält das Gesicht fest, social füllt den Kalender und arbeitet ein Stück in viele um, offers beantwortet die Frage, warum am Ende jemand zahlt.",
+         "en": "higgsfield-soul-id pins the face down, social fills the calendar and turns one piece into many, offers answers why anyone pays at the end."
+        }
+       },
+       "04_mcp": {
+        "kandidaten": [
+         "higgsfield-mcp",
+         "filesystem-mcp"
+        ],
+        "empfehlung": [
+         "higgsfield-mcp"
+        ],
+        "notiz": {
+         "de": "Über MCP erzeugt der Agent Bilder und Clips aus dem Gespräch heraus. Das Identitätsmodell selbst trainiert higgsfield-soul-id daneben über eine Kommandozeile, nicht über MCP.",
+         "en": "Over MCP the agent produces images and clips from inside the conversation. The identity model itself is trained by higgsfield-soul-id alongside, through a command line rather than MCP."
+        }
+       },
+       "06_medien": {
+        "kandidaten": [
+         "Higgsfield",
+         "Nano Banana",
+         "Seedance 2.5",
+         "Kling 3.0",
+         "Veo 3.1",
+         "ElevenLabs Eleven v3"
+        ],
+        "empfehlung": [
+         "Higgsfield",
+         "ElevenLabs Eleven v3"
+        ],
+        "notiz": {
+         "de": "Die Reihenfolge ist hier die Arbeit: erst ein Satz Porträts, der immer dasselbe Gesicht zeigt, daraus das Identitätsmodell, dann Bewegung und Stimme darauf. Ein Modell, das jedes Bild neu erfindet, taugt für einen Clip und nicht für eine Figur.",
+         "en": "The order is the work here: first a set of portraits showing the same face throughout, then the identity model from it, then motion and voice on top. A model that reinvents every image serves a clip, not a character."
+        }
+       },
+       "07_umgebung": {
+        "kandidaten": [
+         "Edits",
+         "CapCut",
+         "DaVinci Resolve"
+        ],
+        "empfehlung": [
+         "Edits"
+        ],
+        "notiz": {
+         "de": "Untertitel sind bei stummer Wiedergabe die halbe Botschaft. Beide Handy-Apps erzeugen sie automatisch und kosten nichts; Edits zeigt dazu die Zahlen der eigenen Beiträge, bindet dich aber an Instagram.",
+         "en": "With the sound off, captions are half the message. Both phone apps generate them automatically and cost nothing; Edits also shows the numbers on your own posts, at the price of tying you to Instagram."
+        }
+       }
+      },
+      "voraussetzungen": [
+       {
+        "titel": {
+         "de": "Offenlegen, dass die Figur erfunden ist",
+         "en": "Disclosing that the character is invented"
+        },
+        "text": {
+         "de": "Instagram führt seit Ende August 2026 ein Label für KI-generierte Profile. Wer ein Profil betreibt, das eine erzeugte Person zeigt, soll es selbst kennzeichnen, und wer das unterlässt, muss laut Instagram mit eingeschränkter Reichweite und dem Verlust von Empfehlungen rechnen. Ein Satz im Profiltext kostet nichts und beantwortet die Frage, bevor sie jemand stellt.",
+         "en": "Since the end of August 2026 Instagram has carried a label for AI-generated profiles. Whoever runs a profile depicting a generated person is expected to label it, and Instagram says those who do not should expect restricted reach and the loss of recommendations. One line in the bio costs nothing and answers the question before anyone asks it."
+        }
+       },
+       {
+        "titel": {
+         "de": "Ein Gesicht und eine Stimme, die du verwenden darfst",
+         "en": "A face and a voice you may use"
+        },
+        "text": {
+         "de": "Trainiert wird auf deinem eigenen Gesicht oder einem erzeugten. Das Gesicht einer anderen Person braucht ihre ausdrückliche Erlaubnis, für die Stimme gilt dasselbe.",
+         "en": "Train on your own face or a generated one. Someone else's face needs that person's explicit permission, and the same holds for the voice."
+        }
+       },
+       {
+        "titel": {
+         "de": "Ein bezahlter Tarif",
+         "en": "A paid plan"
+        },
+        "text": {
+         "de": "Das Identitätsmodell verlangt bei Higgsfield mindestens die Basic-Stufe, und Bewegtbild kostet je Sekunde. Die Gratisstufen reichen für eine Probe, nicht für eine Serie.",
+         "en": "The identity model needs at least Higgsfield's Basic tier, and moving images cost by the second. Free tiers stretch to a test, not to a series."
+        }
+       },
+       {
+        "titel": {
+         "de": "Eine Obergrenze",
+         "en": "An upper limit"
+        },
+        "text": {
+         "de": "Eine Figur, die regelmäßig postet, braucht Clips im Dutzend. Leg vorher fest, wie viele Generierungen pro Woche erlaubt sind, sonst entscheidet das die Neugier.",
+         "en": "A character that posts regularly needs clips by the dozen. Decide up front how many generations a week are allowed, or curiosity decides it for you."
+        }
+       },
+       {
+        "titel": {
+         "de": "Mehr als eine Figur",
+         "en": "More than one character"
+        },
+        "text": {
+         "de": "Welche Figur ankommt, sagt dir vorher niemand. Wer nur eine startet, hat am Ende kein Ergebnis, sondern eine Stichprobe von eins.",
+         "en": "Nobody can tell you in advance which character lands. Starting only one leaves you with a sample of one rather than a result."
         }
        }
       ]

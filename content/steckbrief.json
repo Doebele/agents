@@ -6103,6 +6103,35 @@
   "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-28"
  },
+ "literature-review": {
+  "name": "literature-review",
+  "vendor": "k-dense-ai",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Skill, der eine Literaturrecherche wie eine wissenschaftliche Arbeit behandelt: sieben Phasen von der Fragestellung über die systematische Suche bis zum fertigen Aufsatz. Gesucht wird in mindestens drei Datenbanken — etwa PubMed, arXiv, bioRxiv oder Semantic Scholar —, und jede Suche wird protokolliert: welcher Begriff, in welcher Datenbank, an welchem Tag, wie viele Treffer. Die Treffer werden in drei Stufen gesiebt, jede Zitation gegen ihre Quelle geprüft, und am Ende steht ein Dokument als Markdown oder PDF mit Literaturverzeichnis in APA, Nature, Vancouver, Chicago oder IEEE.",
+   "en": "A skill that treats a literature search like scholarly work: seven phases from the research question through systematic searching to the finished paper. It searches at least three databases — PubMed, arXiv, bioRxiv, Semantic Scholar among them — and logs every search: which term, in which database, on which day, how many hits. Results are screened in three stages, every citation is checked against its source, and at the end stands a document as Markdown or PDF with a bibliography in APA, Nature, Vancouver, Chicago or IEEE."
+  },
+  "tip": {
+   "de": "Schließt die Lücke, die die Arbeitsart „Recherchieren“ für Zitierweise und Rechercheprotokoll offen ließ: eine Recherche, die belegen kann, was sie gelesen hat — und wo und wann. Drei Haken: Der Skill denkt in wissenschaftlichen Datenbanken, für Markt- und Firmenrecherche bleibt der Skill research der passendere; die Websuche läuft über parallel-cli, ein separates Werkzeug mit eigener Anmeldung, und für die PDF-Ausgabe kommen pandoc und LaTeX dazu; und der Skill-Text macht KI-generierte Schaubilder zur Pflicht, die LLM-gestützten Schritte fragen zusätzlich optional nach einem OpenRouter-Schlüssel. Wer nur einen schnellen Überblick braucht, trägt hier schwere Maschinerie — für eine Abschlussarbeit ist genau das der Punkt.",
+   "en": "Closes the gap the „Research“ work type left open for citation style and a research log: a search that can document what it read — and where and when. Three catches: the skill thinks in academic databases, so for market and company research the research skill fits better; web search runs through parallel-cli, a separate tool with its own sign-in, and PDF output adds pandoc and LaTeX; and the skill text makes AI-generated figures mandatory, with the LLM-backed steps optionally asking for an OpenRouter key on top. A quick overview carries heavy machinery here — for a thesis that machinery is the point."
+  },
+  "links": {
+   "home": "https://www.skills.sh/k-dense-ai/skills/literature-review",
+   "code": "https://github.com/k-dense-ai/scientific-agent-skills/tree/main/skills/literature-review"
+  },
+  "plans": {
+   "de": "Kostenlos (MIT)",
+   "en": "Free (MIT)"
+  },
+  "plansChecked": "2026-09-29",
+  "contentChecked": "2026-09-29"
+ },
  "higgsfield-soul-id": {
   "name": "higgsfield-soul-id",
   "vendor": "Higgsfield",

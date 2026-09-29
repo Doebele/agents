@@ -504,6 +504,14 @@
       "k": "research"
      },
      {
+      "n": "literature-review",
+      "v": {
+       "de": "Literatur & Zitate",
+       "en": "literature & citations"
+      },
+      "k": "literature-review"
+     },
+     {
       "n": "qa",
       "v": "Matt Pocock",
       "k": "qa"

@@ -143,12 +143,9 @@
       "Distilly",
       "customer-research",
       "research",
+      "literature-review",
       "watch"
      ],
-     "luecke": {
-      "de": "Für Zitierweise und Rechercheprotokoll führt der Katalog noch keinen Skill.",
-      "en": "For citation style and a research log the catalogue has no skill yet."
-     },
      "frage": {
       "de": "Welches Wissen soll der Agent mitbringen?",
       "en": "What knowledge should the agent bring along?"

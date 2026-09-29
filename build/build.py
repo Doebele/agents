@@ -28,8 +28,11 @@ ui = json.loads((CONTENT/"ui.json").read_text(encoding="utf-8"))
 # Luecken und offene Entscheidungen stehen dort neben dem, was der Wizard zeigt.
 # Statt einer zweiten Datei — die sofort auseinanderliefe — wird beim Bauen
 # abgeleitet. Was hier nicht auftaucht, erreicht die Seite nicht.
+ARBEITSARTEN_ROH = json.loads((CONTENT/"arbeitsarten.json").read_text(encoding="utf-8"))
+
+
 def _arbeitsarten():
-    q = json.loads((CONTENT/"arbeitsarten.json").read_text(encoding="utf-8"))
+    q = ARBEITSARTEN_ROH
     def station(s):
         k = {f: s[f] for f in ("frage", "notiz", "kandidaten", "empfehlung", "luecke") if f in s}
         k.setdefault("kandidaten", []); k.setdefault("empfehlung", [])
@@ -79,6 +82,38 @@ def fuer(o, lang):
     return o
 
 
+def pruefe_wizard(roh, steckbriefe):
+    """Jede Kandidaten- und Empfehlungszeile des Wizards muss auf einen
+    vorhandenen Steckbrief zeigen — arbeitsarten.json sagt das selbst
+    ("Alle Einträge zeigen auf vorhandene Steckbriefe"), nur hat es bisher
+    niemand nachgehalten. Ein Tippfehler oder ein umbenannter Steckbrief
+    hinterlaesst sonst eine Option, die der Wizard anbietet und die ins Leere
+    fuehrt. Leere Kandidatenlisten sind erlaubt: das sind die erklaerten
+    Luecken."""
+    fehler = []
+
+    def station(s, wo):
+        kand = s.get("kandidaten", [])
+        for k in kand:
+            if k not in steckbriefe:
+                fehler.append(f"Wizard {wo}: Kandidat ohne Steckbrief: {k!r}")
+        # Eine Empfehlung ausserhalb der Kandidaten kann der Nutzer nicht
+        # waehlen — sie ist keine Vorauswahl, sondern ein Fehler.
+        for k in s.get("empfehlung", []):
+            if k not in kand:
+                fehler.append(f"Wizard {wo}: Empfehlung {k!r} steht nicht in kandidaten")
+
+    for n, s in roh.get("globale_wahl", {}).get("stationen", {}).items():
+        station(s, f"globale_wahl/{n}")
+    for a in roh.get("arbeitsarten", []):
+        for n, s in a.get("stationen", {}).items():
+            station(s, f"{a['id']}/{n}")
+        for o in a.get("varianten", {}).get("optionen", []):
+            for n, s in o.get("stationen", {}).items():
+                station(s, f"{a['id']}/{o['id']}/{n}")
+    return fehler
+
+
 def pruefe():
     fehler = []
 
@@ -109,6 +144,8 @@ def pruefe():
                 chips.add(fuer(it["k"], "de"))
     for k in sorted(chips - sb): fehler.append(f"Chip ohne Steckbrief: {k!r}")
     for k in sorted(sb - chips): fehler.append(f"Steckbrief ohne Chip: {k!r}")
+
+    fehler += pruefe_wizard(ARBEITSARTEN_ROH, sb)
 
     # billing: optional, aber wenn gesetzt, nur bekannte Abrechnungsarten.
     for k, d in daten["STECKBRIEF"].items():
@@ -210,6 +247,41 @@ if fehler:
     print("Pruefung fehlgeschlagen:")
     for f in fehler[:20]: print("  ·", f)
     sys.exit(1)
+
+def selbsttest():
+    """Die Wizard-Pruefung an gebauten Faellen, damit sie nicht stumm
+    verfaellt: eine bestandene Pruefung auf sauberen Inhalten beweist nur,
+    dass sie nichts meldet — nicht, dass sie etwas finden wuerde."""
+    sb = {"Claude Code", "Aider"}
+    gut = {"globale_wahl": {"stationen": {"01": {"kandidaten": ["Aider"],
+                                                "empfehlung": ["Aider"]}}},
+           "arbeitsarten": [{"id": "bauen",
+                             "stationen": {"03": {"kandidaten": [], "empfehlung": []}},
+                             "varianten": {"optionen": [
+                                 {"id": "web", "stationen": {"04": {"kandidaten": ["Claude Code"]}}}]}}]}
+    assert pruefe_wizard(gut, sb) == [], pruefe_wizard(gut, sb)
+
+    tippfehler = json.loads(json.dumps(gut))
+    tippfehler["arbeitsarten"][0]["varianten"]["optionen"][0]["stationen"]["04"]["kandidaten"] = ["Claude Kode"]
+    f = pruefe_wizard(tippfehler, sb)
+    assert len(f) == 1 and "bauen/web/04" in f[0] and "Claude Kode" in f[0], f
+
+    daneben = json.loads(json.dumps(gut))
+    daneben["globale_wahl"]["stationen"]["01"]["empfehlung"] = ["Claude Code"]
+    f = pruefe_wizard(daneben, sb)
+    assert len(f) == 1 and "steht nicht in kandidaten" in f[0], f
+
+    # Eine Luecke ist kein Fehler.
+    luecke = json.loads(json.dumps(gut))
+    luecke["arbeitsarten"][0]["stationen"]["03"]["luecke"] = "kein Eintrag im Katalog"
+    assert pruefe_wizard(luecke, sb) == []
+
+    print("build.py: Wizard-Pruefung in Ordnung")
+
+
+if "--selbsttest" in sys.argv:
+    selbsttest()
+    sys.exit(0)
 
 pruefmodus = "--check" in sys.argv
 abweichung = False

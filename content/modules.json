@@ -639,6 +639,30 @@
       "k": "meeting-notes"
      },
      {
+      "n": "higgsfield-soul-id",
+      "v": {
+       "de": "Figur behalten",
+       "en": "keep a character"
+      },
+      "k": "higgsfield-soul-id"
+     },
+     {
+      "n": "social",
+      "v": {
+       "de": "Redaktionsplan",
+       "en": "editorial plan"
+      },
+      "k": "social"
+     },
+     {
+      "n": "offers",
+      "v": {
+       "de": "Angebot bauen",
+       "en": "offer design"
+      },
+      "k": "offers"
+     },
+     {
       "n": "n8n Skills",
       "v": {
        "de": "Abläufe & Fehler",
@@ -1456,6 +1480,14 @@
        "en": "ByteDance · free"
       },
       "k": "CapCut"
+     },
+     {
+      "n": "Edits",
+      "v": {
+       "de": "Instagram · gratis",
+       "en": "Instagram · free"
+      },
+      "k": "Edits"
      },
      {
       "n": {

@@ -4010,6 +4010,29 @@
   },
   "contentChecked": "2026-09-26"
  },
+ "Edits": {
+  "name": "Edits",
+  "vendor": "Instagram",
+  "cat": {
+   "de": "Schnittprogramm · Baustein 07",
+   "en": "Editing program · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Instagrams eigene Schnitt-App fürs Handy, kostenlos. Aufnahmen bis zehn Minuten, Schnitt auf das einzelne Bild genau, automatisch erzeugte Untertitel, die du frei gestalten kannst, Freistellen und Greenscreen, Ton aufräumen, Export in 4K ohne Wasserzeichen. Dazu zwei Dinge, die ein Schnittprogramm sonst nicht kann: ein Feed mit gerade beliebten Tonspuren und eine laufende Auswertung, wie die eigenen Reels ankommen. Läuft auf iPhone und Android, Anmeldung mit dem Instagram-Konto.",
+   "en": "Instagram's own editing app for the phone, free. Clips up to ten minutes, editing accurate to the single frame, automatic captions you can style yourself, cutouts and green screen, audio cleanup, 4K export with no watermark. Plus two things an editing program usually cannot do: a feed of currently popular audio and a running dashboard on how your own reels are doing. Runs on iPhone and Android, sign-in with an Instagram account."
+  },
+  "tip": {
+   "de": "Die naheliegende Wahl, wenn das Ergebnis auf Instagram landet: Untertitel in zwei Griffen, Export ohne Wasserzeichen, und die Zahlen zu den eigenen Videos stehen in derselben App. Der Haken ist die Bindung. Es läuft nur auf dem Handy, es will ein Instagram-Konto, und die Auswertung kennt nur Instagram. Wer für mehrere Plattformen schneidet oder am Rechner arbeitet, ist mit CapCut oder DaVinci Resolve freier.",
+   "en": "The obvious pick when the result lands on Instagram: captions in two taps, export with no watermark, and the numbers on your own videos sit in the same app. The catch is the tie-in. It runs on the phone only, it wants an Instagram account, and the dashboard knows Instagram alone. Cutting for several platforms, or working on a desktop, is freer with CapCut or DaVinci Resolve."
+  },
+  "links": {
+   "home": "https://creators.instagram.com/edits/"
+  },
+  "contentChecked": "2026-09-29"
+ },
  "Shotcut": {
   "name": {
    "de": "Shotcut",
@@ -6079,6 +6102,93 @@
   },
   "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-28"
+ },
+ "higgsfield-soul-id": {
+  "name": "higgsfield-soul-id",
+  "vendor": "Higgsfield",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Trainiert aus 5 bis 20 Porträtaufnahmen ein Identitätsmodell, das Higgsfield danach in jedem Bild und jedem Clip einsetzt. Eine Figur behält damit über Hunderte Aufnahmen dasselbe Gesicht, statt in jeder Generierung ein wenig anders auszusehen. Der Skill fragt nach Namen und Fotos, schickt das Training über Higgsfields Kommandozeile los, wartet still ab und gibt am Ende eine Kennung zurück, die du beim Erzeugen mitgibst. Zwei Varianten, eine für Bilder und eine für Kino-Clips.",
+   "en": "Trains an identity model from 5 to 20 portrait shots, which Higgsfield then uses in every image and every clip. A character keeps the same face across hundreds of shots instead of looking slightly different in every generation. The skill asks for a name and photos, starts the training through Higgsfield's command line, waits quietly and hands back a reference id you pass along when generating. Two variants, one for images and one for cinematic clips."
+  },
+  "tip": {
+   "de": "Das Stück, das aus Einzelbildern eine wiedererkennbare Figur macht. Drei Haken: Das Training verlangt ein bezahltes Higgsfield-Abo, es läuft nicht über MCP, sondern über eine eigene Kommandozeile mit Anmeldung im Browser, und es dauert Minuten bis zu einer halben Stunde. Die Anleitung spricht von deinem eigenen Gesicht und einem digitalen Zwilling. Ob erzeugte Porträts als Vorlage taugen, sagt sie nicht, sie verlangt nur fünf bis zwanzig gut belichtete Aufnahmen desselben Gesichts. Ein fremdes Gesicht trainierst du nicht ohne Erlaubnis.",
+   "en": "The piece that turns single images into a recognisable character. Three catches: training needs a paid Higgsfield plan, it does not run over MCP but through a command line of its own with a browser sign-in, and it takes minutes up to half an hour. The instructions talk about your own face and a digital twin. Whether generated portraits work as input they do not say; they ask only for five to twenty well-lit shots of the same face. Someone else's face is not yours to train without permission."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (MIT) · das Training braucht ein bezahltes Higgsfield-Abo (ab Basic)",
+   "en": "Free, a text file (MIT) · training needs a paid Higgsfield plan (Basic or above)"
+  },
+  "links": {
+   "home": "https://www.skills.sh/higgsfield-ai/skills/higgsfield-soul-id",
+   "code": "https://github.com/higgsfield-ai/skills/tree/main/higgsfield-soul-id"
+  },
+  "plansChecked": "2026-09-29",
+  "contentChecked": "2026-09-29"
+ },
+ "social": {
+  "name": "social",
+  "vendor": "Corey Haines",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Redaktionsplan als Skill: Er baut das Posten um drei bis fünf Inhaltssäulen, liefert Aufhänger nach Mustern (Neugier, Geschichte, Nutzen, Widerspruch) und führt je Plattform auf, welches Format dort trägt und wie oft man dort auftaucht. Der nützlichste Teil ist das Umarbeiten: Aus einem längeren Stück holt er fünf bis zehn Bausteine heraus und schneidet sie für LinkedIn, X, Instagram und TikTok jeweils anders zu. Dazu eine Wochenvorlage und der Rat, alles in zwei bis drei Stunden am Stück zu erledigen statt täglich.",
+   "en": "An editorial plan as a skill: it builds posting around three to five content pillars, supplies hooks by pattern (curiosity, story, value, contrarian) and lists per platform which format carries there and how often you show up. The most useful part is the repurposing: it pulls five to ten atoms out of one longer piece and cuts each for LinkedIn, X, Instagram and TikTok separately. Plus a weekly template and the advice to batch it all in two to three hours rather than daily."
+  },
+  "tip": {
+   "de": "Der passt, wenn eine Figur oder eine Marke regelmäßig posten soll und dir nicht jeden Tag etwas einfallen soll. Zwei Einschränkungen: Die Häufigkeiten in der Plattform-Tabelle sind Erfahrungswerte des Autors, keine Messwerte. Und der Skill schreibt für Unternehmen. Eine Figur mit Vorgeschichte und eigener Sprechweise braucht diesen Ton als Vorgabe dazu, sonst klingen alle Beiträge gleich.",
+   "en": "It fits when a character or a brand has to post regularly and you would rather not think of something every day. Two limits: the frequencies in the platform table are the author's experience, not measurements. And the skill writes for companies. A character with a backstory and a voice of its own needs that voice handed to it, or every post sounds the same."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/coreyhaines31/marketingskills",
+   "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/social"
+  },
+  "plansChecked": "2026-09-29",
+  "contentChecked": "2026-09-29"
+ },
+ "offers": {
+  "name": "offers",
+  "vendor": "Corey Haines",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Baut das Angebot, nicht die Verkaufsseite. Kern ist eine Wertformel aus vier Größen: Wunschergebnis und Glaubwürdigkeit nach oben, Wartezeit und eigener Aufwand nach unten. Daraus leitet der Skill ab, dass die meisten Bitten nach einem niedrigeren Preis eigentlich etwas anderes verlangen. Dazu eine Liste aus sechs Teilen, die ein vollständiges Angebot hat (Leistung, Zugaben, Garantie, Grund für jetzt, Name, Preis und Zahlweise), und ein Abschnitt, welche Tricks er ausdrücklich nicht will: erfundene Knappheit, aufgeblasene Zugaben, Rabatte zum Kundenfang.",
+   "en": "Builds the offer, not the sales page. At its core a value equation of four terms: dream outcome and perceived likelihood up, time delay and the buyer's own effort down. From that the skill argues that most requests for a lower price are asking for something else. Plus the six parts a complete offer has (deliverable, bonuses, guarantee, reason to act now, name, price and payment structure), and a section on the tactics it explicitly refuses: invented scarcity, inflated bonuses, discounting to acquire."
+  },
+  "tip": {
+   "de": "Die Antwort auf die Frage, warum jemand für ein Digitalprodukt zahlt, das es als Gratis-PDF auch gibt: weil es ihn durch etwas hindurchführt, statt ihn zu informieren. Über den Preis selbst redet der Skill wenig, dafür liegt im selben Ordner ein zweiter namens pricing, den der Katalog nicht führt. Und er macht aus einem dünnen Angebot kein gutes, er zeigt nur, wo es dünn ist.",
+   "en": "The answer to why anyone pays for a digital product that also exists as a free PDF: because it walks them through something instead of informing them. About price itself the skill says little; a second one called pricing sits in the same folder, which this catalogue does not carry. And it does not turn a thin offer into a good one, it only shows you where it is thin."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://github.com/coreyhaines31/marketingskills",
+   "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/offers"
+  },
+  "plansChecked": "2026-09-29",
+  "contentChecked": "2026-09-29"
  },
  "Claude Fable 5.1": {
   "name": "Claude Fable 5.1",

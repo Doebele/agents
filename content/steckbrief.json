@@ -45,7 +45,7 @@
    "docs": "https://impeccable.style/tutorials/getting-started/",
    "code": "https://github.com/pbakaus/impeccable"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "skill-creator": {
   "name": "skill-creator",
@@ -186,7 +186,7 @@
   "links": {
    "home": "https://notebook.google/"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "Perplexity": {
   "name": "Perplexity",
@@ -542,7 +542,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-24"
+  "plansChecked": "2026-09-24",
+  "contentChecked": "2026-09-29"
  },
  "Agents SDK": {
   "name": "OpenAI Agents SDK",
@@ -815,7 +816,8 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-28"
+  "plansChecked": "2026-09-28",
+  "contentChecked": "2026-09-29"
  },
  "Hermes Agent": {
   "name": "Hermes Agent",
@@ -879,7 +881,7 @@
    "en": "Free (open source, AGPL-3.0), self-hosted"
   },
   "plansChecked": "2026-09-21",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "Bionic": {
   "name": "Bionic",
@@ -948,7 +950,7 @@
    "api"
   ],
   "plansChecked": "2026-09-21",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "LangChain": {
   "name": "LangChain",
@@ -983,7 +985,7 @@
    "api"
   ],
   "plansChecked": "2026-09-21",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "CrewAI": {
   "name": "CrewAI",
@@ -1365,7 +1367,7 @@
    "abo"
   ],
   "plansChecked": "2026-09-21",
-  "contentChecked": "2026-09-05",
+  "contentChecked": "2026-09-29",
   "icon": "lmstudio"
  },
  "Ollama": {
@@ -1405,7 +1407,7 @@
    "api"
   ],
   "plansChecked": "2026-09-24",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "llama.cpp": {
   "name": "llama.cpp",
@@ -1519,7 +1521,7 @@
    "docs": "https://developers.openai.com/api/docs/guides/image-generation",
    "code": null
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "Midjourney V8.2": {
   "name": "Midjourney V8.2",
@@ -1769,7 +1771,7 @@
    "docs": "https://kling.ai/document-api/quickStart/productIntroduction/overview",
    "code": null
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "Seedance 2.5": {
   "name": "Seedance 2.5",
@@ -1973,7 +1975,7 @@
    "code": null
   },
   "icon": "elevenlabs",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "Suno v5.5": {
   "name": "Suno v5.5",
@@ -2070,7 +2072,7 @@
    "docs": "https://github.com/hexgrad/kokoro",
    "code": "https://github.com/hexgrad/kokoro"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "Voxtral": {
   "name": "Voxtral",
@@ -3013,7 +3015,7 @@
    "docs": "https://modelcontextprotocol.io/docs",
    "code": "https://github.com/modelcontextprotocol/modelcontextprotocol"
   },
-  "contentChecked": "2026-09-05",
+  "contentChecked": "2026-09-29",
   "icon": "modelcontextprotocol"
  },
  "Playwright-mcp": {
@@ -3310,7 +3312,7 @@
    "code": null
   },
   "icon": "figma",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "pencil.dev": {
   "name": "pen.dev",
@@ -3359,7 +3361,7 @@
    "code": "https://github.com/penpot/penpot"
   },
   "icon": "penpot",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "Paper": {
   "name": "Paper",
@@ -3445,7 +3447,7 @@
    "code": null
   },
   "icon": "google",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "v0": {
   "name": "v0",
@@ -3542,7 +3544,7 @@
    "docs": null,
    "code": "https://github.com/onlook-dev/onlook"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "Claude Design": {
   "name": "Claude Design",
@@ -3906,7 +3908,7 @@
   "links": {
    "home": "https://www.apple.com/final-cut-pro/"
   },
-  "contentChecked": "2026-09-01"
+  "contentChecked": "2026-09-29"
  },
  "Premiere Pro": {
   "name": "Premiere",
@@ -4083,7 +4085,7 @@
   "links": {
    "home": "https://www.openshot.org"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-09-29"
  },
  "DeepSeek Harness": {
   "name": "DeepSeek Harness",
@@ -4311,7 +4313,8 @@
   "links": {
    "home": "https://www.cloudflare.com/products/pages/"
   },
-  "icon": "cloudflarepages"
+  "icon": "cloudflarepages",
+  "contentChecked": "2026-09-29"
  },
  "Render": {
   "name": "Render",
@@ -4810,7 +4813,7 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "contentChecked": "2026-08-31",
+  "contentChecked": "2026-09-29",
   "plansChecked": "2026-09-21"
  },
  "OpenViking": {
@@ -5021,7 +5024,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-09-29"
  },
  "Osaurus": {
   "name": "Osaurus",

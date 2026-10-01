@@ -5160,6 +5160,39 @@
   "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-25"
  },
+ "Aider": {
+  "name": "Aider",
+  "vendor": "Paul Gauthier",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "free": true,
+  "billing": [
+   "api"
+  ],
+  "blurb": {
+   "de": "Ein quelloffenes Werkzeug für die Befehlszeile, das Code direkt im Git-Projektordner bearbeitet: Du sagst in normaler Sprache, was geändert, repariert oder neu geschrieben werden soll, und Aider führt die Änderungen über mehrere Dateien hinweg aus. Ausgeklügelt ist die Projektübersicht: Über Tree-Sitter-Parser baut Aider eine kompakte Strukturkarte (Repo-Map) deines gesamten Codes, damit das Sprachmodell Signaturen und Zusammenhänge versteht, ohne das Kontextfenster mit ganzen Dateien zu überfüllen. Jeder erfolgreiche Bearbeitungsschritt wird automatisch als sauberer Git-Commit mit verständlicher Commit-Nachricht gespeichert. Lässt sich mit fast jedem Modell verbinden — von Claude und OpenAI über DeepSeek bis zu lokalen Modellen via Ollama — und führt auf Wunsch automatisierte Tests und Linter aus, um eigene Fehler selbstständig zu beheben.",
+   "en": "An open-source command-line tool that edits code directly inside your Git project repository: you explain in plain language what to build, fix or refactor, and Aider carries out edits across multiple files at once. Its core trick is the repository map: using tree-sitter AST parsing, Aider builds a concise map of your entire codebase so the language model grasps symbols, class hierarchies and call signatures without overloading its context window with raw files. Every successful edit is automatically committed to Git with a descriptive commit message. It connects to almost any model — from Claude and OpenAI to DeepSeek or local models via Ollama — and can run your test suite or linter to self-correct its own errors."
+  },
+  "tip": {
+   "de": "Gedacht für Pair-Programming im Terminal, nicht als autonomer Hintergrund-Agent: Aider erwartet, dass du im Gespräch bleibst und Schritte einzeln anstößt. Größter Vorteil: Durch die automatischen Git-Commits lässt sich jede Fehlentscheidung mit /undo sofort zurückdrehen. Der Haken: Du brauchst ein sauberes Git-Repository, grundlegende Vertrautheit mit der Befehlszeile und trägst die API-Kosten der angebundenen Modelle selbst. Am besten mit einem starken Denk- oder Programmiermodell (wie Claude 3.7 Sonnet oder DeepSeek R1) einsetzen.",
+   "en": "Designed for pair programming in the terminal rather than as an autonomous background agent: Aider expects you to guide it conversationally step by step. Its biggest strength is Git hygiene: every edit becomes a real commit, making rollbacks instantaneous via /undo. The catch: it requires a clean Git working tree, command-line familiarity, and your own model API keys whose usage you pay for. Pairs best with a top-tier reasoning or coding model like Claude 3.7 Sonnet or DeepSeek R1."
+  },
+  "links": {
+   "home": "https://aider.chat",
+   "docs": "https://aider.chat/docs/",
+   "code": "https://github.com/Aider-AI/aider"
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source (Apache-2.0) · Modelle über eigene API-Schlüssel oder lokal",
+   "en": "Free, open source (Apache-2.0) · models via your own API keys or run locally"
+  },
+  "plansChecked": "2026-10-01",
+  "contentChecked": "2026-10-01"
+ },
  "Buzz": {
   "name": "Buzz",
   "vendor": "Block",

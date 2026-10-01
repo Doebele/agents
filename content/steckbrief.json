@@ -631,7 +631,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-10-01",
   "plansJahr": {
    "de": "Adagio kostenlos · Moderato 15 $/Mo. (180 $/Jahr) · Allegretto 31 $/Mo. (372 $/Jahr) · Allegro 79 $/Mo. (948 $/Jahr) · Vivace 159 $/Mo. (1.908 $/Jahr) · K3-1M verzehrt rund 2× so viel Kontingent wie K3-256k · 300–1.200 Requests je 5 h · API 0,60 $/2,50 $ pro 1M Token",
    "en": "Adagio free · Moderato $15/mo ($180/yr) · Allegretto $31/mo ($372/yr) · Allegro $79/mo ($948/yr) · Vivace $159/mo ($1,908/yr) · K3-1M burns about 2× the quota of K3-256k · 300–1,200 requests per 5 h · API $0.60/$2.50 per 1M tokens"
@@ -728,7 +728,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-26"
  },
  "Zed": {
@@ -1693,7 +1693,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-10-01",
   "plansJahr": {
    "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 10 $/Mo. (120 $/Jahr) · Pro ab 2.000 Credits 16 $/Mo. · Teams ab 2.000 Credits 18 $/Mo.",
    "en": "Free (images public, Recraft owns the rights) · Basic 1,000 credits $10/mo ($120/yr) · Pro from 2,000 credits $16/mo · Teams from 2,000 credits $18/mo"
@@ -2297,7 +2297,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-18",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-18"
  },
  "Claude Opus 5.5 / Sonnet 5": {
@@ -4469,7 +4469,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-10-01",
   "links": {
    "home": "https://groq.com"
   },
@@ -4588,13 +4588,13 @@
    "en": "Billed by the hour, capped per instance at the monthly price — never more than the monthly price, even running around the clock. The server prices themselves live only in the console's price calculator, not as text on the pricing page."
   },
   "billing": [
-   "abo"
+   "api"
   ],
   "icon": "hetzner",
   "links": {
    "home": "https://www.hetzner.com"
   },
-  "plansChecked": "2026-09-10",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-26"
  },
  "Modal": {
@@ -5493,7 +5493,7 @@
    "de": "API 0,042 $ je 1M Eingabe-Tokens (42 $ je Milliarde) · Ausgabe-Tokens werden nicht berechnet · Ratengrenzen 250.000 Tokens/s und 1.200 Anfragen/Min., werden derzeit dynamisch angepasst · höhere Grenzen über Custom- und Enterprise-Pläne",
    "en": "API $0.042 per 1M input tokens ($42 per billion) · output tokens are not billed · rate limits of 250,000 tokens/s and 1,200 requests/min, currently adjusted dynamically · higher limits via custom and enterprise plans"
   },
-  "plansChecked": "2026-09-19",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-19"
  },
  "Statista Connect": {
@@ -5600,7 +5600,7 @@
   "links": {
    "home": "https://github.com/coleam00/excalidraw-diagram-skill"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "notebooklm-py": {
@@ -5628,7 +5628,7 @@
   "links": {
    "home": "https://github.com/teng-lin/notebooklm-py"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "remotion-skill": {
@@ -5656,7 +5656,7 @@
    "home": "https://www.skills.sh/remotion-dev/skills/remotion-best-practices",
    "docs": "https://www.remotion.dev/docs/ai/skills"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "context7": {
@@ -5730,7 +5730,7 @@
   "links": {
    "home": "https://github.com/microsoft/playwright-cli"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "obsidian-skills": {
@@ -5758,7 +5758,7 @@
   "links": {
    "home": "https://github.com/kepano/obsidian-skills"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "feature-dev": {
@@ -5785,7 +5785,7 @@
   "links": {
    "home": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "superpowers": {
@@ -5814,7 +5814,7 @@
    "home": "https://github.com/obra/superpowers",
    "docs": "https://claude.com/marketplace/plugins/superpowers"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "claude-md-management": {
@@ -5842,7 +5842,7 @@
   "links": {
    "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "humanizer": {
@@ -5871,7 +5871,7 @@
    "home": "https://github.com/blader/humanizer",
    "docs": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "vermenschlichen": {
@@ -5900,7 +5900,7 @@
    "home": "https://github.com/LOGIN-TB/claude-skills",
    "docs": "https://de.wikipedia.org/wiki/Wikipedia:Anzeichen_f%C3%BCr_KI-generierte_Inhalte"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "scroll-craft": {
@@ -5928,7 +5928,7 @@
   "links": {
    "home": "https://github.com/nateherkai/scroll-craft"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "security-audit": {
@@ -5957,7 +5957,7 @@
    "home": "https://github.com/cloudflare/security-audit-skill",
    "guide": "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "kie.ai": {
@@ -6018,7 +6018,7 @@
    "home": "https://www.skills.sh/mattpocock/skills/teach",
    "code": "https://github.com/mattpocock/skills"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "grill-me": {
@@ -6047,7 +6047,7 @@
    "home": "https://www.skills.sh/mattpocock/skills/grill-me",
    "code": "https://github.com/mattpocock/skills"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-01",
   "contentChecked": "2026-09-20"
  },
  "watch": {

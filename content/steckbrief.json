@@ -21,7 +21,7 @@
    "de": "Fang mit der einen Sache an, die du am häufigsten erklärst. Ein Skill ist eine Anleitung in normaler Sprache, kein Programm — wenn du es einem neuen Kollegen erklären kannst, kannst du es aufschreiben.",
    "en": "Start with the one thing you explain most often. A skill is an instruction in plain language, not a program — if you can explain it to a new colleague, you can write it down."
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "Impeccable": {
   "name": "Impeccable",
@@ -94,7 +94,7 @@
    "docs": "https://docs.tavily.com/documentation/mcp",
    "code": "https://github.com/tavily-ai/tavily-mcp"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "pdf-mcp": {
   "name": "PyMuPDF4LLM MCP Server",
@@ -117,7 +117,7 @@
    "home": "https://github.com/pymupdf/pymupdf4llm-mcp",
    "code": "https://github.com/pymupdf/pymupdf4llm-mcp"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "excel-mcp": {
   "name": "Excel MCP Server",
@@ -140,7 +140,7 @@
    "home": "https://github.com/negokaz/excel-mcp-server",
    "code": "https://github.com/negokaz/excel-mcp-server"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "memory-mcp": {
   "name": "Memory MCP Server",
@@ -163,7 +163,7 @@
    "home": "https://github.com/modelcontextprotocol/servers",
    "code": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "Gemini Notebook": {
   "name": "Gemini Notebook",
@@ -292,12 +292,12 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Eine Tabellenumgebung im Browser, der eine KI beigestellt ist: Du importierst Daten — aus Dateien oder aus über fünfzig Diensten — und lässt die KI daraus Auswertungen, kleine Rechner und Automatisierungen bauen, die wie Formeln in der Tabelle mitrechnen. Das Ergebnis bleibt eine echte Tabelle: selbst weiterbearbeiten, teilen, einbetten und auf Wunsch regelmäßig auffrischen lassen.",
-   "en": "A spreadsheet workspace in the browser with an AI attached: you import data — from files or from over fifty services — and let the AI build analyses, small calculators and automations that recalculate like formulas inside the sheet. The result stays a real spreadsheet: edit it yourself, share it, embed it, and have it refreshed on a schedule."
+   "de": "Wurde im Februar 2026 von Superhuman übernommen; der Dienst selbst ist seit dem 31. Mai 2026 abgeschaltet und lässt sich nicht mehr nutzen. Beschrieben hatte dieser Eintrag eine Tabellenumgebung im Browser mit angeschlossener KI, die Daten aus über fünfzig Diensten zog und daraus Auswertungen baute, die wie Formeln mitrechneten. Das Team arbeitet seither an den Tabellenfähigkeiten von Coda innerhalb von Superhuman weiter.",
+   "en": "Acquired by Superhuman in February 2026; the service itself was shut down on 31 May 2026 and can no longer be used. This entry used to describe a browser spreadsheet with an AI attached that pulled data from over fifty services and built analyses that recalculated like formulas. Its team has since been building its spreadsheet features into Coda inside Superhuman."
   },
   "tip": {
-   "de": "Nimm es, wenn das Ergebnis eine lebende Tabelle bleiben soll — Daten und Auswertung bleiben hier beieinander, statt nach jedem Schritt exportiert zu werden. Der Haken: KI-Aufgaben sind gezählt, die freie Stufe gibt fünf pro Monat.",
-   "en": "Reach for it when the result should stay a living spreadsheet — the data and the analysis stay together instead of being exported after every step. The catch: AI tasks are metered, the free tier allows five a month."
+   "de": "Dieser Eintrag beschreibt ein eingestelltes Produkt. Für eine KI-gestützte Tabelle jetzt eher zu Coda oder einem der anderen Einträge in diesem Baustein greifen.",
+   "en": "This entry describes a discontinued product. For an AI-assisted spreadsheet now, reach for Coda or one of this block's other entries instead."
   },
   "free": true,
   "plans": {
@@ -316,7 +316,7 @@
    "docs": "https://rows.com/docs"
   },
   "plansChecked": "2026-09-24",
-  "contentChecked": "2026-09-07"
+  "contentChecked": "2026-10-03"
  },
  "Claude Code": {
   "name": "Claude Code",
@@ -1049,7 +1049,7 @@
    "en": "Free, open source (MIT), self-hosted"
   },
   "plansChecked": "2026-09-21",
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-10-03"
  },
  "MS Agent Framework": {
   "name": "Microsoft Agent Framework",
@@ -1556,7 +1556,8 @@
   "plansJahr": {
    "de": "Basic 8 $/Mo. (96 $/Jahr) · Standard 24 $/Mo. (288 $/Jahr) · Pro 48 $/Mo. (576 $/Jahr) · Mega 96 $/Mo. (1.152 $/Jahr) · Stealth ab Pro",
    "en": "Basic $8/mo ($96/yr) · Standard $24/mo ($288/yr) · Pro $48/mo ($576/yr) · Mega $96/mo ($1,152/yr) · Stealth from Pro"
-  }
+  },
+  "contentChecked": "2026-10-03"
  },
  "FLUX.2": {
   "name": "FLUX.2",
@@ -1747,7 +1748,7 @@
    "code": null
   },
   "icon": "google",
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "Kling 3.0": {
   "name": "Kling 3.0",
@@ -1978,7 +1979,7 @@
   "contentChecked": "2026-09-29"
  },
  "Suno v5.5": {
-  "name": "Suno v5.5",
+  "name": "Suno v6",
   "vendor": "Suno",
   "cat": {
    "de": "Audio-Modell · Baustein 06",
@@ -2000,7 +2001,7 @@
    "code": null
   },
   "icon": "suno",
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "Stable Audio 3": {
   "name": "Stable Audio 3",
@@ -2048,7 +2049,7 @@
    "docs": "https://github.com/openai/whisper",
    "code": "https://github.com/openai/whisper"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "Kokoro": {
   "name": "Kokoro",
@@ -2097,7 +2098,7 @@
    "code": null
   },
   "icon": "mistralai",
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "Wispr Flow": {
   "name": "Wispr Flow",
@@ -2991,7 +2992,8 @@
    "home": "https://www.skills.sh/",
    "docs": null,
    "code": "https://github.com/vercel-labs/skills"
-  }
+  },
+  "contentChecked": "2026-10-03"
  },
  "Model Context Protocol": {
   "name": "Model Context Protocol",
@@ -3040,7 +3042,7 @@
    "docs": "https://playwright.dev/docs/getting-started-mcp",
    "code": "https://github.com/microsoft/playwright-mcp"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "github-mcp": {
   "name": "GitHub MCP Server",
@@ -3065,7 +3067,7 @@
    "code": "https://github.com/github/github-mcp-server"
   },
   "icon": "github",
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "filesystem-mcp": {
   "name": "Filesystem MCP Server",
@@ -3089,7 +3091,7 @@
    "docs": null,
    "code": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "slack-mcp": {
   "name": "Slack MCP Server",
@@ -3113,7 +3115,7 @@
    "docs": "https://docs.slack.dev/ai/slack-mcp-server",
    "code": null
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "postgres-mcp": {
   "name": "Postgres MCP Server",
@@ -3138,7 +3140,7 @@
    "code": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres"
   },
   "icon": "postgresql",
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "supabase-mcp": {
   "name": "Supabase MCP Server",
@@ -3163,7 +3165,7 @@
    "code": "https://github.com/supabase/mcp"
   },
   "icon": "supabase",
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "gdrive-mcp": {
   "name": "Google Drive MCP Server",
@@ -3234,7 +3236,8 @@
   "links": {
    "home": "https://github.com/samuelgursky/davinci-resolve-mcp",
    "code": "https://github.com/samuelgursky/davinci-resolve-mcp"
-  }
+  },
+  "contentChecked": "2026-10-03"
  },
  "buffer-mcp": {
   "name": "Buffer MCP Server",
@@ -3262,7 +3265,8 @@
   "free": true,
   "billing": [
    "abo"
-  ]
+  ],
+  "contentChecked": "2026-10-03"
  },
  "higgsfield-mcp": {
   "name": "Higgsfield MCP",
@@ -3496,7 +3500,7 @@
    "docs": null,
    "code": null
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-10-03"
  },
  "Bolt.new": {
   "name": "Bolt",
@@ -3630,7 +3634,7 @@
    "docs": null,
    "code": null
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "Relume": {
   "name": "Relume",
@@ -4059,7 +4063,7 @@
   "links": {
    "home": "https://shotcut.org"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-03"
  },
  "OpenShot": {
   "name": {
@@ -5495,7 +5499,8 @@
    "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
    "en": "Free (open-weight, MIT), self-hosted"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-09-21",
+  "contentChecked": "2026-10-03"
  },
  "Jev": {
   "name": "Jev",

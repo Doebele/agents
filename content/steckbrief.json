@@ -4842,6 +4842,7 @@
    "de": "Selbst betrieben kostenlos (AGPLv3, ohne Funktionssperren) · verwaltet auf Volcano Engine mit Gratis-Test bis 50 Dateien; was es darüber kostet, nennt der Anbieter nicht",
    "en": "Self-hosted free (AGPLv3, with no feature gates) · managed on Volcano Engine with a free trial of up to 50 files; the vendor names no price beyond that"
   },
+  "billing": ["abo", "api"],
   "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-25"
  },
@@ -5958,6 +5959,7 @@
    "de": "Kostenlos, Textdatei (MIT) · erzeugte Bilder und Videos über kie.ai",
    "en": "Free, a text file (MIT) · generated images and video via kie.ai"
   },
+  "billing": ["api"],
   "links": {
    "home": "https://github.com/nateherkai/scroll-craft"
   },
@@ -6105,6 +6107,7 @@
    "de": "Kostenlos, Textdatei (MIT) · Transkription nur nötig, wenn Untertitel fehlen",
    "en": "Free, a text file (MIT) · transcription only needed when captions are missing"
   },
+  "billing": ["api"],
   "links": {
    "home": "https://github.com/bradautomates/claude-video"
   },
@@ -6191,6 +6194,7 @@
    "de": "Kostenlos, Textdatei (MIT) · das Training braucht ein bezahltes Higgsfield-Abo (ab Basic)",
    "en": "Free, a text file (MIT) · training needs a paid Higgsfield plan (Basic or above)"
   },
+  "billing": ["abo"],
   "links": {
    "home": "https://www.skills.sh/higgsfield-ai/skills/higgsfield-soul-id",
    "code": "https://github.com/higgsfield-ai/skills/tree/main/higgsfield-soul-id"

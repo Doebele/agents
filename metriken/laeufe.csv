@@ -40,3 +40,17 @@ datum,lauf,agent,modell,input,output,cache_write,cache_read,kosten_usd,turns,dau
 2026-09-26,Inhaltsrotation,claude-abo,claude-sonnet-5,252,41405,141269,13682565,3.9705,126,757,36234241749,https://github.com/Doebele/agents/actions/runs/36234241749
 2026-09-26,Weekly upkeep (Kimi),kimi,,,,,,,,414,36239241209,https://github.com/Doebele/agents/actions/runs/36239241209
 2026-09-27,Weekly upkeep (Kimi),kimi,,,,,,,,660,36307106553,https://github.com/Doebele/agents/actions/runs/36307106553
+2026-09-28,Kreuzpruefung (Preise),claude-abo,claude-sonnet-5,132,37631,98086,5633869,2.0649,66,466,36417239823,https://github.com/Doebele/agents/actions/runs/36417239823
+2026-09-28,Kreuzpruefung (Preise),gemini,,,,,,,,,36417239823,https://github.com/Doebele/agents/actions/runs/36417239823
+2026-09-28,Kreuzpruefung (Preise),zai,,,,,,,,854,36417239823,https://github.com/Doebele/agents/actions/runs/36417239823
+2026-09-28,Weekly upkeep,claude-abo,claude-sonnet-5,96,20685,75348,3453856,1.3064,49,277,36433568460,https://github.com/Doebele/agents/actions/runs/36433568460
+2026-09-29,Claude on request,claude-abo,claude-sonnet-5-5,14,3071,20026,196535,0.1526,9,33,36533372984,https://github.com/Doebele/agents/actions/runs/36533372984
+2026-09-29,Claude on request,claude-abo,claude-sonnet-5-5,16,2639,20224,218138,0.1531,9,25,36528290248,https://github.com/Doebele/agents/actions/runs/36528290248
+2026-09-29,Inhaltsrotation,claude-abo,claude-sonnet-5,108,21050,82966,4321324,1.6179,54,326,36561567031,https://github.com/Doebele/agents/actions/runs/36561567031
+2026-09-29,Weekly upkeep (Z.AI),zai,,,,,,,,553,36571740313,https://github.com/Doebele/agents/actions/runs/36571740313
+2026-10-01,Kreuzpruefung (Preise),claude-abo,claude-sonnet-5,94,54338,123538,4655147,1.9910,47,561,36856839020,https://github.com/Doebele/agents/actions/runs/36856839020
+2026-10-01,Kreuzpruefung (Preise),gemini,,,,,,,,,36856839020,https://github.com/Doebele/agents/actions/runs/36856839020
+2026-10-01,Kreuzpruefung (Preise),zai,,,,,,,,604,36856839020,https://github.com/Doebele/agents/actions/runs/36856839020
+2026-10-01,Weekly upkeep (Gemini),gemini,,,,,,,,,36867650298,https://github.com/Doebele/agents/actions/runs/36867650298
+2026-10-03,Inhaltsrotation,claude-abo,claude-sonnet-5,196,36898,114207,9227920,3.0513,98,710,37116461725,https://github.com/Doebele/agents/actions/runs/37116461725
+2026-10-03,Weekly upkeep (Kimi),kimi,,,,,,,,420,37120882622,https://github.com/Doebele/agents/actions/runs/37120882622

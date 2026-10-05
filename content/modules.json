@@ -281,6 +281,14 @@
       "k": "Cursor"
      },
      {
+      "n": "Augment Code",
+      "v": {
+       "de": "grosse Codebasen",
+       "en": "large codebases"
+      },
+      "k": "Augment Code"
+     },
+     {
       "n": "Osaurus",
       "v": {
        "de": "Mac · lokal",

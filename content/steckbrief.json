@@ -5163,6 +5163,40 @@
   "plansChecked": "2026-09-28",
   "contentChecked": "2026-09-25"
  },
+ "Pi": {
+  "name": "Pi",
+  "vendor": "earendil-works",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "free": true,
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "blurb": {
+   "de": "Ein bewusst schlank gehaltener, quelloffener Coding-Agent für das Terminal. Pi bringt nur die Grundbausteine mit — Gespräch, Dateizugriff, Befehle — und lässt dich den Rest selbst dazubauen: über Erweiterungen, Skills, Prompt-Vorlagen und Themes, die sich als Pakete teilen lassen. Es läuft interaktiv im Terminal, als Skript-Aufruf mit JSON-Ausgabe, über eine RPC-Schnittstelle oder als TypeScript-SDK in eigenen Programmen. Mit über 15 Anbietern (Anthropic, OpenAI, Google, Mistral, Groq …) lässt sich mitten in der Sitzung das Modell wechseln; der Verlauf ist ein Baum, in dem man verzweigen kann. Projektregeln liegen wie üblich in einer AGENTS.md.",
+   "en": "A deliberately slim, open-source coding agent for the terminal. Pi ships only the basic parts — conversation, file access, commands — and leaves you to build the rest yourself through extensions, skills, prompt templates and themes that can be shared as packages. It runs interactively in the terminal, as a scripted call with JSON output, over an RPC interface, or as a TypeScript SDK inside your own programs. With more than 15 providers (Anthropic, OpenAI, Google, Mistral, Groq …) you can switch model mid-session; the history is a tree you can branch. Project rules live in an AGENTS.md, as elsewhere."
+  },
+  "tip": {
+   "de": "Etwas für alle, die ihr Werkzeug nach eigenem Geschmack zusammenstellen wollen — nicht für den ersten Tag mit KI-Programmierung. Pi hat absichtlich keine Unter-Agenten, keinen Planmodus und keine Rückfragen vor Befehlen; wer das braucht, muss es per Erweiterung nachrüsten oder den Agenten in einen Container sperren. Pi selbst kostet nichts: du meldest dich mit /login per Abo oder API-Schlüssel bei deinem Modellanbieter an und zahlst dort. Wer fertig geschnürte Abläufe will, ist mit Claude Code oder Codex besser bedient.",
+   "en": "One for people who want to assemble their tool to their own taste — not for a first day with AI coding. Pi deliberately has no sub-agents, no plan mode and no confirmation prompts before commands; if you need those you add them through an extension or lock the agent in a container. Pi itself costs nothing: you sign in to your model provider with /login, by subscription or API key, and pay there. If you want ready-made workflows, Claude Code or Codex serve you better."
+  },
+  "links": {
+   "home": "https://pi.dev",
+   "docs": "https://pi.dev/docs/latest",
+   "code": "https://github.com/earendil-works/pi"
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source (MIT) · Modelle über eigenes Abo oder eigenen API-Schlüssel beim Anbieter",
+   "en": "Free, open source (MIT) · models via your own subscription or API key at the provider"
+  },
+  "plansChecked": "2026-10-05",
+  "contentChecked": "2026-10-05"
+ },
  "Aider": {
   "name": "Aider",
   "vendor": "Paul Gauthier",

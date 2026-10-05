@@ -323,6 +323,14 @@
       "k": "Aider"
      },
      {
+      "n": "Pi",
+      "v": {
+       "de": "Terminal · erweiterbar",
+       "en": "terminal · extensible"
+      },
+      "k": "Pi"
+     },
+     {
       "n": "Hermes Agent",
       "v": "Nous Research",
       "k": "Hermes Agent"

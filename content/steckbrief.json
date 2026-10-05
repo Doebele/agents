@@ -6314,5 +6314,37 @@
    }
   },
   "plansChecked": "2026-09-28"
+ },
+ "Augment Code": {
+  "name": "Augment Code",
+  "vendor": "Augment Code",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": false,
+  "free": false,
+  "blurb": {
+   "de": "Ein Coding-Agent für grosse, gewachsene Codebasen: als Erweiterung für VS Code und JetBrains-IDEs, als Terminal-Programm Auggie und dahinter die Plattform Cosmos, die für ganze Teams Schleifen fährt — Review zu jedem Pull Request, vom Ticket zum Pull Request, Sicherheitslücken beheben. Das Herzstück ist die Context Engine, die den Codebestand indexiert, statt ihn bei jedem Auftrag neu zu lesen. Der Haken: Das Preismodell denkt in Teams — 20 $ im Monat enthalten nur 20 $ Verbrauch, danach wird aufgestockt, und auf die LLM-Kosten kommt eine Servicegebühr von 40 %.",
+   "en": "A coding agent for large, long-grown codebases: an extension for VS Code and JetBrains IDEs, the Auggie terminal program, and behind it the Cosmos platform, which runs loops for whole teams — a review on every pull request, ticket to pull request, closing vulnerabilities. The heart of it is the Context Engine, which indexes the codebase instead of rereading it on every task. The catch: the pricing thinks in teams — $20 a month includes only $20 of usage, top-ups follow, and a 40% service fee lands on top of the LLM bill."
+  },
+  "tip": {
+   "de": "Wer allein am eigenen Projekt baut, ist mit Cursor oder Kimi Code schneller startklar. Augment zahlt sich aus, wenn der Codebestand älter und grösser ist, als eine Person überschaut, und Review und Tickets von selbst laufen sollen.",
+   "en": "Building alone on your own project, Cursor or Kimi Code has you running sooner. Augment pays off when the codebase is older and larger than one person oversees and reviews and tickets are meant to run by themselves."
+  },
+  "links": {
+   "home": "https://www.augmentcode.com/",
+   "docs": "https://docs.augmentcode.com/"
+  },
+  "plans": {
+   "de": "Standard 20 $/Mo. für das ganze Team (bis 50 Sitze, 20 $ Verbrauch inklusive) · Business 100 $/Mo. (bis 50 Sitze, 100 $ Verbrauch inklusive) · Enterprise auf Anfrage · Mehrverbrauch per Aufladung, LLMs zum Listenpreis des Anbieters plus 40 % Servicegebühr · keine Gratisstufe auf der Preisseite",
+   "en": "Standard $20/mo for the whole team (up to 50 seats, $20 of usage included) · Business $100/mo (up to 50 seats, $100 of usage included) · Enterprise on request · extra usage by top-up, LLMs at the provider's list price plus a 40% service fee · no free tier on the pricing page"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-10-05",
+  "contentChecked": "2026-10-05"
  }
 }

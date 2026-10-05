@@ -394,18 +394,18 @@
    ]
   },
   "plans": {
-   "de": "Pro 20 $/Mo. · Max 5× 100 $ · Max 20× 200 $ (5-/20-faches Pro-Kontingent je 5-h-Fenster) · Team ab 25 $/Platz/Mo. · API nutzungsabhängig",
-   "en": "Pro $20/mo · Max 5x $100 · Max 20x $200 (5x/20x the Pro quota per 5-hour window) · Team from $25/seat/mo · usage-based API"
+   "de": "Pro 20 $/Mo. · Max ab 100 $/Mo. (Wahl zwischen 5× und 20× Pro-Kontingent; für 20× nennt die Preisseite keinen eigenen Betrag mehr) · Team Standard 25 $/Platz/Mo., Premium 125 $/Platz/Mo. · API nutzungsabhängig",
+   "en": "Pro $20/mo · Max from $100/mo (choice of 5x or 20x the Pro quota; the pricing page no longer states a separate amount for 20x) · Team Standard $25/seat/mo, Premium $125/seat/mo · usage-based API"
   },
   "plansJahr": {
-   "de": "Pro 17 $/Mo. (200 $ im Voraus) · Max 5× 100 $ (nur monatlich) · Max 20× 200 $ (nur monatlich, 5-/20-faches Pro-Kontingent je 5-h-Fenster) · Team ab 20 $/Platz/Mo. · API nutzungsabhängig",
-   "en": "Pro $17/mo ($200 up front) · Max 5x $100 (monthly only) · Max 20x $200 (monthly only, 5x/20x the Pro quota per 5-hour window) · Team from $20/seat/mo · usage-based API"
+   "de": "Pro 17 $/Mo. (200 $ im Voraus) · Max ab 100 $/Mo. (nur monatlich abgerechnet) · Team Standard 20 $/Platz/Mo. (Jahresabo), Premium 100 $/Platz/Mo. (Jahresabo) · API nutzungsabhängig",
+   "en": "Pro $17/mo ($200 up front) · Max from $100/mo (billed monthly only) · Team Standard $20/seat/mo (annual), Premium $100/seat/mo (annual) · usage-based API"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-22"
  },
  "Agent SDK": {
@@ -949,7 +949,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-29"
  },
  "LangChain": {
@@ -977,14 +977,14 @@
   "icon": "langchain",
   "free": true,
   "plans": {
-   "de": "Framework Open Source kostenlos · LangSmith Developer 0 $ (1 Sitz, 5.000 Traces/Mo.), Plus 39 $/Sitz/Mo. (10.000 Traces), darüber nach Verbrauch: 1,50 $ je Recheneinheit (LCU), 1 $ je Speichereinheit (LSU) · Enterprise auf Anfrage",
-   "en": "Framework open source free · LangSmith Developer $0 (1 seat, 5,000 traces/mo), Plus $39/seat/mo (10,000 traces), usage-based beyond that: $1.50 per compute unit (LCU), $1.00 per storage unit (LSU) · Enterprise on request"
+   "de": "Framework Open Source kostenlos · LangSmith Developer 0 $ (1 Sitz, bis 5.000 Traces/Mo. inklusive), Plus 39 $/Sitz/Mo. (bis 10.000 Traces inklusive), darüber nach Verbrauch: 1 $ je Einheit (LSU) · Enterprise auf Anfrage",
+   "en": "Framework open source free · LangSmith Developer $0 (1 seat, up to 5,000 traces/mo included), Plus $39/seat/mo (up to 10,000 traces included), usage-based beyond that: $1 per unit (LSU) · Enterprise on request"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-29"
  },
  "CrewAI": {
@@ -1285,7 +1285,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-22"
  },
  "Llama 4": {
@@ -1334,7 +1334,7 @@
    "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet · ab 700 Mio. monatlich aktiven Nutzern verlangt Meta eine eigene Lizenz",
    "en": "Free (open-weight, Llama 4 Community License), self-hosted · above 700 million monthly active users Meta requires a separate licence"
   },
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-10-05"
  },
  "LM Studio": {
   "name": "LM Studio",
@@ -1366,7 +1366,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-29",
   "icon": "lmstudio"
  },
@@ -2229,18 +2229,17 @@
    "code": "https://github.com/fastrepl/anarlog"
   },
   "plans": {
-   "de": "Lokal und mit eigenem Schlüssel kostenlos, ohne Limit · Pro 15 $/Mo. (Cloud-Transkription, Cloud-LLM, Synchronisierung, Teilen) · Team 20 $/Person/Mo. · Enterprise mit SSO und eigenem Server auf Anfrage",
-   "en": "Local and with your own key free, without limit · Pro $15/mo (cloud transcription, cloud LLM, sync, sharing) · Team $20/person/mo · Enterprise with SSO and own server on request"
+   "de": "Lokal und mit eigenem Schlüssel kostenlos, ohne Limit · Pro 14 $/Person/Mo. (Cloud-Transkription, Cloud-LLM, Synchronisierung, Teilen) · Enterprise mit SSO und eigenem Server auf Anfrage",
+   "en": "Local and with your own key free, without limit · Pro $14/person/mo (cloud transcription, cloud LLM, sync, sharing) · Enterprise with SSO and own server on request"
   },
   "plansJahr": {
-   "de": "Lokal und mit eigenem Schlüssel kostenlos, ohne Limit · Pro 12,50 $/Mo. (150 $/Jahr; Cloud-Transkription, Cloud-LLM, Synchronisierung, Teilen) · Team 16,67 $/Person/Mo. (200 $/Person/Jahr) · Enterprise mit SSO und eigenem Server auf Anfrage",
-   "en": "Local and with your own key free, without limit · Pro $12.50/mo ($150/year; cloud transcription, cloud LLM, sync, sharing) · Team $16.67/person/mo ($200/person/year) · Enterprise with SSO and own server on request"
+   "de": "Lokal und mit eigenem Schlüssel kostenlos, ohne Limit · Pro 11,67 $/Person/Mo. (140 $/Person/Jahr; Cloud-Transkription, Cloud-LLM, Synchronisierung, Teilen) · Enterprise mit SSO und eigenem Server auf Anfrage",
+   "en": "Local and with your own key free, without limit · Pro $11.67/person/mo ($140/person/year; cloud transcription, cloud LLM, sync, sharing) · Enterprise with SSO and own server on request"
   },
   "billing": [
-   "abo",
-   "api"
+   "abo"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-12"
  },
  "GPT-6 Astra": {
@@ -2345,14 +2344,13 @@
    "checked": "2026-09-23"
   },
   "plans": {
-   "de": "API Opus 5 5 $/25 $ pro 1M Token · Sonnet 5 2 $/10 $ pro 1M Token — der Einführungspreis für Sonnet ist inzwischen der reguläre, die für den 1.9.2026 angekündigte Erhöhung auf 3 $/15 $ entfällt",
-   "en": "API Opus 5 $5/$25 per 1M tokens · Sonnet 5 $2/$10 per 1M tokens — Sonnet's introductory price is now the standard one, the increase to $3/$15 announced for 1 Sept 2026 will not happen"
+   "de": "API Opus 5.5 4 $/20 $ pro 1M Token · Sonnet 5 2 $/10 $ pro 1M Token — der Einführungspreis für Sonnet ist inzwischen der reguläre, die für den 1.9.2026 angekündigte Erhöhung auf 3 $/15 $ entfällt",
+   "en": "API Opus 5.5 $4/$20 per 1M tokens · Sonnet 5 $2/$10 per 1M tokens — Sonnet's introductory price is now the standard one, the increase to $3/$15 announced for 1 Sept 2026 will not happen"
   },
   "billing": [
-   "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-10-05"
  },
  "Gemini 3.1 Pro": {
   "name": "Gemini 3.1 Pro",
@@ -2414,7 +2412,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-12"
  },
  "Grok 4.7": {
@@ -2473,7 +2471,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-12"
  },
  "Qwen3.8-Max": {
@@ -2647,7 +2645,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-12"
  },
  "GLM-5.3": {
@@ -2698,14 +2696,14 @@
    "checked": "2026-09-23"
   },
   "plans": {
-   "de": "API 1,40 $/4,40 $ pro 1M Token · gecachte Eingabe 0,26 $, der Cache-Speicher ist zeitlich begrenzt kostenlos · GLM-5.2 steckt auch im GLM-Coding-Abo",
-   "en": "API $1.40/$4.40 per 1M tokens · cached input $0.26, cached-input storage free for a limited time · GLM-5.2 is also part of the GLM Coding Plan subscription"
+   "de": "API 1,40 $/4,40 $ pro 1M Token · gecachte Eingabe 0,26 $, der Cache-Speicher ist zeitlich begrenzt kostenlos · GLM-5.3 steckt auch im GLM-Coding-Abo",
+   "en": "API $1.40/$4.40 per 1M tokens · cached input $0.26, cached-input storage free for a limited time · GLM-5.3 is also part of the GLM Coding Plan subscription"
   },
   "billing": [
    "api",
    "abo"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-12"
  },
  "Muse Spark 1.3": {
@@ -4153,7 +4151,7 @@
   "links": {
    "home": "https://www.hostinger.com"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-26",
   "icon": "hostinger"
  },
@@ -4220,7 +4218,7 @@
   "links": {
    "home": "https://www.ionos.de"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-26",
   "icon": "ionos"
  },
@@ -4536,7 +4534,7 @@
   "links": {
    "home": "https://lambda.ai"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-25"
  },
  "Vast.ai": {
@@ -4631,7 +4629,7 @@
   "links": {
    "home": "https://modal.com"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-25"
  },
  "Replicate": {
@@ -4818,7 +4816,7 @@
    "en": "Free (MIT)"
   },
   "contentChecked": "2026-09-29",
-  "plansChecked": "2026-09-21"
+  "plansChecked": "2026-10-05"
  },
  "OpenViking": {
   "name": "OpenViking",
@@ -5018,18 +5016,18 @@
    "code": "https://github.com/Comfy-Org/ComfyUI"
   },
   "plans": {
-   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo., Team 200 bis 2.500 $/Mo. (fünf Stufen nach Credit-Kontingent) · API nach GPU-Sekunde",
-   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $20/mo, Creator $35/mo, Pro $100/mo, Team $200 to $2,500/mo (five tiers by credit commitment) · API billed by the GPU second"
+   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 20 $/Mo., Creator 35 $/Mo., Pro 100 $/Mo., Team 700 $/Mo. (bis 50 Mitglieder, gemeinsamer Credit-Pool) · Enterprise auf Anfrage · API nach GPU-Sekunde",
+   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $20/mo, Creator $35/mo, Pro $100/mo, Team $700/mo (up to 50 members, shared credit pool) · Enterprise on request · API billed by the GPU second"
   },
   "plansJahr": {
-   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 16 $/Mo. (192 $/Jahr), Creator 28 $/Mo. (336 $/Jahr), Pro 80 $/Mo. (960 $/Jahr), Team 200 bis 2.500 $/Mo. (fünf Stufen, Jahresrabatt bis 20 % je nach Stufe) · API nach GPU-Sekunde",
-   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $16/mo ($192/year), Creator $28/mo ($336/year), Pro $80/mo ($960/year), Team $200 to $2,500/mo (five tiers, annual discount up to 20 % by tier) · API billed by the GPU second"
+   "de": "Lokal kostenlos (GPL-3.0) auf eigener Hardware · wer keine hat, mietet Comfy Cloud: 5 Gratisläufe, danach Standard 16 $/Mo. (192 $/Jahr), Creator 28 $/Mo. (336 $/Jahr), Pro 80 $/Mo. (960 $/Jahr), Team 630 $/Mo. (7.560 $/Jahr, bis 50 Mitglieder) · Enterprise auf Anfrage · API nach GPU-Sekunde",
+   "en": "Free locally (GPL-3.0) on your own hardware · without one there is the hosted Comfy Cloud: 5 free runs, then Standard $16/mo ($192/year), Creator $28/mo ($336/year), Pro $80/mo ($960/year), Team $630/mo ($7,560/year, up to 50 members) · Enterprise on request · API billed by the GPU second"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-29"
  },
  "Osaurus": {
@@ -5098,7 +5096,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-12"
  },
  "Berd": {
@@ -5432,7 +5430,7 @@
    "de": "Kostenlos (Apache-2.0)",
    "en": "Free (Apache-2.0)"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-26"
  },
  "Notion": {
@@ -6116,7 +6114,7 @@
   "links": {
    "home": "https://github.com/bradautomates/claude-video"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-05",
   "contentChecked": "2026-09-20"
  },
  "meeting-notes": {

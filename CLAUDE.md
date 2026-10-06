@@ -451,18 +451,31 @@ one row per measured model configuration, styled like the model tiles.
 
 ```json
 "aaAgent": { "url": "https://artificialanalysis.ai/agents/coding-agents",
-  "checked": "2026-08-26",
-  "rows": [ { "model": "…", "index": { "v": "0.68", "rank": "#1/9" },
-             "time": { "v": "23.7 min", "rank": "#7/9" },
-             "cost": { "v": "$8.17", "rank": "#8/9" } } ] }
+  "checked": "2026-10-06",
+  "rows": [ { "model": "…", "index": { "v": "68", "rank": "#1/14" },
+             "time": { "v": "1.5 h", "rank": "#14/14" },
+             "cost": { "v": "$14.20", "rank": "#14/14" } } ] }
 ```
 
-The source is the AA coding-agents page; the index is a 0–1 composite of
-three benchmarks, and rank 1 is best in all three columns. These numbers
-move with every AA re-run, so they rotate like prices: read the page,
-refresh values and ranks, and bump `checked` even when nothing moved. The
-table also grows new agents and model configurations — when one appears
-that this catalogue carries, add its row; when AA drops one, remove it.
+The source is the AA coding-agents page; rank 1 is best in all three
+columns, and the denominator is the number of measured configurations, not
+of agents. These numbers move with every AA re-run, so they rotate like
+prices: read the page, refresh values and ranks, and bump `checked` even
+when nothing moved. The table also grows new agents and model
+configurations — when one appears that this catalogue carries, add its row;
+when AA drops one, remove the row, and when a sheet loses its last row,
+remove the block. Cursor lost its block that way on 6 October.
+
+**The index scale changes between versions, so copy it, do not convert
+it.** Version 1.5 scores 0 to 100 and is an equally weighted composite of
+DeepSWE v1.1, Terminal-Bench 4.0 and SWE-Atlas-QnA. The rows written in
+August carried the 0-to-1 scale of an earlier version, which is why 0.68
+and 68 both appear in this repository's history and mean the same thing.
+
+Reading the page needs a browser, not `curl`: the three charts at the top
+are server-rendered and show eight configurations, the full set sits in the
+"Performance" chart further down, whose model selector says how many of how
+many are shown. On 6 October that was 14 of 31.
 
 The `aa` block on a model's own fact sheet — intelligence, speed, cost,
 verbosity, each with a rank — rots the same way and now carries the same

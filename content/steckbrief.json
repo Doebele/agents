@@ -2730,15 +2730,16 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "Metas erster Schritt weg von den offenen Llama-Gewichten: ein nativ multimodales Modell mit Werkzeugnutzung, sichtbarer Gedankenkette und mehreren zusammenarbeitenden Agenten, entwickelt von den neu gegründeten Meta Superintelligence Labs. Stark bei alltäglicher Wahrnehmung, allgemeinen Fragen und Gesundheitsthemen; bei langwierigen Agentenaufgaben und beim Programmieren räumt Meta selbst noch Lücken ein. Der Haken: Es gibt bislang keine offene API — erreichbar ist es nur über meta.ai und die Meta-AI-App, während der Entwicklerzugang als private Vorschau für ausgewählte Nutzer läuft.",
-   "en": "Meta's first step away from open Llama weights: a natively multimodal model with tool use, visible chain of thought and multi-agent orchestration, built by the newly formed Meta Superintelligence Labs. Strong at everyday perception, general questions and health topics; Meta itself admits gaps in long-running agent work and coding. The catch: there's no open API yet — it's only reachable through meta.ai and the Meta AI app, while developer access runs as a private preview for selected users."
+   "de": "Metas erster Schritt weg von den offenen Llama-Gewichten: ein nativ multimodales Modell mit Werkzeugnutzung, sichtbarer Gedankenkette und mehreren zusammenarbeitenden Agenten, entwickelt von den Meta Superintelligence Labs. Stark bei alltäglicher Wahrnehmung, allgemeinen Fragen und Gesundheitsthemen; bei langwierigen Agentenaufgaben und beim Programmieren räumt Meta selbst noch Lücken ein. Der Zugang ist inzwischen offen: Die Model API nennt Preise je Token, Metas eigener Coding-Agent Muse Code läuft darauf, und fremde Agenten wie OpenCode führen das Modell in ihrer Liste.",
+   "en": "Meta's first step away from open Llama weights: a natively multimodal model with tool use, visible chain of thought and multi-agent orchestration, built by the Meta Superintelligence Labs. Strong at everyday perception, general questions and health topics; Meta itself admits gaps in long-running agent work and coding. Access is open now: the Model API publishes per-token prices, Meta's own coding agent Muse Code runs on it, and third-party agents such as OpenCode carry the model on their list."
   },
   "tip": {
-   "de": "Kein Kandidat für eigene Projekte, solange der API-Zugang privat bleibt — dafür bleiben die anderen Modelle hier die Wahl. Zum Ausprobieren reicht die Meta-AI-App oder meta.ai.",
-   "en": "Not a candidate for your own projects while API access stays private — the other models here remain the choice for that. For trying it out, the Meta AI app or meta.ai is enough."
+   "de": "Interessant wird es über den Preis: 1,25 $ und 4,25 $ je 1M Token liegen unter dem, was die Spitzenmodelle von Anthropic und OpenAI nehmen. Zwei Dinge dazu. Die achtmal billigere Contributor-Stufe bezahlst du mit deinen Daten, denn Meta trainiert damit weiter, während die Standardstufe das ausdrücklich nicht tut. Und wer das Modell über viele Runden arbeiten lässt, nimmt Muse Code dazu, den darauf abgestimmten Agenten.",
+   "en": "The price is what makes it interesting: $1.25 and $4.25 per 1M tokens sit below what the frontier models from Anthropic and OpenAI charge. Two things to know. The eight times cheaper contributor tier is paid for with your data, because Meta keeps training on it, while the standard tier explicitly does not. And anyone running the model across many turns should add Muse Code, the agent tuned for it."
   },
   "links": {
-   "home": "https://ai.meta.com/blog/introducing-muse-spark-msl/"
+   "home": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+   "docs": "https://dev.meta.ai/docs/pricing-rate-limits"
   },
   "icon": "meta",
   "aa": {
@@ -2764,7 +2765,17 @@
     "u": 4
    },
    "checked": "2026-10-06"
-  }
+  },
+  "plans": {
+   "de": "API je 1M Token: Eingabe 1,25 $, Ausgabe 4,25 $, gecachte Eingabe 0,15 $ · Contributor-Stufe 0,10 $/0,20 $ (gecacht 0,002 $), dafür darf Meta mit deinen Prompts und Antworten weitertrainieren · Websuche 2,50 $ je 1.000 Abfragen obendrauf · kein Aufschlag für langen Kontext, kein Mindestumsatz · im Abo über Metas Agent Muse Code, dort nennt Meta die Preise erst in der Anmeldung",
+   "en": "API per 1M tokens: input $1.25, output $4.25, cached input $0.15 · contributor tier $0.10/$0.20 (cached $0.002), in exchange for Meta training on your prompts and completions · web search $2.50 per 1,000 queries on top · no long-context premium, no minimum spend · by subscription through Meta's Muse Code agent, where Meta shows the prices only during sign-up"
+  },
+  "billing": [
+   "api",
+   "abo"
+  ],
+  "plansChecked": "2026-10-06",
+  "contentChecked": "2026-10-06"
  },
  "MiMo-V2.6-Pro": {
   "name": "MiMo-V2.6-Pro",

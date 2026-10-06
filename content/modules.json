@@ -289,6 +289,30 @@
       "k": "Augment Code"
      },
      {
+      "n": "Muse Code",
+      "v": {
+       "de": "Meta · Terminal",
+       "en": "Meta · terminal"
+      },
+      "k": "Muse Code"
+     },
+     {
+      "n": "OpenCode",
+      "v": {
+       "de": "offen · jedes Modell",
+       "en": "open · any model"
+      },
+      "k": "OpenCode"
+     },
+     {
+      "n": "Devin CLI",
+      "v": {
+       "de": "zwei Modelle je Sitzung",
+       "en": "two models per session"
+      },
+      "k": "Devin CLI"
+     },
+     {
       "n": "Osaurus",
       "v": {
        "de": "Mac · lokal",

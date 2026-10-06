@@ -3443,7 +3443,28 @@
    "docs": "https://antigravity.google/docs/getting-started",
    "code": "https://antigravity.google/download"
   },
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-10-06",
+  "aaAgent": {
+   "url": "https://artificialanalysis.ai/agents/coding-agents",
+   "checked": "2026-10-06",
+   "rows": [
+    {
+     "model": "Gemini 4 Argon",
+     "index": {
+      "v": "64",
+      "rank": "#3/14"
+     },
+     "time": {
+      "v": "34.5 min",
+      "rank": "#5/14"
+     },
+     "cost": {
+      "v": "$5.84",
+      "rank": "#8/14"
+     }
+    }
+   ]
+  }
  },
  "Google Stitch": {
   "name": "Stitch",
@@ -6439,5 +6460,183 @@
   ],
   "plansChecked": "2026-10-05",
   "contentChecked": "2026-10-05"
+ },
+ "Muse Code": {
+  "name": "Muse Code",
+  "vendor": "Meta",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "icon": "meta",
+  "open": false,
+  "blurb": {
+   "de": "Metas Coding-Agent für Terminal und Fliessband, gebaut für das eigene Modell Muse Spark. Ein Einzeiler legt ein natives Programm auf den Pfad, danach startet `muse` im Projektordner eine Sitzung, die plant, Dateien ändert und Befehle ausführt. Freigaben und eine Sandbox des Betriebssystems sind vom ersten Lauf an eingeschaltet. Die Eigenheit: Mehrere laufende Sitzungen können einander Nachrichten schicken, mit Übergaben und Review-Anfragen, und wo der Build den Workflow-Motor mitbringt, koordiniert er parallel arbeitende Agenten.",
+   "en": "Meta's coding agent for the terminal and the pipeline, built for its own Muse Spark model. A one-line installer puts a native binary on your path, then `muse` starts an interactive session in a project directory that plans, edits files and runs commands. Approvals and an OS sandbox are on from the first run. Its oddity: several live sessions can message each other, with handoffs and review requests, and where the build ships the workflow engine it coordinates agents working in parallel."
+  },
+  "tip": {
+   "de": "Die naheliegende Wahl, wenn Muse Spark das Modell sein soll: Agent und Modell kommen aus einer Hand, und in der Messung von Artificial Analysis ist das der zweitschnellste Harness überhaupt, bei mittlerem Indexwert. Zwei Haken. Die Preise der drei Abostufen zeigt Meta erst in der Anmeldung, die Dokumentation nennt nur die Kontingente. Und die billige Contributor-Stufe des Modells ist nur deshalb billig, weil Meta mit deinen Prompts und Antworten weitertrainieren darf.",
+   "en": "The obvious pick when Muse Spark is to be the model: agent and model come from one hand, and in the Artificial Analysis measurements this is the second-fastest harness of all, at a middling index score. Two catches. Meta shows the prices of its three subscription tiers only during sign-up; the documentation names the quotas alone. And the model's cheap contributor tier is cheap because Meta may keep training on your prompts and completions."
+  },
+  "links": {
+   "home": "https://dev.meta.ai/docs/muse-code",
+   "docs": "https://dev.meta.ai/docs/pricing-rate-limits"
+  },
+  "plans": {
+   "de": "Abo mit drei Stufen (Everyday Usage, High Usage mit fünffachem, Power Usage mit zwanzigfachem Kontingent, 10 bis 50 Prompts je fünf Stunden in der Einstiegsstufe) · Preise nennt Meta erst in der Anmeldung · ohne Abo nach Verbrauch über die Model API: Muse Spark 1.3 je 1M Token 1,25 $ Eingabe / 4,25 $ Ausgabe, gecachte Eingabe 0,15 $ · Contributor-Stufe 0,10 $/0,20 $, dafür darf Meta mit den Daten trainieren · Websuche 2,50 $ je 1.000 Abfragen · kein Aufschlag für langen Kontext",
+   "en": "Subscription in three tiers (Everyday Usage, High Usage at five times the quota, Power Usage at twenty times, 10 to 50 prompts per five hours on the entry tier) · Meta shows the prices only during sign-up · without a subscription, pay per use through the Model API: Muse Spark 1.3 at $1.25 input / $4.25 output per 1M tokens, cached input $0.15 · contributor tier $0.10/$0.20, in exchange for Meta training on the data · web search $2.50 per 1,000 queries · no long-context premium"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "aaAgent": {
+   "url": "https://artificialanalysis.ai/agents/coding-agents",
+   "checked": "2026-10-06",
+   "rows": [
+    {
+     "model": "Muse Spark 1.3 (max)",
+     "index": {
+      "v": "54",
+      "rank": "#10/14"
+     },
+     "time": {
+      "v": "18.4 min",
+      "rank": "#2/14"
+     },
+     "cost": {
+      "v": "$3.98",
+      "rank": "#4/14"
+     }
+    }
+   ]
+  },
+  "plansChecked": "2026-10-06",
+  "contentChecked": "2026-10-06"
+ },
+ "OpenCode": {
+  "name": "OpenCode",
+  "vendor": "Anomaly",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Der quelloffene Coding-Agent für die Kommandozeile, mit über 212.000 Sternen auf GitHub einer der grössten überhaupt. Modellunabhängig: über 75 Anbieter einschliesslich lokaler Modelle, und wer ein ChatGPT-Abo oder GitHub Copilot hat, meldet sich damit an statt einen Schlüssel zu kaufen. Dazu LSP-Anbindung, damit das Modell den Code wirklich versteht, mehrere Sitzungen parallel am selben Projekt, Teilen-Links für eine Sitzung, MCP und Skills. Es gibt ihn als Terminal-Oberfläche, Desktop-Programm und IDE-Erweiterung.",
+   "en": "The open source coding agent for the command line, with more than 212,000 GitHub stars one of the largest anywhere. Model-agnostic: over 75 providers including local models, and anyone with a ChatGPT subscription or GitHub Copilot signs in with that instead of buying a key. Plus LSP wiring so the model actually understands the code, several sessions in parallel on the same project, share links for a session, MCP and skills. It comes as a terminal interface, a desktop app and an IDE extension."
+  },
+  "tip": {
+   "de": "Die erste Wahl, wenn der Agent nicht vorschreiben soll, welches Modell du nimmst. Das Programm kostet nichts, bezahlt wird das Modell, und dafür gibt es zwei eigene Wege: Go für 10 $ im Monat mit einer kuratierten Liste günstiger Modelle, oder Zen als Schleuse zu geprüften Modellen nach Verbrauch. Der Haken ist derselbe wie bei jedem Werkzeug ohne Vorgabe: Du musst selbst wissen, welches Modell deine Aufgabe trägt.",
+   "en": "The first pick when the agent should not dictate which model you use. The program costs nothing, the model costs money, and there are two in-house routes for that: Go at $10 a month with a curated list of cheap models, or Zen as a gateway to vetted models billed per use. The catch is the one every unopinionated tool has: you have to know yourself which model carries your task."
+  },
+  "links": {
+   "home": "https://opencode.ai",
+   "docs": "https://opencode.ai/docs/",
+   "code": "https://github.com/anomalyco/opencode"
+  },
+  "plans": {
+   "de": "Programm kostenlos, Open Source (MIT) · Modelle extra: eigener Schlüssel bei über 75 Anbietern, oder OpenCode Go 10 $/Mo. bzw. Go Plus 40 $/Mo. mit kuratierten günstigen Modellen und Kontingenten je Fünf-Stunden-Fenster, oder OpenCode Zen nach Verbrauch mit aufgeladenem Guthaben, laut Anbieter zum Einkaufspreis plus Zahlungsgebühren · eigene OpenAI- und Anthropic-Schlüssel in Zen nutzbar · Team-Arbeitsbereiche in der Beta kostenlos",
+   "en": "Program free, open source (MIT) · models extra: your own key at over 75 providers, or OpenCode Go at $10/mo and Go Plus at $40/mo with curated cheap models and quotas per five-hour window, or OpenCode Zen billed per use from topped-up credit, which the vendor says is sold at cost plus payment fees · your own OpenAI and Anthropic keys work inside Zen · team workspaces free during the beta"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "aaAgent": {
+   "url": "https://artificialanalysis.ai/agents/coding-agents",
+   "checked": "2026-10-06",
+   "rows": [
+    {
+     "model": "GLM-5.3",
+     "index": {
+      "v": "54",
+      "rank": "#11/14"
+     },
+     "time": {
+      "v": "48.1 min",
+      "rank": "#10/14"
+     },
+     "cost": {
+      "v": "$4.24",
+      "rank": "#5/14"
+     }
+    }
+   ]
+  },
+  "plansChecked": "2026-10-06",
+  "contentChecked": "2026-10-06"
+ },
+ "Devin CLI": {
+  "name": "Devin CLI",
+  "vendor": "Cognition",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Cognitions Agent für die Kommandozeile, aus demselben Haus wie Devin. Die Besonderheit heisst Fusion: Zwei Modelle teilen sich eine Sitzung, ein Spitzenmodell plant, entscheidet und prüft, ein kleineres schreibt den Code und lässt die Tests laufen. Weil die Routinearbeit am billigeren Modell hängt, kostet die Sitzung weniger als das Spitzenmodell allein. Nach aussen bleibt es ein Agent. Die Modelle sind frei wählbar und mitten in der Sitzung umschaltbar, von Anthropic, OpenAI, Google, Cognition selbst und aus offenen Gewichten.",
+   "en": "Cognition's agent for the command line, from the same house as Devin. Its distinctive feature is called Fusion: two models share a session, a frontier model plans, decides and reviews while a smaller one writes the code and runs the tests. Because the routine work sits on the cheaper model, a session costs less than the frontier model alone. From the outside it stays one agent. The models are yours to choose and switchable mid-session, from Anthropic, OpenAI, Google, Cognition itself and open weights."
+  },
+  "tip": {
+   "de": "Der Vorschlag des Anbieters ist Fable 5.1 als Kopf und Cognitions SWE-2 als Hand. In der Messung von Artificial Analysis kostet diese Paarung 7,90 $ je Aufgabe, während Claude Code mit demselben Spitzenmodell 12,40 $ braucht, bei fast gleichem Indexwert. Haken: Fusion gibt es nur in bezahlten Tarifen, nicht in der Gratisstufe, und für Kunden auf alten Guthabenverträgen gar nicht.",
+   "en": "The vendor's suggestion is Fable 5.1 as the head and Cognition's SWE-2 as the hands. In the Artificial Analysis measurements that pairing costs $7.90 per task where Claude Code with the same frontier model needs $12.40, at almost the same index score. Catches: Fusion exists on paid plans only, not on the free tier, and not at all for customers on legacy credit contracts."
+  },
+  "links": {
+   "home": "https://devin.ai/cli",
+   "docs": "https://docs.devin.ai/cli/fusion"
+  },
+  "plans": {
+   "de": "Free 0 $ (kleines Kontingent, nur ein Teil der Modelle, kein Fusion) · Pro 20 $/Mo. · Max 200 $/Mo. · Teams 80 $/Mo. für das Team plus 40 $/Mo. je Entwicklersitz, bis 200 Nutzer · Enterprise auf Anfrage · Mehrverbrauch zu API-Preisen · SWE-2 in den Selbstbedienungstarifen bis 15.10.2026 gratis, danach je 1M Token 3 $ Eingabe / 15 $ Ausgabe, gecachte Eingabe 0,30 $",
+   "en": "Free $0 (light quota, part of the models, no Fusion) · Pro $20/mo · Max $200/mo · Teams $80/mo for the team plus $40/mo per full dev seat, up to 200 users · Enterprise on request · extra usage at API prices · SWE-2 free on self-serve plans through 15 Oct 2026, then $3 input / $15 output per 1M tokens, cached input $0.30"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "aaAgent": {
+   "url": "https://artificialanalysis.ai/agents/coding-agents",
+   "checked": "2026-10-06",
+   "rows": [
+    {
+     "model": "Fusion: Fable 5.1 (xhigh) + SWE-2 (medium)",
+     "index": {
+      "v": "62",
+      "rank": "#6/14"
+     },
+     "time": {
+      "v": "35.8 min",
+      "rank": "#7/14"
+     },
+     "cost": {
+      "v": "$7.90",
+      "rank": "#10/14"
+     }
+    },
+    {
+     "model": "Fusion: GPT-6 Astra (xhigh) + SWE-2 (medium)",
+     "index": {
+      "v": "59",
+      "rank": "#8/14"
+     },
+     "time": {
+      "v": "24.7 min",
+      "rank": "#3/14"
+     },
+     "cost": {
+      "v": "$4.54",
+      "rank": "#6/14"
+     }
+    }
+   ]
+  },
+  "plansChecked": "2026-10-06",
+  "contentChecked": "2026-10-06"
  }
 }

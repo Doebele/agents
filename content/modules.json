@@ -24,14 +24,14 @@
     },
     "items": [
      {
-      "n": "GPT-6 Astra",
+      "n": "GPT-6 Astra / 6.1 Sol",
       "v": "OpenAI",
-      "k": "GPT-6 Astra"
+      "k": "GPT-6 Astra / 6.1 Sol"
      },
      {
-      "n": "Claude Opus 5.5 / Sonnet 5",
+      "n": "Claude Opus 5.5 / Sonnet 5.5",
       "v": "Anthropic",
-      "k": "Claude Opus 5.5 / Sonnet 5"
+      "k": "Claude Opus 5.5 / Sonnet 5.5"
      },
      {
       "n": "Claude Fable 5.1",
@@ -39,9 +39,9 @@
       "k": "Claude Fable 5.1"
      },
      {
-      "n": "Gemini 3.1 Pro",
+      "n": "Gemini 3.1 Pro / 3.8 Flash",
       "v": "Google",
-      "k": "Gemini 3.1 Pro"
+      "k": "Gemini 3.1 Pro / 3.8 Flash"
      },
      {
       "n": "Grok 4.7",

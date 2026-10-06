@@ -2243,8 +2243,8 @@
   "plansChecked": "2026-10-05",
   "contentChecked": "2026-10-06"
  },
- "GPT-6 Astra": {
-  "name": "GPT-6 Astra",
+ "GPT-6 Astra / 6.1 Sol": {
+  "name": "GPT-6 Astra / 6.1 Sol",
   "vendor": "OpenAI",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
@@ -2253,12 +2253,12 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "OpenAIs neuestes Spitzenmodell und Nachfolger von GPT-5.6, ab September 2026 in allen bezahlten ChatGPT-Plänen und über die API. Sein stärkstes Feld ist die Agentenarbeit am Bildschirm: Formulare ausfüllen, im Netz recherchieren, Software selbst installieren und testen. OpenAI nennt es sein am besten ausgerichtetes Modell: Es fragt nach, wenn eine Aufgabe unklar ist, und ging in der eigenen Prüfung nie über den Auftrag hinaus. Der Haken: Als API mit 10 $/50 $ pro Million Tokens deutlich teurer als der Vorgänger — im ChatGPT-Abo ist die Nutzung ohne Aufpreis in den bestehenden Kontingenten enthalten.",
-   "en": "OpenAI's newest flagship and successor to GPT-5.6, available from September 2026 across all paid ChatGPT plans and through the API. Its strongest field is agent work on the computer: filling in forms, researching the web, installing and testing software on its own. OpenAI calls it its best-aligned model: it asks follow-up questions when a task is unclear and, in the company's own evaluation, never went beyond its assignment. The catch: at $10/$50 per million tokens the API is markedly dearer than its predecessor — inside a ChatGPT subscription, usage is included in the existing quotas at no extra charge."
+   "de": "OpenAIs Spitzenmodelle, seit September in zwei Größen: Astra für die harten Fälle, 6.1 Sol für den Alltag. Beider stärkstes Feld ist die Agentenarbeit am Bildschirm, also Formulare ausfüllen, im Netz recherchieren, Software selbst installieren. Der Unterschied liegt weniger in der Intelligenz als im Preis: Sol kostet ein Fünftel von Astra und liegt im Index von Artificial Analysis nur einen Punkt dahinter (52 zu 53).",
+   "en": "OpenAI's frontier models, since September in two sizes: Astra for the hard cases, 6.1 Sol for everyday work. Both are at their strongest doing agent work on screen: filling in forms, researching on the web, installing software themselves. The difference is less about intelligence than about price: Sol costs a fifth of Astra and sits one point behind it on the Artificial Analysis index (52 to 53)."
   },
   "tip": {
-   "de": "Kein Aufpreis im ChatGPT-Abo — die Nutzung läuft in den gewohnten Kontingenten mit. Erste Wahl, wenn der Rechner selbst arbeiten soll: Formulare, Webrecherche, Dokumente und Präsentationen. Auf Pro-, Business- und Enterprise-Plänen gibt es zusätzlich die Variante GPT-6 Astra Pro.",
-   "en": "No surcharge in a ChatGPT subscription — usage runs inside the usual quotas. The first choice when the computer itself should work: forms, web research, documents and presentations. Pro, Business and Enterprise plans also carry a GPT-6 Astra Pro variant."
+   "de": "Fang mit Sol an. Astra lohnt erst, wenn eine Aufgabe daran scheitert, denn es kostet das Fünffache. Noch billiger ist 6 Luna, dafür fällt es im Index deutlich ab (38 statt 52). Ein Haken bei allen drei: Ab 200.000 Token im Prompt verdoppelt sich der Satz, und die Geschwindigkeitsstufen Fast und Ultrafast kosten das Doppelte beziehungsweise das Sechsfache.",
+   "en": "Start with Sol. Astra is worth it once a task fails on Sol, because it costs five times as much. Cheaper still is 6 Luna, which drops off noticeably on the index (38 instead of 52). One catch on all three: past 200,000 tokens in the prompt the rate doubles, and the Fast and Ultrafast speed tiers cost double and six times respectively."
   },
   "links": {
    "home": "https://openai.com/index/gpt-6-astra/",
@@ -2270,39 +2270,38 @@
    "url": "https://artificialanalysis.ai/models/gpt-6-astra",
    "intel": {
     "v": "53",
-    "rank": "#6/212",
+    "rank": "#7/225",
     "u": 4
    },
    "speed": {
-    "v": "52.5",
-    "rank": "#133/212",
-    "u": 1
+    "v": "63.3",
+    "rank": "#128/225"
    },
    "cost": {
     "v": "$10/$50",
-    "rank": "#82/212",
+    "rank": "#95/225",
     "u": 4
    },
    "verb": {
     "v": "60M",
-    "rank": "#36/212",
-    "u": 2
+    "rank": "#45/225",
+    "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
-   "de": "API 10 $/50 $ pro 1M Tok. (Standard) · Fast-Mode 2× Preis, bis zu 2× so schnell · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.) · GPT-6 Astra Pro zusätzlich auf Pro, Business, Enterprise",
-   "en": "API $10/$50 per 1M tok. (standard) · Fast mode 2× the price, up to 2× the speed · in a ChatGPT subscription included from Plus within the quotas at no extra charge (Plus $20/mo, Pro $100/mo) · GPT-6 Astra Pro additionally on Pro, Business, Enterprise"
+   "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 200k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
+   "en": "API per 1M tokens, Standard tier: Astra $10/$50 · 6.1 Sol $2/$10 · 6 Luna $0.10/$0.50 · past 200k tokens in the prompt Astra $20/$75, Sol $4/$15, Luna $0.20/$0.75 · cached input a tenth of the input price · Flex halves the rate, Fast doubles it, Ultrafast (Astra only) multiplies it by six · included in the ChatGPT quotas from Plus upwards at no extra cost (Plus $20/mo, Pro $100/mo), with GPT-6 Astra Pro on Pro, Business and Enterprise on top"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-18"
+  "plansChecked": "2026-10-06",
+  "contentChecked": "2026-10-06"
  },
- "Claude Opus 5.5 / Sonnet 5": {
-  "name": "Claude Opus 5.5 / Sonnet 5",
+ "Claude Opus 5.5 / Sonnet 5.5": {
+  "name": "Claude Opus 5.5 / Sonnet 5.5",
   "vendor": "Anthropic",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
@@ -2311,12 +2310,12 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "Anthropics Modellfamilie, die bei Agentenarbeit besonders stark ist: also dann, wenn das Modell nicht nur antwortet, sondern über viele Schritte Werkzeuge benutzt und ein Ziel verfolgt. Zwei Größen auf derselben Grundlage — Opus für die harten Fälle, Sonnet für alles, was schnell gehen soll.",
-   "en": "Anthropic's model family, particularly strong at agent work: when the model doesn't just answer but uses tools across many steps toward a goal. Two sizes on the same foundation — Opus for the hard cases, Sonnet for anything that should be quick."
+   "de": "Anthropics Modellfamilie, die bei Agentenarbeit besonders stark ist: also dann, wenn das Modell nicht nur antwortet, sondern über viele Schritte Werkzeuge benutzt und ein Ziel verfolgt. Zwei Größen auf derselben Grundlage, Opus für die harten Fälle, Sonnet für alles, was schnell gehen soll. Seit September steht auch Sonnet auf 5.5, und im Index von Artificial Analysis liegen die beiden nur zwei Punkte auseinander (58 zu 56). Sonnet 5 bleibt als Vorgänger abrufbar, zum selben Preis.",
+   "en": "Anthropic's model family, particularly strong at agent work: when the model doesn't just answer but uses tools across many steps toward a goal. Two sizes on the same foundation, Opus for the hard cases, Sonnet for anything that should be quick. Since September Sonnet is on 5.5 as well, and on the Artificial Analysis index the two sit two points apart (58 to 56). Sonnet 5 remains available as the predecessor, at the same price."
   },
   "tip": {
-   "de": "Nimm Sonnet als Standard und schalte auf Opus, wenn eine Aufgabe hakt. Bei einfachen Dingen ist der Unterschied kaum spürbar, bei kniffligen deutlich.",
-   "en": "Use Sonnet as your default and switch to Opus when a task stalls. On easy work the difference is barely noticeable, on tricky work it is clear."
+   "de": "Nimm Sonnet als Standard und schalte auf Opus, wenn eine Aufgabe hakt. Bei einfachen Dingen ist der Unterschied kaum spürbar, bei kniffligen deutlich. Mehr Punkte heißt dabei nicht weniger Kosten: In den Coding-Agenten-Messungen von Artificial Analysis liegt Sonnet 5.5 im Index vor Opus 5.5, braucht dafür aber mehr Zeit und mehr Geld je Aufgabe, weil es länger arbeitet.",
+   "en": "Use Sonnet as your default and switch to Opus when a task stalls. On easy work the difference is barely noticeable, on tricky work it is clear. More points does not mean less money here: in the Artificial Analysis coding-agent measurements Sonnet 5.5 beats Opus 5.5 on the index, but takes more time and more money per task because it works longer."
   },
   "links": {
    "home": "https://www.anthropic.com/claude-opus-5-5",
@@ -2329,32 +2328,37 @@
    "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
    "intel": {
     "v": "58",
-    "rank": "#1/212",
+    "rank": "#1/225",
     "u": 4
+   },
+   "speed": {
+    "v": "97.2",
+    "rank": "#74/225"
    },
    "cost": {
     "v": "$4/$20",
-    "rank": "#93/212",
+    "rank": "#107/225",
     "u": 4
    },
    "verb": {
     "v": "260M",
-    "rank": "#95/212",
+    "rank": "#110/225",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
-   "de": "API Opus 5.5 4 $/20 $ pro 1M Token · Sonnet 5 2 $/10 $ pro 1M Token — der Einführungspreis für Sonnet ist inzwischen der reguläre, die für den 1.9.2026 angekündigte Erhöhung auf 3 $/15 $ entfällt",
-   "en": "API Opus 5.5 $4/$20 per 1M tokens · Sonnet 5 $2/$10 per 1M tokens — Sonnet's introductory price is now the standard one, the increase to $3/$15 announced for 1 Sept 2026 will not happen"
+   "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus und Sonnet, 0,10 $ bei Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
+   "en": "API per 1M tokens: Opus 5.5 $4/$20 · Sonnet 5.5 $2/$10 · Haiku 4.5 $1/$5 · cached input $0.20 on Opus and Sonnet, $0.10 on Haiku · cache writes $5 (Opus) and $2.50 (Sonnet) for five minutes, $8 and $4 for an hour · the predecessors Opus 5 ($5/$25) and Sonnet 5 ($2/$10) stay in the price list"
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-05"
+  "plansChecked": "2026-10-06",
+  "contentChecked": "2026-10-06"
  },
- "Gemini 3.1 Pro": {
-  "name": "Gemini 3.1 Pro",
+ "Gemini 3.1 Pro / 3.8 Flash": {
+  "name": "Gemini 3.1 Pro / 3.8 Flash",
   "vendor": "Google",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
@@ -2363,12 +2367,12 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "Googles Spitzenmodell, das Text, Bild, Ton und Video gleichermaßen versteht. Sein auffälligstes Merkmal ist der riesige Arbeitsspeicher für Text: eine Million Token, grob gerechnet mehrere tausend Seiten. Damit passt eine ganze Codebasis oder ein Aktenordner auf einmal hinein, ohne dass du sie zerlegen musst.",
-   "en": "Google's flagship, understanding text, image, audio and video alike. Its most striking feature is the sheer working memory for text: one million tokens, roughly several thousand pages. A whole codebase or a full case file fits in at once, with no need to cut it up."
+   "de": "Googles Modelle, die Text, Bild, Ton und Video gleichermaßen verstehen. Auffälligstes Merkmal ist der riesige Arbeitsspeicher für Text: eine Million Token, grob gerechnet mehrere tausend Seiten. Damit passt eine ganze Codebasis in einen Prompt. Neben dem Pro-Modell steht seit September 3.8 Flash, das Google ausdrücklich für lange Programmierläufe und Agenten baut. Im Index von Artificial Analysis liegt Flash mit 41 vor Pro mit 30, bei einem Bruchteil des Preises und dem sechstbesten Tempo aller gemessenen Modelle.",
+   "en": "Google's models, which understand text, image, audio and video alike. Their most striking feature is the enormous working memory for text: one million tokens, roughly several thousand pages. A whole codebase fits in one prompt. Alongside the Pro model, September brought 3.8 Flash, which Google builds expressly for long coding runs and agents. On the Artificial Analysis index Flash leads Pro, 41 to 30, at a fraction of the price and with the sixth-fastest output of all measured models."
   },
   "tip": {
-   "de": "Die erste Wahl, wenn dein Problem „zu viel Material\" heißt und nicht „zu schwierig\".",
-   "en": "The first choice when your problem is \"too much material\" rather than \"too difficult\"."
+   "de": "Nimm 3.8 Flash und nicht Pro: schneller, billiger, im Index besser. Pro bleibt für das, was wirklich den sehr langen Kontext braucht. Zwei Dinge im Blick behalten: Der Flash-Preis gilt so bis zum 31. Dezember 2026 und verdoppelt sich danach. Und Google hat mit Gemini 4 Argon ein stärkeres Modell am Markt, das Artificial Analysis auf 53 Punkte misst, dessen Preis aber in der Entwickler-Preisliste noch fehlt. Ohne Preis bekommt es hier keinen eigenen Steckbrief.",
+   "en": "Take 3.8 Flash over Pro: faster, cheaper, better on the index. Pro stays for what genuinely needs the very long context. Keep two things in view: the Flash price holds until 31 December 2026 and doubles after that. And Google has a stronger model on the market, Gemini 4 Argon, which Artificial Analysis measures at 53 points but whose price is still missing from the developer price list. Without a price it gets no fact sheet of its own here."
   },
   "links": {
    "home": "https://deepmind.google/models/gemini/pro/",
@@ -2378,32 +2382,31 @@
   "icon": "googlegemini",
   "free": false,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
+   "url": "https://artificialanalysis.ai/models/gemini-3-8-flash",
    "intel": {
-    "v": "30",
-    "rank": "#81/212",
-    "u": 3
-   },
-   "speed": {
-    "v": "121.7",
-    "rank": "#34/212",
+    "v": "41",
+    "rank": "#50/225",
     "u": 4
    },
+   "speed": {
+    "v": "234.9",
+    "rank": "#6/225"
+   },
    "cost": {
-    "v": "$2/$12",
-    "rank": "#31/212",
-    "u": 2
+    "v": "$0.75/$3.75",
+    "rank": "#62/225",
+    "u": 4
    },
    "verb": {
-    "v": "67M",
-    "rank": "#39/212",
-    "u": 2
+    "v": "170M",
+    "rank": "#96/225",
+    "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
-   "de": "API pro 1M Token 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · Google AI Pro 19,99 $/Mo.",
-   "en": "API per 1M tokens $2/$12, from 200k tokens in the prompt $4/$18 · Google AI Pro $19.99/mo"
+   "de": "API je 1M Token: 3.1 Pro 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · 3.8 Flash 0,75 $/3,75 $ bis 31.12.2026, ab 1.1.2027 1,50 $/7,50 $ · Kontext-Cache 0,20 $ (Pro) bzw. 0,075 $ (Flash), Speicherung 4,50 $ je 1M Token und Stunde · Gratisstufe für 3.8 Flash, für 3.1 Pro nicht · Google AI Pro 19,99 $/Mo.",
+   "en": "API per 1M tokens: 3.1 Pro $2/$12, past 200k tokens in the prompt $4/$18 · 3.8 Flash $0.75/$3.75 until 31 Dec 2026, $1.50/$7.50 from 1 Jan 2027 · context cache $0.20 (Pro) and $0.075 (Flash), storage $4.50 per 1M tokens per hour · free tier for 3.8 Flash, none for 3.1 Pro · Google AI Pro $19.99/mo"
   },
   "plansJahr": {
    "de": "API pro 1M Token 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ (nach Verbrauch, keine Jahreszahlung) · Google AI Pro 16,67 $/Mo. (199,99 $ im Voraus)",
@@ -2413,7 +2416,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-06",
   "contentChecked": "2026-10-06"
  },
  "Grok 4.7": {

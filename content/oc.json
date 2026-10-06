@@ -45,7 +45,7 @@
   {
    "v": "Anthropic",
    "m": "Claude Opus 5.5",
-   "key": "Claude Opus 5.5 / Sonnet 5"
+   "key": "Claude Opus 5.5 / Sonnet 5.5"
   },
   {
    "v": "Anthropic",
@@ -55,7 +55,7 @@
   {
    "v": "OpenAI",
    "m": "GPT-6 Astra",
-   "key": "GPT-6 Astra"
+   "key": "GPT-6 Astra / 6.1 Sol"
   },
   {
    "v": "Meta",
@@ -80,7 +80,7 @@
   {
    "v": "Google",
    "m": "Gemini 3.1 Pro",
-   "key": "Gemini 3.1 Pro"
+   "key": "Gemini 3.1 Pro / 3.8 Flash"
   }
  ]
 }

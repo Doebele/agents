@@ -18,9 +18,9 @@
      "en": "Which language model should do the thinking?"
     },
     "kandidaten": [
-     "Claude Opus 5.5 / Sonnet 5",
-     "GPT-6 Astra",
-     "Gemini 3.1 Pro",
+     "Claude Opus 5.5 / Sonnet 5.5",
+     "GPT-6 Astra / 6.1 Sol",
+     "Gemini 3.1 Pro / 3.8 Flash",
      "Grok 4.7",
      "Qwen3.8-Max",
      "Kimi K3",
@@ -33,7 +33,7 @@
      "Ornith 1.5"
     ],
     "empfehlung": [
-     "Claude Opus 5.5 / Sonnet 5"
+     "Claude Opus 5.5 / Sonnet 5.5"
     ],
     "filter": [
      "open",

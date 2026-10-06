@@ -656,8 +656,15 @@ its smaller siblings; the old reverse text sort put `glm-5.3-flashx` ahead of
 python3 build/zai_zugang.py --selbsttest
 ```
 
-## "As of August 2026"
+## "As of October 2026"
 
 That line is a maintenance promise, not a timestamp. It is the reason this
 repository has a weekly job. Do not change it to a later date unless the
-whole catalogue has actually been reviewed.
+whole catalogue has actually been reviewed — and say in the pull request
+what that review was. It moved to October on 6 October 2026, after an
+out-of-cycle check of every model sheet against Artificial Analysis and
+every frontier price against the vendor's own page.
+
+It lives in `content/ui.json`, in five places and in both languages. The
+boot line of the page is a different date and needs no hand: `{{STAND}}`
+derives it from the last commit that touched `content/` or `build/`.

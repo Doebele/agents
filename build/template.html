@@ -2124,7 +2124,7 @@ addEventListener('keydown', e=>{
       h += `<p class="wz-sub">${w.keinTreffer ? T.arbeit_kein_treffer : T.einzeln}</p>`;
       h += `<div class="wz-liste einzeln">` + ARTEN.map(a =>
         paar('wa', a.id, a.name, a.beispiele.join(' · '), w.art && w.art.id === a.id)).join('') + `</div>`;
-      weiter = !!w.art;
+      weiter = !!w.art || w.freitext.trim().length >= 3;   // ab drei Zeichen versucht treffer() es
 
     } else if(s.id === 'variante'){
       titel.textContent = w.art.varianten.frage;
@@ -2193,7 +2193,17 @@ addEventListener('keydown', e=>{
     drawer.classList.remove('detail');
     body.innerHTML = h;
     const feld = $('#wzfrei');
-    if(feld) feld.addEventListener('input', e => { w.freitext = e.target.value; w.keinTreffer = false; });
+    if(feld){
+      /* Nur den Knopf umschalten, nicht neu zeichnen: sonst verliert das Feld
+         bei jedem Tastendruck den Cursor. */
+      feld.addEventListener('input', e => {
+        w.freitext = e.target.value; w.keinTreffer = false;
+        $('#wznext').disabled = !w.art && w.freitext.trim().length < 3;
+      });
+      feld.addEventListener('keydown', e => {
+        if(e.key === 'Enter' && !e.isComposing && !$('#wznext').disabled) $('#wznext').click();
+      });
+    }
   }
 
   function treffer(text){

@@ -1143,27 +1143,28 @@
   "icon": "alibabacloud",
   "free": true,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/qwen3-8-max",
+   "url": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
    "intel": {
-    "v": "45",
-    "rank": "#24/212",
+    "v": "40",
+    "rank": "#5/117",
     "u": 4
    },
    "speed": {
-    "v": "39.3",
-    "rank": "#160/212",
+    "v": "39.6",
+    "rank": "#62/117",
     "u": 1
    },
    "cost": {
     "v": "$2/$6",
-    "u": 4
+    "u": 4,
+    "rank": "#37/117"
    },
    "verb": {
-    "v": "190M",
-    "rank": "#88/212",
+    "v": "170M",
+    "rank": "#28/117",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "Open-Weight (Apache 2.0), kostenlos selbst hostbar · über Alibabas Model Studio nach Verbrauch, Region Singapur je 1M Token: qwen3.8-flash 0,15 $/0,47 $ · qwen3.6-flash 0,25 $/1,50 $ · qwen3.6-plus 0,50 $/3 $ · lange Prompts kosten mehr · 1 Mio. Token gratis, 90 Tage ab Freischaltung",
@@ -1206,13 +1207,13 @@
     "u": 4
    },
    "speed": {
-    "v": "184.1",
-    "rank": "#2/65",
+    "v": "185.8",
+    "rank": "#5/65",
     "u": 4
    },
    "cost": {
     "v": "$0.15/$0.595",
-    "rank": "#3/65",
+    "rank": "#2/65",
     "u": 2
    },
    "verb": {
@@ -1220,7 +1221,7 @@
     "rank": "#4/65",
     "u": 2
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "Kostenlos (Open-Weight, Apache 2.0), selbst gehostet",
@@ -1257,25 +1258,25 @@
    "url": "https://artificialanalysis.ai/models/mistral-large-3",
    "intel": {
     "v": "9",
-    "rank": "#27/44",
+    "rank": "#29/46",
     "u": 2
    },
    "speed": {
-    "v": "76.7",
-    "rank": "#5/44",
+    "v": "81.1",
+    "rank": "#6/46",
     "u": 4
    },
    "cost": {
     "v": "$0.50/$1.50",
-    "rank": "#2/44",
+    "rank": "#3/46",
     "u": 2
    },
    "verb": {
     "v": "9.8M",
-    "rank": "#3/44",
+    "rank": "#3/46",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "Open-Weight (Apache 2.0) · API 0,50 $ Eingabe / 1,50 $ Ausgabe pro 1M Token (die Preisseite nennt das Modell «Mistral Large»), Stapelbetrieb zum halben Preis, zwischengespeicherte Eingabe 90 % günstiger · Gratisstufe mit 10 $ API-Guthaben je Monat · Vibe Pro 14,99 $/Mo. (Studenten 5,99 $), Vibe Team 24,99 $/Nutzer/Mo. ab 50 $/Mo.",
@@ -1316,19 +1317,19 @@
    "url": "https://artificialanalysis.ai/models/llama-4-maverick",
    "intel": {
     "v": "10",
-    "rank": "#24/44",
+    "rank": "#26/46",
     "u": 2
    },
    "speed": {
-    "v": "112.7",
-    "rank": "#2/44",
+    "v": "61.8",
+    "rank": "#9/46",
     "u": 4
    },
    "cost": {
     "v": "$0.26/$0.91",
     "u": 2
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet · ab 700 Mio. monatlich aktiven Nutzern verlangt Meta eine eigene Lizenz",
@@ -2443,25 +2444,25 @@
    "url": "https://artificialanalysis.ai/models/grok-4-7",
    "intel": {
     "v": "46",
-    "rank": "#21/212",
+    "rank": "#29/225",
     "u": 4
    },
    "speed": {
-    "v": "39.8",
-    "rank": "#156/212",
+    "v": "88.2",
+    "rank": "#86/225",
     "u": 1
    },
    "cost": {
     "v": "$2/$6",
-    "rank": "#85/212",
+    "rank": "#99/225",
     "u": 4
    },
    "verb": {
     "v": "240M",
-    "rank": "#94/212",
+    "rank": "#109/225",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · ab 200k Token Prompt das Doppelte: 4 $/12 $ (Cache 1 $)",
@@ -2502,24 +2503,25 @@
    "url": "https://artificialanalysis.ai/models/qwen3-8-max",
    "intel": {
     "v": "45",
-    "rank": "#24/212",
+    "rank": "#32/225",
     "u": 4
    },
    "speed": {
-    "v": "39.3",
-    "rank": "#160/212",
+    "v": "37.9",
+    "rank": "#181/225",
     "u": 1
    },
    "cost": {
     "v": "$2/$6",
-    "u": 4
+    "u": 4,
+    "rank": "#104/225"
    },
    "verb": {
     "v": "190M",
-    "rank": "#88/212",
+    "rank": "#102/225",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "API über Model Studio 2 $/6 $ pro 1M Token (Region Singapur) · 1 Mio. Token gratis, 90 Tage ab Freischaltung · die 2,4T-Variante Qwen3.8-2.4T-A95B gibt es inzwischen auch als offene Gewichte (eigene Qwen-Lizenz)",
@@ -2559,25 +2561,25 @@
    "url": "https://artificialanalysis.ai/models/kimi-k3",
    "intel": {
     "v": "44",
-    "rank": "#3/114",
+    "rank": "#3/117",
     "u": 4
    },
    "speed": {
-    "v": "36.7",
-    "rank": "#55/114",
+    "v": "43.7",
+    "rank": "#54/117",
     "u": 1
    },
    "cost": {
     "v": "$3/$15",
-    "rank": "#29/114",
+    "rank": "#35/117",
     "u": 4
    },
    "verb": {
     "v": "160M",
-    "rank": "#20/114",
+    "rank": "#26/117",
     "u": 3
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "API 3 $ Eingabe / 15 $ Ausgabe pro 1M Token, gecachte Eingabe 0,30 $ · keine Gratisstufe, vor dem ersten Aufruf muss mindestens 1 $ aufgeladen sein · Open-Weight unter der Kimi-K3-Lizenz, selbst hostbar",
@@ -2618,25 +2620,25 @@
    "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
    "intel": {
     "v": "39",
-    "rank": "#7/114",
+    "rank": "#7/117",
     "u": 4
    },
    "speed": {
-    "v": "232.3",
-    "rank": "#2/114",
+    "v": "221.8",
+    "rank": "#3/117",
     "u": 4
    },
    "cost": {
     "v": "$0.30/$1.20",
-    "rank": "#16/114",
+    "rank": "#21/117",
     "u": 2
    },
    "verb": {
     "v": "250M",
-    "rank": "#32/114",
+    "rank": "#40/117",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "API pro 1M Token zur Hauptzeit: V4-Pro 1,32 $/3,96 $ · deepseek-flash (V4.1-Flash) 0,30 $/1,20 $ · Cache-Treffer sind viel billiger (V4-Pro 0,044 $). Hauptzeit ist Mo–Fr 01–04 und 06–10 Uhr UTC; zu allen anderen Zeiten, Wochenende eingeschlossen, kostet alles die Hälfte.",
@@ -2675,25 +2677,25 @@
    "url": "https://artificialanalysis.ai/models/glm-5-3",
    "intel": {
     "v": "45",
-    "rank": "#2/114",
+    "rank": "#2/117",
     "u": 4
    },
    "speed": {
-    "v": "60.7",
-    "rank": "#34/114",
+    "v": "73.3",
+    "rank": "#33/117",
     "u": 2
    },
    "cost": {
     "v": "$1.40/$4.40",
-    "rank": "#30/114",
+    "rank": "#36/117",
     "u": 4
    },
    "verb": {
     "v": "210M",
-    "rank": "#27/114",
+    "rank": "#33/117",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "API 1,40 $/4,40 $ pro 1M Token · gecachte Eingabe 0,26 $, der Cache-Speicher ist zeitlich begrenzt kostenlos · GLM-5.3 steckt auch im GLM-Coding-Abo",
@@ -2731,25 +2733,25 @@
    "url": "https://artificialanalysis.ai/models/muse-spark-1-3",
    "intel": {
     "v": "48",
-    "rank": "#17/212",
+    "rank": "#23/225",
     "u": 4
    },
    "speed": {
-    "v": "223.0",
-    "rank": "#7/212",
+    "v": "187.8",
+    "rank": "#20/225",
     "u": 4
    },
    "cost": {
     "v": "$1.25/$4.25",
-    "rank": "#62/212",
+    "rank": "#74/225",
     "u": 3
    },
    "verb": {
     "v": "170M",
-    "rank": "#79/212",
+    "rank": "#93/225",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   }
  },
  "MiMo-V2.6-Pro": {
@@ -2778,25 +2780,25 @@
    "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
    "intel": {
     "v": "46",
-    "rank": "#1/114",
+    "rank": "#1/117",
     "u": 4
    },
    "speed": {
-    "v": "53.9",
-    "rank": "#42/114",
+    "v": "44.9",
+    "rank": "#52/117",
     "u": 2
    },
    "cost": {
-    "v": "$0.44/$0.87",
-    "rank": "#12/114",
+    "v": "$0.435/$0.87",
+    "rank": "#16/117",
     "u": 2
    },
    "verb": {
     "v": "140M",
-    "rank": "#18/114",
+    "rank": "#24/117",
     "u": 3
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "API pro 1M Token: 0,435 $ Eingabe (0,0036 $ bei Cache-Treffer) / 0,87 $ Ausgabe · Open-Weight unter MIT-Lizenz, selbst hostbar",
@@ -2832,25 +2834,25 @@
    "url": "https://artificialanalysis.ai/models/step-5",
    "intel": {
     "v": "44",
-    "rank": "#32/212",
+    "rank": "#40/225",
     "u": 4
    },
    "speed": {
-    "v": "83.6",
-    "rank": "#68/212",
+    "v": "87.2",
+    "rank": "#89/225",
     "u": 3
    },
    "cost": {
     "v": "$1/$2.70",
-    "rank": "#33/212",
+    "rank": "#38/225",
     "u": 2
    },
    "verb": {
     "v": "160M",
-    "rank": "#75/212",
+    "rank": "#89/225",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   }
  },
  "Motif 3": {
@@ -2878,10 +2880,10 @@
    "url": "https://artificialanalysis.ai/models/motif-3",
    "intel": {
     "v": "34",
-    "rank": "#12/114",
+    "rank": "#13/117",
     "u": 4
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   }
  },
  "K2 Horizon 375B A23B": {
@@ -2909,15 +2911,19 @@
    "url": "https://artificialanalysis.ai/models/k2-horizon-375b-a23b",
    "intel": {
     "v": "31",
-    "rank": "#13/114",
+    "rank": "#14/117",
     "u": 4
+   },
+   "speed": {
+    "v": "119.0",
+    "rank": "#14/117"
    },
    "verb": {
     "v": "130M",
-    "rank": "#14/114",
+    "rank": "#18/117",
     "u": 2
    },
-   "checked": "2026-09-23"
+   "checked": "2026-10-06"
   }
  },
  "Anthropic Agent Skills": {
@@ -4845,7 +4851,10 @@
    "de": "Selbst betrieben kostenlos (AGPLv3, ohne Funktionssperren) · verwaltet auf Volcano Engine mit Gratis-Test bis 50 Dateien; was es darüber kostet, nennt der Anbieter nicht",
    "en": "Self-hosted free (AGPLv3, with no feature gates) · managed on Volcano Engine with a free trial of up to 50 files; the vendor names no price beyond that"
   },
-  "billing": ["abo", "api"],
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-09-21",
   "contentChecked": "2026-09-25"
  },
@@ -5997,7 +6006,9 @@
    "de": "Kostenlos, Textdatei (MIT) · erzeugte Bilder und Videos über kie.ai",
    "en": "Free, a text file (MIT) · generated images and video via kie.ai"
   },
-  "billing": ["api"],
+  "billing": [
+   "api"
+  ],
   "links": {
    "home": "https://github.com/nateherkai/scroll-craft"
   },
@@ -6145,7 +6156,9 @@
    "de": "Kostenlos, Textdatei (MIT) · Transkription nur nötig, wenn Untertitel fehlen",
    "en": "Free, a text file (MIT) · transcription only needed when captions are missing"
   },
-  "billing": ["api"],
+  "billing": [
+   "api"
+  ],
   "links": {
    "home": "https://github.com/bradautomates/claude-video"
   },
@@ -6232,7 +6245,9 @@
    "de": "Kostenlos, Textdatei (MIT) · das Training braucht ein bezahltes Higgsfield-Abo (ab Basic)",
    "en": "Free, a text file (MIT) · training needs a paid Higgsfield plan (Basic or above)"
   },
-  "billing": ["abo"],
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://www.skills.sh/higgsfield-ai/skills/higgsfield-soul-id",
    "code": "https://github.com/higgsfield-ai/skills/tree/main/higgsfield-soul-id"
@@ -6333,20 +6348,21 @@
    "url": "https://artificialanalysis.ai/models/claude-fable-5-1",
    "intel": {
     "v": "53",
-    "rank": "#4/211"
+    "rank": "#5/225"
    },
    "speed": {
-    "v": "68.5",
-    "rank": "#104/211"
+    "v": "63.5",
+    "rank": "#126/225"
    },
    "cost": {
     "v": "$10/$50",
-    "rank": "#94/211"
+    "rank": "#108/225"
    },
    "verb": {
     "v": "190M",
-    "rank": "#88/211"
-   }
+    "rank": "#101/225"
+   },
+   "checked": "2026-10-06"
   },
   "plansChecked": "2026-09-28"
  },

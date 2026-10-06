@@ -1090,9 +1090,17 @@
      }
     },
     "05_tools": {
-     "kandidaten": [],
-     "luecke": "Schnitt, Rendering, Formatanpassung.",
-     "im_wizard": false
+     "frage": {
+      "de": "Was darf der Agent mit dem Material?",
+      "en": "What may the agent do with the material?"
+     },
+     "kandidaten": [
+      "FFmpeg"
+     ],
+     "notiz": {
+      "de": "Schnitt, Rendering und Formatanpassung sind hier Befehle, keine Handgriffe: FFmpeg macht sie vom Agenten ausführbar — er schreibt den Aufruf, du liest ihn, bevor er läuft. Erzeugen ist nicht seine Sache, das bleibt den Medien-Modellen in Station 06.",
+      "en": "Cutting, rendering and reformatting are commands here, not hand movements: FFmpeg puts them within the agent's reach — it writes the call, you read it before it runs. Creating is not its job; that stays with the media models at station 06."
+     }
     },
     "06_medien": {
      "kandidaten": [

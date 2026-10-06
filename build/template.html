@@ -2309,7 +2309,12 @@ addEventListener('keydown', e=>{
       const s = jetzt();
       if(s.id === 'arbeit' && !w.art){
         const a = treffer(w.freitext);
-        if(a){ w.art = a; } else { w.keinTreffer = true; zeichne(); return; }
+        if(a){ w.art = a; }
+        else {
+          w.keinTreffer = true; zeichne();
+          const f = $('#wzfrei'); f.focus(); f.setSelectionRange(f.value.length, f.value.length);   // gleich weitertippen
+          return;
+        }
       }
       w.i++; zeichne();
     }

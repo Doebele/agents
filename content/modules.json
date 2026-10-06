@@ -1011,6 +1011,22 @@
       "k": "tool-medien"
      }
     ]
+   },
+   {
+    "label": {
+     "de": "Werkzeuge auf dem Rechner",
+     "en": "Tools on the machine"
+    },
+    "items": [
+     {
+      "n": "FFmpeg",
+      "v": {
+       "de": "Schnitt und Formate · CLI",
+       "en": "cutting and formats · CLI"
+      },
+      "k": "FFmpeg"
+     }
+    ]
    }
   ],
   "insight": {

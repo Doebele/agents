@@ -3879,6 +3879,36 @@
   },
   "contentChecked": "2026-10-06"
  },
+ "FFmpeg": {
+  "name": "FFmpeg",
+  "vendor": "FFmpeg Project",
+  "cat": {
+   "de": "Medien-Werkzeug · Baustein 05",
+   "en": "Media tool · Block 05"
+  },
+  "accent": "var(--pink)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Schneiden, umwandeln, zusammenfügen: FFmpeg bearbeitet vorhandenes Video und Audio von der Befehlszeile aus. Die eigene Beschreibung nennt dekodieren, encodieren, transcodieren, muxen, streamen, filtern — praktisch jedes Format, das Menschen und Maschinen je erzeugt haben, wird bedient. Es gibt keine Oberfläche, nur den Befehl, und genau das macht es zum Medien-Werkzeug des Agenten: Nimm die erste Minute und mach eine MP4 daraus ist ein Auftrag, der als ein Aufruf endet, geschrieben und ausgeführt vom Agenten. ffprobe gehört dazu und liest Dauer, Auflösung und Tonspuren einer Datei als Text aus — die Grundlage jeder Auswertung. Läuft unter Linux, macOS und Windows; drei Einträge dieses Katalogs verlangen es bereits auf dem Rechner.",
+   "en": "Cut, convert, combine: FFmpeg works on existing video and audio from the command line. Its own description says decode, encode, transcode, mux, stream, filter — pretty much any format humans and machines have ever produced is covered. There is no interface, only the command, and that is precisely what makes it the agent's media tool: take the first minute and turn it into an MP4 is an order that ends as a single call, written and run by the agent. ffprobe ships alongside and reads a file's duration, resolution and audio tracks back as text — the basis for any analysis. Runs on Linux, macOS and Windows; three entries in this catalogue already require it on the machine."
+  },
+  "tip": {
+   "de": "Nicht für den ersten Schnitt von Hand — dafür sind die Programme in Baustein 07 da, mit Oberfläche und Vorschau. FFmpeg lohnt sich, sobald der Agent die Arbeit übernehmen soll oder immer wieder dasselbe passiert: dieselbe Umwandlung, derselbe Schnitt. Der Haken: installiert werden muss es zuerst, die Optionen sind legion, und eine Hand hält dir niemand — der Agent schreibt den Befehl, du liest ihn, bevor er läuft. Wer neues Video erzeugen will statt vorhandenes bearbeiten, ist bei den Video-Modellen in Baustein 06 richtig.",
+   "en": "Not for a first edit done by hand — the programs in block 07 exist for that, with an interface and a preview. FFmpeg pays off once the agent should do the work, or the same thing keeps recurring: the same conversion, the same cut. The catch: it has to be installed first, the options are legion, and no hand holds yours — the agent writes the command, you read it before it runs. To create new video rather than work on existing material, the video models in block 06 are the place."
+  },
+  "links": {
+   "home": "https://ffmpeg.org",
+   "docs": "https://ffmpeg.org/documentation.html",
+   "code": "https://github.com/FFmpeg/FFmpeg"
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source (überwiegend LGPL, einzelne Teile GPL)",
+   "en": "Free, open source (mostly LGPL, some parts GPL)"
+  },
+  "plansChecked": "2026-10-06",
+  "contentChecked": "2026-10-06"
+ },
  "iMovie": {
   "name": {
    "de": "iMovie",

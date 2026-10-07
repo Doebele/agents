@@ -134,7 +134,7 @@ jobs:
 
             ${{ (github.event.inputs.focus || github.event.comment.body || github.event.issue.body) && format('The maintainer asked you to look at this specifically: {0}', (github.event.inputs.focus || github.event.comment.body || github.event.issue.body)) || '' }}
 
-            ${{ github.event.issue.number && format('This reached you through issue #{0}. Do not comment on it yourself — whatever you answer here is posted to that thread for you, under this agent''s own name. So make your closing words the answer: what you did, or why you did not act, and the pull request if you opened one.', github.event.issue.number) || '' }}
+            ${{ github.event.issue.number && format('This reached you through issue #{0}. Do not comment on it yourself — whatever you answer here is posted to that thread for you, under this agent''s own name. So make your closing words the answer: what you did, or why you did not act. The link to the pull request is added for you.', github.event.issue.number) || '' }}
 
             ## Pick exactly one thing
 
@@ -182,26 +182,84 @@ jobs:
 
             ## How to hand it over
 
-            Create a branch named `upkeep-gemini/<short-topic>`, commit the source change, and open a pull request against main with `gh pr create`.
+            Create a branch named `upkeep-gemini/<short-topic>` and commit the
+            source change on it. Leave that branch checked out when you stop.
 
-            Prefix the pull request title with `[Gemini]` so the maintainer
-            can tell the two agents apart at a glance.
+            Do **not** push and do **not** run `gh pr create`. The step after
+            you pushes the branch and opens the pull request under this
+            agent's own name; opened from in here it arrives as an anonymous
+            bot and the build check never runs on it. Instead write two files,
+            and do not commit them:
 
-            The body must contain, for every claim you changed or added, the
-            source URL it rests on. Also say plainly what you did NOT verify.
-            A reviewer who has to guess what you checked cannot review.
+            - `.pr/titel.txt`: one line, the pull request title, starting
+              with `[Gemini]` so the maintainer can tell the agents apart.
+            - `.pr/text.md`: the pull request body. It must contain, for every
+              claim you changed or added, the source URL it rests on. Also say
+              plainly what you did NOT verify. A reviewer who has to guess what
+              you checked cannot review.
 
       # The CLI will not speak under the app's name. A plain run step will —
       # the probe proved that much: its comment arrived as gemini-upkeep[bot]
       # while the model's own, in the same run, stayed github-actions[bot].
-      # Setting GH_TOKEN and GITHUB_TOKEN through GITHUB_ENV changed nothing,
-      # so the reply is posted here instead of inside the agent. It also means
-      # the thread gets an answer even when the model forgets to write one.
+      # Setting GH_TOKEN and GITHUB_TOKEN through GITHUB_ENV changed nothing.
+      #
+      # The pull request suffered the same way, and that one mattered: opened
+      # by github-actions[bot], it starts no further workflow, so the build
+      # check never ran on a Gemini proposal (#131 merged without one). So the
+      # agent only commits, and this step pushes and opens the pull request
+      # under the app's name. It looks for the newest upkeep-gemini/ branch
+      # rather than trusting HEAD, and leaves alone a pull request the agent
+      # opened anyway.
+      - name: Open the pull request under the agent's name
+        id: pr
+        if: steps.gemini.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          ZWEIG=$(git for-each-ref --sort=-committerdate --format='%(refname:short)' \
+                  'refs/heads/upkeep-gemini/' | head -1)
+          if [ -z "$ZWEIG" ]; then
+            echo "No upkeep-gemini/ branch — the agent proposed nothing."
+            exit 0
+          fi
+          git fetch -q origin main
+          if [ "$(git rev-list --count "origin/main..$ZWEIG")" = 0 ]; then
+            echo "$ZWEIG carries no commits beyond main — nothing to open."
+            exit 0
+          fi
+          VORHANDEN=$(gh pr list --head "$ZWEIG" --state open --json url --jq '.[0].url // ""')
+          if [ -n "$VORHANDEN" ]; then
+            echo "The agent opened $VORHANDEN itself; left as it is."
+            echo "url=$VORHANDEN" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git push origin "$ZWEIG:refs/heads/$ZWEIG"
+
+          TITEL=$(head -n1 .pr/titel.txt 2>/dev/null || true)
+          [ -n "$TITEL" ] || TITEL=$(git log -1 --format=%s "$ZWEIG")
+          case "$TITEL" in "[Gemini]"*) ;; *) TITEL="[Gemini] $TITEL" ;; esac
+          if [ ! -s .pr/text.md ]; then
+            mkdir -p .pr
+            { echo "The agent left no description, so here are its commit messages."
+              echo; git log --format='%B' "origin/main..$ZWEIG"; } > .pr/text.md
+          fi
+
+          URL=$(gh pr create --base main --head "$ZWEIG" --title "$TITEL" --body-file .pr/text.md)
+          echo "Opened $URL"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+
       - name: Answer in the thread
         if: github.event.issue.number && steps.gemini.outputs.summary != ''
         env:
           SUMMARY: ${{ steps.gemini.outputs.summary }}
-        run: gh issue comment ${{ github.event.issue.number }} --body "$SUMMARY"
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: |
+          { printf '%s\n' "$SUMMARY"
+            if [ -n "$PR_URL" ]; then printf '\nPull Request: %s\n' "$PR_URL"; fi
+          } > "$RUNNER_TEMP/antwort.md"
+          gh issue comment ${{ github.event.issue.number }} --body-file "$RUNNER_TEMP/antwort.md"
 
       - name: Aufwand erfassen
         if: always()

@@ -34,3 +34,5 @@ metriken/
 
 # Titel und Text des Pull Requests, den ein Agent vorbereitet; nie committen
 .pr/
+# Rueckmeldung der AA-Routine an ihren Workflow; nie committen
+aa-status.txt

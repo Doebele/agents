@@ -12,9 +12,9 @@
 name: Weekly upkeep (Gemini)
 
 on:
-  schedule:
-    # Thursdays 06:20 UTC. Claude runs Mondays.
-    - cron: "20 6 * * 4"
+  # No schedule any more. Since October the daily upkeep takes turns between
+  # Claude, GLM and Kimi (pflege-wechsel.yml); Gemini runs on @gemini or by
+  # hand only.
   workflow_dispatch:
     inputs:
       focus:

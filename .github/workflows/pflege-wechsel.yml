@@ -1,0 +1,68 @@
+# Taegliche Pflege im Wechsel.
+#
+# Bis Oktober hatte jeder Pflegeagent seinen Wochentag: Claude montags, GLM
+# dienstags, Gemini donnerstags, Kimi samstags, und an drei Tagen pflegte
+# niemand. Jetzt pflegt jeden Tag einer, reihum Claude, GLM, Kimi. Gemini
+# pflegt nicht mehr nach Plan und bleibt per @gemini erreichbar.
+#
+# Dieser Ablauf tut selbst nichts am Katalog. Er rechnet aus, wer heute dran
+# ist, und stoesst dessen Pflege an — pflege.yml, pflege-zai.yml oder
+# pflege-kimi.yml, die sich dadurch nicht aendern und weiter auch von Hand
+# laufen. Ein workflow_dispatch darf mit dem eingebauten Token ausgeloest
+# werden; es ist eine der zwei Ausnahmen von der Regel, dass dieses Token
+# keine weiteren Ablaeufe startet.
+#
+# Die Reihe haengt am Kalender, nicht an einem Zaehler: Tage seit dem
+# 12. Oktober 2026 (Claude), geteilt durch drei. Kein Zustand, der verloren
+# gehen kann, und wer wissen will, wer am 3. November dran ist, rechnet es
+# nach. Ein ausgefallener Tag verschiebt nichts.
+name: Taegliche Pflege im Wechsel
+
+on:
+  schedule:
+    # 08:20 Uhr deutscher Zeit. GitHub kennt in Zeitplaenen nur UTC, also zwei
+    # Eintraege, und der Schritt unten laesst den falschen aus: 06:20 UTC im
+    # Sommer, 07:20 UTC im Winter. GitHub startet planmaessige Laeufe bei
+    # Andrang ohnehin oft Stunden spaeter; die Reihenfolge haelt das nicht auf.
+    - cron: "20 6 * * *"
+    - cron: "20 7 * * *"
+  workflow_dispatch:
+    inputs:
+      agent:
+        description: "Nur fuer diesen Lauf: claude, zai oder kimi (leer = wer laut Reihe heute dran ist)"
+        required: false
+        type: string
+
+jobs:
+  anstossen:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Wer ist heute dran
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PLAN: ${{ github.event.schedule }}
+          WAHL: ${{ inputs.agent }}
+        run: |
+          set -euo pipefail
+          VERSATZ=$(TZ=Europe/Berlin date +%z)
+          case "$PLAN" in
+            "20 6 * * *") [ "$VERSATZ" = "+0200" ] || { echo "Winterzeit: der Lauf um 07:20 UTC ist der richtige."; exit 0; } ;;
+            "20 7 * * *") [ "$VERSATZ" = "+0100" ] || { echo "Sommerzeit: der Lauf um 06:20 UTC war der richtige."; exit 0; } ;;
+          esac
+
+          HEUTE=$(TZ=Europe/Berlin date +%F)
+          TAGE=$(( ( $(date -u -d "$HEUTE" +%s) - $(date -u -d 2026-10-12 +%s) ) / 86400 ))
+          REIHE=(claude zai kimi)
+          AGENT=${WAHL:-${REIHE[$(( (TAGE % 3 + 3) % 3 ))]}}
+          case "$AGENT" in
+            claude) ABLAUF=pflege.yml ;;
+            zai)    ABLAUF=pflege-zai.yml ;;
+            kimi)   ABLAUF=pflege-kimi.yml ;;
+            *) echo "Unbekannter Agent '$AGENT', erlaubt sind claude, zai und kimi."; exit 1 ;;
+          esac
+
+          echo "$HEUTE: $AGENT ist dran → $ABLAUF"
+          gh workflow run "$ABLAUF" --repo "$GITHUB_REPOSITORY" --ref "${GITHUB_REF_NAME:-main}"
+          echo "**$HEUTE:** Pflege durch \`$AGENT\` angestossen (\`$ABLAUF\`)." >> "$GITHUB_STEP_SUMMARY"

@@ -488,7 +488,7 @@
    "code": null
   },
   "contentChecked": "2026-09-18",
-  "plansChecked": "2026-09-18"
+  "plansChecked": "2026-10-08"
  },
  "OpenAI Codex": {
   "name": "Codex",
@@ -786,13 +786,14 @@
   "icon": "zedindustries",
   "free": true,
   "plans": {
-   "de": "Editor kostenlos (Personal 0 $) · Pro 10 $/Mo. mit 5 $ Token-Guthaben im Monat, Mehrverbrauch nach Nutzung · Business 30 $/Platz/Mo.",
-   "en": "Editor free (Personal $0) · Pro $10/mo with $5 of token credit a month, more billed by usage · Business $30/seat/mo"
+   "de": "Editor kostenlos (Personal 0 $) · Pro 10 $/Mo. mit 5 $ Token-Guthaben im Monat, Mehrverbrauch zum API-Preis +10 % · Business 30 $/Platz/Mo. ohne Guthaben, rein nach Verbrauch",
+   "en": "Editor free (Personal $0) · Pro $10/mo with $5 of token credit a month, overage billed at API price +10% · Business $30/seat/mo with no credit bundle, pure usage-based"
   },
   "billing": [
-   "abo"
+   "abo",
+   "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-22"
  },
  "Cursor": {
@@ -889,7 +890,7 @@
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-29"
  },
  "Bionic": {
@@ -1057,7 +1058,7 @@
    "de": "Kostenlos, Open Source (MIT), selbst betrieben",
    "en": "Free, open source (MIT), self-hosted"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-10-03"
  },
  "MS Agent Framework": {
@@ -1182,7 +1183,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-10-06"
  },
  "gpt-oss": {
@@ -1506,7 +1507,7 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-22"
  },
  "GPT Image 2": {
@@ -1542,6 +1543,7 @@
   },
   "accent": "var(--sky)",
   "open": false,
+  "free": false,
   "blurb": {
    "de": "Das Modell mit der eigenwilligsten Handschrift: Die Bilder wirken gestalteter als bei den anderen, auch wenn du wenig vorgibst. Der Preis dafür ist weniger Gehorsam — es deutet deine Vorgabe eher, als sie wörtlich zu nehmen.",
    "en": "The model with the strongest handwriting: its images look more designed than the others' even when you give little direction. The price is less obedience — it interprets your prompt rather than taking it literally."
@@ -1562,7 +1564,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-07",
+  "plansChecked": "2026-10-08",
   "plansJahr": {
    "de": "Basic 8 $/Mo. (96 $/Jahr) · Standard 24 $/Mo. (288 $/Jahr) · Pro 48 $/Mo. (576 $/Jahr) · Mega 96 $/Mo. (1.152 $/Jahr) · Stealth ab Pro",
    "en": "Basic $8/mo ($96/yr) · Standard $24/mo ($288/yr) · Pro $48/mo ($576/yr) · Mega $96/mo ($1,152/yr) · Stealth from Pro"
@@ -2180,7 +2182,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-26"
  },
  "FreeFlow": {
@@ -2510,7 +2512,7 @@
    "code": "https://huggingface.co/Qwen"
   },
   "icon": "alibabacloud",
-  "free": true,
+  "free": false,
   "aa": {
    "url": "https://artificialanalysis.ai/models/qwen3-8-max",
    "intel": {
@@ -2536,13 +2538,13 @@
    "checked": "2026-10-06"
   },
   "plans": {
-   "de": "API über Model Studio 2 $/6 $ pro 1M Token (Region Singapur) · 1 Mio. Token gratis, 90 Tage ab Freischaltung · die 2,4T-Variante Qwen3.8-2.4T-A95B gibt es inzwischen auch als offene Gewichte (eigene Qwen-Lizenz)",
-   "en": "API through Model Studio $2/$6 per 1M tokens (Singapore region) · 1M tokens free for 90 days from activation · the 2.4T variant Qwen3.8-2.4T-A95B now also ships as open weights (Qwen's own licence)"
+   "de": "API über Model Studio 2 $/6 $ pro 1M Token (Region Singapur) · zeitlich befristetes Testkontingent von 1 Mio. Token, 90 Tage ab Freischaltung, Modell-Release oder Freigabe (je nachdem, was später liegt) — keine dauerhafte Gratisstufe · die 2,4T-Variante Qwen3.8-2.4T-A95B gibt es inzwischen auch als offene Gewichte (eigene Qwen-Lizenz)",
+   "en": "API through Model Studio $2/$6 per 1M tokens (Singapore region) · a time-limited 1M-token trial quota, 90 days from activation, model release or approval (whichever is later) — not a permanent free tier · the 2.4T variant Qwen3.8-2.4T-A95B now also ships as open weights (Qwen's own licence)"
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-10-06"
  },
  "Kimi K3": {
@@ -4363,7 +4365,7 @@
   "links": {
    "home": "https://vercel.com"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "icon": "vercel",
   "contentChecked": "2026-09-22"
  },
@@ -4418,8 +4420,8 @@
    "en": "The pick when your application needs a database. Free services go to sleep when idle and take a moment on the first request."
   },
   "plans": {
-   "de": "Hobby 0 $ (Web-Dienste schlafen nach 15 Min. ohne Zugriff ein, 750 Instanzstunden/Mo., die Gratis-Postgres läuft nach 30 Tagen ab) · Pro 25 $/Mo. pauschal · Scale 499 $/Mo. pauschal, beide mit unbegrenzt vielen Mitgliedern · Enterprise auf Anfrage · die Rechenleistung je Dienst wird zusätzlich abgerechnet",
-   "en": "Hobby $0 (web services spin down after 15 min without traffic, 750 instance hours/mo, the free Postgres expires after 30 days) · Pro $25/mo flat · Scale $499/mo flat, both with unlimited members · Enterprise on request · compute per service is billed on top"
+   "de": "Hobby 0 $ (Web-Dienste schlafen nach 15 Min. ohne Zugriff ein, 750 Instanzstunden/Mo., die Gratis-Postgres läuft nach 30 Tagen ab) · kleinste Dauerbetrieb-Instanz ab 7 $/Mo. · Pro 25 $/Mo. pauschal · Scale 499 $/Mo. pauschal, beide mit unbegrenzt vielen Mitgliedern · Enterprise auf Anfrage · die Rechenleistung je Dienst wird zusätzlich abgerechnet",
+   "en": "Hobby $0 (web services spin down after 15 min without traffic, 750 instance hours/mo, the free Postgres expires after 30 days) · smallest always-on instance from $7/mo · Pro $25/mo flat · Scale $499/mo flat, both with unlimited members · Enterprise on request · compute per service is billed on top"
   },
   "billing": [
    "abo"
@@ -4427,7 +4429,7 @@
   "links": {
    "home": "https://render.com"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "icon": "render",
   "contentChecked": "2026-09-22"
  },
@@ -4484,8 +4486,8 @@
    "en": "The convenient middle way when open models should run but no hardware is around. Billed per million tokens."
   },
   "plans": {
-   "de": "Serverless nach Token, je 1M Token etwa qwen3.8-flash 0,15 $/0,47 $ · gpt-oss-120B 0,15 $/0,60 $ · GLM-5.2 1,40 $/4,40 $ · Kimi K3 3 $/15 $ · eigene GPUs je Stunde: H100 3,99 $ (Aktionspreis bis 30.9.2026, sonst 5,49 $), B200 8,99 $ · Vorauskasse ab 5 $ Guthaben, keine Testphase",
-   "en": "Serverless billed by token, per 1M tokens roughly qwen3.8-flash $0.15/$0.47 · gpt-oss-120B $0.15/$0.60 · GLM-5.2 $1.40/$4.40 · Kimi K3 $3/$15 · dedicated GPUs by the hour: H100 $3.99 (promotional until 30 Sept 2026, otherwise $5.49), B200 $8.99 · prepaid from $5 of credit, no trial"
+   "de": "Serverless nach Token, je 1M Token etwa qwen3.8-flash 0,15 $/0,47 $ · gpt-oss-120B 0,15 $/0,60 $ · GLM-5.2 1,40 $/4,40 $ · Kimi K3 3 $/15 $ · dedizierte GPUs je Stunde (Dedicated Inference): H100 5,49 $, B200 8,99 $ · als eigener GPU-Cluster günstiger: H100 ab 3,99 $/Std., B200 ab 8,19 $/Std. · Vorauskasse ab 5 $ Guthaben, keine Testphase",
+   "en": "Serverless billed by token, per 1M tokens roughly qwen3.8-flash $0.15/$0.47 · gpt-oss-120B $0.15/$0.60 · GLM-5.2 $1.40/$4.40 · Kimi K3 $3/$15 · dedicated GPUs by the hour (Dedicated Inference): H100 $5.49, B200 $8.99 · cheaper as your own GPU Cluster: H100 from $3.99/hr, B200 from $8.19/hr · prepaid from $5 of credit, no trial"
   },
   "billing": [
    "api"
@@ -4493,7 +4495,7 @@
   "links": {
    "home": "https://www.together.ai"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "Fireworks AI": {
@@ -4567,6 +4569,7 @@
   },
   "accent": "var(--amber)",
   "open": false,
+  "free": false,
   "blurb": {
    "de": "Grafikkarten auf Zeit: Du mietest GPUs stunden- oder sekundenweise und bringst dein eigenes Modell darauf — als dauernde Instanz oder serverlos, nur wenn eine Anfrage kommt. Mehr Kontrolle als eine fertige API, mehr Arbeit als eine fertige API.",
    "en": "Graphics cards on demand: you rent GPUs by the hour or second and put your own model on them — as a standing instance or serverless, only when a request arrives. More control than a finished API, more work than a finished API."
@@ -4576,8 +4579,8 @@
    "en": "The step between “finished API” and “own server”: your own model, but rented hardware. Billed per GPU hour or second."
   },
   "plans": {
-   "de": "Abrechnung je Sekunde, ausgewiesen je GPU-Stunde · zwei Stufen, Community Cloud günstiger als Secure Cloud: RTX 4090 0,34/0,74 $ · A100 80 GB 1,19/1,59 $ · H100 SXM 2,69/3,49 $ · H200 3,59/4,59 $ · B200 5,98/6,79 $ · keine Gratisstufe",
-   "en": "Billed per second, quoted per GPU hour · two tiers, Community Cloud cheaper than Secure Cloud: RTX 4090 $0.34/$0.74 · A100 80 GB $1.19/$1.59 · H100 SXM $2.69/$3.49 · H200 $3.59/$4.59 · B200 $5.98/$6.79 · no free tier"
+   "de": "Abrechnung je Sekunde, ausgewiesen je GPU-Stunde · zwei Stufen für gemietete Pods, Community Cloud günstiger als Secure Cloud: RTX 4090 0,34/0,74 $ · A100 80 GB 1,19/1,59 $ · H100 SXM 2,69/3,49 $ · H200 3,59/4,59 $ · B200 5,98/6,79 $ · daneben Serverless-Worker nach Nutzung, z. B. RTX 4090 1,10 $/Std. · A100 2,72 $/Std. · H100 4,79 $/Std. · keine Gratisstufe",
+   "en": "Billed per second, quoted per GPU hour · two tiers for rented Pods, Community Cloud cheaper than Secure Cloud: RTX 4090 $0.34/$0.74 · A100 80 GB $1.19/$1.59 · H100 SXM $2.69/$3.49 · H200 $3.59/$4.59 · B200 $5.98/$6.79 · plus Serverless workers billed by use, e.g. RTX 4090 $1.10/hr · A100 $2.72/hr · H100 $4.79/hr · no free tier"
   },
   "billing": [
    "api"
@@ -4585,7 +4588,7 @@
   "links": {
    "home": "https://www.runpod.io"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "Lambda": {
@@ -4627,6 +4630,7 @@
   },
   "accent": "var(--amber)",
   "open": false,
+  "free": false,
   "blurb": {
    "de": "Der Marktplatz unter den GPU-Vermietern: Privatleute und Rechenzentren bieten Karten an, du mietest am Marktprice. Am günstigsten von allen — und am wenigsten planbar, denn Leistung und Erreichbarkeit streuen mit dem Anbieter.",
    "en": "The marketplace among GPU renters: individuals and data centres offer cards and you rent at market price. The cheapest of them all — and the least predictable, since performance and availability vary with the seller."
@@ -4645,7 +4649,7 @@
   "links": {
    "home": "https://vast.ai"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "Hetzner": {
@@ -4742,7 +4746,7 @@
   "links": {
    "home": "https://replicate.com"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "OpenRouter": {
@@ -4867,7 +4871,7 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "Distilly": {
@@ -4929,7 +4933,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "OpenPencil": {
@@ -4958,7 +4962,7 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "customer-research": {
@@ -4987,7 +4991,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "cro": {
@@ -5016,7 +5020,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "video": {
@@ -5149,7 +5153,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-25"
  },
  "Glaze": {
@@ -5519,7 +5523,7 @@
    "de": "Kostenlos (MIT) · lokale PGLite oder eigenes Postgres",
    "en": "Free (MIT) · local PGLite or your own Postgres"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-26"
  },
  "BRAIN.md": {
@@ -5616,7 +5620,7 @@
    "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
    "en": "Free (open-weight, MIT), self-hosted"
   },
-  "plansChecked": "2026-09-21",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-10-03"
  },
  "Jev": {
@@ -6147,7 +6151,7 @@
    "home": "https://kie.ai",
    "docs": "https://docs.kie.ai"
   },
-  "plansChecked": "2026-09-20",
+  "plansChecked": "2026-10-08",
   "contentChecked": "2026-09-20"
  },
  "teach": {

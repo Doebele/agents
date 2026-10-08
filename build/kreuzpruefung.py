@@ -344,7 +344,7 @@ def main():
     sub = p.add_subparsers(dest="befehl", required=True)
 
     a = sub.add_parser("auftrag", help="die N ältesten Preisstände als auftrag.json")
-    a.add_argument("--anzahl", type=int, default=20)
+    a.add_argument("--anzahl", type=int, default=30)
     a.add_argument("--out", default="auftrag.json")
     a.set_defaults(func=auftrag)
 

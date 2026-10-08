@@ -7,8 +7,8 @@
 #
 # Also dieselbe Mechanik wie bei den Preisen: eine feste Zahl je Lauf, die am
 # laengsten ungesehenen zuerst, und ein Datum, das die Warteschlange
-# weiterdreht. 25 Steckbriefe, zweimal die Woche, bei 152 im Bestand: jeder
-# Eintrag ist nach drei Wochen einmal angesehen worden.
+# weiterdreht. 30 Steckbriefe, zweimal die Woche, bei 204 im Bestand (Oktober
+# 2026): jeder Eintrag ist nach etwa dreieinhalb Wochen einmal angesehen worden.
 #
 # Ein Agent, nicht zwei. "Gibt es das noch und heisst es noch so" braucht
 # keine Zweitmeinung — anders als eine Zahl, die der Leser einplant.
@@ -24,9 +24,9 @@ on:
   workflow_dispatch:
     inputs:
       anzahl:
-        description: "Wie viele Steckbriefe ansehen (Standard 25)"
+        description: "Wie viele Steckbriefe ansehen (Standard 30)"
         required: false
-        default: "25"
+        default: "30"
         type: string
       zugang:
         description: "api oder abo, nur für diesen Lauf (leer = Repository-Variable CLAUDE_ZUGANG)"
@@ -50,7 +50,7 @@ jobs:
 
       - name: Die am laengsten ungesehenen waehlen
         env:
-          ANZAHL: ${{ github.event.inputs.anzahl || '25' }}
+          ANZAHL: ${{ github.event.inputs.anzahl || '30' }}
         run: |
           set -euo pipefail
           case "$ANZAHL" in

@@ -12,9 +12,8 @@
 name: Weekly upkeep (Z.AI)
 
 on:
-  schedule:
-    # Tuesdays 06:20 UTC.
-    - cron: "20 6 * * 2"
+  # No schedule of its own any more: pflege-wechsel.yml starts this run every
+  # third day, taking turns with Claude and Kimi.
   workflow_dispatch:
     inputs:
       focus:

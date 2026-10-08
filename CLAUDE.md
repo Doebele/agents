@@ -77,14 +77,26 @@ first time.
 Anything you mark as a recommendation is an opinion. The interface says so
 out loud; your text should not pretend otherwise.
 
-## The weekly runs
+## The daily runs
 
-Four upkeep agents share the week — Claude on Mondays (pflege.yml), GLM by way
-of Z.AI on Tuesdays (pflege-zai.yml), Gemini on Thursdays (pflege-gemini.yml),
-Kimi on Saturdays (pflege-kimi.yml). Each picks exactly one topic per run,
-working down the same short list: dead links first, then declared gaps, then
-what is genuinely new. `build/linkcheck.py` writes linkcheck-report.md before
-the Kimi and Z.AI runs — a 403 from a bot-walled site is not a dead link.
+Upkeep runs every day at 08:20 German time, and three agents take turns:
+Claude (pflege.yml), GLM by way of Z.AI (pflege-zai.yml), Kimi
+(pflege-kimi.yml). `.github/workflows/pflege-wechsel.yml` works out whose day
+it is and starts that run; it touches nothing itself. The order hangs on the
+calendar, not on a counter — days since 12 October 2026, which was Claude's,
+divided by three — so a missed day shifts nothing and anyone can work out who
+is due on a given date. GitHub knows only UTC in schedules, so the rotation is
+scheduled twice and skips whichever of 06:20 and 07:20 UTC is not 08:20 in
+Berlin that day.
+
+Until October each agent had a weekday of its own and Gemini was one of them,
+which left three days a week without upkeep. Gemini no longer runs on a
+schedule; it still answers to @gemini and to a manual run.
+
+Each run picks exactly one topic, working down the same short list: dead
+links first, then declared gaps, then what is genuinely new.
+`build/linkcheck.py` writes linkcheck-report.md before the Kimi and Z.AI runs
+— a 403 from a bot-walled site is not a dead link.
 
 Prices are not on that list, and neither is the text of a fact sheet. Both
 rotate on runs of their own, twice a week each; the two sections below say
@@ -96,7 +108,7 @@ Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 
 ## What the runs cost
 
-Six agent runs a week, three harnesses, three providers, and until recently no
+Eleven agent runs a week, three harnesses, three providers, and until recently no
 number you could hold against another. Every run now ends with a step that
 writes what it used into a run artifact: `.github/actions/kosten` calls
 `build/kosten.py lauf`, which digs the figures out of whatever the harness left

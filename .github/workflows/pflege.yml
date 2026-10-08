@@ -13,10 +13,8 @@
 name: Weekly upkeep
 
 on:
-  schedule:
-    # Mondays 06:20 UTC. Off the hour, because everyone schedules on the hour
-    # and the runner queue is shorter a few minutes later.
-    - cron: "20 6 * * 1"
+  # No schedule of its own any more: pflege-wechsel.yml starts this run every
+  # third day, taking turns with GLM and Kimi.
   workflow_dispatch:
     inputs:
       focus:

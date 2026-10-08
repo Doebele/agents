@@ -20,9 +20,8 @@
 name: Weekly upkeep (Kimi)
 
 on:
-  schedule:
-    # Saturdays 06:20 UTC.
-    - cron: "20 6 * * 6"
+  # No schedule of its own any more: pflege-wechsel.yml starts this run every
+  # third day, taking turns with Claude and GLM.
   workflow_dispatch:
     inputs:
       focus:

@@ -139,6 +139,19 @@ the diff that gets reviewed on a phone.
 python3 build/kosten.py bericht metriken/laeufe.csv
 ```
 
+The same Sunday run ends with a weekly report as an issue, labelled
+`wochenbericht`: which workflows ran and how they ended, with a log link for
+every failure, which pull requests were opened and merged and which still
+wait, and the week's rows from the cost table. GitHub mails it to the
+maintainer through the ordinary notifications; last week's report is closed
+when the new one opens. `build/wochenbericht.py` writes it, and every `@` in it
+is broken with a zero-width space so that no title quoted from a run calls an
+agent.
+
+```bash
+python3 build/wochenbericht.py --selbsttest
+```
+
 The billing half needs `ANTHROPIC_ADMIN_KEY` in the repository secrets, an
 admin key, not the ordinary one. Without it that step says so and the run
 carries on with the estimates.

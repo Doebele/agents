@@ -25,6 +25,11 @@ on:
         required: false
         default: "8"
         type: string
+      issue:
+        description: "Den Wochenbericht auch als Issue anlegen (sonntags geschieht das immer)"
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   sammeln:
@@ -32,6 +37,9 @@ jobs:
     permissions:
       contents: write
       actions: read
+      # Fuer den Wochenbericht: Pull Requests lesen, ein Issue anlegen.
+      pull-requests: read
+      issues: write
     steps:
       - uses: actions/checkout@v5
 
@@ -42,6 +50,7 @@ jobs:
           set -euo pipefail
           # Das Skript ueberlebt den Zweigwechsel nicht, also vorher zur Seite.
           cp build/kosten.py /tmp/kosten.py
+          cp build/wochenbericht.py /tmp/wochenbericht.py
 
           git config user.name  "Kostenerfassung"
           git config user.email "kosten@users.noreply.github.com"
@@ -97,3 +106,27 @@ jobs:
             sleep $((2 ** versuch))
             git fetch origin metriken && git rebase origin/metriken || true
           done
+
+      # Der Bericht der Woche als Issue. GitHub schickt dazu eine Mail, wenn
+      # die Benachrichtigungen fuer das Repository an sind — ein eigener
+      # Mailzugang mit Passwort im Repository waere eine Sache mehr, die
+      # auslaufen oder durchsickern kann. Der Bericht der Vorwoche wird dabei
+      # geschlossen, damit nur der aktuelle offen steht. Auch wenn ein Schritt
+      # davor gescheitert ist: dann steht das im Bericht.
+      - name: Wochenbericht als Issue
+        if: always() && (github.event_name == 'schedule' || inputs.issue)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 /tmp/wochenbericht.py --kosten metriken/laeufe.csv --out /tmp/bericht.md > /dev/null
+          cat /tmp/bericht.md >> "$GITHUB_STEP_SUMMARY"
+          gh label create wochenbericht --repo "$GITHUB_REPOSITORY" --color 0e8a16 \
+            --description "Automatischer Bericht der Woche" --force > /dev/null
+          for alt in $(gh issue list --repo "$GITHUB_REPOSITORY" --label wochenbericht \
+                         --state open --json number --jq '.[].number'); do
+            gh issue close "$alt" --repo "$GITHUB_REPOSITORY" --reason completed > /dev/null
+          done
+          gh issue create --repo "$GITHUB_REPOSITORY" --label wochenbericht \
+            --title "Wochenbericht KW $(date -u +%V)/$(date -u +%G)" --body-file /tmp/bericht.md

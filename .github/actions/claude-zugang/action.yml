@@ -42,7 +42,7 @@ inputs:
   modell:
     description: "Das Modell, das der Lauf danach benutzt; nach ihm wird gefragt"
     required: false
-    default: "claude-opus-5"
+    default: "claude-sonnet-5-5"
 
 outputs:
   zugang:

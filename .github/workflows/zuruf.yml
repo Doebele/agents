@@ -77,7 +77,7 @@ jobs:
           variable: ${{ vars.CLAUDE_ZUGANG }}
           api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          modell: claude-opus-5
+          modell: claude-sonnet-5-5
 
       - id: claude
         uses: anthropics/claude-code-action@v1
@@ -97,6 +97,7 @@ jobs:
           # 300 ms — the account had run out of credit in between. The probe
           # step above exists so that never costs an evening again.
           claude_args: |
+            --model claude-sonnet-5-5
             --max-turns 150
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*)"
           # With a prompt of its own the action runs in agent mode, and agent

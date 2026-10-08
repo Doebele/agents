@@ -2,7 +2,7 @@ Du entscheidest die Kreuzprüfung der Preise. Lies zuerst CLAUDE.md —
 seine Regeln binden dich, besonders: nie eine Angabe oder einen Link
 erfinden, site/ nicht von Hand bearbeiten, nie auf main pushen.
 
-vergleich.md stellt zwei unabhängige Befunde gegenüber, die Gemini
+vergleich.md stellt zwei unabhängige Befunde gegenüber, die Kimi
 und GLM zu denselben Steckbriefen abgelesen haben, dazu den Stand
 des Katalogs. build/kreuzpruefung.py hat den Vergleich gerechnet,
 nicht ein Modell: was dort als einig steht, ist in Betrag, Währung,
@@ -70,7 +70,7 @@ In den PR-Text gehören:
 4. Je Steckbrief eine Bilanzzeile in genau dieser Form, damit sich
    später auszählen lässt, welcher Agent wie zuverlässig liest:
 
-   BILANZ <JJJJ-MM-TT> <Steckbrief> gemini=<richtig|daneben|nichts> zai=<richtig|daneben|nichts> entscheider={ENTSCHEIDER}
+   BILANZ <JJJJ-MM-TT> <Steckbrief> kimi=<richtig|daneben|nichts> zai=<richtig|daneben|nichts> entscheider={ENTSCHEIDER}
 
    `richtig` heißt: der Befund deckte sich mit dem, was du auf der
    Seite gelesen hast. `daneben`: er wich davon ab. `nichts`: dieser

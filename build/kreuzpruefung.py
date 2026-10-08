@@ -7,7 +7,7 @@ sie zu Gesicht bekommt — dieselbe Arbeitsteilung wie bei linkcheck.py: die
 mechanische Haelfte deterministisch, damit das Urteil sich auf das Strittige
 konzentriert und der Vergleich selbst nachlesbar bleibt.
 
-    python3 build/kreuzpruefung.py auftrag --anzahl 20
+    python3 build/kreuzpruefung.py auftrag --anzahl 30
     python3 build/kreuzpruefung.py vergleich befund-kimi.json befund-zai.json
 
 Beide Unterbefehle schreiben Exit 0, solange sie nicht abstuerzen. Ein fehlender

@@ -5,7 +5,7 @@ Das Gegenstueck zur Preisrotation, nur fuer den Text: stimmt noch, was der
 Eintrag behauptet? Gibt es das Produkt ueberhaupt noch, heisst es noch so,
 steht es im richtigen Baustein?
 
-    python3 build/inhalt.py auftrag --anzahl 25
+    python3 build/inhalt.py auftrag --anzahl 30
 
 "Zuletzt angesehen" ist das spaetere von zwei Daten:
 
@@ -69,7 +69,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = p.add_subparsers(dest="befehl", required=True)
     a = sub.add_parser("auftrag", help="die am längsten ungesehenen Steckbriefe")
-    a.add_argument("--anzahl", type=int, default=25)
+    a.add_argument("--anzahl", type=int, default=30)
     a.add_argument("--out", default="auftrag-inhalt.json")
     a.set_defaults(func=auftrag)
     args = p.parse_args()

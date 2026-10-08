@@ -229,15 +229,16 @@ nobody checks it, and the mistake it makes is exactly the mistake a reader
 plans around. So prices no longer travel with the weekly list. They have a run
 of their own, `.github/workflows/kreuzpruefung.yml`, Mondays and Thursdays.
 
-Twenty-five fact sheets per run, oldest `plansChecked` first, picked by a
+Thirty fact sheets per run, oldest `plansChecked` first, picked by a
 script so that both researchers get the same list:
 
 ```bash
-python3 build/kreuzpruefung.py auftrag --anzahl 25
+python3 build/kreuzpruefung.py auftrag --anzahl 30
 ```
 
-Fifty a week against the 85 fact sheets that carry a price: every price is
-read again inside a fortnight. The number is not the interesting part, the
+Sixty a week against the 129 fact sheets that carry a price (October 2026;
+85 when this was first written, at 25 a run): every price is read again in a
+little over two weeks. The number is not the interesting part, the
 cycle is — pick it from the size of the stock, not from a feeling, and check
 it again when the catalogue has grown.
 
@@ -310,10 +311,10 @@ Set `plansChecked` on every entry that was actually read, including the many
 where nothing had moved. Leaving their date old sends the next run straight
 back to the same page.
 
-Twenty-five in one pull request is more than the ten a single agent may take
+Thirty in one pull request is more than the ten a single agent may take
 elsewhere, and that is deliberate: every value in it was read twice, and the
-comparison table makes the review scannable in a way twenty-five prose diffs
-are not.
+comparison table makes the review scannable in a way thirty prose diffs are
+not.
 
 The pull request carries one more line per fact sheet:
 
@@ -393,15 +394,16 @@ entry describes a version that no longer exists — and the link still answers
 200, so `linkcheck.py` sees nothing either.
 
 So the text rotates like the prices. `.github/workflows/inhalt.yml`, Tuesdays
-and Saturdays, 25 fact sheets per run, the longest-unseen first:
+and Saturdays, 30 fact sheets per run, the longest-unseen first:
 
 ```bash
-python3 build/inhalt.py auftrag --anzahl 25
+python3 build/inhalt.py auftrag --anzahl 30
 ```
 
-Fifty a week against 152 fact sheets: every entry is looked at inside three
-weeks. Same number per run as the price rotation, longer cycle, because
-everything has a text and only 85 entries have a price.
+Sixty a week against 204 fact sheets (October 2026): every entry is looked
+at in about three and a half weeks. Same number per run as the price
+rotation, longer cycle, because everything has a text and only 129 entries
+have a price.
 
 One agent does it, not two. "Does this still exist and is it still called
 that" needs no second opinion — unlike a number the reader plans around.

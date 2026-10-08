@@ -7,7 +7,7 @@ sie zu Gesicht bekommt — dieselbe Arbeitsteilung wie bei linkcheck.py: die
 mechanische Haelfte deterministisch, damit das Urteil sich auf das Strittige
 konzentriert und der Vergleich selbst nachlesbar bleibt.
 
-    python3 build/kreuzpruefung.py auftrag --anzahl 20
+    python3 build/kreuzpruefung.py auftrag --anzahl 30
     python3 build/kreuzpruefung.py vergleich befund-gemini.json befund-zai.json
 
 Beide Unterbefehle schreiben Exit 0, solange sie nicht abstuerzen. Ein fehlender
@@ -344,7 +344,7 @@ def main():
     sub = p.add_subparsers(dest="befehl", required=True)
 
     a = sub.add_parser("auftrag", help="die N ältesten Preisstände als auftrag.json")
-    a.add_argument("--anzahl", type=int, default=20)
+    a.add_argument("--anzahl", type=int, default=30)
     a.add_argument("--out", default="auftrag.json")
     a.set_defaults(func=auftrag)
 

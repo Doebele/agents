@@ -5,13 +5,13 @@
 # eine Anbieterseite liest, ist an genau dieser Stelle die duennste Stelle im
 # Ablauf — niemand prueft ihn nach.
 #
-# Also lesen zwei. Gemini und GLM bekommen dieselbe Liste, arbeiten unabhaengig
+# Also lesen zwei. Kimi und GLM bekommen dieselbe Liste, arbeiten unabhaengig
 # voneinander und schreiben ihren Befund in ein festes Schema. Ein Skript stellt
 # die beiden gegenueber, bevor ein Modell sie zu Gesicht bekommt. Claude
 # entscheidet nur noch, was strittig ist, und oeffnet den Pull Request.
 #
-# Montags und donnerstags, eine Stunde vor den Einzellaeufen. Seit es diesen
-# Lauf gibt, nehmen die vier Pflegelaeufe die Preise nicht mehr selbst — sonst
+# Montags und donnerstags. Seit es diesen
+# Lauf gibt, nehmen die Pflegelaeufe die Preise nicht mehr selbst — sonst
 # pruefen zwei Agenten am selben Morgen dieselbe Seite.
 #
 # Wie alles hier: nur Pull Requests, kein Push auf main.
@@ -28,10 +28,6 @@ on:
         description: "Wie viele Steckbriefe prüfen (Standard 25)"
         required: false
         default: "25"
-        type: string
-      entscheider:
-        description: "claude oder kimi, nur für diesen Lauf (leer = Repository-Variable)"
-        required: false
         type: string
       zugang:
         description: "api oder abo, nur für diesen Lauf (leer = Repository-Variable CLAUDE_ZUGANG)"
@@ -69,8 +65,12 @@ jobs:
           name: auftrag
           path: auftrag.json
 
-  # ------------------------------------------------------------------ Gemini
-  gemini:
+  # ------------------------------------------------------------------ Kimi
+  # Seit Oktober liest Kimi statt Gemini, ueber das Kimi-Code-Abo statt ueber
+  # einen Gemini-API-Schluessel. Gleiche CLI wie der Z.AI-Rechercheur unten,
+  # nur mit dem eigenen Anbieter dahinter: zwei verschiedene Modelle lesen
+  # dieselbe Seite, darauf kommt es an, nicht auf zwei verschiedene Programme.
+  kimi:
     needs: auftrag
     runs-on: ubuntu-latest
     # Liest und schreibt eine Datei, sonst nichts. Kein Schreibrecht, kein
@@ -83,116 +83,95 @@ jobs:
         with:
           name: auftrag
 
+      - name: Kimi Code CLI installieren
+        run: |
+          curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
+          echo "$HOME/.kimi-code/bin" >> "$GITHUB_PATH"
+          test -x "$HOME/.kimi-code/bin/kimi" || {
+            echo "kimi binary nicht am erwarteten Ort; Ausgabe des Installers oben"; exit 1; }
+
+      # Ein Abo-Schluessel antwortet nur auf einer der beiden Coding-Adressen
+      # der Mitgliedschaft; welche, sagt die Sondierung. Ein Schluessel der
+      # Entwicklerplattform (moonshot.cn) wird bewusst nicht mehr probiert:
+      # dessen leeres Guthaben hat Kimi von August bis September stillgelegt.
+      - name: Zugang und Modell in die config.toml
+        env:
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          KIMI_MODEL: ${{ vars.KIMI_MODEL }}
+        run: |
+          set -euo pipefail
+          test -n "$KIMI_API_KEY" || { echo "KIMI_API_KEY ist nicht gesetzt"; exit 1; }
+          BASE=""
+          for url in https://api.kimi.ai/coding/v1 https://api.kimi.com/coding/v1; do
+            code=$(curl -sS -o /tmp/models.json -w '%{http_code}' \
+                   -H "Authorization: Bearer $KIMI_API_KEY" "$url/models" || echo 000)
+            echo "  GET $url/models -> HTTP $code"
+            if [ "$code" = "200" ]; then BASE="$url"; break; fi
+            head -c 200 /tmp/models.json; echo
+          done
+          test -n "$BASE" || { echo "Keine Coding-Adresse nimmt den Schlüssel. Stammt er aus kimi.ai/code?"; exit 1; }
+          MODEL=$(python3 -c '
+          import json, os, sys
+          ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
+          print("Verfuegbar:", ", ".join(ids), file=sys.stderr)
+          want = os.environ.get("KIMI_MODEL") or ""
+          if want and want not in ids:
+              sys.exit(f"KIMI_MODEL={want} steht nicht in der Liste")
+          print(want or ("k3" if "k3" in ids else ids[0]))
+          ')
+          echo "Adresse: $BASE · Modell: $MODEL"
+          mkdir -p "$HOME/.kimi-code"
+          cat > "$HOME/.kimi-code/config.toml" <<TOML
+          default_model = "kreuzpruefung"
+          default_permission_mode = "auto"
+          telemetry = false
+
+          [providers.kimi]
+          type = "kimi"
+          base_url = "$BASE"
+          api_key = "$KIMI_API_KEY"
+
+          [models.kreuzpruefung]
+          provider = "kimi"
+          model = "$MODEL"
+          max_context_size = 262144
+          TOML
+          chmod 600 "$HOME/.kimi-code/config.toml"
+          kimi --version
+
+      # Die Kimi-CLI gibt ihren Verbrauch nicht heraus, also bleibt die Laufzeit.
+      - name: Startzeit merken
+        run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
+
       # Die Grenze sitzt am Schritt, nicht am Job: "Befund sichern" und das
       # Hochladen laufen danach trotzdem, und was bis dahin in der Datei steht,
       # geht an die Entscheidung. Ohne Grenze wartet die bis zu sechs Stunden
-      # auf einen haengenden Lauf. Der langsamste bisher brauchte 32 Minuten.
+      # auf einen haengenden Lauf.
       - name: Preise lesen
         timeout-minutes: 45
-        uses: google-github-actions/run-gemini-cli@v0.1.22
-        env:
-          # Ein Checkout ist kein Ordner, dem jemand vertraut hat, und die CLI
-          # verweigert dann den Dienst. Interaktiv laesst sich das auf einem
-          # Runner nicht bestaetigen; die Variable ist der dokumentierte Weg.
-          GEMINI_CLI_TRUST_WORKSPACE: "true"
-        with:
-          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
-          workflow_name: kreuzpruefung
-          # Die Action reicht keine Verbrauchszahlen nach draussen. Die CLI
-          # schreibt sie lokal weg, wenn man ihr ein Ziel nennt.
-          settings: |-
-            {
-              "model": { "maxSessionTurns": 150 },
-              "telemetry": {
-                "enabled": true,
-                "target": "local",
-                "otlpEndpoint": "",
-                "outfile": "/tmp/gemini-telemetrie.log"
-              }
-            }
-          prompt: |
-            Du prüfst Preise für einen Katalog. Du änderst nichts, committest
-            nichts und öffnest nichts. Dein Ergebnis ist eine einzige Datei:
-            befund-gemini.json im Wurzelverzeichnis.
-
-            auftrag.json listet Steckbriefe mit Name, Anbieter und Startadresse.
-            Arbeite sie der Reihe nach ab. Für jeden Eintrag:
-
-            1. Von der Startadresse aus zur Preisseite des Anbieters selbst.
-               Nicht eine Vergleichsseite, nicht eine Pressemitteilung, nicht
-               dein Gedächtnis.
-            2. Ablesen, was dort steht.
-            3. In befund-gemini.json schreiben.
-
-            Sieh **nicht** in content/steckbrief.json nach. Was dort steht, ist
-            der Stand, den du prüfen sollst; wer ihn vorher liest, bestätigt ihn.
-
-            Genau dieses Schema, genau diese Feldnamen:
-
-            {
-              "agent": "gemini",
-              "stand": "JJJJ-MM-TT",
-              "eintraege": {
-                "<Name aus auftrag.json>": {
-                  "erhaeltlich": true,
-                  "gratis": false,
-                  "billing": ["abo"],
-                  "preise": [
-                    {"was": "Pro", "betrag": "20", "waehrung": "USD", "einheit": "Monat"}
-                  ],
-                  "quelle": "https://…",
-                  "notiz": ""
-                }
-              }
-            }
-
-            - `betrag` ohne Währungszeichen und ohne Einheit, nur die Zahl.
-            - `waehrung` als Code: USD, EUR, GBP.
-            - `einheit` das, worauf sich der Betrag bezieht: "Monat", "Jahr",
-              "1M Tokens", "Nutzer/Monat", "Stunde", "einmalig".
-            - `billing`: "abo", wenn ein Abonnement ein Kontingent kauft;
-              "api", wenn je Nutzung abgerechnet wird; beides, wenn der Anbieter
-              beides verkauft. Ein Coding-Abo, das als Schlüssel in fremde
-              Werkzeuge wandert, ist trotzdem "abo".
-            - `gratis`: gibt es eine dauerhaft kostenlose Stufe? Ein Startguthaben
-              ist keine.
-            - `erhaeltlich`: false, wenn das Produkt eingestellt wurde, in einem
-              anderen aufgegangen ist oder keine Neukunden mehr annimmt.
-            - `notiz`: ein Satz, wenn etwas nicht ins Schema passt. Sonst leer.
-
-            Was du nicht auf der Seite liest, schreibst du nicht auf. Lässt sich
-            ein Feld nicht belegen, lass es weg. Findest du die Preisseite nicht
-            in höchstens drei Abrufen, schreib den Eintrag mit `notiz` und ohne
-            `preise` und geh zum nächsten.
-
-            Schreib die Datei nach jedem Eintrag neu, nicht erst am Ende. Bricht
-            der Lauf vorzeitig ab, ist der Teil bis dahin trotzdem verwertbar.
-
-            Ein zweiter Agent prüft dieselbe Liste unabhängig von dir, ein dritter
-            vergleicht beides und schlägt strittige Stellen selbst nach. Rate
-            also nicht, um vollständig auszusehen: eine Lücke ist ehrlich, ein
-            geratener Preis ist Schaden.
+        run: |
+          kimi -p "$(sed 's/{AGENT}/kimi/g' build/kreuzpruefung-recherche.md)"
 
       - name: Befund sichern
         if: always()
         run: |
-          test -f befund-gemini.json \
-            && echo "befund-gemini.json: $(wc -c < befund-gemini.json) Bytes" \
+          test -f befund-kimi.json \
+            && echo "befund-kimi.json: $(wc -c < befund-kimi.json) Bytes" \
             || echo "kein Befund abgeliefert"
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: befund-gemini
-          path: befund-gemini.json
+          name: befund-kimi
+          path: befund-kimi.json
           if-no-files-found: warn
 
       - name: Aufwand erfassen
         if: always()
         uses: ./.github/actions/kosten
         with:
-          agent: gemini
-          telemetrie: /tmp/gemini-telemetrie.log
+          agent: kimi
+          start: ${{ env.KOSTEN_START }}
 
   # ------------------------------------------------------------------ Z.AI
   # Gleicher Aufbau wie pflege-zai.yml: GLM kommt ueber die Kimi-CLI herein,
@@ -262,74 +241,14 @@ jobs:
       - name: Startzeit merken
         run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
 
-      # Grenze wie bei Gemini, aus demselben Grund.
+      # Grenze wie bei Kimi, aus demselben Grund. Der Auftrag ist fuer beide
+      # derselbe und liegt in einer Datei: zwei Abschriften liefen beim
+      # ersten Nachbessern auseinander, und dann laesen die beiden nach
+      # verschiedenen Regeln, ohne dass es auffaellt.
       - name: Preise lesen
         timeout-minutes: 45
         run: |
-          kimi -p "$(cat <<'PROMPT'
-          Du prüfst Preise für einen Katalog. Du änderst nichts, committest
-          nichts und öffnest nichts. Dein Ergebnis ist eine einzige Datei:
-          befund-zai.json im Wurzelverzeichnis.
-
-          auftrag.json listet Steckbriefe mit Name, Anbieter und Startadresse.
-          Arbeite sie der Reihe nach ab. Für jeden Eintrag:
-
-          1. Von der Startadresse aus zur Preisseite des Anbieters selbst.
-             Nicht eine Vergleichsseite, nicht eine Pressemitteilung, nicht
-             dein Gedächtnis.
-          2. Ablesen, was dort steht.
-          3. In befund-zai.json schreiben.
-
-          Sieh NICHT in content/steckbrief.json nach. Was dort steht, ist der
-          Stand, den du prüfen sollst; wer ihn vorher liest, bestätigt ihn.
-
-          Genau dieses Schema, genau diese Feldnamen:
-
-          {
-            "agent": "zai",
-            "stand": "JJJJ-MM-TT",
-            "eintraege": {
-              "<Name aus auftrag.json>": {
-                "erhaeltlich": true,
-                "gratis": false,
-                "billing": ["abo"],
-                "preise": [
-                  {"was": "Pro", "betrag": "20", "waehrung": "USD", "einheit": "Monat"}
-                ],
-                "quelle": "https://…",
-                "notiz": ""
-              }
-            }
-          }
-
-          - betrag ohne Währungszeichen und ohne Einheit, nur die Zahl.
-          - waehrung als Code: USD, EUR, GBP.
-          - einheit das, worauf sich der Betrag bezieht: "Monat", "Jahr",
-            "1M Tokens", "Nutzer/Monat", "Stunde", "einmalig".
-          - billing: "abo", wenn ein Abonnement ein Kontingent kauft; "api",
-            wenn je Nutzung abgerechnet wird; beides, wenn der Anbieter beides
-            verkauft. Ein Coding-Abo, das als Schlüssel in fremde Werkzeuge
-            wandert, ist trotzdem "abo".
-          - gratis: gibt es eine dauerhaft kostenlose Stufe? Ein Startguthaben
-            ist keine.
-          - erhaeltlich: false, wenn das Produkt eingestellt wurde, in einem
-            anderen aufgegangen ist oder keine Neukunden mehr annimmt.
-          - notiz: ein Satz, wenn etwas nicht ins Schema passt. Sonst leer.
-
-          Was du nicht auf der Seite liest, schreibst du nicht auf. Lässt sich
-          ein Feld nicht belegen, lass es weg. Findest du die Preisseite nicht
-          in höchstens drei Abrufen, schreib den Eintrag mit notiz und ohne
-          preise und geh zum nächsten.
-
-          Schreib die Datei nach jedem Eintrag neu, nicht erst am Ende. Bricht
-          der Lauf vorzeitig ab, ist der Teil bis dahin trotzdem verwertbar.
-
-          Ein zweiter Agent prüft dieselbe Liste unabhängig von dir, ein dritter
-          vergleicht beides und schlägt strittige Stellen selbst nach. Rate also
-          nicht, um vollständig auszusehen: eine Lücke ist ehrlich, ein
-          geratener Preis ist Schaden.
-          PROMPT
-          )"
+          kimi -p "$(sed 's/{AGENT}/zai/g' build/kreuzpruefung-recherche.md)"
 
       - name: Befund sichern
         if: always()
@@ -354,7 +273,7 @@ jobs:
 
   # ------------------------------------------------------------------ Urteil
   entscheidung:
-    needs: [auftrag, gemini, zai]
+    needs: [auftrag, kimi, zai]
     # Auch wenn einer der beiden Rechercheure gescheitert ist. Ein einzelner
     # Befund gilt dann als ungeprueft — der Entscheider schlaegt ihn selbst
     # nach. Das ist immer noch besser als ein Lauf, der nichts liefert.
@@ -365,24 +284,11 @@ jobs:
       pull-requests: write
       issues: write
       id-token: write
-    # Wer entscheidet, ist eine Repository-Variable und keine Codeaenderung:
-    #
-    #   gh variable set KREUZPRUEFUNG_ENTSCHEIDER --body kimi --repo Doebele/agents
-    #
-    # claude oder kimi, ohne Variable claude. Beide lesen denselben Auftrag aus
-    # build/kreuzpruefung-entscheidung.md. Er lag frueher hier im Ablauf; zwei
-    # Abschriften waeren beim ersten Nachbessern auseinandergelaufen, und dann
-    # entschieden die beiden nach verschiedenen Regeln, ohne dass es auffaellt.
-    #
-    # Kimi ist keiner der beiden Rechercheure, die Unabhaengigkeit bleibt also
-    # gewahrt. Es laeuft ueber das Kimi-Code-Abo statt ueber eine Token-Rechnung.
+    # Claude entscheidet. Bis Oktober konnte es auch Kimi, ueber die Variable
+    # KREUZPRUEFUNG_ENTSCHEIDER; seit Kimi selbst Preise liest, waere es dann
+    # Richter in eigener Sache. Die Variable wird nicht mehr gelesen.
     env:
-      # Reihenfolge: Eingabe eines manuellen Laufs, dann die Variable, dann
-      # claude. So laesst sich Kimi einmal ausprobieren oder derselbe
-      # Vergleich von beiden entscheiden, ohne die Voreinstellung fuer die
-      # planmaessigen Laeufe anzufassen.
-      ENTSCHEIDER: ${{ inputs.entscheider || vars.KREUZPRUEFUNG_ENTSCHEIDER || 'claude' }}
-      APP_ID: ${{ secrets.KIMI_APP_ID }}
+      ENTSCHEIDER: claude
     steps:
       - uses: actions/checkout@v5
 
@@ -395,28 +301,26 @@ jobs:
       - uses: actions/download-artifact@v4
         continue-on-error: true
         with:
-          name: befund-gemini
+          name: befund-kimi
       - uses: actions/download-artifact@v4
         continue-on-error: true
         with:
           name: befund-zai
 
-      # Ein Tippfehler in der Variable soll laut scheitern, nicht still auf
-      # einen Entscheider zurueckfallen, den niemand gewaehlt hat.
-      - name: Entscheider pruefen
+      # Wer die alte Variable noch auf kimi stehen hat, soll erfahren, dass
+      # sie nichts mehr bewirkt, statt sich ueber Claudes Urteil zu wundern.
+      - name: Alte Entscheider-Variable
+        if: vars.KREUZPRUEFUNG_ENTSCHEIDER != '' && vars.KREUZPRUEFUNG_ENTSCHEIDER != 'claude'
         run: |
-          case "$ENTSCHEIDER" in
-            claude|kimi) echo "Entscheider: $ENTSCHEIDER" ;;
-            *) echo "KREUZPRUEFUNG_ENTSCHEIDER ist '$ENTSCHEIDER', erlaubt sind claude und kimi."; exit 1 ;;
-          esac
+          echo "::warning::KREUZPRUEFUNG_ENTSCHEIDER steht auf '${{ vars.KREUZPRUEFUNG_ENTSCHEIDER }}' und wird nicht mehr gelesen. Kimi liest jetzt selbst Preise; es entscheidet Claude. Die Variable kann geloescht werden."
 
       - name: Befunde gegenueberstellen
         run: |
-          python3 build/kreuzpruefung.py vergleich befund-gemini.json befund-zai.json
+          python3 build/kreuzpruefung.py vergleich befund-kimi.json befund-zai.json
           { echo "## Vergleich"; echo; sed -n '1,40p' vergleich.md; } >> "$GITHUB_STEP_SUMMARY"
 
-      # Der Auftrag, fuer beide Entscheider derselbe, mit dem eigenen Namen
-      # fuer Zweig, Titel und Bilanzzeilen.
+      # Der Auftrag liegt in einer eigenen Datei, mit dem Namen des
+      # Entscheiders fuer Zweig, Titel und Bilanzzeilen.
       - name: Auftrag einlesen
         id: auftrag
         run: |
@@ -429,7 +333,6 @@ jobs:
       # Wer zahlt: API-Guthaben oder Abo. Siehe .github/actions/claude-zugang.
       - name: Wer zahlt, und geht es (Claude)
         id: zugang
-        if: env.ENTSCHEIDER == 'claude'
         uses: ./.github/actions/claude-zugang
         with:
           wahl: ${{ inputs.zugang }}
@@ -440,7 +343,6 @@ jobs:
 
       - name: Entscheiden und vorschlagen (Claude)
         id: claude
-        if: env.ENTSCHEIDER == 'claude'
         uses: anthropics/claude-code-action@v1
         with:
           # Genau einer von beiden, der andere bleibt leer: Sind beide
@@ -453,105 +355,9 @@ jobs:
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*)"
           prompt: ${{ steps.auftrag.outputs.text }}
 
-      # --- Kimi als Entscheider -------------------------------------------
-      #
-      # ponytail: Installation und Zugang stehen hier ein zweites Mal, fast
-      # wortgleich wie in pflege-kimi.yml und im Z.AI-Rechercheur oben. Bei
-      # einem dritten Verbraucher gehoeren sie in eine gemeinsame Action unter
-      # .github/actions/, wie es die Kosten-Action vormacht.
-
-      # Ohne eigene App oeffnet Kimi den Pull Request als github-actions[bot],
-      # und ein solcher Pull Request startet keine weiteren Ablaeufe: Die
-      # Baupruefung liefe auf Kimis Vorschlag nicht. Mit KIMI_APP_ID schon.
-      - name: Eine eigene Kennung
-        id: app
-        if: env.ENTSCHEIDER == 'kimi' && env.APP_ID != ''
-        uses: actions/create-github-app-token@v3.2.0
-        with:
-          app-id: ${{ env.APP_ID }}
-          private-key: ${{ secrets.KIMI_APP_KEY }}
-
-      - name: Kimi Code CLI installieren
-        if: env.ENTSCHEIDER == 'kimi'
-        run: |
-          curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
-          echo "$HOME/.kimi-code/bin" >> "$GITHUB_PATH"
-          test -x "$HOME/.kimi-code/bin/kimi" || {
-            echo "kimi binary nicht am erwarteten Ort; Ausgabe des Installers oben"; exit 1; }
-
-      # Der Entscheider haengt am Kimi-Code-Abo, nicht an der
-      # Entwicklerplattform. Ein Abo-Schluessel antwortet nur auf einer der
-      # beiden Coding-Adressen; welche, sagt die Sondierung.
-      - name: Zugang und Modell (Kimi)
-        if: env.ENTSCHEIDER == 'kimi'
-        env:
-          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
-          KIMI_MODEL: ${{ vars.KIMI_MODEL }}
-        run: |
-          set -euo pipefail
-          test -n "$KIMI_API_KEY" || { echo "KIMI_API_KEY ist nicht gesetzt"; exit 1; }
-          BASE=""
-          for url in https://api.kimi.ai/coding/v1 https://api.kimi.com/coding/v1; do
-            code=$(curl -sS -o /tmp/models.json -w '%{http_code}' \
-                   -H "Authorization: Bearer $KIMI_API_KEY" "$url/models" || echo 000)
-            echo "  GET $url/models -> HTTP $code"
-            if [ "$code" = "200" ]; then BASE="$url"; break; fi
-            head -c 200 /tmp/models.json; echo
-          done
-          test -n "$BASE" || { echo "Keine Coding-Adresse nimmt den Schlüssel. Stammt er aus kimi.ai/code?"; exit 1; }
-          MODEL=$(python3 -c '
-          import json, os, sys
-          ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
-          print("Verfuegbar:", ", ".join(ids), file=sys.stderr)
-          want = os.environ.get("KIMI_MODEL") or ""
-          if want and want not in ids:
-              sys.exit(f"KIMI_MODEL={want} steht nicht in der Liste")
-          print(want or ("k3" if "k3" in ids else ids[0]))
-          ')
-          echo "Adresse: $BASE · Modell: $MODEL"
-          mkdir -p "$HOME/.kimi-code"
-          cat > "$HOME/.kimi-code/config.toml" <<TOML
-          default_model = "entscheidung"
-          default_permission_mode = "auto"
-          telemetry = false
-
-          [providers.kimi]
-          type = "kimi"
-          base_url = "$BASE"
-          api_key = "$KIMI_API_KEY"
-
-          [models.entscheidung]
-          provider = "kimi"
-          model = "$MODEL"
-          max_context_size = 262144
-          TOML
-          chmod 600 "$HOME/.kimi-code/config.toml"
-          kimi --version
-
-      - name: Identitaet fuer git (Kimi)
-        if: env.ENTSCHEIDER == 'kimi'
-        run: |
-          git config user.name  "Kimi Upkeep"
-          git config user.email "kimi-upkeep@users.noreply.github.com"
-
-      # Die Kimi-CLI gibt ihren Verbrauch nicht heraus, also bleibt die Laufzeit.
-      - name: Startzeit merken
-        if: env.ENTSCHEIDER == 'kimi'
-        run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
-
-      # Der Auftrag kommt aus der Datei und wird von der Shell nur innerhalb
-      # von Anfuehrungszeichen eingesetzt, nie als Befehl gelesen.
-      - name: Entscheiden und vorschlagen (Kimi)
-        if: env.ENTSCHEIDER == 'kimi'
-        env:
-          GH_TOKEN: ${{ steps.app.outputs.token || secrets.GITHUB_TOKEN }}
-        run: |
-          AUFTRAG=$(sed "s/{ENTSCHEIDER}/$ENTSCHEIDER/g" build/kreuzpruefung-entscheidung.md)
-          kimi -p "$AUFTRAG"
-
       - name: Aufwand erfassen
         if: always()
         uses: ./.github/actions/kosten
         with:
-          agent: ${{ env.ENTSCHEIDER == 'claude' && steps.zugang.outputs.zugang == 'abo' && 'claude-abo' || env.ENTSCHEIDER }}
+          agent: ${{ steps.zugang.outputs.zugang == 'abo' && 'claude-abo' || 'claude' }}
           execution: ${{ steps.claude.outputs.execution_file }}

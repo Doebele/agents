@@ -612,6 +612,13 @@ the `zugang` input for a manual run. Plain `@claude` follows the variable.
   September. No bill per run, but the runs share the subscription's usage
   windows with everything else done on that account.
 
+All four Claude workflows name their model, `claude-sonnet-5-5`, instead of
+taking the default. The default is whatever the access hands out, and it
+differed: the content and price runs were pinned to Sonnet 5, the upkeep and
+the mentions ran on whatever came. One model everywhere makes the runs
+comparable. To change it, change all four and the default of
+`.github/actions/claude-zugang` together.
+
 `.github/actions/claude-zugang` chooses, checks and hands on the word, never
 the secret. The workflow then fills exactly one of the two inputs of
 `claude-code-action` and leaves the other empty. That is the part not to

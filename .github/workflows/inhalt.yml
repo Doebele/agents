@@ -69,7 +69,7 @@ jobs:
           variable: ${{ vars.CLAUDE_ZUGANG }}
           api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          modell: claude-sonnet-5
+          modell: claude-sonnet-5-5
 
       - name: Ansehen und nachziehen
         id: claude
@@ -80,7 +80,7 @@ jobs:
           anthropic_api_key: ${{ steps.zugang.outputs.zugang == 'api' && secrets.ANTHROPIC_API_KEY || '' }}
           claude_code_oauth_token: ${{ steps.zugang.outputs.zugang == 'abo' && secrets.CLAUDE_CODE_OAUTH_TOKEN || '' }}
           claude_args: |
-            --model claude-sonnet-5
+            --model claude-sonnet-5-5
             --max-turns 200
             --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*)"
           prompt: |

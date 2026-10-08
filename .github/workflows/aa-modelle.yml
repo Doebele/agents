@@ -1,0 +1,234 @@
+# Die zehn besten Modelle von Artificial Analysis, zweimal die Woche.
+#
+# Die AA-Werte der Modell-Steckbriefe bewegen sich mit jeder neuen Messung,
+# und bisher frischte sie nur auf, wer daran dachte. Jetzt liest ein Agent
+# montags und donnerstags die Rangliste, nimmt die zehn besten verschiedenen
+# Modelle und frischt bei denen, die der Katalog fuehrt, den aa-Block auf.
+# Neue Modelle legt er nicht an, er nennt sie im Pull Request.
+#
+# Montags liest GLM (ueber Z.AI), donnerstags Kimi, jeweils ueber das eigene
+# Abo und unter dem eigenen Bot-Namen. Kommt der Agent nicht an die Seite oder
+# scheitert der Lauf, uebernimmt Claude Sonnet 5.5 denselben Auftrag. Ob es
+# geklappt hat, sagt der Agent selbst in aa-status.txt; ein Lauf, der ohne
+# dieses Wort endet, zaehlt als gescheitert.
+#
+# Der Auftrag fuer alle drei steht in build/aa-modelle-auftrag.md.
+name: AA-Modelle (Top 10)
+
+on:
+  schedule:
+    # Montag und Donnerstag 09:20 UTC, nach Kreuzpruefung und Pflege.
+    - cron: "20 9 * * 1"
+    - cron: "20 9 * * 4"
+  workflow_dispatch:
+    inputs:
+      agent:
+        description: "zai, kimi oder claude (leer = montags zai, sonst kimi)"
+        required: false
+        type: string
+
+jobs:
+  # ------------------------------------------------------------ GLM oder Kimi
+  lesen:
+    runs-on: ubuntu-latest
+    if: inputs.agent != 'claude'
+    permissions:
+      contents: write
+      pull-requests: write
+    outputs:
+      status: ${{ steps.status.outputs.status }}
+      agent: ${{ steps.wer.outputs.agent }}
+    # Die secrets-Variable erreicht keine if-Bedingung, also ueber env.
+    env:
+      ZAI_APP_ID: ${{ secrets.ZAI_APP_ID }}
+      KIMI_APP_ID: ${{ secrets.KIMI_APP_ID }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Wer liest heute
+        id: wer
+        env:
+          WAHL: ${{ inputs.agent }}
+        run: |
+          set -euo pipefail
+          if [ -n "$WAHL" ]; then AGENT="$WAHL"
+          elif [ "$(date -u +%u)" = "1" ]; then AGENT=zai
+          else AGENT=kimi; fi
+          case "$AGENT" in zai|kimi) ;; *) echo "Unbekannter Agent '$AGENT'"; exit 1 ;; esac
+          echo "agent=$AGENT" >> "$GITHUB_OUTPUT"
+          echo "Heute liest: $AGENT"
+
+      # Der eigene Bot-Name, damit der Pull Request den Build-Check startet.
+      - name: Eigene Kennung (Z.AI)
+        id: app_zai
+        if: steps.wer.outputs.agent == 'zai' && env.ZAI_APP_ID != ''
+        uses: actions/create-github-app-token@v3.2.0
+        with:
+          app-id: ${{ env.ZAI_APP_ID }}
+          private-key: ${{ secrets.ZAI_APP_KEY }}
+      - name: Eigene Kennung (Kimi)
+        id: app_kimi
+        if: steps.wer.outputs.agent == 'kimi' && env.KIMI_APP_ID != ''
+        uses: actions/create-github-app-token@v3.2.0
+        with:
+          app-id: ${{ env.KIMI_APP_ID }}
+          private-key: ${{ secrets.KIMI_APP_KEY }}
+
+      - name: Identitaet fuer git
+        env:
+          AGENT: ${{ steps.wer.outputs.agent }}
+        run: |
+          case "$AGENT" in
+            zai)  git config user.name "Z.AI Upkeep"; git config user.email "zai-upkeep@users.noreply.github.com" ;;
+            kimi) git config user.name "Kimi Upkeep"; git config user.email "kimi-upkeep@users.noreply.github.com" ;;
+          esac
+
+      - name: Kimi Code CLI installieren
+        run: |
+          curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
+          echo "$HOME/.kimi-code/bin" >> "$GITHUB_PATH"
+          test -x "$HOME/.kimi-code/bin/kimi" || {
+            echo "kimi binary nicht am erwarteten Ort; Ausgabe des Installers oben"; exit 1; }
+
+      # Dieselben Zugaenge wie in pflege-zai.yml und pflege-kimi.yml: Z.AI ueber
+      # build/zai_zugang.py, Kimi ueber die Coding-Adressen der Mitgliedschaft.
+      - name: Zugang und Modell in die config.toml
+        env:
+          AGENT: ${{ steps.wer.outputs.agent }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          ZAI_MODEL: ${{ vars.ZAI_MODEL }}
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          KIMI_MODEL: ${{ vars.KIMI_MODEL }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.kimi-code"
+          if [ "$AGENT" = "zai" ]; then
+            test -n "$ZAI_API_KEY" || { echo "ZAI_API_KEY ist nicht gesetzt"; exit 1; }
+            ZUGANG=$(python3 build/zai_zugang.py)
+            eval "$ZUGANG"
+            echo "Modell: $ZAI_MODELL ($ZAI_TOPF)"
+            PROVIDER=$(printf '[providers.p]\ntype = "openai"\nbase_url = "%s"\napi_key = "%s"\n' "$ZAI_BASE" "$ZAI_API_KEY")
+            MODEL="$ZAI_MODELL"; KONTEXT=131072
+          else
+            test -n "$KIMI_API_KEY" || { echo "KIMI_API_KEY ist nicht gesetzt"; exit 1; }
+            BASE=""
+            for url in https://api.kimi.ai/coding/v1 https://api.kimi.com/coding/v1; do
+              code=$(curl -sS -o /tmp/models.json -w '%{http_code}' \
+                     -H "Authorization: Bearer $KIMI_API_KEY" "$url/models" || echo 000)
+              echo "  GET $url/models -> HTTP $code"
+              if [ "$code" = "200" ]; then BASE="$url"; break; fi
+            done
+            test -n "$BASE" || { echo "Keine Coding-Adresse nimmt den Schlüssel."; exit 1; }
+            MODEL=$(python3 -c '
+          import json, os, sys
+          ids = [m["id"] for m in json.load(open("/tmp/models.json"))["data"]]
+          print("Verfuegbar:", ", ".join(ids), file=sys.stderr)
+          want = os.environ.get("KIMI_MODEL") or ""
+          if want and want not in ids:
+              sys.exit(f"KIMI_MODEL={want} steht nicht in der Liste")
+          print(want or ("k3" if "k3" in ids else ids[0]))
+          ')
+            echo "Adresse: $BASE · Modell: $MODEL"
+            PROVIDER=$(printf '[providers.p]\ntype = "kimi"\nbase_url = "%s"\napi_key = "%s"\n' "$BASE" "$KIMI_API_KEY")
+            KONTEXT=262144
+          fi
+          {
+            printf 'default_model = "aa"\ndefault_permission_mode = "auto"\ntelemetry = false\n\n'
+            printf '%s\n\n' "$PROVIDER"
+            printf '[models.aa]\nprovider = "p"\nmodel = "%s"\nmax_context_size = %s\n' "$MODEL" "$KONTEXT"
+          } > "$HOME/.kimi-code/config.toml"
+          chmod 600 "$HOME/.kimi-code/config.toml"
+          kimi --version
+
+      - name: Startzeit merken
+        run: echo "KOSTEN_START=$(date +%s)" >> "$GITHUB_ENV"
+
+      - name: Top 10 lesen und auffrischen
+        id: lauf
+        timeout-minutes: 60
+        env:
+          AGENT: ${{ steps.wer.outputs.agent }}
+          GH_TOKEN: ${{ steps.app_zai.outputs.token || steps.app_kimi.outputs.token || secrets.GITHUB_TOKEN }}
+        run: kimi -p "$(sed "s/{AGENT}/$AGENT/g" build/aa-modelle-auftrag.md)"
+
+      # Das Wort, das der Agent hinterlassen hat. Fehlt es, oder ist der Lauf
+      # gescheitert, gilt das als "nichts", und Claude uebernimmt.
+      - name: Ergebnis
+        id: status
+        if: always()
+        run: |
+          STATUS=$(tr -d '[:space:]' < aa-status.txt 2>/dev/null || true)
+          [ "${{ steps.lauf.outcome }}" = "success" ] || STATUS="gescheitert"
+          case "$STATUS" in pr|unveraendert|kein-zugang|gescheitert) ;; *) STATUS="nichts" ;; esac
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          echo "Ergebnis: $STATUS" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: ${{ steps.wer.outputs.agent }}
+          start: ${{ env.KOSTEN_START }}
+
+  # ------------------------------------------------------------ Ersatz: Claude
+  ersatz:
+    needs: lesen
+    # Laeuft, wenn GLM oder Kimi nicht geliefert haben, oder wenn Claude
+    # ausdruecklich gewaehlt wurde (dann ist "lesen" uebersprungen).
+    if: |
+      always() && (
+        inputs.agent == 'claude' ||
+        (needs.lesen.outputs.status != 'pr' && needs.lesen.outputs.status != 'unveraendert')
+      )
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Warum Claude
+        run: |
+          echo "Ersatz fuer '${{ needs.lesen.outputs.agent || 'niemand' }}', Ergebnis dort: '${{ needs.lesen.outputs.status || 'nicht gelaufen' }}'" \
+            | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Wer zahlt, und geht es
+        id: zugang
+        uses: ./.github/actions/claude-zugang
+        with:
+          variable: ${{ vars.CLAUDE_ZUGANG }}
+          api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          modell: claude-sonnet-5-5
+
+      - name: Auftrag einlesen
+        id: auftrag
+        run: |
+          {
+            echo "text<<ENDE_DES_AUFTRAGS"
+            sed "s/{AGENT}/claude/g" build/aa-modelle-auftrag.md
+            echo "ENDE_DES_AUFTRAGS"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Top 10 lesen und auffrischen (Claude)
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          # Genau einer von beiden, der andere bleibt leer: Sind beide
+          # gesetzt, gewinnt der API-Schluessel, und das Abo zahlt nie.
+          anthropic_api_key: ${{ steps.zugang.outputs.zugang == 'api' && secrets.ANTHROPIC_API_KEY || '' }}
+          claude_code_oauth_token: ${{ steps.zugang.outputs.zugang == 'abo' && secrets.CLAUDE_CODE_OAUTH_TOKEN || '' }}
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 150
+            --allowedTools "Read,Edit,Write,Glob,Grep,WebSearch,WebFetch,Bash(python3:*),Bash(git:*),Bash(gh:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(grep:*),Bash(find:*),Bash(mkdir:*),Bash(mv:*),Bash(rm:*),Bash(curl:*),Bash(date:*)"
+          prompt: ${{ steps.auftrag.outputs.text }}
+
+      - name: Aufwand erfassen
+        if: always()
+        uses: ./.github/actions/kosten
+        with:
+          agent: ${{ steps.zugang.outputs.zugang == 'abo' && 'claude-abo' || 'claude' }}
+          execution: ${{ steps.claude.outputs.execution_file }}

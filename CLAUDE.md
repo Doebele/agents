@@ -104,7 +104,7 @@ why and at what rate.
 
 Branch prefixes tell the proposals apart: `upkeep/<topic>`,
 `upkeep-gemini/<topic>`, `upkeep-kimi/<topic>`, `upkeep-zai/<topic>`,
-`kreuzpruefung/<topic>`, `inhalt/<topic>`.
+`kreuzpruefung/<topic>`, `inhalt/<topic>`, `aa-werte/<date>-<agent>`.
 
 ## What the runs cost
 
@@ -508,6 +508,16 @@ verbosity, each with a rank — rots the same way and now carries the same
 a newer model of the same line, raise the fact sheet onto it: `name`,
 `blurb`, `tip`, `aa.url` and the values move together, so the sheet never
 describes one generation while showing another's numbers.
+
+Twice a week a run of its own does this: `.github/workflows/aa-modelle.yml`,
+Mondays read by GLM, Thursdays by Kimi, each on its own subscription. It takes
+the ten best distinct models of the leaderboard and refreshes the `aa` block of
+those the catalogue carries; models it does not carry go into the pull request
+as candidates, not into new fact sheets. When the reader cannot reach the
+page, or the run breaks, Claude Sonnet 5.5 takes the same order. The reader
+says which it was in `aa-status.txt` — `pr`, `unveraendert` or `kein-zugang`
+— and a run that leaves no such word counts as failed. All three read
+`build/aa-modelle-auftrag.md`, and its branches start with `aa-werte/`.
 
 Looking for models the catalogue lacks is a different job, and it stops at
 rank 20. The AA leaderboard lists one model several times, once per reasoning

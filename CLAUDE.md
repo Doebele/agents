@@ -236,8 +236,9 @@ script so that both researchers get the same list:
 python3 build/kreuzpruefung.py auftrag --anzahl 25
 ```
 
-Fifty a week against the 85 fact sheets that carry a price: every price is
-read again inside a fortnight. The number is not the interesting part, the
+Fifty a week against the 129 fact sheets that carry a price (count of
+9 October 2026; it was 85 when this was first written): every price is read
+again in just under three weeks. The number is not the interesting part, the
 cycle is — pick it from the size of the stock, not from a feeling, and check
 it again when the catalogue has grown.
 
@@ -399,9 +400,9 @@ and Saturdays, 25 fact sheets per run, the longest-unseen first:
 python3 build/inhalt.py auftrag --anzahl 25
 ```
 
-Fifty a week against 152 fact sheets: every entry is looked at inside three
-weeks. Same number per run as the price rotation, longer cycle, because
-everything has a text and only 85 entries have a price.
+Fifty a week against 204 fact sheets (9 October 2026): every entry is looked
+at in about four weeks. Same number per run as the price rotation, longer
+cycle, because everything has a text and only 129 entries have a price.
 
 One agent does it, not two. "Does this still exist and is it still called
 that" needs no second opinion — unlike a number the reader plans around.

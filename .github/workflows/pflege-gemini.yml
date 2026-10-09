@@ -52,6 +52,37 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      # Stillgelegt, solange die Variable steht.
+      #
+      # Am 9. Oktober 2026 hat Google das Projekt hinter GEMINI_API_KEY
+      # gesperrt, Begruendung "abusive activity related to hacked resources".
+      # Solange das so ist, soll ein @gemini nicht erst ein paar Minuten lang
+      # einen Agenten starten, der dann an der API scheitert. Der Schalter
+      # haelt den Lauf gleich hier an.
+      #
+      # Der Wert der Variablen ist der Grund, im Klartext. Die Meldung ins
+      # Issue zitiert ihn, deshalb steht er nicht im Code: Wer den Schalter
+      # umlegt, schreibt dazu, warum, und niemand muss im Ablauf nachsehen.
+      #
+      #   gh variable set GEMINI_PAUSE --repo Doebele/agents \
+      #     --body "Google hat das Projekt hinter dem Schluessel gesperrt."
+      #   gh variable delete GEMINI_PAUSE --repo Doebele/agents
+      #
+      # Rot statt still: Ein uebersprungener Lauf sieht aus wie ein kaputter
+      # Agent, und genau das hat hier schon einmal vier Tage gekostet. Der
+      # Schritt scheitert also absichtlich, damit der letzte Schritt des Jobs
+      # den Grund in das Issue schreibt, aus dem der Zuruf kam.
+      - name: Laeuft Gemini zurzeit
+        env:
+          PAUSE: ${{ vars.GEMINI_PAUSE }}
+        run: |
+          if [ -z "$PAUSE" ]; then
+            exit 0
+          fi
+          printf '%s\n' "$PAUSE" > "$RUNNER_TEMP/fehlergrund.txt"
+          echo "Gemini ist stillgelegt: $PAUSE"
+          exit 1
+
       # An identity of its own, when there is an app to lend one.
       #
       # Without this the run speaks as github-actions[bot], the same name

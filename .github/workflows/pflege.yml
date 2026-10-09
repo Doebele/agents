@@ -57,6 +57,12 @@ jobs:
           # API key wins and the subscription never pays.
           anthropic_api_key: ${{ steps.zugang.outputs.zugang == 'api' && secrets.ANTHROPIC_API_KEY || '' }}
           claude_code_oauth_token: ${{ steps.zugang.outputs.zugang == 'abo' && secrets.CLAUDE_CODE_OAUTH_TOKEN || '' }}
+          # pflege-wechsel.yml starts this run with the built-in token, so the
+          # actor is github-actions, a bot. The action refuses bots unless
+          # they are named here; the first rotated run on 9 October died on
+          # exactly that. Only this one bot, not '*': github-actions is what
+          # workflows of this repository act as, and nothing outside can.
+          allowed_bots: github-actions
           # Two failure modes met here. Pinning Bash to python3, git and gh
           # produced permission_denials_count 4 and no answer. Replacing the
           # whole list with bare Bash plus TodoWrite was worse: the run died

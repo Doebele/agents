@@ -124,7 +124,13 @@ not equally trustworthy:
   `claude-abo`: its figure is the same estimate at API prices, and nothing
   was billed for it.
 - **Gemini runs** — the CLI writes OpenTelemetry to a local file when the
-  `settings` input names one. Token counts, no cost.
+  `settings` input names one. Token counts, no cost. The model is pinned in
+  the workflow and passed to the cost step, so the row names it. Unpinned, the
+  CLI follows its own default, and that default moves: the same key ran on
+  Gemini 3.5 Flash, then 3 Flash, then 3.8 Flash inside four weeks of
+  September and October, which makes two runs of the same month two different
+  tools. `gh variable set GEMINI_MODEL --body <id>` overrides it without
+  touching the workflow, the same way `KIMI_MODEL` and `ZAI_MODEL` do.
 - **Kimi and GLM runs** — the CLI does not hand its usage out. The row carries
   the wall clock and empty token columns.
 

@@ -49,6 +49,18 @@ jobs:
       id-token: write
     env:
       APP_ID: ${{ secrets.GEMINI_APP_ID }}
+      # Welches Modell Gemini benutzt, steht hier und nicht bei Google.
+      #
+      # Ohne Angabe nimmt die CLI ihre jeweilige Vorgabe, und die wandert: Das
+      # Verbrauchs-Dashboard zeigt fuer diesen Schluessel in vier Wochen drei
+      # verschiedene Modelle, erst 3.5 Flash, dann 3 Flash, ab dem 1. Oktober
+      # 3.8 Flash. Fuer einen Katalog, der Agenten miteinander vergleicht, ist
+      # das die falsche Art Ueberraschung: Zwei Laeufe im selben Monat sind
+      # dann nicht dasselbe Werkzeug. Die Variable laesst sich ohne Codeaenderung
+      # umstellen, wie bei Kimi und Z.AI auch:
+      #
+      #   gh variable set GEMINI_MODEL --body gemini-3.8-flash --repo Doebele/agents
+      MODELL: ${{ vars.GEMINI_MODEL || 'gemini-3.8-flash' }}
     steps:
       - uses: actions/checkout@v5
 
@@ -138,6 +150,7 @@ jobs:
           GEMINI_CLI_TRUST_WORKSPACE: "true"
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          gemini_model: ${{ env.MODELL }}
           workflow_name: weekly-upkeep
           # No tools.core restriction on purpose. Restricting means naming
           # every tool exactly right, and a typo removes a capability
@@ -298,6 +311,9 @@ jobs:
         with:
           agent: gemini
           telemetrie: /tmp/gemini-telemetrie.log
+          # Die Telemetrie der CLI nennt kein Modell, die Spalte blieb deshalb
+          # bisher leer. Jetzt wissen wir es ja.
+          modell: ${{ env.MODELL }}
 
       # Last, and only when something broke on an order from an issue: say so
       # in that issue. The agent never gets to when the run dies before it

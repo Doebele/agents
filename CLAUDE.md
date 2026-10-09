@@ -91,7 +91,8 @@ Berlin that day.
 
 Until October each agent had a weekday of its own and Gemini was one of them,
 which left three days a week without upkeep. Gemini no longer runs on a
-schedule; it still answers to @gemini and to a manual run.
+schedule; it still answers to @gemini and to a manual run — unless it is
+paused, see below.
 
 Each run picks exactly one topic, working down the same short list: dead
 links first, then declared gaps, then what is genuinely new.
@@ -594,9 +595,31 @@ Each agent listens for its own name, and only from the repository owner:
 | `@claude` | Claude, paid as `CLAUDE_ZUGANG` says | zuruf.yml |
 | `@claude-abo` | Claude, paid from the subscription | zuruf.yml |
 | `@claude-api` | Claude, paid from the Console balance | zuruf.yml |
-| `@gemini` | Gemini | pflege-gemini.yml |
+| `@gemini` | Gemini, unless `GEMINI_PAUSE` is set | pflege-gemini.yml |
 | `@zai` | GLM by way of Z.AI | pflege-zai.yml |
 | `@kimi` | Kimi | pflege-kimi.yml |
+
+### Pausing an agent
+
+A repository variable holds an agent back without touching its workflow, and
+the value of the variable is the reason in plain words:
+
+```bash
+gh variable set GEMINI_PAUSE --repo Doebele/agents \
+  --body "Google hat das Projekt hinter dem Schluessel gesperrt."
+gh variable delete GEMINI_PAUSE --repo Doebele/agents
+```
+
+The run then stops at its second step and fails on purpose, so the failure
+report writes that sentence into the issue the mention came from. A skipped
+run would be worse: silence is what an agent looks like when it is broken.
+
+Gemini has been paused since 9 October 2026. Google suspended the Cloud
+project behind `GEMINI_API_KEY` for "abusive activity related to hacked
+resources"; the appeal is running and the key needs replacing in a fresh
+project. Nothing in this repository leaks that key — it appears in no commit,
+in no published artifact, and the workflow hands it straight to Google's own
+action, which GitHub masks in the log.
 
 Naming two in one issue starts two runs, which is occasionally what you
 want and usually not. Whoever is addressed answers in the thread when it is

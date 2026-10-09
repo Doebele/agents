@@ -1,0 +1,50 @@
+# Ein Auftrag an einen der Agenten.
+#
+# Der eigentliche Auslöser ist bis heute eine Textsuche: steht @kimi im Text
+# des Issues, startet der Kimi-Lauf. Die Namensliste, die GitHub beim Tippen
+# von @ anbietet, kennt nur echte GitHub-Konten und hilft dabei nicht - sie
+# schlägt fremde Leute vor, die zufällig so heißen.
+#
+# Darum diese Vorlage. Das Auswahlfeld schreibt das richtige Wort selbst in
+# den Text, und zwar am Handy genauso wie am Rechner.
+name: Auftrag an einen Agenten
+description: Einem der vier Agenten eine Aufgabe geben
+title: "Auftrag: "
+body:
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Wer soll ran?
+      description: >
+        Das gewählte Wort landet im Text des Issues und startet dort den Lauf.
+        Claude hört auf alle drei Claude-Zeilen, die beiden unteren übergehen
+        die Variable CLAUDE_ZUGANG für diesen einen Auftrag.
+      options:
+        - "@claude (Claude, zahlt wie CLAUDE_ZUGANG sagt)"
+        - "@claude-abo (Claude, aus dem Abo)"
+        - "@claude-api (Claude, aus dem Guthaben in der Console)"
+        - "@gemini (Gemini)"
+        - "@kimi (Kimi)"
+        - "@zai (GLM über Z.AI)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: auftrag
+    attributes:
+      label: Was ist zu tun?
+      description: >
+        Ein Thema, nicht drei. Der Agent macht daraus einen Pull Request, und
+        einer mit vierzig Änderungen wird nicht gelesen, sondern durchgewunken.
+      placeholder: |
+        Beispiel: Der Preis bei LM Studio sieht falsch aus, bitte auf der
+        Anbieterseite nachlesen und den Steckbrief richtigstellen.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: >
+        Wer angesprochen wurde, antwortet hier im Faden, wenn er fertig ist.
+        Bleibt es still, meldet sich der Lauf selbst mit dem Schritt, an dem
+        er gescheitert ist.

@@ -638,6 +638,13 @@ want and usually not. Whoever is addressed answers in the thread when it is
 done — an issue left unanswered is indistinguishable from a broken agent,
 and that mistake has already cost four days here.
 
+The mention is a plain string match on the issue, which is why the name
+picker GitHub offers while you type `@` is no help: it lists GitHub accounts,
+and `claude`, `kimi`, `zai` and `gemini` are all real accounts belonging to
+strangers. `.github/ISSUE_TEMPLATE/auftrag.yml` sidesteps it with a dropdown
+that writes the right word into the body itself. Change a mention word in a
+workflow and that list has to move with it.
+
 A run that dies answers too. The agent cannot say anything when the run breaks
 before it starts or cuts it off mid-sentence, so the last step of all four
 mention workflows, `.github/actions/fehlermeldung`, does it instead: which step

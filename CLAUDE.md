@@ -89,6 +89,12 @@ is due on a given date. GitHub knows only UTC in schedules, so the rotation is
 scheduled twice and skips whichever of 06:20 and 07:20 UTC is not 08:20 in
 Berlin that day.
 
+A run started that way has `github-actions` as its actor, a bot, and
+`claude-code-action` refuses bots unless they are named in `allowed_bots`.
+`pflege.yml` names exactly that one; the first rotated Claude run on 9 October
+died on the missing line. GLM and Kimi run through their own CLI and are not
+affected.
+
 Until October each agent had a weekday of its own and Gemini was one of them,
 which left three days a week without upkeep. Gemini no longer runs on a
 schedule; it still answers to @gemini and to a manual run — unless it is

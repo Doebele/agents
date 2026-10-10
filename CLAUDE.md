@@ -748,6 +748,9 @@ what that review was. It moved to October on 6 October 2026, after an
 out-of-cycle check of every model sheet against Artificial Analysis and
 every frontier price against the vendor's own page.
 
-It lives in `content/ui.json`, in five places and in both languages. The
+It lives in `content/ui.json`, in five places and in both languages, and
+once more in `content/arbeitsarten.json` as `blatt_fuss`, the last line of
+the setup sheet the wizard hands out. Move all six together; the sheet
+stayed on September for four days because nobody knew it was there. The
 boot line of the page is a different date and needs no hand: `{{STAND}}`
 derives it from the last commit that touched `content/` or `build/`.

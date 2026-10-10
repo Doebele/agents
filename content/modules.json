@@ -1049,6 +1049,14 @@
        "en": "cutting and formats · CLI"
       },
       "k": "FFmpeg"
+     },
+     {
+      "n": "Pandoc",
+      "v": {
+       "de": "Dokumente und Formate · CLI",
+       "en": "documents and formats · CLI"
+      },
+      "k": "Pandoc"
      }
     ]
    }

@@ -3943,6 +3943,36 @@
   "plansChecked": "2026-10-06",
   "contentChecked": "2026-10-06"
  },
+ "Pandoc": {
+  "name": "Pandoc",
+  "vendor": "John MacFarlane",
+  "cat": {
+   "de": "Dokument-Werkzeug · Baustein 05",
+   "en": "Document tool · Block 05"
+  },
+  "accent": "var(--pink)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Markdown rein, Word raus: Pandoc wandelt Dokumente von einem Format in ein anderes — die eigene Beschreibung nennt es das Taschenmesser für Markup. Word (docx) und OpenDocument gehen in beide Richtungen, PowerPoint liest und schreibt es ebenfalls; PDF stellt es nur über ein zweites Programm her, LaTeX oder eines von zehn weiteren, die die Anleitung nennt. Zitate und Literaturverzeichnisse baut es gleich mit ein, aus BibTeX oder CSL-Dateien, in Hunderten von Zitierstilen. Es gibt keine Oberfläche, nur den Befehl — und genau das macht es zum Ausgabewerkzeug des Agenten: mach daraus ein Word-Dokument mit unserer Vorlage ist ein Auftrag, der als ein Aufruf endet, geschrieben und ausgeführt vom Agenten. Mit --reference-doc übernimmt es die Stile einer Vorlagendatei für docx, odt und pptx. Läuft unter Linux, macOS und Windows; ein Skill in diesem Katalog zieht es für PDF-Ausgaben bereits hinzu.",
+   "en": "Markdown in, Word out: Pandoc converts a document from one format into another — its own description calls it the swiss-army knife for markup. Word (docx) and OpenDocument go both ways, PowerPoint is read and written as well; for PDF it calls on a second program, LaTeX or one of ten others its manual names. Citations and bibliographies are built in, from BibTeX or CSL files, in hundreds of CSL styles. There is no interface, only the command — and that is what makes it the agent's output tool: turn this into a Word document from our template is an order that ends as a single call, written and run by the agent. With --reference-doc it adopts the styles of a template file for docx, odt and pptx. Runs on Linux, macOS and Windows; one skill in this catalogue already pulls it in for PDF output."
+  },
+  "tip": {
+   "de": "Nicht zum Schreiben und Layouten von Hand — dafür ist das Schreibprogramm da, mit Oberfläche und Seitenansicht. Pandoc lohnt sich, wenn der Agent die fertige Datei liefern soll oder dieselbe Wandlung wiederkehrt: derselbe Bericht, jedes Mal als Word-Datei aus der Firmen-Vorlage. Der Haken: installiert werden muss es zuerst, und die Umwandlung ist treu am Aufbau, nicht am Aussehen — Ränder und komplizierte Tabellen können auf dem Weg verloren gehen, die Anleitung warnt selbst davor. Der Agent schreibt den Aufruf, du liest ihn, bevor er läuft.",
+   "en": "Not for writing and laying out by hand — the word processor is for that, with an interface and a page view. Pandoc pays off when the agent should deliver the finished file, or the same conversion keeps coming back: the same report, every time as a Word file from the company template. The catch: it has to be installed first, and the conversion is faithful to structure, not to looks — margins and complicated tables can be lost along the way; the manual warns about this itself. The agent writes the call, you read it before it runs."
+  },
+  "links": {
+   "home": "https://pandoc.org",
+   "docs": "https://pandoc.org/MANUAL.html",
+   "code": "https://github.com/jgm/pandoc"
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source (GPL, Version 2 oder neuer)",
+   "en": "Free, open source (GPL, version 2 or greater)"
+  },
+  "plansChecked": "2026-10-10",
+  "contentChecked": "2026-10-10"
+ },
  "iMovie": {
   "name": {
    "de": "iMovie",

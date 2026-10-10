@@ -748,8 +748,8 @@
   "color": "var(--violet)",
   "glyph": "M12 13.1538V21 M17 8.38452V11.1538C17 12.2583 16.1046 13.1538 15 13.1538H9C7.89543 13.1538 7 12.2583 7 11.1538V8.38452C7 7.27995 7.89543 6.38452 9 6.38452H15C16.1046 6.38452 17 7.27995 17 8.38452Z M15.3334 6.38462V3 M8.66663 6.38462V3",
   "lede": {
-   "de": "Das Model Context Protocol ist das USB-C der KI: ein offener Standard der Linux Foundation. Darüber erreicht jeder Agent jedes Werkzeug auf dieselbe Weise. Über 9.800 Server im Index.",
-   "en": "The Model Context Protocol is the USB-C of AI: an open standard from the Linux Foundation. Through it, every agent reaches every tool the same way. Over 9,800 servers in the index."
+   "de": "Das Model Context Protocol ist das USB-C der KI: ein offener Standard der Linux Foundation. Darüber erreicht jeder Agent jedes Werkzeug auf dieselbe Weise. Über 40.000 Server im offiziellen Register.",
+   "en": "The Model Context Protocol is the USB-C of AI: an open standard from the Linux Foundation. Through it, every agent reaches every tool the same way. Over 40,000 servers in the official registry."
   },
   "groups": [
    {

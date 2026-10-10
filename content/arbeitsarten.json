@@ -444,9 +444,17 @@
      }
     },
     "05_tools": {
-     "kandidaten": [],
-     "luecke": "Vorlagen- und Ausgabewerkzeug für Office-Formate.",
-     "im_wizard": false
+     "frage": {
+      "de": "Womit wird der Text zur Datei?",
+      "en": "What turns the text into a file?"
+     },
+     "kandidaten": [
+      "Pandoc"
+     ],
+     "notiz": {
+      "de": "Word, OpenDocument, PowerPoint: Am Ende wird aus dem Text fast immer eine Datei in einem Office-Format. Pandoc macht diesen Schritt vom Agenten ausführbar — er schreibt den Aufruf samt Vorlage, du liest ihn, bevor er läuft. Layout von Hand bleibt Aufgabe der Schreibprogramme; der Agent liefert die fertige Datei, nicht den letzten Schliff.",
+      "en": "Word, OpenDocument, PowerPoint: at the end, the text almost always becomes a file in an Office format. Pandoc puts this step within the agent's reach — it writes the call together with the template, you read it before it runs. Layout done by hand remains the word processors' job; the agent delivers the finished file, not the last polish."
+     }
     },
     "06_medien": {
      "kandidaten": [

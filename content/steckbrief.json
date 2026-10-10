@@ -254,7 +254,7 @@
    "code": "https://github.com/internxt"
   },
   "plansChecked": "2026-09-24",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-10"
  },
  "Obsidian": {
   "name": "Obsidian",
@@ -606,7 +606,7 @@
    "api"
   ],
   "plansChecked": "2026-09-24",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-10"
  },
  "Kimi Code": {
   "name": "Kimi Code",
@@ -925,7 +925,7 @@
    "api"
   ],
   "plansChecked": "2026-09-24",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-10"
  },
  "LangGraph": {
   "name": "LangGraph",
@@ -1029,7 +1029,7 @@
   ],
   "plansChecked": "2026-09-28",
   "icon": "crewai",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-10"
  },
  "Paperclip": {
   "name": "Paperclip",
@@ -1126,7 +1126,7 @@
    "api"
   ],
   "plansChecked": "2026-09-28",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-10"
  },
  "Qwen 3.6 / 3.8": {
   "name": "Qwen3",
@@ -1735,7 +1735,7 @@
    "docs": "https://docs.byteplus.com/en/docs/ModelArk/1541523",
    "code": null
   },
-  "contentChecked": "2026-09-12"
+  "contentChecked": "2026-10-10"
  },
  "Veo 3.1": {
   "name": "Veo 3.1",
@@ -2662,7 +2662,7 @@
    "api"
   ],
   "plansChecked": "2026-10-05",
-  "contentChecked": "2026-09-12"
+  "contentChecked": "2026-10-10"
  },
  "GLM-5.3": {
   "name": "GLM-5.3",
@@ -3527,7 +3527,7 @@
    "code": null
   },
   "icon": "v0",
-  "contentChecked": "2026-09-12"
+  "contentChecked": "2026-10-10"
  },
  "Lovable": {
   "name": "Lovable",
@@ -3767,7 +3767,7 @@
    "de": "Das erste Werkzeug, das fast jede Aufgabe braucht. Achte darauf, ob die Antwort eine Fundstelle nennt: Ohne Quelle ist auch ein gesuchtes Ergebnis nur eine Behauptung.",
    "en": "The first tool almost every task needs. Check whether the answer names a source: without one, even a searched result is just an assertion."
   },
-  "contentChecked": "2026-09-12"
+  "contentChecked": "2026-10-10"
  },
  "tool-code": {
   "name": {
@@ -4527,7 +4527,7 @@
   "links": {
    "home": "https://fireworks.ai"
   },
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-10"
  },
  "Groq": {
   "name": "Groq",
@@ -5049,7 +5049,8 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-09-28"
+  "plansChecked": "2026-09-28",
+  "contentChecked": "2026-10-10"
  },
  "premortem": {
   "name": "premortem",
@@ -5653,7 +5654,7 @@
    "en": "API $0.042 per 1M input tokens ($42 per billion) · output tokens are not billed · rate limits of 250,000 tokens/s and 1,200 requests/min, currently adjusted dynamically · higher limits via custom and enterprise plans"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-19"
+  "contentChecked": "2026-10-10"
  },
  "Statista Connect": {
   "name": "Statista Connect",
@@ -5704,7 +5705,7 @@
   "billing": [
    "abo"
   ],
-  "contentChecked": "2026-09-19"
+  "contentChecked": "2026-10-10"
  },
  "n8n-skills": {
   "name": "n8n Skills",
@@ -5760,7 +5761,7 @@
    "home": "https://github.com/coleam00/excalidraw-diagram-skill"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "notebooklm-py": {
   "name": "notebooklm-py",
@@ -5788,7 +5789,7 @@
    "home": "https://github.com/teng-lin/notebooklm-py"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "remotion-skill": {
   "name": "remotion-skill",
@@ -5816,7 +5817,7 @@
    "docs": "https://www.remotion.dev/docs/ai/skills"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "context7": {
   "name": "context7",
@@ -5839,7 +5840,7 @@
    "home": "https://context7.com",
    "code": "https://github.com/upstash/context7"
   },
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "firecrawl": {
   "name": "firecrawl",
@@ -5890,7 +5891,7 @@
    "home": "https://github.com/microsoft/playwright-cli"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "obsidian-skills": {
   "name": "obsidian-skills",
@@ -5918,7 +5919,7 @@
    "home": "https://github.com/kepano/obsidian-skills"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "feature-dev": {
   "name": "feature-dev",
@@ -5945,7 +5946,7 @@
    "home": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "superpowers": {
   "name": "superpowers",
@@ -6002,7 +6003,7 @@
    "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "humanizer": {
   "name": "humanizer",
@@ -6031,7 +6032,7 @@
    "docs": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "vermenschlichen": {
   "name": "vermenschlichen",
@@ -6060,7 +6061,7 @@
    "docs": "https://de.wikipedia.org/wiki/Wikipedia:Anzeichen_f%C3%BCr_KI-generierte_Inhalte"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "scroll-craft": {
   "name": "scroll-craft",
@@ -6091,7 +6092,7 @@
    "home": "https://github.com/nateherkai/scroll-craft"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "security-audit": {
   "name": "security-audit",
@@ -6120,7 +6121,7 @@
    "guide": "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "kie.ai": {
   "name": "kie.ai",
@@ -6181,7 +6182,7 @@
    "code": "https://github.com/mattpocock/skills"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "grill-me": {
   "name": "grill-me",
@@ -6210,7 +6211,7 @@
    "code": "https://github.com/mattpocock/skills"
   },
   "plansChecked": "2026-10-01",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "watch": {
   "name": "watch",
@@ -6241,7 +6242,7 @@
    "home": "https://github.com/bradautomates/claude-video"
   },
   "plansChecked": "2026-10-05",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-10"
  },
  "meeting-notes": {
   "name": "meeting-notes",

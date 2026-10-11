@@ -313,8 +313,20 @@
      }
     },
     "05_tools": {
-     "kandidaten": [],
-     "luecke": "Code-Ausführung für Auswertung und Diagramme.",
+     "frage": {
+      "de": "Womit soll er rechnen?",
+      "en": "What should it compute with?"
+     },
+     "kandidaten": [
+      "tool-code"
+     ],
+     "empfehlung": [
+      "tool-code"
+     ],
+     "notiz": {
+      "de": "Auswertung steht und fällt mit der Code-Ausführung: Ein Sprachmodell schätzt beim Rechnen, ein ausgeführtes Skript rechnet wirklich — und erzeugt das Diagramm gleich mit.",
+      "en": "Analysis stands and falls with code execution: a language model estimates when it calculates, an executed script actually computes — and produces the chart along the way."
+     },
      "im_wizard": false
     },
     "06_medien": {

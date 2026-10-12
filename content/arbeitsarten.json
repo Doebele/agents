@@ -1325,11 +1325,12 @@
         ],
         "empfehlung": [
          "higgsfield-soul-id",
+         "eigene-skills",
          "social"
         ],
         "notiz": {
-         "de": "higgsfield-soul-id hält das Gesicht fest, social füllt den Kalender und arbeitet ein Stück in viele um, offers beantwortet die Frage, warum am Ende jemand zahlt.",
-         "en": "higgsfield-soul-id pins the face down, social fills the calendar and turns one piece into many, offers answers why anyone pays at the end."
+         "de": "higgsfield-soul-id hält das Gesicht fest. Wer die Figur darüber hinaus ist — wie sie spricht, was sie nie sagt, woher sie kommt — steht auf einem Charakterbogen, den du selbst schreibst: als eigener Skill hinterlegt oder als Datei im Projekt, die der Agent mitliest. Einen fertigen Skill zum Installieren braucht es dafür nicht, einen verbreiteten gibt es auch nicht. social füllt den Kalender und arbeitet ein Stück in viele um, offers beantwortet die Frage, warum am Ende jemand zahlt.",
+         "en": "higgsfield-soul-id pins the face down. Who the character is beyond that — how she speaks, what she would never say, where she comes from — lives on a character sheet you write yourself: kept as a skill of your own, or as a file in the project the agent reads along. No ready-made skill is needed for that, and no widely used one exists either. social fills the calendar and turns one piece into many, offers answers why anyone pays at the end."
         }
        },
        "04_mcp": {

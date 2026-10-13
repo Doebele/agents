@@ -1057,6 +1057,14 @@
        "en": "documents and formats · CLI"
       },
       "k": "Pandoc"
+     },
+     {
+      "n": "Zotero",
+      "v": {
+       "de": "Quellen und Zitate",
+       "en": "sources and citations"
+      },
+      "k": "Zotero"
      }
     ]
    }

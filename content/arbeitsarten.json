@@ -184,8 +184,10 @@
      }
     },
     "05_tools": {
-     "kandidaten": [],
-     "luecke": "Websuche, Dokumentenextraktion, Zitationsverwaltung.",
+     "kandidaten": [
+      "Zotero"
+     ],
+     "luecke": "Websuche, Dokumentenextraktion.",
      "im_wizard": false
     },
     "06_medien": {

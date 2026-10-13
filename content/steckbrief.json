@@ -3975,6 +3975,39 @@
   "plansChecked": "2026-10-10",
   "contentChecked": "2026-10-10"
  },
+ "Zotero": {
+  "name": "Zotero",
+  "vendor": "Digital Scholar",
+  "cat": {
+   "de": "Quellen-Werkzeug · Baustein 05",
+   "en": "Source tool · Block 05"
+  },
+  "accent": "var(--pink)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Sammeln, ordnen, belegen: Zotero ist die Literaturverwaltung für alles, was mit Quellen geschrieben wird. Ein Klick im Browser, und ein Artikel von JSTOR, ein Preprint von arXiv, eine Zeitungsmeldung oder ein Buch aus dem Bibliothekskatalog landet mit seinen Angaben in der Sammlung. In Word, LibreOffice und Google Docs setzt es Zitate und Literaturverzeichnis direkt ins Dokument, in über 9.000 Zitierstilen; für jeden anderen Texteditor stellt es Verweise und Verzeichnisse ebenso her. Sammlungen, Schlagworte und gespeicherte Suchen halten den Bestand im Griff, und eine Bibliothek lässt sich mit beliebig vielen Leuten ohne Aufpreis teilen. Das Programm ist kostenlos und Open Source, kommt von einer unabhängigen Non-Profit-Organisation und läuft unter Mac, Windows, Linux, iOS und Android; der Sync über alle Geräte ist optional, mit Sync ist die Bibliothek auch im Browser erreichbar.",
+   "en": "Collect, organize, cite: Zotero is the reference manager for anything written with sources. One click in the browser and an article from JSTOR, a preprint from arXiv, a news story or a book from the library catalogue lands in the collection with its details. Inside Word, LibreOffice and Google Docs it inserts citations and the bibliography directly, in over 9,000 citation styles; for any other text editor it produces references and bibliographies just the same. Collections, tags and saved searches keep the stock in order, and a library can be shared with as many people as you like at no cost. The program is free and open source, comes from an independent nonprofit organization, and runs on Mac, Windows, Linux, iOS and Android; syncing across devices is optional, and with it the library is reachable from any browser."
+  },
+  "tip": {
+   "de": "Nicht das Werkzeug für Notizen ohne Belege — Obsidian und Notion in Baustein 07 sitzen dort näher. Zotero lohnt, sobald Fundstellen zählen: jede Aussage mit Quelle, am Ende ein Verzeichnis im verlangten Zitierstil. Der Haken sitzt in den Dateianhängen: Der Sync-Speicher für PDFs, Bilder und Schnappschüsse umfasst 300 MB kostenlos, darüber gibt es nur Jahres-Abos (2 GB 20 $, 6 GB 60 $, Unlimited 120 $). Gruppenbibliotheken kosten nichts extra, belegen aber den Speicher des Gruppenbesitzers.",
+   "en": "Not the tool for notes without sources — Obsidian and Notion in block 07 sit closer there. Zotero pays off the moment provenance counts: every claim with a source, and a bibliography at the end in whatever style is required. The catch sits in the attachments: sync storage for PDFs, images and snapshots includes 300 MB free, and beyond that only annual plans exist (2 GB $20, 6 GB $60, Unlimited $120). Group libraries cost nothing extra but draw on the group owner's storage."
+  },
+  "links": {
+   "home": "https://www.zotero.org/",
+   "docs": "https://www.zotero.org/support/",
+   "code": "https://github.com/zotero/zotero"
+  },
+  "plans": {
+   "de": "Programm kostenlos, Open Source · Sync-Speicher 300 MB kostenlos · 2 GB 20 $/Jahr · 6 GB 60 $/Jahr · Unlimited 120 $/Jahr (nur jährlich)",
+   "en": "Program free, open source · sync storage 300 MB free · 2 GB $20/yr · 6 GB $60/yr · Unlimited $120/yr (yearly only)"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-10-13",
+  "contentChecked": "2026-10-13"
+ },
  "iMovie": {
   "name": {
    "de": "iMovie",

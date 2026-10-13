@@ -221,7 +221,7 @@
    "code": "https://github.com/perplexityai/modelcontextprotocol"
   },
   "plansChecked": "2026-09-01",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Internxt": {
   "name": "Internxt",
@@ -703,7 +703,8 @@
   "plansJahr": {
    "de": "GLM-Coding-Abo: Lite 151,20 $/Jahr · Pro 672 $/Jahr · Max 1.411,20 $/Jahr · GLM-5.3 verzehrt in Spitzenlast 3× so viel Kontingent wie GLM-4.7 (Mo–Fr 14–18 Uhr UTC+8)",
    "en": "GLM Coding plan: Lite $151.20/yr · Pro $672/yr · Max $1,411.20/yr · at peak (Mon–Fri 2–6 pm UTC+8) GLM-5.3 burns 3× the quota of GLM-4.7"
-  }
+  },
+  "contentChecked": "2026-10-13"
  },
  "Grok Build": {
   "name": "Grok Build",
@@ -794,7 +795,7 @@
    "api"
   ],
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Cursor": {
   "name": "Cursor",
@@ -861,7 +862,7 @@
    "api"
   ],
   "plansChecked": "2026-09-28",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Odysseus": {
   "name": "Odysseus",
@@ -1092,7 +1093,7 @@
    "api"
   ],
   "plansChecked": "2026-09-28",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Google ADK": {
   "name": "Agent Development Kit",
@@ -1297,7 +1298,7 @@
    "api"
   ],
   "plansChecked": "2026-10-05",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Llama 4": {
   "name": "Llama 4",
@@ -1345,7 +1346,8 @@
    "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet · ab 700 Mio. monatlich aktiven Nutzern verlangt Meta eine eigene Lizenz",
    "en": "Free (open-weight, Llama 4 Community License), self-hosted · above 700 million monthly active users Meta requires a separate licence"
   },
-  "plansChecked": "2026-10-05"
+  "plansChecked": "2026-10-05",
+  "contentChecked": "2026-10-13"
  },
  "LM Studio": {
   "name": "LM Studio",
@@ -1448,7 +1450,7 @@
    "en": "Free, open source (MIT)"
   },
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "vLLM": {
   "name": "vLLM",
@@ -1478,7 +1480,7 @@
    "en": "Free, open source (Apache 2.0)"
   },
   "plansChecked": "2026-09-28",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "SGLang": {
   "name": "SGLang",
@@ -1508,7 +1510,7 @@
    "en": "Free, open source (Apache 2.0)"
   },
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "GPT Image 2": {
   "name": "GPT Image 2",
@@ -1711,7 +1713,7 @@
    "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 10 $/Mo. (120 $/Jahr) · Pro ab 2.000 Credits 16 $/Mo. · Teams ab 2.000 Credits 18 $/Mo.",
    "en": "Free (images public, Recraft owns the rights) · Basic 1,000 credits $10/mo ($120/yr) · Pro from 2,000 credits $16/mo · Teams from 2,000 credits $18/mo"
   },
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Seedream": {
   "name": "Seedream",
@@ -1869,7 +1871,7 @@
    "de": "Gratis 125 Credits · Standard 12 $/Mo. bei Jahreszahlung · Pro 28 $/Mo. · Max 76 $/Mo. · Gen-4.5 kostet 12 Credits je Sekunde",
    "en": "Free 125 credits · Standard $12/mo billed annually · Pro $28/mo · Max $76/mo · Gen-4.5 costs 12 credits per second"
   },
-  "contentChecked": "2026-09-22",
+  "contentChecked": "2026-10-13",
   "free": true
  },
  "Luma": {
@@ -1907,7 +1909,7 @@
    "de": "Plus 25 $/Mo. (300 $/Jahr) · Pro 75 $/Mo. (900 $/Jahr) · Ultra 250 $/Mo. (3.000 $/Jahr)",
    "en": "Plus $25/mo ($300/yr) · Pro $75/mo ($900/yr) · Ultra $250/mo ($3,000/yr)"
   },
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Higgsfield": {
   "name": "Higgsfield",
@@ -2485,7 +2487,7 @@
    "api"
   ],
   "plansChecked": "2026-10-05",
-  "contentChecked": "2026-09-12"
+  "contentChecked": "2026-10-13"
  },
  "Qwen3.8-Max": {
   "name": "Qwen3.8-Max",
@@ -2602,7 +2604,7 @@
    "api"
   ],
   "plansChecked": "2026-09-28",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "DeepSeek V4": {
   "name": "DeepSeek V4",
@@ -2718,7 +2720,7 @@
    "abo"
   ],
   "plansChecked": "2026-10-05",
-  "contentChecked": "2026-09-12"
+  "contentChecked": "2026-10-13"
  },
  "Muse Spark 1.3": {
   "name": "Muse Spark 1.3",
@@ -2831,7 +2833,8 @@
    "api",
    "abo"
   ],
-  "plansChecked": "2026-10-12"
+  "plansChecked": "2026-10-12",
+  "contentChecked": "2026-10-13"
  },
  "Step 5 Preview": {
   "name": "Step 5 Preview",
@@ -3241,7 +3244,7 @@
    "docs": "https://developers.google.com/workspace/gmail/api/reference/mcp"
   },
   "icon": "google",
-  "contentChecked": "2026-09-21"
+  "contentChecked": "2026-10-13"
  },
  "davinci-resolve-mcp": {
   "name": "DaVinci Resolve MCP",
@@ -3574,7 +3577,7 @@
    "docs": "https://support.bolt.new/",
    "code": "https://github.com/stackblitz-labs/bolt.diy"
   },
-  "contentChecked": "2026-09-05"
+  "contentChecked": "2026-10-13"
  },
  "Onlook": {
   "name": "Onlook",
@@ -4300,7 +4303,7 @@
    "de": "12-Monats-Tarife: Starter erster Monat 0 €, dann 5 €/Mo. · Basic 1 €/Mo. für 12 Monate, dann 9 € · Plus erster Monat 0 €, dann 12 € · Pro erster Monat 0 €, dann 22 €/Mo. · Einrichtung 0 €",
    "en": "12-month terms: Starter first month €0, then €5/mo · Basic €1/mo for 12 months, then €9 · Plus first month €0, then €12 · Pro first month €0, then €22/mo · setup €0"
   },
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "IONOS": {
   "name": "IONOS",
@@ -4364,7 +4367,7 @@
   },
   "plansChecked": "2026-10-12",
   "icon": "netlify",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Vercel": {
   "name": "Vercel",
@@ -4396,7 +4399,7 @@
   },
   "plansChecked": "2026-10-08",
   "icon": "vercel",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Cloudflare Pages": {
   "name": "Cloudflare Pages",
@@ -4460,7 +4463,7 @@
   },
   "plansChecked": "2026-10-08",
   "icon": "render",
-  "contentChecked": "2026-09-22"
+  "contentChecked": "2026-10-13"
  },
  "Coolify": {
   "name": "Coolify",
@@ -4839,7 +4842,8 @@
    "home": "https://abacus.ai",
    "docs": "https://abacus.ai/help/chatllm-ai-super-assistant/introduction"
   },
-  "plansChecked": "2026-09-24"
+  "plansChecked": "2026-09-24",
+  "contentChecked": "2026-10-13"
  },
  "DeepSeek-Reasonix": {
   "name": "DeepSeek-Reasonix",

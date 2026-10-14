@@ -1067,6 +1067,22 @@
       "k": "Zotero"
      }
     ]
+   },
+   {
+    "label": {
+     "de": "Ausführung in der Cloud",
+     "en": "Execution in the cloud"
+    },
+    "items": [
+     {
+      "n": "E2B",
+      "v": {
+       "de": "Sandbox pro Sitzung",
+       "en": "sandbox per session"
+      },
+      "k": "E2B"
+     }
+    ]
    }
   ],
   "insight": {

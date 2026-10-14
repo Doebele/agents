@@ -704,8 +704,10 @@
      }
     },
     "05_tools": {
-     "kandidaten": [],
-     "luecke": "Code-Ausführung, Testlauf, Deploy-Ziel.",
+     "kandidaten": [
+      "E2B"
+     ],
+     "luecke": "Testlauf, Deploy-Ziel.",
      "im_wizard": false
     },
     "06_medien": {

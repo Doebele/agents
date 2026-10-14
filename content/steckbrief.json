@@ -3915,6 +3915,37 @@
   },
   "contentChecked": "2026-10-06"
  },
+ "E2B": {
+  "name": "E2B",
+  "vendor": "E2B",
+  "cat": {
+   "de": "Sandbox · Baustein 05",
+   "en": "Sandbox · Block 05"
+  },
+  "accent": "var(--pink)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Ein Agent, der Code ausführen soll, braucht einen Ort dafür — und der sollte nicht dein Rechner sein. E2B startet pro Sitzung eine eigene kleine Linux-Maschine in der Cloud, eine MicroVM auf Firecracker-Basis: Der Agent bekommt Shell, Dateisystem, Browser und Netzwerk, installiert Pakete, rechnet und verwirft die Maschine danach. Angebunden wird sie über ein SDK für Python und JavaScript, mit dem sich die Kapsel auch anhalten, wieder aufwecken und verzweigen lässt; wer Agenten mit Bildschirm baut, bekommt mit dem Desktop-Paket Maus, Tastatur und Live-Bild dazu. Die Laufzeit ist Open Source (Apache 2.0) und lässt sich auf der eigenen Infrastruktur betreiben, die gehostete Cloud läuft in den USA, der EU und Asien — oder im eigenen AWS-, GCP- oder Azure-Konto.",
+   "en": "An agent that is supposed to run code needs a place to do it — and that place should not be your machine. E2B boots a small dedicated Linux machine in the cloud for every session, a Firecracker-based microVM: the agent gets a shell, a filesystem, a browser and the network, installs packages, computes, and the machine is discarded afterwards. It connects through an SDK for Python and JavaScript, which can also pause, resume and fork the sandbox; for agents that need a screen, the desktop package adds mouse, keyboard and a live stream. The runtime is open source (Apache 2.0) and can run on your own infrastructure; the hosted cloud runs in the US, the EU and Asia — or inside your own AWS, GCP or Azure account."
+  },
+  "tip": {
+   "de": "Das fehlende Stück, sobald der Agent wirklich rechnen, testen oder im Netz handeln soll: Auf dem eigenen Rechner hat ein Irrtum des Modells Root-Rechte, in der Kapsel ruiniert er höchstens die Kapsel. Der Einstieg kostet nichts — einmalig 100 $ Nutzungsguthaben —, aber es ist kein Dauer-Gratisangebot: Abgerechnet wird sekundengenau nach Laufzeit, dazu ab Pro 150 $ Grundgebühr im Monat. Für gelegentliche Ausflüge reicht das Guthaben lange; wer dauerhaft viele Kapseln parallel laufen lässt, sollte vorher mit dem Kostenrechner auf der Preisseite überschlagen.",
+   "en": "The missing piece once the agent should actually compute, test or act on the web: on your own machine a model's mistake has root rights, inside the sandbox it ruins at most the sandbox. Getting started costs nothing — a one-time $100 usage credit — but it is not a permanent free offer: billing is per second of runtime, plus a $150 monthly base fee from the Pro plan up. For occasional excursions the credit lasts a long time; anyone running many sandboxes in parallel for good should estimate with the cost calculator on the pricing page first."
+  },
+  "links": {
+   "home": "https://e2b.dev",
+   "docs": "https://e2b.dev/docs",
+   "code": "https://github.com/e2b-dev/E2B"
+  },
+  "plans": {
+   "de": "Hobby 0 $ mit einmalig 100 $ Nutzungsguthaben (Sitzungen bis 1 Std., 20 Kapseln parallel) · Pro 150 $/Mo. Grundgebühr (Sitzungen bis 24 Std., 100 parallel, erweiterbar) · Enterprise individuell (ab 3.000 $/Mo.) · Nutzung zusätzlich, sekundengenau: 0,000028 $/s bei 2 vCPU",
+   "en": "Hobby $0 with a one-time $100 usage credit (sessions up to 1 h, 20 concurrent sandboxes) · Pro $150/mo base fee (sessions up to 24 h, 100 concurrent, expandable) · Enterprise custom (from $3,000/mo) · usage on top, billed per second: $0.000028/s at 2 vCPU"
+  },
+  "billing": ["abo", "api"],
+  "plansChecked": "2026-10-14",
+  "contentChecked": "2026-10-14"
+ },
  "FFmpeg": {
   "name": "FFmpeg",
   "vendor": "FFmpeg Project",

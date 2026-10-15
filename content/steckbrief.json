@@ -699,7 +699,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-24",
+  "plansChecked": "2026-10-15",
   "plansJahr": {
    "de": "GLM-Coding-Abo: Lite 151,20 $/Jahr · Pro 672 $/Jahr · Max 1.411,20 $/Jahr · GLM-5.3 verzehrt in Spitzenlast 3× so viel Kontingent wie GLM-4.7 (Mo–Fr 14–18 Uhr UTC+8)",
    "en": "GLM Coding plan: Lite $151.20/yr · Pro $672/yr · Max $1,411.20/yr · at peak (Mon–Fri 2–6 pm UTC+8) GLM-5.3 burns 3× the quota of GLM-4.7"
@@ -821,13 +821,13 @@
   "icon": "cursor",
   "free": true,
   "plans": {
-   "de": "Hobby kostenlos · Pro 20 $/Mo. · Pro+ 60 $/Mo. · Ultra 200 $/Mo. · Teams 40 $/Nutzer/Mo. · Enterprise auf Anfrage · Jahreszahlung wirbt mit 20 % Nachlass, die Beträge dazu druckt die Seite nicht",
-   "en": "Hobby free · Pro $20/mo · Pro+ $60/mo · Ultra $200/mo · Teams $40/user/mo · Enterprise on request · yearly billing advertises 20% off, but the page does not print those amounts"
+   "de": "Free kostenlos · Plus 8 $/Mo. · Premium 30 $/Mo. · Super 100 $/Mo. · Ultra 200 $/Mo. · Teams ab 30 $/Nutzer/Mo. · Enterprise individuell · Preise ohne Steuern · Jahrespreise nennt die Seite nicht",
+   "en": "Free $0 · Plus $8/mo · Premium $30/mo · Super $100/mo · Ultra $200/mo · Teams from $30/user/mo · Enterprise custom · prices exclude tax · the page prints no yearly prices"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-06"
  },
  "Hermes Agent": {
@@ -861,7 +861,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-13"
  },
  "Odysseus": {
@@ -1028,7 +1028,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "icon": "crewai",
   "contentChecked": "2026-10-10"
  },
@@ -1092,7 +1092,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-13"
  },
  "Google ADK": {
@@ -1126,7 +1126,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-10"
  },
  "Qwen 3.6 / 3.8": {
@@ -1479,7 +1479,7 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-13"
  },
  "SGLang": {
@@ -1639,8 +1639,8 @@
   },
   "free": true,
   "plans": {
-   "de": "In der Gemini-App und in Google AI Studio kostenlos testbar · API je 1K-Bild: Nano Banana 2 Lite 0,034 $ · Nano Banana 2 0,067 $ (0,5K 0,045 $, 4K 0,151 $) · Nano Banana Pro 0,134 $ (4K 0,24 $) · keine Gratisstufe in der API",
-   "en": "Free to try in the Gemini app and in Google AI Studio · API per 1K image: Nano Banana 2 Lite $0.034 · Nano Banana 2 $0.067 (0.5K $0.045, 4K $0.151) · Nano Banana Pro $0.134 (4K $0.24) · no free tier in the API"
+   "de": "In der Gemini-App und in Google AI Studio kostenlos testbar · API je 1K-Bild: Nano Banana 2.1 0,034 $ (4K 0,113 $) · Nano Banana 2 Lite 0,034 $ · Nano Banana 2 0,067 $ (0,5K 0,045 $, 4K 0,151 $) · Nano Banana Pro 0,134 $ (4K 0,24 $) · keine Gratisstufe in der API",
+   "en": "Free to try in the Gemini app and in Google AI Studio · API per 1K image: Nano Banana 2.1 $0.034 (4K $0.113) · Nano Banana 2 Lite $0.034 · Nano Banana 2 $0.067 (0.5K $0.045, 4K $0.151) · Nano Banana Pro $0.134 (4K $0.24) · no free tier in the API"
   },
   "billing": [
    "api"
@@ -1651,7 +1651,7 @@
    "code": null
   },
   "icon": "google",
-  "plansChecked": "2026-09-27",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-09-27"
  },
  "Ideogram": {
@@ -1964,7 +1964,7 @@
    "de": "Kostenlos (Apache 2.0) · keine Render-Gebühren und keine Schwelle für kommerzielle Nutzung",
    "en": "Free (Apache 2.0) · no per-render fees and no commercial-use threshold"
   },
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-09-25"
  },
  "ElevenLabs Eleven v3": {
@@ -2143,7 +2143,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-24",
+  "plansChecked": "2026-10-15",
   "plansJahr": {
    "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 12 $/Mo. · Growth/Enterprise ab 18 $/Nutzer/Mo.",
    "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $12/mo · Growth/Enterprise from $18/user/mo"
@@ -2216,7 +2216,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-09-25"
  },
  "Anarlog": {
@@ -3738,7 +3738,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "links": {
    "home": "https://developer.apple.com/xcode/",
    "docs": "https://developer.apple.com/documentation/xcode/",
@@ -3942,7 +3942,10 @@
    "de": "Hobby 0 $ mit einmalig 100 $ Nutzungsguthaben (Sitzungen bis 1 Std., 20 Kapseln parallel) · Pro 150 $/Mo. Grundgebühr (Sitzungen bis 24 Std., 100 parallel, erweiterbar) · Enterprise individuell (ab 3.000 $/Mo.) · Nutzung zusätzlich, sekundengenau: 0,000028 $/s bei 2 vCPU",
    "en": "Hobby $0 with a one-time $100 usage credit (sessions up to 1 h, 20 concurrent sandboxes) · Pro $150/mo base fee (sessions up to 24 h, 100 concurrent, expandable) · Enterprise custom (from $3,000/mo) · usage on top, billed per second: $0.000028/s at 2 vCPU"
   },
-  "billing": ["abo", "api"],
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-10-14",
   "contentChecked": "2026-10-14"
  },
@@ -4293,7 +4296,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "links": {
    "home": "https://deepseek.com/harness/en/",
    "code": "https://github.com/deepseek-ai/deepseek-harness",
@@ -4554,7 +4557,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "links": {
    "home": "https://coolify.io",
    "docs": "https://coolify.io/docs",
@@ -4906,7 +4909,7 @@
    "home": "https://abacus.ai",
    "docs": "https://abacus.ai/help/chatllm-ai-super-assistant/introduction"
   },
-  "plansChecked": "2026-09-24",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-13"
  },
  "DeepSeek-Reasonix": {
@@ -4938,7 +4941,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "icon": "deepseek",
   "contentChecked": "2026-09-25"
  },
@@ -5146,7 +5149,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-10"
  },
  "premortem": {
@@ -5346,7 +5349,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-09-25"
  },
  "Pi": {
@@ -5830,7 +5833,7 @@
    "home": "https://github.com/n8n-io/skills",
    "code": "https://github.com/n8n-io/skills"
   },
-  "plansChecked": "2026-09-26",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-09-26"
  },
  "excalidraw-skill": {
@@ -6367,7 +6370,7 @@
    "de": "Kostenlos, Textdatei (MIT)",
    "en": "Free, a text file (MIT)"
   },
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-09-28"
  },
  "literature-review": {
@@ -6389,14 +6392,14 @@
    "en": "Closes the gap the „Research“ work type left open for citation style and a research log: a search that can document what it read — and where and when. Three catches: the skill thinks in academic databases, so for market and company research the research skill fits better; web search runs through parallel-cli, a separate tool with its own sign-in, and PDF output adds pandoc and LaTeX; and the skill text makes AI-generated figures mandatory, with the LLM-backed steps optionally asking for an OpenRouter key on top. A quick overview carries heavy machinery here — for a thesis that machinery is the point."
   },
   "links": {
-   "home": "https://www.skills.sh/k-dense-ai/skills/literature-review",
+   "home": "https://github.com/k-dense-ai/scientific-agent-skills/tree/main/skills/literature-review",
    "code": "https://github.com/k-dense-ai/scientific-agent-skills/tree/main/skills/literature-review"
   },
   "plans": {
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-09-29",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-09-29"
  },
  "higgsfield-soul-id": {
@@ -6428,7 +6431,7 @@
    "home": "https://www.skills.sh/higgsfield-ai/skills/higgsfield-soul-id",
    "code": "https://github.com/higgsfield-ai/skills/tree/main/higgsfield-soul-id"
   },
-  "plansChecked": "2026-09-29",
+  "plansChecked": "2026-10-15",
   "contentChecked": "2026-09-29"
  },
  "social": {
@@ -6513,8 +6516,8 @@
    "docs": "https://platform.claude.com/docs/en/models/overview"
   },
   "plans": {
-   "de": "In Claude-Abos mit halbiertem Wochenlimit · API 10 $/50 $ pro 1M Token · Cache-Lesen 0,25 $ · Batch −50 %",
-   "en": "In Claude plans with half the weekly limit · API $10/$50 per 1M tokens · cache read $0.25 · batch −50%"
+   "de": "Nicht im Gratis-Plan · Pro nur über Nutzungs-Credits · Max und Team-Premium mit halbiertem Wochenlimit · Enterprise enthalten · API 10 $/50 $ pro 1M Token · Cache-Lesen 0,25 $ · Batch −50 %",
+   "en": "Not on the Free plan · Pro only through usage credits · Max and Team Premium with half the weekly limit · Enterprise included · API $10/$50 per 1M tokens · cache read $0.25 · batch −50%"
   },
   "billing": [
    "abo",
@@ -6544,7 +6547,7 @@
    },
    "checked": "2026-10-12"
   },
-  "plansChecked": "2026-09-28"
+  "plansChecked": "2026-10-15"
  },
  "Augment Code": {
   "name": "Augment Code",

@@ -6706,7 +6706,7 @@
    "en": "The vendor's suggestion is Fable 5.1 as the head and Cognition's SWE-2 as the hands. In the Artificial Analysis measurements that pairing costs $7.90 per task where Claude Code with the same frontier model needs $12.40, at almost the same index score. Catches: Fusion exists on paid plans only, not on the free tier, and not at all for customers on legacy credit contracts."
   },
   "links": {
-   "home": "https://devin.ai/cli",
+   "home": "https://cognition.com/blog/devin-for-terminal",
    "docs": "https://docs.devin.ai/cli/fusion"
   },
   "plans": {

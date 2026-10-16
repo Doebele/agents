@@ -3979,6 +3979,35 @@
   "plansChecked": "2026-10-06",
   "contentChecked": "2026-10-06"
  },
+ "MarkItDown": {
+  "name": "MarkItDown",
+  "vendor": "Microsoft",
+  "cat": {
+   "de": "Extraktions-Werkzeug · Baustein 05",
+   "en": "Extraction tool · Block 05"
+  },
+  "accent": "var(--pink)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Was Pandoc in Richtung fertiges Dokument macht, dreht MarkItDown um: Es verwandelt vorhandene Dateien in Markdown, damit der Agent sie lesen kann. PDF, Word, PowerPoint, Excel, HTML und EPub gehen hinein, ebenso CSV, JSON und XML; Bilder liefert es mit EXIF-Daten und OCR-Text, Audio-Dateien mit Metadaten und Transkript, ZIP-Archive arbeitet es Inhalt für Inhalt ab, und sogar ein YouTube-Link genügt. Installiert wird es mit pip, aufgerufen als Befehl — markitdown bericht.pdf -o bericht.md — oder aus Python heraus; die Formate kommen als einzelne Zusatzpakete oder alle auf einmal mit markitdown[all]. Ein eigenes Paket, markitdown-mcp, stellt die Wandlung zusätzlich als MCP-Server für den Agenten bereit, gedacht für den lokalen Gebrauch. Kommt von Microsoft, Open Source unter MIT. Für anspruchsvolle Dokumente lässt es sich optional an Azure-Dienste anhängen, deren Aufrufe dann kosten.",
+   "en": "Where Pandoc heads toward the finished document, MarkItDown goes the other way: it turns existing files into Markdown so the agent can read them. PDF, Word, PowerPoint, Excel, HTML and EPub go in, along with CSV, JSON and XML; images come out with their EXIF metadata and OCR text, audio files with metadata and a transcript, ZIP archives are worked through item by item, and even a YouTube link is enough. It installs with pip and runs as a command — markitdown report.pdf -o report.md — or from Python; formats arrive as individual add-on packages or all at once with markitdown[all]. A separate package, markitdown-mcp, also offers the conversion as an MCP server for the agent, meant for local use. It comes from Microsoft, open source under MIT. For demanding documents it can optionally attach to Azure services, whose calls then cost money."
+  },
+  "tip": {
+   "de": "Nicht für die weiterzureichende, hübsch gewandelte Datei — die eigene Anleitung sagt, die Ausgabe sei für die Textanalyse gebaut, nicht für die getreue Wandlung zum Lesen; Tabellen und Layout können auf dem Weg leiden. Es lohnt sich, sobald Quellen als Datei kommen und der Agent sie auswerten soll: der Bericht als PDF, das Angebot als Word, die Präsentation als PowerPoint. Der Haken: Python 3.10 bis 3.14 muss auf dem Rechner sein, und die Installation liegt bei dir — pip install 'markitdown[all]'. Für gescannte PDFs und komplexe Tabellen empfiehlt die Anleitung die Azure-Anbindungen, und deren Aufrufe kosten jedes Mal Geld.",
+   "en": "Not for a nicely converted file to pass along — the manual itself says the output is built for text analysis, not for faithful conversion meant for human reading; tables and layout can suffer on the way. It pays off the moment sources arrive as files the agent should work through: the report as a PDF, the quote as a Word file, the deck as a PowerPoint. The catch: Python 3.10 through 3.14 has to be on the machine, and installing it is on you — pip install 'markitdown[all]'. For scanned PDFs and complex tables the manual recommends the Azure connections, and their calls cost money every time."
+  },
+  "links": {
+   "home": "https://github.com/microsoft/markitdown",
+   "code": "https://github.com/microsoft/markitdown"
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source (MIT)",
+   "en": "Free, open source (MIT)"
+  },
+  "plansChecked": "2026-10-16",
+  "contentChecked": "2026-10-16"
+ },
  "Pandoc": {
   "name": "Pandoc",
   "vendor": "John MacFarlane",

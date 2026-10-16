@@ -1051,6 +1051,14 @@
       "k": "FFmpeg"
      },
      {
+      "n": "MarkItDown",
+      "v": {
+       "de": "Dateien zu Markdown · CLI",
+       "en": "files to Markdown · CLI"
+      },
+      "k": "MarkItDown"
+     },
+     {
       "n": "Pandoc",
       "v": {
        "de": "Dokumente und Formate · CLI",

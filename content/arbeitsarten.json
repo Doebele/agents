@@ -185,9 +185,10 @@
     },
     "05_tools": {
      "kandidaten": [
-      "Zotero"
+      "Zotero",
+      "MarkItDown"
      ],
-     "luecke": "Websuche, Dokumentenextraktion.",
+     "luecke": "Websuche.",
      "im_wizard": false
     },
     "06_medien": {

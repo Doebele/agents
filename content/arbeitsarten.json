@@ -186,9 +186,9 @@
     "05_tools": {
      "kandidaten": [
       "Zotero",
-      "MarkItDown"
+      "MarkItDown",
+      "SearXNG"
      ],
-     "luecke": "Websuche.",
      "im_wizard": false
     },
     "06_medien": {

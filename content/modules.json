@@ -1067,6 +1067,14 @@
       "k": "Pandoc"
      },
      {
+      "n": "SearXNG",
+      "v": {
+       "de": "Metasuche · selbst betrieben",
+       "en": "metasearch · self-hosted"
+      },
+      "k": "SearXNG"
+     },
+     {
       "n": "Zotero",
       "v": {
        "de": "Quellen und Zitate",

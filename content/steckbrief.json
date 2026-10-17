@@ -4038,6 +4038,36 @@
   "plansChecked": "2026-10-10",
   "contentChecked": "2026-10-10"
  },
+ "SearXNG": {
+  "name": "SearXNG",
+  "vendor": "SearXNG",
+  "cat": {
+   "de": "Such-Werkzeug · Baustein 05",
+   "en": "Search tool · Block 05"
+  },
+  "accent": "var(--pink)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Websuche ohne eigenen Schlüssel bei einem Suchdienst: SearXNG ist eine Metasuche, die eine Anfrage an viele Suchdienste gleichzeitig weitergibt und die Treffer bündelt — die Dokumentation nennt bis zu 264 davon. Nutzer werden dabei nicht verfolgt und nicht profiliert. Für den Agenten ist die Suchschnittstelle der entscheidende Teil: Ein Aufruf von /search mit der Frage als Parameter q liefert die Treffer, auf Wunsch als JSON, CSV oder RSS statt als Webseite. Damit bekommt der Agent aktuelle Fundstellen zum Weiterlesen, statt nur auf seinen Trainingsstand zurückzufallen. Öffentliche Instanzen stehen auf searx.space; wer niemandem vertrauen will, betreibt eine eigene, etwa als Docker-Container. Open Source unter AGPL-3.0.",
+   "en": "Web search without your own key at a search provider: SearXNG is a metasearch engine that forwards one query to many search services at once and bundles the results — the documentation names up to 264 of them. Users are neither tracked nor profiled. For an agent the search interface is the decisive part: a call to /search with the question as parameter q returns the results, on request as JSON, CSV or RSS instead of a web page. That gives the agent current findings to read on from, instead of falling back on its training cut-off. Public instances are listed at searx.space; if you trust no one, you run your own, for instance as a Docker container. Open source under AGPL-3.0."
+  },
+  "tip": {
+   "de": "Der Haken steht in der eigenen Anleitung: Maschinenlesbare Formate sind standardmäßig abgeschaltet — in settings.yml steht unter search: nur formats: [html]. Wer JSON will, muss es dort erst freischalten, sonst antwortet die Schnittstelle mit 403; viele öffentliche Instanzen lassen es deshalb aus. Für den Agenten heißt das meist: eigene Instanz per Docker oder Podman, und das will Grundwissen über Container. Wer das nicht betreiben will, ist mit dem gehosteten Tavily-Schlüssel aus Baustein 04 schneller am Ziel. Und eine Metasuche ist nur so gut wie die Suchdienste dahinter — sie ersetzt nicht das Prüfen der Quelle.",
+   "en": "The catch is in its own manual: machine-readable formats are switched off by default — settings.yml lists only formats: [html] under search:. If you want JSON you have to enable it there first, otherwise the interface answers with 403; many public instances therefore leave it off. For an agent that usually means running your own instance via Docker or Podman, and that wants basic container knowledge. If you do not want to run that, the hosted Tavily key from block 04 gets you there faster. And a metasearch is only as good as the search services behind it — it does not replace checking the source."
+  },
+  "links": {
+   "home": "https://docs.searxng.org/",
+   "docs": "https://docs.searxng.org/dev/search_api.html",
+   "code": "https://github.com/searxng/searxng"
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source (AGPL-3.0); eigene Instanz auf eigener Hardware oder eigenem Server",
+   "en": "Free, open source (AGPL-3.0); your own instance on your own hardware or server"
+  },
+  "plansChecked": "2026-10-17",
+  "contentChecked": "2026-10-17"
+ },
  "Zotero": {
   "name": "Zotero",
   "vendor": "Digital Scholar",

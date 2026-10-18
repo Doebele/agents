@@ -73,3 +73,22 @@ datum,lauf,agent,modell,input,output,cache_write,cache_read,kosten_usd,turns,dau
 2026-10-10,Inhaltsrotation,claude-abo,claude-sonnet-5-5,32,10269,50044,785142,0.4058,31,101,38047623931,https://github.com/Doebele/agents/actions/runs/38047623931
 2026-10-10,Weekly upkeep (Z.AI),zai,,,,,,,,436,38053057618,https://github.com/Doebele/agents/actions/runs/38053057618
 2026-10-11,Weekly upkeep (Kimi),kimi,,,,,,,,341,38141866227,https://github.com/Doebele/agents/actions/runs/38141866227
+2026-10-12,AA-Modelle (Top 10),zai,,,,,,,,897,38295137050,https://github.com/Doebele/agents/actions/runs/38295137050
+2026-10-12,Kreuzpruefung (Preise),claude-abo,claude-sonnet-5-5,54,14886,65166,1648629,0.5358,53,162,38253922648,https://github.com/Doebele/agents/actions/runs/38253922648
+2026-10-12,Kreuzpruefung (Preise),kimi,,,,,,,,3,38253922648,https://github.com/Doebele/agents/actions/runs/38253922648
+2026-10-12,Kreuzpruefung (Preise),zai,,,,,,,,829,38253922648,https://github.com/Doebele/agents/actions/runs/38253922648
+2026-10-12,Weekly upkeep,claude-abo,claude-sonnet-5-5,18,3561,31208,298012,0.1734,10,65,38272516703,https://github.com/Doebele/agents/actions/runs/38272516703
+2026-10-12,Weekly upkeep (Kimi),kimi,,,,,,,,57,38245714132,https://github.com/Doebele/agents/actions/runs/38245714132
+2026-10-12,Weekly upkeep (Z.AI),zai,,,,,,,,434,38246366506,https://github.com/Doebele/agents/actions/runs/38246366506
+2026-10-13,Inhaltsrotation,claude-abo,claude-sonnet-5-5,52,11618,58241,1416811,0.5171,58,123,38399767012,https://github.com/Doebele/agents/actions/runs/38399767012
+2026-10-13,Weekly upkeep (Z.AI),zai,,,,,,,,750,38413023811,https://github.com/Doebele/agents/actions/runs/38413023811
+2026-10-14,Weekly upkeep (Kimi),kimi,,,,,,,,463,38561459096,https://github.com/Doebele/agents/actions/runs/38561459096
+2026-10-15,AA-Modelle (Top 10),kimi,,,,,,,,360,38748994134,https://github.com/Doebele/agents/actions/runs/38748994134
+2026-10-15,Kreuzpruefung (Preise),claude-abo,claude-sonnet-5-5,46,16714,66452,1404318,0.5922,36,139,38717467969,https://github.com/Doebele/agents/actions/runs/38717467969
+2026-10-15,Kreuzpruefung (Preise),kimi,,,,,,,,1689,38717467969,https://github.com/Doebele/agents/actions/runs/38717467969
+2026-10-15,Kreuzpruefung (Preise),zai,,,,,,,,845,38717467969,https://github.com/Doebele/agents/actions/runs/38717467969
+2026-10-15,Weekly upkeep,claude-abo,claude-sonnet-5-5,30,4389,30794,556515,0.2401,24,95,38729442195,https://github.com/Doebele/agents/actions/runs/38729442195
+2026-10-16,Weekly upkeep (Z.AI),zai,,,,,,,,954,38895043012,https://github.com/Doebele/agents/actions/runs/38895043012
+2026-10-17,Inhaltsrotation,claude-abo,claude-sonnet-5-5,16,4177,35097,303480,0.2187,15,49,39021175198,https://github.com/Doebele/agents/actions/runs/39021175198
+2026-10-17,Weekly upkeep (Kimi),kimi,,,,,,,,275,39026887178,https://github.com/Doebele/agents/actions/runs/39026887178
+2026-10-18,Weekly upkeep,claude-abo,claude-sonnet-5-5,24,4342,31238,428412,0.2116,13,74,39123061507,https://github.com/Doebele/agents/actions/runs/39123061507

@@ -565,14 +565,14 @@
    ]
   },
   "plans": {
-   "de": "In jedem ChatGPT-Plan enthalten: Free 0 $ · Go 8 $ · Plus 20 $ · Pro ab 100 $ (5× Plus-Kontingent) oder 200 $/Mo. (20×) · Business 20 $/Sitz/Mo. · Enterprise und Edu auf Anfrage · Kontingent in rollenden 5-Stunden-Fenstern · in CLI, SDK und IDE auch mit API-Schlüssel nach Token",
-   "en": "Included in every ChatGPT plan: Free $0 · Go $8 · Plus $20 · Pro from $100 (5× the Plus quota) or $200/mo (20×) · Business $20/seat/mo · Enterprise and Edu on request · quota measured in rolling five-hour windows · in the CLI, SDK and IDE also usable with an API key, billed per token"
+   "de": "In jedem ChatGPT-Plan enthalten: Free 0 $ · Go 8 $ · Plus 20 $ · Pro in Stufen zu 100, 200 und 500 $/Mo. · Business 20 $/Sitz/Mo. bei jährlicher Abrechnung (ab 2 Sitzen), 25 $ monatlich · Enterprise und Edu auf Anfrage · Kontingent bei Plus und Business in rollenden 5-Stunden-Fenstern, bei Pro derzeit ohne 5-Stunden-Grenze · in CLI, SDK und IDE auch mit API-Schlüssel, getrennt nach API-Preisen abgerechnet",
+   "en": "Included in every ChatGPT plan: Free $0 · Go $8 · Plus $20 · Pro in tiers of $100, $200 and $500/mo · Business $20/seat/mo billed annually (2+ seats), $25 billed monthly · Enterprise and Edu on request · quota in rolling five-hour windows on Plus and Business, currently no five-hour limit on Pro · in the CLI, SDK and IDE also usable with an API key, billed separately at API prices"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-24",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-06"
  },
  "Agents SDK": {
@@ -759,7 +759,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-06"
  },
  "Zed": {
@@ -5475,7 +5475,7 @@
    "de": "Kostenlos, Open Source (Apache-2.0) · Modelle über eigene API-Schlüssel oder lokal",
    "en": "Free, open source (Apache-2.0) · models via your own API keys or run locally"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-01"
  },
  "Buzz": {
@@ -5919,7 +5919,7 @@
   "links": {
    "home": "https://github.com/coleam00/excalidraw-diagram-skill"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "notebooklm-py": {
@@ -5947,7 +5947,7 @@
   "links": {
    "home": "https://github.com/teng-lin/notebooklm-py"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "remotion-skill": {
@@ -5975,7 +5975,7 @@
    "home": "https://www.skills.sh/remotion-dev/skills/remotion-best-practices",
    "docs": "https://www.remotion.dev/docs/ai/skills"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "context7": {
@@ -6049,7 +6049,7 @@
   "links": {
    "home": "https://github.com/microsoft/playwright-cli"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "obsidian-skills": {
@@ -6077,7 +6077,7 @@
   "links": {
    "home": "https://github.com/kepano/obsidian-skills"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "feature-dev": {
@@ -6104,7 +6104,7 @@
   "links": {
    "home": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "superpowers": {
@@ -6133,7 +6133,7 @@
    "home": "https://github.com/obra/superpowers",
    "docs": "https://claude.com/marketplace/plugins/superpowers"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-09-20"
  },
  "claude-md-management": {
@@ -6161,7 +6161,7 @@
   "links": {
    "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "humanizer": {
@@ -6190,7 +6190,7 @@
    "home": "https://github.com/blader/humanizer",
    "docs": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "vermenschlichen": {
@@ -6219,7 +6219,7 @@
    "home": "https://github.com/LOGIN-TB/claude-skills",
    "docs": "https://de.wikipedia.org/wiki/Wikipedia:Anzeichen_f%C3%BCr_KI-generierte_Inhalte"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "scroll-craft": {
@@ -6250,7 +6250,7 @@
   "links": {
    "home": "https://github.com/nateherkai/scroll-craft"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "security-audit": {
@@ -6279,7 +6279,7 @@
    "home": "https://github.com/cloudflare/security-audit-skill",
    "guide": "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "kie.ai": {
@@ -6340,7 +6340,7 @@
    "home": "https://www.skills.sh/mattpocock/skills/teach",
    "code": "https://github.com/mattpocock/skills"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "grill-me": {
@@ -6369,7 +6369,7 @@
    "home": "https://www.skills.sh/mattpocock/skills/grill-me",
    "code": "https://github.com/mattpocock/skills"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"
  },
  "watch": {
@@ -6519,7 +6519,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/social"
   },
-  "plansChecked": "2026-09-29",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-09-29"
  },
  "offers": {
@@ -6548,7 +6548,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/offers"
   },
-  "plansChecked": "2026-09-29",
+  "plansChecked": "2026-10-19",
   "contentChecked": "2026-09-29"
  },
  "Claude Fable 5.1": {

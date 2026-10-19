@@ -4591,6 +4591,36 @@
   "icon": "render",
   "contentChecked": "2026-10-13"
  },
+ "Railway": {
+  "name": "Railway",
+  "vendor": "Railway",
+  "cat": {
+   "de": "Deploy-Ziel · Baustein 05",
+   "en": "Deploy target · Block 05"
+  },
+  "accent": "var(--pink)",
+  "blurb": {
+   "de": "Gebaut ist die App im Editor — aber laufen soll sie irgendwo, wo sie jeder erreicht. Railway ist so ein Ort: Repo anschließen, Docker-Image ausführen oder über die CLI hochladen, und die App läuft mit eigener Adresse, Netzwerk und Zertifikat; Datenbanken lassen sich danebenstellen wie weitere Dienste, und für jeden Pull-Request gibt es eine eigene Vorschau-Umgebung. Das Ganze liegt auf einer Karte, auf der jeder Dienst, seine Variablen und seine Logs sichtbar sind. Für den Agenten ist der entscheidende Teil der MCP-Server: Damit verwaltet er Projekte, Dienste, Variablen und Deployments direkt aus dem Editor, die Anmeldung läuft beim ersten Werkzeug-Aufruf über OAuth. Abgerechnet wird nach Verbrauch — Rechenzeit, Speicher, Verkehr —, die Pläne geben dafür monatliches Guthaben.",
+   "en": "Built in the editor, an app still needs a place to run that everyone can reach. Railway is such a place: connect the repo, deploy a Docker image, or push from the CLI, and the app runs with its own address, network and certificate; databases sit next to it like any other service, and every pull request gets its own preview environment. All of it lives on a canvas where each service, its variables and its logs stay visible. For an agent the decisive part is the MCP server: with it the agent manages projects, services, variables and deployments straight from the editor, signing in through OAuth at the first tool call. Billing follows usage — compute, memory, traffic — and the plans bundle a monthly credit for it."
+  },
+  "tip": {
+   "de": "Der Test gilt 30 Tage und 5 $ Guthaben; danach kostet der Free-Plan 1 $ im Monat, ohne eigene Domain und ohne freie Regionenwahl — zum Ausprobieren gut, für eine ernsthafte Anwendung führt an Hobby (5 $/Mo. Minimum, inklusive 5 $ Nutzung) kein Weg vorbei. Und Railway rechnet nach Verbrauch ab: Rechenzeit, Speicher, Verkehr — ein Dienst, den niemand mehr ansieht, läuft trotzdem weiter und kostet weiter. Für eine reine Seite sind die Webhoster in Baustein 07 die passenderen Nachbarn; Railway lohnt sich, sobald App und Datenbank zusammen gehören.",
+   "en": "The trial lasts 30 days and carries $5 of credit; after that the Free plan costs $1 a month, without a custom domain and without a free choice of region — fine for trying things out, but anything serious leads to Hobby ($5/mo minimum, including $5 of usage). And Railway bills by usage: compute, memory, traffic — a service nobody looks at any more keeps running and keeps costing. For a plain site the web hosts in Block 07 are the closer neighbours; Railway earns its place once app and database belong together."
+  },
+  "links": {
+   "home": "https://railway.com",
+   "docs": "https://docs.railway.com"
+  },
+  "plans": {
+   "de": "Free 0 $ im 30-tägigen Test mit 5 $ Guthaben, danach 1 $/Mo. (1 vCPU / 0,5 GB je Dienst, 0,5 GB Volume, keine eigenen Domains) · Hobby 5 $/Mo. Minimum inkl. 5 $ Nutzung (48 vCPU / 48 GB je Dienst, 5 GB Speicher) · Pro 20 $/Mo. inkl. 20 $ Nutzung · Enterprise individuell · Nutzung nach Verbrauch: Speicher 0,00000386 $/GB·s, CPU 0,00000772 $/vCPU·s, Traffic 0,05 $/GB",
+   "en": "Free $0 for the 30-day trial with $5 of credit, then $1/mo (1 vCPU / 0.5 GB per service, 0.5 GB volume, no custom domains) · Hobby $5/mo minimum including $5 of usage (48 vCPU / 48 GB per service, 5 GB storage) · Pro $20/mo including $20 of usage · Enterprise custom · usage metered: memory $0.00000386/GB·s, CPU $0.00000772/vCPU·s, egress $0.05/GB"
+  },
+  "billing": [
+   "abo"
+  ],
+  "plansChecked": "2026-10-19",
+  "contentChecked": "2026-10-19"
+ },
  "Coolify": {
   "name": "Coolify",
   "vendor": "coolLabs",

@@ -887,6 +887,10 @@
    "code": "https://github.com/odysseus-dev/odysseus"
   },
   "free": true,
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plans": {
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
@@ -1055,6 +1059,10 @@
    "code": "https://github.com/paperclipai/paperclip"
   },
   "free": true,
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plans": {
    "de": "Kostenlos, Open Source (MIT), selbst betrieben",
    "en": "Free, open source (MIT), self-hosted"

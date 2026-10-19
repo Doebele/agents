@@ -2055,9 +2055,14 @@ addEventListener('keydown', e=>{
        Wer beides will, bekommt beides zu sehen. */
     if(welche === '01_modell' && w.betrieb.length === 1 && w.betrieb[0] === 'lokal' && !d.open) return false;
     /* Wo keine Kostenangabe steht, wird nichts unterstellt — lieber zeigen
-       als faelschlich verschweigen. */
-    if(w.kosten.length && d.free !== undefined
-       && !w.kosten.includes(d.free ? 'gratis' : 'egal')) return false;
+       als faelschlich verschweigen. „Kostenpflichtig“ heisst: wird verkauft —
+       eine Gratisstufe daneben nimmt das nicht zurueck. Kimi Code und
+       OpenAI Codex haben beides und gehoeren in beide Ansichten. */
+    if(w.kosten.length && d.free !== undefined){
+      const gratis = d.free === true;
+      const verkauft = d.free === false || d.plans !== undefined || d.billing !== undefined;
+      if(!((gratis && w.kosten.includes('gratis')) || (verkauft && w.kosten.includes('egal')))) return false;
+    }
     return true;
   });
 

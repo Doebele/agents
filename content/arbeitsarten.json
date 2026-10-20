@@ -706,9 +706,10 @@
     },
     "05_tools": {
      "kandidaten": [
-      "E2B"
+      "E2B",
+      "Browserbase"
      ],
-     "luecke": "Testlauf, Deploy-Ziel.",
+     "luecke": "Deploy-Ziel.",
      "im_wizard": false
     },
     "06_medien": {

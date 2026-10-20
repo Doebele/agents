@@ -5508,6 +5508,37 @@
   "plansChecked": "2026-10-12",
   "contentChecked": "2026-09-25"
  },
+ "Browserbase": {
+  "name": "Browserbase",
+  "vendor": "Browserbase",
+  "cat": {
+   "de": "Cloud-Browser · Baustein 05",
+   "en": "Cloud browser · Block 05"
+  },
+  "accent": "var(--pink)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Der Testlauf für das, was der Agent gebaut hat: Browserbase stellt echte Browser in der Cloud, die der Agent fernsteuert — Seite öffnen, klicken, tippen, lesen, Bildschirmfotos machen. Damit prüft er die fertige Website so, wie ein Mensch es täte, statt nur den Code zu lesen: Lädt die Seite, funktioniert das Formular, was passiert nach dem Login? Jede Sitzung lässt sich live mitansehen und später als Aufzeichnung mit Protokollen wieder abspielen. Angebunden über SDKs für TypeScript, Python und Go oder über einen gehosteten MCP-Server, der jedem MCP-fähigen Agenten navigate, act, observe und extract als Werkzeuge gibt; dahinter steckt Stagehand, das hauseigene Browser-Framework, das als Open Source (MIT) auch mit dem eigenen Chrome läuft. Suche und Abruf einzelner Seiten als Markdown kommen ohne ganzen Browser aus.",
+   "en": "The test run for whatever the agent has built: Browserbase provides real browsers in the cloud that the agent drives remotely — open a page, click, type, read, take screenshots. That is how it checks the finished website the way a person would instead of only reading the code: does the page load, does the form work, what happens after login? Every session can be watched live and replayed later as a recording with logs. It connects through SDKs for TypeScript, Python and Go, or through a hosted MCP server that gives any MCP-capable agent navigate, act, observe and extract as tools; underneath sits Stagehand, the in-house browser framework, which as open source (MIT) also runs against your own Chrome. Search and fetching single pages as markdown work without a full browser."
+  },
+  "tip": {
+   "de": "Das Gegenstück zur Sandbox: E2B führt den Code aus, Browserbase zeigt, ob das Ergebnis im Browser auch funktioniert — für den Bauen-Wizard der Schritt zwischen „läuft“ und „läuft richtig“. Der Einstieg ist ein echter Gratisplan (3 Browser parallel, 1 Browserstunde im Monat, Sitzungen bis 15 Minuten), kein Testzeitraum; danach wird es schnell ein Abo: Developer 20 $/Mo. mit 100 Browserstunden, jede weitere 0,12 $. Wer nur gelegentlich eine Seite abrufen will, nimmt besser die Fetch- und Such-Endpunkte — die brauchen keine Browserstunde.",
+   "en": "The counterpart to the sandbox: E2B runs the code, Browserbase shows whether the result actually works in a browser — for the building wizard, the step between \"runs\" and \"runs right\". Getting started is a genuine free plan (3 concurrent browsers, 1 browser hour a month, sessions up to 15 minutes), not a trial period; after that it quickly becomes a subscription: Developer $20/mo with 100 browser hours, each further hour $0.12. Anyone who only occasionally fetches a page is better served by the fetch and search endpoints — they need no browser hour."
+  },
+  "links": {
+   "home": "https://www.browserbase.com",
+   "docs": "https://docs.browserbase.com",
+   "code": "https://github.com/browserbase/stagehand"
+  },
+  "plans": {
+   "de": "Free 0 $ (3 Browser parallel, 1 Browserstunde/Mo., Sitzungen bis 15 Min., 5 $ Modell-Guthaben) · Developer 20 $/Mo. (25 parallel, 100 Browserstunden, danach 0,12 $/Std.) · Startup 99 $/Mo. (100 parallel, 500 Browserstunden, danach 0,10 $/Std.) · Scale individuell · Suche und Abruf nach Aufrufen, Modelle zum Marktpreis",
+   "en": "Free $0 (3 concurrent browsers, 1 browser hour/mo, sessions up to 15 min, $5 in model tokens) · Developer $20/mo (25 concurrent, 100 browser hours, then $0.12/hr) · Startup $99/mo (100 concurrent, 500 browser hours, then $0.10/hr) · Scale custom · search and fetch billed per call, models at market price"
+  },
+  "billing": ["abo", "api"],
+  "plansChecked": "2026-10-20",
+  "contentChecked": "2026-10-20"
+ },
  "grill-with-docs": {
   "name": "grill-with-docs",
   "vendor": "Matt Pocock",

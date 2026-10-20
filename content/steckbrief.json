@@ -2283,25 +2283,25 @@
    "url": "https://artificialanalysis.ai/models/gpt-6-astra",
    "intel": {
     "v": "53",
-    "rank": "#7/216",
+    "rank": "#7/217",
     "u": 4
    },
    "speed": {
-    "v": "44.2",
-    "rank": "#168/185",
-    "u": 1
+    "v": "68.4",
+    "rank": "#119/185",
+    "u": 2
    },
    "cost": {
     "v": "$10/$50",
-    "rank": "#96/112",
+    "rank": "#98/114",
     "u": 4
    },
    "verb": {
     "v": "60M",
-    "rank": "#45/114",
+    "rank": "#45/116",
     "u": 2
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 200k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
@@ -2342,25 +2342,25 @@
    "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
    "intel": {
     "v": "58",
-    "rank": "#1/216",
+    "rank": "#1/217",
     "u": 4
    },
    "speed": {
-    "v": "95.7",
-    "rank": "#65/185",
+    "v": "94.7",
+    "rank": "#79/185",
     "u": 3
    },
    "cost": {
     "v": "$4/$20",
-    "rank": "#110/112",
+    "rank": "#112/114",
     "u": 4
    },
    "verb": {
     "v": "260M",
-    "rank": "#112/114",
+    "rank": "#114/116",
     "u": 4
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus und Sonnet, 0,10 $ bei Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
@@ -2400,20 +2400,20 @@
    "url": "https://artificialanalysis.ai/models/gemini-4-argon",
    "intel": {
     "v": "53",
-    "rank": "#8/216",
+    "rank": "#8/217",
     "u": 4
    },
    "cost": {
     "v": "$2/$10",
-    "rank": "#81/112",
+    "rank": "#83/114",
     "u": 3
    },
    "verb": {
     "v": "110M",
-    "rank": "#76/114",
+    "rank": "#78/116",
     "u": 3
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API je 1M Token: 3.1 Pro 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · 3.8 Flash 0,75 $/3,75 $ bis 31.12.2026, ab 1.1.2027 1,50 $/7,50 $ · Kontext-Cache 0,20 $ (Pro) bzw. 0,075 $ (Flash), Speicherung 4,50 $ je 1M Token und Stunde · Gratisstufe für 3.8 Flash, für 3.1 Pro nicht · Google AI Pro 19,99 $/Mo.",
@@ -2458,25 +2458,25 @@
    "url": "https://artificialanalysis.ai/models/grok-4-7",
    "intel": {
     "v": "46",
-    "rank": "#30/216",
+    "rank": "#30/217",
     "u": 4
    },
    "speed": {
-    "v": "79.5",
-    "rank": "#93/185",
-    "u": 2
+    "v": "90.7",
+    "rank": "#85/185",
+    "u": 3
    },
    "cost": {
     "v": "$2/$6",
-    "rank": "#100/112",
+    "rank": "#102/114",
     "u": 4
    },
    "verb": {
     "v": "240M",
-    "rank": "#111/114",
+    "rank": "#113/116",
     "u": 4
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · ab 200k Token Prompt das Doppelte: 4 $/12 $ (Cache 1 $)",
@@ -2748,25 +2748,25 @@
    "url": "https://artificialanalysis.ai/models/muse-spark-1-3",
    "intel": {
     "v": "48",
-    "rank": "#24/216",
+    "rank": "#24/217",
     "u": 4
    },
    "speed": {
-    "v": "127.7",
-    "rank": "#37/185",
+    "v": "139.2",
+    "rank": "#34/185",
     "u": 4
    },
    "cost": {
     "v": "$1.25/$4.25",
-    "rank": "#75/112",
+    "rank": "#77/114",
     "u": 3
    },
    "verb": {
     "v": "170M",
-    "rank": "#95/114",
+    "rank": "#97/116",
     "u": 4
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API je 1M Token: Eingabe 1,25 $, Ausgabe 4,25 $, gecachte Eingabe 0,15 $ · Contributor-Stufe 0,10 $/0,20 $ (gecacht 0,002 $), dafür darf Meta mit deinen Prompts und Antworten weitertrainieren · Websuche 2,50 $ je 1.000 Abfragen obendrauf · kein Aufschlag für langen Kontext, kein Mindestumsatz · im Abo über Metas Agent Muse Code, dort nennt Meta die Preise erst in der Anmeldung",
@@ -6620,25 +6620,25 @@
    "url": "https://artificialanalysis.ai/models/claude-fable-5-1",
    "intel": {
     "v": "53",
-    "rank": "#5/216",
+    "rank": "#5/217",
     "u": 4
    },
    "speed": {
-    "v": "71.8",
-    "rank": "#107/185",
+    "v": "68.2",
+    "rank": "#121/185",
     "u": 2
    },
    "cost": {
     "v": "$10/$50",
-    "rank": "#111/112",
+    "rank": "#113/114",
     "u": 4
    },
    "verb": {
     "v": "190M",
-    "rank": "#103/114",
+    "rank": "#105/116",
     "u": 4
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plansChecked": "2026-10-15"
  },

@@ -707,9 +707,9 @@
     "05_tools": {
      "kandidaten": [
       "E2B",
-      "Browserbase"
+      "Browserbase",
+      "Railway"
      ],
-     "luecke": "Deploy-Ziel.",
      "im_wizard": false
     },
     "06_medien": {

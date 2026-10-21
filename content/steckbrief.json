@@ -2380,8 +2380,8 @@
   "plansChecked": "2026-10-06",
   "contentChecked": "2026-10-06"
  },
- "Gemini 4 Argon / 3.8 Flash": {
-  "name": "Gemini 4 Argon / 3.8 Flash",
+ "Gemini 3.1 Pro / 3.8 Flash": {
+  "name": "Gemini 3.1 Pro / 3.8 Flash",
   "vendor": "Google",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
@@ -2390,12 +2390,12 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "Googles aktuelle Frontier-Modelle. Gemini 4 Argon, Ende September 2026 erschienen, liest Text und Bild und antwortet in Text; der riesige Arbeitsspeicher bleibt das Auffälligste: eine Million Token, grob gerechnet mehrere tausend Seiten — eine ganze Codebasis passt in einen Prompt. Im Index von Artificial Analysis zählt Argon mit 53 Punkten zu den führenden Modellen und kostet dort 2 $ je 1M Token Eingabe und 10 $ Ausgabe; wie schnell es schreibt, misst Artificial Analysis noch nicht. Daneben steht 3.8 Flash, das Google ausdrücklich für lange Programmierläufe und Agenten baut: im Index schwächer als Argon, aber schneller und bei einem Bruchteil des Preises.",
-   "en": "Google's current frontier models. Gemini 4 Argon, released at the end of September 2026, reads text and images and answers in text; the enormous working memory remains the striking part: one million tokens, roughly several thousand pages — a whole codebase fits in one prompt. On the Artificial Analysis index Argon counts among the leading models with a score of 53, and costs $2 per 1M tokens of input and $10 of output; how fast it writes, Artificial Analysis does not yet measure. Alongside it stands 3.8 Flash, which Google builds expressly for long coding runs and agents: weaker on the index than Argon, but faster and at a fraction of the price."
+   "de": "Googles Modelle, die Text, Bild, Ton und Video gleichermaßen verstehen. Auffälligstes Merkmal ist der riesige Arbeitsspeicher für Text: eine Million Token, grob gerechnet mehrere tausend Seiten. Damit passt eine ganze Codebasis in einen Prompt. Neben dem Pro-Modell steht seit September 3.8 Flash, das Google ausdrücklich für lange Programmierläufe und Agenten baut. Im Index von Artificial Analysis liegt Flash mit 41 vor Pro mit 30, bei einem Bruchteil des Preises und dem sechstbesten Tempo aller gemessenen Modelle.",
+   "en": "Google's models, which understand text, image, audio and video alike. Their most striking feature is the enormous working memory for text: one million tokens, roughly several thousand pages. A whole codebase fits in one prompt. Alongside the Pro model, September brought 3.8 Flash, which Google builds expressly for long coding runs and agents. On the Artificial Analysis index Flash leads Pro, 41 to 30, at a fraction of the price and with the sixth-fastest output of all measured models."
   },
   "tip": {
-   "de": "Nimm Argon, wenn es auf Qualität ankommt, und 3.8 Flash für lange Läufe und Agenten: Flash ist schneller und deutlich billiger, Argon liegt im Index vorn. Der Flash-Preis gilt so bis zum 31. Dezember 2026 und verdoppelt sich danach. Zu Argon zweierlei beachten: Artificial Analysis misst sein Tempo noch nicht, und ein eigener Preis auf Googles Seiten war heute nicht auffindbar — die Kostenangabe hier stammt von Artificial Analysis.",
-   "en": "Take Argon when quality matters, and 3.8 Flash for long runs and agents: Flash is faster and clearly cheaper, Argon leads on the index. The Flash price holds until 31 December 2026 and doubles after that. Two things to note about Argon: Artificial Analysis does not yet measure its speed, and no price of its own was to be found on Google's pages today — the cost figure here comes from Artificial Analysis."
+   "de": "Nimm 3.8 Flash und nicht Pro: schneller, billiger, im Index besser. Pro bleibt für das, was wirklich den sehr langen Kontext braucht. Zwei Dinge im Blick behalten: Der Flash-Preis gilt so bis zum 31. Dezember 2026 und verdoppelt sich danach. Und Google hat mit Gemini 4 Argon ein stärkeres Modell am Markt, das Artificial Analysis auf 53 Punkte misst, dessen Preis aber in der Entwickler-Preisliste noch fehlt. Ohne Preis bekommt es hier keinen eigenen Steckbrief.",
+   "en": "Take 3.8 Flash over Pro: faster, cheaper, better on the index. Pro stays for what genuinely needs the very long context. Keep two things in view: the Flash price holds until 31 December 2026 and doubles after that. And Google has a stronger model on the market, Gemini 4 Argon, which Artificial Analysis measures at 53 points but whose price is still missing from the developer price list. Without a price it gets no fact sheet of its own here."
   },
   "links": {
    "home": "https://deepmind.google/models/gemini/pro/",
@@ -2405,23 +2405,27 @@
   "icon": "googlegemini",
   "free": false,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+   "url": "https://artificialanalysis.ai/models/gemini-3-8-flash",
    "intel": {
-    "v": "53",
-    "rank": "#8/217",
+    "v": "41",
+    "rank": "#50/225",
     "u": 4
    },
+   "speed": {
+    "v": "234.9",
+    "rank": "#6/225"
+   },
    "cost": {
-    "v": "$2/$10",
-    "rank": "#83/114",
-    "u": 3
+    "v": "$0.75/$3.75",
+    "rank": "#62/225",
+    "u": 4
    },
    "verb": {
-    "v": "110M",
-    "rank": "#78/116",
-    "u": 3
+    "v": "170M",
+    "rank": "#96/225",
+    "u": 4
    },
-   "checked": "2026-10-19"
+   "checked": "2026-10-06"
   },
   "plans": {
    "de": "API je 1M Token: 3.1 Pro 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · 3.8 Flash 0,75 $/3,75 $ bis 31.12.2026, ab 1.1.2027 1,50 $/7,50 $ · Kontext-Cache 0,20 $ (Pro) bzw. 0,075 $ (Flash), Speicherung 4,50 $ je 1M Token und Stunde · Gratisstufe für 3.8 Flash, für 3.1 Pro nicht · Google AI Pro 19,99 $/Mo.",

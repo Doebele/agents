@@ -522,6 +522,14 @@ a newer model of the same line, raise the fact sheet onto it: `name`,
 `blurb`, `tip`, `aa.url` and the values move together, so the sheet never
 describes one generation while showing another's numbers.
 
+Raise it only when the vendor's own pages name the new model and its price,
+and `links` and `plans` can move with it. Otherwise the sheet keeps its
+generation and the new model goes into the pull request as a candidate. On
+12 October a run raised Gemini 3.1 Pro onto Gemini 4 Argon while Google
+published no Argon price: the sheet carried Argon's name and AA numbers over
+3.1 Pro's price list and link, and quoted AA's figure as if it were Google's.
+It went back on 21 October.
+
 Twice a week a run of its own does this: `.github/workflows/aa-modelle.yml`,
 Mondays read by GLM, Thursdays by Kimi, each on its own subscription. It takes
 the ten best distinct models of the leaderboard and refreshes the `aa` block of

@@ -44,7 +44,10 @@ Prüf in `content/steckbrief.json`, ob der Katalog die Familie führt (über
   `"checked"` auf heute, auch wenn sich nichts bewegt hat. Führt AA von
   derselben Linie eine neuere Generation, hebst du den Steckbrief darauf, wie
   CLAUDE.md es beschreibt: `name`, `blurb`, `tip` (beide Sprachen), `aa.url`
-  und die Werte zusammen.
+  und die Werte zusammen. **Aber nur, wenn die Seiten des Herstellers das neue
+  Modell und seinen Preis nennen.** Sonst bleibt das Blatt bei seiner
+  Generation, du frischst dessen Werte auf, und das neue Modell kommt unter
+  „Kandidaten“ in den PR. Ein Preis von AA ist kein Herstellerpreis.
 - **Der Katalog führt sie nicht:** Leg **keinen** Steckbrief an. Nenn das
   Modell mit Rang im PR unter „Kandidaten“. Ob es aufgenommen wird, entscheidet
   der Maintainer.

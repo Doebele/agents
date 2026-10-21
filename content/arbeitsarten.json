@@ -707,9 +707,9 @@
     "05_tools": {
      "kandidaten": [
       "E2B",
+      "Browserbase",
       "Railway"
      ],
-     "luecke": "Testlauf.",
      "im_wizard": false
     },
     "06_medien": {

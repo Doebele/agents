@@ -1097,6 +1097,14 @@
        "en": "sandbox per session"
       },
       "k": "E2B"
+     },
+     {
+      "n": "Browserbase",
+      "v": {
+       "de": "Browser in der Cloud · MCP und SDK",
+       "en": "browsers in the cloud · MCP and SDK"
+      },
+      "k": "Browserbase"
      }
     ]
    },

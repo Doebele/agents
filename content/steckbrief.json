@@ -69,7 +69,7 @@
    "docs": "https://agentskills.io/home",
    "code": "https://github.com/anthropics/skills/tree/main/skills"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-20"
  },
  "tavily-mcp": {
   "name": "Tavily MCP Server",
@@ -455,7 +455,7 @@
    "api"
   ],
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "ChatGPT": {
   "name": "ChatGPT",
@@ -887,6 +887,10 @@
    "code": "https://github.com/odysseus-dev/odysseus"
   },
   "free": true,
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plans": {
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
@@ -1055,6 +1059,10 @@
    "code": "https://github.com/paperclipai/paperclip"
   },
   "free": true,
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plans": {
    "de": "Kostenlos, Open Source (MIT), selbst betrieben",
    "en": "Free, open source (MIT), self-hosted"
@@ -1948,8 +1956,8 @@
   "open": true,
   "free": true,
   "blurb": {
-   "de": "Video aus HTML: Du — oder dein Agent — schreibst HTML und CSS mit Zeitangaben, HyperFrames spult jeden einzelnen Frame in einem Browser und schneidet daraus mit FFmpeg ein MP4. Kein React, kein Bauschritt: ein Remotion-Ersatz, von Haus aus für Agenten gebaut. Zwanzig installierbare Skills decken Abläufe von Produktvideos bis Pull-Request-Erklärfilmern ab, und das Ergebnis ist ein Projektordner zum Weiterbearbeiten, keine flache Videodatei.",
-   "en": "Video from HTML: you — or your agent — write HTML and CSS with timing attributes, HyperFrames seeks every single frame in a browser and cuts an MP4 with FFmpeg. No React, no build step: a Remotion alternative, built for agents from the start. Twenty installable skills cover flows from product videos to pull-request explainers, and the result is a project folder you keep editing, not a flattened video file."
+   "de": "Video aus HTML: Du — oder dein Agent — schreibst HTML und CSS mit Zeitangaben, HyperFrames spult jeden einzelnen Frame in einem Browser und schneidet daraus mit FFmpeg ein MP4. Kein React, kein Bauschritt: ein Remotion-Ersatz, von Haus aus für Agenten gebaut. Einundzwanzig installierbare Skills decken Abläufe von Produktvideos bis Pull-Request-Erklärfilmern ab, und das Ergebnis ist ein Projektordner zum Weiterbearbeiten, keine flache Videodatei.",
+   "en": "Video from HTML: you — or your agent — write HTML and CSS with timing attributes, HyperFrames seeks every single frame in a browser and cuts an MP4 with FFmpeg. No React, no build step: a Remotion alternative, built for agents from the start. Twenty-one installable skills cover flows from product videos to pull-request explainers, and the result is a project folder you keep editing, not a flattened video file."
   },
   "tip": {
    "de": "Gleiches Eingang, gleiches Video: Das Rendern ist bestimmt, kein Live-Abspielen — geeignet für CI und Regressionstests. Apache 2.0 ohne Render-Gebühren; verlangt Node und FFmpeg auf dem Rechner.",
@@ -1965,7 +1973,7 @@
    "en": "Free (Apache 2.0) · no per-render fees and no commercial-use threshold"
   },
   "plansChecked": "2026-10-15",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "ElevenLabs Eleven v3": {
   "name": "ElevenLabs Eleven v3",
@@ -2217,7 +2225,7 @@
    "api"
   ],
   "plansChecked": "2026-10-15",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Anarlog": {
   "name": "Anarlog",
@@ -2283,25 +2291,25 @@
    "url": "https://artificialanalysis.ai/models/gpt-6-astra",
    "intel": {
     "v": "53",
-    "rank": "#7/216",
+    "rank": "#7/217",
     "u": 4
    },
    "speed": {
-    "v": "44.2",
-    "rank": "#168/185",
-    "u": 1
+    "v": "68.4",
+    "rank": "#119/185",
+    "u": 2
    },
    "cost": {
     "v": "$10/$50",
-    "rank": "#96/112",
+    "rank": "#98/114",
     "u": 4
    },
    "verb": {
     "v": "60M",
-    "rank": "#45/114",
+    "rank": "#45/116",
     "u": 2
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 200k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
@@ -2342,25 +2350,25 @@
    "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
    "intel": {
     "v": "58",
-    "rank": "#1/216",
+    "rank": "#1/217",
     "u": 4
    },
    "speed": {
-    "v": "95.7",
-    "rank": "#65/185",
+    "v": "94.7",
+    "rank": "#79/185",
     "u": 3
    },
    "cost": {
     "v": "$4/$20",
-    "rank": "#110/112",
+    "rank": "#112/114",
     "u": 4
    },
    "verb": {
     "v": "260M",
-    "rank": "#112/114",
+    "rank": "#114/116",
     "u": 4
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus und Sonnet, 0,10 $ bei Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
@@ -2400,20 +2408,20 @@
    "url": "https://artificialanalysis.ai/models/gemini-4-argon",
    "intel": {
     "v": "53",
-    "rank": "#8/216",
+    "rank": "#8/217",
     "u": 4
    },
    "cost": {
     "v": "$2/$10",
-    "rank": "#81/112",
+    "rank": "#83/114",
     "u": 3
    },
    "verb": {
     "v": "110M",
-    "rank": "#76/114",
+    "rank": "#78/116",
     "u": 3
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API je 1M Token: 3.1 Pro 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · 3.8 Flash 0,75 $/3,75 $ bis 31.12.2026, ab 1.1.2027 1,50 $/7,50 $ · Kontext-Cache 0,20 $ (Pro) bzw. 0,075 $ (Flash), Speicherung 4,50 $ je 1M Token und Stunde · Gratisstufe für 3.8 Flash, für 3.1 Pro nicht · Google AI Pro 19,99 $/Mo.",
@@ -2458,25 +2466,25 @@
    "url": "https://artificialanalysis.ai/models/grok-4-7",
    "intel": {
     "v": "46",
-    "rank": "#30/216",
+    "rank": "#30/217",
     "u": 4
    },
    "speed": {
-    "v": "79.5",
-    "rank": "#93/185",
-    "u": 2
+    "v": "90.7",
+    "rank": "#85/185",
+    "u": 3
    },
    "cost": {
     "v": "$2/$6",
-    "rank": "#100/112",
+    "rank": "#102/114",
     "u": 4
    },
    "verb": {
     "v": "240M",
-    "rank": "#111/114",
+    "rank": "#113/116",
     "u": 4
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API 2 $/6 $ pro 1M Token (Cache 0,50 $) · ab 200k Token Prompt das Doppelte: 4 $/12 $ (Cache 1 $)",
@@ -2748,25 +2756,25 @@
    "url": "https://artificialanalysis.ai/models/muse-spark-1-3",
    "intel": {
     "v": "48",
-    "rank": "#24/216",
+    "rank": "#24/217",
     "u": 4
    },
    "speed": {
-    "v": "127.7",
-    "rank": "#37/185",
+    "v": "139.2",
+    "rank": "#34/185",
     "u": 4
    },
    "cost": {
     "v": "$1.25/$4.25",
-    "rank": "#75/112",
+    "rank": "#77/114",
     "u": 3
    },
    "verb": {
     "v": "170M",
-    "rank": "#95/114",
+    "rank": "#97/116",
     "u": 4
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plans": {
    "de": "API je 1M Token: Eingabe 1,25 $, Ausgabe 4,25 $, gecachte Eingabe 0,15 $ · Contributor-Stufe 0,10 $/0,20 $ (gecacht 0,002 $), dafür darf Meta mit deinen Prompts und Antworten weitertrainieren · Websuche 2,50 $ je 1.000 Abfragen obendrauf · kein Aufschlag für langen Kontext, kein Mindestumsatz · im Abo über Metas Agent Muse Code, dort nennt Meta die Preise erst in der Anmeldung",
@@ -2880,7 +2888,8 @@
     "u": 4
    },
    "checked": "2026-10-06"
-  }
+  },
+  "contentChecked": "2026-10-20"
  },
  "Motif 3": {
   "name": "Motif 3",
@@ -2911,7 +2920,8 @@
     "u": 4
    },
    "checked": "2026-10-06"
-  }
+  },
+  "contentChecked": "2026-10-20"
  },
  "K2 Horizon 375B A23B": {
   "name": "K2 Horizon 375B A23B",
@@ -2951,7 +2961,8 @@
     "u": 2
    },
    "checked": "2026-10-06"
-  }
+  },
+  "contentChecked": "2026-10-20"
  },
  "Anthropic Agent Skills": {
   "name": "Anthropic Agent Skills",
@@ -3000,7 +3011,7 @@
    "docs": "https://agentskills.io/specification",
    "code": "https://github.com/agentskills/agentskills"
   },
-  "contentChecked": "2026-09-08"
+  "contentChecked": "2026-10-20"
  },
  "skills.sh": {
   "name": "skills.sh",
@@ -3434,7 +3445,7 @@
    "abo"
   ],
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Antigravity 2.0": {
   "name": "Google Antigravity",
@@ -3663,7 +3674,7 @@
    "api"
   ],
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Uizard": {
   "name": "Uizard",
@@ -3745,7 +3756,7 @@
    "code": null
   },
   "icon": "xcode",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "tool-suche": {
   "name": {
@@ -4362,7 +4373,7 @@
    "docs": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin"
   },
   "icon": "deepseek",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Hostinger": {
   "name": "Hostinger",
@@ -4684,7 +4695,7 @@
    "home": "https://www.together.ai"
   },
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Fireworks AI": {
   "name": "Fireworks AI",
@@ -4777,7 +4788,7 @@
    "home": "https://www.runpod.io"
   },
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Lambda": {
   "name": "Lambda",
@@ -4838,7 +4849,7 @@
    "home": "https://vast.ai"
   },
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Hetzner": {
   "name": "Hetzner",
@@ -4979,16 +4990,16 @@
   "accent": "var(--amber)",
   "open": false,
   "blurb": {
-   "de": "Der Sammelanschluss als Abo: über 100 Modelle — geschlossene wie GPT-6 und Claude, offene wie DeepSeek und GLM — hinter einem Zugang für 10 $ im Monat, bezahlt als Festpreis statt pro Token. RouteLLM wählt zur Anfrage das passende Modell, oder du wählst selbst. Agent, Bild- und Videostudio sind mit an Bord; die RouteLLM-API für eigenen Code zehrt vom selben Guthaben. Bezahlt wird in Credits, deren Verbrauch je Modell Abacus nicht veröffentlicht — sichtbar erst nach der Nutzung.",
-   "en": "The bundle deal: 100+ models — closed ones like GPT-6 and Claude, open ones like DeepSeek and GLM — behind one account for $10 a month, a flat fee instead of per-token billing. RouteLLM picks the model for each prompt, or you choose yourself. An agent and an image-and-video studio come along; the RouteLLM API for your own code draws on the same balance. You pay in credits, and Abacus publishes no per-model credit rates — you see the cost only after use."
+   "de": "Der Sammelanschluss als Abo: über 100 Modelle — geschlossene wie GPT-6 und Claude, offene wie DeepSeek und GLM — hinter einem Zugang für 10 $ im Monat, bezahlt als Festpreis statt pro Token. RouteLLM wählt zur Anfrage das passende Modell, oder du wählst selbst. Agent, Bild- und Videostudio sind mit an Bord, und die RouteLLM-API für eigenen Code steckt im selben Abo — sie funktioniert auch als Modellquelle in Claude Code, Codex CLI und Cursor. Bezahlt wird in Credits; wie viele Credits ein Aufruf je Modell im Abo verbraucht, veröffentlicht Abacus nicht — sichtbar erst nach der Nutzung. Für die API dagegen stehen die Tokenpreise je Modell inzwischen auf der Seite.",
+   "en": "The bundle deal: 100+ models — closed ones like GPT-6 and Claude, open ones like DeepSeek and GLM — behind one account for $10 a month, a flat fee instead of per-token billing. RouteLLM picks the model for each prompt, or you choose yourself. An agent and an image-and-video studio come along, and the RouteLLM API for your own code sits inside the same subscription — it also works as a model source in Claude Code, Codex CLI and Cursor. You pay in credits, and Abacus publishes no per-model credit rates for the subscription — you see the cost only after use. For the API, though, per-model token prices are now listed on the page."
   },
   "tip": {
-   "de": "Wer viele Modelle ausprobieren will, ohne eine Token-Rechnung zu fürchten, ist hier richtig; wer Modelle in eigenem Code aufruft und vorab wissen muss, was ein Aufruf kostet, nimmt OpenRouter. Die Modellliste stellt Abacus selbst zusammen und ändert sie — dass ein bestimmtes Modell bleibt, ist nicht zugesagt.",
-   "en": "Right if you want to try many models without fearing a token bill; if you call models from your own code and need to know what a call costs before you make it, take OpenRouter. Abacus assembles the model list and changes it — no promise that a particular model stays."
+   "de": "Wer viele Modelle ausprobieren will, ohne eine Token-Rechnung zu fürchten, ist hier richtig. Im Basic-Tarif ist der Agent auf drei Unterhaltungen im Monat begrenzt — wer ihn ernsthaft nutzen will, landet bei Pro. Die Modellliste stellt Abacus selbst zusammen und ändert sie — dass ein bestimmtes Modell bleibt, ist nicht zugesagt.",
+   "en": "Right if you want to try many models without fearing a token bill. On Basic the agent is capped at three conversations a month — anyone who means to use it seriously ends up on Pro. Abacus assembles the model list and changes it — no promise that a particular model stays."
   },
   "plans": {
-   "de": "Basic 10 $/Nutzer/Mo. (20.000 Credits) · Pro 20 $/Nutzer/Mo. (30.000 Credits, Agent und Studio ohne Begrenzung, SuperComputer) · Enterprise ab 5.000 $ · RouteLLM-API zehrt von denselben Credits",
-   "en": "Basic $10/user/mo (20,000 credits) · Pro $20/user/mo (30,000 credits, unrestricted agent and studio, SuperComputer) · Enterprise from $5,000 · RouteLLM API draws on the same credits"
+   "de": "Basic 10 $/Nutzer/Mo. (20.000 Credits, Agent auf 3 Unterhaltungen/Mo. begrenzt, erster Monat 7 $) · Pro 20 $/Nutzer/Mo. (30.000 Credits, Agent und Studio ohne Begrenzung, SuperComputer) · Enterprise ohne veröffentlichten Preis · RouteLLM-API im Abo enthalten, Tokenpreise je Modell auf der API-Seite",
+   "en": "Basic $10/user/mo (20,000 credits, agent capped at 3 conversations/mo, first month $7) · Pro $20/user/mo (30,000 credits, unrestricted agent and studio, SuperComputer) · Enterprise with no published price · RouteLLM API included in the subscription, per-model token prices on the API page"
   },
   "billing": [
    "abo",
@@ -4998,8 +5009,8 @@
    "home": "https://abacus.ai",
    "docs": "https://abacus.ai/help/chatllm-ai-super-assistant/introduction"
   },
-  "plansChecked": "2026-10-15",
-  "contentChecked": "2026-10-13"
+  "plansChecked": "2026-10-20",
+  "contentChecked": "2026-10-20"
  },
  "DeepSeek-Reasonix": {
   "name": "DeepSeek-Reasonix",
@@ -5032,7 +5043,7 @@
   ],
   "plansChecked": "2026-10-15",
   "icon": "deepseek",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "archify": {
   "name": "archify",
@@ -5061,7 +5072,7 @@
    "en": "Free (MIT)"
   },
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Distilly": {
   "name": "Distilly",
@@ -5123,7 +5134,7 @@
    "api"
   ],
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "OpenPencil": {
   "name": "OpenPencil",
@@ -5152,7 +5163,7 @@
    "en": "Free (MIT)"
   },
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "customer-research": {
   "name": "customer-research",
@@ -5181,7 +5192,7 @@
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "cro": {
   "name": "cro",
@@ -5210,7 +5221,7 @@
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "video": {
   "name": "video",
@@ -5344,7 +5355,7 @@
    "api"
   ],
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Glaze": {
   "name": "Glaze",
@@ -5405,7 +5416,7 @@
    "en": "Free, open source (Apache-2.0) · Berd talks to the Goose backend; neither the product page nor the repository names a price"
   },
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Goose": {
   "name": "Goose",
@@ -5439,7 +5450,7 @@
    "api"
   ],
   "plansChecked": "2026-10-15",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
  },
  "Pi": {
   "name": "Pi",
@@ -5536,7 +5547,38 @@
    "en": "Free (Apache-2.0) · self-hostable, early instance at buzz.xyz"
   },
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-25"
+  "contentChecked": "2026-10-20"
+ },
+ "Browserbase": {
+  "name": "Browserbase",
+  "vendor": "Browserbase",
+  "cat": {
+   "de": "Cloud-Browser · Baustein 05",
+   "en": "Cloud browser · Block 05"
+  },
+  "accent": "var(--pink)",
+  "open": false,
+  "free": true,
+  "blurb": {
+   "de": "Der Testlauf für das, was der Agent gebaut hat: Browserbase stellt echte Browser in der Cloud, die der Agent fernsteuert — Seite öffnen, klicken, tippen, lesen, Bildschirmfotos machen. Damit prüft er die fertige Website so, wie ein Mensch es täte, statt nur den Code zu lesen: Lädt die Seite, funktioniert das Formular, was passiert nach dem Login? Jede Sitzung lässt sich live mitansehen und später als Aufzeichnung mit Protokollen wieder abspielen. Angebunden über SDKs für TypeScript, Python und Go oder über einen gehosteten MCP-Server, der jedem MCP-fähigen Agenten navigate, act, observe und extract als Werkzeuge gibt; dahinter steckt Stagehand, das hauseigene Browser-Framework, das als Open Source (MIT) auch mit dem eigenen Chrome läuft. Suche und Abruf einzelner Seiten als Markdown kommen ohne ganzen Browser aus.",
+   "en": "The test run for whatever the agent has built: Browserbase provides real browsers in the cloud that the agent drives remotely — open a page, click, type, read, take screenshots. That is how it checks the finished website the way a person would instead of only reading the code: does the page load, does the form work, what happens after login? Every session can be watched live and replayed later as a recording with logs. It connects through SDKs for TypeScript, Python and Go, or through a hosted MCP server that gives any MCP-capable agent navigate, act, observe and extract as tools; underneath sits Stagehand, the in-house browser framework, which as open source (MIT) also runs against your own Chrome. Search and fetching single pages as markdown work without a full browser."
+  },
+  "tip": {
+   "de": "Das Gegenstück zur Sandbox: E2B führt den Code aus, Browserbase zeigt, ob das Ergebnis im Browser auch funktioniert — für den Bauen-Wizard der Schritt zwischen „läuft“ und „läuft richtig“. Der Einstieg ist ein echter Gratisplan (3 Browser parallel, 1 Browserstunde im Monat, Sitzungen bis 15 Minuten), kein Testzeitraum; danach wird es schnell ein Abo: Developer 20 $/Mo. mit 100 Browserstunden, jede weitere 0,12 $. Wer nur gelegentlich eine Seite abrufen will, nimmt besser die Fetch- und Such-Endpunkte — die brauchen keine Browserstunde.",
+   "en": "The counterpart to the sandbox: E2B runs the code, Browserbase shows whether the result actually works in a browser — for the building wizard, the step between \"runs\" and \"runs right\". Getting started is a genuine free plan (3 concurrent browsers, 1 browser hour a month, sessions up to 15 minutes), not a trial period; after that it quickly becomes a subscription: Developer $20/mo with 100 browser hours, each further hour $0.12. Anyone who only occasionally fetches a page is better served by the fetch and search endpoints — they need no browser hour."
+  },
+  "links": {
+   "home": "https://www.browserbase.com",
+   "docs": "https://docs.browserbase.com",
+   "code": "https://github.com/browserbase/stagehand"
+  },
+  "plans": {
+   "de": "Free 0 $ (3 Browser parallel, 1 Browserstunde/Mo., Sitzungen bis 15 Min., 5 $ Modell-Guthaben) · Developer 20 $/Mo. (25 parallel, 100 Browserstunden, danach 0,12 $/Std.) · Startup 99 $/Mo. (100 parallel, 500 Browserstunden, danach 0,10 $/Std.) · Scale individuell · Suche und Abruf nach Aufrufen, Modelle zum Marktpreis",
+   "en": "Free $0 (3 concurrent browsers, 1 browser hour/mo, sessions up to 15 min, $5 in model tokens) · Developer $20/mo (25 concurrent, 100 browser hours, then $0.12/hr) · Startup $99/mo (100 concurrent, 500 browser hours, then $0.10/hr) · Scale custom · search and fetch billed per call, models at market price"
+  },
+  "billing": ["abo", "api"],
+  "plansChecked": "2026-10-20",
+  "contentChecked": "2026-10-20"
  },
  "grill-with-docs": {
   "name": "grill-with-docs",
@@ -6052,7 +6094,7 @@
    "docs": "https://docs.firecrawl.dev/sdks/cli",
    "code": "https://github.com/firecrawl/cli"
   },
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-20"
  },
  "playwright-cli": {
   "name": "playwright-cli",
@@ -6164,7 +6206,7 @@
    "docs": "https://claude.com/marketplace/plugins/superpowers"
   },
   "plansChecked": "2026-10-19",
-  "contentChecked": "2026-09-20"
+  "contentChecked": "2026-10-20"
  },
  "claude-md-management": {
   "name": "claude-md-management",
@@ -6616,25 +6658,25 @@
    "url": "https://artificialanalysis.ai/models/claude-fable-5-1",
    "intel": {
     "v": "53",
-    "rank": "#5/216",
+    "rank": "#5/217",
     "u": 4
    },
    "speed": {
-    "v": "71.8",
-    "rank": "#107/185",
+    "v": "68.2",
+    "rank": "#121/185",
     "u": 2
    },
    "cost": {
     "v": "$10/$50",
-    "rank": "#111/112",
+    "rank": "#113/114",
     "u": 4
    },
    "verb": {
     "v": "190M",
-    "rank": "#103/114",
+    "rank": "#105/116",
     "u": 4
    },
-   "checked": "2026-10-15"
+   "checked": "2026-10-19"
   },
   "plansChecked": "2026-10-15"
  },

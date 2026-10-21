@@ -5550,10 +5550,7 @@
    "de": "Free 0 $ (3 Browser parallel, 1 Browserstunde/Mo., Sitzungen bis 15 Min., 5 $ Modell-Guthaben) · Developer 20 $/Mo. (25 parallel, 100 Browserstunden, danach 0,12 $/Std.) · Startup 99 $/Mo. (100 parallel, 500 Browserstunden, danach 0,10 $/Std.) · Scale individuell · Suche und Abruf nach Aufrufen, Modelle zum Marktpreis",
    "en": "Free $0 (3 concurrent browsers, 1 browser hour/mo, sessions up to 15 min, $5 in model tokens) · Developer $20/mo (25 concurrent, 100 browser hours, then $0.12/hr) · Startup $99/mo (100 concurrent, 500 browser hours, then $0.10/hr) · Scale custom · search and fetch billed per call, models at market price"
   },
-  "billing": [
-   "abo",
-   "api"
-  ],
+  "billing": ["abo", "api"],
   "plansChecked": "2026-10-20",
   "contentChecked": "2026-10-20"
  },

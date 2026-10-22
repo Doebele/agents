@@ -420,7 +420,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-06"
  },
  "Agent SDK": {
@@ -964,7 +964,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-09-29"
  },
  "LangChain": {
@@ -999,7 +999,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-09-29"
  },
  "CrewAI": {
@@ -1298,14 +1298,14 @@
    "checked": "2026-10-06"
   },
   "plans": {
-   "de": "Open-Weight (Apache 2.0) · API 0,50 $ Eingabe / 1,50 $ Ausgabe pro 1M Token (die Preisseite nennt das Modell «Mistral Large»), Stapelbetrieb zum halben Preis, zwischengespeicherte Eingabe 90 % günstiger · Gratisstufe mit 10 $ API-Guthaben je Monat · Vibe Pro 14,99 $/Mo. (Studenten 5,99 $), Vibe Team 24,99 $/Nutzer/Mo. ab 50 $/Mo.",
-   "en": "Open-weight (Apache 2.0) · API $0.50 input / $1.50 output per 1M tokens (the pricing page calls the model «Mistral Large»), batch at half price, cached input 90% cheaper · free tier with $10 a month in API credits · Vibe Pro $14.99/mo (students $5.99), Vibe Team $24.99/user/mo with a $50/mo minimum"
+   "de": "Open-Weight (Apache 2.0) · API 0,50 $ Eingabe / 1,50 $ Ausgabe pro 1M Token (die Preisseite nennt das Modell «Mistral Large»), Stapelbetrieb zum halben Preis, zwischengespeicherte Eingabe bis zu 90 % günstiger · Gratisstufe mit eingeschränktem Zugang zu Vibe und Studio · Vibe Pro 14,99 $/Mo. (Studenten 5,99 $), Vibe Team 24,99 $/Nutzer/Mo. ab 50 $/Mo. · Preise ohne Steuern",
+   "en": "Open-weight (Apache 2.0) · API $0.50 input / $1.50 output per 1M tokens (the pricing page calls the model «Mistral Large»), batch at half price, cached input up to 90% cheaper · free tier with limited access to Vibe and Studio · Vibe Pro $14.99/mo (students $5.99), Vibe Team $24.99/user/mo with a $50/mo minimum · prices exclude taxes"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-13"
  },
  "Llama 4": {
@@ -1354,7 +1354,7 @@
    "de": "Kostenlos (Open-Weight, Llama-4-Community-Lizenz), selbst gehostet · ab 700 Mio. monatlich aktiven Nutzern verlangt Meta eine eigene Lizenz",
    "en": "Free (open-weight, Llama 4 Community License), self-hosted · above 700 million monthly active users Meta requires a separate licence"
   },
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-13"
  },
  "LM Studio": {
@@ -1387,7 +1387,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-09-29",
   "icon": "lmstudio"
  },
@@ -2498,7 +2498,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-13"
  },
  "Qwen3.8-Max": {
@@ -2673,7 +2673,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-10"
  },
  "GLM-5.3": {
@@ -2731,7 +2731,7 @@
    "api",
    "abo"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-13"
  },
  "Muse Spark 1.3": {
@@ -4398,8 +4398,8 @@
    "en": "Sensible when you want domain, email and storage from one place. For a site an agent builds, a Git-based host is usually more convenient."
   },
   "plans": {
-   "de": "Webhosting Premium 2,99 $ · Unlimited 3,99 $ · Cloud Startup 7,99 $/Mo., aber nur bei 48 Monaten Vorauszahlung; Verlängerung 10,99/16,99/25,99 $ · Agency Startup 29 $/Mo. (24 Monate, Verlängerung 49 $) · keine Gratisstufe, nur 30 Tage Geld-zurück",
-   "en": "Web hosting Premium $2.99 · Unlimited $3.99 · Cloud Startup $7.99/mo, but only when you pay 48 months upfront; renewal $10.99/$16.99/$25.99 · Agency Startup $29/mo (24 months, renewal $49) · no free tier, only a 30-day money-back guarantee"
+   "de": "Webhosting Premium 2,49 $ · Unlimited 3,49 $ · Cloud Startup 7,99 $/Mo., aber nur bei 48 Monaten Vorauszahlung; Verlängerung 10,99/16,99/25,99 $ · Agency Startup 29 $/Mo. (24 Monate, Verlängerung 49 $) · keine Gratisstufe, nur 30 Tage Geld-zurück",
+   "en": "Web hosting Premium $2.49 · Unlimited $3.49 · Cloud Startup $7.99/mo, but only when you pay 48 months upfront; renewal $10.99/$16.99/$25.99 · Agency Startup $29/mo (24 months, renewal $49) · no free tier, only a 30-day money-back guarantee"
   },
   "billing": [
    "abo"
@@ -4407,7 +4407,7 @@
   "links": {
    "home": "https://www.hostinger.com"
   },
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-09-26",
   "icon": "hostinger"
  },
@@ -4474,7 +4474,7 @@
   "links": {
    "home": "https://www.ionos.de"
   },
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-09-26",
   "icon": "ionos"
  },
@@ -4757,7 +4757,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-22",
   "links": {
    "home": "https://groq.com"
   },
@@ -4812,8 +4812,8 @@
    "en": "When a model should run for a while — fine-tuning, continuous duty — dedicated cards are calmer than a marketplace. Billed per GPU hour."
   },
   "plans": {
-   "de": "Je GPU-Stunde, on demand: V100 0,79 $ · A100 SXM 80 GB 2,79 $ · H100 SXM 3,99 $ · B200 SXM6 6,69 $ · 1-Click-Cluster ab 5,54 $ (H100) bzw. 8,87 $ (B200) je GPU-Stunde · keine Gratisstufe",
-   "en": "Per GPU hour, on demand: V100 $0.79 · A100 SXM 80 GB $2.79 · H100 SXM $3.99 · B200 SXM6 $6.69 · 1-Click Clusters from $5.54 (H100) or $8.87 (B200) per GPU hour · no free tier"
+   "de": "Je GPU-Stunde, on demand: V100 0,79 $ · A100 SXM 80 GB 2,79 $ · H100 SXM ab 3,99 $ · B200 SXM6 ab 6,69 $ (je nach Konfiguration etwas mehr) · 1-Click-Cluster ab 16 GPUs, 2 Wochen bis 1 Jahr Laufzeit: H100 6,16 $, B200 9,86 $ je GPU-Stunde, bei 256 GPUs 5,54 $ bzw. 8,87 $ · keine Gratisstufe",
+   "en": "Per GPU hour, on demand: V100 $0.79 · A100 SXM 80 GB $2.79 · H100 SXM from $3.99 · B200 SXM6 from $6.69 (slightly more depending on configuration) · 1-Click Clusters from 16 GPUs, 2 weeks to 1 year: H100 $6.16, B200 $9.86 per GPU hour, at 256 GPUs $5.54 and $8.87 · no free tier"
   },
   "billing": [
    "api"
@@ -4821,7 +4821,7 @@
   "links": {
    "home": "https://lambda.ai"
   },
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-17"
  },
  "Vast.ai": {
@@ -4874,8 +4874,8 @@
    "en": "The price breaker for everything around the model — interfaces, databases, web services. Monthly or hourly price, no token billing."
   },
   "plans": {
-   "de": "Stundengenau abgerechnet, je Instanz gedeckelt auf den Monatspreis — nie mehr als der Monatspreis, auch bei durchgehendem Betrieb. Die Serverpreise selbst stehen nur im Preisrechner der Konsole, nicht als Text auf der Preisseite.",
-   "en": "Billed by the hour, capped per instance at the monthly price — never more than the monthly price, even running around the clock. The server prices themselves live only in the console's price calculator, not as text on the pricing page."
+   "de": "Cloud-Server ab (ohne USt.): Cost-Optimized 5,99 €/Mo., Regular Performance 6,49 €/Mo., General Purpose mit dedizierten vCPUs 43,49 €/Mo. · stundengenau abgerechnet, je Instanz gedeckelt auf den Monatspreis — nie mehr als der Monatspreis, auch bei durchgehendem Betrieb · bei den Cost-Optimized-Servern zeigt die Seite derzeit den Hinweis «Currently not available»",
+   "en": "Cloud servers from (excl. VAT): Cost-Optimized €5.99/mo, Regular Performance €6.49/mo, General Purpose with dedicated vCPUs €43.49/mo · billed by the hour, capped per instance at the monthly price — never more than the monthly price, even running around the clock · the page currently shows a «Currently not available» badge at the Cost-Optimized servers"
   },
   "billing": [
    "api"
@@ -4884,7 +4884,7 @@
   "links": {
    "home": "https://www.hetzner.com"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-09-26"
  },
  "Modal": {
@@ -4917,7 +4917,7 @@
   "links": {
    "home": "https://modal.com"
   },
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-17"
  },
  "Replicate": {
@@ -5105,7 +5105,7 @@
    "en": "Free (MIT)"
   },
   "contentChecked": "2026-09-29",
-  "plansChecked": "2026-10-05"
+  "plansChecked": "2026-10-22"
  },
  "OpenViking": {
   "name": "OpenViking",
@@ -5320,7 +5320,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-09-29"
  },
  "Osaurus": {
@@ -5580,7 +5580,10 @@
    "de": "Free 0 $ (3 Browser parallel, 1 Browserstunde/Mo., Sitzungen bis 15 Min., 5 $ Modell-Guthaben) · Developer 20 $/Mo. (25 parallel, 100 Browserstunden, danach 0,12 $/Std.) · Startup 99 $/Mo. (100 parallel, 500 Browserstunden, danach 0,10 $/Std.) · Scale individuell · Suche und Abruf nach Aufrufen, Modelle zum Marktpreis",
    "en": "Free $0 (3 concurrent browsers, 1 browser hour/mo, sessions up to 15 min, $5 in model tokens) · Developer $20/mo (25 concurrent, 100 browser hours, then $0.12/hr) · Startup $99/mo (100 concurrent, 500 browser hours, then $0.10/hr) · Scale custom · search and fetch billed per call, models at market price"
   },
-  "billing": ["abo", "api"],
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-10-20",
   "contentChecked": "2026-10-20"
  },
@@ -5788,7 +5791,7 @@
    "de": "Kostenlos (Apache-2.0)",
    "en": "Free (Apache-2.0)"
   },
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-09-26"
  },
  "Notion": {
@@ -6713,7 +6716,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-05"
  },
  "Muse Code": {

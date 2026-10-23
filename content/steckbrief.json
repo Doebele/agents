@@ -4021,6 +4021,9 @@
    "de": "Kostenlos, Open Source (MIT)",
    "en": "Free, open source (MIT)"
   },
+  "billing": [
+   "api"
+  ],
   "plansChecked": "2026-10-16",
   "contentChecked": "2026-10-16"
  },
@@ -5105,6 +5108,9 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
+  "billing": [
+   "api"
+  ],
   "contentChecked": "2026-09-29",
   "plansChecked": "2026-10-22"
  },
@@ -5167,6 +5173,10 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-10-08",
   "contentChecked": "2026-10-20"
  },

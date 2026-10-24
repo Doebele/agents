@@ -429,6 +429,7 @@
       "skill-creator",
       "eigene-skills",
       "Impeccable",
+      "bauhaus-digital",
       "archify",
       "vermenschlichen",
       "humanizer"
@@ -665,6 +666,7 @@
       "skill-creator",
       "eigene-skills",
       "Impeccable",
+      "bauhaus-digital",
       "archify",
       "qa",
       "claude-md-management",
@@ -681,8 +683,8 @@
       "Anthropic Agent Skills"
      ],
      "notiz": {
-      "de": "Hausregeln schreibt claude-md-management fort, den Ablauf geben feature-dev und superpowers vor, qa prüft danach. security-audit gehört ans Ende: einmal vor dem Ausliefern, nicht nebenbei.",
-      "en": "claude-md-management keeps the house rules current, feature-dev and superpowers set the procedure, qa checks afterwards. security-audit belongs at the end: once before you ship, not alongside."
+      "de": "Hausregeln schreibt claude-md-management fort, den Ablauf geben feature-dev und superpowers vor, qa prüft danach. security-audit gehört ans Ende: einmal vor dem Ausliefern, nicht nebenbei. bauhaus-digital ordnet das Aussehen, bevor gebaut wird: ein erklärter Kontrast, ein Raster, ein knapper Farbhaushalt — Methode, kein Bauhaus-Retro.",
+      "en": "claude-md-management keeps the house rules current, feature-dev and superpowers set the procedure, qa checks afterwards. security-audit belongs at the end: once before you ship, not alongside. bauhaus-digital orders the look before anything is built: one declared contrast, one grid, a scarce color budget — method, not Bauhaus retro."
      }
     },
     "04_mcp": {
@@ -823,6 +825,7 @@
        "03_skills": {
         "kandidaten": [
          "Impeccable",
+         "bauhaus-digital",
          "scroll-craft",
          "archify",
          "eigene-skills"
@@ -831,8 +834,8 @@
          "Impeccable"
         ],
         "notiz": {
-         "de": "Impeccable arbeitet am Aussehen und geht den Entwurf mit dir durch. scroll-craft macht das Scrollen selbst zur Animation — die auffälligere Wahl, aber sie verlangt Node, ffmpeg und einen Browser für die Prüfung.",
-         "en": "Impeccable works on the look and walks the draft through with you. scroll-craft turns the scroll itself into the animation — the louder choice, but it wants Node, ffmpeg and a browser for its verification pass."
+         "de": "Impeccable arbeitet am Aussehen und geht den Entwurf mit dir durch. scroll-craft macht das Scrollen selbst zur Animation — die auffälligere Wahl, aber sie verlangt Node, ffmpeg und einen Browser für die Prüfung. bauhaus-digital legt die Ordnung darunter: Kontrast, Raster, Typo, Farbhaushalt — als Methode, nicht als Bauhaus-Retro.",
+         "en": "Impeccable works on the look and walks the draft through with you. scroll-craft turns the scroll itself into the animation — the louder choice, but it wants Node, ffmpeg and a browser for its verification pass. bauhaus-digital sets the order underneath: contrast, grid, type, color budget — as method, not Bauhaus retro."
         }
        }
       },

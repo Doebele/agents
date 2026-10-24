@@ -472,6 +472,14 @@
       "k": "Impeccable"
      },
      {
+      "n": "Bauhaus Digital",
+      "v": {
+       "de": "Design-Methode",
+       "en": "design method"
+      },
+      "k": "bauhaus-digital"
+     },
+     {
       "n": "skill-creator",
       "v": {
        "de": "eigene bauen",

@@ -1603,7 +1603,7 @@
    "docs": "https://bfl.ai/models/flux-2",
    "code": "https://github.com/black-forest-labs/flux2"
   },
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "Qwen-Image": {
   "name": "Qwen-Image",
@@ -1638,8 +1638,8 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "Googles Bildmodell-Reihe — der Name, unter dem die Gemini-Modelle Bilder erzeugen und bearbeiten. Vier Ausbaustufen: Nano Banana 2 Lite ist das schnellste und billigste, Nano Banana 2 der Allrounder mit 4K und zuverlässiger Schrift im Bild, Nano Banana Pro die Studio-Variante auf Gemini 3 für die kniffligen Fälle. Das ursprüngliche Nano Banana (Gemini 2.5 Flash Image) läuft noch bis zum 2. Oktober 2026 und wird dann abgeschaltet. Es ersetzt Imagen, das Google inzwischen ganz eingestellt hat — die API-Doku sagt dazu nur noch: „Imagen is shut down … Use Nano Banana.“ Erreichbar über die Gemini-App, Google AI Studio und die Gemini-API.",
-   "en": "Google's image model line — the name under which the Gemini models generate and edit images. Four levels: Nano Banana 2 Lite is the fastest and cheapest, Nano Banana 2 the all-rounder with 4K and reliable lettering, Nano Banana Pro the studio variant on Gemini 3 for the tricky cases. The original Nano Banana (Gemini 2.5 Flash Image) runs until 2 October 2026 and is then switched off. It replaces Imagen, which Google has since shut down entirely — the API docs say only: “Imagen is shut down … Use Nano Banana.” Reachable through the Gemini app, Google AI Studio and the Gemini API."
+   "de": "Googles Bildmodell-Reihe — der Name, unter dem die Gemini-Modelle Bilder erzeugen und bearbeiten. Mehrere Ausbaustufen: Nano Banana 2.1 ist laut Google-Doku die Hauptwahl für neue Projekte, Nano Banana 2 Lite das schnellste und billigste, Nano Banana 2 die Vorgängergeneration, Nano Banana Pro die Studio-Variante auf Gemini 3 für die kniffligen Fälle. Das ursprüngliche Nano Banana (Gemini 2.5 Flash Image) führt die Doku nur noch als Altmodell. Es ersetzt Imagen, das Google inzwischen ganz eingestellt hat — die API-Doku sagt dazu nur noch: „Imagen is shut down … Use Nano Banana.“ Erreichbar über die Gemini-App, Google AI Studio und die Gemini-API.",
+   "en": "Google's image model line — the name under which the Gemini models generate and edit images. Several levels: per Google's docs Nano Banana 2.1 is the main choice for new projects, Nano Banana 2 Lite the fastest and cheapest, Nano Banana 2 the previous generation, Nano Banana Pro the studio variant on Gemini 3 for the tricky cases. The original Nano Banana (Gemini 2.5 Flash Image) is listed in the docs only as a legacy model. It replaces Imagen, which Google has since shut down entirely — the API docs say only: “Imagen is shut down … Use Nano Banana.” Reachable through the Gemini app, Google AI Studio and the Gemini API."
   },
   "tip": {
    "de": "Zum Ausprobieren reichen die Gemini-App oder Google AI Studio — beides ohne API-Schlüssel. In der API selbst gibt es keine Gratisstufe; wer nur gelegentlich ein Bild braucht, ist in der App besser aufgehoben.",
@@ -1660,7 +1660,7 @@
   },
   "icon": "google",
   "plansChecked": "2026-10-15",
-  "contentChecked": "2026-09-27"
+  "contentChecked": "2026-10-24"
  },
  "Ideogram": {
   "name": "Ideogram",
@@ -2156,7 +2156,7 @@
    "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 12 $/Mo. · Growth/Enterprise ab 18 $/Nutzer/Mo.",
    "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $12/mo · Growth/Enterprise from $18/user/mo"
   },
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "OpenWhispr": {
   "name": "OpenWhispr",
@@ -2193,7 +2193,7 @@
    "abo"
   ],
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "FreeFlow": {
   "name": "FreeFlow",
@@ -3642,7 +3642,7 @@
    "code": null
   },
   "icon": "anthropic",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "OpenDesign": {
   "name": "OpenDesign",
@@ -4219,7 +4219,7 @@
   "links": {
    "home": "https://www.blackmagicdesign.com/products/davinciresolve"
   },
-  "contentChecked": "2026-09-26",
+  "contentChecked": "2026-10-24",
   "icon": "davinciresolve"
  },
  "Avid Media Composer": {
@@ -4246,7 +4246,7 @@
   "links": {
    "home": "https://www.avid.com/media-composer"
   },
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "CapCut": {
   "name": {
@@ -4272,7 +4272,7 @@
   "links": {
    "home": "https://www.capcut.com"
   },
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "Edits": {
   "name": "Edits",
@@ -4412,7 +4412,7 @@
    "home": "https://www.hostinger.com"
   },
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-09-26",
+  "contentChecked": "2026-10-24",
   "icon": "hostinger"
  },
  "Strato": {
@@ -4479,7 +4479,7 @@
    "home": "https://www.ionos.de"
   },
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-09-26",
+  "contentChecked": "2026-10-24",
   "icon": "ionos"
  },
  "Netlify": {
@@ -4576,7 +4576,7 @@
    "home": "https://www.cloudflare.com/products/pages/"
   },
   "icon": "cloudflarepages",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-24"
  },
  "Render": {
   "name": "Render",
@@ -4651,8 +4651,8 @@
   "open": true,
   "free": true,
   "blurb": {
-   "de": "Übernimmt die Rolle von Netlify oder Render, läuft aber auf einem Server, den du selbst mietest: Du verbindest die Maschine per SSH, danach baut Coolify aus deinem Codestand Seiten, Anwendungen und Datenbanken, besorgt die HTTPS-Zertifikate und legt Sicherungen an. Über 280 fertige Dienste — von WordPress bis Ghost — sind mit einem Klick installiert.",
-   "en": "Takes the role of Netlify or Render, but runs on a server you rent yourself: you connect the machine over SSH, and from then on Coolify builds sites, applications and databases from your code, fetches the HTTPS certificates and takes backups. Over 280 ready-made services — from WordPress to Ghost — install with one click."
+   "de": "Übernimmt die Rolle von Netlify oder Render, läuft aber auf einem Server, den du selbst mietest: Du verbindest die Maschine per SSH, danach baut Coolify aus deinem Codestand Seiten, Anwendungen und Datenbanken, besorgt die HTTPS-Zertifikate und legt Sicherungen an. Über 350 fertige Dienste — von WordPress bis Ghost — sind mit einem Klick installiert.",
+   "en": "Takes the role of Netlify or Render, but runs on a server you rent yourself: you connect the machine over SSH, and from then on Coolify builds sites, applications and databases from your code, fetches the HTTPS certificates and takes backups. Over 350 ready-made services — from WordPress to Ghost — install with one click."
   },
   "tip": {
    "de": "Der Baustein für Leser, die selbst betreiben wollen: keine Verbrauchsrechnung, keine Grenze von außen, dafür trägst du den Betrieb. Die Software ist gratis, der Server nicht, und Linux, SSH und Docker musst du dir zutrauen — wer nur eine Seite online bringen will, ist mit Netlify schneller fertig.",
@@ -4672,7 +4672,7 @@
    "code": "https://github.com/coollabsio/coolify"
   },
   "icon": "coolify",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "Together AI": {
   "name": "Together AI",
@@ -4889,7 +4889,7 @@
    "home": "https://www.hetzner.com"
   },
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "Modal": {
   "name": "Modal",
@@ -4986,7 +4986,7 @@
    "home": "https://openrouter.ai"
   },
   "plansChecked": "2026-09-24",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "Abacus.AI": {
   "name": "Abacus.AI",
@@ -5294,7 +5294,7 @@
    "en": "Free (MIT)"
   },
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "ComfyUI": {
   "name": "ComfyUI",
@@ -5332,7 +5332,7 @@
    "api"
   ],
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-24"
  },
  "Osaurus": {
   "name": "Osaurus",
@@ -5625,7 +5625,7 @@
    "en": "Free (open source)"
   },
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "research": {
   "name": "research",
@@ -5654,7 +5654,7 @@
    "en": "Free (open source)"
   },
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "qa": {
   "name": "qa",
@@ -5683,7 +5683,7 @@
    "en": "Free (open source)"
   },
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "to-questionnaire": {
   "name": "to-questionnaire",
@@ -5712,7 +5712,7 @@
    "en": "Free (open source)"
   },
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "Conductor": {
   "name": "Conductor",
@@ -5774,7 +5774,7 @@
    "en": "Free (MIT) · local PGLite or your own Postgres"
   },
   "plansChecked": "2026-10-08",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "BRAIN.md": {
   "name": "BRAIN.md",
@@ -5803,7 +5803,7 @@
    "en": "Free (Apache-2.0)"
   },
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "Notion": {
   "name": "Notion",
@@ -5841,7 +5841,7 @@
    "de": "Gratis · Plus 10 $/Mitglied/Mo. (120 $/Jahr) · Business 20 $/Mitglied/Mo. (240 $/Jahr) · eigene Agenten nach Credits (10 $/1.000)",
    "en": "Free · Plus $10/member/mo ($120/yr) · Business $20/member/mo ($240/yr) · custom agents by credits ($10/1,000)"
   },
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "Ornith 1.5": {
   "name": "Ornith 1.5",
@@ -5926,7 +5926,7 @@
    "docs": "https://docs.platform.statista.ai/mcp-server/introduction"
   },
   "icon": "statista",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "n8n": {
   "name": "n8n",
@@ -5967,8 +5967,8 @@
   "open": true,
   "free": true,
   "blurb": {
-   "de": "Das offizielle Skill-Paket des n8n-Teams: dreizehn Fach-Skills für den ganzen Lebenslauf eines Ablaufs — Knoten konfigurieren, Ausdrücke schreiben, Schleifen und Paginierung, AI-Agenten, Zugangsdaten, Fehlerbehandlung, Fehlersuche — dazu ein Meta-Skill, der den Agenten je Aufgabe zum passenden Fach-Skill lotst, und über fünfzig Referenz-Dokumente mit Knoten-Fallen und fertigem Workflow-JSON. Der Fehlerbehandlungs-Skill dreht die Voreinstellung um: Statt dass ein Ablauf beim ersten Fehler still stehen bleibt, werden Fehlerausgänge verdrahtet, Statuscodes sauber zugeordnet und ein Fehler-Workflow für alles gefangen, was entwischt. Gedacht ist das Paket als Begleitung zum MCP-Endpunkt der eigenen n8n-Instanz, damit der Agent Abläufe baut, die nicht erst im Betrieb auseinanderfallen.",
-   "en": "The official skill package from the n8n team: thirteen capability skills for the whole life of a workflow — configuring nodes, writing expressions, loops and pagination, AI agents, credentials, error handling, debugging — plus a meta-skill that routes the agent to the right capability skill per task, and over fifty reference documents with per-node gotchas and ready-made workflow JSON. The error-handling skill reverses the default: instead of a flow silently halting on its first error, error outputs get wired, status codes mapped properly, and an error workflow catches whatever escapes. The package is meant as the companion to your own n8n instance's MCP endpoint, so the agent builds flows that do not fall apart only once they are running."
+   "de": "Das offizielle Skill-Paket des n8n-Teams: vierzehn Fach-Skills für den ganzen Lebenslauf eines Ablaufs — Knoten konfigurieren, Ausdrücke schreiben, Schleifen und Paginierung, AI-Agenten, Zugangsdaten, Fehlerbehandlung, Fehlersuche — dazu ein Meta-Skill, der den Agenten je Aufgabe zum passenden Fach-Skill lotst, und über fünfzig Referenz-Dokumente mit Knoten-Fallen und fertigem Workflow-JSON. Der Fehlerbehandlungs-Skill dreht die Voreinstellung um: Statt dass ein Ablauf beim ersten Fehler still stehen bleibt, werden Fehlerausgänge verdrahtet, Statuscodes sauber zugeordnet und ein Fehler-Workflow für alles gefangen, was entwischt. Gedacht ist das Paket als Begleitung zum MCP-Endpunkt der eigenen n8n-Instanz, damit der Agent Abläufe baut, die nicht erst im Betrieb auseinanderfallen.",
+   "en": "The official skill package from the n8n team: fourteen capability skills for the whole life of a workflow — configuring nodes, writing expressions, loops and pagination, AI agents, credentials, error handling, debugging — plus a meta-skill that routes the agent to the right capability skill per task, and over fifty reference documents with per-node gotchas and ready-made workflow JSON. The error-handling skill reverses the default: instead of a flow silently halting on its first error, error outputs get wired, status codes mapped properly, and an error workflow catches whatever escapes. The package is meant as the companion to your own n8n instance's MCP endpoint, so the agent builds flows that do not fall apart only once they are running."
   },
   "tip": {
    "de": "Der Fang steht in der Einrichtung: Das Paket setzt eine eigene n8n-Instanz voraus (ab Version 2.2.0, Cloud oder selbst gehostet) mit eingeschaltetem MCP-Server auf Instanz-Ebene — ohne den Endpunkt bleiben die Skills Theorie. In Claude Code kommt es als Plugin über den Marketplace, bei anderen Agenten über npx skills add n8n-io/skills; danach fragt die Einrichtung nach der Adresse der Instanz.",
@@ -5983,7 +5983,7 @@
    "code": "https://github.com/n8n-io/skills"
   },
   "plansChecked": "2026-10-15",
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-24"
  },
  "excalidraw-skill": {
   "name": "excalidraw-skill",
@@ -6653,8 +6653,8 @@
   "free": false,
   "icon": "anthropic",
   "blurb": {
-   "de": "Die Stufe über dem Opus: Fable 5.1 ist für Agentenläufe gebaut, die lange durchhalten müssen — „Next generation intelligence for long-running agents“, sagt Anthropic selbst. Eine Million Token Kontext, Bilder im Eingang, gestuftes sichtbares Nachdenken; auf der Intelligenzskala von Artificial Analysis liegt es knapp hinter dem Opus mit Maximum-Einstellung, aber vor allem anderen am Markt. Der Fang ist der Tagespreis: 10 $ Eingang und 50 $ Ausgang je Million Token — das Fünffache von Opus 5.5 —, und im Abo frisst es die Hälfte des Wochenlimits.",
-   "en": "The tier above the Opus: Fable 5.1 is built for agent runs that have to last — \"next generation intelligence for long-running agents\", in Anthropic's own words. One million tokens of context, images on input, stepped visible reasoning; on Artificial Analysis' intelligence scale it sits just behind the Opus at maximum effort, ahead of nearly everything else on the market. The catch is the day rate: $10 input and $50 output per million tokens — five times Opus 5.5 — and on a subscription it eats half the weekly limit."
+   "de": "Die Stufe über dem Opus: Fable 5.1 ist für Agentenläufe gebaut, die lange durchhalten müssen — „Next generation intelligence for long-running agents“, sagt Anthropic selbst. Eine Million Token Kontext, Bilder im Eingang, gestuftes sichtbares Nachdenken; auf der Intelligenzskala von Artificial Analysis liegt es knapp hinter dem Opus mit Maximum-Einstellung, aber vor allem anderen am Markt. Der Fang ist der Tagespreis: 10 $ Eingang und 50 $ Ausgang je Million Token — das 2,5-Fache von Opus 5.5 —, und im Abo frisst es die Hälfte des Wochenlimits.",
+   "en": "The tier above the Opus: Fable 5.1 is built for agent runs that have to last — \"next generation intelligence for long-running agents\", in Anthropic's own words. One million tokens of context, images on input, stepped visible reasoning; on Artificial Analysis' intelligence scale it sits just behind the Opus at maximum effort, ahead of nearly everything else on the market. The catch is the day rate: $10 input and $50 output per million tokens — 2.5 times Opus 5.5 — and on a subscription it eats half the weekly limit."
   },
   "tip": {
    "de": "Der Tagesfahrer bleibt Opus 5.5. Fable 5.1 nimmt man, wenn ein Lauf Stunden dauert und die Stufe dazwischen nicht reicht: Migrationen, tiefe Recherchen, mehrstufige Agentenketten. Im Abo zählt jeder Fable-Zug doppelt aufs Limit — im API-Kredit zählt er halt einfach.",
@@ -6696,7 +6696,8 @@
    },
    "checked": "2026-10-22"
   },
-  "plansChecked": "2026-10-15"
+  "plansChecked": "2026-10-15",
+  "contentChecked": "2026-10-24"
  },
  "Augment Code": {
   "name": "Augment Code",

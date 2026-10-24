@@ -47,6 +47,35 @@
   },
   "contentChecked": "2026-09-29"
  },
+ "bauhaus-digital": {
+  "name": "bauhaus-digital",
+  "vendor": "Lucas Gonçalves Pinheiro",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Gestaltung als Methode statt als Geschmack: Der Skill überträgt drei Bücher — Ittens Vorkurs, Müller-Brockmanns Rastersysteme, Albers' Farbenlehre — auf Oberflächen, Dashboards, Landingpages, Design-Systeme und Decks. Er entwirft und begutachtet: eine flach wirkende Hierarchie diagnostiziert er genauso wie ein Farbbudget ohne Gnade. Jede Regel trägt eine Seitenangabe aus dem Buch oder ist ausdrücklich als Heuristik markiert, und was nicht vom Papier auf den Bildschirm überträgt, sagt er selbst. Ergebnis ist zuerst eine Erklärung (Kontrast, Formcharakter, Raster, Tonwerte, Farbbudget), dann das Design, dann eine Checkliste. Ausdrücklich keine Bauhaus-Retro-Optik: Primärfarben und Grundformen sind genau der Pastiche, vor dem er warnt.",
+   "en": "Design as method rather than taste: the skill carries three books — Itten's basic course, Müller-Brockmann's grid systems, Albers' color teaching — onto interfaces, dashboards, landing pages, design systems and decks. It designs and it reviews: a hierarchy that feels flat gets diagnosed, and so does a color budget without mercy. Every rule carries a page citation from the book or is explicitly marked as a heuristic, and what does not transfer from paper to screen, it says itself. The result is a declaration first (contrast, form character, grid, tonal ramp, color budget), then the design, then a checklist. Explicitly not a Bauhaus retro look: primary colors and basic shapes are exactly the pastiche it warns against."
+  },
+  "tip": {
+   "de": "Der Haken ist das Alter: Das Repository stammt vom 7. Oktober 2026, ein einzelner Autor, seither nichts bewegt — die Bücher sind gründlich verarbeitet, ein Track-Record fehlt noch. Einbauen als Claude-Code-Plugin (/plugin marketplace add lucasgpinheiro-rgb/bauhaus-digital) oder den Ordner skills/bauhaus-digital/ nach ~/.claude/skills/ kopieren. Die drei Bücher selbst liefert der Skill nicht; er paraphrasiert sie mit Seitenangaben.",
+   "en": "The catch is its age: the repository dates from 7 October 2026, a single author, nothing moved since — the books are worked through thoroughly, a track record is still missing. Install as a Claude Code plugin (/plugin marketplace add lucasgpinheiro-rgb/bauhaus-digital) or copy the folder skills/bauhaus-digital/ into ~/.claude/skills/. The skill does not ship the three books; it paraphrases them with page citations."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (MIT)",
+   "en": "Free, a text file (MIT)"
+  },
+  "links": {
+   "home": "https://github.com/lucasgpinheiro-rgb/bauhaus-digital",
+   "code": "https://github.com/lucasgpinheiro-rgb/bauhaus-digital"
+  },
+  "plansChecked": "2026-10-24",
+  "contentChecked": "2026-10-24"
+ },
  "skill-creator": {
   "name": "skill-creator",
   "vendor": "Anthropic",

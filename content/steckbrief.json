@@ -924,7 +924,7 @@
    "de": "Kostenlos (Open Source, AGPL-3.0), selbst gehostet",
    "en": "Free (open source, AGPL-3.0), self-hosted"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-09-29"
  },
  "Bionic": {
@@ -1096,7 +1096,7 @@
    "de": "Kostenlos, Open Source (MIT), selbst betrieben",
    "en": "Free, open source (MIT), self-hosted"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-03"
  },
  "MS Agent Framework": {
@@ -2221,7 +2221,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-24"
  },
  "FreeFlow": {
@@ -2290,7 +2290,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-06"
  },
  "GPT-6 Astra / 6.1 Sol": {
@@ -2307,8 +2307,8 @@
    "en": "OpenAI's frontier models, since September in two sizes: Astra for the hard cases, 6.1 Sol for everyday work. Both are at their strongest doing agent work on screen: filling in forms, researching on the web, installing software themselves. The difference is less about intelligence than about price: Sol costs a fifth of Astra and sits one point behind it on the Artificial Analysis index (52 to 53)."
   },
   "tip": {
-   "de": "Fang mit Sol an. Astra lohnt erst, wenn eine Aufgabe daran scheitert, denn es kostet das Fünffache. Noch billiger ist 6 Luna, dafür fällt es im Index deutlich ab (38 statt 52). Ein Haken bei allen drei: Ab 200.000 Token im Prompt verdoppelt sich der Satz, und die Geschwindigkeitsstufen Fast und Ultrafast kosten das Doppelte beziehungsweise das Sechsfache.",
-   "en": "Start with Sol. Astra is worth it once a task fails on Sol, because it costs five times as much. Cheaper still is 6 Luna, which drops off noticeably on the index (38 instead of 52). One catch on all three: past 200,000 tokens in the prompt the rate doubles, and the Fast and Ultrafast speed tiers cost double and six times respectively."
+   "de": "Fang mit Sol an. Astra lohnt erst, wenn eine Aufgabe daran scheitert, denn es kostet das Fünffache. Noch billiger ist 6 Luna, dafür fällt es im Index deutlich ab (38 statt 52). Ein Haken bei allen drei: Ab 272.000 Token im Prompt verdoppelt sich der Satz, und die Geschwindigkeitsstufen Fast und Ultrafast kosten das Doppelte beziehungsweise das Sechsfache.",
+   "en": "Start with Sol. Astra is worth it once a task fails on Sol, because it costs five times as much. Cheaper still is 6 Luna, which drops off noticeably on the index (38 instead of 52). One catch on all three: past 272,000 tokens in the prompt the rate doubles, and the Fast and Ultrafast speed tiers cost double and six times respectively."
   },
   "links": {
    "home": "https://openai.com/index/gpt-6-astra/",
@@ -2341,14 +2341,14 @@
    "checked": "2026-10-22"
   },
   "plans": {
-   "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 200k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
-   "en": "API per 1M tokens, Standard tier: Astra $10/$50 · 6.1 Sol $2/$10 · 6 Luna $0.10/$0.50 · past 200k tokens in the prompt Astra $20/$75, Sol $4/$15, Luna $0.20/$0.75 · cached input a tenth of the input price · Flex halves the rate, Fast doubles it, Ultrafast (Astra only) multiplies it by six · included in the ChatGPT quotas from Plus upwards at no extra cost (Plus $20/mo, Pro $100/mo), with GPT-6 Astra Pro on Pro, Business and Enterprise on top"
+   "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 272k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra und Sol, nicht Luna) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
+   "en": "API per 1M tokens, Standard tier: Astra $10/$50 · 6.1 Sol $2/$10 · 6 Luna $0.10/$0.50 · past 272k tokens in the prompt Astra $20/$75, Sol $4/$15, Luna $0.20/$0.75 · cached input a tenth of the input price · Flex halves the rate, Fast doubles it, Ultrafast (Astra and Sol only, not Luna) multiplies it by six · included in the ChatGPT quotas from Plus upwards at no extra cost (Plus $20/mo, Pro $100/mo), with GPT-6 Astra Pro on Pro, Business and Enterprise on top"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-06",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-06"
  },
  "Claude Opus 5.5 / Sonnet 5.5": {
@@ -2400,13 +2400,13 @@
    "checked": "2026-10-22"
   },
   "plans": {
-   "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus und Sonnet, 0,10 $ bei Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
-   "en": "API per 1M tokens: Opus 5.5 $4/$20 · Sonnet 5.5 $2/$10 · Haiku 4.5 $1/$5 · cached input $0.20 on Opus and Sonnet, $0.10 on Haiku · cache writes $5 (Opus) and $2.50 (Sonnet) for five minutes, $8 and $4 for an hour · the predecessors Opus 5 ($5/$25) and Sonnet 5 ($2/$10) stay in the price list"
+   "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus, 0,10 $ bei Sonnet und Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
+   "en": "API per 1M tokens: Opus 5.5 $4/$20 · Sonnet 5.5 $2/$10 · Haiku 4.5 $1/$5 · cached input $0.20 on Opus, $0.10 on Sonnet and Haiku · cache writes $5 (Opus) and $2.50 (Sonnet) for five minutes, $8 and $4 for an hour · the predecessors Opus 5 ($5/$25) and Sonnet 5 ($2/$10) stay in the price list"
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-06",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-06"
  },
  "Gemini 3.1 Pro / 3.8 Flash": {
@@ -2469,7 +2469,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-06",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-06"
  },
  "Grok 4.7": {
@@ -2818,7 +2818,7 @@
    "api",
    "abo"
   ],
-  "plansChecked": "2026-10-06",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-06"
  },
  "MiMo-V2.6-Pro": {
@@ -4021,7 +4021,7 @@
    "de": "Kostenlos, Open Source (überwiegend LGPL, einzelne Teile GPL)",
    "en": "Free, open source (mostly LGPL, some parts GPL)"
   },
-  "plansChecked": "2026-10-06",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-06"
  },
  "MarkItDown": {
@@ -5173,7 +5173,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-20"
  },
  "OpenPencil": {
@@ -5206,7 +5206,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-20"
  },
  "customer-research": {
@@ -5398,7 +5398,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-20"
  },
  "Glaze": {
@@ -5527,7 +5527,7 @@
    "de": "Kostenlos, Open Source (MIT) · Modelle über eigenes Abo oder eigenen API-Schlüssel beim Anbieter",
    "en": "Free, open source (MIT) · models via your own subscription or API key at the provider"
   },
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-05"
  },
  "Aider": {
@@ -5899,7 +5899,7 @@
    "de": "Kostenlos (Open-Weight, MIT), selbst gehostet",
    "en": "Free (open-weight, MIT), self-hosted"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-03"
  },
  "Jev": {
@@ -6519,7 +6519,7 @@
   "links": {
    "home": "https://github.com/bradautomates/claude-video"
   },
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-10"
  },
  "meeting-notes": {
@@ -6866,7 +6866,7 @@
     }
    ]
   },
-  "plansChecked": "2026-10-06",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-06"
  },
  "Devin CLI": {
@@ -6935,7 +6935,7 @@
     }
    ]
   },
-  "plansChecked": "2026-10-06",
+  "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-06"
  }
 }

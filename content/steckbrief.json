@@ -33,8 +33,8 @@
   "accent": "var(--lime)",
   "open": true,
   "blurb": {
-   "de": "Ein Sprachmodell hat kein Auge. Es baut Oberflächen, die technisch stimmen und trotzdem aussehen wie jede zweite — dieselben Karten, dieselben Verläufe, dieselbe Schrift. Impeccable gibt dem Agenten ein Design-Vokabular und dir 23 Befehle, mit denen du steuerst statt zu hoffen: prüfen, aufräumen, Typografie schärfen, Farbe setzen. Dazu 61 Regeln, die typische KI-Design-Marotten selbsttätig erkennen.",
-   "en": "A language model has no eye. It builds interfaces that are technically fine and still look like every other one — same cards, same gradients, same typeface. Impeccable gives the agent a design vocabulary and you 23 commands to direct with instead of hope: audit, tidy, sharpen typography, set colour. Plus 61 rules that catch the usual AI design tells on their own."
+   "de": "Ein Sprachmodell hat kein Auge. Es baut Oberflächen, die technisch stimmen und trotzdem aussehen wie jede zweite — dieselben Karten, dieselben Verläufe, dieselbe Schrift. Impeccable gibt dem Agenten ein Design-Vokabular und dir 24 Befehle, mit denen du steuerst statt zu hoffen: prüfen, aufräumen, Typografie schärfen, Farbe setzen. Dazu 62 Regeln, die typische KI-Design-Marotten selbsttätig erkennen.",
+   "en": "A language model has no eye. It builds interfaces that are technically fine and still look like every other one — same cards, same gradients, same typeface. Impeccable gives the agent a design vocabulary and you 24 commands to direct with instead of hope: audit, tidy, sharpen typography, set colour. Plus 62 rules that catch the usual AI design tells on their own."
   },
   "tip": {
    "de": "Einrichtung mit npx impeccable install, danach /impeccable init. Der erste Schritt ist ein Interview über Zielgruppe und Produkt — ohne diesen Kontext bleibt auch dieser Skill generisch.",
@@ -45,7 +45,7 @@
    "docs": "https://impeccable.style/tutorials/getting-started/",
    "code": "https://github.com/pbakaus/impeccable"
   },
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "bauhaus-digital": {
   "name": "bauhaus-digital",
@@ -925,7 +925,7 @@
    "en": "Free (open source, AGPL-3.0), self-hosted"
   },
   "plansChecked": "2026-10-26",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "Bionic": {
   "name": "Bionic",
@@ -994,7 +994,7 @@
    "api"
   ],
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "LangChain": {
   "name": "LangChain",
@@ -1029,7 +1029,7 @@
    "api"
   ],
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "CrewAI": {
   "name": "CrewAI",
@@ -1417,7 +1417,7 @@
    "abo"
   ],
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-09-29",
+  "contentChecked": "2026-10-27",
   "icon": "lmstudio"
  },
  "Ollama": {
@@ -1457,7 +1457,7 @@
    "api"
   ],
   "plansChecked": "2026-10-12",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "llama.cpp": {
   "name": "llama.cpp",
@@ -1571,7 +1571,7 @@
    "docs": "https://developers.openai.com/api/docs/guides/image-generation",
    "code": null
   },
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "Midjourney V8.2": {
   "name": "Midjourney V8.2",
@@ -1701,8 +1701,8 @@
   "accent": "var(--sky)",
   "open": true,
   "blurb": {
-   "de": "Auf eine Sache spezialisiert: Schrift im Bild. Wo andere Modelle bei Beschriftungen Buchstabensalat produzieren, kommen hier lesbare Wörter heraus — nützlich für Plakate, Verpackungen, erste Logo-Entwürfe. Seit Juni 2026 ist der Nachfolger Ideogram 4.0 sogar offen: 9,3 Milliarden Parameter zum Herunterladen.",
-   "en": "Specialised in one thing: type inside the image. Where other models turn captions into letter soup, this one produces readable words — useful for posters, packaging, first logo sketches. Since June 2026 the successor Ideogram 4.0 is even open: 9.3 billion parameters to download."
+   "de": "Auf eine Sache spezialisiert: Schrift im Bild. Wo andere Modelle bei Beschriftungen Buchstabensalat produzieren, kommen hier lesbare Wörter heraus — nützlich für Plakate, Verpackungen, erste Logo-Entwürfe. Seit Juni 2026 ist der Nachfolger Ideogram 4.0 sogar offen: 9,3 Milliarden Parameter zum Herunterladen. Das neueste Modell in der API ist inzwischen Ideogram 4.5.",
+   "en": "Specialised in one thing: type inside the image. Where other models turn captions into letter soup, this one produces readable words — useful for posters, packaging, first logo sketches. Since June 2026 the successor Ideogram 4.0 is even open: 9.3 billion parameters to download. The newest model in the API is now Ideogram 4.5."
   },
   "tip": {
    "de": "Erste Wahl, wenn Text im Bild lesbar sein muss. Für reine Bildstimmung ohne Schrift sind andere Modelle stärker.",
@@ -1713,7 +1713,7 @@
    "docs": "https://developer.ideogram.ai/ideogram-api/api-overview",
    "code": null
   },
-  "contentChecked": "2026-09-26"
+  "contentChecked": "2026-10-27"
  },
  "Recraft": {
   "name": "Recraft",
@@ -2014,8 +2014,8 @@
   "accent": "var(--sky)",
   "open": false,
   "blurb": {
-   "de": "Verwandelt Text in gesprochene Sprache, und zwar mit Betonung: Pausen, Nachdruck und Stimmung lassen sich steuern, statt dass alles gleichmässig heruntergelesen wird. Über 70 Sprachen.",
-   "en": "Turns text into spoken language, and with emphasis: pauses, stress and mood can be steered instead of everything being read out evenly. Over 70 languages."
+   "de": "Verwandelt Text in gesprochene Sprache, und zwar mit Betonung: Pausen, Nachdruck und Stimmung lassen sich steuern, statt dass alles gleichmässig heruntergelesen wird. Über 70 Sprachen. Inzwischen ist Eleven v4 das Flaggschiff (90+ Sprachen); v3 gilt als Vorgängergeneration.",
+   "en": "Turns text into spoken language, and with emphasis: pauses, stress and mood can be steered instead of everything being read out evenly. Over 70 languages. Eleven v4 is now the flagship (90+ languages); v3 is the previous generation."
   },
   "tip": {
    "de": "Stimmen lassen sich klonen — fremde nur mit ausdrücklicher Erlaubnis der Person.",
@@ -2027,7 +2027,7 @@
    "code": null
   },
   "icon": "elevenlabs",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "Suno v5.5": {
   "name": "Suno v6",
@@ -2124,7 +2124,7 @@
    "docs": "https://github.com/hexgrad/kokoro",
    "code": "https://github.com/hexgrad/kokoro"
   },
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "Voxtral": {
   "name": "Voxtral",
@@ -3093,7 +3093,7 @@
    "docs": "https://modelcontextprotocol.io/docs",
    "code": "https://github.com/modelcontextprotocol/modelcontextprotocol"
   },
-  "contentChecked": "2026-09-29",
+  "contentChecked": "2026-10-27",
   "icon": "modelcontextprotocol"
  },
  "Playwright-mcp": {
@@ -3393,7 +3393,7 @@
    "code": null
   },
   "icon": "figma",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "pencil.dev": {
   "name": "pen.dev",
@@ -3442,7 +3442,7 @@
    "code": "https://github.com/penpot/penpot"
   },
   "icon": "penpot",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "Paper": {
   "name": "Paper",
@@ -3646,7 +3646,7 @@
    "docs": null,
    "code": "https://github.com/onlook-dev/onlook"
   },
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "Claude Design": {
   "name": "Claude Design",
@@ -4199,7 +4199,7 @@
   "links": {
    "home": "https://www.apple.com/final-cut-pro/"
   },
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "Premiere Pro": {
   "name": "Premiere",
@@ -4376,7 +4376,7 @@
   "links": {
    "home": "https://www.openshot.org"
   },
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-27"
  },
  "DeepSeek Harness": {
   "name": "DeepSeek Harness",
@@ -5140,7 +5140,7 @@
   "billing": [
    "api"
   ],
-  "contentChecked": "2026-09-29",
+  "contentChecked": "2026-10-27",
   "plansChecked": "2026-10-22"
  },
  "OpenViking": {
@@ -5561,7 +5561,7 @@
    "en": "Free, open source (Apache-2.0) · models via your own API keys or run locally"
   },
   "plansChecked": "2026-10-19",
-  "contentChecked": "2026-10-01"
+  "contentChecked": "2026-10-27"
  },
  "Buzz": {
   "name": "Buzz",
@@ -5754,12 +5754,12 @@
   "open": false,
   "free": true,
   "blurb": {
-   "de": "Eine kollaborative Entwicklungsumgebung für das gemeinsame Steuern von Coding-Agenten im Team. Conductor führt Agenten wie Claude Code, Codex oder Cursor parallel in isolierten Cloud-Schnittstellen (Firecracker-MicroVMs mit 8 Kernen und 16 GB RAM) aus. Du kannst Workspace-Links teilen, um in Echtzeit mit Kollegen an Aufgaben zu arbeiten und Agenten beim Schreiben von Code zuzusehen. Ein besonderes Highlight ist das nahtlose Zusammenspiel mit Paper.design: Über MCP-Verbindungen können Agenten Entwürfe direkt aus Paper in lauffähigen Code im Cloud-Workspace übersetzen und Oberflächen-Varianten parallel erproben.",
-   "en": "A collaborative development environment for running and managing coding agents together as a team. Conductor runs agents like Claude Code, Codex, or Cursor in parallel within isolated cloud sandboxes (Firecracker microVMs with 8 cores and 16GB RAM). You can share workspace links to collaborate with teammates in real-time, prompting and watching agents write code together. A standout feature is its seamless integration with Paper.design: using MCP connections, agents can turn designs directly from Paper into working code in the cloud sandbox and test UI variants in parallel."
+   "de": "Eine Mac-App, mit der du mehrere Coding-Agenten wie Claude Code, Codex oder Cursor parallel laufen lässt. Jede Aufgabe bekommt einen eigenen Workspace mit eigenem Branch, eigenen Dateien und eigenem Terminal, sodass sich die Agenten nicht in die Quere kommen.",
+   "en": "A Mac app for running several coding agents such as Claude Code, Codex or Cursor side by side. Each task gets a workspace of its own with its own branch, files and terminal, so the agents do not get in each other's way."
   },
   "tip": {
-   "de": "Die macOS-App und der Zugriff auf die Cloud-Workspaces sind derzeit kostenlos, du bringst jedoch deine eigenen API-Schlüssel oder Agenten-Abos mit (BYOK). Für die Zukunft sind nutzungsabhängige Cloud-Compute-Preise angekündigt. Perfekt für Teams, die parallel an einer Codebasis arbeiten und das Zusammenspiel mit Paper.design nutzen wollen. Eine iOS-App und eine öffentliche API sind als kommende Features gelistet.",
-   "en": "The macOS app and access to cloud workspaces are currently free, but you bring your own API keys or agent subscriptions (BYOK). Usage-based cloud compute pricing is planned for the future. Perfect for teams working on a codebase in parallel who want to utilize the integration with Paper.design. An iOS app and a public API are listed as upcoming features."
+   "de": "Die App läuft auf deinem Mac; du bringst deine eigenen Agenten-Zugänge mit. Sinnvoll, wenn du mehrere Aufgaben an einer Codebasis gleichzeitig laufen lassen willst. Es ist eine reine Mac-App: Unter Windows oder Linux hilft sie dir nicht.",
+   "en": "The app runs on your Mac; you bring your own agent access. Worth it when you want several tasks on one codebase going at once. It is a Mac app only: no help on Windows or Linux."
   },
   "links": {
    "home": "https://www.conductor.build/",
@@ -5774,7 +5774,8 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-12"
+  "plansChecked": "2026-10-12",
+  "contentChecked": "2026-10-27"
  },
  "gbrain": {
   "name": "gbrain",

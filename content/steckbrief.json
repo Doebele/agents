@@ -6214,15 +6214,15 @@
    "en": "A plugin with a fixed routine for new features: the /feature-dev command starts seven phases instead of immediate code — first understanding the request, then two or three code-explorer agents combing the existing codebase in parallel, then clarifying questions, and only then architecture design and implementation, with a quality review at the end. Meant for features that have to fit into an existing codebase."
   },
   "tip": {
-   "de": "Was es kostet, ist Geduld: Wer nur eine kleine Korrektur braucht, wartet sieben Phasen lang umsonst — dafür bleibt der normale Weg besser. Das Repository (anthropics/claude-code) trägt keine Lizenz; was das für die Weiterverwendung bedeutet, ist ungeklärt.",
-   "en": "What it costs is patience: if you only need a small fix, seven phases are a detour — the ordinary way stays better for that. The repository (anthropics/claude-code) carries no license; what that means for reuse is unresolved."
+   "de": "Was es kostet, ist Geduld: Wer nur eine kleine Korrektur braucht, wartet sieben Phasen lang umsonst — dafür bleibt der normale Weg besser. Die Plugins von Anthropic liegen inzwischen in einem eigenen Repository (anthropics/claude-plugins-official), das Plugin steht dort unter Apache-2.0.",
+   "en": "What it costs is patience: if you only need a small fix, seven phases are a detour — the ordinary way stays better for that. Anthropic's plugins live in a repository of their own now (anthropics/claude-plugins-official), and the plugin sits there under Apache-2.0."
   },
   "plans": {
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
   "links": {
-   "home": "https://github.com/anthropics/claude-code/tree/main/plugins/feature-dev"
+   "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev"
   },
   "plansChecked": "2026-10-19",
   "contentChecked": "2026-10-10"

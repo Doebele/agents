@@ -2145,7 +2145,7 @@
   },
   "links": {
    "home": "https://mistral.ai/news/voxtral/",
-   "docs": "https://huggingface.co/docs/transformers/en/model_doc/voxtral",
+   "docs": "https://huggingface.co/docs/transformers/main/en/model_doc/voxtral",
    "code": null
   },
   "icon": "mistralai",

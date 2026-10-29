@@ -823,7 +823,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-13"
  },
  "Cursor": {
@@ -1546,7 +1546,7 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-13"
  },
  "GPT Image 2": {
@@ -4083,7 +4083,7 @@
    "de": "Kostenlos, Open Source (GPL, Version 2 oder neuer)",
    "en": "Free, open source (GPL, version 2 or greater)"
   },
-  "plansChecked": "2026-10-10",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-10"
  },
  "SearXNG": {
@@ -4571,7 +4571,7 @@
   "links": {
    "home": "https://vercel.com"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-29",
   "icon": "vercel",
   "contentChecked": "2026-10-13"
  },
@@ -4815,8 +4815,8 @@
    "en": "The step between “finished API” and “own server”: your own model, but rented hardware. Billed per GPU hour or second."
   },
   "plans": {
-   "de": "Abrechnung je Sekunde, ausgewiesen je GPU-Stunde · zwei Stufen für gemietete Pods, Community Cloud günstiger als Secure Cloud: RTX 4090 0,34/0,74 $ · A100 80 GB 1,19/1,59 $ · H100 SXM 2,69/3,49 $ · H200 3,59/4,59 $ · B200 5,98/6,79 $ · daneben Serverless-Worker nach Nutzung, z. B. RTX 4090 1,10 $/Std. · A100 2,72 $/Std. · H100 4,79 $/Std. · keine Gratisstufe",
-   "en": "Billed per second, quoted per GPU hour · two tiers for rented Pods, Community Cloud cheaper than Secure Cloud: RTX 4090 $0.34/$0.74 · A100 80 GB $1.19/$1.59 · H100 SXM $2.69/$3.49 · H200 $3.59/$4.59 · B200 $5.98/$6.79 · plus Serverless workers billed by use, e.g. RTX 4090 $1.10/hr · A100 $2.72/hr · H100 $4.79/hr · no free tier"
+   "de": "Abrechnung je Sekunde, ausgewiesen je GPU-Stunde · zwei Stufen für gemietete Pods, Community Cloud günstiger als Secure Cloud: RTX 4090 0,34/0,89 $ · A100 80 GB (PCIe) 1,19/1,79 $ · H100 SXM 2,69/3,99 $ · H200 3,59/5,29 $ · B200 5,98/7,99 $ · daneben Serverless-Worker nach Nutzung, z. B. RTX 4090 1,10 $/Std. · A100 2,72 $/Std. · H100 4,79 $/Std. · keine Gratisstufe",
+   "en": "Billed per second, quoted per GPU hour · two tiers for rented Pods, Community Cloud cheaper than Secure Cloud: RTX 4090 $0.34/$0.89 · A100 80 GB (PCIe) $1.19/$1.79 · H100 SXM $2.69/$3.99 · H200 $3.59/$5.29 · B200 $5.98/$7.99 · plus Serverless workers billed by use, e.g. RTX 4090 $1.10/hr · A100 $2.72/hr · H100 $4.79/hr · no free tier"
   },
   "billing": [
    "api"
@@ -4824,7 +4824,7 @@
   "links": {
    "home": "https://www.runpod.io"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-20"
  },
  "Lambda": {
@@ -4982,7 +4982,7 @@
   "links": {
    "home": "https://replicate.com"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-17"
  },
  "OpenRouter": {
@@ -5105,10 +5105,10 @@
    "code": "https://github.com/tt-a1i/archify"
   },
   "plans": {
-   "de": "Kostenlos (MIT)",
-   "en": "Free (MIT)"
+   "de": "Kostenlos (Apache 2.0)",
+   "en": "Free (Apache 2.0)"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-20"
  },
  "Distilly": {
@@ -5235,7 +5235,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-20"
  },
  "cro": {
@@ -5264,7 +5264,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-20"
  },
  "video": {
@@ -5429,7 +5429,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-05",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-06"
  },
  "Berd": {
@@ -5803,7 +5803,7 @@
    "de": "Kostenlos (MIT) · lokale PGLite oder eigenes Postgres",
    "en": "Free (MIT) · local PGLite or your own Postgres"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-24"
  },
  "BRAIN.md": {

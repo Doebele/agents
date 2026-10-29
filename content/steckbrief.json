@@ -2303,8 +2303,8 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "OpenAIs Spitzenmodelle, seit September in zwei Größen: Astra für die harten Fälle, 6.1 Sol für den Alltag. Beider stärkstes Feld ist die Agentenarbeit am Bildschirm, also Formulare ausfüllen, im Netz recherchieren, Software selbst installieren. Der Unterschied liegt weniger in der Intelligenz als im Preis: Sol kostet ein Fünftel von Astra und liegt im Index von Artificial Analysis nur einen Punkt dahinter (52 zu 53).",
-   "en": "OpenAI's frontier models, since September in two sizes: Astra for the hard cases, 6.1 Sol for everyday work. Both are at their strongest doing agent work on screen: filling in forms, researching on the web, installing software themselves. The difference is less about intelligence than about price: Sol costs a fifth of Astra and sits one point behind it on the Artificial Analysis index (52 to 53)."
+   "de": "OpenAIs Spitzenmodelle, seit September in zwei Größen: Astra für die harten Fälle, 6.1 Sol für den Alltag. Beider stärkstes Feld ist die Agentenarbeit am Bildschirm, also Formulare ausfüllen, im Netz recherchieren, Software selbst installieren. Der Unterschied liegt weniger in der Intelligenz als im Preis: Sol kostet ein Fünftel von Astra und liegt im Index von Artificial Analysis nur zwei Punkte dahinter (55 zu 57).",
+   "en": "OpenAI's frontier models, since September in two sizes: Astra for the hard cases, 6.1 Sol for everyday work. Both are at their strongest doing agent work on screen: filling in forms, researching on the web, installing software themselves. The difference is less about intelligence than about price: Sol costs a fifth of Astra and sits two points behind it on the Artificial Analysis index (55 to 57)."
   },
   "tip": {
    "de": "Fang mit Sol an. Astra lohnt erst, wenn eine Aufgabe daran scheitert, denn es kostet das Fünffache. Noch billiger ist 6 Luna, dafür fällt es im Index deutlich ab (38 statt 52). Ein Haken bei allen drei: Ab 272.000 Token im Prompt verdoppelt sich der Satz, und die Geschwindigkeitsstufen Fast und Ultrafast kosten das Doppelte beziehungsweise das Sechsfache.",
@@ -2319,12 +2319,12 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/gpt-6-astra",
    "intel": {
-    "v": "53",
+    "v": "57",
     "rank": "#8/215",
     "u": 4
    },
    "speed": {
-    "v": "66.7",
+    "v": "77.6",
     "rank": "#130/186",
     "u": 2
    },
@@ -2334,11 +2334,11 @@
     "u": 4
    },
    "verb": {
-    "v": "60M",
+    "v": "54M",
     "rank": "#45/116",
     "u": 2
    },
-   "checked": "2026-10-26"
+   "checked": "2026-10-29"
   },
   "plans": {
    "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 272k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra und Sol, nicht Luna) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
@@ -2361,8 +2361,8 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "Anthropics Modellfamilie, die bei Agentenarbeit besonders stark ist: also dann, wenn das Modell nicht nur antwortet, sondern über viele Schritte Werkzeuge benutzt und ein Ziel verfolgt. Zwei Größen auf derselben Grundlage, Opus für die harten Fälle, Sonnet für alles, was schnell gehen soll. Seit September steht auch Sonnet auf 5.5, und im Index von Artificial Analysis liegen die beiden nur zwei Punkte auseinander (58 zu 56). Sonnet 5 bleibt als Vorgänger abrufbar, zum selben Preis.",
-   "en": "Anthropic's model family, particularly strong at agent work: when the model doesn't just answer but uses tools across many steps toward a goal. Two sizes on the same foundation, Opus for the hard cases, Sonnet for anything that should be quick. Since September Sonnet is on 5.5 as well, and on the Artificial Analysis index the two sit two points apart (58 to 56). Sonnet 5 remains available as the predecessor, at the same price."
+   "de": "Anthropics Modellfamilie, die bei Agentenarbeit besonders stark ist: also dann, wenn das Modell nicht nur antwortet, sondern über viele Schritte Werkzeuge benutzt und ein Ziel verfolgt. Zwei Größen auf derselben Grundlage, Opus für die harten Fälle, Sonnet für alles, was schnell gehen soll. Seit September steht auch Sonnet auf 5.5, und im Index von Artificial Analysis liegen die beiden nur vier Punkte auseinander (58 zu 54). Sonnet 5 bleibt als Vorgänger abrufbar, zum selben Preis.",
+   "en": "Anthropic's model family, particularly strong at agent work: when the model doesn't just answer but uses tools across many steps toward a goal. Two sizes on the same foundation, Opus for the hard cases, Sonnet for anything that should be quick. Since September Sonnet is on 5.5 as well, and on the Artificial Analysis index the two sit four points apart (58 to 54). Sonnet 5 remains available as the predecessor, at the same price."
   },
   "tip": {
    "de": "Nimm Sonnet als Standard und schalte auf Opus, wenn eine Aufgabe hakt. Bei einfachen Dingen ist der Unterschied kaum spürbar, bei kniffligen deutlich. Mehr Punkte heißt dabei nicht weniger Kosten: In den Coding-Agenten-Messungen von Artificial Analysis liegt Sonnet 5.5 im Index vor Opus 5.5, braucht dafür aber mehr Zeit und mehr Geld je Aufgabe, weil es länger arbeitet.",
@@ -2383,7 +2383,7 @@
     "u": 4
    },
    "speed": {
-    "v": "97.6",
+    "v": "97.9",
     "rank": "#77/186",
     "u": 3
    },
@@ -2393,11 +2393,11 @@
     "u": 4
    },
    "verb": {
-    "v": "260M",
+    "v": "220M",
     "rank": "#114/116",
     "u": 4
    },
-   "checked": "2026-10-26"
+   "checked": "2026-10-29"
   },
   "plans": {
    "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus, 0,10 $ bei Sonnet und Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
@@ -6705,12 +6705,12 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/claude-fable-5-1",
    "intel": {
-    "v": "53",
+    "v": "49",
     "rank": "#6/215",
     "u": 4
    },
    "speed": {
-    "v": "70.1",
+    "v": "65.9",
     "rank": "#124/186",
     "u": 2
    },
@@ -6720,11 +6720,11 @@
     "u": 4
    },
    "verb": {
-    "v": "190M",
+    "v": "160M",
     "rank": "#105/116",
     "u": 4
    },
-   "checked": "2026-10-26"
+   "checked": "2026-10-29"
   },
   "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-24"

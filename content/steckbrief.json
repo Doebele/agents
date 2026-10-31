@@ -6578,6 +6578,9 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
+  "billing": [
+   "api"
+  ],
   "plansChecked": "2026-10-15",
   "contentChecked": "2026-09-29"
  },

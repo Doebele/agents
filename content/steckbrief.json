@@ -21,7 +21,7 @@
    "de": "Fang mit der einen Sache an, die du am häufigsten erklärst. Ein Skill ist eine Anleitung in normaler Sprache, kein Programm — wenn du es einem neuen Kollegen erklären kannst, kannst du es aufschreiben.",
    "en": "Start with the one thing you explain most often. A skill is an instruction in plain language, not a program — if you can explain it to a new colleague, you can write it down."
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "Impeccable": {
   "name": "Impeccable",
@@ -146,7 +146,7 @@
    "home": "https://github.com/pymupdf/pymupdf4llm-mcp",
    "code": "https://github.com/pymupdf/pymupdf4llm-mcp"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "excel-mcp": {
   "name": "Excel MCP Server",
@@ -169,7 +169,7 @@
    "home": "https://github.com/negokaz/excel-mcp-server",
    "code": "https://github.com/negokaz/excel-mcp-server"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "memory-mcp": {
   "name": "Memory MCP Server",
@@ -192,7 +192,7 @@
    "home": "https://github.com/modelcontextprotocol/servers",
    "code": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "Gemini Notebook": {
   "name": "Gemini Notebook",
@@ -1097,7 +1097,7 @@
    "en": "Free, open source (MIT), self-hosted"
   },
   "plansChecked": "2026-10-26",
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "MS Agent Framework": {
   "name": "Microsoft Agent Framework",
@@ -1799,7 +1799,7 @@
    "code": null
   },
   "icon": "google",
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "Kling 3.0": {
   "name": "Kling 3.0",
@@ -2052,7 +2052,7 @@
    "code": null
   },
   "icon": "suno",
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "Stable Audio 3": {
   "name": "Stable Audio 3",
@@ -3069,7 +3069,7 @@
    "docs": null,
    "code": "https://github.com/vercel-labs/skills"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "Model Context Protocol": {
   "name": "Model Context Protocol",
@@ -3118,7 +3118,7 @@
    "docs": "https://playwright.dev/docs/getting-started-mcp",
    "code": "https://github.com/microsoft/playwright-mcp"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "github-mcp": {
   "name": "GitHub MCP Server",
@@ -3143,7 +3143,7 @@
    "code": "https://github.com/github/github-mcp-server"
   },
   "icon": "github",
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "filesystem-mcp": {
   "name": "Filesystem MCP Server",
@@ -3167,7 +3167,7 @@
    "docs": null,
    "code": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "slack-mcp": {
   "name": "Slack MCP Server",
@@ -3216,7 +3216,7 @@
    "code": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres"
   },
   "icon": "postgresql",
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "supabase-mcp": {
   "name": "Supabase MCP Server",
@@ -3313,7 +3313,7 @@
    "home": "https://github.com/samuelgursky/davinci-resolve-mcp",
    "code": "https://github.com/samuelgursky/davinci-resolve-mcp"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "buffer-mcp": {
   "name": "Buffer MCP Server",
@@ -3342,7 +3342,7 @@
   "billing": [
    "abo"
   ],
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "higgsfield-mcp": {
   "name": "Higgsfield MCP",
@@ -3732,7 +3732,7 @@
    "docs": null,
    "code": null
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "Relume": {
   "name": "Relume",
@@ -4350,7 +4350,7 @@
   "links": {
    "home": "https://shotcut.org"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "OpenShot": {
   "name": {
@@ -5901,7 +5901,7 @@
    "en": "Free (open-weight, MIT), self-hosted"
   },
   "plansChecked": "2026-10-26",
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-10-31"
  },
  "Jev": {
   "name": "Jev",
@@ -6550,7 +6550,7 @@
    "en": "Free, a text file (MIT)"
   },
   "plansChecked": "2026-10-15",
-  "contentChecked": "2026-09-28"
+  "contentChecked": "2026-10-31"
  },
  "literature-review": {
   "name": "literature-review",
@@ -6614,7 +6614,7 @@
    "code": "https://github.com/higgsfield-ai/skills/tree/main/higgsfield-soul-id"
   },
   "plansChecked": "2026-10-15",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-31"
  },
  "social": {
   "name": "social",
@@ -6643,7 +6643,7 @@
    "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/social"
   },
   "plansChecked": "2026-10-19",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-31"
  },
  "offers": {
   "name": "offers",
@@ -6672,7 +6672,7 @@
    "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/offers"
   },
   "plansChecked": "2026-10-19",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-10-31"
  },
  "Claude Fable 5.1": {
   "name": "Claude Fable 5.1",

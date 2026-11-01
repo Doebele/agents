@@ -6873,6 +6873,40 @@
   "plansChecked": "2026-10-26",
   "contentChecked": "2026-10-06"
  },
+ "OpenClaw": {
+  "name": "OpenClaw",
+  "vendor": "OpenClaw Foundation",
+  "cat": {
+   "de": "Agent Harness · Baustein 02",
+   "en": "Agent harness · Block 02"
+  },
+  "accent": "var(--ember)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Der persönliche Agent, der in den Messenger einzieht statt in einer eigenen App: ein Gateway auf dem eigenen Rechner verbindet WhatsApp, Telegram, Discord, Slack, Signal, iMessage und über zwanzig weitere Kanäle mit einem Agenten, der Mails sortiert, Termine verwaltet, Dateien bearbeitet und Befehle ausführt. Aus einem Wochenendprojekt von Peter Steinberger gewachsen, inzwischen eines der meistmarkierten Repositories auf GitHub und gepflegt von einer unabhängigen gemeinnützigen Stiftung. Gedächtnis, Einstellungen und Zugangsdaten bleiben auf der eigenen Hardware; das Modell ist austauschbar und kommt per API-Schlüssel, bestehendem Abo oder als lokales Modell dazu. Desktop-Apps für macOS, Windows und Linux, dazu mobile Knoten für iOS und Android.",
+   "en": "The personal agent that moves into your messenger instead of an app of its own: a gateway on your own machine connects WhatsApp, Telegram, Discord, Slack, Signal, iMessage and more than twenty other channels to an agent that sorts mail, manages calendars, edits files and runs commands. Grown from a weekend project by Peter Steinberger, now one of the most-starred repositories on GitHub and maintained by an independent non-profit foundation. Memory, settings and credentials stay on your own hardware; the model is swappable and arrives via API key, an existing subscription or as a local model. Desktop apps for macOS, Windows and Linux, plus mobile nodes for iOS and Android."
+  },
+  "tip": {
+   "de": "Der Einstieg für alle, die ihren Assistenten im Chat erreichen wollen statt ein neues Programm zu lernen. Der Haken steht im eigenen Sicherheitsleitfaden: Wer dem Agenten den vollen Zugriff auf seinen Rechner gibt, trägt auch das Risiko — die Dokumentation rät zu Sandboxing und zur Freigabe einzelner Kontakte, bevor das Gateway nach aussen geht.",
+   "en": "The starting point for anyone who wants to reach their assistant in chat rather than learn a new program. The catch is in its own security guide: whoever gives the agent full access to their machine carries the risk too — the documentation advises sandboxing and approving individual contacts before exposing the gateway."
+  },
+  "links": {
+   "home": "https://openclaw.ai",
+   "docs": "https://docs.openclaw.ai",
+   "code": "https://github.com/openclaw/openclaw"
+  },
+  "plans": {
+   "de": "Kostenlos, Open Source (MIT) · kein kostenpflichtiger Tarif und kein gehosteter Dienst; bezahlt wird nur das Modell beim Anbieter deiner Wahl",
+   "en": "Free, open source (MIT) · no paid tier and no hosted service; the only thing you pay for is the model at the provider of your choice"
+  },
+  "billing": [
+   "abo",
+   "api"
+  ],
+  "plansChecked": "2026-11-01",
+  "contentChecked": "2026-11-01"
+ },
  "Devin CLI": {
   "name": "Devin CLI",
   "vendor": "Cognition",

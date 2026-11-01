@@ -368,6 +368,14 @@
       "n": "Bionic",
       "v": "LM Studio",
       "k": "Bionic"
+     },
+     {
+      "n": "OpenClaw",
+      "v": {
+       "de": "persönlicher Agent",
+       "en": "personal agent"
+      },
+      "k": "OpenClaw"
      }
     ]
    },

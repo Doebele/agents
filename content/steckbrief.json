@@ -6616,6 +6616,141 @@
   "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-31"
  },
+ "story-bible-builder": {
+  "name": "Story Bible Builder",
+  "vendor": "Joey (joeysnoisygroup)",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "free": true,
+  "blurb": {
+   "de": "Das Gedächtnis einer Serie: Ein Interview-Skill, der die ganze Welt abfragt — Prämisse, These, Zeitleiste, Stil-Epochen, Fraktionen, Orte, Weltregeln, Figuren samt Stimme und Bewegung, Beziehungen, Plot-Motoren, Produktionsregeln — und daraus eine dichte Kanon-Datei von unter 500 Zeilen schreibt. Diese SKILL.md installierst du als eigenen Skill, und jeder spätere Prompt kennt die Welt, ohne dass du sie neu erzählst. Einen Umfang-Check gibt es vorab, Teilbauten (nur die Figuren festnageln) und die Erweiterung einer bestehenden Bibel gehen auch.",
+   "en": "The memory of a series: an interview skill that asks through the whole world — premise, thesis, timeline, aesthetic eras, factions, locations, world rules, characters with voice and movement locks, relationships, plot engines, production rules — and writes it into one dense canon file under 500 lines. You install that SKILL.md as a skill of your own, and every later prompt knows the world without you retelling it. A scope check comes first, and partial builds (just lock the characters) and extending an existing bible work too."
+  },
+  "tip": {
+   "de": "Der Anfang der Kette, wenn Figur, Ort und Ton über viele Clips gleich bleiben sollen: erst die Welt bauen und die Besetzung festnageln, dann Szene und Bewegung setzen — so nennt es der Autor selbst, und die passenden Nachbarn sind castkit, scenecraft und shotcaller. Zwei Haken: Die Bibel ist nur so gut wie deine Antworten im Interview. Und sie ist eine Datei von dir, kein Produkt mit Support; sie braucht einen Agenten, der Skills liest.",
+   "en": "The start of the chain when character, place and tone must hold across many clips: build the world and lock the cast first, then set scene and motion — the author's own ordering, whose neighbours here are castkit, scenecraft and shotcaller. Two catches: the bible is only as good as your answers in the interview. And it is a file of yours, not a product with support; it needs an agent that reads skills."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei",
+   "en": "Free, a text file"
+  },
+  "links": {
+   "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
+  },
+  "plansChecked": "2026-11-02",
+  "contentChecked": "2026-11-02"
+ },
+ "castkit": {
+  "name": "Castkit",
+  "vendor": "Joey (joeysnoisygroup)",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "free": true,
+  "blurb": {
+   "de": "Eine Figuren-Werkstatt für Bildmodelle: Über fünf Stationen wird ein Gesicht festgenagelt, kommen Haare, Piercings, Narben und Outfits dazu, und am Ende steht ein Charakterbogen — standardmäßig drei Tafeln: frontal ohne Kopf, von hinten, das Gesicht nah; sechs auf Wunsch. Jede Tafel entsteht auf flachem 18-%-Grau ohne Schatten, damit kein Licht eingebrannt wird und spätere Szenen das Licht machen. Photorealistisch oder animiert, mit drei Startpunkten für den Stil; eine photorealistische Figur lässt sich ohne Identitätsverlust animiert übersetzen. Geschrieben für Nano Banana Pro, andere Bildmodelle gehen auch.",
+   "en": "A character workshop for image models: across five stations a face gets locked, hair, piercings, scars and outfits join in, and at the end stands a character sheet — three panels by default: headless front, full rear, tight face; six on request. Every plate renders on flat 18% gray with no shadow, so no lighting bakes in and later scenes do the lighting. Photoreal or animated, with three style starting points; a photoreal character translates into an animated one without losing its identity. Written for Nano Banana Pro, other image models work too."
+  },
+  "tip": {
+   "de": "Der Nachbar von higgsfield-soul-id: Dort wird ein Gesicht per Training festgenagelt, hier entstehen die Referenztafeln per Prompt — weniger fest gehalten, dafür ohne Training und mit jedem Bildmodell. Zwei Haken: Das flache Grau ist kein Stil, sondern Absicht; erst eine neutrale Tafel lässt sich später in beliebiges Licht setzen. Und die Anleitung ist englisch — die Bilder selbst entstehen im Bildmodell deiner Wahl, das Kosten seiner eigenen hat.",
+   "en": "The neighbour of higgsfield-soul-id: there a face gets pinned by training, here the reference plates come from prompts — held less firmly, but with no training and on any image model. Two catches: the flat gray is not a style but deliberate; only a neutral plate can be placed into any light later. And the instructions are English — the images themselves are made in the image model of your choice, which has costs of its own."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei · die Bilder entstehen im Bildmodell deiner Wahl, das Kosten seiner eigenen hat",
+   "en": "Free, a text file · the images are made in the image model of your choice, which has costs of its own"
+  },
+  "links": {
+   "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
+  },
+  "plansChecked": "2026-11-02",
+  "contentChecked": "2026-11-02"
+ },
+ "scenecraft": {
+  "name": "Scenecraft",
+  "vendor": "Joey (joeysnoisygroup)",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "free": true,
+  "blurb": {
+   "de": "Baut die Umgebung statt die Figur: photorealistische Plates für Orte, Sets und ganze Welten, ganze Sätze von Einstellungen, deren Winkel sich in Geometrie und Licht nicht widersprechen, Standbilder mit Personen darin und Umbauten bestehender Plates. Die Komposition plant er still mit — Drittelregel und ein Detailfilter, der sich nach der Auflösung richtet —, der Prompt ist Prosa in fünf Absätzen in der Stimme eines Kameramanns. Licht läuft über Richtung, Qualität und Farbtemperatur. Standardmodell ist Nano Banana Pro, daneben Seedream 5.0 Pro und jedes andere Bildmodell.",
+   "en": "Builds the environment rather than the character: photoreal plates for places, sets and whole worlds, coverage sets whose angles agree on geometry and light, stills with people in them, and edits to a plate that already exists. It plans composition silently — thirds placement and a detail filter that follows the resolution — and writes the prompt as five paragraphs of prose in a cinematographer's voice. Light goes in by direction, quality and colour temperature. The default model is Nano Banana Pro, alongside Seedream 5.0 Pro and any other image model."
+  },
+  "tip": {
+   "de": "Der Lieferant des ersten Bildes: Solche Plates dienen Videomodellen als Umgebung und Startframe, und ein Satz Einstellungen, die zusammenpassen, hält einen Schnitt zusammen. Zwei Haken: Personen darf es darin geben, aber die Figur selbst kommt aus castkit oder einem Identitätsmodell — Scenecraft macht den Raum. Und die Anleitung ist englisch; die Bilder entstehen im Bildmodell deiner Wahl, das Kosten seiner eigenen hat.",
+   "en": "The supplier of the first frame: plates like these feed video models as environment and starting frame, and a set of angles that agree holds a cut together. Two catches: people may appear in them, but the character itself comes from castkit or an identity model — Scenecraft makes the room. And the instructions are English; the images are made in the image model of your choice, which has costs of its own."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei · die Bilder entstehen im Bildmodell deiner Wahl, das Kosten seiner eigenen hat",
+   "en": "Free, a text file · the images are made in the image model of your choice, which has costs of its own"
+  },
+  "links": {
+   "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
+  },
+  "plansChecked": "2026-11-02",
+  "contentChecked": "2026-11-02"
+ },
+ "shotcaller": {
+  "name": "Shotcaller",
+  "vendor": "Joey (joeysnoisygroup)",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "free": true,
+  "blurb": {
+   "de": "Ein Regisseur für Seedance-Prompts: Zuerst werden Version, Vorlagen und Länge abgefragt — Seedance 2.0 nimmt bis zu neun Bildreferenzen und 15 Sekunden, 2.5 bis zu fünfzig und 30 —, dann schreibt er den Videoprompt auf einem festen Gerüst aus sechzehn Blöcken: Stil, Bilder, Geometrie, erste Einstellung, Objektiv, Kamera, Licht und Farbe, Atmosphäre, getaktetes Handeln, Physik, Spiel, Ton, Sperren. Dialog übernimmt er Wort für Wort aus einem eingefügten Drehbuch, die Regieanweisung schreibt er dazu. Action, Choreografie, Produkt- und Performance-Shots, Lipsync und die Verlängerung eines Clips deckt er ab; Nachbesserungen kommen immer als vollständiger neuer Prompt zurück.",
+   "en": "A director for Seedance prompts: first it asks version, references and length — Seedance 2.0 takes up to nine image references and 15 seconds, 2.5 up to fifty and 30 — then it writes the video prompt on a locked spine of sixteen blocks: style, assets, geometry, first frame, lens, camera, light and colour, atmosphere, timecoded action, physics, acting, audio, locks. Dialogue is taken word for word from a script you paste in, with the delivery written separately. It covers action, choreography, product and performance shots, lipsync and extending a clip; revisions always come back as the complete rewritten prompt."
+  },
+  "tip": {
+   "de": "Das nimmst du, wenn ein Clip genau so werden soll wie geplant — Kamera, Bildausschnitt, gesprochene Zeilen — und das Raten des Modells teuer wird. Drei Haken: Der Prompt ist englisch, auch wenn du deutsch schreibst. Kostenlos ist der Skill — Seedance, das die Clips erzeugt, kostet extra. Und die Idee liefert er nicht: Drehbuch und Vorlagenbilder kommen von dir, am besten aus castkit und scenecraft — Shotcaller macht daraus den Prompt.",
+   "en": "Reach for this when a clip has to land exactly as planned — camera, framing, spoken lines — and the model's guessing gets expensive. Three catches: the prompt is English even when you write German. Free is the skill — Seedance, which makes the clips, costs extra. And the idea is not its job: script and reference images come from you, best out of castkit and scenecraft — Shotcaller turns them into the prompt."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei · die Clips entstehen in Seedance, das Kosten seiner eigenen hat",
+   "en": "Free, a text file · the clips are made in Seedance, which has costs of its own"
+  },
+  "links": {
+   "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
+  },
+  "plansChecked": "2026-11-02",
+  "contentChecked": "2026-11-02"
+ },
+ "motiondojo": {
+  "name": "Motiondojo",
+  "vendor": "Joey (joeysnoisygroup)",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "free": true,
+  "blurb": {
+   "de": "Bewegung kopieren, neu besetzt: Er schreibt schlanke Prompts von rund 900 bis 1300 Wörtern, die einem Clip in Higgsfields Genjutsu die Bewegung aus einem angehängten Motion-Transfer-Video auf neue Figuren in einer neuen Welt mitgeben — mit echter Schwerkraft und Körpergewicht in jeder Bewegung. Drei Formen: Bewegung samt Kamera des Videos, nur der Kameraweg auf eine neue Szene, oder exakte Bewegung unter einer neu gebauten Kamera. Jeder Prompt beginnt mit einer harten Mund-Sperre — geschlossen, exakt die gesprochenen Worte, oder der Mund passend zum Video —, und die Laufzeit entspricht der Länge des Videos.",
+   "en": "Copy the motion, recast it: it writes lean prompts of roughly 900 to 1,300 words that carry the movement from an attached motion-transfer video onto new characters in a new world in a Higgsfield Genjutsu clip — with true gravity and bodyweight in every move. Three forms: motion together with the video's camera, the camera path alone onto a new scene, or exact motion under a rebuilt camera. Every prompt opens with a hard mouth lock — closed, the exact spoken words, or mouths matching the video — and the runtime equals the video's length."
+  },
+  "tip": {
+   "de": "Für Choreografie, die zu genau ist, um sie zu beschreiben: ein Tanz, ein Kampf, ein Kameraweg aus einem echten Video. Drei Haken: Er ist auf Higgsfields Genjutsu geschrieben und nützt ohne Zugang dazu nichts. Das Quellvideo brauchst du mit Rechten, und sein Ton bleibt wörtlich: Gesprochenes wird exakt übernommen, umformuliertes Sprechen liefert der Skill nicht. Anleitung und Prompt sind englisch.",
+   "en": "For choreography too exact to describe: a dance, a fight, a camera path from a real video. Three catches: it is written for Higgsfield's Genjutsu and is of no use without access to it. You need the source video with the rights to it, and its sound stays literal: spoken lines are taken over exactly; reworded speech the skill does not deliver. Instructions and prompt are English."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei · die Clips entstehen in Higgsfields Genjutsu, das Kosten seiner eigenen hat",
+   "en": "Free, a text file · the clips are made in Higgsfield's Genjutsu, which has costs of its own"
+  },
+  "links": {
+   "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
+  },
+  "plansChecked": "2026-11-02",
+  "contentChecked": "2026-11-02"
+ },
  "social": {
   "name": "social",
   "vendor": "Corey Haines",

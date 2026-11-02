@@ -547,6 +547,43 @@
       "k": "video"
      },
      {
+      "n": "Story Bible Builder",
+      "v": {
+       "de": "Serien-Bibel",
+       "en": "story bible"
+      },
+      "k": "story-bible-builder"
+     },
+     {
+      "n": "Castkit",
+      "v": {
+       "de": "Figuren-Referenzen",
+       "en": "character references"
+      },
+      "k": "castkit"
+     },
+     {
+      "n": "Scenecraft",
+      "v": {
+       "de": "Szenen-Plates",
+       "en": "scene plates"
+      },
+      "k": "scenecraft"
+     },
+     {
+      "n": "Shotcaller",
+      "v": {
+       "de": "Seedance-Prompts",
+       "en": "Seedance prompts"
+      },
+      "k": "shotcaller"
+     },
+     {
+      "n": "Motiondojo",
+      "v": "Motion Transfer",
+      "k": "motiondojo"
+     },
+     {
       "n": "grill-with-docs",
       "v": {
        "de": "Interview",

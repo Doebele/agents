@@ -958,7 +958,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-02",
   "contentChecked": "2026-10-10"
  },
  "LangGraph": {
@@ -1215,13 +1215,13 @@
    "checked": "2026-10-06"
   },
   "plans": {
-   "de": "Open-Weight (Apache 2.0), kostenlos selbst hostbar · über Alibabas Model Studio nach Verbrauch, Region Singapur je 1M Token: qwen3.8-flash 0,15 $/0,47 $ · qwen3.6-flash 0,25 $/1,50 $ · qwen3.6-plus 0,50 $/3 $ · lange Prompts kosten mehr · 1 Mio. Token gratis, 90 Tage ab Freischaltung",
-   "en": "Open-weight (Apache 2.0), free to self-host · usage-based through Alibaba's Model Studio, Singapore region per 1M tokens: qwen3.8-flash $0.15/$0.47 · qwen3.6-flash $0.25/$1.50 · qwen3.6-plus $0.50/$3 · long prompts cost more · 1M tokens free for 90 days from activation"
+   "de": "Open-Weight (Apache 2.0), kostenlos selbst hostbar · über Alibabas Model Studio nach Verbrauch, Region Singapur je 1M Token: qwen3.8-flash 0,15 $/0,47 $ · qwen3.6-flash 0,25 $/1,50 $ · qwen3.6-plus 0,50 $/3 $ · lange Prompts kosten mehr · 1 Mio. Token gratis, 90 Tage ab Freischaltung (nur qwen3.8-flash und qwen3.8-max, nur Region Singapur; qwen3.6 hat kein Gratiskontingent)",
+   "en": "Open-weight (Apache 2.0), free to self-host · usage-based through Alibaba's Model Studio, Singapore region per 1M tokens: qwen3.8-flash $0.15/$0.47 · qwen3.6-flash $0.25/$1.50 · qwen3.6-plus $0.50/$3 · long prompts cost more · 1M tokens free for 90 days from activation (qwen3.8-flash and qwen3.8-max only, Singapore region only; qwen3.6 has no free quota)"
   },
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-11-02",
   "contentChecked": "2026-10-06"
  },
  "gpt-oss": {
@@ -1445,18 +1445,18 @@
   "icon": "ollama",
   "free": true,
   "plans": {
-   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Free 0 $ (Startguthaben) · Pro 20 $/Mo. (60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (300 $ Guthaben, 10 gleichzeitige Anfragen) · Team 500 $/Mo. (1.000 $ Guthaben fürs Team, Vorabzugang) · Verbrauch über das Guthaben hinaus wird zusätzlich abgerechnet",
-   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Free $0 (starter credits) · Pro $20/mo ($60 of credits a month) · Pro Max $100/mo ($300 of credits, 10 concurrent requests) · Team $500/mo ($1,000 of credits for the team, early access) · usage beyond the included credits is billed on top"
+   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Pay-as-you-go 0 $ (ohne Guthaben, Abrechnung je Token) · Pro 20 $/Mo. (60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (300 $ Guthaben, 10 gleichzeitige Anfragen) · Team 500 $/Mo. (1.000 $ Guthaben fürs Team, Vorabzugang) · Verbrauch über das Guthaben hinaus wird zusätzlich abgerechnet",
+   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Pay-as-you-go $0 (no included credits, billed per token) · Pro $20/mo ($60 of credits a month) · Pro Max $100/mo ($300 of credits, 10 concurrent requests) · Team $500/mo ($1,000 of credits for the team, early access) · usage beyond the included credits is billed on top"
   },
   "plansJahr": {
-   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Free 0 $ (Startguthaben) · Pro 16,67 $/Mo. (200 $/Jahr, 60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (nur monatlich) · Team 500 $/Mo. (nur monatlich) · Verbrauch über das Guthaben hinaus wird zusätzlich abgerechnet",
-   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Free $0 (starter credits) · Pro $16.67/mo ($200/year, $60 of credits a month) · Pro Max $100/mo (monthly only) · Team $500/mo (monthly only) · usage beyond the included credits is billed on top"
+   "de": "Programm Open Source (MIT), lokale Modelle auf eigener Hardware kostenlos und unbegrenzt · Cloud-Modelle im Abo: Pay-as-you-go 0 $ (nur monatlich) · Pro 16,67 $/Mo. (200 $ im Voraus; 60 $ Guthaben im Monat) · Pro Max 100 $/Mo. (nur monatlich) · Team 500 $/Mo. (nur monatlich) · Verbrauch über das Guthaben hinaus wird zusätzlich abgerechnet",
+   "en": "Program open source (MIT), local models on your own hardware free and unlimited · cloud models by subscription: Pay-as-you-go $0 (monthly only) · Pro $16.67/mo ($200 up front; $60 of credits a month) · Pro Max $100/mo (monthly only) · Team $500/mo (monthly only) · usage beyond the included credits is billed on top"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-02",
   "contentChecked": "2026-10-27"
  },
  "llama.cpp": {
@@ -2586,7 +2586,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-11-02",
   "contentChecked": "2026-10-06"
  },
  "Kimi K3": {
@@ -2645,7 +2645,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-11-02",
   "contentChecked": "2026-10-13"
  },
  "DeepSeek V4": {
@@ -2875,7 +2875,7 @@
    "api",
    "abo"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-02",
   "contentChecked": "2026-10-13"
  },
  "Step 5 Preview": {
@@ -3692,12 +3692,12 @@
    "en": "The entry point when you like Claude Design but want everything open and local. Bring your own keys: the program is free (Apache 2.0), the model bills run through your own accounts."
   },
   "plans": {
-   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Go 10 $/Mo. · Plus 20 $/Mo. · Pro 100 $/Mo. · Max 200 $/Mo. · Team 105 $/Sitz/Mo. · Enterprise auf Anfrage · derzeit rabattiert: erster Monat Go 8 $, Plus 16 $, Pro 70 $, Max 120 $, Team 63 $/Sitz",
-   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Go $10/mo · Plus $20/mo · Pro $100/mo · Max $200/mo · Team $105/seat/mo · Enterprise on request · currently discounted: first month Go $8, Plus $16, Pro $70, Max $120, Team $63/seat"
+   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Go 10 $/Mo. · Plus 20 $/Mo. · Pro 100 $/Mo. · Max 200 $/Mo. · alle Pläne mit unbegrenzt vielen Mitgliedern, ohne Sitzpreis · Enterprise auf Anfrage · derzeit rabattiert: erster Monat Go 8 $, Plus 16 $, Pro 70 $, Max 120 $",
+   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Go $10/mo · Plus $20/mo · Pro $100/mo · Max $200/mo · all plans with unlimited members, no seat fee · Enterprise on request · currently discounted: first month Go $8, Plus $16, Pro $70, Max $120"
   },
   "plansJahr": {
-   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Go 7 $/Mo. (84 $/Jahr) · Plus 14 $/Mo. (168 $/Jahr) · Pro 60 $/Mo. (720 $/Jahr) · Max 98 $/Mo. (1.176 $/Jahr) · Team 105 $/Sitz/Mo. (nur monatlich ausgewiesen) · Enterprise auf Anfrage",
-   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Go $7/mo ($84/year) · Plus $14/mo ($168/year) · Pro $60/mo ($720/year) · Max $98/mo ($1,176/year) · Team $105/seat/mo (monthly only) · Enterprise on request"
+   "de": "Kostenlos (Apache 2.0) mit eigenem API-Schlüssel, aber ohne monatliches Modell-Guthaben · Go 7 $/Mo. (84 $ im Voraus) · Plus 14 $/Mo. (168 $ im Voraus) · Pro 60 $/Mo. (720 $ im Voraus) · Max 98 $/Mo. (1.176 $ im Voraus) · alle Pläne mit unbegrenzt vielen Mitgliedern, ohne Sitzpreis · Enterprise auf Anfrage",
+   "en": "Free (Apache 2.0) with your own API key, but without a monthly model-credit grant · Go $7/mo ($84 up front) · Plus $14/mo ($168 up front) · Pro $60/mo ($720 up front) · Max $98/mo ($1,176 up front) · all plans with unlimited members, no seat fee · Enterprise on request"
   },
   "links": {
    "home": "https://open-design.ai/",
@@ -3707,7 +3707,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-02",
   "contentChecked": "2026-10-20"
  },
  "Uizard": {
@@ -4539,7 +4539,7 @@
   "links": {
    "home": "https://www.netlify.com"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-02",
   "icon": "netlify",
   "contentChecked": "2026-10-13"
  },
@@ -5774,7 +5774,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-02",
   "contentChecked": "2026-10-27"
  },
  "gbrain": {
@@ -6922,8 +6922,8 @@
    "docs": "https://dev.meta.ai/docs/pricing-rate-limits"
   },
   "plans": {
-   "de": "Abo mit drei Stufen (Everyday Usage, High Usage mit fünffachem, Power Usage mit zwanzigfachem Kontingent, 10 bis 50 Prompts je fünf Stunden in der Einstiegsstufe) · Preise nennt Meta erst in der Anmeldung · ohne Abo nach Verbrauch über die Model API: Muse Spark 1.3 je 1M Token 1,25 $ Eingabe / 4,25 $ Ausgabe, gecachte Eingabe 0,15 $ · Contributor-Stufe 0,10 $/0,20 $, dafür darf Meta mit den Daten trainieren · Websuche 2,50 $ je 1.000 Abfragen · kein Aufschlag für langen Kontext",
-   "en": "Subscription in three tiers (Everyday Usage, High Usage at five times the quota, Power Usage at twenty times, 10 to 50 prompts per five hours on the entry tier) · Meta shows the prices only during sign-up · without a subscription, pay per use through the Model API: Muse Spark 1.3 at $1.25 input / $4.25 output per 1M tokens, cached input $0.15 · contributor tier $0.10/$0.20, in exchange for Meta training on the data · web search $2.50 per 1,000 queries · no long-context premium"
+   "de": "Abo mit vier Stufen (Everyday Usage, High Usage mit fünffachem, Power Usage mit zwanzigfachem, Maximum Usage mit 80-fachem Kontingent, 10 bis 50 Prompts je fünf Stunden in der Einstiegsstufe) · Preise nennt Meta erst in der Anmeldung · ohne Abo nach Verbrauch über die Model API: Muse Spark 1.3 je 1M Token 1,25 $ Eingabe / 4,25 $ Ausgabe, gecachte Eingabe 0,15 $ · Contributor-Stufe 0,10 $/0,20 $, dafür darf Meta mit den Daten trainieren · Websuche 2,50 $ je 1.000 Abfragen · kein Aufschlag für langen Kontext",
+   "en": "Subscription in four tiers (Everyday Usage, High Usage at five times the quota, Power Usage at twenty times, Maximum Usage at eighty times, 10 to 50 prompts per five hours on the entry tier) · Meta shows the prices only during sign-up · without a subscription, pay per use through the Model API: Muse Spark 1.3 at $1.25 input / $4.25 output per 1M tokens, cached input $0.15 · contributor tier $0.10/$0.20, in exchange for Meta training on the data · web search $2.50 per 1,000 queries · no long-context premium"
   },
   "billing": [
    "abo",
@@ -6950,7 +6950,7 @@
     }
    ]
   },
-  "plansChecked": "2026-10-06",
+  "plansChecked": "2026-11-02",
   "contentChecked": "2026-10-06"
  },
  "OpenCode": {

@@ -1097,7 +1097,12 @@
       "skills.sh",
       "skill-creator",
       "eigene-skills",
-      "video"
+      "video",
+      "story-bible-builder",
+      "castkit",
+      "scenecraft",
+      "shotcaller",
+      "motiondojo"
      ],
      "frage": {
       "de": "Welches Wissen soll der Agent mitbringen?",
@@ -1105,7 +1110,11 @@
      },
      "empfehlung": [
       "Anthropic Agent Skills"
-     ]
+     ],
+     "notiz": {
+      "de": "Die letzten fünf kommen von einem Autor und greifen ineinander: erst die Welt als Bibel, dann die Figur, dann die Szene, dann der Prompt. Sie sind für den Medienblock geschrieben und tauchen in den Varianten dieser Arbeitsart wieder auf.",
+      "en": "The last five come from one author and interlock: first the world as a bible, then the character, then the scene, then the prompt. They are written for the media block and reappear in the variants of this line of work."
+     }
     },
     "04_mcp": {
      "kandidaten": [
@@ -1187,6 +1196,11 @@
        "en": "Graphic, illustration, photo"
       },
       "stationen": {
+       "03_skills": {
+        "kandidaten": [
+         "scenecraft"
+        ]
+       },
        "06_medien": {
         "kandidaten": [
          "GPT Image 2",
@@ -1233,6 +1247,24 @@
        "en": "Clip, ad film, animation"
       },
       "stationen": {
+       "03_skills": {
+        "kandidaten": [
+         "story-bible-builder",
+         "castkit",
+         "scenecraft",
+         "shotcaller",
+         "motiondojo",
+         "video",
+         "eigene-skills"
+        ],
+        "empfehlung": [
+         "shotcaller"
+        ],
+        "notiz": {
+         "de": "Ein Satz von einem Autor, geschrieben für Seedance und Genjutsu: Die Bibel hält die Welt, castkit die Figuren, scenecraft die Orte, shotcaller schreibt den Videoprompt, motiondojo überträgt die Bewegung aus einem Referenzvideo. Die Prompts sind englisch.",
+         "en": "A set from one author, written for Seedance and Genjutsu: the bible holds the world, castkit the characters, scenecraft the places, shotcaller writes the video prompt, motiondojo carries the motion over from a reference video. The prompts are English."
+        }
+       },
        "06_medien": {
         "kandidaten": [
          "Veo 3.1",
@@ -1327,6 +1359,8 @@
        "03_skills": {
         "kandidaten": [
          "higgsfield-soul-id",
+         "castkit",
+         "story-bible-builder",
          "social",
          "offers",
          "video",
@@ -1334,12 +1368,13 @@
         ],
         "empfehlung": [
          "higgsfield-soul-id",
+         "castkit",
          "eigene-skills",
          "social"
         ],
         "notiz": {
-         "de": "higgsfield-soul-id hält das Gesicht fest. Wer die Figur darüber hinaus ist — wie sie spricht, was sie nie sagt, woher sie kommt — steht auf einem Charakterbogen, den du selbst schreibst: als eigener Skill hinterlegt oder als Datei im Projekt, die der Agent mitliest. Einen fertigen Skill zum Installieren braucht es dafür nicht, einen verbreiteten gibt es auch nicht. social füllt den Kalender und arbeitet ein Stück in viele um, offers beantwortet die Frage, warum am Ende jemand zahlt.",
-         "en": "higgsfield-soul-id pins the face down. Who the character is beyond that — how she speaks, what she would never say, where she comes from — lives on a character sheet you write yourself: kept as a skill of your own, or as a file in the project the agent reads along. No ready-made skill is needed for that, and no widely used one exists either. social fills the calendar and turns one piece into many, offers answers why anyone pays at the end."
+         "de": "higgsfield-soul-id hält das Gesicht fest, castkit baut die Referenztafeln per Prompt — grau und schattenlos, damit spätere Szenen das Licht machen. Wer die Figur darüber hinaus ist — wie sie spricht, was sie nie sagt, woher sie kommt — steht auf einem Charakterbogen: selbst geschrieben oder im Interview mit story-bible-builder erfragt, das daraus eine installierbare Bibel der ganzen Welt macht. Einen verbreiteten Standard dafür gibt es weiterhin nicht. social füllt den Kalender und arbeitet ein Stück in viele um, offers beantwortet die Frage, warum am Ende jemand zahlt.",
+         "en": "higgsfield-soul-id pins the face down, castkit builds the reference plates from prompts — gray and shadowless, so later scenes do the lighting. Who the character is beyond that — how she speaks, what she would never say, where she comes from — lives on a character sheet: written yourself, or drawn out in an interview with story-bible-builder, which turns it into an installable bible of the whole world. No widely used standard for this exists, still. social fills the calendar and turns one piece into many, offers answers why anyone pays at the end."
         }
        },
        "04_mcp": {

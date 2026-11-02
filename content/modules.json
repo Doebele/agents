@@ -1536,6 +1536,14 @@
       "k": "OpenPencil"
      },
      {
+      "n": "Doop",
+      "v": {
+       "de": "offen · Leinwand",
+       "en": "open · canvas"
+      },
+      "k": "Doop"
+     },
+     {
       "n": "Uizard",
       "v": {
        "de": "UI-Gen",

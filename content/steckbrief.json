@@ -3444,6 +3444,31 @@
   "icon": "penpot",
   "contentChecked": "2026-10-27"
  },
+ "Doop": {
+  "name": "Doop",
+  "vendor": "Doop",
+  "cat": {
+   "de": "Design-Tool · Baustein 07",
+   "en": "Design tool · Block 07"
+  },
+  "accent": "var(--amber)",
+  "open": true,
+  "blurb": {
+   "de": "Eine unendliche Leinwand, auf der Mensch und Agent gleichzeitig am selben Entwurf arbeiten — der Agent mit eigenem Cursor, du im Browser. Doop ist selbst ein MCP-Server: Claude Code, Codex, Cursor oder ChatGPT verbinden sich, legen Rahmen an, schreiben HTML hinein und prüfen das Ergebnis per Screenshot. Entwürfe lassen sich aus Webseiten, Figma oder Canva holen und als PNG, PDF oder HTML abgeben; mit einem verbundenen GitHub-Repository kann ein Rahmen als Pull Request in Code übergehen. Im Browser, als Desktop-App und selbst betreibbar.",
+   "en": "An infinite canvas where human and agent work on the same design at the same time — the agent with a cursor of its own, you in the browser. Doop is itself an MCP server: Claude Code, Codex, Cursor or ChatGPT connect, create frames, write HTML into them and check the result with a screenshot. Designs can be pulled in from websites, Figma or Canva and handed out as PNG, PDF or HTML; with a connected GitHub repository a frame can turn into a pull request. In the browser, as a desktop app, and self-hostable."
+  },
+  "tip": {
+   "de": "Der Weg, wenn dir Paper oder Figma mit Agenten gefällt, du aber den Quellcode selbst in der Hand behalten willst — das Projekt nennt sich ausdrücklich die offene Alternative zu Paper. Der Haken: sehr jung (Beta), und die Angaben zur Lizenz widersprechen sich — die Website nennt MIT, das GitHub-Repository AGPL-3.0, die strengere. Selbst betreiben heisst Docker und eine Postgres-Datenbank.",
+   "en": "The route if you like Paper or Figma with agents but want the source in your own hands — the project explicitly calls itself the open alternative to Paper. The catch: very young (beta), and its statements on licence disagree — the website says MIT, the GitHub repository AGPL-3.0, the stricter one. Self-hosting means Docker and a Postgres database."
+  },
+  "links": {
+   "home": "https://doop.design/",
+   "docs": null,
+   "code": "https://github.com/kgoedecke/doop"
+  },
+  "free": true,
+  "contentChecked": "2026-11-02"
+ },
  "Paper": {
   "name": "Paper",
   "vendor": "Paper",

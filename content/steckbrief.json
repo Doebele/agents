@@ -309,7 +309,7 @@
    "docs": "https://obsidian.md/help/",
    "tut": "https://www.youtube.com/watch?v=NVUCQ-pzBn4"
   },
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-03"
  },
  "Rows": {
   "name": "Rows",
@@ -450,7 +450,7 @@
    "api"
   ],
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-03"
  },
  "Agent SDK": {
   "name": "Claude Agent SDK",
@@ -789,7 +789,7 @@
    "api"
   ],
   "plansChecked": "2026-10-19",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-03"
  },
  "Zed": {
   "name": "Zed",
@@ -2100,7 +2100,7 @@
    "docs": "https://github.com/openai/whisper",
    "code": "https://github.com/openai/whisper"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-11-03"
  },
  "Kokoro": {
   "name": "Kokoro",
@@ -3021,7 +3021,7 @@
    "code": "https://github.com/anthropics/skills"
   },
   "icon": "anthropic",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-03"
  },
  "agentskills.io": {
   "name": "Agent Skills (Open Standard)",
@@ -3528,7 +3528,7 @@
    "docs": "https://antigravity.google/docs/getting-started",
    "code": "https://antigravity.google/download"
   },
-  "contentChecked": "2026-10-06",
+  "contentChecked": "2026-11-03",
   "aaAgent": {
    "url": "https://artificialanalysis.ai/agents/coding-agents",
    "checked": "2026-10-06",
@@ -5455,7 +5455,7 @@
    "abo"
   ],
   "plansChecked": "2026-10-29",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-03"
  },
  "Berd": {
   "name": "Berd",
@@ -5553,7 +5553,7 @@
    "en": "Free, open source (MIT) · models via your own subscription or API key at the provider"
   },
   "plansChecked": "2026-10-26",
-  "contentChecked": "2026-10-05"
+  "contentChecked": "2026-11-03"
  },
  "Aider": {
   "name": "Aider",
@@ -6976,7 +6976,7 @@
    ]
   },
   "plansChecked": "2026-11-02",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-03"
  },
  "OpenCode": {
   "name": "OpenCode",
@@ -6989,8 +6989,8 @@
   "open": true,
   "free": true,
   "blurb": {
-   "de": "Der quelloffene Coding-Agent für die Kommandozeile, mit über 212.000 Sternen auf GitHub einer der grössten überhaupt. Modellunabhängig: über 75 Anbieter einschliesslich lokaler Modelle, und wer ein ChatGPT-Abo oder GitHub Copilot hat, meldet sich damit an statt einen Schlüssel zu kaufen. Dazu LSP-Anbindung, damit das Modell den Code wirklich versteht, mehrere Sitzungen parallel am selben Projekt, Teilen-Links für eine Sitzung, MCP und Skills. Es gibt ihn als Terminal-Oberfläche, Desktop-Programm und IDE-Erweiterung.",
-   "en": "The open source coding agent for the command line, with more than 212,000 GitHub stars one of the largest anywhere. Model-agnostic: over 75 providers including local models, and anyone with a ChatGPT subscription or GitHub Copilot signs in with that instead of buying a key. Plus LSP wiring so the model actually understands the code, several sessions in parallel on the same project, share links for a session, MCP and skills. It comes as a terminal interface, a desktop app and an IDE extension."
+   "de": "Der quelloffene Coding-Agent für die Kommandozeile, mit über 220.000 Sternen auf GitHub einer der grössten überhaupt. Modellunabhängig: über 75 Anbieter einschliesslich lokaler Modelle, und wer ein ChatGPT-Abo oder GitHub Copilot hat, meldet sich damit an statt einen Schlüssel zu kaufen. Dazu LSP-Anbindung, damit das Modell den Code wirklich versteht, mehrere Sitzungen parallel am selben Projekt, Teilen-Links für eine Sitzung, MCP und Skills. Es gibt ihn als Terminal-Oberfläche, Desktop-Programm und IDE-Erweiterung.",
+   "en": "The open source coding agent for the command line, with more than 220,000 GitHub stars one of the largest anywhere. Model-agnostic: over 75 providers including local models, and anyone with a ChatGPT subscription or GitHub Copilot signs in with that instead of buying a key. Plus LSP wiring so the model actually understands the code, several sessions in parallel on the same project, share links for a session, MCP and skills. It comes as a terminal interface, a desktop app and an IDE extension."
   },
   "tip": {
    "de": "Die erste Wahl, wenn der Agent nicht vorschreiben soll, welches Modell du nimmst. Das Programm kostet nichts, bezahlt wird das Modell, und dafür gibt es zwei eigene Wege: Go für 10 $ im Monat mit einer kuratierten Liste günstiger Modelle, oder Zen als Schleuse zu geprüften Modellen nach Verbrauch. Der Haken ist derselbe wie bei jedem Werkzeug ohne Vorgabe: Du musst selbst wissen, welches Modell deine Aufgabe trägt.",
@@ -7031,7 +7031,7 @@
    ]
   },
   "plansChecked": "2026-10-26",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-03"
  },
  "OpenClaw": {
   "name": "OpenClaw",

@@ -344,7 +344,7 @@
    "home": "https://rows.com/",
    "docs": "https://rows.com/docs"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-03"
  },
  "Claude Code": {
@@ -483,7 +483,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-20"
  },
  "ChatGPT": {
@@ -1275,7 +1275,7 @@
    "de": "Kostenlos (Open-Weight, Apache 2.0), selbst gehostet",
    "en": "Free (open-weight, Apache 2.0), self-hosted"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-06"
  },
  "Mistral Large 3": {
@@ -1486,7 +1486,7 @@
    "de": "Kostenlos, Open Source (MIT)",
    "en": "Free, open source (MIT)"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-13"
  },
  "vLLM": {
@@ -1745,7 +1745,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-11-05",
   "plansJahr": {
    "de": "Gratis (Bilder öffentlich, Rechte bei Recraft) · Basic 1.000 Credits 10 $/Mo. (120 $/Jahr) · Pro ab 2.000 Credits 16 $/Mo. · Teams ab 2.000 Credits 18 $/Mo.",
    "en": "Free (images public, Recraft owns the rights) · Basic 1,000 credits $10/mo ($120/yr) · Pro from 2,000 credits $16/mo · Teams from 2,000 credits $18/mo"
@@ -1903,7 +1903,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "plansJahr": {
    "de": "Gratis 125 Credits · Standard 12 $/Mo. bei Jahreszahlung · Pro 28 $/Mo. · Max 76 $/Mo. · Gen-4.5 kostet 12 Credits je Sekunde",
    "en": "Free 125 credits · Standard $12/mo billed annually · Pro $28/mo · Max $76/mo · Gen-4.5 costs 12 credits per second"
@@ -1941,7 +1941,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "plansJahr": {
    "de": "Plus 25 $/Mo. (300 $/Jahr) · Pro 75 $/Mo. (900 $/Jahr) · Ultra 250 $/Mo. (3.000 $/Jahr)",
    "en": "Plus $25/mo ($300/yr) · Pro $75/mo ($900/yr) · Ultra $250/mo ($3,000/yr)"
@@ -3503,7 +3503,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-20"
  },
  "Antigravity 2.0": {
@@ -4497,7 +4497,7 @@
   "links": {
    "home": "https://www.strato.de"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "plansJahr": {
    "de": "12-Monats-Tarife: Starter erster Monat 0 €, dann 5 €/Mo. · Basic 1 €/Mo. für 12 Monate, dann 9 € · Plus erster Monat 0 €, dann 12 € · Pro erster Monat 0 €, dann 22 €/Mo. · Einrichtung 0 €",
    "en": "12-month terms: Starter first month €0, then €5/mo · Basic €1/mo for 12 months, then €9 · Plus first month €0, then €12 · Pro first month €0, then €22/mo · setup €0"
@@ -4625,7 +4625,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "links": {
    "home": "https://www.cloudflare.com/products/pages/"
   },
@@ -5347,7 +5347,7 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-24"
  },
  "ComfyUI": {
@@ -5484,7 +5484,7 @@
    "de": "Kostenlos, Open Source (Apache-2.0) · Berd spricht mit dem Goose-Unterbau; einen Preis nennt weder die Produktseite noch das Repository",
    "en": "Free, open source (Apache-2.0) · Berd talks to the Goose backend; neither the product page nor the repository names a price"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-20"
  },
  "Goose": {
@@ -5615,7 +5615,7 @@
    "de": "Kostenlos (Apache-2.0) · selbst hostbar, frühe Instanz auf buzz.xyz",
    "en": "Free (Apache-2.0) · self-hostable, early instance at buzz.xyz"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-20"
  },
  "Browserbase": {
@@ -5678,7 +5678,7 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-24"
  },
  "research": {
@@ -5707,7 +5707,7 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-24"
  },
  "qa": {
@@ -5736,7 +5736,7 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-24"
  },
  "to-questionnaire": {
@@ -5957,7 +5957,7 @@
    "de": "API 0,042 $ je 1M Eingabe-Tokens (42 $ je Milliarde) · Ausgabe-Tokens werden nicht berechnet · Ratengrenzen 250.000 Tokens/s und 1.200 Anfragen/Min., werden derzeit dynamisch angepasst · höhere Grenzen über Custom- und Enterprise-Pläne",
    "en": "API $0.042 per 1M input tokens ($42 per billion) · output tokens are not billed · rate limits of 250,000 tokens/s and 1,200 requests/min, currently adjusted dynamically · higher limits via custom and enterprise plans"
   },
-  "plansChecked": "2026-10-01",
+  "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-10"
  },
  "Statista Connect": {

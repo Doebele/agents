@@ -2320,25 +2320,25 @@
    "url": "https://artificialanalysis.ai/models/gpt-6-astra",
    "intel": {
     "v": "57",
-    "rank": "#5/59",
+    "rank": "#5/69",
     "u": 4
    },
    "speed": {
-    "v": "70.6",
-    "rank": "#127/195",
-    "u": 2
+    "v": "19.1",
+    "rank": "#45/64",
+    "u": 3
    },
    "cost": {
-    "v": "$10/$50",
-    "rank": "#45/58",
+    "v": "$6.24",
+    "rank": "#51/66",
     "u": 4
    },
    "verb": {
-    "v": "54M",
-    "rank": "#23/58",
+    "v": "54.3M",
+    "rank": "#24/68",
     "u": 2
    },
-   "checked": "2026-11-02"
+   "checked": "2026-11-05"
   },
   "plans": {
    "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 272k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra und Sol, nicht Luna) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
@@ -2378,26 +2378,26 @@
   "aa": {
    "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
    "intel": {
-    "v": "58",
-    "rank": "#2/59",
+    "v": "59",
+    "rank": "#2/69",
     "u": 4
    },
    "speed": {
-    "v": "95.5",
-    "rank": "#86/195",
-    "u": 3
+    "v": "26.2",
+    "rank": "#55/64",
+    "u": 4
    },
    "cost": {
-    "v": "$4/$20",
-    "rank": "#56/58",
+    "v": "$10.04",
+    "rank": "#63/66",
     "u": 4
    },
    "verb": {
-    "v": "220M",
-    "rank": "#57/58",
+    "v": "218M",
+    "rank": "#67/68",
     "u": 4
    },
-   "checked": "2026-11-02"
+   "checked": "2026-11-05"
   },
   "plans": {
    "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus, 0,10 $ bei Sonnet und Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
@@ -2437,25 +2437,25 @@
    "url": "https://artificialanalysis.ai/models/gemini-3-8-flash",
    "intel": {
     "v": "31",
-    "rank": "#39/59",
+    "rank": "#46/69",
     "u": 2
    },
    "speed": {
-    "v": "136.6",
-    "rank": "#41/195",
-    "u": 4
+    "v": "14.1",
+    "rank": "#37/64",
+    "u": 3
    },
    "cost": {
-    "v": "$0.75/$3.75",
-    "rank": "#53/58",
+    "v": "$7.77",
+    "rank": "#58/66",
     "u": 4
    },
    "verb": {
-    "v": "130M",
-    "rank": "#48/58",
+    "v": "126M",
+    "rank": "#56/68",
     "u": 4
    },
-   "checked": "2026-11-02"
+   "checked": "2026-11-05"
   },
   "plans": {
    "de": "API je 1M Token: 3.1 Pro 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · 3.8 Flash 0,75 $/3,75 $ bis 31.12.2026, ab 1.1.2027 1,50 $/7,50 $ · Kontext-Cache 0,20 $ (Pro) bzw. 0,075 $ (Flash), Speicherung 4,50 $ je 1M Token und Stunde · Gratisstufe für 3.8 Flash, für 3.1 Pro nicht · Google AI Pro 19,99 $/Mo.",
@@ -2590,7 +2590,7 @@
   "contentChecked": "2026-10-06"
  },
  "Kimi K3": {
-  "name": "Kimi K3",
+  "name": "Kimi K3.1 Pro",
   "vendor": "Moonshot AI",
   "cat": {
    "de": "Open-Weight · Baustein 01",
@@ -2599,43 +2599,43 @@
   "accent": "var(--cyan)",
   "open": true,
   "blurb": {
-   "de": "Ein offenes Modell in Spitzengröße: 2,8 Billionen Parameter, dazu von Grund auf für Bild und Text gemeinsam gebaut. Offene Gewichte heißt, du darfst es selbst betreiben — bei dieser Größe brauchst du dafür allerdings einen Hoster und keinen Laptop.",
-   "en": "An open model at frontier scale: 2.8 trillion parameters, built from the ground up for image and text together. Open weights means you may run it yourself — though at this size that means a hosting provider, not a laptop."
+   "de": "Ein offenes Modell in Spitzengröße: 2,8 Billionen Parameter, dazu von Grund auf für Bild und Text gemeinsam gebaut. K3.1 Pro ist die nachgeschärfte Nachfolge von K3 — dieselbe Größe, aber deutlich stärker bei Programmieren, 3D-Erstellung und langen Agentenläufen. Offene Gewichte heißt, du darfst es selbst betreiben — bei dieser Größe brauchst du dafür allerdings einen Hoster und keinen Laptop.",
+   "en": "An open model at frontier scale: 2.8 trillion parameters, built from the ground up for image and text together. K3.1 Pro is the sharpened successor to K3 — same size, but markedly stronger at coding, 3D creation and long agent runs. Open weights means you may run it yourself — though at this size that means a hosting provider, not a laptop."
   },
   "tip": {
-   "de": "Das Modell für alle, die Offenheit wollen, ohne bei der Leistung nachzugeben. Es bei einem Anbieter zu mieten ist hier der normale Weg.",
-   "en": "The model for anyone who wants openness without giving up capability. Renting it from a provider is the normal route here."
+   "de": "Das Modell für alle, die Offenheit wollen, ohne bei der Leistung nachzugeben. Es bei einem Anbieter zu mieten ist hier der normale Weg. Wer es eilig hat: Die Highspeed-Variante ist zwei- bis dreimal so schnell, kostet aber das Doppelte.",
+   "en": "The model for anyone who wants openness without giving up capability. Renting it from a provider is the normal route here. If you are in a hurry: the Highspeed variant is two to three times as fast, at twice the price."
   },
   "links": {
    "home": "https://www.moonshot.ai/",
-   "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart",
-   "code": "https://huggingface.co/moonshotai/Kimi-K3"
+   "docs": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart",
+   "code": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
   },
   "icon": "kimi",
   "free": true,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/kimi-k3",
+   "url": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
    "intel": {
-    "v": "44",
-    "rank": "#5/121",
-    "u": 4
-   },
-   "speed": {
-    "v": "64.9",
-    "rank": "#47/78",
-    "u": 2
-   },
-   "cost": {
-    "v": "$3/$15",
-    "rank": "#41/43",
-    "u": 4
-   },
-   "verb": {
-    "v": "160M",
-    "rank": "#31/47",
+    "v": "46",
+    "rank": "#22/69",
     "u": 3
    },
-   "checked": "2026-11-02"
+   "speed": {
+    "v": "36.0",
+    "rank": "#61/64",
+    "u": 4
+   },
+   "cost": {
+    "v": "$3.68",
+    "rank": "#40/66",
+    "u": 3
+   },
+   "verb": {
+    "v": "113M",
+    "rank": "#48/68",
+    "u": 3
+   },
+   "checked": "2026-11-05"
   },
   "plans": {
    "de": "API 3 $ Eingabe / 15 $ Ausgabe pro 1M Token, gecachte Eingabe 0,30 $ · keine Gratisstufe, vor dem ersten Aufruf muss mindestens 1 $ aufgeladen sein · Open-Weight unter der Kimi-K3-Lizenz, selbst hostbar",
@@ -6869,25 +6869,25 @@
    "url": "https://artificialanalysis.ai/models/claude-fable-5-1",
    "intel": {
     "v": "49",
-    "rank": "#18/59",
+    "rank": "#19/69",
     "u": 3
    },
    "speed": {
-    "v": "69.4",
-    "rank": "#131/195",
-    "u": 2
+    "v": "22.2",
+    "rank": "#50/64",
+    "u": 4
    },
    "cost": {
-    "v": "$10/$50",
-    "rank": "#58/58",
+    "v": "$12.99",
+    "rank": "#66/66",
     "u": 4
    },
    "verb": {
-    "v": "160M",
-    "rank": "#55/58",
+    "v": "163M",
+    "rank": "#65/68",
     "u": 4
    },
-   "checked": "2026-11-02"
+   "checked": "2026-11-05"
   },
   "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-24"

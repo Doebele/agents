@@ -5314,6 +5314,10 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
@@ -5828,6 +5832,9 @@
    "de": "Kostenlos (MIT) · lokale PGLite oder eigenes Postgres",
    "en": "Free (MIT) · local PGLite or your own Postgres"
   },
+  "billing": [
+   "abo"
+  ],
   "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-24"
  },
@@ -6743,6 +6750,9 @@
    "de": "Kostenlos, Textdatei · die Clips entstehen in Seedance, das Kosten seiner eigenen hat",
    "en": "Free, a text file · the clips are made in Seedance, which has costs of its own"
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
   },
@@ -6770,6 +6780,9 @@
    "de": "Kostenlos, Textdatei · die Clips entstehen in Higgsfields Genjutsu, das Kosten seiner eigenen hat",
    "en": "Free, a text file · the clips are made in Higgsfield's Genjutsu, which has costs of its own"
   },
+  "billing": [
+   "abo"
+  ],
   "links": {
    "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
   },

@@ -634,7 +634,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-10"
  },
  "Kimi Code": {
@@ -856,7 +856,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-06"
  },
  "Hermes Agent": {
@@ -890,7 +890,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-13"
  },
  "Odysseus": {
@@ -1129,7 +1129,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-13"
  },
  "Google ADK": {
@@ -1163,7 +1163,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-10"
  },
  "Qwen 3.6 / 3.8": {
@@ -1688,7 +1688,7 @@
    "code": null
   },
   "icon": "google",
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-24"
  },
  "Ideogram": {
@@ -2001,7 +2001,7 @@
    "de": "Kostenlos (Apache 2.0) · keine Render-Gebühren und keine Schwelle für kommerzielle Nutzung",
    "en": "Free (Apache 2.0) · no per-render fees and no commercial-use threshold"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-20"
  },
  "ElevenLabs Eleven v3": {
@@ -2180,7 +2180,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "plansJahr": {
    "de": "Kostenlos 2.000 Wörter/Woche am Desktop, 1.000 am iPhone, Android unbegrenzt · Pro 12 $/Mo. · Growth/Enterprise ab 18 $/Nutzer/Mo.",
    "en": "Free 2,000 words/week on desktop, 1,000 on iPhone, Android unlimited · Pro $12/mo · Growth/Enterprise from $18/user/mo"
@@ -2253,7 +2253,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-20"
  },
  "Anarlog": {
@@ -4016,7 +4016,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-14",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-14"
  },
  "FFmpeg": {
@@ -4171,7 +4171,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-13",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-13"
  },
  "iMovie": {
@@ -4428,7 +4428,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "links": {
    "home": "https://deepseek.com/harness/en/",
    "code": "https://github.com/deepseek-ai/deepseek-harness",
@@ -4719,7 +4719,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "links": {
    "home": "https://coolify.io",
    "docs": "https://coolify.io/docs",
@@ -4756,7 +4756,7 @@
   "links": {
    "home": "https://www.together.ai"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-20"
  },
  "Fireworks AI": {
@@ -4784,7 +4784,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-09-28",
+  "plansChecked": "2026-11-09",
   "links": {
    "home": "https://fireworks.ai"
   },
@@ -4910,7 +4910,7 @@
   "links": {
    "home": "https://vast.ai"
   },
-  "plansChecked": "2026-10-08",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-20"
  },
  "Hetzner": {
@@ -5103,7 +5103,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "icon": "deepseek",
   "contentChecked": "2026-10-20"
  },
@@ -5522,7 +5522,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-20"
  },
  "Pi": {
@@ -5769,7 +5769,7 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
-  "plansChecked": "2026-10-12",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-24"
  },
  "Conductor": {
@@ -6902,7 +6902,7 @@
    },
    "checked": "2026-11-05"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-24"
  },
  "Augment Code": {

@@ -34,12 +34,12 @@
       "k": "Claude Opus 5.5 / Sonnet 5.5"
      },
      {
-      "n": "Claude Fable 5.1",
+      "n": "Claude Fable 5.2",
       "v": "Anthropic",
       "k": "Claude Fable 5.1"
      },
      {
-      "n": "Gemini 3.1 Pro / 3.8 Flash",
+      "n": "Gemini 4 Argon",
       "v": "Google",
       "k": "Gemini 3.1 Pro / 3.8 Flash"
      },

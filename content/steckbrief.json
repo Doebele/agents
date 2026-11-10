@@ -5292,6 +5292,33 @@
   "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-20"
  },
+ "copywriting": {
+  "name": "copywriting",
+  "vendor": "Corey Haines",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Werbetexte als Skill: für Seiten mit einem Ziel — Startseite, Landingpage, Preise, Feature-Seiten. Er ordnet den Auftrag zuerst ein (leerer Auftrag, vorhandener Entwurf mit eigener Stimme oder Punktkorrektur) und ändert nur, was die Lage verlangt: Beim fertigen Entwurf bleiben Worte und Ton des Autors stehen. Jede Zeile muss drei Fragen bestehen — kann man sie sich vorstellen, ist sie belegbar, könnte sie auch ein Wettbewerber schreiben? — und Behauptungen ohne Beleg werden nicht erfunden, sondern benannt, samt dem Beleg, der sie freischalten würde.",
+   "en": "Copywriting as a skill: for pages with a goal — home, landing, pricing, feature pages. It first sizes up the job (blank brief, an existing draft with a real voice, or a point edit) and changes only what the situation calls for: a working draft keeps its author's words and tone. Every line must pass three questions — can the reader picture it, can it be proven, could a competitor write the same sentence? — and unsupported claims are not invented but named, along with the evidence that would unlock them."
+  },
+  "tip": {
+   "de": "Gut hinter customer-research und cro: Die Forschung sagt, was Kunden bewegt, cro sagt, wie die Seite aufgebaut sein sollte — dieser Skill schreibt die Zeilen dazu. Für das Feinschleifen danach gibt es im selben Paket copy-editing.",
+   "en": "Sits well behind customer-research and cro: the research says what moves customers, cro says how the page should be structured — this skill writes the lines for it. For polishing afterwards, the same pack carries copy-editing."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (MIT)",
+   "en": "Free, a text file (MIT)"
+  },
+  "links": {
+   "home": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting",
+   "code": "https://github.com/coreyhaines31/marketingskills"
+  }
+ },
  "video": {
   "name": "video",
   "vendor": "Corey Haines",

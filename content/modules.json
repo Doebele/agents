@@ -539,6 +539,14 @@
       "k": "cro"
      },
      {
+      "n": "copywriting",
+      "v": {
+       "de": "Werbetexte",
+       "en": "page copy"
+      },
+      "k": "copywriting"
+     },
+     {
       "n": "video",
       "v": {
        "de": "Videoproduktion",

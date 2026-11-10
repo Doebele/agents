@@ -110,8 +110,8 @@
   "accent": "var(--violet)",
   "open": false,
   "blurb": {
-   "de": "Ein Agent kann von sich aus nicht im Netz suchen — er kennt nur, was im Training steckte. Tavily ist eine Suchschnittstelle, die genau diese Lücke schließt: Der Agent stellt eine Frage, bekommt aktuelle Treffer mit Quellenangabe zurück und kann darauf aufbauen. Es gibt einen offiziellen MCP-Server dazu, lokal oder als fertigen Fernzugang.",
-   "en": "An agent cannot search the web on its own — it only knows what was in its training. Tavily is a search interface that closes exactly that gap: the agent asks, gets current results with sources, and builds on them. There is an official MCP server for it, local or as a hosted remote endpoint."
+   "de": "Ein Agent kann von sich aus nicht im Netz suchen — er kennt nur, was im Training steckte. Tavily ist eine Suchschnittstelle, die genau diese Lücke schließt: Der Agent stellt eine Frage, bekommt aktuelle Treffer mit Quellenangabe zurück und kann darauf aufbauen. Es gibt einen offiziellen MCP-Server dazu, lokal oder als fertigen Fernzugang. Tavily gehört inzwischen zu Nebius.",
+   "en": "An agent cannot search the web on its own — it only knows what was in its training. Tavily is a search interface that closes exactly that gap: the agent asks, gets current results with sources, and builds on them. There is an official MCP server for it, local or as a hosted remote endpoint. Tavily has since joined Nebius."
   },
   "tip": {
    "de": "Der Einstieg braucht einen kostenlosen API-Schlüssel. Für Recherche ist das der wichtigste einzelne Baustein — ohne ihn bleibt der Agent auf seinem Trainingsstand stehen.",
@@ -123,7 +123,7 @@
    "docs": "https://docs.tavily.com/documentation/mcp",
    "code": "https://github.com/tavily-ai/tavily-mcp"
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-11-10"
  },
  "pdf-mcp": {
   "name": "PyMuPDF4LLM MCP Server",
@@ -215,7 +215,7 @@
   "links": {
    "home": "https://notebook.google/"
   },
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-11-10"
  },
  "Perplexity": {
   "name": "Perplexity",
@@ -516,7 +516,7 @@
    "docs": "https://help.openai.com/en/articles/11752874-chatgpt-agent",
    "code": null
   },
-  "contentChecked": "2026-09-18",
+  "contentChecked": "2026-11-10",
   "plansChecked": "2026-10-08"
  },
  "OpenAI Codex": {
@@ -695,7 +695,7 @@
    "de": "Adagio kostenlos · Moderato 15 $/Mo. (180 $/Jahr) · Allegretto 31 $/Mo. (372 $/Jahr) · Allegro 79 $/Mo. (948 $/Jahr) · Vivace 159 $/Mo. (1.908 $/Jahr) · K3-1M verzehrt rund 2× so viel Kontingent wie K3-256k · 300–1.200 Requests je 5 h · API 0,60 $/2,50 $ pro 1M Token",
    "en": "Adagio free · Moderato $15/mo ($180/yr) · Allegretto $31/mo ($372/yr) · Allegro $79/mo ($948/yr) · Vivace $159/mo ($1,908/yr) · K3-1M burns about 2× the quota of K3-256k · 300–1,200 requests per 5 h · API $0.60/$2.50 per 1M tokens"
   },
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "ZCode": {
   "name": "ZCode",
@@ -857,7 +857,7 @@
    "abo"
   ],
   "plansChecked": "2026-11-09",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "Hermes Agent": {
   "name": "Hermes Agent",
@@ -1276,7 +1276,7 @@
    "en": "Free (open-weight, Apache 2.0), self-hosted"
   },
   "plansChecked": "2026-11-05",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "Mistral Large 3": {
   "name": "Mistral Large 3",
@@ -1871,7 +1871,7 @@
    "docs": "https://help.aliyun.com/en/model-studio/wan3-video-generation-api-reference",
    "code": "https://github.com/Wan-Video"
   },
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "Runway": {
   "name": "Runway",
@@ -1972,7 +1972,7 @@
    "guide": "https://pyrite-mallow-3b0.notion.site/Everything-You-Need-to-Start-Building-Your-AI-Cinematic-World-and-my-thoughts-on-HF-s-updated-T-C-3ae49da027d780cea5b2e139b25800ec",
    "tut": "https://youtu.be/fMU7Ku8ma4A"
   },
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "HyperFrames": {
   "name": "HyperFrames",
@@ -2076,7 +2076,7 @@
    "docs": "https://github.com/Stability-AI/stable-audio-3",
    "code": "https://github.com/Stability-AI/stable-audio-3"
   },
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "Whisper": {
   "name": "Whisper",
@@ -2291,7 +2291,7 @@
    "abo"
   ],
   "plansChecked": "2026-10-26",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "GPT-6 Astra / 6.1 Sol": {
   "name": "GPT-6 Astra / 6.1 Sol",
@@ -2819,7 +2819,7 @@
    "abo"
   ],
   "plansChecked": "2026-10-26",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "MiMo-V2.6-Pro": {
   "name": "MiMo-V2.6-Pro",
@@ -3191,7 +3191,7 @@
    "docs": "https://docs.slack.dev/ai/slack-mcp-server",
    "code": null
   },
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-11-10"
  },
  "postgres-mcp": {
   "name": "Postgres MCP Server",
@@ -3241,7 +3241,7 @@
    "code": "https://github.com/supabase/mcp"
   },
   "icon": "supabase",
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-11-10"
  },
  "gdrive-mcp": {
   "name": "Google Drive MCP Server",
@@ -3265,7 +3265,7 @@
    "docs": "https://developers.google.com/workspace/drive/api/reference/mcp"
   },
   "icon": "google",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "gmail-mcp": {
   "name": "Gmail MCP Server",
@@ -3574,7 +3574,7 @@
    "code": null
   },
   "icon": "google",
-  "contentChecked": "2026-09-29"
+  "contentChecked": "2026-11-10"
  },
  "v0": {
   "name": "v0",
@@ -3781,7 +3781,7 @@
    "docs": "https://www.relume.ai/resources/docs/building-a-sitemap-with-ai",
    "code": null
   },
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "Xcode": {
   "name": "Xcode",
@@ -4047,7 +4047,7 @@
    "en": "Free, open source (mostly LGPL, some parts GPL)"
   },
   "plansChecked": "2026-10-26",
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "MarkItDown": {
   "name": "MarkItDown",
@@ -4247,7 +4247,7 @@
   "links": {
    "home": "https://www.adobe.com/products/premiere.html"
   },
-  "contentChecked": "2026-10-06"
+  "contentChecked": "2026-11-10"
  },
  "DaVinci Resolve": {
   "name": {
@@ -6938,7 +6938,7 @@
    "abo"
   ],
   "plansChecked": "2026-10-22",
-  "contentChecked": "2026-10-05"
+  "contentChecked": "2026-11-10"
  },
  "Muse Code": {
   "name": "Muse Code",

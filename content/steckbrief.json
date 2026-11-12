@@ -721,14 +721,14 @@
   },
   "free": false,
   "plans": {
-   "de": "GLM-Coding-Abo: Lite 18 $ · Pro 80 $ · Max 168 $/Mo. · GLM-5.3 verzehrt in Spitzenlast 3× so viel Kontingent wie GLM-4.7 (Mo–Fr 14–18 Uhr UTC+8)",
-   "en": "GLM Coding Plan: Lite $18 · Pro $80 · Max $168/mo · at peak (Mon–Fri 2–6 pm UTC+8) GLM-5.3 burns 3× the quota of GLM-4.7"
+   "de": "GLM-Coding-Abo: Lite 12,60 $ · Pro 56 $ · Max 117,60 $/Mo. (daneben durchgestrichen die Listenpreise 18 / 80 / 168 $) · GLM-5.3 verzehrt in Spitzenlast 3× so viel Kontingent wie GLM-4.7 (Mo–Fr 14–18 Uhr UTC+8)",
+   "en": "GLM Coding Plan: Lite $12.60 · Pro $56 · Max $117.60/mo (struck-through list prices $18 / $80 / $168 shown beside them) · at peak (Mon–Fri 2–6 pm UTC+8) GLM-5.3 burns 3× the quota of GLM-4.7"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-12",
   "plansJahr": {
    "de": "GLM-Coding-Abo: Lite 151,20 $/Jahr · Pro 672 $/Jahr · Max 1.411,20 $/Jahr · GLM-5.3 verzehrt in Spitzenlast 3× so viel Kontingent wie GLM-4.7 (Mo–Fr 14–18 Uhr UTC+8)",
    "en": "GLM Coding plan: Lite $151.20/yr · Pro $672/yr · Max $1,411.20/yr · at peak (Mon–Fri 2–6 pm UTC+8) GLM-5.3 burns 3× the quota of GLM-4.7"
@@ -1061,7 +1061,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-12",
   "icon": "crewai",
   "contentChecked": "2026-10-10"
  },
@@ -1516,7 +1516,7 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-13"
  },
  "SGLang": {
@@ -3808,7 +3808,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-12",
   "links": {
    "home": "https://developer.apple.com/xcode/",
    "docs": "https://developer.apple.com/documentation/xcode/",
@@ -4078,7 +4078,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-16",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-16"
  },
  "Pandoc": {
@@ -4138,7 +4138,7 @@
    "de": "Kostenlos, Open Source (AGPL-3.0); eigene Instanz auf eigener Hardware oder eigenem Server",
    "en": "Free, open source (AGPL-3.0); your own instance on your own hardware or server"
   },
-  "plansChecked": "2026-10-17",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-17"
  },
  "Zotero": {
@@ -4691,7 +4691,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-19"
  },
  "Coolify": {
@@ -5039,7 +5039,7 @@
   "links": {
    "home": "https://openrouter.ai"
   },
-  "plansChecked": "2026-09-24",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-24"
  },
  "Abacus.AI": {
@@ -5317,7 +5317,8 @@
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting",
    "code": "https://github.com/coreyhaines31/marketingskills"
-  }
+  },
+  "plansChecked": "2026-11-12"
  },
  "video": {
   "name": "video",
@@ -5349,7 +5350,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-10"
  },
  "premortem": {
@@ -5616,7 +5617,7 @@
    "de": "Kostenlos, Open Source (Apache-2.0) · Modelle über eigene API-Schlüssel oder lokal",
    "en": "Free, open source (Apache-2.0) · models via your own API keys or run locally"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-27"
  },
  "Buzz": {
@@ -6074,7 +6075,7 @@
    "home": "https://github.com/n8n-io/skills",
    "code": "https://github.com/n8n-io/skills"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-24"
  },
  "excalidraw-skill": {
@@ -6101,7 +6102,7 @@
   "links": {
    "home": "https://github.com/coleam00/excalidraw-diagram-skill"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-10"
  },
  "notebooklm-py": {
@@ -6286,7 +6287,7 @@
   "links": {
    "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-10"
  },
  "superpowers": {
@@ -6343,7 +6344,7 @@
   "links": {
    "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-10"
  },
  "humanizer": {
@@ -6372,7 +6373,7 @@
    "home": "https://github.com/blader/humanizer",
    "docs": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-10"
  },
  "vermenschlichen": {
@@ -6551,7 +6552,7 @@
    "home": "https://www.skills.sh/mattpocock/skills/grill-me",
    "code": "https://github.com/mattpocock/skills"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-10"
  },
  "watch": {
@@ -6611,7 +6612,7 @@
    "de": "Kostenlos, Textdatei (MIT)",
    "en": "Free, a text file (MIT)"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-31"
  },
  "literature-review": {
@@ -6643,7 +6644,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-09-29"
  },
  "higgsfield-soul-id": {
@@ -6675,7 +6676,7 @@
    "home": "https://www.skills.sh/higgsfield-ai/skills/higgsfield-soul-id",
    "code": "https://github.com/higgsfield-ai/skills/tree/main/higgsfield-soul-id"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-12",
   "contentChecked": "2026-10-31"
  },
  "story-bible-builder": {

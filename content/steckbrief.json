@@ -1275,6 +1275,9 @@
    "de": "Kostenlos (Open-Weight, Apache 2.0), selbst gehostet",
    "en": "Free (open-weight, Apache 2.0), self-hosted"
   },
+  "billing": [
+   "api"
+  ],
   "plansChecked": "2026-11-05",
   "contentChecked": "2026-11-10"
  },
@@ -2001,6 +2004,10 @@
    "de": "Kostenlos (Apache 2.0) · keine Render-Gebühren und keine Schwelle für kommerzielle Nutzung",
    "en": "Free (Apache 2.0) · no per-render fees and no commercial-use threshold"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-20"
  },
@@ -5515,6 +5522,10 @@
    "de": "Kostenlos, Open Source (Apache-2.0) · Berd spricht mit dem Goose-Unterbau; einen Preis nennt weder die Produktseite noch das Repository",
    "en": "Free, open source (Apache-2.0) · Berd talks to the Goose backend; neither the product page nor the repository names a price"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-20"
  },
@@ -5646,6 +5657,10 @@
    "de": "Kostenlos (Apache-2.0) · selbst hostbar, frühe Instanz auf buzz.xyz",
    "en": "Free (Apache-2.0) · self-hostable, early instance at buzz.xyz"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-20"
  },
@@ -5738,6 +5753,10 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-24"
  },
@@ -6228,6 +6247,10 @@
    "de": "Kostenlos, Open Source",
    "en": "Free, open source"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/microsoft/playwright-cli"
   },
@@ -6311,6 +6334,10 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/obra/superpowers",
    "docs": "https://claude.com/marketplace/plugins/superpowers"
@@ -6457,6 +6484,10 @@
    "de": "Kostenlos, Textdatei (MIT) · Kosten entstehen durch die vielen Agentenläufe",
    "en": "Free, a text file (MIT) · the cost sits in the many agent runs"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/cloudflare/security-audit-skill",
    "guide": "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
@@ -6518,6 +6549,10 @@
    "de": "Kostenlos, Textdatei (MIT)",
    "en": "Free, a text file (MIT)"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://www.skills.sh/mattpocock/skills/teach",
    "code": "https://github.com/mattpocock/skills"
@@ -6611,6 +6646,10 @@
    "de": "Kostenlos, Textdatei (MIT)",
    "en": "Free, a text file (MIT)"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-10-15",
   "contentChecked": "2026-10-31"
  },

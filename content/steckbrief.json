@@ -3341,7 +3341,7 @@
   },
   "links": {
    "home": "https://buffer.com/mcp",
-   "docs": "https://developers.buffer.com/guides/integrations/mcp",
+   "docs": "https://developers.buffer.com/guides/integrations/mcp.html",
    "code": null
   },
   "icon": "buffer",

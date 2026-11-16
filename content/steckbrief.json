@@ -1062,7 +1062,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-16",
   "icon": "crewai",
   "contentChecked": "2026-10-10"
  },
@@ -1520,7 +1520,7 @@
    "de": "Kostenlos, Open Source (Apache 2.0)",
    "en": "Free, open source (Apache 2.0)"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-13"
  },
  "SGLang": {
@@ -3816,7 +3816,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-16",
   "links": {
    "home": "https://developer.apple.com/xcode/",
    "docs": "https://developer.apple.com/documentation/xcode/",
@@ -4086,7 +4086,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-16",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-16"
  },
  "Pandoc": {
@@ -4146,7 +4146,7 @@
    "de": "Kostenlos, Open Source (AGPL-3.0); eigene Instanz auf eigener Hardware oder eigenem Server",
    "en": "Free, open source (AGPL-3.0); your own instance on your own hardware or server"
   },
-  "plansChecked": "2026-10-17",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-17"
  },
  "Zotero": {
@@ -5047,7 +5047,7 @@
   "links": {
    "home": "https://openrouter.ai"
   },
-  "plansChecked": "2026-09-24",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-24"
  },
  "Abacus.AI": {
@@ -5326,7 +5326,8 @@
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting",
    "code": "https://github.com/coreyhaines31/marketingskills"
-  }
+  },
+  "plansChecked": "2026-11-16"
  },
  "video": {
   "name": "video",
@@ -5358,7 +5359,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-10"
  },
  "premortem": {
@@ -5630,7 +5631,7 @@
    "de": "Kostenlos, Open Source (Apache-2.0) · Modelle über eigene API-Schlüssel oder lokal",
    "en": "Free, open source (Apache-2.0) · models via your own API keys or run locally"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-27"
  },
  "Buzz": {
@@ -6097,7 +6098,7 @@
    "home": "https://github.com/n8n-io/skills",
    "code": "https://github.com/n8n-io/skills"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-24"
  },
  "excalidraw-skill": {
@@ -6125,7 +6126,7 @@
   "links": {
    "home": "https://github.com/coleam00/excalidraw-diagram-skill"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-10"
  },
  "notebooklm-py": {
@@ -6317,7 +6318,7 @@
   "links": {
    "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-10"
  },
  "superpowers": {
@@ -6378,7 +6379,7 @@
   "links": {
    "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-10"
  },
  "humanizer": {
@@ -6408,7 +6409,7 @@
    "home": "https://github.com/blader/humanizer",
    "docs": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-10"
  },
  "vermenschlichen": {
@@ -6596,7 +6597,7 @@
    "home": "https://www.skills.sh/mattpocock/skills/grill-me",
    "code": "https://github.com/mattpocock/skills"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-10"
  },
  "watch": {
@@ -6660,7 +6661,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-31"
  },
  "literature-review": {
@@ -6692,7 +6693,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-09-29"
  },
  "higgsfield-soul-id": {
@@ -6724,7 +6725,7 @@
    "home": "https://www.skills.sh/higgsfield-ai/skills/higgsfield-soul-id",
    "code": "https://github.com/higgsfield-ai/skills/tree/main/higgsfield-soul-id"
   },
-  "plansChecked": "2026-10-15",
+  "plansChecked": "2026-11-16",
   "contentChecked": "2026-10-31"
  },
  "story-bible-builder": {

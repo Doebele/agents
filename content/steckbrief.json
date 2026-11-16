@@ -5265,6 +5265,10 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
@@ -5294,6 +5298,10 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills"
@@ -5323,6 +5331,10 @@
    "de": "Kostenlos, Textdatei (MIT)",
    "en": "Free, a text file (MIT)"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting",
    "code": "https://github.com/coreyhaines31/marketingskills"
@@ -5728,6 +5740,10 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-24"
  },
@@ -5819,6 +5835,10 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-24"
  },
@@ -6315,6 +6335,10 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev"
   },
@@ -6376,6 +6400,10 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
   },
@@ -6593,6 +6621,10 @@
    "de": "Kostenlos, Textdatei (MIT)",
    "en": "Free, a text file (MIT)"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://www.skills.sh/mattpocock/skills/grill-me",
    "code": "https://github.com/mattpocock/skills"
@@ -6891,6 +6923,10 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/social"
@@ -6920,6 +6956,10 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/offers"

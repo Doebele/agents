@@ -69,6 +69,7 @@
    "de": "Kostenlos, Textdatei (MIT)",
    "en": "Free, a text file (MIT)"
   },
+  "billing": ["abo", "api"],
   "links": {
    "home": "https://github.com/lucasgpinheiro-rgb/bauhaus-digital",
    "code": "https://github.com/lucasgpinheiro-rgb/bauhaus-digital"
@@ -5140,6 +5141,7 @@
    "de": "Kostenlos (Apache 2.0)",
    "en": "Free (Apache 2.0)"
   },
+  "billing": ["abo", "api"],
   "plansChecked": "2026-10-29",
   "contentChecked": "2026-10-20"
  },
@@ -5385,6 +5387,7 @@
    "de": "Kostenlos (MIT)",
    "en": "Free (MIT)"
   },
+  "billing": ["abo", "api"],
   "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-24"
  },
@@ -5910,6 +5913,7 @@
    "de": "Kostenlos (Apache-2.0)",
    "en": "Free (Apache-2.0)"
   },
+  "billing": ["abo", "api"],
   "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-24"
  },
@@ -6117,6 +6121,7 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": ["abo", "api"],
   "links": {
    "home": "https://github.com/coleam00/excalidraw-diagram-skill"
   },
@@ -6145,6 +6150,7 @@
    "de": "Kostenlos, Open Source",
    "en": "Free, open source"
   },
+  "billing": ["abo", "api"],
   "links": {
    "home": "https://github.com/teng-lin/notebooklm-py"
   },
@@ -6172,6 +6178,7 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": ["abo", "api"],
   "links": {
    "home": "https://www.skills.sh/remotion-dev/skills/remotion-best-practices",
    "docs": "https://www.remotion.dev/docs/ai/skills"
@@ -6279,6 +6286,7 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": ["abo", "api"],
   "links": {
    "home": "https://github.com/kepano/obsidian-skills"
   },
@@ -6395,6 +6403,7 @@
    "de": "Kostenlos, Textdatei (MIT)",
    "en": "Free, a text file (MIT)"
   },
+  "billing": ["abo", "api"],
   "links": {
    "home": "https://github.com/blader/humanizer",
    "docs": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
@@ -6424,6 +6433,7 @@
    "de": "Kostenlos, Textdatei (MIT)",
    "en": "Free, a text file (MIT)"
   },
+  "billing": ["abo", "api"],
   "links": {
    "home": "https://github.com/LOGIN-TB/claude-skills",
    "docs": "https://de.wikipedia.org/wiki/Wikipedia:Anzeichen_f%C3%BCr_KI-generierte_Inhalte"

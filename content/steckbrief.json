@@ -2328,25 +2328,25 @@
    "url": "https://artificialanalysis.ai/models/gpt-6-astra",
    "intel": {
     "v": "57",
-    "rank": "#8/74",
+    "rank": "#8/81",
     "u": 4
    },
    "speed": {
-    "v": "24.5",
-    "rank": "#60/73",
-    "u": 4
+    "v": "20.8",
+    "rank": "#58/80",
+    "u": 3
    },
    "cost": {
     "v": "$6.24",
-    "rank": "#55/73",
-    "u": 3
+    "rank": "#66/80",
+    "u": 4
    },
    "verb": {
     "v": "54.3M",
-    "rank": "#26/73",
+    "rank": "#27/80",
     "u": 2
    },
-   "checked": "2026-11-12"
+   "checked": "2026-11-16"
   },
   "plans": {
    "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 272k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra und Sol, nicht Luna) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
@@ -2369,8 +2369,8 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "Anthropics Modellfamilie, die bei Agentenarbeit besonders stark ist: also dann, wenn das Modell nicht nur antwortet, sondern über viele Schritte Werkzeuge benutzt und ein Ziel verfolgt. Zwei Größen auf derselben Grundlage, Opus für die harten Fälle, Sonnet für alles, was schnell gehen soll. Seit September steht auch Sonnet auf 5.5, und im Index von Artificial Analysis liegen die beiden nur vier Punkte auseinander (58 zu 54). Sonnet 5 bleibt als Vorgänger abrufbar, zum selben Preis.",
-   "en": "Anthropic's model family, particularly strong at agent work: when the model doesn't just answer but uses tools across many steps toward a goal. Two sizes on the same foundation, Opus for the hard cases, Sonnet for anything that should be quick. Since September Sonnet is on 5.5 as well, and on the Artificial Analysis index the two sit four points apart (58 to 54). Sonnet 5 remains available as the predecessor, at the same price."
+   "de": "Anthropics Modellfamilie, die bei Agentenarbeit besonders stark ist: also dann, wenn das Modell nicht nur antwortet, sondern über viele Schritte Werkzeuge benutzt und ein Ziel verfolgt. Zwei Größen auf derselben Grundlage, Opus für die harten Fälle, Sonnet für alles, was schnell gehen soll. Seit September steht auch Sonnet auf 5.5, und im Index von Artificial Analysis liegen die beiden nur vier Punkte auseinander (59 zu 55). Sonnet 5 bleibt als Vorgänger abrufbar, zum selben Preis.",
+   "en": "Anthropic's model family, particularly strong at agent work: when the model doesn't just answer but uses tools across many steps toward a goal. Two sizes on the same foundation, Opus for the hard cases, Sonnet for anything that should be quick. Since September Sonnet is on 5.5 as well, and on the Artificial Analysis index the two sit four points apart (59 to 55). Sonnet 5 remains available as the predecessor, at the same price."
   },
   "tip": {
    "de": "Nimm Sonnet als Standard und schalte auf Opus, wenn eine Aufgabe hakt. Bei einfachen Dingen ist der Unterschied kaum spürbar, bei kniffligen deutlich. Mehr Punkte heißt dabei nicht weniger Kosten: In den Coding-Agenten-Messungen von Artificial Analysis liegt Sonnet 5.5 im Index vor Opus 5.5, braucht dafür aber mehr Zeit und mehr Geld je Aufgabe, weil es länger arbeitet.",
@@ -2387,25 +2387,25 @@
    "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
    "intel": {
     "v": "59",
-    "rank": "#5/74",
+    "rank": "#5/81",
     "u": 4
    },
    "speed": {
-    "v": "25.2",
-    "rank": "#61/73",
+    "v": "24.8",
+    "rank": "#65/80",
     "u": 4
    },
    "cost": {
     "v": "$10.04",
-    "rank": "#68/73",
+    "rank": "#75/80",
     "u": 4
    },
    "verb": {
     "v": "218M",
-    "rank": "#71/73",
+    "rank": "#77/80",
     "u": 4
    },
-   "checked": "2026-11-12"
+   "checked": "2026-11-16"
   },
   "plans": {
    "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus, 0,10 $ bei Sonnet und Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
@@ -2418,7 +2418,7 @@
   "contentChecked": "2026-10-06"
  },
  "Gemini 3.1 Pro / 3.8 Flash": {
-  "name": "Gemini 4 Argon",
+  "name": "Gemini 4 Carbon",
   "vendor": "Google",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
@@ -2427,43 +2427,43 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "Googles Spitzenmodell fürs Denken, laut eigenem Datenblatt gebaut für komplexe Software-Entwicklung, tiefe mathematische und naturwissenschaftliche Probleme, eigenständige mehrstufige Agenten und lange Ausgaben bis zu einer Million Token. Im Intelligenzindex von Artificial Analysis liegt Argon mit 50 Punkten vor allen früheren Gemini-Modellen. Es braucht seine Zeit — 29 Minuten je Aufgabe gehören ins langsamste Viertel — und mit 9,95 $ je Aufgabe zählt es zu den teureren. Der Einführungspreis von 2 $/10 $ je Million Token gilt nur bis zum 30. November 2026 und verdoppelt sich danach; eine Gratisstufe gibt es nicht.",
-   "en": "Google’s flagship for reasoning, built — by its own spec sheet — for complex software engineering, deep mathematical and scientific problem solving, autonomous multi-step agents, and long generation runs of up to a million tokens. On the Artificial Analysis intelligence index Argon scores 50, ahead of every earlier Gemini. It takes its time — 29 minutes per task puts it in the slowest quartile — and at $9.95 per task it counts among the more expensive. The introductory price of $2/$10 per million tokens holds only until 30 November 2026 and doubles after that; there is no free tier."
+   "de": "Googles stärkstes Denkmodell, laut eigenem Datenblatt gebaut für komplexe Software-Entwicklung, tiefe mathematische und naturwissenschaftliche Probleme, eigenständige mehrstufige Agenten und lange Ausgaben bis zu einer Million Token. Im Intelligenzindex von Artificial Analysis liegt Carbon mit 60 Punkten vor allen anderen Gemini-Modellen. Es braucht seine Zeit — fast 33 Minuten je Aufgabe gehören zu den langsamsten Messungen überhaupt — und es redet viel: 205 Millionen Token je Aufgabe, mehr als das Doppelte des Medians. Mit 5,48 $ je Aufgabe bleibt es für diese Klasse günstig. Der Einführungspreis von 2 $/10 $ je Million Token gilt nur bis zum 30. November 2026 und verdoppelt sich danach; eine Gratisstufe gibt es nicht.",
+   "en": "Google’s most capable reasoning model, built — by its own spec sheet — for complex software engineering, deep mathematical and scientific problem solving, autonomous multi-step agents, and long generation runs of up to a million tokens. On the Artificial Analysis intelligence index Carbon scores 60, ahead of every other Gemini. It takes its time — nearly 33 minutes per task is among the slowest readings there are — and it talks: 205 million tokens per task, more than twice the median. At $5.48 per task it stays reasonably priced for its class. The introductory price of $2/$10 per million tokens holds only until 30 November 2026 and doubles after that; there is no free tier."
   },
   "tip": {
-   "de": "Wenn ein Auftrag nicht ausdrücklich Argon verlangt, ist Gemini 3.8 Flash im selben Haus die schnellere und günstigere Wahl. Argon lohnt sich, wenn zählt, ob die Lösung stimmt — harte Programmierarbeiten, tiefe Recherchen —, nicht wie lange sie dauert. Zwei Fallen: Ab dem 1. Dezember 2026 kostet es 4 $/20 $ je Million Token, und es zählt jeder Token, auch das Nachdenken; eine Gratisstufe gibt es nicht.",
-   "en": "When a job does not expressly need Argon, Gemini 3.8 Flash in the same house is the faster and cheaper choice. Argon earns its keep when what counts is whether the answer is right — hard coding work, deep research — not how long it takes. Two traps: from 1 December 2026 it costs $4/$20 per million tokens, and every token is billed, thinking included; there is no free tier."
+   "de": "Wenn ein Auftrag nicht ausdrücklich Carbon verlangt, ist Gemini 4 Argon im selben Haus die schnellere Wahl — Google selbst sagt, Argon liefere Gemini-4-Intelligenz mit schnelleren Antworten und weniger Token je Runde, zum selben Preis. Wer wenig zahlen will, nimmt 3.8 Flash. Zwei Fallen: Ab dem 1. Dezember 2026 kostet Carbon 4 $/20 $ je Million Token, und es zählt jeder Token, auch das Nachdenken; eine Gratisstufe gibt es nicht.",
+   "en": "When a job does not expressly need Carbon, Gemini 4 Argon in the same house is the faster choice — Google itself says Argon delivers Gemini 4 intelligence with faster responses and lower token spend per turn, at the same price. For low cost, 3.8 Flash remains the pick. Two traps: from 1 December 2026 Carbon costs $4/$20 per million tokens, and every token is billed, thinking included; there is no free tier."
   },
   "links": {
-   "home": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+   "home": "https://ai.google.dev/gemini-api/docs/models/gemini-4-carbon",
    "docs": "https://ai.google.dev/gemini-api/docs/pricing",
    "code": null
   },
   "icon": "googlegemini",
   "free": false,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+   "url": "https://artificialanalysis.ai/models/gemini-4-carbon",
    "intel": {
-    "v": "50",
-    "rank": "#20/74",
-    "u": 3
+    "v": "60",
+    "rank": "#4/81",
+    "u": 4
    },
    "speed": {
-    "v": "30.2",
-    "rank": "#67/73",
+    "v": "32.8",
+    "rank": "#75/80",
     "u": 4
    },
    "cost": {
-    "v": "$9.95",
-    "rank": "#65/73",
+    "v": "$5.48",
+    "rank": "#62/80",
     "u": 4
    },
    "verb": {
-    "v": "113M",
-    "rank": "#52/73",
-    "u": 3
+    "v": "205M",
+    "rank": "#76/80",
+    "u": 4
    },
-   "checked": "2026-11-12"
+   "checked": "2026-11-16"
   },
   "plans": {
    "de": "API je 1M Token: 3.1 Pro 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · 3.8 Flash 0,75 $/3,75 $ bis 31.12.2026, ab 1.1.2027 1,50 $/7,50 $ · Kontext-Cache 0,20 $ (Pro) bzw. 0,075 $ (Flash), Speicherung 4,50 $ je 1M Token und Stunde · Gratisstufe für 3.8 Flash, für 3.1 Pro nicht · Google AI Pro 19,99 $/Mo.",
@@ -6979,8 +6979,8 @@
   "free": false,
   "icon": "anthropic",
   "blurb": {
-   "de": "Die Stufe über dem Opus: Fable 5.2 ist für anspruchsvolles Denken und Agentenläufe gebaut, die lange durchhalten — „for demanding reasoning and long-horizon agentic work“, sagt Anthropic, und rät ausdrücklich dazu, es zu nehmen, wenn die eigenen Auswertungen mit Opus 5.5 auf hoher Anstrengung nicht mehr reichen. Eine Million Token Kontext, Bilder im Eingang. Im Intelligenzindex von Artificial Analysis führt es mit 65 Punkten die gesamte Rangliste an, mit Abstand vor Opus 5.5 mit 59. Der Fang ist der Preis: 8 $ Eingang und 40 $ Ausgang je Million Token, das Doppelte von Opus, und mit 26,54 $ je gemessener Aufgabe die teuerste Konfiguration überhaupt. Wie schnell es arbeitet, steht dort nicht — bei der Messung gab es noch keine öffentliche API.",
-   "en": "The tier above the Opus: Fable 5.2 is built for demanding reasoning and agent runs that have to last — “for demanding reasoning and long-horizon agentic work”, says Anthropic, who recommend taking it when your evals on Opus 5.5 at higher effort still fall short. One million tokens of context, images on input. On the Artificial Analysis intelligence index it leads the entire leaderboard at 65 points, clear of the Opus 5.5 at 59. The catch is the price: $8 input and $40 output per million tokens, twice the Opus, and at $26.54 per measured task the most expensive configuration there is. How fast it works is not listed — at measurement time there was no publicly available API."
+   "de": "Die Stufe über dem Opus: Fable 5.2 ist für anspruchsvolles Denken und Agentenläufe gebaut, die lange durchhalten — „for demanding reasoning and long-horizon agentic work“, sagt Anthropic, und rät ausdrücklich dazu, es zu nehmen, wenn die eigenen Auswertungen mit Opus 5.5 auf hoher Anstrengung nicht mehr reichen. Eine Million Token Kontext, Bilder im Eingang. Im Intelligenzindex von Artificial Analysis führt es mit 65 Punkten die gesamte Rangliste an, mit Abstand vor Opus 5.5 mit 59. Der Fang ist der Preis: 8 $ Eingang und 40 $ Ausgang je Million Token, das Doppelte von Opus, und mit 26,54 $ je gemessener Aufgabe die teuerste Konfiguration überhaupt. Das Tempo steht inzwischen dort: 41,6 Minuten je Aufgabe, auffällig langsam im ganzen Feld.",
+   "en": "The tier above the Opus: Fable 5.2 is built for demanding reasoning and agent runs that have to last — “for demanding reasoning and long-horizon agentic work”, says Anthropic, who recommend taking it when your evals on Opus 5.5 at higher effort still fall short. One million tokens of context, images on input. On the Artificial Analysis intelligence index it leads the entire leaderboard at 65 points, clear of the Opus 5.5 at 59. The catch is the price: $8 input and $40 output per million tokens, twice the Opus, and at $26.54 per measured task the most expensive configuration there is. Its speed is listed by now: 41.6 minutes per task, notably slow across the whole field."
   },
   "tip": {
    "de": "Der Tagesfahrer bleibt Opus 5.5. Fable 5.2 nimmt man, wenn ein Lauf Stunden dauert und die Stufe darunter nicht mehr reicht: Migrationen, tiefe Recherchen, mehrstufige Agentenketten — genau dafür wirbt Anthropic selbst. Wer abrechnet, sollte doppelt hinsehen: das Doppelte von Opus je Token, und je Aufgabe das Teuerste, was Artificial Analysis misst.",
@@ -7002,25 +7002,25 @@
    "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
    "intel": {
     "v": "65",
-    "rank": "#1/74",
+    "rank": "#1/81",
     "u": 4
    },
    "speed": {
-    "v": "46.7",
-    "rank": "#72/73",
+    "v": "41.6",
+    "rank": "#79/80",
     "u": 4
    },
    "cost": {
     "v": "$26.54",
-    "rank": "#73/73",
+    "rank": "#80/80",
     "u": 4
    },
    "verb": {
     "v": "275M",
-    "rank": "#72/73",
+    "rank": "#78/80",
     "u": 4
    },
-   "checked": "2026-11-12"
+   "checked": "2026-11-16"
   },
   "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-24"

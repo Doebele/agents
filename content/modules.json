@@ -24,9 +24,9 @@
     },
     "items": [
      {
-      "n": "GPT-6 Astra / 6.1 Sol",
+      "n": "GPT-6.2 Astra / 6.2 Sol",
       "v": "OpenAI",
-      "k": "GPT-6 Astra / 6.1 Sol"
+      "k": "GPT-6.2 Astra / 6.2 Sol"
      },
      {
       "n": "Claude Opus 5.5 / Sonnet 5.5",

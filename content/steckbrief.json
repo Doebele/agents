@@ -2300,8 +2300,8 @@
   "plansChecked": "2026-10-26",
   "contentChecked": "2026-11-10"
  },
- "GPT-6 Astra / 6.1 Sol": {
-  "name": "GPT-6 Astra / 6.1 Sol",
+ "GPT-6.2 Astra / 6.2 Sol": {
+  "name": "GPT-6.2 Astra / 6.2 Sol",
   "vendor": "OpenAI",
   "cat": {
    "de": "Frontier-Modell · Baustein 01",
@@ -2310,42 +2310,42 @@
   "accent": "var(--cyan)",
   "open": false,
   "blurb": {
-   "de": "OpenAIs Spitzenmodelle, seit September in zwei Größen: Astra für die harten Fälle, 6.1 Sol für den Alltag. Beider stärkstes Feld ist die Agentenarbeit am Bildschirm, also Formulare ausfüllen, im Netz recherchieren, Software selbst installieren. Der Unterschied liegt weniger in der Intelligenz als im Preis: Sol kostet ein Fünftel von Astra und liegt im Index von Artificial Analysis nur zwei Punkte dahinter (55 zu 57).",
-   "en": "OpenAI's frontier models, since September in two sizes: Astra for the hard cases, 6.1 Sol for everyday work. Both are at their strongest doing agent work on screen: filling in forms, researching on the web, installing software themselves. The difference is less about intelligence than about price: Sol costs a fifth of Astra and sits two points behind it on the Artificial Analysis index (55 to 57)."
+   "de": "OpenAIs Spitzenmodelle, seit November in der Generation 6.2: Astra für die harten Fälle, Sol für den Alltag. Beider stärkstes Feld ist die Agentenarbeit am Bildschirm, also Formulare ausfüllen, im Netz recherchieren, Software selbst installieren. Der Unterschied liegt weniger in der Intelligenz als im Preis: Sol kostet ein Viertel von Astra und liegt im Index von Artificial Analysis fünf Punkte dahinter (57 zu 62).",
+   "en": "OpenAI's frontier models, since November in the 6.2 generation: Astra for the hard cases, Sol for everyday work. Both are at their strongest doing agent work on screen: filling in forms, researching on the web, installing software themselves. The difference is less about intelligence than about price: Sol costs a quarter of Astra and sits five points behind it on the Artificial Analysis index (57 to 62)."
   },
   "tip": {
-   "de": "Fang mit Sol an. Astra lohnt erst, wenn eine Aufgabe daran scheitert, denn es kostet das Fünffache. Noch billiger ist 6 Luna, dafür fällt es im Index deutlich ab (38 statt 52). Ein Haken bei allen drei: Ab 272.000 Token im Prompt verdoppelt sich der Satz, und die Geschwindigkeitsstufen Fast und Ultrafast kosten das Doppelte beziehungsweise das Sechsfache.",
-   "en": "Start with Sol. Astra is worth it once a task fails on Sol, because it costs five times as much. Cheaper still is 6 Luna, which drops off noticeably on the index (38 instead of 52). One catch on all three: past 272,000 tokens in the prompt the rate doubles, and the Fast and Ultrafast speed tiers cost double and six times respectively."
+   "de": "Fang mit Sol an. Astra lohnt erst, wenn eine Aufgabe daran scheitert, denn es kostet das Vierfache. Noch billiger ist 6 Luna, dafür fällt es im Index deutlich ab (28 statt 57). Ein Haken bei allen drei: Ab 272.000 Token im Prompt verdoppelt sich der Satz, und die Geschwindigkeitsstufen Fast und Ultrafast kosten das Doppelte beziehungsweise das Sechsfache.",
+   "en": "Start with Sol. Astra is worth it once a task fails on Sol, because it costs four times as much. Cheaper still is 6 Luna, which drops off noticeably on the index (28 instead of 57). One catch on all three: past 272,000 tokens in the prompt the rate doubles, and the Fast and Ultrafast speed tiers cost double and six times respectively."
   },
   "links": {
-   "home": "https://openai.com/index/gpt-6-astra/",
+   "home": "https://openai.com/index/gpt-6-2-astra/",
    "docs": "https://developers.openai.com/api/docs/models",
    "code": null
   },
   "free": false,
   "aa": {
-   "url": "https://artificialanalysis.ai/models/gpt-6-astra",
+   "url": "https://artificialanalysis.ai/models/gpt-6-2-astra",
    "intel": {
-    "v": "57",
-    "rank": "#8/81",
+    "v": "62",
+    "rank": "#3/96",
     "u": 4
    },
    "speed": {
-    "v": "20.8",
-    "rank": "#58/80",
+    "v": "13.8",
+    "rank": "#55/95",
     "u": 3
    },
    "cost": {
-    "v": "$6.24",
-    "rank": "#66/80",
-    "u": 4
+    "v": "$4.00",
+    "rank": "#65/95",
+    "u": 3
    },
    "verb": {
-    "v": "54.3M",
-    "rank": "#27/80",
-    "u": 2
+    "v": "65.8M",
+    "rank": "#49/95",
+    "u": 3
    },
-   "checked": "2026-11-16"
+   "checked": "2026-11-19"
   },
   "plans": {
    "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 272k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra und Sol, nicht Luna) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
@@ -2386,25 +2386,25 @@
    "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
    "intel": {
     "v": "59",
-    "rank": "#5/81",
+    "rank": "#10/96",
     "u": 4
    },
    "speed": {
-    "v": "24.8",
-    "rank": "#65/80",
+    "v": "25.1",
+    "rank": "#81/95",
     "u": 4
    },
    "cost": {
     "v": "$10.04",
-    "rank": "#75/80",
+    "rank": "#90/95",
     "u": 4
    },
    "verb": {
     "v": "218M",
-    "rank": "#77/80",
+    "rank": "#91/95",
     "u": 4
    },
-   "checked": "2026-11-16"
+   "checked": "2026-11-19"
   },
   "plans": {
    "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus, 0,10 $ bei Sonnet und Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
@@ -2444,25 +2444,25 @@
    "url": "https://artificialanalysis.ai/models/gemini-4-carbon",
    "intel": {
     "v": "60",
-    "rank": "#4/81",
+    "rank": "#8/96",
     "u": 4
    },
    "speed": {
-    "v": "32.8",
-    "rank": "#75/80",
+    "v": "36.6",
+    "rank": "#91/95",
     "u": 4
    },
    "cost": {
-    "v": "$5.48",
-    "rank": "#62/80",
+    "v": "$7.76",
+    "rank": "#84/95",
     "u": 4
    },
    "verb": {
     "v": "205M",
-    "rank": "#76/80",
+    "rank": "#90/95",
     "u": 4
    },
-   "checked": "2026-11-16"
+   "checked": "2026-11-19"
   },
   "plans": {
    "de": "API je 1M Token: 3.1 Pro 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · 3.8 Flash 0,75 $/3,75 $ bis 31.12.2026, ab 1.1.2027 1,50 $/7,50 $ · Kontext-Cache 0,20 $ (Pro) bzw. 0,075 $ (Flash), Speicherung 4,50 $ je 1M Token und Stunde · Gratisstufe für 3.8 Flash, für 3.1 Pro nicht · Google AI Pro 19,99 $/Mo.",
@@ -7001,25 +7001,25 @@
    "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
    "intel": {
     "v": "65",
-    "rank": "#1/81",
+    "rank": "#1/96",
     "u": 4
    },
    "speed": {
     "v": "41.6",
-    "rank": "#79/80",
+    "rank": "#94/95",
     "u": 4
    },
    "cost": {
     "v": "$26.54",
-    "rank": "#80/80",
+    "rank": "#95/95",
     "u": 4
    },
    "verb": {
     "v": "275M",
-    "rank": "#78/80",
+    "rank": "#92/95",
     "u": 4
    },
-   "checked": "2026-11-16"
+   "checked": "2026-11-19"
   },
   "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-24"

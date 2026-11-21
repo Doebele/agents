@@ -439,18 +439,18 @@
    ]
   },
   "plans": {
-   "de": "Pro 20 $/Mo. · Max ab 100 $/Mo. (Wahl zwischen 5× und 20× Pro-Kontingent; für 20× nennt die Preisseite keinen eigenen Betrag mehr) · Team Standard 25 $/Platz/Mo., Premium 125 $/Platz/Mo. · API nutzungsabhängig",
-   "en": "Pro $20/mo · Max from $100/mo (choice of 5x or 20x the Pro quota; the pricing page no longer states a separate amount for 20x) · Team Standard $25/seat/mo, Premium $125/seat/mo · usage-based API"
+   "de": "Pro 20 $/Mo. · Max 100 $/Mo. · Ultra 200 $/Mo. · Team Standard 25 $/Platz/Mo., Premium 125 $/Platz/Mo. · API nutzungsabhängig",
+   "en": "Pro $20/mo · Max $100/mo · Ultra $200/mo · Team Standard $25/seat/mo, Premium $125/seat/mo · usage-based API"
   },
   "plansJahr": {
-   "de": "Pro 17 $/Mo. (200 $ im Voraus) · Max ab 100 $/Mo. (nur monatlich abgerechnet) · Team Standard 20 $/Platz/Mo. (Jahresabo), Premium 100 $/Platz/Mo. (Jahresabo) · API nutzungsabhängig",
-   "en": "Pro $17/mo ($200 up front) · Max from $100/mo (billed monthly only) · Team Standard $20/seat/mo (annual), Premium $100/seat/mo (annual) · usage-based API"
+   "de": "Pro 17 $/Mo. (200 $ im Voraus) · Max 100 $/Mo. (nur monatlich) · Ultra 200 $/Mo. (nur monatlich) · Team Standard 20 $/Platz/Mo. (Jahresabo), Premium 100 $/Platz/Mo. (Jahresabo) · API nutzungsabhängig",
+   "en": "Pro $17/mo ($200 up front) · Max $100/mo (monthly only) · Ultra $200/mo (monthly only) · Team Standard $20/seat/mo (annual), Premium $100/seat/mo (annual) · usage-based API"
   },
   "billing": [
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-22",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-11-03"
  },
  "Agent SDK": {
@@ -602,7 +602,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-06"
  },
  "Agents SDK": {
@@ -789,7 +789,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-11-03"
  },
  "Zed": {
@@ -2710,7 +2710,7 @@
   "billing": [
    "api"
   ],
-  "plansChecked": "2026-10-22",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"
  },
  "GLM-5.3": {
@@ -4692,13 +4692,13 @@
    "docs": "https://docs.railway.com"
   },
   "plans": {
-   "de": "Free 0 $ im 30-tägigen Test mit 5 $ Guthaben, danach 1 $/Mo. (1 vCPU / 0,5 GB je Dienst, 0,5 GB Volume, keine eigenen Domains) · Hobby 5 $/Mo. Minimum inkl. 5 $ Nutzung (48 vCPU / 48 GB je Dienst, 5 GB Speicher) · Pro 20 $/Mo. inkl. 20 $ Nutzung · Enterprise individuell · Nutzung nach Verbrauch: Speicher 0,00000386 $/GB·s, CPU 0,00000772 $/vCPU·s, Traffic 0,05 $/GB",
-   "en": "Free $0 for the 30-day trial with $5 of credit, then $1/mo (1 vCPU / 0.5 GB per service, 0.5 GB volume, no custom domains) · Hobby $5/mo minimum including $5 of usage (48 vCPU / 48 GB per service, 5 GB storage) · Pro $20/mo including $20 of usage · Enterprise custom · usage metered: memory $0.00000386/GB·s, CPU $0.00000772/vCPU·s, egress $0.05/GB"
+   "de": "Free 0 $ dauerhaft mit 1 $ Guthaben/Mo. (1 vCPU / 0,5 GB je Dienst, 1 Projekt, 3 Dienste; Dienste schlafen nach 5–10 Min. ohne Zugriff ein) · zum Start einmalig 5 $ Guthaben für 30 Tage · Hobby 5 $/Mo. Minimum inkl. 5 $ Nutzung (48 vCPU / 48 GB je Dienst) · Pro 20 $/Mo. pro Workspace inkl. 20 $ Nutzung, unbegrenzt viele Plätze · Enterprise individuell · Nutzung nach Verbrauch: Speicher 0,00000386 $/GB·s, CPU 0,00000772 $/vCPU·s, Traffic 0,05 $/GB",
+   "en": "Free $0 permanently with $1 of credit/mo (1 vCPU / 0.5 GB per service, 1 project, 3 services; services sleep after 5–10 min without traffic) · a one-time $5 credit for 30 days at the start · Hobby $5/mo minimum including $5 of usage (48 vCPU / 48 GB per service) · Pro $20/mo per workspace including $20 of usage, unlimited seats · Enterprise custom · usage metered: memory $0.00000386/GB·s, CPU $0.00000772/vCPU·s, egress $0.05/GB"
   },
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-19"
  },
  "Coolify": {
@@ -5078,7 +5078,7 @@
    "home": "https://apps.abacus.ai/chatllm",
    "docs": "https://abacus.ai/help/chatllm-ai-super-assistant/introduction"
   },
-  "plansChecked": "2026-10-20",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-20"
  },
  "DeepSeek-Reasonix": {
@@ -5438,7 +5438,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-22",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-24"
  },
  "Osaurus": {
@@ -5710,7 +5710,7 @@
    "abo",
    "api"
   ],
-  "plansChecked": "2026-10-20",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-20"
  },
  "grill-with-docs": {
@@ -5934,7 +5934,7 @@
    "en": "Free (Apache-2.0)"
   },
   "billing": ["abo", "api"],
-  "plansChecked": "2026-10-22",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-24"
  },
  "Notion": {
@@ -6174,7 +6174,7 @@
   "links": {
    "home": "https://github.com/teng-lin/notebooklm-py"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"
  },
  "remotion-skill": {
@@ -6203,7 +6203,7 @@
    "home": "https://www.skills.sh/remotion-dev/skills/remotion-best-practices",
    "docs": "https://www.remotion.dev/docs/ai/skills"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"
  },
  "context7": {
@@ -6281,7 +6281,7 @@
   "links": {
    "home": "https://github.com/microsoft/playwright-cli"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"
  },
  "obsidian-skills": {
@@ -6310,7 +6310,7 @@
   "links": {
    "home": "https://github.com/kepano/obsidian-skills"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"
  },
  "feature-dev": {
@@ -6374,7 +6374,7 @@
    "home": "https://github.com/obra/superpowers",
    "docs": "https://claude.com/marketplace/plugins/superpowers"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-20"
  },
  "claude-md-management": {
@@ -6466,7 +6466,7 @@
    "home": "https://github.com/LOGIN-TB/claude-skills",
    "docs": "https://de.wikipedia.org/wiki/Wikipedia:Anzeichen_f%C3%BCr_KI-generierte_Inhalte"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"
  },
  "scroll-craft": {
@@ -6497,7 +6497,7 @@
   "links": {
    "home": "https://github.com/nateherkai/scroll-craft"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"
  },
  "security-audit": {
@@ -6530,7 +6530,7 @@
    "home": "https://github.com/cloudflare/security-audit-skill",
    "guide": "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"
  },
  "kie.ai": {
@@ -6595,7 +6595,7 @@
    "home": "https://www.skills.sh/mattpocock/skills/teach",
    "code": "https://github.com/mattpocock/skills"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"
  },
  "grill-me": {
@@ -6930,7 +6930,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/social"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-31"
  },
  "offers": {
@@ -6963,7 +6963,7 @@
    "home": "https://github.com/coreyhaines31/marketingskills",
    "code": "https://github.com/coreyhaines31/marketingskills/tree/main/skills/offers"
   },
-  "plansChecked": "2026-10-19",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-31"
  },
  "Claude Fable 5.1": {
@@ -7053,7 +7053,7 @@
   "billing": [
    "abo"
   ],
-  "plansChecked": "2026-10-22",
+  "plansChecked": "2026-11-19",
   "contentChecked": "2026-11-10"
  },
  "Muse Code": {

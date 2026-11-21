@@ -1119,8 +1119,7 @@
   },
   "links": {
    "home": "https://learn.microsoft.com/en-us/agent-framework/",
-   "docs": "https://learn.microsoft.com/en-us/agent-framework/",
-   "code": "https://github.com/microsoft/agent-framework"
+   "docs": "https://learn.microsoft.com/en-us/agent-framework/"
   },
   "free": true,
   "plans": {

@@ -2318,7 +2318,7 @@
    "en": "Start with Sol. Astra is worth it once a task fails on Sol, because it costs four times as much. Cheaper still is 6 Luna, which drops off noticeably on the index (28 instead of 57). One catch on all three: past 272,000 tokens in the prompt the rate doubles, and the Fast and Ultrafast speed tiers cost double and six times respectively."
   },
   "links": {
-   "home": "https://openai.com/index/gpt-6-2-astra/",
+   "home": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
    "docs": "https://developers.openai.com/api/docs/models",
    "code": null
   },

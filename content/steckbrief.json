@@ -5805,6 +5805,10 @@
    "de": "Kostenlos (Open Source)",
    "en": "Free (open source)"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "plansChecked": "2026-11-05",
   "contentChecked": "2026-10-24"
  },
@@ -6780,6 +6784,10 @@
    "de": "Kostenlos, Textdatei",
    "en": "Free, a text file"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
   },
@@ -6807,6 +6815,10 @@
    "de": "Kostenlos, Textdatei · die Bilder entstehen im Bildmodell deiner Wahl, das Kosten seiner eigenen hat",
    "en": "Free, a text file · the images are made in the image model of your choice, which has costs of its own"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
   },
@@ -6834,6 +6846,10 @@
    "de": "Kostenlos, Textdatei · die Bilder entstehen im Bildmodell deiner Wahl, das Kosten seiner eigenen hat",
    "en": "Free, a text file · the images are made in the image model of your choice, which has costs of its own"
   },
+  "billing": [
+   "abo",
+   "api"
+  ],
   "links": {
    "home": "https://higgsfield.ai/@joeysnoisygroup/blogs/all-my-claude-skills-for-better-prompting"
   },

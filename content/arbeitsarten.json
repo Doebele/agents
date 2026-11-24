@@ -668,6 +668,7 @@
       "eigene-skills",
       "Impeccable",
       "bauhaus-digital",
+      "unslop",
       "archify",
       "qa",
       "claude-md-management",
@@ -684,8 +685,8 @@
       "Anthropic Agent Skills"
      ],
      "notiz": {
-      "de": "Hausregeln schreibt claude-md-management fort, den Ablauf geben feature-dev und superpowers vor, qa prüft danach. security-audit gehört ans Ende: einmal vor dem Ausliefern, nicht nebenbei. bauhaus-digital ordnet das Aussehen, bevor gebaut wird: ein erklärter Kontrast, ein Raster, ein knapper Farbhaushalt — Methode, kein Bauhaus-Retro.",
-      "en": "claude-md-management keeps the house rules current, feature-dev and superpowers set the procedure, qa checks afterwards. security-audit belongs at the end: once before you ship, not alongside. bauhaus-digital orders the look before anything is built: one declared contrast, one grid, a scarce color budget — method, not Bauhaus retro."
+      "de": "Hausregeln schreibt claude-md-management fort, den Ablauf geben feature-dev und superpowers vor, qa prüft danach. security-audit gehört ans Ende: einmal vor dem Ausliefern, nicht nebenbei. bauhaus-digital ordnet das Aussehen, bevor gebaut wird: ein erklärter Kontrast, ein Raster, ein knapper Farbhaushalt — Methode, kein Bauhaus-Retro. unslop bessert den fertigen Screen nach, der nach KI aussieht: erst die Merkmale auflisten, dann eine Richtung aus dem Produkt, dann Durchgang für Durchgang.",
+      "en": "claude-md-management keeps the house rules current, feature-dev and superpowers set the procedure, qa checks afterwards. security-audit belongs at the end: once before you ship, not alongside. bauhaus-digital orders the look before anything is built: one declared contrast, one grid, a scarce color budget — method, not Bauhaus retro. unslop repairs the finished screen that looks like AI: list the signs first, then a direction from the product, then pass by pass."
      }
     },
     "04_mcp": {
@@ -827,6 +828,7 @@
         "kandidaten": [
          "Impeccable",
          "bauhaus-digital",
+         "unslop",
          "scroll-craft",
          "archify",
          "eigene-skills"
@@ -835,8 +837,8 @@
          "Impeccable"
         ],
         "notiz": {
-         "de": "Impeccable arbeitet am Aussehen und geht den Entwurf mit dir durch. scroll-craft macht das Scrollen selbst zur Animation — die auffälligere Wahl, aber sie verlangt Node, ffmpeg und einen Browser für die Prüfung. bauhaus-digital legt die Ordnung darunter: Kontrast, Raster, Typo, Farbhaushalt — als Methode, nicht als Bauhaus-Retro.",
-         "en": "Impeccable works on the look and walks the draft through with you. scroll-craft turns the scroll itself into the animation — the louder choice, but it wants Node, ffmpeg and a browser for its verification pass. bauhaus-digital sets the order underneath: contrast, grid, type, color budget — as method, not Bauhaus retro."
+         "de": "Impeccable arbeitet am Aussehen und geht den Entwurf mit dir durch. scroll-craft macht das Scrollen selbst zur Animation — die auffälligere Wahl, aber sie verlangt Node, ffmpeg und einen Browser für die Prüfung. bauhaus-digital legt die Ordnung darunter: Kontrast, Raster, Typo, Farbhaushalt — als Methode, nicht als Bauhaus-Retro. unslop ist der Korrekturgang für den Screen, der schon steht und nach KI aussieht: Merkmale auflisten, Richtung aus dem Produkt, dann Durchgang für Durchgang — und mit einem Link nimmt er auch eine live geschaltete Seite.",
+         "en": "Impeccable works on the look and walks the draft through with you. scroll-craft turns the scroll itself into the animation — the louder choice, but it wants Node, ffmpeg and a browser for its verification pass. bauhaus-digital sets the order underneath: contrast, grid, type, color budget — as method, not Bauhaus retro. unslop is the repair run for a screen that already stands and looks AI-made: list the signs, set a direction from the product, then pass by pass — and given a link it takes a live site too."
         }
        }
       },

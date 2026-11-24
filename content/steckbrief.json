@@ -77,6 +77,35 @@
   "plansChecked": "2026-10-24",
   "contentChecked": "2026-10-24"
  },
+ "unslop": {
+  "name": "unslop",
+  "vendor": "Damir Sokolovsky",
+  "cat": {
+   "de": "Skill · Baustein 03",
+   "en": "Skill · Block 03"
+  },
+  "accent": "var(--lime)",
+  "open": true,
+  "free": true,
+  "blurb": {
+   "de": "Eine mit KI gebaute Oberfläche sieht schnell aus wie jede zweite: lila Verläufe, Glühen, Emoji als Labels, ungleiche Abstände. unslop nennt das Slop und geht in drei Schritten dagegen vor: Er listet die Merkmale auf, legt eine Richtung aus deinem Produkt fest — Charakter, eine Welt, ein wiedererkennbares Detail — und bessert dann den Bildschirm nach, Durchgang für Durchgang und in fester Reihenfolge, von Abständen über Farbe, Icons und Texte bis zu Bildern und Bewegung. Features, Inhalte und die Reihenfolge der Abschnitte bleiben, wie sie sind. Mit nur einem Link nimmt er auch eine live geschaltete Seite — an einer gespeicherten Kopie. Neben Impeccable, das Vokabular und Befehle für die Arbeit am Aussehen mitbringt, ist unslop der feste Durchlauf für einen Screen, der schon steht und nach KI aussieht.",
+   "en": "An interface built with AI soon looks like every other one: purple gradients, glows, emoji as labels, uneven spacing. unslop calls that slop and goes at it in three steps. It lists the signs, sets a direction from your product — character, a world, a signature detail — and only then repairs the screen, pass by pass in a fixed order, from spacing through color, icons and copy to visuals and motion. Features, content and the order of sections stay as they are. Given only a link it takes a live site too — a saved copy of it. Next to Impeccable, which brings vocabulary and commands for working on the look, unslop is the fixed run for a screen that is already built and looks AI-made."
+  },
+  "tip": {
+   "de": "Einbauen als Claude-Code-Plugin mit claude plugin install unslop --marketplace heydamir/unslop, aufrufen mit /unslop this dashboard — laut README auch für Codex und Google Antigravity. Bevor er ändert, zeigt er dir Merkmale und Richtung und wartet auf dein Okay. Der Haken ist das Alter: Das Repository stammt vom 29. Oktober 2026 und ist keine vier Wochen alt; 22 von 40 Commits stammen vom Autor, der die Arbeit auch als Dienst verkauft. Lizenz CC BY 4.0: Nutzen, Ändern und Weitergeben frei, auch kommerziell — der Autor will aber genannt und verlinkt sein. Bilder über einen Bilddienst kosten dort Geld, der Skill fragt vorher; eine live geschaltete Seite aufzunehmen braucht Playwright.",
+   "en": "Install as a Claude Code plugin with claude plugin install unslop --marketplace heydamir/unslop and call it with /unslop this dashboard — the README also lists Codex and Google Antigravity. Before it changes anything it shows you the signs and the direction and waits for your okay. The catch is how young it is: the repository dates from 29 October 2026, under four weeks old; 22 of 40 commits come from the author, who also sells the work as a service. Licence CC BY 4.0: use, change and share it freely, commercially too — but the author wants credit and a link back. Images through an image service cost money there, and the skill asks first; snapshotting a live site needs Playwright."
+  },
+  "plans": {
+   "de": "Kostenlos, Textdatei (CC BY 4.0) · erzeugte Bilder über einen Bild-Dienst",
+   "en": "Free, a text file (CC BY 4.0) · generated images through an image service"
+  },
+  "links": {
+   "home": "https://github.com/heydamir/unslop",
+   "code": "https://github.com/heydamir/unslop"
+  },
+  "plansChecked": "2026-11-24",
+  "contentChecked": "2026-11-24"
+ },
  "skill-creator": {
   "name": "skill-creator",
   "vendor": "Anthropic",

@@ -488,6 +488,14 @@
       "k": "bauhaus-digital"
      },
      {
+      "n": "unslop",
+      "v": {
+       "de": "Optik reparieren",
+       "en": "repair the look"
+      },
+      "k": "unslop"
+     },
+     {
       "n": "skill-creator",
       "v": {
        "de": "eigene bauen",

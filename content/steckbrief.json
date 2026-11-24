@@ -346,7 +346,7 @@
    "docs": "https://rows.com/docs"
   },
   "plansChecked": "2026-11-05",
-  "contentChecked": "2026-10-03"
+  "contentChecked": "2026-11-24"
  },
  "Claude Code": {
   "name": "Claude Code",
@@ -6286,7 +6286,7 @@
  },
  "obsidian-skills": {
   "name": "obsidian-skills",
-  "vendor": "kepano",
+  "vendor": "Obsidian",
   "cat": {
    "de": "Skill · Baustein 03",
    "en": "Skill · Block 03"
@@ -6308,10 +6308,10 @@
   },
   "billing": ["abo", "api"],
   "links": {
-   "home": "https://github.com/kepano/obsidian-skills"
+   "home": "https://github.com/obsidianmd/obsidian-skills"
   },
   "plansChecked": "2026-11-19",
-  "contentChecked": "2026-10-10"
+  "contentChecked": "2026-11-24"
  },
  "feature-dev": {
   "name": "feature-dev",

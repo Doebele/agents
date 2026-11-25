@@ -99,6 +99,7 @@
    "de": "Kostenlos, Textdatei (CC BY 4.0) · erzeugte Bilder über einen Bild-Dienst",
    "en": "Free, a text file (CC BY 4.0) · generated images through an image service"
   },
+  "billing": ["abo", "api"],
   "links": {
    "home": "https://github.com/heydamir/unslop",
    "code": "https://github.com/heydamir/unslop"

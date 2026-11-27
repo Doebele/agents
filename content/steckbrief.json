@@ -1804,7 +1804,7 @@
   },
   "links": {
    "home": "https://seed.bytedance.com/en/seedream5_0_pro",
-   "docs": "https://docs.byteplus.com/en/docs/ModelArk/1541523",
+   "docs": "https://docs.byteplus.com/en/docs/modelark/image-generation-api",
    "code": null
   },
   "contentChecked": "2026-10-10"
@@ -1877,7 +1877,7 @@
   },
   "links": {
    "home": "https://seed.bytedance.com/en/seedance2_5",
-   "docs": "https://docs.byteplus.com/en/docs/ModelArk/1520757",
+   "docs": "https://docs.byteplus.com/en/docs/modelark/create-video-generation-task-api",
    "code": null
   },
   "contentChecked": "2026-10-06"
@@ -2937,7 +2937,7 @@
    "docs": "https://platform.stepfun.com/docs/zh/guides/models/step-5-preview"
   },
   "aa": {
-   "url": "https://artificialanalysis.ai/models/step-5",
+   "url": "https://artificialanalysis.ai/models/step-5-preview",
    "intel": {
     "v": "44",
     "rank": "#40/225",
@@ -3224,7 +3224,7 @@
    "en": "The agent sees what your account sees, which may be a great deal. Grant individual channels rather than blanket access."
   },
   "links": {
-   "home": "https://slack.com/help/articles/48855576908307-Guide-to-Model-Context-Protocol-in-Slack",
+   "home": "https://slack.com/help/articles/48855576908307-Guide-to-MCP-in-Slack",
    "docs": "https://docs.slack.dev/ai/slack-mcp-server",
    "code": null
   },
@@ -3501,7 +3501,7 @@
   "links": {
    "home": "https://doop.design/",
    "docs": null,
-   "code": "https://github.com/kgoedecke/doop"
+   "code": "https://github.com/doop-design/doop"
   },
   "free": true,
   "contentChecked": "2026-11-02"
@@ -3606,7 +3606,7 @@
    "en": "Good for a first pass. Anything meant to last moves into a settled tool afterwards."
   },
   "links": {
-   "home": "https://stitch.withgoogle.com/",
+   "home": "https://stitch.google.com/",
    "docs": null,
    "code": null
   },
@@ -4042,7 +4042,7 @@
   },
   "links": {
    "home": "https://e2b.dev",
-   "docs": "https://e2b.dev/docs",
+   "docs": "https://docs.e2b.dev",
    "code": "https://github.com/e2b-dev/E2B"
   },
   "plans": {
@@ -4914,7 +4914,7 @@
    "api"
   ],
   "links": {
-   "home": "https://lambda.ai"
+   "home": "https://lambda.com"
   },
   "plansChecked": "2026-10-22",
   "contentChecked": "2026-10-17"
@@ -5632,7 +5632,7 @@
   },
   "links": {
    "home": "https://pi.dev",
-   "docs": "https://pi.dev/docs/latest",
+   "docs": "https://docs.pi.dev/latest",
    "code": "https://github.com/earendil-works/pi"
   },
   "plans": {
@@ -6225,8 +6225,8 @@
    "en": "Remotion builds video as a program — written in React and rendered rather than cut in an editor. This skill pack hands the agent the rules: 30+ rule files covering animation, audio, captions, charts and transitions. remotion-best-practices encompasses all the others and is the right starting point when you don't yet know which one applies."
   },
   "tip": {
-   "de": "Remotion dokumentiert die Skills selbst unter remotion.dev/docs/ai/skills; das Skill-Repository trägt aber keine Lizenz. Bei Videos aus Code bedeutet jede kleine Änderung einen neuen Renderdurchlauf. Die anderen Wege zum Video — Modell, Avatar, Editor — listet der Eintrag video.",
-   "en": "Remotion documents the skills itself at remotion.dev/docs/ai/skills; the skill repository carries no license, though. With video from code, every small change means another render pass. The other routes to video — model, avatar, editor — are listed in the video entry."
+   "de": "Remotion dokumentiert die Skills selbst unter remotion.dev/docs/agents/skills; das Skill-Repository trägt aber keine Lizenz. Bei Videos aus Code bedeutet jede kleine Änderung einen neuen Renderdurchlauf. Die anderen Wege zum Video — Modell, Avatar, Editor — listet der Eintrag video.",
+   "en": "Remotion documents the skills itself at remotion.dev/docs/agents/skills; the skill repository carries no license, though. With video from code, every small change means another render pass. The other routes to video — model, avatar, editor — are listed in the video entry."
   },
   "plans": {
    "de": "Kostenlos, Textdatei",
@@ -6235,7 +6235,7 @@
   "billing": ["abo", "api"],
   "links": {
    "home": "https://www.skills.sh/remotion-dev/skills/remotion-best-practices",
-   "docs": "https://www.remotion.dev/docs/ai/skills"
+   "docs": "https://www.remotion.dev/docs/agents/skills"
   },
   "plansChecked": "2026-11-19",
   "contentChecked": "2026-10-10"

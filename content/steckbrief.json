@@ -2367,7 +2367,7 @@
    },
    "cost": {
     "v": "$4.00",
-    "rank": "#64/94",
+    "rank": "#65/94",
     "u": 3
    },
    "verb": {
@@ -2375,7 +2375,7 @@
     "rank": "#48/94",
     "u": 3
    },
-   "checked": "2026-11-23"
+   "checked": "2026-11-26"
   },
   "plans": {
    "de": "API je 1M Token, Stufe Standard: Astra 10 $/50 $ · 6.1 Sol 2 $/10 $ · 6 Luna 0,10 $/0,50 $ · ab 272k Token im Prompt Astra 20 $/75 $, Sol 4 $/15 $, Luna 0,20 $/0,75 $ · gecachte Eingabe ein Zehntel des Eingabepreises · Flex halbiert den Satz, Fast verdoppelt ihn, Ultrafast (nur Astra und Sol, nicht Luna) versechsfacht ihn · im ChatGPT-Abo ab Plus ohne Aufpreis in den Kontingenten enthalten (Plus 20 $/Mo., Pro 100 $/Mo.), GPT-6 Astra Pro zusätzlich in Pro, Business und Enterprise",
@@ -2434,7 +2434,7 @@
     "rank": "#90/94",
     "u": 4
    },
-   "checked": "2026-11-23"
+   "checked": "2026-11-26"
   },
   "plans": {
    "de": "API je 1M Token: Opus 5.5 4 $/20 $ · Sonnet 5.5 2 $/10 $ · Haiku 4.5 1 $/5 $ · gecachte Eingabe 0,20 $ bei Opus, 0,10 $ bei Sonnet und Haiku · in den Cache schreiben 5 $ (Opus) bzw. 2,50 $ (Sonnet) für fünf Minuten, 8 $ bzw. 4 $ für eine Stunde · die Vorgänger Opus 5 (5 $/25 $) und Sonnet 5 (2 $/10 $) bleiben in der Preisliste",
@@ -2484,7 +2484,7 @@
    },
    "cost": {
     "v": "$7.76",
-    "rank": "#81/94",
+    "rank": "#83/94",
     "u": 4
    },
    "verb": {
@@ -2492,7 +2492,7 @@
     "rank": "#89/94",
     "u": 4
    },
-   "checked": "2026-11-23"
+   "checked": "2026-11-26"
   },
   "plans": {
    "de": "API je 1M Token: 3.1 Pro 2 $/12 $, ab 200k Token im Prompt 4 $/18 $ · 3.8 Flash 0,75 $/3,75 $ bis 31.12.2026, ab 1.1.2027 1,50 $/7,50 $ · Kontext-Cache 0,20 $ (Pro) bzw. 0,075 $ (Flash), Speicherung 4,50 $ je 1M Token und Stunde · Gratisstufe für 3.8 Flash, für 3.1 Pro nicht · Google AI Pro 19,99 $/Mo.",
@@ -7065,7 +7065,7 @@
     "rank": "#91/94",
     "u": 4
    },
-   "checked": "2026-11-23"
+   "checked": "2026-11-26"
   },
   "plansChecked": "2026-11-09",
   "contentChecked": "2026-10-24"

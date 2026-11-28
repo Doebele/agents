@@ -1094,7 +1094,7 @@
   ],
   "plansChecked": "2026-11-16",
   "icon": "crewai",
-  "contentChecked": "2026-10-10"
+  "contentChecked": "2026-11-28"
  },
  "Paperclip": {
   "name": "Paperclip",
@@ -2741,7 +2741,7 @@
    "api"
   ],
   "plansChecked": "2026-11-19",
-  "contentChecked": "2026-10-10"
+  "contentChecked": "2026-11-28"
  },
  "GLM-5.3": {
   "name": "GLM-5.3",
@@ -4376,17 +4376,17 @@
   "open": false,
   "free": true,
   "blurb": {
-   "de": "Instagrams eigene Schnitt-App fürs Handy, kostenlos. Aufnahmen bis zehn Minuten, Schnitt auf das einzelne Bild genau, automatisch erzeugte Untertitel, die du frei gestalten kannst, Freistellen und Greenscreen, Ton aufräumen, Export in 4K ohne Wasserzeichen. Dazu zwei Dinge, die ein Schnittprogramm sonst nicht kann: ein Feed mit gerade beliebten Tonspuren und eine laufende Auswertung, wie die eigenen Reels ankommen. Läuft auf iPhone und Android, Anmeldung mit dem Instagram-Konto.",
-   "en": "Instagram's own editing app for the phone, free. Clips up to ten minutes, editing accurate to the single frame, automatic captions you can style yourself, cutouts and green screen, audio cleanup, 4K export with no watermark. Plus two things an editing program usually cannot do: a feed of currently popular audio and a running dashboard on how your own reels are doing. Runs on iPhone and Android, sign-in with an Instagram account."
+   "de": "Instagrams eigene Schnitt-App fürs Handy, kostenlos. Aufnahmen bis zehn Minuten, Schnitt auf das einzelne Bild genau, automatisch erzeugte Untertitel, die du frei gestalten kannst, Freistellen und Greenscreen, Ton aufräumen, Export in 4K ohne Wasserzeichen. Dazu zwei Dinge, die ein Schnittprogramm sonst nicht kann: ein Feed mit gerade beliebten Tonspuren und eine laufende Auswertung, wie die eigenen Reels ankommen. Läuft auf iPhone und Android, dazu gibt es eine Fassung für den Mac, Anmeldung mit dem Instagram-Konto.",
+   "en": "Instagram's own editing app for the phone, free. Clips up to ten minutes, editing accurate to the single frame, automatic captions you can style yourself, cutouts and green screen, audio cleanup, 4K export with no watermark. Plus two things an editing program usually cannot do: a feed of currently popular audio and a running dashboard on how your own reels are doing. Runs on iPhone and Android, with a version for Mac as well, sign-in with an Instagram account."
   },
   "tip": {
-   "de": "Die naheliegende Wahl, wenn das Ergebnis auf Instagram landet: Untertitel in zwei Griffen, Export ohne Wasserzeichen, und die Zahlen zu den eigenen Videos stehen in derselben App. Der Haken ist die Bindung. Es läuft nur auf dem Handy, es will ein Instagram-Konto, und die Auswertung kennt nur Instagram. Wer für mehrere Plattformen schneidet oder am Rechner arbeitet, ist mit CapCut oder DaVinci Resolve freier.",
-   "en": "The obvious pick when the result lands on Instagram: captions in two taps, export with no watermark, and the numbers on your own videos sit in the same app. The catch is the tie-in. It runs on the phone only, it wants an Instagram account, and the dashboard knows Instagram alone. Cutting for several platforms, or working on a desktop, is freer with CapCut or DaVinci Resolve."
+   "de": "Die naheliegende Wahl, wenn das Ergebnis auf Instagram landet: Untertitel in zwei Griffen, Export ohne Wasserzeichen, und die Zahlen zu den eigenen Videos stehen in derselben App. Der Haken ist die Bindung. Es läuft vor allem auf dem Handy (für den Mac gibt es inzwischen auch eine Desktop-Fassung), es will ein Instagram-Konto, und die Auswertung kennt nur Instagram. Wer für mehrere Plattformen schneidet oder am Rechner arbeitet, ist mit CapCut oder DaVinci Resolve freier.",
+   "en": "The obvious pick when the result lands on Instagram: captions in two taps, export with no watermark, and the numbers on your own videos sit in the same app. The catch is the tie-in. It runs mainly on the phone (a Mac desktop version now exists too), it wants an Instagram account, and the dashboard knows Instagram alone. Cutting for several platforms, or working on a desktop, is freer with CapCut or DaVinci Resolve."
   },
   "links": {
    "home": "https://edits.instagram.com/"
   },
-  "contentChecked": "2026-10-08"
+  "contentChecked": "2026-11-28"
  },
  "Shotcut": {
   "name": {
@@ -6120,7 +6120,7 @@
   "billing": [
    "abo"
   ],
-  "contentChecked": "2026-10-10"
+  "contentChecked": "2026-11-28"
  },
  "n8n-skills": {
   "name": "n8n Skills",
@@ -6209,7 +6209,7 @@
    "home": "https://github.com/teng-lin/notebooklm-py"
   },
   "plansChecked": "2026-11-19",
-  "contentChecked": "2026-10-10"
+  "contentChecked": "2026-11-28"
  },
  "remotion-skill": {
   "name": "remotion-skill",
@@ -6261,7 +6261,7 @@
    "home": "https://context7.com",
    "code": "https://github.com/upstash/context7"
   },
-  "contentChecked": "2026-10-10"
+  "contentChecked": "2026-11-28"
  },
  "firecrawl": {
   "name": "firecrawl",
@@ -6316,7 +6316,7 @@
    "home": "https://github.com/microsoft/playwright-cli"
   },
   "plansChecked": "2026-11-19",
-  "contentChecked": "2026-10-10"
+  "contentChecked": "2026-11-28"
  },
  "obsidian-skills": {
   "name": "obsidian-skills",
